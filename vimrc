@@ -12,6 +12,7 @@ if !has('win64') && !has('win32')
     set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 endif
 set ignorecase
+set path=**
 set sessionoptions=blank,buffers,curdir,folds,tabpages,winsize,globals
 set smartcase
 if !has('gui_running')
