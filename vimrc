@@ -73,5 +73,15 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
-autocmd Colorscheme nord              if !has('gui_running') && !exists("lightline#update") | PackAdd vim-airline | endif
+autocmd Colorscheme nord              PackAdd vim-airline
+" }}}
+
+"Color Scheme Switcher {{{
+let g:colorscheme_switcher_exclude_builtins = 1
+" let g:colorscheme_switcher_keep_background = 1
+
+let g:colorscheme_manager_global_last = 1
+let g:colorscheme_manager_file = '~/.vim/.colorscheme'
+let g:colorscheme_manager_remember_background = 1
+let g:colorscheme_manager_start_random = 0
 " }}}

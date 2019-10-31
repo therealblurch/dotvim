@@ -17,6 +17,8 @@ Plugin 'vhda/verilog_systemverilog.vim',         {'type': 'start'}
 Plugin 'zhuzhzh/verilog_emacsauto.vim',          {'name': 'verilog_emacsauto'}
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'xolox/vim-colorscheme-switcher',         {'type': 'start'}
+Plugin 'xolox/vim-misc',                         {'type': 'start'}
 
 Plugin 'arcticicestudio/nord-vim',               {'package': 'colors', 'type': 'start', 'brach': 'develop'}
 
