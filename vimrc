@@ -4,6 +4,7 @@ runtime OPT autopac.vim
 
 set completeopt+=menuone,noselect
 set directory=~/.vim/cache/swap
+set grepprg=ag\ --nogroup\ --nocolor
 set hidden
 set hlsearch
 set list
@@ -72,6 +73,12 @@ if has('gui_running') && !has('win64') && !has('win32')
     let g:gitgutter_sign_removed_first_line = ''
     let g:gitgutter_sign_modified_removed = ''
 endif
+" }}}
+
+" grep keymaps {{{
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+nnoremap <Space>/ :Ag<SPACE>
 " }}}
 
 " mucomplete {{{
