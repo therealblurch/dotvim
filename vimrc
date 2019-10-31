@@ -15,6 +15,7 @@ set list
 if !has('win64') && !has('win32')
     set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 endif
+set nojoinspaces
 set nowrap
 set path=**
 set sessionoptions=blank,buffers,curdir,folds,tabpages,winsize,globals
