@@ -3,6 +3,7 @@
 runtime OPT autopac.vim
 
 set wildmode=longest:full
+set directory=~/.vim/cache/swap
 
 let mapleader = ','
 
