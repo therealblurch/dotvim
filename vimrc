@@ -1,3 +1,3 @@
 runtime OPT autopac.vim
 
-set wildmode = "longest:full"
+set wildmode=longest:full
