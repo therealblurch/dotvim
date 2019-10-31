@@ -20,6 +20,7 @@ endif
 if !has('gui_running')
     set termguicolors
 endif
+set completeopt+=menuone,noselect
 
 let mapleader = ','
 
@@ -58,3 +59,10 @@ nnoremap <leader>I :VerilogFollowPort<CR>
 nnoremap <leader>u :VerilogGotoInstanceStart<CR>
 " }}}
 
+" mucomplete {{{
+if has('patch-8.0.0283')
+else
+    imap <Plug>MyCR <Plug>(MUcompleteCR)
+    imap <cr> <Plug>MyCR
+endif
+" }}}
