@@ -2,6 +2,7 @@
 
 runtime OPT autopac.vim
 
+set hidden
 set hlsearch
 set ignorecase
 set smartcase
