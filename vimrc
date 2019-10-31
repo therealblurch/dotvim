@@ -38,7 +38,7 @@ set wildignore=*.swp,*.bak
 set wildignore+=*/.git/**/*
 set wildignore+=tags
 set wildignore+=*.tar.*
-set wildmode=longest:full
+set wildmode=longest:full,full
 
 let mapleader = ','
 
