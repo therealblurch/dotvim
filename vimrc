@@ -13,6 +13,10 @@ endif
 set wildmode=longest:full
 set directory=~/.vim/cache/swap
 set undodir=~/.vim/cache/undo
+set list
+if !has('win64') && !has('win32')
+    set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
+endif
 
 let mapleader = ','
 
