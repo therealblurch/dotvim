@@ -5,6 +5,7 @@ let g:vimball = expand('~/vimfiles/pack/unmanaged/opt/')
 augroup myplugins | au! | augroup END
 
 Plugin 'airblade/vim-gitgutter', {'type': 'start'}
+Plugin 'kana/vim-smartinput',    {'type': 'start'}
 Plugin 'tpope/vim-flagship',     {'type': 'start'}
 Plugin 'tpope/vim-fugitive',     {'type': 'start'}
 Plugin 'tpope/vim-sensible',     {'type': 'start'}
