@@ -28,6 +28,7 @@ if has('persistent_undo')
 endif
 set undodir=~/.vim/cache/undo
 set updatetime=250
+set viewoptions=folds,options,cursor,unix,slash
 set viminfo='100,<50,s10,h,n~/.vim/viminfo
 set wildignore=*.swp,*.bak
 set wildignore+=*/.git/**/*
