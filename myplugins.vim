@@ -13,7 +13,7 @@ Plugin 'tpope/vim-sensible',             {'type': 'start'}
 Plugin 'tpope/vim-surround',             {'type': 'start'}
 Plugin 'vhda/verilog_systemverilog.vim', {'type': 'start'}
 
-Plugin 'arcticicestudio/nord-vim', {'package': 'colors', 'type': 'start'}
+Plugin 'arcticicestudio/nord-vim', {'package': 'colors', 'type': 'start', 'brach': 'develop'}
 
 function! myplugins#callback(plugname, before)
 
