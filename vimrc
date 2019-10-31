@@ -1,0 +1,2 @@
+runtime OPT autopac.vim
+
