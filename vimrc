@@ -2,6 +2,7 @@
 
 runtime OPT autopac.vim
 
+set belloff+=ctrlg
 set completeopt+=menuone,noselect
 if has("patch-8.1.0360")
     set diffopt+=internal,algorithm:patience
@@ -19,6 +20,7 @@ set nojoinspaces
 set nowrap
 set path=**
 set sessionoptions=blank,buffers,curdir,folds,tabpages,winsize,globals
+set shortmess+=c
 set smartcase
 set tags=$PROJ_USER/rtl/tags
 if !has('gui_running')
@@ -103,6 +105,7 @@ else
     imap <Plug>MyCR <Plug>(MUcompleteCR)
     imap <cr> <Plug>MyCR
 endif
+let g:mucomplete#enable_auto_at_startup=1
 " }}}
 
 " System Verilog {{{
