@@ -2,27 +2,27 @@
 
 runtime OPT autopac.vim
 
+set completeopt+=menuone,noselect
+set directory=~/.vim/cache/swap
 set hidden
 set hlsearch
+set list
+if !has('win64') && !has('win32')
+    set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
+endif
 set ignorecase
+set sessionoptions=blank,buffers,curdir,folds,tabpages,winsize,globals
 set smartcase
+if !has('gui_running')
+    set termguicolors
+endif
 if has('persistent_undo')
    set undofile
    set undolevels=1000
    set undoreload=10000
 endif
-set wildmode=longest:full
-set directory=~/.vim/cache/swap
 set undodir=~/.vim/cache/undo
-set list
-if !has('win64') && !has('win32')
-    set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
-endif
-if !has('gui_running')
-    set termguicolors
-endif
-set completeopt+=menuone,noselect
-set sessionoptions=blank,buffers,curdir,folds,tabpages,winsize,globals
+set wildmode=longest:full
 
 let mapleader = ','
 
