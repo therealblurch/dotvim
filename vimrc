@@ -64,6 +64,7 @@ let g:colorscheme_manager_start_random = 0
 " flagship {{{
 autocmd User Flags call Hoist("global", "myfunctions#CurrentColorscheme")
 autocmd User Flags call Hoist("buffer", "myfunctions#GitgutterStatus")
+autocmd User Flags call Hoist("global", "ObsessionStatus")
 " }}}
 
 " Fugitive {{{
