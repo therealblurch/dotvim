@@ -9,6 +9,7 @@ Plugin 'kana/vim-smartinput',                    {'type': 'start'}
 Plugin 'kshenoy/vim-signature',                  {'type': 'start'}
 Plugin 'lifepillar/vim-mucomplete',              {'type': 'start'}
 Plugin 'markonm/traces.vim',                     {'type': 'start'}
+Plugin 'myusuf3/numbers.vim',                    {'type': 'start'}
 Plugin 'tpope/vim-endwise',                      {'type': 'start'}
 Plugin 'tpope/vim-flagship',                     {'type': 'start'}
 Plugin 'tpope/vim-fugitive',                     {'type': 'start'}
