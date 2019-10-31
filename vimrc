@@ -5,8 +5,14 @@ runtime OPT autopac.vim
 set hlsearch
 set ignorecase
 set smartcase
+if has('persistent_undo')
+   set undofile
+   set undolevels=1000
+   set undoreload=10000
+endif
 set wildmode=longest:full
 set directory=~/.vim/cache/swap
+set undodir=~/.vim/cache/undo
 
 let mapleader = ','
 
