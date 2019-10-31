@@ -23,6 +23,10 @@ if has('persistent_undo')
    set undoreload=10000
 endif
 set undodir=~/.vim/cache/undo
+set wildignore=*.swp,*.bak
+set wildignore+=*/.git/**/*
+set wildignore+=tags
+set wildignore+=*.tar.*
 set wildmode=longest:full
 
 let mapleader = ','
