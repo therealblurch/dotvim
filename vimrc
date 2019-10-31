@@ -4,6 +4,8 @@ runtime OPT autopac.vim
 
 set wildmode=longest:full
 
+let mapleader = ','
+
 " gitgutter {{{
 let g:gitgutter_highlight_lines = 1
 if has('gui_running') && !has('win64') && !has('win32')
