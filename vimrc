@@ -21,6 +21,7 @@ if !has('gui_running')
     set termguicolors
 endif
 set completeopt+=menuone,noselect
+set sessionoptions=blank,buffers,curdir,folds,tabpages,winsize,globals
 
 let mapleader = ','
 
