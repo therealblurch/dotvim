@@ -17,6 +17,9 @@ set list
 if !has('win64') && !has('win32')
     set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 endif
+if !has('gui_running')
+    set termguicolors
+endif
 
 let mapleader = ','
 
