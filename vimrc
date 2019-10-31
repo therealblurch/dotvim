@@ -26,6 +26,30 @@ set wildmode=longest:full
 
 let mapleader = ','
 
+" Airline {{{
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+
+autocmd Colorscheme nord              PackAdd vim-airline
+" }}}
+
+"Color Scheme Switcher {{{
+let g:colorscheme_switcher_exclude_builtins = 1
+" let g:colorscheme_switcher_keep_background = 1
+
+let g:colorscheme_manager_global_last = 1
+let g:colorscheme_manager_file = '~/.vim/.colorscheme'
+let g:colorscheme_manager_remember_background = 1
+let g:colorscheme_manager_start_random = 0
+" }}}
+
+" flagship {{{
+autocmd User Flags call Hoist("global", "myfunctions#CurrentColorscheme")
+autocmd User Flags call Hoist("buffer", "myfunctions#GitgutterStatus")
+" }}}
+
 " Fugitive {{{
 nnoremap <silent> <leader>gs :Gstatus<CR>
 nnoremap <silent> <leader>gd :Gdiff<CR>
@@ -50,17 +74,6 @@ if has('gui_running') && !has('win64') && !has('win32')
 endif
 " }}}
 
-" flagship {{{
-autocmd User Flags call Hoist("global", "myfunctions#CurrentColorscheme")
-autocmd User Flags call Hoist("buffer", "myfunctions#GitgutterStatus")
-" }}}
-
-" System Verilog {{{
-nnoremap <leader>i :VerilogFollowInstance<CR>
-nnoremap <leader>I :VerilogFollowPort<CR>
-nnoremap <leader>u :VerilogGotoInstanceStart<CR>
-" }}}
-
 " mucomplete {{{
 if has('patch-8.0.0283')
 else
@@ -69,21 +82,8 @@ else
 endif
 " }}}
 
-" Airline {{{
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#buffer_nr_show = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail'
-
-autocmd Colorscheme nord              PackAdd vim-airline
-" }}}
-
-"Color Scheme Switcher {{{
-let g:colorscheme_switcher_exclude_builtins = 1
-" let g:colorscheme_switcher_keep_background = 1
-
-let g:colorscheme_manager_global_last = 1
-let g:colorscheme_manager_file = '~/.vim/.colorscheme'
-let g:colorscheme_manager_remember_background = 1
-let g:colorscheme_manager_start_random = 0
+" System Verilog {{{
+nnoremap <leader>i :VerilogFollowInstance<CR>
+nnoremap <leader>I :VerilogFollowPort<CR>
+nnoremap <leader>u :VerilogGotoInstanceStart<CR>
 " }}}
