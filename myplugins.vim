@@ -15,11 +15,21 @@ Plugin 'tpope/vim-sensible',                     {'type': 'start'}
 Plugin 'tpope/vim-surround',                     {'type': 'start'}
 Plugin 'vhda/verilog_systemverilog.vim',         {'type': 'start'}
 Plugin 'zhuzhzh/verilog_emacsauto.vim',          {'name': 'verilog_emacsauto'}
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'arcticicestudio/nord-vim',               {'package': 'colors', 'type': 'start', 'brach': 'develop'}
 
 function! myplugins#callback(plugname, before)
 
-   if !a:before | return | endif
+   if !a:before
+      if a:plugname == "vim-airline"
+         let g:airline_section_x = airline#section#create_right(['%-20{myfunctions#CurrentColorscheme()}', 'bookmark', 'tagbar', 'vista', 'gutentags', 'grepper', 'filetype'])
+      endif
+   endif
+
+   if a:plugname == "vim-airline"
+      PackAdd vim-airline-themes
+   endif
 
 endfunction
