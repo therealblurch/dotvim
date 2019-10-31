@@ -14,7 +14,7 @@ Plugin 'rbong/vim-flog',                         {'type': 'start'}
 Plugin 'tpope/vim-endwise',                      {'type': 'start'}
 Plugin 'tpope/vim-flagship',                     {'type': 'start'}
 Plugin 'tpope/vim-fugitive',                     {'type': 'start'}
-Plugin 'tpope/vim-obsession',
+Plugin 'tpope/vim-obsession',                    {'type': 'start'}
 Plugin 'tpope/vim-sensible',                     {'type': 'start'}
 Plugin 'tpope/vim-surround',                     {'type': 'start'}
 Plugin 'vhda/verilog_systemverilog.vim',         {'type': 'start'}
