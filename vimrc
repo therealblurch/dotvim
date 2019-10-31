@@ -2,6 +2,9 @@
 
 runtime OPT autopac.vim
 
+set hlsearch
+set ignorecase
+set smartcase
 set wildmode=longest:full
 set directory=~/.vim/cache/swap
 
