@@ -4,7 +4,7 @@ let g:vimball = expand('~/vimfiles/pack/unmanaged/opt/')
 
 augroup myplugins | au! | augroup END
 
-
+Plugin 'tpope/vim-sensible', {'type': 'start'}
 
 function! myplugins#callback(plugname, before)
 
