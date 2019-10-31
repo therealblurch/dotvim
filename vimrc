@@ -3,6 +3,9 @@
 runtime OPT autopac.vim
 
 set completeopt+=menuone,noselect
+if has("patch-8.1.0360")
+    set diffopt+=internal,algorithm:patience
+endif
 set directory=~/.vim/cache/swap
 set grepprg=ag\ --nogroup\ --nocolor
 set hidden
