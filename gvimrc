@@ -6,3 +6,5 @@ if has('win32') || has('win64')
 else
   set guifont=Hasklug\ Nerd\ Font\ Medium\ 11
 endif
+
+colorscheme nord

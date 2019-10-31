@@ -8,6 +8,8 @@ Plugin 'tpope/vim-fugitive', {'type': 'start'}
 Plugin 'tpope/vim-sensible', {'type': 'start'}
 Plugin 'tpope/vim-surround', {'type': 'start'}
 
+Plugin 'arcticicestudio/nord-vim', {'package': 'colors', 'type': 'start'}
+
 function! myplugins#callback(plugname, before)
 
    if !a:before | return | endif
