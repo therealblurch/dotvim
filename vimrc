@@ -44,3 +44,10 @@ endif
 autocmd User Flags call Hoist("global", "myfunctions#CurrentColorscheme")
 autocmd User Flags call Hoist("buffer", "myfunctions#GitgutterStatus")
 " }}}
+
+" System Verilog {{{
+nnoremap <leader>i :VerilogFollowInstance<CR>
+nnoremap <leader>I :VerilogFollowPort<CR>
+nnoremap <leader>u :VerilogGotoInstanceStart<CR>
+" }}}
+
