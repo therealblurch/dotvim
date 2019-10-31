@@ -18,6 +18,7 @@ endif
 set path=**
 set sessionoptions=blank,buffers,curdir,folds,tabpages,winsize,globals
 set smartcase
+set tags=$PROJ_USER/rtl/tags
 if !has('gui_running')
     set termguicolors
 endif
