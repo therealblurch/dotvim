@@ -7,11 +7,11 @@ set directory=~/.vim/cache/swap
 set grepprg=ag\ --nogroup\ --nocolor
 set hidden
 set hlsearch
+set ignorecase
 set list
 if !has('win64') && !has('win32')
     set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 endif
-set ignorecase
 set path=**
 set sessionoptions=blank,buffers,curdir,folds,tabpages,winsize,globals
 set smartcase
