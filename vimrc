@@ -24,6 +24,7 @@ if has('persistent_undo')
    set undoreload=10000
 endif
 set undodir=~/.vim/cache/undo
+set viminfo='100,<50,s10,h,n~/.vim/viminfo
 set wildignore=*.swp,*.bak
 set wildignore+=*/.git/**/*
 set wildignore+=tags
