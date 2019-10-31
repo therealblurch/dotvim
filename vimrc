@@ -19,3 +19,7 @@ if has('gui_running') && !has('win64') && !has('win32')
 endif
 " }}}
 
+" flagship {{{
+autocmd User Flags call Hoist("global", "myfunctions#CurrentColorscheme")
+autocmd User Flags call Hoist("buffer", "myfunctions#GitgutterStatus")
+" }}}
