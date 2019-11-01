@@ -25,7 +25,7 @@ set nojoinspaces
 set nowrap
 set path=**
 set sessionoptions=blank,buffers,curdir,folds,tabpages,winsize,globals
-set shortmess+=c
+set shortmess+=filmnrxoOtTc
 set showmatch
 if !exists(':AirlineTheme') && !exists('lightline#update')
     set showmode
