@@ -71,6 +71,7 @@ Plugin 'dracula/vim',                            {'package': 'colors', 'type': '
 Plugin 'jacoborus/tender.vim',                   {'package': 'colors', 'type': 'start'}
 Plugin 'kaicataldo/material.vim',                {'package': 'colors', 'type': 'start', 'name': 'material'}
 Plugin 'liuchengxu/space-vim-theme',             {'package': 'colors', 'type': 'start'}
+Plugin 'logico-dev/typewriter',                  {'package': 'colors', 'type': 'start'}
 Plugin 'nightsense/cosmic_latte',                {'package': 'colors', 'type': 'start'}
 Plugin 'nightsense/snow',                        {'package': 'colors', 'type': 'start'}
 Plugin 'romainl/Apprentice',                     {'package': 'colors', 'type': 'start'}

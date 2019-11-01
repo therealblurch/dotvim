@@ -124,6 +124,10 @@ function! lightlinefunctions#LightlineUpdate()
          else
             let g:lightline.colorscheme = "ayu"
          endif
+      elseif g:colors_name == 'typewriter'
+         let g:lightline.colorscheme = "typewriter_light"
+      elseif g:colors_name == 'typewriter-night'
+         let g:lightline.colorscheme = "typewriter_dark"
       elseif g:colors_name == 'snow'
          let g:lightline.colorscheme = join ([g:colors_name,&background],"_")
       elseif g:colors_name == 'material'

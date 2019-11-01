@@ -91,6 +91,8 @@ autocmd Colorscheme onehalfdark       if !has('gui_running') && !exists('g:loade
 autocmd Colorscheme onehalflight      if !has('gui_running') && !exists('g:loaded_lightline') | PackAdd vim-airline | endif
 autocmd Colorscheme snow              if !has('gui_running') && !exists('g:loaded_lightline') | PackAdd vim-airline | endif
 autocmd Colorscheme tender            if !has('gui_running') && !exists('g:loaded_lightline') | PackAdd vim-airline | endif
+autocmd Colorscheme typewriter        if !has('gui_running') && !exists('g:loaded_lightline') | PackAdd vim-airline | AirlineTheme seagull | endif
+autocmd Colorscheme typewriter-night  if !has('gui_running') && !exists('g:loaded_lightline') | PackAdd vim-airline | AirlineTheme seagull | endif
 " }}}
 
 "Color Scheme Switcher {{{
@@ -271,6 +273,8 @@ autocmd Colorscheme snazzy            if has('gui_running') && !exists(":Airline
 autocmd Colorscheme snow              if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
 autocmd Colorscheme space_vim_theme   if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
 autocmd Colorscheme tender            if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
+autocmd Colorscheme typewriter        if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
+autocmd Colorscheme typewriter-night  if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
 autocmd Colorscheme vadelma           if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
 
 command! -nargs=1 -complete=custom,lightlinefunctions#LightlineColorschemes LightlineColorscheme
