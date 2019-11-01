@@ -71,6 +71,9 @@ command! -bang Qa qa<bang>
 " Visual Shifting
 vnoremap < <gv
 vnoremap > >gv
+
+command! MakeTags !ctags -R --extras=+q --fields=+i -n .
+
 " }}}
 
 " Colorscheme Options {{{
