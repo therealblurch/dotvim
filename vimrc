@@ -27,6 +27,7 @@ set path=**
 set runtimepath+=~/.vim/plug/onehalf/vim
 set sessionoptions=blank,buffers,curdir,folds,tabpages,winsize,globals
 set shortmess+=filmnrxoOtTc
+set showcmd
 set showmatch
 if !exists(':AirlineTheme') && !exists('lightline#update')
     set showmode
