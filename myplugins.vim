@@ -62,7 +62,7 @@ Plugin 'sgur/vim-textobj-parameter',             {'type': 'start'}
 Plugin 'thinca/vim-textobj-between',             {'type': 'start'}
 Plugin 'vimtaku/vim-textobj-keyvalue',           {'type': 'start'}
 
-Plugin 'arcticicestudio/nord-vim',               {'package': 'colors', 'type': 'start', 'brach': 'develop'}
+Plugin 'arcticicestudio/nord-vim',               {'package': 'colors', 'type': 'start', 'branch': 'develop'}
 Plugin 'ayu-theme/ayu-vim',                      {'package': 'colors', 'type': 'start'}
 Plugin 'cocopon/iceberg.vim',                    {'package': 'colors', 'type': 'start'}
 Plugin 'dracula/vim',                            {'package': 'colors', 'type': 'start', 'name': 'dracula'}
