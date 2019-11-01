@@ -269,7 +269,6 @@ let g:lightline_buffer_reservelen = 20
 
 augroup LightlineColorscheme
    autocmd!
-autocmd Colorscheme material          if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
    autocmd ColorScheme * call lightlinefunctions#LightlineUpdate()
 augroup END
 
