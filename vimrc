@@ -85,6 +85,8 @@ nnoremap Y y$
 +map <leader>ev :vsp %%
 +map <leader>et :tabe %%
 +
++inoremap jj <Esc>
++
 " }}}
 
 " Colorscheme Options {{{
