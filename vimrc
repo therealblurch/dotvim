@@ -76,14 +76,14 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
-autocmd Colorscheme afterglow         if !exists("lightline#update") | PackAdd vim-airline | endif
-autocmd Colorscheme apprentice        if !has('gui_running') && !exists("lightline#update") | PackAdd vim-airline | endif
-autocmd Colorscheme ayu               if !has('gui_running') && !exists("lightline#update") | PackAdd vim-airline | endif
-autocmd Colorscheme dracula           if !has('gui_running') && !exists("lightline#update") | PackAdd vim-airline | endif
-autocmd Colorscheme iceberg           if !has('gui_running') && !exists("lightline#update") | PackAdd vim-airline | endif
-autocmd Colorscheme nord              if !has('gui_running') && !exists("lightline#update") | PackAdd vim-airline | endif
-autocmd Colorscheme onehalfdark       if !has('gui_running') && !exists("lightline#update") | PackAdd vim-airline | endif
-autocmd Colorscheme onehalflight      if !has('gui_running') && !exists("lightline#update") | PackAdd vim-airline | endif
+autocmd Colorscheme afterglow         if !exists('g:loaded_lightline') | PackAdd vim-airline | endif
+autocmd Colorscheme apprentice        if !has('gui_running') && !exists('g:loaded_lightline') | PackAdd vim-airline | endif
+autocmd Colorscheme ayu               if !has('gui_running') && !exists('g:loaded_lightline') | PackAdd vim-airline | endif
+autocmd Colorscheme dracula           if !has('gui_running') && !exists('g:loaded_lightline') | PackAdd vim-airline | endif
+autocmd Colorscheme iceberg           if !has('gui_running') && !exists('g:loaded_lightline') | PackAdd vim-airline | endif
+autocmd Colorscheme nord              if !has('gui_running') && !exists('g:loaded_lightline') | PackAdd vim-airline | endif
+autocmd Colorscheme onehalfdark       if !has('gui_running') && !exists('g:loaded_lightline') | PackAdd vim-airline | endif
+autocmd Colorscheme onehalflight      if !has('gui_running') && !exists('g:loaded_lightline') | PackAdd vim-airline | endif
 " }}}
 
 "Color Scheme Switcher {{{
