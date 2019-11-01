@@ -402,3 +402,5 @@ nnoremap <leader>u :VerilogGotoInstanceStart<CR>
 "VerParse {{{
 let g:VPPreCommand = "source /home/data/smtd_design/bin/ss brent"
 " }}}
+
+call matchadd('ColorColumn', '\%81v', 100)
