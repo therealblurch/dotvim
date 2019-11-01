@@ -94,6 +94,7 @@ function! lightlinefunctions#LightlineUpdate()
    endif
    try
       if g:colors_name == "nord"
+               \ || g:colors_name == "dracula"
          let g:lightline.colorscheme = g:colors_name
       else
          let g:lightline.colorscheme = 'powerline'

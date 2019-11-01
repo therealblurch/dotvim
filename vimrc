@@ -65,6 +65,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
+autocmd Colorscheme dracula           if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline | call lightlinefunctions#LightlineUpdate() | endif
 autocmd Colorscheme nord              if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline | call lightlinefunctions#LightlineUpdate() | endif
 " }}}
 
@@ -229,6 +230,7 @@ augroup LightlineColorscheme
 augroup END
 
 " Commands to automatically load airline or lightline on colorscheme change.
+autocmd Colorscheme dracula           if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
 autocmd Colorscheme nord              if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
 
 command! -nargs=1 -complete=custom,lightlinefunctions#LightlineColorschemes LightlineColorscheme

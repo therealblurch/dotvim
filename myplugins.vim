@@ -60,6 +60,7 @@ Plugin 'thinca/vim-textobj-between',             {'type': 'start'}
 Plugin 'vimtaku/vim-textobj-keyvalue',           {'type': 'start'}
 
 Plugin 'arcticicestudio/nord-vim',               {'package': 'colors', 'type': 'start', 'brach': 'develop'}
+Plugin 'dracula/vim',                            {'package': 'colors', 'type': 'start', 'name': 'dracula'}
 Plugin 'sainnhe/lightline_foobar.vim',           {'package': 'colors'}
 
 function! myplugins#callback(plugname, before)
