@@ -6,6 +6,7 @@ augroup myplugins | au! | augroup END
 
 Plugin 'airblade/vim-gitgutter',                 {'type': 'start'}
 Plugin 'chrisbra/NrrwRgn'
+Plugin 'drmikehenry/vim-fontsize'
 Plugin 'kana/vim-smartinput',                    {'type': 'start'}
 Plugin 'kshenoy/vim-signature',                  {'type': 'start'}
 Plugin 'lifepillar/vim-mucomplete',              {'type': 'start'}
