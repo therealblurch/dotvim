@@ -18,12 +18,16 @@ set list
 if !has('win64') && !has('win32')
     set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 endif
+set modeline
 set nojoinspaces
 set nowrap
 set path=**
 set sessionoptions=blank,buffers,curdir,folds,tabpages,winsize,globals
 set shortmess+=c
 set showmatch
+if !exists(':AirlineTheme') && !exists('lightline#update')
+    set showmode
+endif
 set smartcase
 set tags=$PROJ_USER/rtl/tags
 if !has('gui_running')
