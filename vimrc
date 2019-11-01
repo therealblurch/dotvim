@@ -77,29 +77,29 @@ command! MakeTags !ctags -R --extras=+q --fields=+i -n .
 " Make Y work like C and D
 nnoremap Y y$
 
-+" Helpers to edit mode
-+" http://vimcasts.org/e/14
-+cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
-+map <leader>ew :e %%
-+map <leader>es :sp %%
-+map <leader>ev :vsp %%
-+map <leader>et :tabe %%
-+
-+inoremap jj <Esc>
-+
-+let g:rootdir = getcwd()
-+nnoremap cd :lcd %:p:h<bar>pwd<cr> " Switch to current file's directory
-+nnoremap cu :lcd ..<bar>pwd<cr> " Go up one directory
-+nnoremap cr :execute 'cd ' . rootdir<bar>pwd<cr> " Go to directory vim was opened at
-+nnoremap cp :pwd<cr> " Print current working directory
-+
-+" Edit/source .vimrc
-+noremap <leader>ev :tabedit ~/.vim/vimrc<CR>
-+noremap <leader>sv :source ~/.vim/vimrc<CR>
-+
-+" Timestamps
-+nnoremap <F6> "=strftime("%c")
-+inoremap <F6> <C-R>=strftime("%c")<CR>
+" Helpers to edit mode
+" http://vimcasts.org/e/14
+cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
+map <leader>ew :e %%
+map <leader>es :sp %%
+map <leader>ev :vsp %%
+map <leader>et :tabe %%
+
+inoremap jj <Esc>
+
+let g:rootdir = getcwd()
+nnoremap cd :lcd %:p:h<bar>pwd<cr> " Switch to current file's directory
+nnoremap cu :lcd ..<bar>pwd<cr> " Go up one directory
+nnoremap cr :execute 'cd ' . rootdir<bar>pwd<cr> " Go to directory vim was opened at
+nnoremap cp :pwd<cr> " Print current working directory
+
+" Edit/source .vimrc
+noremap <leader>ev :tabedit ~/.vim/vimrc<CR>
+noremap <leader>sv :source ~/.vim/vimrc<CR>
+
+" Timestamps
+nnoremap <F6> "=strftime("%c")
+inoremap <F6> <C-R>=strftime("%c")<CR>
 " }}}
 
 " Colorscheme Options {{{
