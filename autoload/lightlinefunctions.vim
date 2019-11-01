@@ -54,6 +54,8 @@ endfunction
 function! lightlinefunctions#LightlineColorscheme()
    if g:colors_name == "ayu"
       let s:color = g:colors_name . '/' . g:ayucolor
+   elseif g:colors_name == "vadelma"
+      let s:color = g:colors_name . '/' . &background
    else
       let s:color = g:colors_name
    endif
@@ -100,6 +102,7 @@ function! lightlinefunctions#LightlineUpdate()
       if g:colors_name == "nord"
                \ || g:colors_name == "dracula"
                \ || g:colors_name == "apprentice"
+               \ || g:colors_name == "vadelma"
          let g:lightline.colorscheme = g:colors_name
       elseif g:colors_name == "ayu"
          if g:ayucolor == 'light'

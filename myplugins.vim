@@ -66,6 +66,7 @@ Plugin 'ayu-theme/ayu-vim',                      {'package': 'colors', 'type': '
 Plugin 'dracula/vim',                            {'package': 'colors', 'type': 'start', 'name': 'dracula'}
 Plugin 'romainl/Apprentice',                     {'package': 'colors', 'type': 'start'}
 Plugin 'sainnhe/lightline_foobar.vim',           {'package': 'colors'}
+Plugin 'severij/vadelma',                        {'package': 'colors', 'type': 'start'}
 
 function! myplugins#callback(plugname, before)
 
