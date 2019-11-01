@@ -65,6 +65,7 @@ function! lightlinefunctions#LightlineColorscheme()
          let s:color = g:colors_name . '/' . g:materialbox_contrast_dark
       endif
    elseif g:colors_name == "snow"
+            \ || g:colors_name == "stellarized"
             \ || g:colors_name == "cosmic_latte"
             \ || g:colors_name == "vadelma"
             \ || g:colors_name == "one"
@@ -140,6 +141,8 @@ function! lightlinefunctions#LightlineUpdate()
          let g:lightline.colorscheme = "typewriter_light"
       elseif g:colors_name == 'typewriter-night'
          let g:lightline.colorscheme = "typewriter_dark"
+      elseif g:colors_name == 'stellarized'
+         let g:lightline.colorscheme = join ([g:colors_name,&background],"_")
       elseif g:colors_name == 'snow'
          let g:lightline.colorscheme = join ([g:colors_name,&background],"_")
       elseif g:colors_name == 'material'

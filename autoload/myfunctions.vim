@@ -20,10 +20,11 @@ function! myfunctions#CurrentColorscheme()
          let s:color = g:colors_name . '/' . g:materialbox_contrast_dark
       endif
    elseif g:colors_name == "snow"
-            \ || g:colors_name == "space_vim_theme"
+            \ || g:colors_name == "stellarized"
             \ || g:colors_name == "cosmic_latte"
             \ || g:colors_name == "vadelma"
             \ || g:colors_name == "one"
+            \ || g:colors_name == "space_vim_theme"
       let s:color = g:colors_name . '/' . &background
    else
       let s:color = g:colors_name
