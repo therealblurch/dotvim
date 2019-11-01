@@ -35,6 +35,7 @@ Plugin 'tpope/vim-fugitive',                     {'type': 'start'}
 Plugin 'tpope/vim-obsession',                    {'type': 'start'}
 Plugin 'tpope/vim-sensible',                     {'type': 'start'}
 Plugin 'tpope/vim-sleuth',                       {'type': 'start'}
+Plugin 'tpope/vim-speeddating'
 Plugin 'tpope/vim-surround',                     {'type': 'start'}
 Plugin 'tyru/capture.vim'
 Plugin 'vhda/verilog_systemverilog.vim',         {'type': 'start'}
