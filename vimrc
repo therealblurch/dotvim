@@ -89,6 +89,7 @@ autocmd Colorscheme dracula           if !has('gui_running') && !exists('g:loade
 autocmd Colorscheme greygull          if !exists('g:loaded_lightline') | PackAdd vim-airline | AirlineTheme seagull | endif
 autocmd Colorscheme gruvbox-material  if !has('gui_running') && !exists('g:loaded_lightline') | PackAdd vim-airline | endif
 autocmd Colorscheme iceberg           if !has('gui_running') && !exists('g:loaded_lightline') | PackAdd vim-airline | endif
+autocmd Colorscheme jellybeans        if !has('gui_running') && !exists('g:loaded_lightline') | PackAdd vim-airline | endif
 autocmd Colorscheme materialbox       if !exists('g:loaded_lightline') | PackAdd vim-airline | endif
 autocmd Colorscheme nord              if !has('gui_running') && !exists('g:loaded_lightline') | PackAdd vim-airline | endif
 autocmd Colorscheme onehalfdark       if !has('gui_running') && !exists('g:loaded_lightline') | PackAdd vim-airline | endif
@@ -274,6 +275,7 @@ autocmd Colorscheme cosmic_latte      if has('gui_running') && !exists(":Airline
 autocmd Colorscheme dracula           if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
 autocmd Colorscheme gruvbox-material  if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
 autocmd Colorscheme iceberg           if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
+autocmd Colorscheme jellybeans        if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
 autocmd Colorscheme material          if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
 autocmd Colorscheme night-owl         if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
 autocmd Colorscheme nord              if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif

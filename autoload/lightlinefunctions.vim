@@ -114,6 +114,7 @@ function! lightlinefunctions#LightlineUpdate()
    try
       if g:colors_name == "nord"
                \ || g:colors_name == "dracula"
+               \ || g:colors_name == "jellybeans"
                \ || g:colors_name == "apprentice"
                \ || g:colors_name == "tender"
                \ || g:colors_name == "iceberg"
