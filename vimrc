@@ -108,6 +108,16 @@ nnoremap Y y$
 let ayucolor="light"
 let g:ayucolor=ayucolor
 
+"material Possible Values: default | palenight | ocean | lighter | darker
+let g:material_theme_style="palenight"
+
+"Initial setting for g:gruvbox_material_background
+let g:gruvbox_material_background = 'hard'
+
+"Initial setting for materialbox
+let g:materialbox_contrast_dark = 'hard'
+let g:materialbox_contrast_light = 'hard'
+
 nmap <leader>- :<c-u>call colorschemefunctions#SchemeVariant(-v:count1)<cr>
 nmap <leader>+ :<c-u>call colorschemefunctions#SchemeVariant(+v:count1)<cr>
 " }}}
