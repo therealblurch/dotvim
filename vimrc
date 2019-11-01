@@ -79,6 +79,7 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 autocmd Colorscheme apprentice        if !has('gui_running') && !exists("lightline#update") | PackAdd vim-airline | endif
 autocmd Colorscheme ayu               if !has('gui_running') && !exists("lightline#update") | PackAdd vim-airline | endif
 autocmd Colorscheme dracula           if !has('gui_running') && !exists("lightline#update") | PackAdd vim-airline | endif
+autocmd Colorscheme iceberg           if !has('gui_running') && !exists("lightline#update") | PackAdd vim-airline | endif
 autocmd Colorscheme nord              if !has('gui_running') && !exists("lightline#update") | PackAdd vim-airline | endif
 autocmd Colorscheme onehalfdark       if !has('gui_running') && !exists("lightline#update") | PackAdd vim-airline | endif
 autocmd Colorscheme onehalflight      if !has('gui_running') && !exists("lightline#update") | PackAdd vim-airline | endif
@@ -252,6 +253,7 @@ augroup END
 autocmd Colorscheme apprentice        if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
 autocmd Colorscheme ayu               if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
 autocmd Colorscheme dracula           if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
+autocmd Colorscheme iceberg           if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
 autocmd Colorscheme nord              if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
 autocmd Colorscheme onehalfdark       if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
 autocmd Colorscheme onehalflight      if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif

@@ -103,6 +103,7 @@ function! lightlinefunctions#LightlineUpdate()
                \ || g:colors_name == "dracula"
                \ || g:colors_name == "apprentice"
                \ || g:colors_name == "vadelma"
+               \ || g:colors_name == "iceberg"
          let g:lightline.colorscheme = g:colors_name
       elseif g:colors_name == "ayu"
          if g:ayucolor == 'light'
