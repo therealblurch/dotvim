@@ -14,6 +14,7 @@ Plugin 'joereynolds/vim-minisnip'
 Plugin 'kana/vim-smartinput',                    {'type': 'start'}
 Plugin 'kshenoy/vim-signature',                  {'type': 'start'}
 Plugin 'lifepillar/vim-mucomplete',              {'type': 'start'}
+Plugin 'machakann/vim-highlightedyank',          {'type': 'start'}
 Plugin 'markonm/traces.vim',                     {'type': 'start'}
 Plugin 'myusuf3/numbers.vim',                    {'type': 'start'}
 Plugin 'rbong/vim-flog',                         {'type': 'start'}
