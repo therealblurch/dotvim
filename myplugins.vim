@@ -103,6 +103,16 @@ Plugin 'vim-scripts/vibrantink',                 {'package': 'colors', 'type': '
 " in the pack.  Because of this they are git submodules and added to the runtimepath
 " in vimrc.
 " Plugin 'sonph/onehalf',                    {'package': 'colors', 'type': 'start'}
+
+command! -nargs=1 -complete=custom,PackList
+   \ PackOpenDir packadd autopac | runtime OPT autopac.vim | call term_start(&shell,
+   \    {'cwd': autopac#impl#pluginfo(<q-args>).dir,
+   \    'term_finish': 'close'})
+
+command! -nargs=1 -complete=custom,PackList
+   \ PackOpenUrl packadd autopac | runtime OPT autopac.vim | call openbrowser#open(
+   \ autopac#impl#pluginfo(<q-args>).url)
+
 function! myplugins#callback(plugname, before)
 
    if !a:before
