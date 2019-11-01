@@ -120,6 +120,7 @@ function! lightlinefunctions#LightlineUpdate()
                \ || g:colors_name == "jellybeans"
                \ || g:colors_name == "apprentice"
                \ || g:colors_name == "tender"
+               \ || g:colors_name == "srcery"
                \ || g:colors_name == "iceberg"
                \ || g:colors_name == "snazzy"
          let g:lightline.colorscheme = g:colors_name

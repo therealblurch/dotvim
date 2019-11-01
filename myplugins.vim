@@ -84,6 +84,7 @@ Plugin 'romainl/Apprentice',                     {'package': 'colors', 'type': '
 Plugin 'sainnhe/gruvbox-material',               {'package': 'colors', 'type': 'start'}
 Plugin 'sainnhe/lightline_foobar.vim',           {'package': 'colors'}
 Plugin 'severij/vadelma',                        {'package': 'colors', 'type': 'start'}
+Plugin 'srcery-colors/srcery-vim',               {'package': 'colors', 'type': 'start'}
 
 function! myplugins#callback(plugname, before)
 
