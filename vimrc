@@ -196,12 +196,6 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 " }}}
 
-" flagship {{{
-autocmd User Flags call Hoist("global", "myfunctions#CurrentColorscheme")
-autocmd User Flags call Hoist("buffer", "myfunctions#GitgutterStatus")
-autocmd User Flags call Hoist("global", "ObsessionStatus")
-" }}}
-
 " Fugitive {{{
 nnoremap <silent> <leader>gs :Gstatus<CR>
 nnoremap <silent> <leader>gd :Gdiff<CR>
@@ -404,3 +398,35 @@ let g:VPPreCommand = "source /home/data/smtd_design/bin/ss brent"
 " }}}
 
 call matchadd('ColorColumn', '\%81v', 100)
+
+" Status line {{{
+function! StatuslineGit()
+    let l:branchname = fugitive#head()
+    if strlen(l:branchname) > 0
+        return ' '.l:branchname.' '
+    else
+        return ' clean '
+    endif
+endfunction
+
+set statusline=
+set statusline+=%#TabLineSel#
+set statusline+=%{(mode()=='n')?'\ \ NORMAL\ ':''}
+set statusline+=%{(mode()=='i')?'\ \ INSERT\ ':''}
+set statusline+=%{(mode()=='v')?'\ \ VISUAL\ ':''}
+set statusline+=%{(mode()=='r')?'\ \ REPLACE\ ':''}
+set statusline+=%#StatusLine#
+set statusline+=%r\ 
+set statusline+=%f
+set statusline+=%m\ 
+set statusline+=%#Normal#
+set statusline+=%=
+set statusline+=%#StatusLine#
+set statusline+=\ %y
+set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
+set statusline+=\[%{&fileformat}\]
+set statusline+=\ %p%%
+set statusline+=\ %l:%c\ 
+set statusline+=%#TabLineSel#
+set statusline+=%{StatuslineGit()}
+" }}}
