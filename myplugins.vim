@@ -66,6 +66,7 @@ Plugin 'arcticicestudio/nord-vim',               {'package': 'colors', 'type': '
 Plugin 'ayu-theme/ayu-vim',                      {'package': 'colors', 'type': 'start'}
 Plugin 'cocopon/iceberg.vim',                    {'package': 'colors', 'type': 'start'}
 Plugin 'connorholyday/vim-snazzy',               {'package': 'colors', 'type': 'start'}
+Plugin 'danilo-augusto/vim-afterglow',           {'package': 'colors', 'type': 'start'}
 Plugin 'dracula/vim',                            {'package': 'colors', 'type': 'start', 'name': 'dracula'}
 Plugin 'romainl/Apprentice',                     {'package': 'colors', 'type': 'start'}
 Plugin 'sainnhe/lightline_foobar.vim',           {'package': 'colors'}
