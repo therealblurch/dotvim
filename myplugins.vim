@@ -9,6 +9,7 @@ Plugin 'airblade/vim-gitgutter',                 {'type': 'start'}
 Plugin 'chrisbra/NrrwRgn'
 Plugin 'drmikehenry/vim-fontsize'
 Plugin 'idanarye/vim-merginal',                  {'type': 'start'}
+Plugin 'joereynolds/vim-minisnip'
 Plugin 'kana/vim-smartinput',                    {'type': 'start'}
 Plugin 'kshenoy/vim-signature',                  {'type': 'start'}
 Plugin 'lifepillar/vim-mucomplete',              {'type': 'start'}

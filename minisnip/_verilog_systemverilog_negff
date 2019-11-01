@@ -1,0 +1,4 @@
+// synopsys async_set_reset "{{+reset_signal+}}"
+always_ff @(negedge {{+clock+}} or posedge {{+~\~2+}})
+   if ({{+~\~3+}}) {{+register name+}} <= {{+reset value+}};
+   else            {{+~\~2+}} <= {{+load value+}};
