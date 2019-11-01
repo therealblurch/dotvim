@@ -398,3 +398,7 @@ nnoremap <leader>i :VerilogFollowInstance<CR>
 nnoremap <leader>I :VerilogFollowPort<CR>
 nnoremap <leader>u :VerilogGotoInstanceStart<CR>
 " }}}
+
+"VerParse {{{
+let g:VPPreCommand = "source /home/data/smtd_design/bin/ss brent"
+" }}}
