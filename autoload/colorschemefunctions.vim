@@ -24,6 +24,21 @@ function! colorschemefunctions#SchemeVariant(delta)
         endif
         let g:gruvbox_material_background = l:schemes[((a:delta+index(l:schemes, g:gruvbox_material_background)) % 3 + 3) % 3]
         exe 'colors gruvbox-material'
+    elseif g:colors_name == "materialbox"
+        let l:schemes = ['soft', 'medium', 'hard']
+        if &background == "light"
+            if a:delta+index(l:schemes, g:materialbox_contrast_light) >= 3 || a:delta+index(l:schemes, g:materialbox_contrast_light) < 0
+               let &background = "dark"
+            endif
+            let g:materialbox_contrast_light = l:schemes[((a:delta+index(l:schemes, g:materialbox_contrast_light)) % 3 + 3) % 3]
+            exe 'colors materialbox'
+        else
+            if a:delta+index(l:schemes, g:materialbox_contrast_dark) >= 3 || a:delta+index(l:schemes, g:materialbox_contrast_dark) < 0
+               let &background = "light"
+            endif
+            let g:materialbox_contrast_dark = l:schemes[((a:delta+index(l:schemes, g:materialbox_contrast_dark)) % 3 + 3) % 3]
+            exe 'colors materialbox'
+        endif
     elseif g:colors_name =~ "onehalf"
         let l:schemes = map(['light', 'dark'], '"onehalf".v:val')
         exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) %2]
