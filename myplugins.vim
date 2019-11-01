@@ -27,6 +27,27 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'xolox/vim-colorscheme-switcher',         {'type': 'start'}
 Plugin 'xolox/vim-misc',                         {'type': 'start'}
 
+Plugin 'adriaanzon/vim-textobj-matchit',         {'type': 'start'}
+Plugin 'deathlyfrantic/vim-textobj-blanklines',  {'type': 'start'}
+Plugin 'fvictorio/vim-textobj-backticks',        {'type': 'start'}
+Plugin 'gilligan/textobj-gitgutter',             {'type': 'start'}
+Plugin 'glts/vim-textobj-comment',               {'type': 'start'}
+Plugin 'glts/vim-textobj-indblock',              {'type': 'start'}
+Plugin 'Julian/vim-textobj-brace',               {'type': 'start'}
+Plugin 'kana/vim-textobj-datetime',              {'type': 'start'}
+Plugin 'kana/vim-textobj-diff',                  {'type': 'start'}
+Plugin 'kana/vim-textobj-entire',                {'type': 'start'}
+Plugin 'kana/vim-textobj-fold',                  {'type': 'start'}
+Plugin 'kana/vim-textobj-function',              {'type': 'start'}
+Plugin 'kana/vim-textobj-indent',                {'type': 'start'}
+Plugin 'kana/vim-textobj-user',                  {'type': 'start'}
+Plugin 'paulhybryant/vim-textobj-path',          {'type': 'start'}
+Plugin 'rhysd/vim-textobj-continuous-line',      {'type': 'start'}
+Plugin 'saaguero/vim-textobj-pastedtext',        {'type': 'start'}
+Plugin 'sgur/vim-textobj-parameter',             {'type': 'start'}
+Plugin 'thinca/vim-textobj-between',             {'type': 'start'}
+Plugin 'vimtaku/vim-textobj-keyvalue',           {'type': 'start'}
+
 Plugin 'arcticicestudio/nord-vim',               {'package': 'colors', 'type': 'start', 'brach': 'develop'}
 
 function! myplugins#callback(plugname, before)
