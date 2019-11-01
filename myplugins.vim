@@ -34,11 +34,11 @@ Plugin 'tpope/vim-sleuth',                       {'type': 'start'}
 Plugin 'tpope/vim-surround',                     {'type': 'start'}
 Plugin 'tyru/capture.vim'
 Plugin 'vhda/verilog_systemverilog.vim',         {'type': 'start'}
-Plugin 'zhuzhzh/verilog_emacsauto.vim',          {'name': 'verilog_emacsauto'}
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'xolox/vim-colorscheme-switcher',         {'type': 'start'}
 Plugin 'xolox/vim-misc',                         {'type': 'start'}
+Plugin 'zhuzhzh/verilog_emacsauto.vim',          {'name': 'verilog_emacsauto'}
 
 Plugin 'adriaanzon/vim-textobj-matchit',         {'type': 'start'}
 Plugin 'deathlyfrantic/vim-textobj-blanklines',  {'type': 'start'}
