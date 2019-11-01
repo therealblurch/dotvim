@@ -93,6 +93,10 @@ nnoremap Y y$
 +nnoremap cr :execute 'cd ' . rootdir<bar>pwd<cr> " Go to directory vim was opened at
 +nnoremap cp :pwd<cr> " Print current working directory
 +
++" Edit/source .vimrc
++noremap <leader>ev :tabedit ~/.vim/vimrc<CR>
++noremap <leader>sv :source ~/.vim/vimrc<CR>
++
 " }}}
 
 " Colorscheme Options {{{
