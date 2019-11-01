@@ -54,7 +54,8 @@ endfunction
 function! lightlinefunctions#LightlineColorscheme()
    if g:colors_name == "ayu"
       let s:color = g:colors_name . '/' . g:ayucolor
-   elseif g:colors_name == "vadelma"
+   elseif g:colors_name == "snow"
+            \ || g:colors_name == "vadelma"
       let s:color = g:colors_name . '/' . &background
    else
       let s:color = g:colors_name
@@ -119,6 +120,8 @@ function! lightlinefunctions#LightlineUpdate()
          else
             let g:lightline.colorscheme = "ayu"
          endif
+      elseif g:colors_name == 'snow'
+         let g:lightline.colorscheme = join ([g:colors_name,&background],"_")
       elseif g:colors_name =~ 'onehalf'
          let g:lightline.colorscheme = 'onehalfdark'
       else
