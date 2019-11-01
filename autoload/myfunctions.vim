@@ -7,7 +7,10 @@ function! myfunctions#GitgutterStatus()
 endfunction
 
 function! myfunctions#CurrentColorscheme()
-   let s:color = g:colors_name
+   if g:colors_name == "ayu"
+      let s:color = g:colors_name . '/' . g:ayucolor
+   else
+      let s:color = g:colors_name
+   endif
    return s:color
 endfunction
-
