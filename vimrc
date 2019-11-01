@@ -130,6 +130,12 @@ command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 nnoremap <Space>/ :Ag<SPACE>
 " }}}
 
+" Indentline {{{
+if !has('win64') && !has('win32')
+    let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+endif
+" }}}
+
 " Lightline {{{
    let g:lightline = {}
    let g:lightline.active = {
