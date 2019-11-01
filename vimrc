@@ -414,7 +414,9 @@ set statusline+=%{(mode()=='i')?'\ \ INSERT\ ':''}
 set statusline+=%{(mode()=='v')?'\ \ VISUAL\ ':''}
 set statusline+=%{(mode()=='r')?'\ \ REPLACE\ ':''}
 set statusline+=%#LineNr#
-set statusline+=\ 
+set statusline+=\ 
+set statusline+=%{lightlinefunctions#LightlineGitgutter()}
+set statusline+=
 set statusline+=%{StatuslineGit()}
 set statusline+=\ %f
 set statusline+=%m\ 
