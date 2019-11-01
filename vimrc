@@ -263,6 +263,11 @@ endif
 let g:mucomplete#enable_auto_at_startup=1
 " }}}
 
+" Rainbow {{{
+au VimEnter *.sv RainbowToggleOn
+au VimEnter *.v RainbowToggleOn
+" }}}
+
 " System Verilog {{{
 nnoremap <leader>i :VerilogFollowInstance<CR>
 nnoremap <leader>I :VerilogFollowPort<CR>
