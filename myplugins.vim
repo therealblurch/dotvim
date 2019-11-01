@@ -9,6 +9,7 @@ Plugin 'airblade/vim-gitgutter',                 {'type': 'start'}
 Plugin 'chrisbra/NrrwRgn'
 Plugin 'drmikehenry/vim-fontsize'
 Plugin 'idanarye/vim-merginal',                  {'type': 'start'}
+Plugin 'itchyny/lightline.vim'
 Plugin 'joereynolds/vim-minisnip'
 Plugin 'kana/vim-smartinput',                    {'type': 'start'}
 Plugin 'kshenoy/vim-signature',                  {'type': 'start'}
@@ -20,6 +21,7 @@ Plugin 'rhysd/committia.vim',                    {'type': 'start'}
 Plugin 'rhysd/conflict-marker.vim',              {'type': 'start'}
 Plugin 'rhysd/git-messenger.vim',                {'type': 'start'}
 Plugin 'ryanoasis/vim-devicons',                 {'type': 'start'}
+Plugin 'taohexxx/lightline-buffer'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-endwise',                      {'type': 'start'}
 Plugin 'tpope/vim-flagship',                     {'type': 'start'}
@@ -58,6 +60,7 @@ Plugin 'thinca/vim-textobj-between',             {'type': 'start'}
 Plugin 'vimtaku/vim-textobj-keyvalue',           {'type': 'start'}
 
 Plugin 'arcticicestudio/nord-vim',               {'package': 'colors', 'type': 'start', 'brach': 'develop'}
+Plugin 'sainnhe/lightline_foobar.vim',           {'package': 'colors'}
 
 function! myplugins#callback(plugname, before)
 
@@ -69,6 +72,9 @@ function! myplugins#callback(plugname, before)
 
    if a:plugname == "vim-airline"
       PackAdd vim-airline-themes
+   elseif a:plugname == "lightline.vim"
+      PackAdd lightline-buffer
+      PackAdd lightline_foobar.vim
    endif
 
 endfunction

@@ -65,7 +65,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
-autocmd Colorscheme nord              PackAdd vim-airline
+autocmd Colorscheme nord              if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline | call lightlinefunctions#LightlineUpdate() | endif
 " }}}
 
 "Color Scheme Switcher {{{
@@ -112,6 +112,124 @@ endif
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 nnoremap <Space>/ :Ag<SPACE>
+" }}}
+
+" Lightline {{{
+   let g:lightline = {}
+   let g:lightline.active = {
+                            \ 'left': [['mode', 'paste'],
+                            \         ['gitgutter', 'fugitive', 'readonly', 'filename']],
+                            \ 'right': [['lineinfo'],
+                            \          ['percent', 'winform'],
+                            \          ['fileformat', 'fileencoding', 'filetype', 'colorscheme']]
+                            \ }
+   if has('win32') || has('win64')
+        let g:lightline.component = {
+                                       \ 'charvaluehex': '0x%B',
+                                       \ 'lineinfo': '%3l[%L]:%-2v',
+                                       \ 'separator': ''
+                                       \ }
+    else
+        let g:lightline.component = {
+                                       \ 'charvaluehex': '0x%B',
+                                       \ 'lineinfo': ' %3l[%L]:%-2v',
+                                       \ 'separator': ''
+                                       \ }
+   endif
+   let g:lightline.component_function = {
+                                        \ 'readonly': 'lightlinefunctions#LightlineReadonly',
+                                        \ 'fugitive': 'lightlinefunctions#LightlineFugitive',
+                                        \ 'gitbranch': 'fugitive#head',
+                                        \ 'modified': 'lightlinefunctions#LightlineModified',
+                                        \ 'filename': 'lightlinefunctions#LightlineFilename',
+                                        \ 'filepath': 'lightlinefunctions#LightlineFilepath',
+                                        \ 'fileformat': 'lightlinefunctions#LightlineFileformat',
+                                        \ 'filetype': 'lightlinefunctions#LightlineFiletype',
+                                        \ 'fileencoding': 'lightlinefunctions#LightlineFileencoding',
+                                        \ 'mode': 'lightlinefunctions#LightlineMode',
+                                        \ 'winform': 'lightlinefunctions#LightlineWinform',
+                                        \ 'colorscheme': 'lightlinefunctions#LightlineColorscheme',
+                                        \ 'bufferinfo': 'lightline#buffer#bufferinfo',
+                                        \ 'gitgutter': 'lightlinefunctions#LightlineGitgutter'
+                                        \ }
+   if !has('win32') && !has('win64')
+        let g:lightline.separator = {
+                                    \ 'left': '',
+                                    \ 'right': ''
+                                    \ }
+        let g:lightline.subseparator = {
+                                       \ 'left': '',
+                                       \ 'right': ''
+                                       \ }
+   endif
+   let g:lightline.tabline = {
+                             \ 'left': [ [ 'bufferinfo' ],
+                             \           [ 'separator' ],
+                             \           [ 'bufferbefore', 'buffercurrent', 'bufferafter' ] ],
+                             \ 'right': [ [ 'close' ] ]
+                             \ }
+   let g:lightline.tab = {
+                         \ 'active': [ 'tabnum', 'filename', 'modified' ],
+                         \ 'inactive': [ 'tabnum', 'filename', 'modified' ]
+                         \ }
+    let g:lightline.component_expand = {
+                                       \ 'buffercurrent': 'lightline#buffer#buffercurrent',
+                                       \ 'bufferbefore': 'lightline#buffer#bufferbefore',
+                                       \ 'bufferafter': 'lightline#buffer#bufferafter'
+                                       \ }
+    let g:lightline.component_type = {
+                                     \ 'buffercurrent': 'tabsel',
+                                     \ 'bufferbefore': 'raw',
+                                     \ 'bufferafter': 'raw'
+                                     \ }
+
+let g:lightline#bufferline#min_buffer_count = 2
+let g:lightline#bufferline#enable_devicons = 1
+let g:lightline#bufferline#show_number = 1
+let g:lightline#bufferline#filename_modifier = ':t'
+
+" lightline-buffer ui settings
+" replace these symbols with ascii characters if your environment does not support unicode
+
+if !has('win64') && !has('win32')
+    let g:lightline_buffer_logo = ' '
+    let g:lightline_buffer_readonly_icon = ''
+    let g:lightline_buffer_modified_icon = '✭'
+    let g:lightline_buffer_expand_left_icon = '◀ '
+    let g:lightline_buffer_expand_right_icon = ' ▶'
+    let g:lightline_buffer_separator_icon = '  '
+    let g:lightline_buffer_git_icon = ' '
+else
+    let g:lightline_buffer_logo = ''
+    let g:lightline_buffer_readonly_icon = ''
+    let g:lightline_buffer_modified_icon = '*'
+    let g:lightline_buffer_expand_left_icon = ''
+    let g:lightline_buffer_expand_right_icon = ''
+    let g:lightline_buffer_separator_icon = '|'
+    let g:lightline_buffer_git_icon = ''
+endif
+let g:lightline_buffer_ellipsis_icon = '..'
+let g:lightline_buffer_active_buffer_left_icon = ''
+let g:lightline_buffer_active_buffer_right_icon = ''
+let g:lightline_buffer_enable_devicons = 1
+let g:lightline_buffer_show_bufnr = 1
+let g:lightline_buffer_fname_mod = ':t'
+let g:lightline_buffer_maxflen = 30
+let g:lightline_buffer_maxfextlen = 3
+let g:lightline_buffer_minflen = 16
+let g:lightline_buffer_minfextlen = 3
+let g:lightline_buffer_reservelen = 20
+
+augroup LightlineColorscheme
+   autocmd!
+   autocmd ColorScheme * call lightlinefunctions#LightlineUpdate()
+augroup END
+
+" Commands to automatically load airline or lightline on colorscheme change.
+autocmd Colorscheme nord              if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
+
+command! -nargs=1 -complete=custom,lightlinefunctions#LightlineColorschemes LightlineColorscheme
+   \ call lightlinefunctions#SetLightlineColorscheme(<q-args>)
 " }}}
 
 " mucomplete {{{
