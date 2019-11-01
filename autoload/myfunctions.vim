@@ -22,6 +22,7 @@ function! myfunctions#CurrentColorscheme()
    elseif g:colors_name == "snow"
             \ || g:colors_name == "space_vim_theme"
             \ || g:colors_name == "cosmic_latte"
+            \ || g:colors_name == "one"
       let s:color = g:colors_name . '/' . &background
    else
       let s:color = g:colors_name

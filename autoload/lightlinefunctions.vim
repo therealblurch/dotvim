@@ -67,6 +67,7 @@ function! lightlinefunctions#LightlineColorscheme()
    elseif g:colors_name == "snow"
             \ || g:colors_name == "cosmic_latte"
             \ || g:colors_name == "vadelma"
+            \ || g:colors_name == "one"
             \ || g:colors_name == "space_vim_theme"
       let s:color = g:colors_name . '/' . &background
    else
@@ -113,6 +114,7 @@ function! lightlinefunctions#LightlineUpdate()
    endif
    try
       if g:colors_name == "nord"
+               \ || g:colors_name == "one"
                \ || g:colors_name == "dracula"
                \ || g:colors_name == "jellybeans"
                \ || g:colors_name == "apprentice"
