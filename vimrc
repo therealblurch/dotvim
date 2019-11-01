@@ -119,6 +119,11 @@ let g:colorscheme_manager_remember_background = 1
 let g:colorscheme_manager_start_random = 0
 " }}}
 
+" Easy Align {{{
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
+" }}}
+
 " flagship {{{
 autocmd User Flags call Hoist("global", "myfunctions#CurrentColorscheme")
 autocmd User Flags call Hoist("buffer", "myfunctions#GitgutterStatus")

@@ -11,6 +11,7 @@ Plugin 'drmikehenry/vim-fontsize'
 Plugin 'idanarye/vim-merginal',                  {'type': 'start'}
 Plugin 'itchyny/lightline.vim'
 Plugin 'joereynolds/vim-minisnip'
+Plugin 'junegunn/vim-easy-align'
 Plugin 'kana/vim-smartinput',                    {'type': 'start'}
 Plugin 'kshenoy/vim-signature',                  {'type': 'start'}
 Plugin 'lifepillar/vim-mucomplete',              {'type': 'start'}
