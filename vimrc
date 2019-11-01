@@ -4,6 +4,8 @@ scriptencoding utf-8
 
 runtime OPT autopac.vim
 
+set backupskip+=*_layout*.v
+set backupskip+=*_gates.v
 set belloff+=ctrlg
 set completeopt+=menuone,noselect
 if has("patch-8.1.0360")
