@@ -77,6 +77,7 @@ Plugin 'nightsense/cosmic_latte',                {'package': 'colors', 'type': '
 Plugin 'nightsense/seabird',                     {'package': 'colors', 'type': 'start'}
 Plugin 'nightsense/snow',                        {'package': 'colors', 'type': 'start'}
 Plugin 'romainl/Apprentice',                     {'package': 'colors', 'type': 'start'}
+Plugin 'sainnhe/gruvbox-material',               {'package': 'colors', 'type': 'start'}
 Plugin 'sainnhe/lightline_foobar.vim',           {'package': 'colors'}
 Plugin 'severij/vadelma',                        {'package': 'colors', 'type': 'start'}
 

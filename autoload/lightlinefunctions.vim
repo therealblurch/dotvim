@@ -56,6 +56,8 @@ function! lightlinefunctions#LightlineColorscheme()
       let s:color = g:colors_name . '/' . g:ayucolor
    elseif g:colors_name == "material"
       let s:color = g:colors_name . '/' . g:material_theme_style
+   elseif g:colors_name == "gruvbox-material"
+      let s:color = g:colors_name . '/' . g:gruvbox_material_background
    elseif g:colors_name == "snow"
             \ || g:colors_name == "cosmic_latte"
             \ || g:colors_name == "vadelma"
@@ -142,6 +144,24 @@ function! lightlinefunctions#LightlineUpdate()
             let g:lightline.colorscheme = 'material_vim_darker'
          else
             let g:lightline.colorscheme = 'material_vim'
+         endif
+      elseif g:colors_name =~# 'gruvbox-material'
+         if &background == "light"
+            if g:gruvbox_material_background == 'hard'
+               let g:lightline.colorscheme = 'gruvbox_material_hard_light'
+            elseif g:gruvbox_material_background == 'soft'
+               let g:lightline.colorscheme = 'gruvbox_material_soft_light'
+            else
+               let g:lightline.colorscheme = 'gruvbox_material_medium_light'
+            endif
+         else
+            if g:gruvbox_material_background == 'hard'
+               let g:lightline.colorscheme = 'gruvbox_material_hard'
+            elseif g:gruvbox_material_background == 'soft'
+               let g:lightline.colorscheme = 'gruvbox_material_soft'
+            else
+               let g:lightline.colorscheme = 'gruvbox_material'
+            endif
          endif
       elseif g:colors_name == 'night-owl'
          let g:lightline.colorscheme = 'nightowl'
