@@ -14,14 +14,12 @@ function! colorschemefunctions#SchemeVariant(delta)
     elseif g:colors_name == "snow"
                 \ || g:colors_name == "cosmic_latte"
                 \ || g:colors_name == "space_vim_theme"
+                \ || g:colors_name == "vadelma"
         let l:schemes = ['dark', 'light']
         let &background = l:schemes[((a:delta+index(l:schemes, &background)) %2 + 2) % 2]
     elseif g:colors_name =~ "onehalf"
         let l:schemes = map(['light', 'dark'], '"onehalf".v:val')
         exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) %2]
-    elseif g:colors_name == "vadelma"
-        let l:schemes = ['dark', 'light']
-        let &background = l:schemes[((a:delta+index(l:schemes, &background)) %2 + 2) % 2]
     endif
 endfunction
 
