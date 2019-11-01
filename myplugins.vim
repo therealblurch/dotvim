@@ -81,6 +81,7 @@ Plugin 'nightsense/seabird',                     {'package': 'colors', 'type': '
 Plugin 'nightsense/snow',                        {'package': 'colors', 'type': 'start'}
 Plugin 'nightsense/stellarized',                 {'package': 'colors', 'type': 'start'}
 Plugin 'rakr/vim-one',                           {'package': 'colors', 'type': 'start'}
+Plugin 'reedes/vim-colors-pencil',               {'package': 'colors', 'type': 'start'}
 Plugin 'romainl/Apprentice',                     {'package': 'colors', 'type': 'start'}
 Plugin 'sainnhe/gruvbox-material',               {'package': 'colors', 'type': 'start'}
 Plugin 'sainnhe/lightline_foobar.vim',           {'package': 'colors'}

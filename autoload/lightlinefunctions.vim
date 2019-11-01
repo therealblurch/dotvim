@@ -70,6 +70,7 @@ function! lightlinefunctions#LightlineColorscheme()
             \ || g:colors_name == "vadelma"
             \ || g:colors_name == "one"
             \ || g:colors_name == "space_vim_theme"
+            \ || g:colors_name == "pencil"
       let s:color = g:colors_name . '/' . &background
    else
       let s:color = g:colors_name
@@ -176,6 +177,8 @@ function! lightlinefunctions#LightlineUpdate()
                let g:lightline.colorscheme = 'gruvbox_material'
             endif
          endif
+      elseif g:colors_name == 'pencil'
+         let g:lightline.colorscheme = 'pencil_alter'
       elseif g:colors_name == 'night-owl'
          let g:lightline.colorscheme = 'nightowl'
       elseif g:colors_name == 'cosmic_latte'
