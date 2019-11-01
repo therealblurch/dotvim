@@ -69,6 +69,7 @@ Plugin 'connorholyday/vim-snazzy',               {'package': 'colors', 'type': '
 Plugin 'danilo-augusto/vim-afterglow',           {'package': 'colors', 'type': 'start'}
 Plugin 'dracula/vim',                            {'package': 'colors', 'type': 'start', 'name': 'dracula'}
 Plugin 'jacoborus/tender.vim',                   {'package': 'colors', 'type': 'start'}
+Plugin 'kaicataldo/material.vim',                {'package': 'colors', 'type': 'start', 'name': 'material'}
 Plugin 'nightsense/snow',                        {'package': 'colors', 'type': 'start'}
 Plugin 'romainl/Apprentice',                     {'package': 'colors', 'type': 'start'}
 Plugin 'sainnhe/lightline_foobar.vim',           {'package': 'colors'}

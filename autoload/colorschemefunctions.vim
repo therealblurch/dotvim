@@ -4,6 +4,10 @@ function! colorschemefunctions#SchemeVariant(delta)
         let g:ayucolor = l:schemes[((a:delta+index(l:schemes, g:ayucolor)) % 3 + 3) % 3]
         let ayucolor = g:ayucolor
         exe 'colors ayu'
+    elseif g:colors_name == "material"
+        let l:schemes = ['default', 'palenight', 'ocean', 'lighter', 'darker']
+        let g:material_theme_style = l:schemes[((a:delta+index(l:schemes, g:material_theme_style)) % 5 + 5) % 5]
+        exe 'colors material'
     elseif g:colors_name == "snow"
         let l:schemes = ['dark', 'light']
         let &background = l:schemes[((a:delta+index(l:schemes, &background)) %2 + 2) % 2]

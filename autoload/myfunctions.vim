@@ -9,6 +9,8 @@ endfunction
 function! myfunctions#CurrentColorscheme()
    if g:colors_name == "ayu"
       let s:color = g:colors_name . '/' . g:ayucolor
+   elseif g:colors_name == "material"
+      let s:color = g:colors_name . '/' . g:material_theme_style
    elseif g:colors_name == "snow"
       let s:color = g:colors_name . '/' . &background
    else

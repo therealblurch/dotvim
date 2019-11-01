@@ -54,6 +54,8 @@ endfunction
 function! lightlinefunctions#LightlineColorscheme()
    if g:colors_name == "ayu"
       let s:color = g:colors_name . '/' . g:ayucolor
+   elseif g:colors_name == "material"
+      let s:color = g:colors_name . '/' . g:material_theme_style
    elseif g:colors_name == "snow"
             \ || g:colors_name == "vadelma"
       let s:color = g:colors_name . '/' . &background
@@ -123,6 +125,20 @@ function! lightlinefunctions#LightlineUpdate()
          endif
       elseif g:colors_name == 'snow'
          let g:lightline.colorscheme = join ([g:colors_name,&background],"_")
+      elseif g:colors_name == 'material'
+         if g:material_theme_style == 'palenight'
+            let g:lightline.colorscheme = 'material_vim_palenight'
+         elseif g:material_theme_style == 'ocean'
+            let g:lightline.colorscheme = 'material_vim_ocean'
+         elseif g:material_theme_style == 'lighter'
+            let g:lightline.colorscheme = 'material_vim_lighter'
+         elseif g:material_theme_style == 'darker'
+            let g:lightline.colorscheme = 'material_vim_darker'
+         else
+            let g:lightline.colorscheme = 'material_vim'
+         endif
+      elseif g:colors_name == 'night-owl'
+         let g:lightline.colorscheme = 'nightowl'
       elseif g:colors_name =~ 'onehalf'
          let g:lightline.colorscheme = 'onehalfdark'
       else
