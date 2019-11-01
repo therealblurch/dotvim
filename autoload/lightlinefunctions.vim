@@ -99,6 +99,7 @@ function! lightlinefunctions#LightlineUpdate()
    try
       if g:colors_name == "nord"
                \ || g:colors_name == "dracula"
+               \ || g:colors_name == "apprentice"
          let g:lightline.colorscheme = g:colors_name
       elseif g:colors_name == "ayu"
          if g:ayucolor == 'light'
