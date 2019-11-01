@@ -97,6 +97,9 @@ nnoremap Y y$
 +noremap <leader>ev :tabedit ~/.vim/vimrc<CR>
 +noremap <leader>sv :source ~/.vim/vimrc<CR>
 +
++" Timestamps
++nnoremap <F6> "=strftime("%c")
++inoremap <F6> <C-R>=strftime("%c")<CR>
 " }}}
 
 " Colorscheme Options {{{
