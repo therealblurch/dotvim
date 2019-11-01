@@ -24,6 +24,7 @@ set modeline
 set nojoinspaces
 set nowrap
 set path=**
+set runtimepath+=~/.vim/plug/onehalf/vim
 set sessionoptions=blank,buffers,curdir,folds,tabpages,winsize,globals
 set shortmess+=filmnrxoOtTc
 set showmatch
@@ -78,6 +79,8 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 autocmd Colorscheme ayu               if !has('gui_running') && !exists("lightline#update") | PackAdd vim-airline | endif
 autocmd Colorscheme dracula           if !has('gui_running') && !exists("lightline#update") | PackAdd vim-airline | endif
 autocmd Colorscheme nord              if !has('gui_running') && !exists("lightline#update") | PackAdd vim-airline | endif
+autocmd Colorscheme onehalfdark       if !has('gui_running') && !exists("lightline#update") | PackAdd vim-airline | endif
+autocmd Colorscheme onehalflight      if !has('gui_running') && !exists("lightline#update") | PackAdd vim-airline | endif
 " }}}
 
 "Color Scheme Switcher {{{
@@ -242,6 +245,8 @@ augroup END
 autocmd Colorscheme ayu               if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
 autocmd Colorscheme dracula           if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
 autocmd Colorscheme nord              if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
+autocmd Colorscheme onehalfdark       if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
+autocmd Colorscheme onehalflight      if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
 
 command! -nargs=1 -complete=custom,lightlinefunctions#LightlineColorschemes LightlineColorscheme
    \ call lightlinefunctions#SetLightlineColorscheme(<q-args>)

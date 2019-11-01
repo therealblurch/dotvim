@@ -4,3 +4,6 @@
 [submodule "pack/unmanaged/start/vim-colorscheme-manager"]
 	path = pack/unmanaged/start/vim-colorscheme-manager
 	url = https://cbtlsl@github.com/cbtlsl/vim-colorscheme-manager
+[submodule "plug/onehalf"]
+	path = plug/onehalf
+	url = https://github.com/sonph/onehalf

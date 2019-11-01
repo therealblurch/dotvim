@@ -108,6 +108,8 @@ function! lightlinefunctions#LightlineUpdate()
          else
             let g:lightline.colorscheme = "ayu"
          endif
+      elseif g:colors_name =~ 'onehalf'
+         let g:lightline.colorscheme = 'onehalfdark'
       else
          let g:lightline.colorscheme = 'powerline'
       endif
