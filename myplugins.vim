@@ -74,6 +74,7 @@ Plugin 'kaicataldo/material.vim',                {'package': 'colors', 'type': '
 Plugin 'liuchengxu/space-vim-theme',             {'package': 'colors', 'type': 'start'}
 Plugin 'logico-dev/typewriter',                  {'package': 'colors', 'type': 'start'}
 Plugin 'nightsense/cosmic_latte',                {'package': 'colors', 'type': 'start'}
+Plugin 'nightsense/seabird',                     {'package': 'colors', 'type': 'start'}
 Plugin 'nightsense/snow',                        {'package': 'colors', 'type': 'start'}
 Plugin 'romainl/Apprentice',                     {'package': 'colors', 'type': 'start'}
 Plugin 'sainnhe/lightline_foobar.vim',           {'package': 'colors'}

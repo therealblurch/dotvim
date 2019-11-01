@@ -86,12 +86,16 @@ autocmd Colorscheme apprentice        if !has('gui_running') && !exists('g:loade
 autocmd Colorscheme ayu               if !has('gui_running') && !exists('g:loaded_lightline') | PackAdd vim-airline | endif
 autocmd Colorscheme cosmic_latte      if !exists('g:loaded_lightline') | PackAdd vim-airline | endif
 autocmd Colorscheme dracula           if !has('gui_running') && !exists('g:loaded_lightline') | PackAdd vim-airline | endif
+autocmd Colorscheme greygull          if !exists('g:loaded_lightline') | PackAdd vim-airline | AirlineTheme seagull | endif
 autocmd Colorscheme iceberg           if !has('gui_running') && !exists('g:loaded_lightline') | PackAdd vim-airline | endif
 autocmd Colorscheme nord              if !has('gui_running') && !exists('g:loaded_lightline') | PackAdd vim-airline | endif
 autocmd Colorscheme onehalfdark       if !has('gui_running') && !exists('g:loaded_lightline') | PackAdd vim-airline | endif
 autocmd Colorscheme onehalflight      if !has('gui_running') && !exists('g:loaded_lightline') | PackAdd vim-airline | endif
+autocmd Colorscheme petrel            if !exists('g:loaded_lightline') | PackAdd vim-airline | AirlineTheme seagull | endif
+autocmd Colorscheme seagull           if !exists('g:loaded_lightline') | PackAdd vim-airline | endif
 autocmd Colorscheme snow              if !has('gui_running') && !exists('g:loaded_lightline') | PackAdd vim-airline | endif
 autocmd Colorscheme tender            if !has('gui_running') && !exists('g:loaded_lightline') | PackAdd vim-airline | endif
+autocmd Colorscheme stormpetrel       if !exists('g:loaded_lightline') | PackAdd vim-airline | AirlineTheme seagull | endif
 autocmd Colorscheme typewriter        if !has('gui_running') && !exists('g:loaded_lightline') | PackAdd vim-airline | AirlineTheme seagull | endif
 autocmd Colorscheme typewriter-night  if !has('gui_running') && !exists('g:loaded_lightline') | PackAdd vim-airline | AirlineTheme seagull | endif
 " }}}
