@@ -79,7 +79,7 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 augroup AirlineTheme
     autocmd!
-    autocmd ColorScheme * if exists(":AirlineTheme") | call colorschemefunctions#AirlineTheme(g:colors_name) | endif
+    autocmd ColorScheme * if exists('g:loaded_airline') | call colorschemefunctions#AirlineTheme(g:colors_name) | endif
 augroup END
 
 autocmd Colorscheme afterglow         if !exists('g:loaded_lightline') | PackAdd vim-airline | endif
@@ -280,30 +280,30 @@ augroup LightlineColorscheme
 augroup END
 
 " Commands to automatically load airline or lightline on colorscheme change.
-autocmd Colorscheme apprentice        if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme ayu               if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme cosmic_latte      if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme deep-space        if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme dracula           if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme gruvbox-material  if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme iceberg           if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme jellybeans        if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme material          if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme night-owl         if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme nord              if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme onehalfdark       if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme onehalflight      if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme one               if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme pencil            if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme snazzy            if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme snow              if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme space_vim_theme   if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme srcery            if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme stellarized       if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme tender            if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme typewriter        if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme typewriter-night  if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme vadelma           if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
+autocmd Colorscheme apprentice        if has('gui_running') && !exists('g:loaded_airline') | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
+autocmd Colorscheme ayu               if has('gui_running') && !exists('g:loaded_airline') | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
+autocmd Colorscheme cosmic_latte      if has('gui_running') && !exists('g:loaded_airline') | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
+autocmd Colorscheme deep-space        if has('gui_running') && !exists('g:loaded_airline') | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
+autocmd Colorscheme dracula           if has('gui_running') && !exists('g:loaded_airline') | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
+autocmd Colorscheme gruvbox-material  if has('gui_running') && !exists('g:loaded_airline') | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
+autocmd Colorscheme iceberg           if has('gui_running') && !exists('g:loaded_airline') | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
+autocmd Colorscheme jellybeans        if has('gui_running') && !exists('g:loaded_airline') | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
+autocmd Colorscheme material          if has('gui_running') && !exists('g:loaded_airline') | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
+autocmd Colorscheme night-owl         if has('gui_running') && !exists('g:loaded_airline') | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
+autocmd Colorscheme nord              if has('gui_running') && !exists('g:loaded_airline') | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
+autocmd Colorscheme onehalfdark       if has('gui_running') && !exists('g:loaded_airline') | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
+autocmd Colorscheme onehalflight      if has('gui_running') && !exists('g:loaded_airline') | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
+autocmd Colorscheme one               if has('gui_running') && !exists('g:loaded_airline') | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
+autocmd Colorscheme pencil            if has('gui_running') && !exists('g:loaded_airline') | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
+autocmd Colorscheme snazzy            if has('gui_running') && !exists('g:loaded_airline') | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
+autocmd Colorscheme snow              if has('gui_running') && !exists('g:loaded_airline') | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
+autocmd Colorscheme space_vim_theme   if has('gui_running') && !exists('g:loaded_airline') | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
+autocmd Colorscheme srcery            if has('gui_running') && !exists('g:loaded_airline') | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
+autocmd Colorscheme stellarized       if has('gui_running') && !exists('g:loaded_airline') | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
+autocmd Colorscheme tender            if has('gui_running') && !exists('g:loaded_airline') | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
+autocmd Colorscheme typewriter        if has('gui_running') && !exists('g:loaded_airline') | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
+autocmd Colorscheme typewriter-night  if has('gui_running') && !exists('g:loaded_airline') | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
+autocmd Colorscheme vadelma           if has('gui_running') && !exists('g:loaded_airline') | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
 
 command! -nargs=1 -complete=custom,lightlinefunctions#LightlineColorschemes LightlineColorscheme
    \ call lightlinefunctions#SetLightlineColorscheme(<q-args>)
