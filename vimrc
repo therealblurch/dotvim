@@ -85,6 +85,7 @@ autocmd Colorscheme afterglow         if !exists('g:loaded_lightline') | PackAdd
 autocmd Colorscheme apprentice        if !has('gui_running') && !exists('g:loaded_lightline') | PackAdd vim-airline | endif
 autocmd Colorscheme ayu               if !has('gui_running') && !exists('g:loaded_lightline') | PackAdd vim-airline | endif
 autocmd Colorscheme cosmic_latte      if !exists('g:loaded_lightline') | PackAdd vim-airline | endif
+autocmd Colorscheme deep-space        if !has('gui_running') && !exists('g:loaded_lightline') | PackAdd vim-airline | endif
 autocmd Colorscheme desertink         if !exists('g:loaded_lightline') | PackAdd vim-airline | endif
 autocmd Colorscheme dracula           if !has('gui_running') && !exists('g:loaded_lightline') | PackAdd vim-airline | endif
 autocmd Colorscheme greygull          if !exists('g:loaded_lightline') | PackAdd vim-airline | AirlineTheme seagull | endif
@@ -276,6 +277,7 @@ augroup END
 autocmd Colorscheme apprentice        if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
 autocmd Colorscheme ayu               if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
 autocmd Colorscheme cosmic_latte      if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
+autocmd Colorscheme deep-space        if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
 autocmd Colorscheme dracula           if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
 autocmd Colorscheme gruvbox-material  if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
 autocmd Colorscheme iceberg           if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif

@@ -180,6 +180,8 @@ function! lightlinefunctions#LightlineUpdate()
          let g:lightline.colorscheme = 'nightowl'
       elseif g:colors_name == 'cosmic_latte'
          let g:lightline.colorscheme = join ([g:colors_name,&background],"_")
+      elseif g:colors_name =~# 'deep-space'
+         let g:lightline.colorscheme = 'deepspace'
       elseif g:colors_name =~ 'onehalf'
          let g:lightline.colorscheme = 'onehalfdark'
       elseif g:colors_name =~# 'space_vim_theme'
