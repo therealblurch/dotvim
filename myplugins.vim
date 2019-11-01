@@ -13,6 +13,7 @@ Plugin 'lifepillar/vim-mucomplete',              {'type': 'start'}
 Plugin 'markonm/traces.vim',                     {'type': 'start'}
 Plugin 'myusuf3/numbers.vim',                    {'type': 'start'}
 Plugin 'rbong/vim-flog',                         {'type': 'start'}
+Plugin 'rhysd/committia.vim',                    {'type': 'start'}
 Plugin 'ryanoasis/vim-devicons',                 {'type': 'start'}
 Plugin 'tpope/vim-endwise',                      {'type': 'start'}
 Plugin 'tpope/vim-flagship',                     {'type': 'start'}
