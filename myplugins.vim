@@ -47,7 +47,7 @@ Plugin 'wellle/visual-split.vim'
 Plugin 'xolox/vim-colorscheme-switcher',         {'type': 'start'}
 Plugin 'xolox/vim-misc',                         {'type': 'start'}
 Plugin 'Yggdroot/indentline',                    {'type': 'start'}
-Plugin 'zhuzhzh/verilog_emacsauto.vim',          {'name': 'verilog_emacsauto'}
+Plugin 'zhuzhzh/verilog_emacsauto.vim'
 
 Plugin 'adriaanzon/vim-textobj-matchit',         {'type': 'start'}
 Plugin 'deathlyfrantic/vim-textobj-blanklines',  {'type': 'start'}
