@@ -103,6 +103,7 @@ function! lightlinefunctions#LightlineUpdate()
       if g:colors_name == "nord"
                \ || g:colors_name == "dracula"
                \ || g:colors_name == "apprentice"
+               \ || g:colors_name == "tender"
                \ || g:colors_name == "iceberg"
                \ || g:colors_name == "snazzy"
          let g:lightline.colorscheme = g:colors_name
