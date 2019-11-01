@@ -37,6 +37,7 @@ Plugin 'tpope/vim-sensible',                     {'type': 'start'}
 Plugin 'tpope/vim-sleuth',                       {'type': 'start'}
 Plugin 'tpope/vim-speeddating'
 Plugin 'tpope/vim-surround',                     {'type': 'start'}
+Plugin 'tpope/vim-unimpaired',                   {'type': 'start'}
 Plugin 'tyru/capture.vim'
 Plugin 'vhda/verilog_systemverilog.vim',         {'type': 'start'}
 Plugin 'vim-airline/vim-airline'
