@@ -1,5 +1,7 @@
 " vim: set sw=4 ts=4 sts=4 et tw=78 foldmarker={{{,}}} foldlevel=0 foldmethod=marker:
 
+scriptencoding utf-8
+
 runtime OPT autopac.vim
 
 set belloff+=ctrlg
@@ -21,6 +23,7 @@ set nowrap
 set path=**
 set sessionoptions=blank,buffers,curdir,folds,tabpages,winsize,globals
 set shortmess+=c
+set showmatch
 set smartcase
 set tags=$PROJ_USER/rtl/tags
 if !has('gui_running')
