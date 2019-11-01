@@ -22,6 +22,7 @@ if !has('win64') && !has('win32')
 endif
 set modeline
 set nojoinspaces
+set noshowmode
 set nowrap
 set path=**
 set runtimepath+=~/.vim/plug/onehalf/vim
@@ -29,9 +30,6 @@ set sessionoptions=blank,buffers,curdir,folds,tabpages,winsize,globals
 set shortmess+=filmnrxoOtTc
 set showcmd
 set showmatch
-if !exists(':AirlineTheme') && !exists('lightline#update')
-    set showmode
-endif
 set smartcase
 set tags=$PROJ_USER/rtl/tags
 if !has('gui_running')
@@ -410,23 +408,23 @@ function! StatuslineGit()
 endfunction
 
 set statusline=
-set statusline+=%#TabLineSel#
+set statusline+=%#PmenuSel#
 set statusline+=%{(mode()=='n')?'\ \ NORMAL\ ':''}
 set statusline+=%{(mode()=='i')?'\ \ INSERT\ ':''}
 set statusline+=%{(mode()=='v')?'\ \ VISUAL\ ':''}
 set statusline+=%{(mode()=='r')?'\ \ REPLACE\ ':''}
-set statusline+=%#StatusLine#
-set statusline+=%r\ 
-set statusline+=%f
+set statusline+=%#LineNr#
+set statusline+=\ 
+set statusline+=%{StatuslineGit()}
+set statusline+=\ %f
 set statusline+=%m\ 
-set statusline+=%#Normal#
 set statusline+=%=
-set statusline+=%#StatusLine#
+set statusline+=%{myfunctions#CurrentColorscheme()}\ 
+set statusline+=%#CursorColumn#
 set statusline+=\ %y
 set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
 set statusline+=\[%{&fileformat}\]
 set statusline+=\ %p%%
-set statusline+=\ %l:%c\ 
-set statusline+=%#TabLineSel#
-set statusline+=%{StatuslineGit()}
+set statusline+=\ %l:%c
+set statusline+=\ 
 " }}}
