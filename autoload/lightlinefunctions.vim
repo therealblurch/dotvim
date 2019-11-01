@@ -52,7 +52,11 @@ function! lightlinefunctions#LightlineFileformat()
 endfunction
 
 function! lightlinefunctions#LightlineColorscheme()
-   let s:color = g:colors_name
+   if g:colors_name == "ayu"
+      let s:color = g:colors_name . '/' . g:ayucolor
+   else
+      let s:color = g:colors_name
+   endif
    return winwidth(0) > 80 ? s:color : ''
 endfunction
 
@@ -96,6 +100,14 @@ function! lightlinefunctions#LightlineUpdate()
       if g:colors_name == "nord"
                \ || g:colors_name == "dracula"
          let g:lightline.colorscheme = g:colors_name
+      elseif g:colors_name == "ayu"
+         if g:ayucolor == 'light'
+            let g:lightline.colorscheme = "ayu_light"
+         elseif g:ayucolor == 'mirage'
+            let g:lightline.colorscheme = "ayu_mirage"
+         else
+            let g:lightline.colorscheme = "ayu"
+         endif
       else
          let g:lightline.colorscheme = 'powerline'
       endif

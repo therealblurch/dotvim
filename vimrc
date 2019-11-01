@@ -59,12 +59,23 @@ vnoremap < <gv
 vnoremap > >gv
 " }}}
 
+" Colorscheme Options {{{
+
+"ayu Possible Values: light| dark | mirage
+let ayucolor="light"
+let g:ayucolor=ayucolor
+
+nmap <leader>- :<c-u>call colorschemefunctions#SchemeVariant(-v:count1)<cr>
+nmap <leader>+ :<c-u>call colorschemefunctions#SchemeVariant(+v:count1)<cr>
+" }}}
+
 " Airline {{{
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
+autocmd Colorscheme ayu               if !has('gui_running') && !exists("lightline#update") | PackAdd vim-airline | endif
 autocmd Colorscheme dracula           if !has('gui_running') && !exists("lightline#update") | PackAdd vim-airline | endif
 autocmd Colorscheme nord              if !has('gui_running') && !exists("lightline#update") | PackAdd vim-airline | endif
 " }}}
@@ -228,6 +239,7 @@ augroup LightlineColorscheme
 augroup END
 
 " Commands to automatically load airline or lightline on colorscheme change.
+autocmd Colorscheme ayu               if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
 autocmd Colorscheme dracula           if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
 autocmd Colorscheme nord              if has('gui_running') && !exists(":AirlineTheme") | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
 
