@@ -74,6 +74,9 @@ vnoremap > >gv
 
 command! MakeTags !ctags -R --extras=+q --fields=+i -n .
 
+" Make Y work like C and D
+nnoremap Y y$
+
 " }}}
 
 " Colorscheme Options {{{
