@@ -99,6 +99,10 @@ Plugin 'tpope/vim-vividchalk',                   {'package': 'colors', 'type': '
 Plugin 'tyrannicaltoucan/vim-deep-space',        {'package': 'colors', 'type': 'start'}
 Plugin 'vim-scripts/vibrantink',                 {'package': 'colors', 'type': 'start'}
 
+" This repositories contain a vim directory which is the only directory that I want
+" in the pack.  Because of this they are git submodules and added to the runtimepath
+" in vimrc.
+" Plugin 'sonph/onehalf',                    {'package': 'colors', 'type': 'start'}
 function! myplugins#callback(plugname, before)
 
    if !a:before
