@@ -12,6 +12,7 @@ function! myfunctions#CurrentColorscheme()
    elseif g:colors_name == "material"
       let s:color = g:colors_name . '/' . g:material_theme_style
    elseif g:colors_name == "snow"
+            \ || g:colors_name == "space_vim_theme"
       let s:color = g:colors_name . '/' . &background
    else
       let s:color = g:colors_name

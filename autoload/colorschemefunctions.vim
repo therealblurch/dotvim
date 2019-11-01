@@ -9,6 +9,8 @@ function! colorschemefunctions#SchemeVariant(delta)
         let g:material_theme_style = l:schemes[((a:delta+index(l:schemes, g:material_theme_style)) % 5 + 5) % 5]
         exe 'colors material'
     elseif g:colors_name == "snow"
+                \ || g:colors_name == "cosmic_latte"
+                \ || g:colors_name == "space_vim_theme"
         let l:schemes = ['dark', 'light']
         let &background = l:schemes[((a:delta+index(l:schemes, &background)) %2 + 2) % 2]
     elseif g:colors_name =~ "onehalf"

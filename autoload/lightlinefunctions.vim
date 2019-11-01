@@ -58,6 +58,7 @@ function! lightlinefunctions#LightlineColorscheme()
       let s:color = g:colors_name . '/' . g:material_theme_style
    elseif g:colors_name == "snow"
             \ || g:colors_name == "vadelma"
+            \ || g:colors_name == "space_vim_theme"
       let s:color = g:colors_name . '/' . &background
    else
       let s:color = g:colors_name
@@ -141,6 +142,13 @@ function! lightlinefunctions#LightlineUpdate()
          let g:lightline.colorscheme = 'nightowl'
       elseif g:colors_name =~ 'onehalf'
          let g:lightline.colorscheme = 'onehalfdark'
+      elseif g:colors_name =~# 'space_vim_theme'
+         if &bg =~# 'dark'
+            let g:lightline.colorscheme = 'space_vim_dark'
+         endif
+         if &bg =~# 'light'
+            let g:lightline.colorscheme = 'space_vim_light'
+         endif
       else
          let g:lightline.colorscheme = 'powerline'
       endif
