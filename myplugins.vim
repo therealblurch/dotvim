@@ -26,6 +26,7 @@ Plugin 'rhysd/conflict-marker.vim',              {'type': 'start'}
 Plugin 'rhysd/git-messenger.vim',                {'type': 'start'}
 Plugin 'ryanoasis/vim-devicons',                 {'type': 'start'}
 Plugin 'taohexxx/lightline-buffer'
+Plugin 'tommcdo/vim-lion'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-endwise',                      {'type': 'start'}
 Plugin 'tpope/vim-flagship',                     {'type': 'start'}
