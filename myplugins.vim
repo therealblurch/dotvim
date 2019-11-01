@@ -28,6 +28,7 @@ Plugin 'ryanoasis/vim-devicons',                 {'type': 'start'}
 Plugin 'taohexxx/lightline-buffer'
 Plugin 'tommcdo/vim-lion'
 Plugin 'tomtom/tcomment_vim'
+Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-endwise',                      {'type': 'start'}
 Plugin 'tpope/vim-flagship',                     {'type': 'start'}
 Plugin 'tpope/vim-fugitive',                     {'type': 'start'}
