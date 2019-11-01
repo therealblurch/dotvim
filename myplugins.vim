@@ -26,6 +26,7 @@ Plugin 'tpope/vim-flagship',                     {'type': 'start'}
 Plugin 'tpope/vim-fugitive',                     {'type': 'start'}
 Plugin 'tpope/vim-obsession',                    {'type': 'start'}
 Plugin 'tpope/vim-sensible',                     {'type': 'start'}
+Plugin 'tpope/vim-sleuth',                       {'type': 'start'}
 Plugin 'tpope/vim-surround',                     {'type': 'start'}
 Plugin 'vhda/verilog_systemverilog.vim',         {'type': 'start'}
 Plugin 'zhuzhzh/verilog_emacsauto.vim',          {'name': 'verilog_emacsauto'}
