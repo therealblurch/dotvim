@@ -24,7 +24,8 @@ function! colorschemefunctions#SchemeVariant(delta)
 endfunction
 
 function! colorschemefunctions#AirlineTheme(colorscheme)
-    if a:colorscheme == "snow"
+    if a:colorscheme == "cosmic_latte"
+                \ || a:colorscheme == "snow"
         exec "AirlineTheme " . a:colorscheme . "_" . &background
     endif
 endfunction
