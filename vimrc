@@ -119,9 +119,8 @@ nnoremap <Space>/ :Ag<SPACE>
    let g:lightline = {}
    let g:lightline.active = {
                             \ 'left': [['mode', 'paste'],
-                            \         ['gitgutter', 'fugitive', 'readonly', 'filename'],
-                            \         ['sleuth', 'obsession']],
-                            \ 'right': [['lineinfo'],
+                            \         ['gitgutter', 'fugitive', 'readonly', 'filename']],
+                            \ 'right': [['obsession', 'lineinfo'],
                             \          ['percent', 'winform'],
                             \          ['fileformat', 'fileencoding', 'filetype', 'colorscheme']]
                             \ }
@@ -153,8 +152,7 @@ nnoremap <Space>/ :Ag<SPACE>
                                         \ 'colorscheme': 'lightlinefunctions#LightlineColorscheme',
                                         \ 'bufferinfo': 'lightline#buffer#bufferinfo',
                                         \ 'gitgutter': 'lightlinefunctions#LightlineGitgutter',
-                                        \ 'obsession': 'ObsessionStatus',
-                                        \ 'sleuth': 'SleuthIndicator'
+                                        \ 'obsession': 'ObsessionStatus'
                                         \ }
    if !has('win32') && !has('win64')
         let g:lightline.separator = {
