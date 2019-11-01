@@ -43,6 +43,7 @@ Plugin 'vhda/verilog_systemverilog.vim',         {'type': 'start'}
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-scripts/VisIncr'
+Plugin 'wellle/visual-split.vim'
 Plugin 'xolox/vim-colorscheme-switcher',         {'type': 'start'}
 Plugin 'xolox/vim-misc',                         {'type': 'start'}
 Plugin 'Yggdroot/indentline',                    {'type': 'start'}
