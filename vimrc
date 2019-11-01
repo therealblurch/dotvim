@@ -87,6 +87,12 @@ nnoremap Y y$
 +
 +inoremap jj <Esc>
 +
++let g:rootdir = getcwd()
++nnoremap cd :lcd %:p:h<bar>pwd<cr> " Switch to current file's directory
++nnoremap cu :lcd ..<bar>pwd<cr> " Go up one directory
++nnoremap cr :execute 'cd ' . rootdir<bar>pwd<cr> " Go to directory vim was opened at
++nnoremap cp :pwd<cr> " Print current working directory
++
 " }}}
 
 " Colorscheme Options {{{
