@@ -276,7 +276,7 @@ let g:lightline_buffer_reservelen = 20
 
 augroup LightlineColorscheme
    autocmd!
-   autocmd ColorScheme * call lightlinefunctions#LightlineUpdate()
+   autocmd ColorScheme * if exists('g:loaded_airline') | call lightlinefunctions#LightlineUpdate() | endif
 augroup END
 
 " Commands to automatically load airline or lightline on colorscheme change.
