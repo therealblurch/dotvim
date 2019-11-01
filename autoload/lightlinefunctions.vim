@@ -103,6 +103,7 @@ function! lightlinefunctions#LightlineUpdate()
                \ || g:colors_name == "dracula"
                \ || g:colors_name == "apprentice"
                \ || g:colors_name == "iceberg"
+               \ || g:colors_name == "snazzy"
          let g:lightline.colorscheme = g:colors_name
       elseif g:colors_name == "vadelma"
          if &background == "light"
