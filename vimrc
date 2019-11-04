@@ -373,6 +373,10 @@ command! -nargs=1 -complete=custom,lightlinefunctions#LightlineColorschemes Ligh
    \ call lightlinefunctions#SetLightlineColorscheme(<q-args>)
 " }}}
 
+" minisnip {{{
+let g:minisnip_trigger = '<leader>s'
+"}}}
+
 " mucomplete {{{
 if has('patch-8.0.0283')
 else
