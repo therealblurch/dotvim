@@ -2,6 +2,9 @@ function! colorschemefunctions#SchemeVariant(delta)
     if g:colors_name =~ "typewriter"
         let l:schemes = map(['', '-night'], '"typewriter".v:val')
         exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) % 2]
+    elseif g:colors_name =~ "corvine"
+        let l:schemes = map(['', '_light'], '"corvine".v:val')
+        exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) % 2]
     elseif g:colors_name == "ayu"
         let l:schemes = ['light', 'dark', 'mirage']
         let g:ayucolor = l:schemes[((a:delta+index(l:schemes, g:ayucolor)) % 3 + 3) % 3]
