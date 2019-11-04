@@ -139,6 +139,8 @@ function! lightlinefunctions#LightlineUpdate()
          else
             let g:lightline.colorscheme = "ayu"
          endif
+      elseif g:colors_name == "darcula"
+         let g:lightline.colorscheme = "darculaOriginal"
       elseif g:colors_name == 'typewriter'
          let g:lightline.colorscheme = "typewriter_light"
       elseif g:colors_name == 'typewriter-night'

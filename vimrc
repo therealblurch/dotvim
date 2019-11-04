@@ -347,6 +347,7 @@ autocmd Colorscheme apprentice        if !LoadAirlineEnabled() | PackAdd lightli
 autocmd Colorscheme ayu               if !LoadAirlineEnabled() | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
 autocmd Colorscheme cosmic_latte      if !LoadAirlineEnabled() | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
 autocmd Colorscheme deep-space        if !LoadAirlineEnabled() | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
+autocmd Colorscheme darcula           if has('gui_running') && !exists('g:loaded_airline') | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
 autocmd Colorscheme dracula           if !LoadAirlineEnabled() | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
 autocmd Colorscheme gruvbox-material  if !LoadAirlineEnabled() | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
 autocmd Colorscheme iceberg           if !LoadAirlineEnabled() | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
