@@ -71,6 +71,7 @@ Plugin 'vimtaku/vim-textobj-keyvalue',           {'type': 'start'}
 
 Plugin 'arcticicestudio/nord-vim',               {'package': 'colors', 'type': 'start', 'branch': 'develop'}
 Plugin 'arzg/vim-corvine',                       {'package': 'colors', 'type': 'start'}
+Plugin 'arzg/vim-substrata',                     {'package': 'colors', 'type': 'start'}
 Plugin 'ayu-theme/ayu-vim',                      {'package': 'colors', 'type': 'start'}
 Plugin 'cocopon/iceberg.vim',                    {'package': 'colors', 'type': 'start'}
 Plugin 'connorholyday/vim-snazzy',               {'package': 'colors', 'type': 'start'}
