@@ -9,7 +9,6 @@ Plugin 'airblade/vim-gitgutter',                 {'type': 'start'}
 Plugin 'chrisbra/NrrwRgn'
 Plugin 'drmikehenry/vim-fontsize'
 Plugin 'idanarye/vim-merginal',                  {'type': 'start'}
-Plugin 'itchyny/lightline.vim'
 Plugin 'nishigori/increment-activator'
 Plugin 'joereynolds/vim-minisnip'
 Plugin 'junegunn/vim-easy-align'
@@ -25,7 +24,6 @@ Plugin 'rhysd/committia.vim',                    {'type': 'start'}
 Plugin 'rhysd/conflict-marker.vim',              {'type': 'start'}
 Plugin 'rhysd/git-messenger.vim',                {'type': 'start'}
 Plugin 'ryanoasis/vim-devicons',                 {'type': 'start'}
-Plugin 'taohexxx/lightline-buffer'
 Plugin 'tommcdo/vim-lion'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-dispatch'
@@ -93,7 +91,6 @@ Plugin 'rakr/vim-one',                           {'package': 'colors', 'type': '
 Plugin 'reedes/vim-colors-pencil',               {'package': 'colors', 'type': 'start'}
 Plugin 'romainl/Apprentice',                     {'package': 'colors', 'type': 'start'}
 Plugin 'sainnhe/gruvbox-material',               {'package': 'colors', 'type': 'start'}
-Plugin 'sainnhe/lightline_foobar.vim',           {'package': 'colors'}
 Plugin 'severij/vadelma',                        {'package': 'colors', 'type': 'start'}
 Plugin 'srcery-colors/srcery-vim',               {'package': 'colors', 'type': 'start'}
 Plugin 'toupeira/vim-desertink',                 {'package': 'colors', 'type': 'start'}
@@ -125,9 +122,6 @@ function! myplugins#callback(plugname, before)
 
    if a:plugname == "vim-airline"
       PackAdd vim-airline-themes
-   elseif a:plugname == "lightline.vim"
-      PackAdd lightline-buffer
-      PackAdd lightline_foobar.vim
    endif
 
 endfunction

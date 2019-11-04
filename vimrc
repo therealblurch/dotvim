@@ -126,68 +126,38 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
-let g:default_status_is_airline = 1
-
-function! LoadAirlineEnabled()
-    let s:load_airline = 0
-    if g:default_status_is_airline
-        if exists('g:loaded_lightline') "Lightline is already loaded
-            let s:load_airline = 0
-        else
-            let s:load_airline = 1
-        endif
-    else
-        if has('gui_running') && !exists(g:loaded_airline)
-            let s:load_airline = 0
-        else
-            let s:load_airline = 1
-        endif
-    endif
-    return s:load_airline
-endfunction
-
 augroup AirlineTheme
     autocmd!
     autocmd ColorScheme * if exists('g:loaded_airline') | call colorschemefunctions#AirlineTheme(g:colors_name) | endif
 augroup END
 
-autocmd Colorscheme afterglow         if !exists('g:loaded_lightline') | PackAdd vim-airline | endif
-autocmd Colorscheme apprentice        if LoadAirlineEnabled() | PackAdd vim-airline | endif
-autocmd Colorscheme ayu               if LoadAirlineEnabled() | PackAdd vim-airline | endif
-autocmd Colorscheme corvine           if exists('g:loaded_airline') | AirlineTheme dark | endif
-autocmd Colorscheme corvine_light     if exists('g:loaded_airline') | AirlineTheme dark | endif
-autocmd Colorscheme cosmic_latte      if LoadAirlineEnabled() | PackAdd vim-airline | endif
-autocmd Colorscheme darcula           if exists('g:loaded_airline') | AirlineTheme dark | endif
-autocmd Colorscheme deep-space        if LoadAirlineEnabled() | PackAdd vim-airline | endif
-autocmd Colorscheme desertink         if !exists('g:loaded_lightline') | PackAdd vim-airline | endif
-autocmd Colorscheme dracula           if LoadAirlineEnabled() | PackAdd vim-airline | endif
-autocmd Colorscheme greygull          if !exists('g:loaded_lightline') | PackAdd vim-airline | AirlineTheme seagull | endif
-autocmd Colorscheme gruvbox-material  if LoadAirlineEnabled() | PackAdd vim-airline | endif
-autocmd Colorscheme iceberg           if LoadAirlineEnabled() | PackAdd vim-airline | endif
-autocmd Colorscheme jellybeans        if LoadAirlineEnabled() | PackAdd vim-airline | endif
-autocmd Colorscheme materialbox       if !exists('g:loaded_lightline') | PackAdd vim-airline | endif
-autocmd Colorscheme material          if exists('g:loaded_airline') | AirlineTheme dark | endif
-autocmd Colorscheme night-owl         if LoadAirlineEnabled() | PackAdd vim-airline | endif
-autocmd Colorscheme nord              if LoadAirlineEnabled() | PackAdd vim-airline | endif
-autocmd Colorscheme onehalfdark       if LoadAirlineEnabled() | PackAdd vim-airline | endif
-autocmd Colorscheme onehalflight      if LoadAirlineEnabled() | PackAdd vim-airline | endif
-autocmd Colorscheme one               if LoadAirlineEnabled() | PackAdd vim-airline | endif
-autocmd Colorscheme pencil            if LoadAirlineEnabled() | PackAdd vim-airline | endif
-autocmd Colorscheme petrel            if !exists('g:loaded_lightline') | PackAdd vim-airline | AirlineTheme seagull | endif
-autocmd Colorscheme seagull           if !exists('g:loaded_lightline') | PackAdd vim-airline | endif
-autocmd Colorscheme snazzy            if exists('g:loaded_airline') | AirlineTheme dark | endif
-autocmd Colorscheme snow              if LoadAirlineEnabled() | PackAdd vim-airline | endif
-autocmd Colorscheme space_vim_theme   if exists('g:loaded_airline') | AirlineTheme dark | endif
-autocmd Colorscheme srcery            if LoadAirlineEnabled() | PackAdd vim-airline | endif
-autocmd Colorscheme stellarized       if LoadAirlineEnabled() | PackAdd vim-airline | endif
-autocmd Colorscheme stormpetrel       if !exists('g:loaded_lightline') | PackAdd vim-airline | AirlineTheme seagull | endif
-autocmd Colorscheme substrata         if exists('g:loaded_airline') | AirlineTheme dark | endif
-autocmd Colorscheme tender            if LoadAirlineEnabled() | PackAdd vim-airline | endif
-autocmd Colorscheme typewriter        if LoadAirlineEnabled() | PackAdd vim-airline | endif
-autocmd Colorscheme typewriter-night  if LoadAirlineEnabled() | PackAdd vim-airline | endif
-autocmd Colorscheme vadelma           if exists('g:loaded_airline') | AirlineTheme dark | endif
-autocmd Colorscheme vibrantink        if exists('g:loaded_airline') | AirlineTheme dark | endif
-autocmd Colorscheme vividchalk        if exists('g:loaded_airline') | AirlineTheme dark | endif
+autocmd Colorscheme afterglow         PackAdd vim-airline
+autocmd Colorscheme apprentice        PackAdd vim-airline
+autocmd Colorscheme ayu               PackAdd vim-airline
+autocmd Colorscheme cosmic_latte      PackAdd vim-airline
+autocmd Colorscheme deep-space        PackAdd vim-airline
+autocmd Colorscheme desertink         PackAdd vim-airline
+autocmd Colorscheme dracula           PackAdd vim-airline
+autocmd Colorscheme greygull          PackAdd vim-airline
+autocmd Colorscheme gruvbox-material  PackAdd vim-airline
+autocmd Colorscheme iceberg           PackAdd vim-airline
+autocmd Colorscheme jellybeans        PackAdd vim-airline
+autocmd Colorscheme materialbox       PackAdd vim-airline
+autocmd Colorscheme night-owl         PackAdd vim-airline
+autocmd Colorscheme nord              PackAdd vim-airline
+autocmd Colorscheme onehalfdark       PackAdd vim-airline
+autocmd Colorscheme onehalflight      PackAdd vim-airline
+autocmd Colorscheme one               PackAdd vim-airline
+autocmd Colorscheme pencil            PackAdd vim-airline
+autocmd Colorscheme petrel            PackAdd vim-airline
+autocmd Colorscheme seagull           PackAdd vim-airline
+autocmd Colorscheme snow              PackAdd vim-airline
+autocmd Colorscheme srcery            PackAdd vim-airline
+autocmd Colorscheme stellarized       PackAdd vim-airline
+autocmd Colorscheme stormpetrel       PackAdd vim-airline 
+autocmd Colorscheme tender            PackAdd vim-airline
+autocmd Colorscheme typewriter        PackAdd vim-airline
+autocmd Colorscheme typewriter-night  PackAdd vim-airline
 " }}}
 
 "Color Scheme Switcher {{{
@@ -241,161 +211,6 @@ if !has('win64') && !has('win32')
 endif
 " }}}
 
-" Lightline {{{
-   let g:lightline = {}
-   let g:lightline.active = {
-                            \ 'left': [['mode', 'paste'],
-                            \         ['gitgutter', 'fugitive', 'readonly', 'filename']],
-                            \ 'right': [['obsession', 'lineinfo'],
-                            \          ['percent', 'winform'],
-                            \          ['fileformat', 'fileencoding', 'filetype', 'colorscheme']]
-                            \ }
-   if has('win32') || has('win64')
-        let g:lightline.component = {
-                                       \ 'charvaluehex': '0x%B',
-                                       \ 'lineinfo': '%3l[%L]:%-2v',
-                                       \ 'separator': ''
-                                       \ }
-    else
-        let g:lightline.component = {
-                                       \ 'charvaluehex': '0x%B',
-                                       \ 'lineinfo': ' %3l[%L]:%-2v',
-                                       \ 'separator': ''
-                                       \ }
-   endif
-   let g:lightline.component_function = {
-                                        \ 'readonly': 'lightlinefunctions#LightlineReadonly',
-                                        \ 'fugitive': 'lightlinefunctions#LightlineFugitive',
-                                        \ 'gitbranch': 'fugitive#head',
-                                        \ 'modified': 'lightlinefunctions#LightlineModified',
-                                        \ 'filename': 'lightlinefunctions#LightlineFilename',
-                                        \ 'filepath': 'lightlinefunctions#LightlineFilepath',
-                                        \ 'fileformat': 'lightlinefunctions#LightlineFileformat',
-                                        \ 'filetype': 'lightlinefunctions#LightlineFiletype',
-                                        \ 'fileencoding': 'lightlinefunctions#LightlineFileencoding',
-                                        \ 'mode': 'lightlinefunctions#LightlineMode',
-                                        \ 'winform': 'lightlinefunctions#LightlineWinform',
-                                        \ 'colorscheme': 'lightlinefunctions#LightlineColorscheme',
-                                        \ 'bufferinfo': 'lightline#buffer#bufferinfo',
-                                        \ 'gitgutter': 'lightlinefunctions#LightlineGitgutter',
-                                        \ 'obsession': 'ObsessionStatus'
-                                        \ }
-   if !has('win32') && !has('win64')
-        let g:lightline.separator = {
-                                    \ 'left': '',
-                                    \ 'right': ''
-                                    \ }
-        let g:lightline.subseparator = {
-                                       \ 'left': '',
-                                       \ 'right': ''
-                                       \ }
-   endif
-   let g:lightline.tabline = {
-                             \ 'left': [ [ 'bufferinfo' ],
-                             \           [ 'separator' ],
-                             \           [ 'bufferbefore', 'buffercurrent', 'bufferafter' ] ],
-                             \ 'right': [ [ 'close' ] ]
-                             \ }
-   let g:lightline.tab = {
-                         \ 'active': [ 'tabnum', 'filename', 'modified' ],
-                         \ 'inactive': [ 'tabnum', 'filename', 'modified' ]
-                         \ }
-    let g:lightline.component_expand = {
-                                       \ 'buffercurrent': 'lightline#buffer#buffercurrent',
-                                       \ 'bufferbefore': 'lightline#buffer#bufferbefore',
-                                       \ 'bufferafter': 'lightline#buffer#bufferafter'
-                                       \ }
-    let g:lightline.component_type = {
-                                     \ 'buffercurrent': 'tabsel',
-                                     \ 'bufferbefore': 'raw',
-                                     \ 'bufferafter': 'raw'
-                                     \ }
-
-let g:lightline#bufferline#min_buffer_count = 2
-let g:lightline#bufferline#enable_devicons = 1
-let g:lightline#bufferline#show_number = 1
-let g:lightline#bufferline#filename_modifier = ':t'
-
-" lightline-buffer ui settings
-" replace these symbols with ascii characters if your environment does not support unicode
-
-if !has('win64') && !has('win32')
-    let g:lightline_buffer_logo = ' '
-    let g:lightline_buffer_readonly_icon = ''
-    let g:lightline_buffer_modified_icon = '✭'
-    let g:lightline_buffer_expand_left_icon = '◀ '
-    let g:lightline_buffer_expand_right_icon = ' ▶'
-    let g:lightline_buffer_separator_icon = '  '
-    let g:lightline_buffer_git_icon = ' '
-else
-    let g:lightline_buffer_logo = ''
-    let g:lightline_buffer_readonly_icon = ''
-    let g:lightline_buffer_modified_icon = '*'
-    let g:lightline_buffer_expand_left_icon = ''
-    let g:lightline_buffer_expand_right_icon = ''
-    let g:lightline_buffer_separator_icon = '|'
-    let g:lightline_buffer_git_icon = ''
-endif
-let g:lightline_buffer_ellipsis_icon = '..'
-let g:lightline_buffer_active_buffer_left_icon = ''
-let g:lightline_buffer_active_buffer_right_icon = ''
-let g:lightline_buffer_enable_devicons = 1
-let g:lightline_buffer_show_bufnr = 1
-let g:lightline_buffer_fname_mod = ':t'
-let g:lightline_buffer_maxflen = 30
-let g:lightline_buffer_maxfextlen = 3
-let g:lightline_buffer_minflen = 16
-let g:lightline_buffer_minfextlen = 3
-let g:lightline_buffer_reservelen = 20
-
-augroup LightlineColorscheme
-   autocmd!
-   autocmd ColorScheme * if exists('g:loaded_airline') | call lightlinefunctions#LightlineUpdate() | endif
-augroup END
-
-" Commands to automatically load airline or lightline on colorscheme change.
-autocmd Colorscheme afterglow         if exists('g:loaded_lightline') | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme apprentice        if !LoadAirlineEnabled() | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme ayu               if !LoadAirlineEnabled() | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme corvine           if exists('g:loaded_lightline') | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme corvine_light     if exists('g:loaded_lightline') | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme cosmic_latte      if !LoadAirlineEnabled() | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme darcula           if has('gui_running') && !exists('g:loaded_airline') | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme deep-space        if !LoadAirlineEnabled() | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme desertink         if exists('g:loaded_lightline') | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme dracula           if !LoadAirlineEnabled() | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme greygull          if exists('g:loaded_lightline') | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme gruvbox-material  if !LoadAirlineEnabled() | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme iceberg           if !LoadAirlineEnabled() | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme jellybeans        if !LoadAirlineEnabled() | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme materialbox       if exists('g:loaded_lightline') | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme material          if has('gui_running') && !exists('g:loaded_airline') | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme night-owl         if !LoadAirlineEnabled() | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme nord              if !LoadAirlineEnabled() | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme onehalfdark       if !LoadAirlineEnabled() | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme onehalflight      if !LoadAirlineEnabled() | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme one               if !LoadAirlineEnabled() | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme pencil            if !LoadAirlineEnabled() | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme petrel            if exists('g:loaded_lightline') | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme seagull           if exists('g:loaded_lightline') | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme snazzy            if has('gui_running') && !exists('g:loaded_airline') | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme snow              if !LoadAirlineEnabled() | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme space_vim_theme   if has('gui_running') && !exists('g:loaded_airline') | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme srcery            if !LoadAirlineEnabled() | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme stellarized       if !LoadAirlineEnabled() | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme stormpetrel       if exists('g:loaded_lightline') | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme substrata         if exists('g:loaded_lightline') | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme tender            if !LoadAirlineEnabled() | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme typewriter        if !LoadAirlineEnabled() | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme typewriter-night  if !LoadAirlineEnabled() | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme vadelma           if has('gui_running') && !exists('g:loaded_airline') | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme vibrantink        if exists('g:loaded_lightline') | call lightlinefunctions#LightlineUpdate() | endif
-autocmd Colorscheme vividchalk        if exists('g:loaded_lightline') | call lightlinefunctions#LightlineUpdate() | endif
-
-command! -nargs=1 -complete=custom,lightlinefunctions#LightlineColorschemes LightlineColorscheme
-   \ call lightlinefunctions#SetLightlineColorscheme(<q-args>)
-" }}}
-
 " minisnip {{{
 let g:minisnip_trigger = '<leader>s'
 "}}}
@@ -443,7 +258,7 @@ set statusline+=%{(mode()=='v')?'\ \ VISUAL\ ':''}
 set statusline+=%{(mode()=='r')?'\ \ REPLACE\ ':''}
 set statusline+=%#LineNr#
 set statusline+=\ 
-set statusline+=%{lightlinefunctions#LightlineGitgutter()}
+set statusline+=%{myfunctions#GitgutterStatus()}
 set statusline+=
 set statusline+=%{StatuslineGit()}
 set statusline+=\ %f
