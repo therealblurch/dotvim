@@ -137,7 +137,7 @@ function! LoadAirlineEnabled()
             let s:load_airline = 1
         endif
     else
-        if hase('gui_running') && !exists(g:loaded_airline)
+        if has('gui_running') && !exists(g:loaded_airline)
             let s:load_airline = 0
         else
             let s:load_airline = 1
@@ -155,8 +155,8 @@ autocmd Colorscheme afterglow         if !exists('g:loaded_lightline') | PackAdd
 autocmd Colorscheme apprentice        if LoadAirlineEnabled() | PackAdd vim-airline | endif
 autocmd Colorscheme ayu               if LoadAirlineEnabled() | PackAdd vim-airline | endif
 autocmd Colorscheme corvine           if exists('g:loaded_airline') | AirlineTheme dark | endif
+autocmd Colorscheme corvine_light     if exists('g:loaded_airline') | AirlineTheme dark | endif
 autocmd Colorscheme cosmic_latte      if LoadAirlineEnabled() | PackAdd vim-airline | endif
-autocmd Colorscheme covrinve_light    if exists('g:loaded_airline') | AirlineTheme dark | endif
 autocmd Colorscheme darcula           if exists('g:loaded_airline') | AirlineTheme dark | endif
 autocmd Colorscheme deep-space        if LoadAirlineEnabled() | PackAdd vim-airline | endif
 autocmd Colorscheme desertink         if !exists('g:loaded_lightline') | PackAdd vim-airline | endif
