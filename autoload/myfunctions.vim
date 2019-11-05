@@ -63,3 +63,32 @@ function! myfunctions#ColorschemeHasAirlineTheme(colorscheme)
    endif
    return s:airline_theme_exists
 endfunction
+
+function! myfunctions#ColorschemeHasLightlineColorscheme(colorscheme)
+   let s:lightline_theme_exists = 0
+   if a:colorscheme == "apprentice"
+            \ || a:colorscheme == "ayu"
+            \ || a:colorscheme == "cosmic_latter"
+            \ || a:colorscheme == "darcula"
+            \ || a:colorscheme == "dracula"
+            \ || a:colorscheme == "deep-space"
+            \ || a:colorscheme == "gruvbox-material"
+            \ || a:colorscheme == "iceberg"
+            \ || a:colorscheme == "jellybeans"
+            \ || a:colorscheme == "material"
+            \ || a:colorscheme == "night-owl"
+            \ || a:colorscheme == "nord"
+            \ || a:colorscheme =~ "one"
+            \ || a:colorscheme == "pencil"
+            \ || a:colorscheme == "snazzy"
+            \ || a:colorscheme == "snow"
+            \ || a:colorscheme == "space_vim_theme"
+            \ || a:colorscheme == "srcery"
+            \ || a:colorscheme == "stellarized"
+            \ || a:colorscheme == "tender"
+            \ || a:colorscheme =~ "typewriter"
+            \ || a:colorscheme == "vadelma"
+      let s:lightline_theme_exists = 1
+   endif
+   return s:lightline_theme_exists
+endfunction

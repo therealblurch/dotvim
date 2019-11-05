@@ -122,6 +122,7 @@ function! myplugins#callback(plugname, before)
 
    if a:plugname == "vim-airline"
       PackAdd vim-airline-themes
+   elseif a:plugname == "lightline.vim"
    endif
 
 endfunction
