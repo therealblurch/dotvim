@@ -40,7 +40,6 @@ function! s:ColorschemeHasAirlineTheme(colorscheme)
             \ || a:colorscheme == "iceberg"
             \ || a:colorscheme == "afterglow"
             \ || a:colorscheme == "dracula"
-            \ || a:colorscheme == "dracula"
             \ || a:colorscheme == "tender"
             \ || a:colorscheme =~ "typewriter"
             \ || a:colorscheme == "materialbox"
@@ -97,16 +96,16 @@ function! myfunctions#WhichStatus(colorscheme)
    if (!s:ColorschemeHasAirlineTheme(a:colorscheme) && !s:ColorschemeHasLightlineColorscheme(a:colorscheme)) || exists('g:buftabline_show')
       let s:user_status = "none"
    elseif g:prefer_airline
-      if exists('g:loaded_lightline') || !s:ColorschemeHasAirlineTheme(a:colorscheme)
-         let s:user_status = "lightline"
-      elseif exists('g:loaded_airline') || s:ColorschemeHasAirlineTheme(a:colorscheme)
+      if exists('g:loaded_airline') || s:ColorschemeHasAirlineTheme(a:colorscheme)
          let s:user_status = "airline"
+      elseif exists('g:loaded_lightline') || !s:ColorschemeHasAirlineTheme(a:colorscheme)
+         let s:user_status = "lightline"
       endif
    else
-      if exists('g:loaded_airline') || !s:ColorschemeHasLightlineColorscheme(a:colorscheme)
-         let s:user_status = "airline"
-      elseif exists('g:loaded_lightline') || s:ColorschemeHasLightlineColorscheme(a:colorscheme)
+      if exists('g:loaded_lightline') || s:ColorschemeHasLightlineColorscheme(a:colorscheme)
          let s:user_status = "lightline"
+      elseif exists('g:loaded_airline') || !s:ColorschemeHasLightlineColorscheme(a:colorscheme)
+         let s:user_status = "airline"
       endif
    endif
    return s:user_status
