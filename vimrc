@@ -128,36 +128,10 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 augroup AirlineTheme
     autocmd!
+    autocmd ColorScheme * if myfunctions#ColorschemeHasAirlineTheme(g:colors_name) | PackAdd vim-airline | endif
     autocmd ColorScheme * if exists('g:loaded_airline') | call colorschemefunctions#AirlineTheme(g:colors_name) | endif
 augroup END
 
-autocmd Colorscheme afterglow         PackAdd vim-airline
-autocmd Colorscheme apprentice        PackAdd vim-airline
-autocmd Colorscheme ayu               PackAdd vim-airline
-autocmd Colorscheme cosmic_latte      PackAdd vim-airline
-autocmd Colorscheme deep-space        PackAdd vim-airline
-autocmd Colorscheme desertink         PackAdd vim-airline
-autocmd Colorscheme dracula           PackAdd vim-airline
-autocmd Colorscheme greygull          PackAdd vim-airline
-autocmd Colorscheme gruvbox-material  PackAdd vim-airline
-autocmd Colorscheme iceberg           PackAdd vim-airline
-autocmd Colorscheme jellybeans        PackAdd vim-airline
-autocmd Colorscheme materialbox       PackAdd vim-airline
-autocmd Colorscheme night-owl         PackAdd vim-airline
-autocmd Colorscheme nord              PackAdd vim-airline
-autocmd Colorscheme onehalfdark       PackAdd vim-airline
-autocmd Colorscheme onehalflight      PackAdd vim-airline
-autocmd Colorscheme one               PackAdd vim-airline
-autocmd Colorscheme pencil            PackAdd vim-airline
-autocmd Colorscheme petrel            PackAdd vim-airline
-autocmd Colorscheme seagull           PackAdd vim-airline
-autocmd Colorscheme snow              PackAdd vim-airline
-autocmd Colorscheme srcery            PackAdd vim-airline
-autocmd Colorscheme stellarized       PackAdd vim-airline
-autocmd Colorscheme stormpetrel       PackAdd vim-airline 
-autocmd Colorscheme tender            PackAdd vim-airline
-autocmd Colorscheme typewriter        PackAdd vim-airline
-autocmd Colorscheme typewriter-night  PackAdd vim-airline
 " }}}
 
 "Color Scheme Switcher {{{

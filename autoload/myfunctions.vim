@@ -32,3 +32,34 @@ function! myfunctions#CurrentColorscheme()
    endif
    return s:color
 endfunction
+
+function! myfunctions#ColorschemeHasAirlineTheme(colorscheme)
+   let s:airline_theme_exists = 0
+   if a:colorscheme == "nord"
+            \ || a:colorscheme == "ayu"
+            \ || a:colorscheme == "iceberg"
+            \ || a:colorscheme == "afterglow"
+            \ || a:colorscheme == "dracula"
+            \ || a:colorscheme == "dracula"
+            \ || a:colorscheme == "tender"
+            \ || a:colorscheme =~ "typewriter"
+            \ || a:colorscheme == "materialbox"
+            \ || a:colorscheme == "jellybeans"
+            \ || a:colorscheme == "cosmic_latte"
+            \ || a:colorscheme == "seabird"
+            \ || a:colorscheme == "greygull"
+            \ || a:colorscheme == "petrel"
+            \ || a:colorscheme == "stormpetrel"
+            \ || a:colorscheme == "snow"
+            \ || a:colorscheme == "stellarized"
+            \ || a:colorscheme =~ "one"
+            \ || a:colorscheme == "pencil"
+            \ || a:colorscheme == "apprentice"
+            \ || a:colorscheme == "gruvbox-materiel"
+            \ || a:colorscheme == "srcery"
+            \ || a:colorscheme == "desertink"
+            \ || a:colorscheme == "deep-space"
+      let s:airline_theme_exists = 1
+   endif
+   return s:airline_theme_exists
+endfunction
