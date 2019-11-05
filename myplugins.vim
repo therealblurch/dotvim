@@ -82,6 +82,7 @@ Plugin 'danilo-augusto/vim-afterglow',           {'package': 'colors', 'type': '
 Plugin 'doums/darcula',                          {'package': 'colors', 'type': 'start'}
 Plugin 'dracula/vim',                            {'package': 'colors', 'type': 'start', 'name': 'dracula'}
 Plugin 'flrnd/candid.vim',                       {'package': 'colors', 'type': 'start'}
+Plugin 'flrnd/plastic.vim',                      {'package': 'colors', 'type': 'start'}
 Plugin 'haishanh/night-owl.vim',                 {'package': 'colors', 'type': 'start'}
 Plugin 'jacoborus/tender.vim',                   {'package': 'colors', 'type': 'start'}
 Plugin 'kaicataldo/material.vim',                {'package': 'colors', 'type': 'start', 'name': 'material'}

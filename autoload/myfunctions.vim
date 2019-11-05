@@ -88,6 +88,7 @@ function! s:ColorschemeHasLightlineColorscheme(colorscheme)
             \ || a:colorscheme =~ "typewriter"
             \ || a:colorscheme == "vadelma"
             \ || a:colorscheme == "candid"
+            \ || a:colorscheme == "plastic"
       let s:lightline_theme_exists = 1
    endif
    return s:lightline_theme_exists
