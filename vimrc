@@ -195,20 +195,12 @@ endif
                             \          ['percent', 'winform'],
                             \          ['fileformat', 'fileencoding', 'filetype', 'colorscheme']]
                             \ }
-   if has('win32') || has('win64')
-        let g:lightline.component = {
-                                       \ 'charvaluehex': '0x%B',
-                                       \ 'lineinfo': '%3l[%L]:%-2v',
-                                       \ 'separator': ''
-                                       \ }
-    else
-        let g:lightline.component = {
-                                       \ 'charvaluehex': '0x%B',
-                                       \ 'lineinfo': ' %3l[%L]:%-2v',
-                                       \ 'separator': ''
-                                       \ }
-   endif
-   let g:lightline.component_function = {
+    let g:lightline.component = {
+                                   \ 'charvaluehex': '0x%B',
+                                   \ 'lineinfo': ' %3l[%L]:%-2v',
+                                   \ 'separator': ''
+                                   \ }
+    let g:lightline.component_function = {
                                         \ 'readonly': 'lightlinefunctions#LightlineReadonly',
                                         \ 'fugitive': 'lightlinefunctions#LightlineFugitive',
                                         \ 'gitbranch': 'fugitive#head',
