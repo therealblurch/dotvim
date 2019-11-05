@@ -4,6 +4,7 @@ let g:vimball = expand('~/vimfiles/pack/unmanaged/opt/')
 
 augroup myplugins | au! | augroup END
 
+Plugin 'ap/vim-buftabline'
 Plugin 'brooth/far.vim'
 Plugin 'airblade/vim-gitgutter',                 {'type': 'start'}
 Plugin 'chrisbra/NrrwRgn'

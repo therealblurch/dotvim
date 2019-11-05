@@ -129,6 +129,12 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 " }}}
 
+" buftabline {{{
+let g:buftabline_numbers = 1
+let g:buftabline_indicators = 1
+let g:buftabline_separators = 1
+" }}}
+
 "Color Scheme Switcher {{{
 let g:colorscheme_switcher_exclude_builtins = 1
 " let g:colorscheme_switcher_keep_background = 1
@@ -289,7 +295,7 @@ let g:lightline_buffer_reservelen = 20
 
 command! -nargs=1 -complete=custom,lightlinefunctions#LightlineColorschemes LightlineColorscheme
    \ call lightlinefunctions#SetLightlineColorscheme(<q-args>)
- }}}
+ " }}}
  
 let g:prefer_airline = 1
 
@@ -303,6 +309,7 @@ augroup END
     autocmd Colorscheme * if myfunctions#WhichStatus(g:colors_name) == "lightline" | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
     autocmd COlorscheme * if myfunctions#WhichStatus(g:colors_name) == "none" && exists('g:loaded_lightline') | call lightlinefunctions#LightlineUpdate() | endif
     autocmd COlorscheme * if myfunctions#WhichStatus(g:colors_name) == "none" && exists('g:loaded_airline') | call colorschemefunctions#AirlineTheme(g:colors_name) | endif
+    autocmd Colorscheme * if myfunctions#WhichStatus(g:colors_name) == "none" && !exists('g:loaded_lightline') && !exists('g:loaded_airline') | PackAdd vim-buftabline | endif
 augroup END
 
 

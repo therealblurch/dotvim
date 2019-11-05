@@ -94,7 +94,7 @@ function! s:ColorschemeHasLightlineColorscheme(colorscheme)
 endfunction
 
 function! myfunctions#WhichStatus(colorscheme)
-   if !s:ColorschemeHasAirlineTheme(a:colorscheme) && !s:ColorschemeHasLightlineColorscheme(a:colorscheme)
+   if (!s:ColorschemeHasAirlineTheme(a:colorscheme) && !s:ColorschemeHasLightlineColorscheme(a:colorscheme)) || exists('g:buftabline_show')
       let s:user_status = "none"
    elseif g:prefer_airline
       if exists('g:loaded_lightline') || !s:ColorschemeHasAirlineTheme(a:colorscheme)
