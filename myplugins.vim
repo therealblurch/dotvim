@@ -10,6 +10,7 @@ Plugin 'chrisbra/NrrwRgn'
 Plugin 'drmikehenry/vim-fontsize'
 Plugin 'idanarye/vim-merginal',                  {'type': 'start'}
 Plugin 'nishigori/increment-activator'
+Plugin 'itchyny/lightline.vim'
 Plugin 'joereynolds/vim-minisnip'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'kana/vim-smartinput',                    {'type': 'start'}
@@ -24,6 +25,8 @@ Plugin 'rhysd/committia.vim',                    {'type': 'start'}
 Plugin 'rhysd/conflict-marker.vim',              {'type': 'start'}
 Plugin 'rhysd/git-messenger.vim',                {'type': 'start'}
 Plugin 'ryanoasis/vim-devicons',                 {'type': 'start'}
+Plugin 'sainnhe/lightline_foobar.vim'
+Plugin 'taohexxx/lightline-buffer'
 Plugin 'tommcdo/vim-lion'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tpope/vim-dispatch'

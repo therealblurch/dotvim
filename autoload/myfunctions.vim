@@ -33,7 +33,7 @@ function! myfunctions#CurrentColorscheme()
    return s:color
 endfunction
 
-function! myfunctions#ColorschemeHasAirlineTheme(colorscheme)
+function! s:ColorschemeHasAirlineTheme(colorscheme)
    let s:airline_theme_exists = 0
    if a:colorscheme == "nord"
             \ || a:colorscheme == "ayu"
@@ -64,7 +64,7 @@ function! myfunctions#ColorschemeHasAirlineTheme(colorscheme)
    return s:airline_theme_exists
 endfunction
 
-function! myfunctions#ColorschemeHasLightlineColorscheme(colorscheme)
+function! s:ColorschemeHasLightlineColorscheme(colorscheme)
    let s:lightline_theme_exists = 0
    if a:colorscheme == "apprentice"
             \ || a:colorscheme == "ayu"
@@ -91,4 +91,23 @@ function! myfunctions#ColorschemeHasLightlineColorscheme(colorscheme)
       let s:lightline_theme_exists = 1
    endif
    return s:lightline_theme_exists
+endfunction
+
+function! myfunctions#WhichStatus(colorscheme)
+   if !s:ColorschemeHasAirlineTheme(a:colorscheme) && !s:ColorschemeHasLightlineColorscheme(a:colorscheme)
+      let s:user_status = "none"
+   elseif g:prefer_airline
+      if exists('g:loaded_lightline') || !s:ColorschemeHasAirlineTheme(a:colorscheme)
+         let s:user_status = "lightline"
+      elseif exists('g:loaded_airline') || s:ColorschemeHasAirlineTheme(a:colorscheme)
+         let s:user_status = "airline"
+      endif
+   else
+      if exists('g:loaded_airline') || !s:ColorschemeHasLightlineColorscheme(a:colorscheme)
+         let s:user_status = "airline"
+      elseif exists('g:loaded_lightline') || s:ColorschemeHasLightlineColorscheme(a:colorscheme)
+         let s:user_status = "lightline"
+      endif
+   endif
+   return s:user_status
 endfunction

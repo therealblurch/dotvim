@@ -127,12 +127,6 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
-augroup AirlineTheme
-    autocmd!
-    autocmd ColorScheme * if myfunctions#ColorschemeHasAirlineTheme(g:colors_name) | PackAdd vim-airline | endif
-    autocmd ColorScheme * if exists('g:loaded_airline') | call colorschemefunctions#AirlineTheme(g:colors_name) | endif
-augroup END
-
 " }}}
 
 "Color Scheme Switcher {{{
@@ -293,15 +287,24 @@ let g:lightline_buffer_minflen = 16
 let g:lightline_buffer_minfextlen = 3
 let g:lightline_buffer_reservelen = 20
 
-augroup LightlineColorscheme
-   autocmd!
-   autocmd Colorscheme * if myfunctions#ColorschemeHasLightlineColorscheme(g:colors_name) | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-   autocmd ColorScheme * if exists('g:loaded_airline') | call lightlinefunctions#LightlineUpdate() | endif
-augroup END
-
 command! -nargs=1 -complete=custom,lightlinefunctions#LightlineColorschemes LightlineColorscheme
    \ call lightlinefunctions#SetLightlineColorscheme(<q-args>)
-" }}}
+ }}}
+ 
+let g:prefer_airline = 1
+
+augroup AirlineTheme
+augroup LightlineColorscheme
+   autocmd!
+augroup END
+
+    autocmd!
+    autocmd ColorScheme * if myfunctions#WhichStatus(g:colors_name) == "airline"   | PackAdd vim-airline | call colorschemefunctions#AirlineTheme(g:colors_name) | endif
+    autocmd Colorscheme * if myfunctions#WhichStatus(g:colors_name) == "lightline" | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
+    autocmd COlorscheme * if myfunctions#WhichStatus(g:colors_name) == "none" && exists('g:loaded_lightline') | call lightlinefunctions#LightlineUpdate() | endif
+    autocmd COlorscheme * if myfunctions#WhichStatus(g:colors_name) == "none" && exists('g:loaded_airline') | call colorschemefunctions#AirlineTheme(g:colors_name) | endif
+augroup END
+
 
 " minisnip {{{
 let g:minisnip_trigger = '<leader>s'
