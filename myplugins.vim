@@ -106,6 +106,7 @@ Plugin 'toupeira/vim-desertink',                 {'package': 'colors', 'type': '
 Plugin 'tpope/vim-vividchalk',                   {'package': 'colors', 'type': 'start'}
 Plugin 'tyrannicaltoucan/vim-deep-space',        {'package': 'colors', 'type': 'start'}
 Plugin 'vim-scripts/vibrantink',                 {'package': 'colors', 'type': 'start'}
+Plugin 'wdhg/dragon-energy',                     {'package': 'colors', 'type': 'start'}
 
 " This repositories contain a vim directory which is the only directory that I want
 " in the pack.  Because of this they are git submodules and added to the runtimepath
