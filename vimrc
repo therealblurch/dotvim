@@ -30,6 +30,7 @@ set sessionoptions=blank,buffers,curdir,folds,tabpages,winsize,globals
 set shortmess+=filmnrxoOtTc
 set showcmd
 set showmatch
+set showtabline=2
 set smartcase
 set tags=$PROJ_USER/rtl/tags
 if !has('gui_running')
