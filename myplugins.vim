@@ -86,6 +86,7 @@ Plugin 'flrnd/plastic.vim',                      {'package': 'colors', 'type': '
 Plugin 'haishanh/night-owl.vim',                 {'package': 'colors', 'type': 'start'}
 Plugin 'jacoborus/tender.vim',                   {'package': 'colors', 'type': 'start'}
 Plugin 'kaicataldo/material.vim',                {'package': 'colors', 'type': 'start', 'name': 'material'}
+Plugin 'KKPMW/oldbook-vim',                      {'package': 'colors', 'type': 'start'}
 Plugin 'KKPMW/sacredforest-vim',                 {'package': 'colors', 'type': 'start'}
 Plugin 'kjssad/quantum.vim',                     {'package': 'colors', 'type': 'start'}
 Plugin 'levelone/tequila-sunrise.vim',           {'package': 'colors', 'type': 'start'}
