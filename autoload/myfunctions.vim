@@ -91,6 +91,7 @@ function! s:ColorschemeHasLightlineColorscheme(colorscheme)
             \ || a:colorscheme == "vadelma"
             \ || a:colorscheme == "candid"
             \ || a:colorscheme == "plastic"
+            \ || a:colorscheme == "sacredforest"
             \ || a:colorscheme == "forest-night"
       let s:lightline_theme_exists = 1
    endif
