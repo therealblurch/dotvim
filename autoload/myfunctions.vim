@@ -27,6 +27,7 @@ function! myfunctions#CurrentColorscheme()
             \ || g:colors_name == "space_vim_theme"
             \ || g:colors_name == "pencil"
             \ || g:colors_name == "quantum"
+            \ || g:colors_name == "edge"
       let s:color = g:colors_name . '/' . &background
    else
       let s:color = g:colors_name
@@ -95,6 +96,7 @@ function! s:ColorschemeHasLightlineColorscheme(colorscheme)
             \ || a:colorscheme == "sacredforest"
             \ || a:colorscheme == "forest-night"
             \ || a:colorscheme == "quantum"
+            \ || a:colorscheme == "edge"
       let s:lightline_theme_exists = 1
    endif
    return s:lightline_theme_exists
