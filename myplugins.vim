@@ -101,6 +101,7 @@ Plugin 'reedes/vim-colors-pencil',               {'package': 'colors', 'type': '
 Plugin 'rhysd/vim-color-spring-night',           {'package': 'colors', 'type': 'start'}
 Plugin 'romainl/Apprentice',                     {'package': 'colors', 'type': 'start'}
 Plugin 'sainnhe/gruvbox-material',               {'package': 'colors', 'type': 'start'}
+Plugin 'sainnhe/vim-color-forest-night',         {'package': 'colors', 'type': 'start'}
 Plugin 'severij/vadelma',                        {'package': 'colors', 'type': 'start'}
 Plugin 'srcery-colors/srcery-vim',               {'package': 'colors', 'type': 'start'}
 Plugin 'toupeira/vim-desertink',                 {'package': 'colors', 'type': 'start'}
