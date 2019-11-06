@@ -47,7 +47,7 @@ function! myfunctions#ColorschemeHasAirlineTheme(colorscheme)
             \ || a:colorscheme == "materialbox"
             \ || a:colorscheme == "jellybeans"
             \ || a:colorscheme == "cosmic_latte"
-            \ || a:colorscheme == "seabird"
+            \ || a:colorscheme == "seagull"
             \ || a:colorscheme == "greygull"
             \ || a:colorscheme == "petrel"
             \ || a:colorscheme == "stormpetrel"
