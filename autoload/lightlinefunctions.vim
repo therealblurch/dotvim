@@ -132,6 +132,7 @@ function! lightlinefunctions#LightlineUpdate()
                \ || g:colors_name == "material"
                \ || g:colors_name == "sacredforest"
                \ || g:colors_name == "atlantis"
+               \ || g:colors_name == "sialoquent"
          let g:lightline.colorscheme = g:colors_name
       elseif g:colors_name == "quantum"
          if &background == "light"

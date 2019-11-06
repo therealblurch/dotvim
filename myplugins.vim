@@ -79,6 +79,7 @@ Plugin 'ayu-theme/ayu-vim',                      {'package': 'colors', 'type': '
 Plugin 'cocopon/iceberg.vim',                    {'package': 'colors', 'type': 'start'}
 Plugin 'connorholyday/vim-snazzy',               {'package': 'colors', 'type': 'start'}
 Plugin 'danilo-augusto/vim-afterglow',           {'package': 'colors', 'type': 'start'}
+Plugin 'davidklsn/vim-sialoquent',               {'package': 'colors', 'type': 'start'}
 Plugin 'doums/darcula',                          {'package': 'colors', 'type': 'start'}
 Plugin 'dracula/vim',                            {'package': 'colors', 'type': 'start', 'name': 'dracula'}
 Plugin 'flrnd/candid.vim',                       {'package': 'colors', 'type': 'start'}
