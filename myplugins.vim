@@ -25,6 +25,7 @@ Plugin 'rbong/vim-flog',                         {'type': 'start'}
 Plugin 'rhysd/committia.vim',                    {'type': 'start'}
 Plugin 'rhysd/conflict-marker.vim',              {'type': 'start'}
 Plugin 'rhysd/git-messenger.vim',                {'type': 'start'}
+Plugin 'rmolin88/pomodoro.vim'
 Plugin 'ryanoasis/vim-devicons',                 {'type': 'start'}
 Plugin 'sainnhe/lightline_foobar.vim'
 Plugin 'taohexxx/lightline-buffer'
@@ -135,6 +136,7 @@ function! myplugins#callback(plugname, before)
    elseif a:plugname == "lightline.vim"
       PackAdd! lightline-buffer
       PackAdd! lightline_foobar.vim
+      PackAdd! pomodoro.vim
    endif
 
 endfunction
