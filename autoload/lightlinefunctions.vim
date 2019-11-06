@@ -71,6 +71,7 @@ function! lightlinefunctions#LightlineColorscheme()
             \ || g:colors_name == "one"
             \ || g:colors_name == "space_vim_theme"
             \ || g:colors_name == "pencil"
+            \ || g:colors_name == "quantum"
       let s:color = g:colors_name . '/' . &background
    else
       let s:color = g:colors_name
@@ -130,6 +131,12 @@ function! lightlinefunctions#LightlineUpdate()
                \ || g:colors_name == "material"
                \ || g:colors_name == "sacredforest"
          let g:lightline.colorscheme = g:colors_name
+      elseif g:colors_name == "quantum"
+         if &background == "light"
+            let g:lightline.colorscheme = "quantum_light"
+         else
+            let g:lightline.colorscheme = "quantum"
+         endif
       elseif g:colors_name == "vadelma"
          if &background == "light"
             let g:lightline.colorscheme = "vadelma_light"

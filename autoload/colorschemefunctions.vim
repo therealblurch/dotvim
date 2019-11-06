@@ -21,6 +21,7 @@ function! colorschemefunctions#SchemeVariant(delta)
                 \ || g:colors_name == "one"
                 \ || g:colors_name == "space_vim_theme"
                 \ || g:colors_name == "pencil"
+                \ || g:colors_name == "quantum"
         let l:schemes = ['dark', 'light']
         let &background = l:schemes[((a:delta+index(l:schemes, &background)) %2 + 2) % 2]
     elseif g:colors_name == "gruvbox-material"
