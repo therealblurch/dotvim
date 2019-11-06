@@ -58,6 +58,7 @@ function! s:ColorschemeHasAirlineTheme(colorscheme)
             \ || a:colorscheme == "srcery"
             \ || a:colorscheme == "desertink"
             \ || a:colorscheme == "deep-space"
+            \ || a:colorscheme == "spring-night"
       let s:airline_theme_exists = 1
    endif
    return s:airline_theme_exists
