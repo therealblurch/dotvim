@@ -62,16 +62,7 @@ function! colorschemefunctions#AirlineTheme(colorscheme)
                 \ || a:colorscheme == "petrel"
                 \ || a:colorscheme == "stormpetrel"
         exec "AirlineTheme seagull"
-    elseif a:colorscheme == "corvine"
-                \ || a:colorscheme == "corvine_light"
-                \ || a:colorscheme == "darcula"
-                \ || a:colorscheme == "material"
-                \ || a:colorscheme == "snazzy"
-                \ || a:colorscheme == "space_vim_theme"
-                \ || a:colorscheme == "substrata"
-                \ || a:colorscheme == "vadelma"
-                \ || a:colorscheme == "vibrantink"
-                \ || a:colorscheme == "vividchalk"
+    elseif !myfunctions#ColorschemeHasAirlineTheme(g:colors_name)
         exec "AirlineTheme dark"
     endif
 endfunction

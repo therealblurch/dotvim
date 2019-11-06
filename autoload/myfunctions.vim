@@ -35,7 +35,7 @@ function! myfunctions#CurrentColorscheme()
    return s:color
 endfunction
 
-function! s:ColorschemeHasAirlineTheme(colorscheme)
+function! myfunctions#ColorschemeHasAirlineTheme(colorscheme)
    let s:airline_theme_exists = 0
    if a:colorscheme == "nord"
             \ || a:colorscheme == "ayu"
@@ -103,17 +103,17 @@ function! s:ColorschemeHasLightlineColorscheme(colorscheme)
 endfunction
 
 function! myfunctions#WhichStatus(colorscheme)
-   if (!s:ColorschemeHasAirlineTheme(a:colorscheme) && !s:ColorschemeHasLightlineColorscheme(a:colorscheme)) || exists('g:buftabline_show')
+   if (!myfunctions#ColorschemeHasAirlineTheme(a:colorscheme) && !s:ColorschemeHasLightlineColorscheme(a:colorscheme)) || exists('g:buftabline_show')
       let s:user_status = "none"
    elseif exists('g:loaded_airline')
       let s:user_status = "airline"
    elseif exists('g:loaded_lightline')
       let s:user_status = "lightline"
-   elseif g:prefer_airline && s:ColorschemeHasAirlineTheme(a:colorscheme)
+   elseif g:prefer_airline && myfunctions#ColorschemeHasAirlineTheme(a:colorscheme)
       let s:user_status = "airline"
    elseif !g:prefer_airline && s:ColorschemeHasLightlineColorscheme(a:colorscheme)
       let s:user_status = "lightline"
-   elseif s:ColorschemeHasAirlineTheme(a:colorscheme)
+   elseif myfunctions#ColorschemeHasAirlineTheme(a:colorscheme)
       let s:user_status = "airline"
    elseif s:ColorschemeHasLightlineColorscheme(a:colorscheme)
       let s:user_status = "lightline"
