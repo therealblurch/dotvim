@@ -97,6 +97,7 @@ function! s:ColorschemeHasLightlineColorscheme(colorscheme)
             \ || a:colorscheme == "forest-night"
             \ || a:colorscheme == "quantum"
             \ || a:colorscheme == "edge"
+            \ || a:colorscheme == "atlantis"
       let s:lightline_theme_exists = 1
    endif
    return s:lightline_theme_exists
