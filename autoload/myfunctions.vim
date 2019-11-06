@@ -97,18 +97,18 @@ endfunction
 function! myfunctions#WhichStatus(colorscheme)
    if (!s:ColorschemeHasAirlineTheme(a:colorscheme) && !s:ColorschemeHasLightlineColorscheme(a:colorscheme)) || exists('g:buftabline_show')
       let s:user_status = "none"
-   elseif g:prefer_airline
-      if exists('g:loaded_airline') || s:ColorschemeHasAirlineTheme(a:colorscheme)
-         let s:user_status = "airline"
-      elseif exists('g:loaded_lightline') || !s:ColorschemeHasAirlineTheme(a:colorscheme)
-         let s:user_status = "lightline"
-      endif
-   else
-      if exists('g:loaded_lightline') || s:ColorschemeHasLightlineColorscheme(a:colorscheme)
-         let s:user_status = "lightline"
-      elseif exists('g:loaded_airline') || !s:ColorschemeHasLightlineColorscheme(a:colorscheme)
-         let s:user_status = "airline"
-      endif
+   elseif exists('g:loaded_airline')
+      let s:user_status = "airline"
+   elseif exists('g:loaded_lightline')
+      let s:user_status = "lightline"
+   elseif g:prefer_airline && s:ColorschemeHasAirlineTheme(a:colorscheme)
+      let s:user_status = "airline"
+   elseif !g:prefer_airline && s:ColorschemeHasLightlineColorscheme(a:colorscheme)
+      let s:user_status = "lightline"
+   elseif s:ColorschemeHasAirlineTheme(a:colorscheme)
+      let s:user_status = "airline"
+   elseif s:ColorschemeHasLightlineColorscheme(a:colorscheme)
+      let s:user_status = "lightline"
    endif
    return s:user_status
 endfunction
