@@ -63,6 +63,7 @@ function! myfunctions#ColorschemeHasAirlineTheme(colorscheme)
             \ || a:colorscheme == "forest-night"
             \ || a:colorscheme == "spring-night"
             \ || a:colorscheme == "molokai"
+            \ || a:colorscheme == "monokai"
             \ || a:colorscheme =~ "base16"
       let s:airline_theme_exists = 1
    endif
