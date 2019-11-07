@@ -113,6 +113,7 @@ Plugin 'sainnhe/gruvbox-material',               {'package': 'colors', 'type': '
 Plugin 'sainnhe/vim-color-forest-night',         {'package': 'colors', 'type': 'start'}
 Plugin 'severij/vadelma',                        {'package': 'colors', 'type': 'start'}
 Plugin 'srcery-colors/srcery-vim',               {'package': 'colors', 'type': 'start'}
+Plugin 'tomasr/molokai',                         {'package': 'colors', 'type': 'start'}
 Plugin 'toupeira/vim-desertink',                 {'package': 'colors', 'type': 'start'}
 Plugin 'tpope/vim-vividchalk',                   {'package': 'colors', 'type': 'start'}
 Plugin 'tyrannicaltoucan/vim-deep-space',        {'package': 'colors', 'type': 'start'}
