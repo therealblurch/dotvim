@@ -93,7 +93,7 @@ nnoremap cr :execute 'cd ' . rootdir<bar>pwd<cr> " Go to directory vim was opene
 nnoremap cp :pwd<cr> " Print current working directory
 
 " Edit/source .vimrc
-noremap <leader>ev :tabedit ~/.vim/vimrc<CR>
+noremap <leader>evi :tabedit ~/.vim/vimrc<CR>
 noremap <leader>sv :source ~/.vim/vimrc<CR>
 
 " Timestamps
