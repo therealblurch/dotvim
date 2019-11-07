@@ -204,6 +204,8 @@ function! lightlinefunctions#LightlineUpdate()
          let g:lightline.colorscheme = 'pencil_alter'
       elseif g:colors_name == 'night-owl'
          let g:lightline.colorscheme = 'nightowl'
+      elseif g:colors_name == 'desert-night'
+         let g:lightline.colorscheme = 'desert_night'
       elseif g:colors_name == 'forest-night'
          let g:lightline.colorscheme = 'forest_night'
       elseif g:colors_name == 'cosmic_latte'

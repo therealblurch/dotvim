@@ -107,6 +107,7 @@ Plugin 'rhysd/vim-color-spring-night',           {'package': 'colors', 'type': '
 Plugin 'rhysd/wallaby.vim',                      {'package': 'colors', 'type': 'start'}
 Plugin 'romainl/Apprentice',                     {'package': 'colors', 'type': 'start'}
 Plugin 'sainnhe/vim-color-atlantis',             {'package': 'colors', 'type': 'start'}
+Plugin 'sainnhe/vim-color-desert-night',         {'package': 'colors', 'type': 'start'}
 Plugin 'sainnhe/edge',                           {'package': 'colors', 'type': 'start'}
 Plugin 'sainnhe/gruvbox-material',               {'package': 'colors', 'type': 'start'}
 Plugin 'sainnhe/vim-color-forest-night',         {'package': 'colors', 'type': 'start'}
