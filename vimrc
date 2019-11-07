@@ -280,7 +280,7 @@ command! -nargs=1 -complete=custom,lightlinefunctions#LightlineColorschemes Ligh
    \ call lightlinefunctions#SetLightlineColorscheme(<q-args>)
  " }}}
  
-let g:prefer_airline = 1
+let g:prefer_airline = 0
 
 augroup AirlineTheme
 augroup LightlineColorscheme
