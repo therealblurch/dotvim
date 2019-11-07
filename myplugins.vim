@@ -78,6 +78,7 @@ Plugin 'arzg/vim-substrata',                     {'package': 'colors', 'type': '
 Plugin 'ayu-theme/ayu-vim',                      {'package': 'colors', 'type': 'start'}
 Plugin 'cocopon/iceberg.vim',                    {'package': 'colors', 'type': 'start'}
 Plugin 'connorholyday/vim-snazzy',               {'package': 'colors', 'type': 'start'}
+Plugin 'croaker/mustang-vim',                    {'package': 'colors', 'type': 'start'}
 Plugin 'danilo-augusto/vim-afterglow',           {'package': 'colors', 'type': 'start'}
 Plugin 'davidklsn/vim-sialoquent',               {'package': 'colors', 'type': 'start'}
 Plugin 'doums/darcula',                          {'package': 'colors', 'type': 'start'}
