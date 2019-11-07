@@ -64,6 +64,7 @@ function! myfunctions#ColorschemeHasAirlineTheme(colorscheme)
             \ || a:colorscheme == "spring-night"
             \ || a:colorscheme == "molokai"
             \ || a:colorscheme == "monokai"
+            \ || a:colorscheme == "night-owl"
             \ || a:colorscheme =~ "Base2Tone"
             \ || a:colorscheme =~ "base16"
       let s:airline_theme_exists = 1
