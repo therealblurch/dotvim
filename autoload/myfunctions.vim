@@ -63,6 +63,7 @@ function! myfunctions#ColorschemeHasAirlineTheme(colorscheme)
             \ || a:colorscheme == "forest-night"
             \ || a:colorscheme == "spring-night"
             \ || a:colorscheme == "molokai"
+            \ || a:colorscheme =~ "base16"
       let s:airline_theme_exists = 1
    endif
    return s:airline_theme_exists
@@ -101,6 +102,7 @@ function! s:ColorschemeHasLightlineColorscheme(colorscheme)
             \ || a:colorscheme == "atlantis"
             \ || a:colorscheme == "sialoquent"
             \ || a:colorscheme == "desert-night"
+            \ || a:colorscheme =~ "base16"
       let s:lightline_theme_exists = 1
    endif
    return s:lightline_theme_exists

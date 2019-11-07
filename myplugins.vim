@@ -20,6 +20,7 @@ Plugin 'lifepillar/vim-mucomplete',              {'type': 'start'}
 Plugin 'luochen1990/rainbow',                    {'type': 'start'}
 Plugin 'machakann/vim-highlightedyank',          {'type': 'start'}
 Plugin 'markonm/traces.vim',                     {'type': 'start'}
+Plugin 'mike-hearn/base16-vim-lightline'
 Plugin 'myusuf3/numbers.vim',                    {'type': 'start'}
 Plugin 'rbong/vim-flog',                         {'type': 'start'}
 Plugin 'rhysd/committia.vim',                    {'type': 'start'}
@@ -73,9 +74,11 @@ Plugin 'thinca/vim-textobj-between',             {'type': 'start'}
 Plugin 'vimtaku/vim-textobj-keyvalue',           {'type': 'start'}
 
 Plugin 'arcticicestudio/nord-vim',               {'package': 'colors', 'type': 'start', 'branch': 'develop'}
+Plugin 'adlawson/vim-sorcerer',                  {'package': 'colors', 'type': 'start'}
 Plugin 'arzg/vim-corvine',                       {'package': 'colors', 'type': 'start'}
 Plugin 'arzg/vim-substrata',                     {'package': 'colors', 'type': 'start'}
 Plugin 'ayu-theme/ayu-vim',                      {'package': 'colors', 'type': 'start'}
+Plugin 'chriskempson/base16-vim', {'package': 'colors', 'type': 'start'}
 Plugin 'cocopon/iceberg.vim',                    {'package': 'colors', 'type': 'start'}
 Plugin 'connorholyday/vim-snazzy',               {'package': 'colors', 'type': 'start'}
 Plugin 'croaker/mustang-vim',                    {'package': 'colors', 'type': 'start'}
@@ -148,6 +151,7 @@ function! myplugins#callback(plugname, before)
    elseif a:plugname == "lightline.vim"
       PackAdd! lightline-buffer
       PackAdd! lightline_foobar.vim
+      PackAdd! base16-vim-lightline
       PackAdd! pomodoro.vim
    endif
 
