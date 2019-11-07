@@ -134,8 +134,8 @@ function! lightlinefunctions#LightlineUpdate()
                \ || g:colors_name == "atlantis"
                \ || g:colors_name == "sialoquent"
                \ || g:colors_name == "dark_purple"
-               \ || g:colors_name =~ "base16"
-         let g:lightline.colorscheme = g:colors_name
+      elseif g:colors_name =~ "base16"
+         let g:lightline.colorscheme = tr(g:colors_name, '-', '_')
       elseif g:colors_name == "quantum"
          if &background == "light"
             let g:lightline.colorscheme = "quantum_light"
