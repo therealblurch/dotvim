@@ -104,6 +104,7 @@ Plugin 'nightsense/stellarized',                 {'package': 'colors', 'type': '
 Plugin 'rakr/vim-one',                           {'package': 'colors', 'type': 'start'}
 Plugin 'reedes/vim-colors-pencil',               {'package': 'colors', 'type': 'start'}
 Plugin 'rhysd/vim-color-spring-night',           {'package': 'colors', 'type': 'start'}
+Plugin 'rhysd/wallaby.vim',                      {'package': 'colors', 'type': 'start'}
 Plugin 'romainl/Apprentice',                     {'package': 'colors', 'type': 'start'}
 Plugin 'sainnhe/vim-color-atlantis',             {'package': 'colors', 'type': 'start'}
 Plugin 'sainnhe/edge',                           {'package': 'colors', 'type': 'start'}
