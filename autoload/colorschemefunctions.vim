@@ -5,6 +5,45 @@ function! colorschemefunctions#SchemeVariant(delta)
     elseif g:colors_name =~ "corvine"
         let l:schemes = map(['', '_light'], '"corvine".v:val')
         exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) % 2]
+    elseif g:colors_name =~ "Base2Tone_Cave"
+        let l:schemes = map(['Dark', 'Light'], '"Base2Tone_Cave".v:val')
+        exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) % 2]
+    elseif g:colors_name =~ "Base2Tone_Desert"
+        let l:schemes = map(['Dark', 'Light'], '"Base2Tone_Desert".v:val')
+        exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) % 2]
+    elseif g:colors_name =~ "Base2Tone_Drawbridge"
+        let l:schemes = map(['Dark', 'Light'], '"Base2Tone_Drawbridge".v:val')
+        exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) % 2]
+    elseif g:colors_name =~ "Base2Tone_Earth"
+        let l:schemes = map(['Dark', 'Light'], '"Base2Tone_Earth".v:val')
+        exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) % 2]
+    elseif g:colors_name =~ "Base2Tone_Evening"
+        let l:schemes = map(['Dark', 'Light'], '"Base2Tone_Evening".v:val')
+        exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) % 2]
+    elseif g:colors_name =~ "Base2Tone_Forest"
+        let l:schemes = map(['Dark', 'Light'], '"Base2Tone_Forest".v:val')
+        exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) % 2]
+    elseif g:colors_name =~ "Base2Tone_Heath"
+        let l:schemes = map(['Dark', 'Light'], '"Base2Tone_Heath".v:val')
+        exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) % 2]
+    elseif g:colors_name =~ "Base2Tone_Lake"
+        let l:schemes = map(['Dark', 'Light'], '"Base2Tone_Lake".v:val')
+        exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) % 2]
+    elseif g:colors_name =~ "Base2Tone_Meadow"
+        let l:schemes = map(['Dark', 'Light'], '"Base2Tone_Meadow".v:val')
+        exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) % 2]
+    elseif g:colors_name =~ "Base2Tone_Morning"
+        let l:schemes = map(['Dark', 'Light'], '"Base2Tone_Morning".v:val')
+        exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) % 2]
+    elseif g:colors_name =~ "Base2Tone_Pool"
+        let l:schemes = map(['Dark', 'Light'], '"Base2Tone_Pool".v:val')
+        exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) % 2]
+    elseif g:colors_name =~ "Base2Tone_Sea"
+        let l:schemes = map(['Dark', 'Light'], '"Base2Tone_Sea".v:val')
+        exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) % 2]
+    elseif g:colors_name =~ "Base2Tone_Space"
+        let l:schemes = map(['Dark', 'Light'], '"Base2Tone_Space".v:val')
+        exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) % 2]
     elseif g:colors_name == "ayu"
         let l:schemes = ['light', 'dark', 'mirage']
         let g:ayucolor = l:schemes[((a:delta+index(l:schemes, g:ayucolor)) % 3 + 3) % 3]
@@ -62,6 +101,8 @@ function! colorschemefunctions#AirlineTheme(colorscheme)
                 \ || a:colorscheme == "petrel"
                 \ || a:colorscheme == "stormpetrel"
         exec "AirlineTheme seagull"
+    elseif g:colors_name =~ "Base2Tone"
+        exec "AirlineTheme " . g:colors_name
     elseif !myfunctions#ColorschemeHasAirlineTheme(g:colors_name)
         exec "AirlineTheme dark"
     endif
