@@ -104,6 +104,7 @@ function! s:ColorschemeHasLightlineColorscheme(colorscheme)
             \ || a:colorscheme == "sialoquent"
             \ || a:colorscheme == "desert-night"
             \ || a:colorscheme =~ "base16"
+            \ || a:colorscheme == "dark_purple"
       let s:lightline_theme_exists = 1
    endif
    return s:lightline_theme_exists

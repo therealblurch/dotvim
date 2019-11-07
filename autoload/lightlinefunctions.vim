@@ -133,6 +133,7 @@ function! lightlinefunctions#LightlineUpdate()
                \ || g:colors_name == "sacredforest"
                \ || g:colors_name == "atlantis"
                \ || g:colors_name == "sialoquent"
+               \ || g:colors_name == "dark_purple"
                \ || g:colors_name =~ "base16"
          let g:lightline.colorscheme = g:colors_name
       elseif g:colors_name == "quantum"
