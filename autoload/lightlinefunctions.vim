@@ -138,6 +138,8 @@ function! lightlinefunctions#LightlineUpdate()
                \ || g:colors_name =~ "flattened"
          let g:lightline.colorscheme = g:colors_name
       elseif g:colors_name =~ "base16"
+               \ || g:colors_name == "desert-night"
+               \ || g:colors_name == "forest-night"
          let g:lightline.colorscheme = tr(g:colors_name, '-', '_')
       elseif g:colors_name == "quantum"
          let g:lightline.colorscheme = "quantum"
@@ -177,10 +179,6 @@ function! lightlinefunctions#LightlineUpdate()
          let g:lightline.colorscheme = 'pencil_alter'
       elseif g:colors_name == 'night-owl'
          let g:lightline.colorscheme = 'nightowl'
-      elseif g:colors_name == 'desert-night'
-         let g:lightline.colorscheme = 'desert_night'
-      elseif g:colors_name == 'forest-night'
-         let g:lightline.colorscheme = 'forest_night'
       elseif g:colors_name =~ 'Base2Tone_Cave'
          let g:lightline.colorscheme = 'Base2Tone_Cave'
          runtime autoload/lightline/colorscheme/Base2Tone_Cave.vim
