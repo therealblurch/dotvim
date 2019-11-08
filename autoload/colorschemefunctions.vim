@@ -44,6 +44,9 @@ function! colorschemefunctions#SchemeVariant(delta)
     elseif g:colors_name =~ "Base2Tone_Space"
         let l:schemes = map(['Dark', 'Light'], '"Base2Tone_Space".v:val')
         exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) % 2]
+    elseif g:colors_name =~ "flattened"
+        let l:schemes = map(['_dark', '_light'], '"flattened".v:val')
+        exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) % 2]
     elseif g:colors_name == "ayu"
         let l:schemes = ['light', 'dark', 'mirage']
         let g:ayucolor = l:schemes[((a:delta+index(l:schemes, g:ayucolor)) % 3 + 3) % 3]
@@ -116,6 +119,7 @@ function! colorschemefunctions#AirlineTheme(colorscheme)
     elseif g:colors_name =~ "Base2Tone"
         exec "AirlineTheme " . g:colors_name
     elseif g:colors_name =~ "solarized8"
+                \ || g:colors_name =~ "flattened"
         exec "Airlinetheme solarized"
     elseif !myfunctions#ColorschemeHasAirlineTheme(g:colors_name)
         exec "AirlineTheme dark"

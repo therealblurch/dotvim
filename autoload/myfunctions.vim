@@ -69,6 +69,7 @@ function! myfunctions#ColorschemeHasAirlineTheme(colorscheme)
             \ || a:colorscheme =~ "Base2Tone"
             \ || a:colorscheme =~ "base16"
             \ || a:colorscheme =~ "solarized8"
+            \ || a:colorscheme =~ "flattened"
       let s:airline_theme_exists = 1
    endif
    return s:airline_theme_exists
@@ -111,6 +112,7 @@ function! s:ColorschemeHasLightlineColorscheme(colorscheme)
             \ || a:colorscheme =~ "Base2Tone"
             \ || a:colorscheme == "dark_purple"
             \ || a:colorscheme =~ "solarized8"
+            \ || a:colorscheme =~ "flattened"
       let s:lightline_theme_exists = 1
    endif
    return s:lightline_theme_exists
