@@ -114,18 +114,6 @@ function! colorschemefunctions#AirlineTheme(colorscheme)
                 \ || a:colorscheme == "snow"
                 \ || a:colorscheme == "stellarized"
         exec "AirlineTheme " . a:colorscheme . "_" . &background
-    elseif a:colorscheme == "greygull"
-                \ || a:colorscheme == "petrel"
-                \ || a:colorscheme == "stormpetrel"
-        exec "AirlineTheme seagull"
-    elseif g:colors_name =~ "Base2Tone"
-        exec "AirlineTheme " . g:colors_name
-    elseif g:colors_name == "hybrid_material"
-                \ || g:colors_name == "hybrid_reverse"
-        exec "AirlineTheme hybrid"
-    elseif g:colors_name =~ "solarized8"
-                \ || g:colors_name =~ "flattened"
-        exec "Airlinetheme solarized"
     elseif !myfunctions#ColorschemeHasAirlineTheme(g:colors_name)
         exec "AirlineTheme dark"
     endif

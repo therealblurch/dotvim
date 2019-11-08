@@ -132,6 +132,86 @@ let g:airline#extensions#tabline#right_sep = "\ue0ba"
 let g:airline#extensions#tabline#right_alt_sep = "\ue0bb"
 let g:airline_left_sep = "\ue0b8"
 let g:airline_right_sep = "\ue0be"
+let g:airline_theme_map = {
+            \ 'greygull'                 : 'seagul',
+            \ 'petrel'                   : 'seagull',
+            \ 'stormpetrel'              : 'seagull',
+            \ 'hybrid*'                  : 'hybrid',
+            \ 'solarized8*'              : 'solarized',
+            \ 'base16_3024'              : 'base16_3024',
+            \ 'base16_adwaita'           : 'base16_adwaita',
+            \ 'base16_apathy'            : 'base16_apathy',
+            \ 'base16_ashes'             : 'base16_ashes',
+            \ 'base16_atelierdune'       : 'base16_atelierdune',
+            \ 'base16_atelierforest'     : 'base16_atelierforest',
+            \ 'base16_atelierheath'      : 'base16_atelierheath',
+            \ 'base16_atelierlakeside'   : 'base16_atelierlakeside',
+            \ 'base16_atelierseaside'    : 'base16_atelierseaside',
+            \ 'base16_bespin'            : 'base16_bespin',
+            \ 'base16_brewer'            : 'base16_brewer',
+            \ 'base16_bright'            : 'base16_bright',
+            \ 'base16_chalk'             : 'base16_chalk',
+            \ 'base16_classic'           : 'base16_classic',
+            \ 'base16_codeschool'        : 'base16_codeschool',
+            \ 'base16_colors'            : 'base16_colors',
+            \ 'base16color'              : 'base16color',
+            \ 'base16_default'           : 'base16_default',
+            \ 'base16_eighties'          : 'base16_eighties',
+            \ 'base16_embers'            : 'base16_embers',
+            \ 'base16_flat'              : 'base16_flat',
+            \ 'base16_google'            : 'base16_google',
+            \ 'base16_grayscale'         : 'base16_grayscale',
+            \ 'base16_greenscreen'       : 'base16_greenscreen',
+            \ 'base16_gruvbox_dark_hard' : 'base16_gruvbox_dark_hard',
+            \ 'base16_harmonic16'        : 'base16_harmonic16',
+            \ 'base16_hopscotch'         : 'base16_hopscotch',
+            \ 'base16_isotope'           : 'base16_isotope',
+            \ 'base16_londontube'        : 'base16_londontube',
+            \ 'base16_marrakesh'         : 'base16_marrakesh',
+            \ 'base16_mocha'             : 'base16_mocha',
+            \ 'base16_monokai'           : 'base16_monokai',
+            \ 'base16_nord'              : 'base16_nord',
+            \ 'base16_oceanicnext'       : 'base16_oceanicnext',
+            \ 'base16_ocean'             : 'base16_ocean',
+            \ 'base16_paraiso'           : 'base16_paraiso',
+            \ 'base16_pop'               : 'base16_pop',
+            \ 'base16_railscasts'        : 'base16_railscasts',
+            \ 'base16_seti'              : 'base16_seti',
+            \ 'base16_shapeshifter'      : 'base16_shapeshifter',
+            \ 'base16_shell'             : 'base16_shell',
+            \ 'base16_snazzy'            : 'base16_snazzy',
+            \ 'base16_solarized'         : 'base16_solarized',
+            \ 'base16_spacemacs'         : 'base16_spacemacs',
+            \ 'base16_summerfruit'       : 'base16_summerfruit',
+            \ 'base16_tomorrow'          : 'base16_tomorrow',
+            \ 'base16_twilight'          : 'base16_twilight',
+            \ 'Base2Tone_CaveDark'       : 'Base2Tone_CaveDark',
+            \ 'Base2Tone_CaveLight'      : 'Base2Tone_CaveLight',
+            \ 'Base2Tone_DesertDark'     : 'Base2Tone_DesertDark',
+            \ 'Base2Tone_DesertLight'    : 'Base2Tone_DesertLight',
+            \ 'Base2Tone_DrawbridgeDark' : 'Base2Tone_DrawbridgeDark',
+            \ 'Base2Tone_DrawbridgeLight': 'Base2Tone_DrawbridgeLight',
+            \ 'Base2Tone_EarthDark'      : 'Base2Tone_EarthDark',
+            \ 'Base2Tone_EarthLight'     : 'Base2Tone_EarthLight',
+            \ 'Base2Tone_EveningDark'    : 'Base2Tone_EveningDark',
+            \ 'Base2Tone_EveningLight'   : 'Base2Tone_EveningLight',
+            \ 'Base2Tone_ForestDark'     : 'Base2Tone_ForestDark',
+            \ 'Base2Tone_ForestLight'    : 'Base2Tone_ForestLight',
+            \ 'Base2Tone_HeathDark'      : 'Base2Tone_HeathDark',
+            \ 'Base2Tone_HeathLight'     : 'Base2Tone_HeathLight',
+            \ 'Base2Tone_LakeDark'       : 'Base2Tone_LakeDark',
+            \ 'Base2Tone_LakeLight'      : 'Base2Tone_LakeLight',
+            \ 'Base2Tone_MeadowDark'     : 'Base2Tone_MeadowDark',
+            \ 'Base2Tone_MeadowLight'    : 'Base2Tone_MeadowLight',
+            \ 'Base2Tone_MorningDark'    : 'Base2Tone_MorningDark',
+            \ 'Base2Tone_MorningLight'   : 'Base2Tone_MorningLight',
+            \ 'Base2Tone_PoolDark'       : 'Base2Tone_PoolDark',
+            \ 'Base2Tone_PoolLight'      : 'Base2Tone_PoolLight',
+            \ 'Base2Tone_SeaDark'        : 'Base2Tone_SeaDark',
+            \ 'Base2Tone_SeaLight'       : 'Base2Tone_SeaLight',
+            \ 'Base2Tone_SpaceDark'      : 'Base2Tone_SpaceDark',
+            \ 'Base2Tone_SpaceLight'     : 'Base2Tone_SpaceLight'
+            \ }
 
 " }}}
 
@@ -282,11 +362,7 @@ command! -nargs=1 -complete=custom,lightlinefunctions#LightlineColorschemes Ligh
  
 let g:prefer_airline = 0
 
-augroup AirlineTheme
-augroup LightlineColorscheme
-   autocmd!
-augroup END
-
+augroup StatusBarTheme
     autocmd!
     autocmd ColorScheme * if myfunctions#WhichStatus(g:colors_name) == "airline"   | PackAdd vim-airline | call colorschemefunctions#AirlineTheme(g:colors_name) | endif
     autocmd Colorscheme * if myfunctions#WhichStatus(g:colors_name) == "lightline" | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
