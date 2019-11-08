@@ -91,6 +91,7 @@ Plugin 'flrnd/candid.vim',                       {'package': 'colors', 'type': '
 Plugin 'flrnd/plastic.vim',                      {'package': 'colors', 'type': 'start'}
 Plugin 'haishanh/night-owl.vim',                 {'package': 'colors', 'type': 'start'}
 Plugin 'jacoborus/tender.vim',                   {'package': 'colors', 'type': 'start'}
+Plugin 'jnurmine/Zenburn',                       {'package': 'colors', 'type': 'start'}
 Plugin 'kaicataldo/material.vim',                {'package': 'colors', 'type': 'start', 'name': 'material'}
 Plugin 'KKPMW/oldbook-vim',                      {'package': 'colors', 'type': 'start'}
 Plugin 'KKPMW/sacredforest-vim',                 {'package': 'colors', 'type': 'start'}

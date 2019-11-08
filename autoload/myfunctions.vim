@@ -72,6 +72,7 @@ function! myfunctions#ColorschemeHasAirlineTheme(colorscheme)
             \ || a:colorscheme =~ "solarized8"
             \ || a:colorscheme =~ "flattened"
             \ || a:colorscheme == "PaperColor"
+            \ || a:colorscheme == "zenburn"
       let s:airline_theme_exists = 1
    endif
    return s:airline_theme_exists
