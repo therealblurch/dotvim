@@ -28,6 +28,8 @@ function! myfunctions#CurrentColorscheme()
             \ || g:colors_name == "pencil"
             \ || g:colors_name == "quantum"
             \ || g:colors_name == "edge"
+            \ || g:colors_name == "hybrid_material"
+            \ || g:colors_name == "hybrid_reverse"
       let s:color = g:colors_name . '/' . &background
    else
       let s:color = g:colors_name
@@ -68,7 +70,7 @@ function! myfunctions#ColorschemeHasAirlineTheme(colorscheme)
             \ || a:colorscheme =~ "Base2Tone"
             \ || a:colorscheme =~ "base16"
             \ || a:colorscheme == "minimalist"
-            \ || a:colorscheme == "hybrid"
+            \ || a:colorscheme =~ "hybrid"
       let s:airline_theme_exists = 1
    endif
    return s:airline_theme_exists

@@ -62,6 +62,8 @@ function! colorschemefunctions#SchemeVariant(delta)
                 \ || g:colors_name == "pencil"
                 \ || g:colors_name == "quantum"
                 \ || g:colors_name == "edge"
+                \ || g:colors_name == "hybrid_material"
+                \ || g:colors_name == "hybrid_reverse"
         let l:schemes = ['dark', 'light']
         let &background = l:schemes[((a:delta+index(l:schemes, &background)) %2 + 2) % 2]
     elseif g:colors_name == "gruvbox-material"
@@ -103,6 +105,9 @@ function! colorschemefunctions#AirlineTheme(colorscheme)
         exec "AirlineTheme seagull"
     elseif g:colors_name =~ "Base2Tone"
         exec "AirlineTheme " . g:colors_name
+    elseif g:colors_name == "hybrid_material"
+                \ || g:colors_name == "hybrid_reverse"
+        exec "AirlineTheme hybrid"
     elseif !myfunctions#ColorschemeHasAirlineTheme(g:colors_name)
         exec "AirlineTheme dark"
     endif

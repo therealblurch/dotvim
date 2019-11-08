@@ -73,6 +73,8 @@ function! lightlinefunctions#LightlineColorscheme()
             \ || g:colors_name == "pencil"
             \ || g:colors_name == "quantum"
             \ || g:colors_name == "edge"
+            \ || g:colors_name == "hybrid_material"
+            \ || g:colors_name == "hybrid_reverse"
       let s:color = g:colors_name . '/' . &background
    else
       let s:color = g:colors_name
