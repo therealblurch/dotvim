@@ -75,6 +75,8 @@ function! lightlinefunctions#LightlineColorscheme()
             \ || g:colors_name == "edge"
             \ || g:colors_name == "hybrid_material"
             \ || g:colors_name == "hybrid_reverse"
+            \ || g:colors_name =~ "solarized8"
+            \ || g:colors_name == "PaperColor"
       let s:color = g:colors_name . '/' . &background
    else
       let s:color = g:colors_name
@@ -135,8 +137,11 @@ function! lightlinefunctions#LightlineUpdate()
                \ || g:colors_name == "atlantis"
                \ || g:colors_name == "sialoquent"
                \ || g:colors_name == "dark_purple"
+               \ || g:colors_name =~ "flattened"
          let g:lightline.colorscheme = g:colors_name
       elseif g:colors_name =~ "base16"
+               \ || g:colors_name == "desert-night"
+               \ || g:colors_name == "forest-night"
          let g:lightline.colorscheme = tr(g:colors_name, '-', '_')
       elseif g:colors_name == "quantum"
          let g:lightline.colorscheme = "quantum"
@@ -144,12 +149,18 @@ function! lightlinefunctions#LightlineUpdate()
       elseif g:colors_name == "edge"
          let g:lightline.colorscheme = "edge"
          runtime autoload/lightline/colorscheme/edge.vim
+      elseif g:colors_name =~ "solarized8"
+         let g:lightline.colorscheme = "solarized"
+         runtime autoload/lightline/colorscheme/solarized.vim
       elseif g:colors_name == "vadelma"
          let g:lightline.colorscheme = "vadelma"
          runtime autoload/lightline/colorscheme/vadelma.vim
       elseif g:colors_name == "ayu"
          let g:lightline.colorscheme = "ayu"
          runtime autoload/lightline/colorscheme/ayu.vim
+      elseif g:colors_name =~ "PaperColor"
+         let g:lightline.colorscheme = "PaperColor"
+         runtime autoload/lightline/colorscheme/PaperColor.vim
       elseif g:colors_name == "darcula"
          let g:lightline.colorscheme = "darculaOriginal"
       elseif g:colors_name == 'typewriter'
@@ -170,10 +181,6 @@ function! lightlinefunctions#LightlineUpdate()
          let g:lightline.colorscheme = 'pencil_alter'
       elseif g:colors_name == 'night-owl'
          let g:lightline.colorscheme = 'nightowl'
-      elseif g:colors_name == 'desert-night'
-         let g:lightline.colorscheme = 'desert_night'
-      elseif g:colors_name == 'forest-night'
-         let g:lightline.colorscheme = 'forest_night'
       elseif g:colors_name =~ 'Base2Tone_Cave'
          let g:lightline.colorscheme = 'Base2Tone_Cave'
          runtime autoload/lightline/colorscheme/Base2Tone_Cave.vim

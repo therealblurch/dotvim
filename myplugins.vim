@@ -79,7 +79,7 @@ Plugin 'arzg/vim-corvine',                       {'package': 'colors', 'type': '
 Plugin 'arzg/vim-substrata',                     {'package': 'colors', 'type': 'start'}
 Plugin 'atelierbram/Base2Tone-vim',              {'package': 'colors', 'type': 'start'}
 Plugin 'ayu-theme/ayu-vim',                      {'package': 'colors', 'type': 'start'}
-Plugin 'chriskempson/base16-vim', {'package': 'colors', 'type': 'start'}
+Plugin 'chriskempson/base16-vim',                {'package': 'colors', 'type': 'start'}
 Plugin 'cocopon/iceberg.vim',                    {'package': 'colors', 'type': 'start'}
 Plugin 'connorholyday/vim-snazzy',               {'package': 'colors', 'type': 'start'}
 Plugin 'croaker/mustang-vim',                    {'package': 'colors', 'type': 'start'}
@@ -92,12 +92,14 @@ Plugin 'flrnd/candid.vim',                       {'package': 'colors', 'type': '
 Plugin 'flrnd/plastic.vim',                      {'package': 'colors', 'type': 'start'}
 Plugin 'haishanh/night-owl.vim',                 {'package': 'colors', 'type': 'start'}
 Plugin 'jacoborus/tender.vim',                   {'package': 'colors', 'type': 'start'}
+Plugin 'jnurmine/Zenburn',                       {'package': 'colors', 'type': 'start'}
 Plugin 'kaicataldo/material.vim',                {'package': 'colors', 'type': 'start', 'name': 'material'}
 Plugin 'KKPMW/oldbook-vim',                      {'package': 'colors', 'type': 'start'}
 Plugin 'KKPMW/sacredforest-vim',                 {'package': 'colors', 'type': 'start'}
 Plugin 'kjssad/quantum.vim',                     {'package': 'colors', 'type': 'start'}
 Plugin 'kristijanhusak/vim-hybrid-material',     {'package': 'colors', 'type': 'start'}
 Plugin 'levelone/tequila-sunrise.vim',           {'package': 'colors', 'type': 'start'}
+Plugin 'lifepillar/vim-solarized8',              {'package': 'colors', 'type': 'start'}
 Plugin 'liuchengxu/space-vim-theme',             {'package': 'colors', 'type': 'start'}
 Plugin 'logico-dev/typewriter',                  {'package': 'colors', 'type': 'start'}
 Plugin 'ludokng/vim-odyssey',                    {'package': 'colors', 'type': 'start'}
@@ -107,11 +109,13 @@ Plugin 'nightsense/cosmic_latte',                {'package': 'colors', 'type': '
 Plugin 'nightsense/seabird',                     {'package': 'colors', 'type': 'start'}
 Plugin 'nightsense/snow',                        {'package': 'colors', 'type': 'start'}
 Plugin 'nightsense/stellarized',                 {'package': 'colors', 'type': 'start'}
+Plugin 'NLKNguyen/papercolor-theme',             {'package': 'colors', 'type': 'start'}
 Plugin 'rakr/vim-one',                           {'package': 'colors', 'type': 'start'}
 Plugin 'reedes/vim-colors-pencil',               {'package': 'colors', 'type': 'start'}
 Plugin 'rhysd/vim-color-spring-night',           {'package': 'colors', 'type': 'start'}
 Plugin 'rhysd/wallaby.vim',                      {'package': 'colors', 'type': 'start'}
 Plugin 'romainl/Apprentice',                     {'package': 'colors', 'type': 'start'}
+Plugin 'romainl/flattened',                      {'package': 'colors', 'type': 'start'}
 Plugin 'sainnhe/vim-color-atlantis',             {'package': 'colors', 'type': 'start'}
 Plugin 'sainnhe/vim-color-desert-night',         {'package': 'colors', 'type': 'start'}
 Plugin 'sainnhe/edge',                           {'package': 'colors', 'type': 'start'}

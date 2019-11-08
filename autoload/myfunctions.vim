@@ -1,6 +1,5 @@
 function! myfunctions#GitgutterStatus()
-   let s:summary = [0, 0, 0]
-   if exists('b:gitgutter.summary')
+   let s:summary = [0, 0, 0] if exists('b:gitgutter.summary')
       let s:summary = b:gitgutter.summary
    endif
    return max(s:summary) > 0 ? ' +'.s:summary[0].' ~'.s:summary[1].' -'.s:summary[2].' ' : ''
@@ -30,6 +29,8 @@ function! myfunctions#CurrentColorscheme()
             \ || g:colors_name == "edge"
             \ || g:colors_name == "hybrid_material"
             \ || g:colors_name == "hybrid_reverse"
+            \ || g:colors_name == "solarized8"
+            \ || g:colors_name == "PaperColor"
       let s:color = g:colors_name . '/' . &background
    else
       let s:color = g:colors_name
@@ -71,6 +72,10 @@ function! myfunctions#ColorschemeHasAirlineTheme(colorscheme)
             \ || a:colorscheme =~ "base16"
             \ || a:colorscheme == "minimalist"
             \ || a:colorscheme =~ "hybrid"
+            \ || a:colorscheme =~ "solarized8"
+            \ || a:colorscheme =~ "flattened"
+            \ || a:colorscheme == "PaperColor"
+            \ || a:colorscheme == "zenburn"
       let s:airline_theme_exists = 1
    endif
    return s:airline_theme_exists
@@ -112,6 +117,9 @@ function! s:ColorschemeHasLightlineColorscheme(colorscheme)
             \ || a:colorscheme =~ "base16"
             \ || a:colorscheme =~ "Base2Tone"
             \ || a:colorscheme == "dark_purple"
+            \ || a:colorscheme =~ "solarized8"
+            \ || a:colorscheme =~ "flattened"
+            \ || a:colorscheme == "PaperColor"
       let s:lightline_theme_exists = 1
    endif
    return s:lightline_theme_exists

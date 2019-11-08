@@ -1,7 +1,6 @@
 function! colorschemefunctions#SchemeVariant(delta)
     if g:colors_name =~ "typewriter"
-        let l:schemes = map(['', '-night'], '"typewriter".v:val')
-        exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) % 2]
+        let l:schemes = map(['', '-night'], '"typewriter".v:val') exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) % 2]
     elseif g:colors_name =~ "corvine"
         let l:schemes = map(['', '_light'], '"corvine".v:val')
         exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) % 2]
@@ -44,6 +43,9 @@ function! colorschemefunctions#SchemeVariant(delta)
     elseif g:colors_name =~ "Base2Tone_Space"
         let l:schemes = map(['Dark', 'Light'], '"Base2Tone_Space".v:val')
         exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) % 2]
+    elseif g:colors_name =~ "flattened"
+        let l:schemes = map(['_dark', '_light'], '"flattened".v:val')
+        exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) % 2]
     elseif g:colors_name == "ayu"
         let l:schemes = ['light', 'dark', 'mirage']
         let g:ayucolor = l:schemes[((a:delta+index(l:schemes, g:ayucolor)) % 3 + 3) % 3]
@@ -64,6 +66,7 @@ function! colorschemefunctions#SchemeVariant(delta)
                 \ || g:colors_name == "edge"
                 \ || g:colors_name == "hybrid_material"
                 \ || g:colors_name == "hybrid_reverse"
+                \ || g:colors_name == "PaperColor"
         let l:schemes = ['dark', 'light']
         let &background = l:schemes[((a:delta+index(l:schemes, &background)) %2 + 2) % 2]
     elseif g:colors_name == "gruvbox-material"
@@ -88,6 +91,18 @@ function! colorschemefunctions#SchemeVariant(delta)
             let g:materialbox_contrast_dark = l:schemes[((a:delta+index(l:schemes, g:materialbox_contrast_dark)) % 3 + 3) % 3]
             exe 'colors materialbox'
         endif
+    elseif g:colors_name =~ "solarized8"
+        let l:schemes = map (['', '_low', '_flat', '_high'], '"solarized8".v:val')
+        if &background == "light"
+            if a:delta+index(l:schemes, g:colors_name) >= 4 || a:delta+index(l:schemes, g:colors_name) < 0
+               let &background = "dark"
+            endif
+        else
+            if a:delta+index(l:schemes, g:colors_name) >= 4 || a:delta+index(l:schemes, g:colors_name) < 0
+               let &background = "light"
+            endif
+        endif
+        exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 4 + 4) % 4]
     elseif g:colors_name =~ "onehalf"
         let l:schemes = map(['light', 'dark'], '"onehalf".v:val')
         exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) %2]
@@ -108,6 +123,9 @@ function! colorschemefunctions#AirlineTheme(colorscheme)
     elseif g:colors_name == "hybrid_material"
                 \ || g:colors_name == "hybrid_reverse"
         exec "AirlineTheme hybrid"
+    elseif g:colors_name =~ "solarized8"
+                \ || g:colors_name =~ "flattened"
+        exec "Airlinetheme solarized"
     elseif !myfunctions#ColorschemeHasAirlineTheme(g:colors_name)
         exec "AirlineTheme dark"
     endif
