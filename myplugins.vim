@@ -125,6 +125,7 @@ Plugin 'toupeira/vim-desertink',                 {'package': 'colors', 'type': '
 Plugin 'tpope/vim-vividchalk',                   {'package': 'colors', 'type': 'start'}
 Plugin 'tyrannicaltoucan/vim-deep-space',        {'package': 'colors', 'type': 'start'}
 Plugin 'vim-scripts/vibrantink',                 {'package': 'colors', 'type': 'start'}
+Plugin 'w0ng/vim-hybrid',                        {'package': 'colors', 'type': 'start'}
 Plugin 'wdhg/dragon-energy',                     {'package': 'colors', 'type': 'start'}
 Plugin 'xero/sourcerer.vim',                     {'package': 'colors', 'type': 'start'}
 

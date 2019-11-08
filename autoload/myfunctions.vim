@@ -68,6 +68,7 @@ function! myfunctions#ColorschemeHasAirlineTheme(colorscheme)
             \ || a:colorscheme =~ "Base2Tone"
             \ || a:colorscheme =~ "base16"
             \ || a:colorscheme == "minimalist"
+            \ || a:colorscheme == "hybrid"
       let s:airline_theme_exists = 1
    endif
    return s:airline_theme_exists
