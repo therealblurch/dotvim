@@ -28,6 +28,7 @@ function! myfunctions#CurrentColorscheme()
             \ || g:colors_name == "pencil"
             \ || g:colors_name == "quantum"
             \ || g:colors_name == "edge"
+            \ || g:colors_name == "solarized8"
       let s:color = g:colors_name . '/' . &background
    else
       let s:color = g:colors_name
@@ -67,6 +68,7 @@ function! myfunctions#ColorschemeHasAirlineTheme(colorscheme)
             \ || a:colorscheme == "night-owl"
             \ || a:colorscheme =~ "Base2Tone"
             \ || a:colorscheme =~ "base16"
+            \ || a:colorscheme =~ "solarized8"
       let s:airline_theme_exists = 1
    endif
    return s:airline_theme_exists
@@ -108,6 +110,7 @@ function! s:ColorschemeHasLightlineColorscheme(colorscheme)
             \ || a:colorscheme =~ "base16"
             \ || a:colorscheme =~ "Base2Tone"
             \ || a:colorscheme == "dark_purple"
+            \ || a:colorscheme =~ "solarized8"
       let s:lightline_theme_exists = 1
    endif
    return s:lightline_theme_exists

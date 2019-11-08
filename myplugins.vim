@@ -96,6 +96,7 @@ Plugin 'KKPMW/oldbook-vim',                      {'package': 'colors', 'type': '
 Plugin 'KKPMW/sacredforest-vim',                 {'package': 'colors', 'type': 'start'}
 Plugin 'kjssad/quantum.vim',                     {'package': 'colors', 'type': 'start'}
 Plugin 'levelone/tequila-sunrise.vim',           {'package': 'colors', 'type': 'start'}
+Plugin 'lifepillar/vim-solarized8',              {'package': 'colors', 'type': 'start'}
 Plugin 'liuchengxu/space-vim-theme',             {'package': 'colors', 'type': 'start'}
 Plugin 'logico-dev/typewriter',                  {'package': 'colors', 'type': 'start'}
 Plugin 'ludokng/vim-odyssey',                    {'package': 'colors', 'type': 'start'}

@@ -73,6 +73,7 @@ function! lightlinefunctions#LightlineColorscheme()
             \ || g:colors_name == "pencil"
             \ || g:colors_name == "quantum"
             \ || g:colors_name == "edge"
+            \ || g:colors_name =~ "solarized8"
       let s:color = g:colors_name . '/' . &background
    else
       let s:color = g:colors_name
@@ -142,6 +143,9 @@ function! lightlinefunctions#LightlineUpdate()
       elseif g:colors_name == "edge"
          let g:lightline.colorscheme = "edge"
          runtime autoload/lightline/colorscheme/edge.vim
+      elseif g:colors_name =~ "solarized8"
+         let g:lightline.colorscheme = "solarized"
+         runtime autoload/lightline/colorscheme/solarized.vim
       elseif g:colors_name == "vadelma"
          let g:lightline.colorscheme = "vadelma"
          runtime autoload/lightline/colorscheme/vadelma.vim

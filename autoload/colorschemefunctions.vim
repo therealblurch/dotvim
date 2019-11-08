@@ -86,6 +86,18 @@ function! colorschemefunctions#SchemeVariant(delta)
             let g:materialbox_contrast_dark = l:schemes[((a:delta+index(l:schemes, g:materialbox_contrast_dark)) % 3 + 3) % 3]
             exe 'colors materialbox'
         endif
+    elseif g:colors_name =~ "solarized8"
+        let l:schemes = map (['', '_low', '_flat', '_high'], '"solarized8".v:val')
+        if &background == "light"
+            if a:delta+index(l:schemes, g:colors_name) >= 4 || a:delta+index(l:schemes, g:colors_name) < 0
+               let &background = "dark"
+            endif
+        else
+            if a:delta+index(l:schemes, g:colors_name) >= 4 || a:delta+index(l:schemes, g:colors_name) < 0
+               let &background = "light"
+            endif
+        endif
+        exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 4 + 4) % 4]
     elseif g:colors_name =~ "onehalf"
         let l:schemes = map(['light', 'dark'], '"onehalf".v:val')
         exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) %2]
@@ -103,6 +115,8 @@ function! colorschemefunctions#AirlineTheme(colorscheme)
         exec "AirlineTheme seagull"
     elseif g:colors_name =~ "Base2Tone"
         exec "AirlineTheme " . g:colors_name
+    elseif g:colors_name =~ "solarized8"
+        exec "Airlinetheme solarized"
     elseif !myfunctions#ColorschemeHasAirlineTheme(g:colors_name)
         exec "AirlineTheme dark"
     endif
