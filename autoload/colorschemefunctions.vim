@@ -65,6 +65,7 @@ function! colorschemefunctions#SchemeVariant(delta)
                 \ || g:colors_name == "pencil"
                 \ || g:colors_name == "quantum"
                 \ || g:colors_name == "edge"
+                \ || g:colors_name == "PaperColor"
         let l:schemes = ['dark', 'light']
         let &background = l:schemes[((a:delta+index(l:schemes, &background)) %2 + 2) % 2]
     elseif g:colors_name == "gruvbox-material"

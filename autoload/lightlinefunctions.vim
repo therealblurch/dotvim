@@ -74,6 +74,7 @@ function! lightlinefunctions#LightlineColorscheme()
             \ || g:colors_name == "quantum"
             \ || g:colors_name == "edge"
             \ || g:colors_name =~ "solarized8"
+            \ || g:colors_name == "PaperColor"
       let s:color = g:colors_name . '/' . &background
    else
       let s:color = g:colors_name
@@ -153,6 +154,9 @@ function! lightlinefunctions#LightlineUpdate()
       elseif g:colors_name == "ayu"
          let g:lightline.colorscheme = "ayu"
          runtime autoload/lightline/colorscheme/ayu.vim
+      elseif g:colors_name =~ "PaperColor"
+         let g:lightline.colorscheme = "PaperColor"
+         runtime autoload/lightline/colorscheme/PaperColor.vim
       elseif g:colors_name == "darcula"
          let g:lightline.colorscheme = "darculaOriginal"
       elseif g:colors_name == 'typewriter'
