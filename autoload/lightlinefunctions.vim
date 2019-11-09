@@ -94,7 +94,7 @@ function! lightlinefunctions#LightlineUpdate()
    endif
    try
       for color in g:colorscheme_map
-         if has_key (color, 'name') && ((g:colors_name =~ color.name && has_key(color, 'comparison') && color.comparison == 'fuzzy') || (g:colors_name == color.name))
+         if has_key (color, 'name') && ((g:colors_name =~ color.name && has_key(color, 'comparison') && color.comparison == 'fuzzy') || g:colors_name == color.name)
             if has_key (color, 'lightlinetheme')
                if color.lightlinetheme == 'colorscheme'
                   let g:lightline.colorscheme = tr(g:colors_name, '-', '_')
