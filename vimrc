@@ -117,6 +117,48 @@ let g:gruvbox_material_background = 'hard'
 let g:materialbox_contrast_dark = 'hard'
 let g:materialbox_contrast_light = 'hard'
 
+let g:lightline_colorscheme_map = [
+         \ {'name': 'apprentice',       'lightlinetheme': 'colorscheme'},
+         \ {'name': 'atlantis',         'lightlinetheme': 'colorscheme'},
+         \ {'name': 'candid',           'lightlinetheme': 'colorscheme'},
+         \ {'name': 'darcula',          'lightlinetheme': 'colorscheme'},
+         \ {'name': 'dark_purple',      'lightlinetheme': 'colorscheme'},
+         \ {'name': 'desert-night',     'lightlinetheme': 'colorscheme'},
+         \ {'name': 'dracula',          'lightlinetheme': 'colorscheme'},
+         \ {'name': 'forest-night',     'lightlinetheme': 'colorscheme'},
+         \ {'name': 'iceberg',          'lightlinetheme': 'colorscheme'},
+         \ {'name': 'jellybeans',       'lightlinetheme': 'colorscheme'},
+         \ {'name': 'one',              'lightlinetheme': 'colorscheme', 'runtime': 'true'},
+         \ {'name': 'plastic',          'lightlinetheme': 'colorscheme'},
+         \ {'name': 'sacredforest',     'lightlinetheme': 'colorscheme'},
+         \ {'name': 'sialoquent',       'lightlinetheme': 'colorscheme'},
+         \ {'name': 'snazzy',           'lightlinetheme': 'colorscheme'},
+         \ {'name': 'srcery',           'lightlinetheme': 'colorscheme'},
+         \ {'name': 'tender',           'lightlinetheme': 'colorscheme'},
+         \ {'name': 'flattened',        'lightlinetheme': 'colorscheme'},
+         \ {'name': 'edge',             'lightlinetheme': 'colorscheme',  'runtime': 'true'},
+         \ {'name': 'solarized8',       'lightlinetheme': 'colorscheme',  'runtime': 'true'},
+         \ {'name': 'vadelma',          'lightlinetheme': 'colorscheme',  'runtime': 'true'},
+         \ {'name': 'ayu',              'lightlinetheme': 'colorscheme',  'runtime': 'true'},
+         \ {'name': 'PaperColor',       'lightlinetheme': 'colorscheme',  'runtime': 'true'},
+         \ {'name': 'gruvbox-material', 'lightlinetheme': 'colorscheme',  'runtime': 'true'},
+         \ {'name': 'base16',           'lightlinetheme': 'colorscheme'},
+         \ {'name': 'darcula',          'lightlinetheme': 'darculaOriginal'},
+         \ {'name': 'onehalf',          'lightlinetheme': 'onehalfdark'},
+         \ {'name': 'typewriter',       'lightlinetheme': 'typewriter_light'},
+         \ {'name': 'typewriter-night', 'lightlinetheme': 'typewriter_dark'},
+         \ {'name': 'stellarized',      'lightlinetheme': 'colorscheme_bg'},
+         \ {'name': 'snow',             'lightlinetheme': 'colorscheme_bg'},
+         \ {'name': 'cosmic_latte',     'lightlinetheme': 'colorscheme_bg'},
+         \ {'name': 'material',         'lightlinetheme': 'material_vim', 'runtime': 'true'},
+         \ {'name': 'pencil',           'lightlinetheme': 'pencil_alter'},
+         \ {'name': 'night-owl',        'lightlinetheme': 'nightowl'},
+         \ {'name': 'deep-space',       'lightlinetheme': 'deepspace'},
+         \ {'name': 'Base2Tone',        'lightlinetheme': 'dropbg',       'runtime': 'true'},
+         \ {'name': 'space_vim_theme',  'lightlinetheme': 'substitutebg', 'subpat': 'theme'}
+         \ ]
+
+
 nmap <leader>- :<c-u>call colorschemefunctions#SchemeVariant(-v:count1)<cr>
 nmap <leader>+ :<c-u>call colorschemefunctions#SchemeVariant(+v:count1)<cr>
 " }}}
