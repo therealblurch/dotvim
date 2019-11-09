@@ -99,7 +99,7 @@ let g:lightline_colorscheme_map = [
          \ {'name': 'forest-night',     'lightlinetheme': 'colorscheme'},
          \ {'name': 'iceberg',          'lightlinetheme': 'colorscheme'},
          \ {'name': 'jellybeans',       'lightlinetheme': 'colorscheme'},
-         \ {'name': 'one',              'lightlinetheme': 'colorscheme'},
+         \ {'name': 'one',              'lightlinetheme': 'colorscheme', 'runtime': 'true'},
          \ {'name': 'plastic',          'lightlinetheme': 'colorscheme'},
          \ {'name': 'sacredforest',     'lightlinetheme': 'colorscheme'},
          \ {'name': 'sialoquent',       'lightlinetheme': 'colorscheme'},
