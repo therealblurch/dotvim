@@ -99,7 +99,7 @@ function! lightlinefunctions#LightlineUpdate()
                if color.lightlinetheme == 'colorscheme'
                   let g:lightline.colorscheme = tr(g:colors_name, '-', '_')
                elseif color.lightlinetheme == 'colorscheme_bg'
-                  let g:lightline.colorscheme = join(tr(g:colors_name, '-', '_'), &background)
+                  let g:lightline.colorscheme = join([tr(g:colors_name, '-', '_'), &background], '_')
                elseif color.lightlinetheme == 'dropbg'
                   if match(g:colors_name, "Dark") != -1
                      let s:lightline_names = split (g:colors_name, "Dark")
