@@ -93,7 +93,7 @@ function! lightlinefunctions#LightlineUpdate()
       return
    endif
    try
-      for color in g:lightline_colorscheme_map
+      for color in g:colorscheme_map
          if has_key (color, 'name') && g:colors_name =~ color.name
             if has_key (color, 'lightlinetheme')
                if color.lightlinetheme == 'colorscheme'

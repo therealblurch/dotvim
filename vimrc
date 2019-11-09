@@ -117,7 +117,7 @@ let g:gruvbox_material_background = 'hard'
 let g:materialbox_contrast_dark = 'hard'
 let g:materialbox_contrast_light = 'hard'
 
-let g:lightline_colorscheme_map = [
+let g:colorscheme_map = [
          \ {'name': 'apprentice',       'lightlinetheme': 'colorscheme'},
          \ {'name': 'atlantis',         'lightlinetheme': 'colorscheme'},
          \ {'name': 'candid',           'lightlinetheme': 'colorscheme'},
