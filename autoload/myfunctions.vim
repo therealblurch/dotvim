@@ -6,36 +6,31 @@ function! myfunctions#GitgutterStatus()
 endfunction
 
 function! myfunctions#CurrentColorscheme()
-   if g:colors_name == "ayu"
-      let s:color = g:colors_name . '/' . g:ayucolor
-   elseif g:colors_name == "material"
-      let s:color = g:colors_name . '/' . g:material_theme_style
-   elseif g:colors_name == "gruvbox-material"
-      let s:color = g:colors_name . '/' . g:gruvbox_material_background
-   elseif g:colors_name == "materialbox"
-      if &background == "light"
-         let s:color = g:colors_name . '/' . g:materialbox_contrast_light
-      else
-         let s:color = g:colors_name . '/' . g:materialbox_contrast_dark
+   let l:color_name = g:colors_name
+   for color in g:colorscheme_map
+      if has_key (color, 'name') && ((g:colors_name =~ color.name && has_key(color, 'comparison') && color.comparison == 'fuzzy') || (g:colors_name == color.name))
+         if has_key(color, 'variant_type')
+            if color.variant_type == 'colorscheme'
+               let l:color_name = g:colors_name
+            elseif color.variant_type == 'background'
+               let l:color_name = g:colors_name . '/' . &background
+            elseif color.variant_type == 'ayu_color'
+               let l:color_name = g:colors_name . '/' . g:ayucolor
+            elseif color.variant_type == 'gruvbox_material_background'
+               let l:color_name = g:colors_name . '/' . g:gruvbox_material_background
+            elseif color.variant_type == 'material_theme_style'
+               let l:color_name = g:colors_name . '/' . g:material_theme_style
+            elseif color.variant_type == 'materialbox_contrast'
+               if &background == "light"
+                  let l:color_name = g:colors_name . '/' . g:materialbox_contrast_light
+               else
+                  let l:color_name = g:colors_name . '/' . g:materialbox_contrast_dark
+               endif
+            endif
+         endif
       endif
-   elseif g:colors_name == "snow"
-            \ || g:colors_name == "stellarized"
-            \ || g:colors_name == "cosmic_latte"
-            \ || g:colors_name == "vadelma"
-            \ || g:colors_name == "one"
-            \ || g:colors_name == "space_vim_theme"
-            \ || g:colors_name == "pencil"
-            \ || g:colors_name == "quantum"
-            \ || g:colors_name == "edge"
-            \ || g:colors_name == "hybrid_material"
-            \ || g:colors_name == "hybrid_reverse"
-            \ || g:colors_name == "solarized8"
-            \ || g:colors_name == "PaperColor"
-      let s:color = g:colors_name . '/' . &background
-   else
-      let s:color = g:colors_name
-   endif
-   return s:color
+   endfor
+   return l:color_name
 endfunction
 
 function! myfunctions#ColorschemeHasAirlineTheme(colorscheme)
