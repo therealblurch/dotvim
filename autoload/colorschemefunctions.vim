@@ -110,11 +110,14 @@ function! colorschemefunctions#SchemeVariant(delta)
 endfunction
 
 function! colorschemefunctions#AirlineTheme(colorscheme)
-    if a:colorscheme == "cosmic_latte"
-                \ || a:colorscheme == "snow"
-                \ || a:colorscheme == "stellarized"
-        exec "AirlineTheme " . a:colorscheme . "_" . &background
-    elseif !myfunctions#ColorschemeHasAirlineTheme(g:colors_name)
+    for color in g:colorscheme_map
+        if has_key (color, 'name') && a:colorscheme =~ color.name
+            if has_key(color, 'airlinetheme') && color.airlinetheme == 'colorscheme_bg'
+                exec "AirlineTheme " . a:colorscheme . "_" . &background
+            endif
+        endif
+    endfor
+    if !myfunctions#ColorschemeHasAirlineTheme(g:colors_name)
         exec "AirlineTheme dark"
     endif
 endfunction

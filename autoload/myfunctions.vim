@@ -40,89 +40,25 @@ endfunction
 
 function! myfunctions#ColorschemeHasAirlineTheme(colorscheme)
    let s:airline_theme_exists = 0
-   if a:colorscheme == "nord"
-            \ || a:colorscheme == "ayu"
-            \ || a:colorscheme == "iceberg"
-            \ || a:colorscheme == "afterglow"
-            \ || a:colorscheme == "dracula"
-            \ || a:colorscheme == "tender"
-            \ || a:colorscheme =~ "typewriter"
-            \ || a:colorscheme == "materialbox"
-            \ || a:colorscheme == "jellybeans"
-            \ || a:colorscheme == "cosmic_latte"
-            \ || a:colorscheme == "seagull"
-            \ || a:colorscheme == "greygull"
-            \ || a:colorscheme == "petrel"
-            \ || a:colorscheme == "stormpetrel"
-            \ || a:colorscheme == "snow"
-            \ || a:colorscheme == "stellarized"
-            \ || a:colorscheme =~ "one"
-            \ || a:colorscheme == "pencil"
-            \ || a:colorscheme == "apprentice"
-            \ || a:colorscheme == "gruvbox-materiel"
-            \ || a:colorscheme == "srcery"
-            \ || a:colorscheme == "desertink"
-            \ || a:colorscheme == "deep-space"
-            \ || a:colorscheme == "forest-night"
-            \ || a:colorscheme == "spring-night"
-            \ || a:colorscheme == "molokai"
-            \ || a:colorscheme == "monokai"
-            \ || a:colorscheme == "night-owl"
-            \ || a:colorscheme =~ "Base2Tone"
-            \ || a:colorscheme =~ "base16"
-            \ || a:colorscheme == "minimalist"
-            \ || a:colorscheme =~ "hybrid"
-            \ || a:colorscheme =~ "solarized8"
-            \ || a:colorscheme =~ "flattened"
-            \ || a:colorscheme == "PaperColor"
-            \ || a:colorscheme == "zenburn"
-            \ || a:colorscheme == "github"
-      let s:airline_theme_exists = 1
-   endif
+   for color in g:colorscheme_map
+      if has_key (color, 'name') && g:colors_name =~ color.name
+         if has_key(color, 'airlinetheme')
+            let s:airline_theme_exists = 1
+         endif
+      endif
+   endfor
    return s:airline_theme_exists
 endfunction
 
 function! s:ColorschemeHasLightlineColorscheme(colorscheme)
    let s:lightline_theme_exists = 0
-   if a:colorscheme == "apprentice"
-            \ || a:colorscheme == "ayu"
-            \ || a:colorscheme == "cosmic_latter"
-            \ || a:colorscheme == "darcula"
-            \ || a:colorscheme == "dracula"
-            \ || a:colorscheme == "deep-space"
-            \ || a:colorscheme == "gruvbox-material"
-            \ || a:colorscheme == "iceberg"
-            \ || a:colorscheme == "jellybeans"
-            \ || a:colorscheme == "material"
-            \ || a:colorscheme == "night-owl"
-            \ || a:colorscheme == "nord"
-            \ || a:colorscheme =~ "one"
-            \ || a:colorscheme == "pencil"
-            \ || a:colorscheme == "snazzy"
-            \ || a:colorscheme == "snow"
-            \ || a:colorscheme == "space_vim_theme"
-            \ || a:colorscheme == "srcery"
-            \ || a:colorscheme == "stellarized"
-            \ || a:colorscheme == "tender"
-            \ || a:colorscheme =~ "typewriter"
-            \ || a:colorscheme == "vadelma"
-            \ || a:colorscheme == "candid"
-            \ || a:colorscheme == "plastic"
-            \ || a:colorscheme == "sacredforest"
-            \ || a:colorscheme == "forest-night"
-            \ || a:colorscheme == "quantum"
-            \ || a:colorscheme == "edge"
-            \ || a:colorscheme == "atlantis"
-            \ || a:colorscheme == "sialoquent"
-            \ || a:colorscheme == "desert-night"
-            \ || a:colorscheme =~ "base16"
-            \ || a:colorscheme =~ "Base2Tone"
-            \ || a:colorscheme == "dark_purple"
-            \ || a:colorscheme =~ "solarized8"
-            \ || a:colorscheme =~ "flattened"
-            \ || a:colorscheme == "PaperColor"
-      let s:lightline_theme_exists = 1
-   endif
+   for color in g:colorscheme_map
+      if has_key (color, 'name') && g:colors_name =~ color.name
+         if has_key(color, 'lightlinetheme')
+            let s:lightline_theme_exists = 1
+         endif
+      endif
+   endfor
    return s:lightline_theme_exists
 endfunction
 
