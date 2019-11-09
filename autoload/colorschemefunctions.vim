@@ -1,6 +1,6 @@
 function! colorschemefunctions#SchemeVariant(delta)
     for color in g:colorscheme_map
-        if has_key(color, 'name') && g:colors_name =~ color.name
+        if has_key (color, 'name') && ((g:colors_name =~ color.name && has_key(color, 'comparison') && color.comparison == 'fuzzy') || (g:colors_name == color.name))
             if has_key(color, 'variant_type')
                 if color.variant_type == "background"
                     let l:schemes = ['dark', 'light']
@@ -113,7 +113,7 @@ endfunction
 
 function! colorschemefunctions#AirlineTheme(colorscheme)
     for color in g:colorscheme_map
-        if has_key (color, 'name') && a:colorscheme =~ color.name
+        if has_key (color, 'name') && ((g:colors_name =~ color.name && has_key(color, 'comparison') && color.comparison == 'fuzzy') || (g:colors_name == color.name)
             if has_key(color, 'airlinetheme') && color.airlinetheme == 'colorscheme_bg'
                 exec "AirlineTheme " . a:colorscheme . "_" . &background
             endif

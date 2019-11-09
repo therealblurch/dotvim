@@ -41,7 +41,7 @@ endfunction
 function! myfunctions#ColorschemeHasAirlineTheme(colorscheme)
    let s:airline_theme_exists = 0
    for color in g:colorscheme_map
-      if has_key (color, 'name') && g:colors_name =~ color.name
+      if has_key (color, 'name') && ((g:colors_name =~ color.name && has_key(color, 'comparison') && color.comparison == 'fuzzy') || (g:colors_name == color.name))
          if has_key(color, 'airlinetheme')
             let s:airline_theme_exists = 1
          endif
@@ -53,7 +53,7 @@ endfunction
 function! s:ColorschemeHasLightlineColorscheme(colorscheme)
    let s:lightline_theme_exists = 0
    for color in g:colorscheme_map
-      if has_key (color, 'name') && g:colors_name =~ color.name
+      if has_key (color, 'name') && ((g:colors_name =~ color.name && has_key(color, 'comparison') && color.comparison == 'fuzzy') || (g:colors_name == color.name))
          if has_key(color, 'lightlinetheme')
             let s:lightline_theme_exists = 1
          endif
