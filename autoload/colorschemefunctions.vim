@@ -8,60 +8,29 @@ function! colorschemefunctions#SchemeVariant(delta)
                 elseif color.variant_type == "colorscheme"
                     let l:num_variants = len(color.variants)
                     let l:variants = deepcopy(color.variants)
-                    let l:schemes = map(l:variants, 'color.variant_base.v:val')
+                    if color.variant_base == "drop"
+                        for variant in color.variants
+                            if match(g:colors_name, variant) != -1
+                                let l:variant_list = split(g:colors_name, variant)
+                                let l:variant_base = l:variant_list[0]
+                            endif
+                        endfor
+                    else
+                        let l:variant_base = color.variant_base
+                    endif
+                    let l:schemes = map(l:variants, 'l:variant_base.v:val')
                     exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % l:num_variants + l:num_variants) % l:num_variants]
+                elseif color.variant_type == "ayu_color"
+                    let l:num_variants = len(color.variants)
+                    let l:schemes = color.variants
+                    let g:ayucolor = l:schemes[((a:delta+index(l:schemes, g:ayucolor)) % l:num_variants + l:num_variants) % l:num_variants]
+                    let ayucolor = g:ayucolor
+                    exe 'colors ayu'
                 endif
             endif
         endif
     endfor
 
-    " if g:colors_name =~ "typewriter"
-    "     let l:schemes = map(['', '-night'], '"typewriter".v:val') exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) % 2]
-    " elseif g:colors_name =~ "corvine"
-    "     let l:schemes = map(['', '_light'], '"corvine".v:val')
-    "     exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) % 2]
-    " elseif g:colors_name =~ "Base2Tone_Cave"
-    "     let l:schemes = map(['Dark', 'Light'], '"Base2Tone_Cave".v:val')
-    "     exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) % 2]
-    " elseif g:colors_name =~ "Base2Tone_Desert"
-    "     let l:schemes = map(['Dark', 'Light'], '"Base2Tone_Desert".v:val')
-    "     exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) % 2]
-    " elseif g:colors_name =~ "Base2Tone_Drawbridge"
-    "     let l:schemes = map(['Dark', 'Light'], '"Base2Tone_Drawbridge".v:val')
-    "     exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) % 2]
-    " elseif g:colors_name =~ "Base2Tone_Earth"
-    "     let l:schemes = map(['Dark', 'Light'], '"Base2Tone_Earth".v:val')
-    "     exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) % 2]
-    " elseif g:colors_name =~ "Base2Tone_Evening"
-    "     let l:schemes = map(['Dark', 'Light'], '"Base2Tone_Evening".v:val')
-    "     exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) % 2]
-    " elseif g:colors_name =~ "Base2Tone_Forest"
-    "     let l:schemes = map(['Dark', 'Light'], '"Base2Tone_Forest".v:val')
-    "     exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) % 2]
-    " elseif g:colors_name =~ "Base2Tone_Heath"
-    "     let l:schemes = map(['Dark', 'Light'], '"Base2Tone_Heath".v:val')
-    "     exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) % 2]
-    " elseif g:colors_name =~ "Base2Tone_Lake"
-    "     let l:schemes = map(['Dark', 'Light'], '"Base2Tone_Lake".v:val')
-    "     exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) % 2]
-    " elseif g:colors_name =~ "Base2Tone_Meadow"
-    "     let l:schemes = map(['Dark', 'Light'], '"Base2Tone_Meadow".v:val')
-    "     exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) % 2]
-    " elseif g:colors_name =~ "Base2Tone_Morning"
-    "     let l:schemes = map(['Dark', 'Light'], '"Base2Tone_Morning".v:val')
-    "     exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) % 2]
-    " elseif g:colors_name =~ "Base2Tone_Pool"
-    "     let l:schemes = map(['Dark', 'Light'], '"Base2Tone_Pool".v:val')
-    "     exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) % 2]
-    " elseif g:colors_name =~ "Base2Tone_Sea"
-    "     let l:schemes = map(['Dark', 'Light'], '"Base2Tone_Sea".v:val')
-    "     exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) % 2]
-    " elseif g:colors_name =~ "Base2Tone_Space"
-    "     let l:schemes = map(['Dark', 'Light'], '"Base2Tone_Space".v:val')
-    "     exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) % 2]
-    " elseif g:colors_name =~ "flattened"
-    "     let l:schemes = map(['_dark', '_light'], '"flattened".v:val')
-    "     exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 2 + 2) % 2]
     " elseif g:colors_name == "ayu"
     "     let l:schemes = ['light', 'dark', 'mirage']
     "     let g:ayucolor = l:schemes[((a:delta+index(l:schemes, g:ayucolor)) % 3 + 3) % 3]
