@@ -3,8 +3,7 @@ function! colorschemefunctions#SchemeVariant(delta)
         if has_key (color, 'name') && ((g:colors_name =~ color.name && has_key(color, 'comparison') && color.comparison == 'fuzzy') || (g:colors_name == color.name))
             if has_key(color, 'variant_type')
                 if color.variant_type == "background"
-                    let l:schemes = ['dark', 'light']
-                    exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % l:num_variants + l:num_variants) % l:num_variants]
+                    let &background = (&background == "dark") ? "light" : "dark"
                 elseif color.variant_type == "colorscheme"
                     let l:num_variants = len(color.variants)
                     let l:variants = deepcopy(color.variants)
