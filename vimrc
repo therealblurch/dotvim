@@ -117,6 +117,52 @@ let g:gruvbox_material_background = 'hard'
 let g:materialbox_contrast_dark = 'hard'
 let g:materialbox_contrast_light = 'hard'
 
+"g:colorscheme_map is a list of dictionaries that specify options for
+"colorschemes.  The dictionary keys are as follows:
+" name : the name of the colorscheme
+" comparison : If this is set to 'fuzzy' don't require an exact name match
+" lightlinetheme : Specifies lightline theme to load:
+"   'colorscheme': Theme name is the same as the colorscheme name
+"   'colorscheme_bg' : Theme name is the same as the colorscheme name _<bg>
+"      appended.
+"   'dropbg' : The color scheme has Dark/Light variants that need to be
+"      dropped to create the lightline theme name.
+"   'substitutebg' : Part of the colorscheme name has to be substituted with
+"      the bg value to create the lightline theme name.
+"   The script assumes that any other value is the actual name of the
+"      lightline theme to be loaded.  If no lightline theme is specified then
+"      the powerline theme will be selected.
+" runtime : A value of 'true' will cause the lightline theme to be sourced
+"      again.  The theme values need to be recalculated because of a change in
+"      the colorscheme variant.
+" airlinetheme : Specifies the name of the airline theme.
+"      colorscheme : the airline theme name is the sames as the colorscheme
+"      name.
+"      The script assumes that any other value is the name of the theme to be
+"      loaded.  If no value is specified then the dark airline theme is
+"      selected.
+" variant_type: Specifies how to switch between different colorscheme variants
+"      background: Toggle light/dark backgrounds
+"      colorscheme: Use variant_base to choose different versions of the
+"         colorscheme
+"      colorscheme_bg: Use variant base to choose different versions of the
+"         colorscheme.  The background can also be toggled to select a light
+"         and dark version of each variant.
+"      ayu_color: ayu colorscheme.  Change the value of ayucolor variable.
+"      material_theme_style: material colorscheme.  Change the value of
+"         g:material_theme_style.
+"      gruvbox_material_background: gruvbox_material colorscheme.  Change the
+"         value of g:gruvbox_material_background.  The background will also
+"         toggle to select a light and dark version of each variant.
+"      materialbox_contrast: materialbox colorscheme.  Change the value of
+"          g:materialbox_contrast_dark or g:materialbox_contrast_light based on
+"          the current bg setting.  The background will also toggle to select
+"          a light and dark version of each variant.
+" variants : a list of possible variants
+" variant_base: The common part of the name for all colorscheme variants
+"     drop: Indicates that the variant must be removed from the colorscheme
+"     before the new colorscheme is created.
+"
 let g:colorscheme_map = [
          \ {'name': 'Base2Tone',        'comparison': 'fuzzy',                'lightlinetheme': 'dropbg',             'runtime': 'true',                      'airlinetheme': 'colorscheme',                 'variant_type': 'colorscheme',    'variant_base': 'drop',       'variants': ['Light', 'Dark']},
          \ {'name': 'PaperColor',       'lightlinetheme': 'colorscheme',      'runtime': 'true',                      'airlinetheme': 'colorscheme',          'variant_type': 'background'},
