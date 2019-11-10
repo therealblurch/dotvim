@@ -62,6 +62,7 @@ function! colorschemefunctions#SchemeVariant(delta)
                     endif
                 endif
             endif
+            break
         endif
     endfor
 endfunction
@@ -72,6 +73,7 @@ function! colorschemefunctions#AirlineTheme(colorscheme)
             if has_key(color, 'airlinetheme') && color.airlinetheme == 'colorscheme_bg'
                 exec "AirlineTheme " . a:colorscheme . "_" . &background
             endif
+            break
         endif
     endfor
     if !myfunctions#ColorschemeHasAirlineTheme(g:colors_name)

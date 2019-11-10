@@ -29,6 +29,7 @@ function! myfunctions#CurrentColorscheme()
                endif
             endif
          endif
+         break
       endif
    endfor
    return l:color_name
@@ -41,6 +42,7 @@ function! myfunctions#ColorschemeHasAirlineTheme(colorscheme)
          if has_key(color, 'airlinetheme')
             let s:airline_theme_exists = 1
          endif
+         break
       endif
    endfor
    return s:airline_theme_exists
@@ -53,6 +55,7 @@ function! s:ColorschemeHasLightlineColorscheme(colorscheme)
          if has_key(color, 'lightlinetheme')
             let s:lightline_theme_exists = 1
          endif
+         break
       endif
    endfor
    return s:lightline_theme_exists

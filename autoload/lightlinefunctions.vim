@@ -119,6 +119,7 @@ function! lightlinefunctions#LightlineUpdate()
             if has_key(color, 'runtime') && color.runtime == 'true'
                exe 'runtime autoload/lightline/colorscheme/' . g:lightline.colorscheme . '.vim'
             endif
+            break
          endif
       endfor
       call lightline#init()
