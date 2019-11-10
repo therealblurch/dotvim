@@ -218,7 +218,7 @@ let g:airline_theme_map = {
             \ 'Base2Tone_SeaDark'        : 'Base2Tone_SeaDark',
             \ 'Base2Tone_SeaLight'       : 'Base2Tone_SeaLight',
             \ 'Base2Tone_SpaceDark'      : 'Base2Tone_SpaceDark',
-            \ 'Base2Tone_SpaceLight'     : 'Base2Tone_SpaceLight'
+            \ 'Base2Tone_SpaceLight'     : 'Base2Tone_SpaceLight',
             \ 'base16_3024'              : 'base16_3024',
             \ 'base16_adwaita'           : 'base16_adwaita',
             \ 'base16_apathy'            : 'base16_apathy',
