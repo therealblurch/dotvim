@@ -19,11 +19,11 @@ function! lightlinefunctions#LightlineFugitive()
 endfunction
 
 function! lightlinefunctions#LightlineGitgutter()
-   let s:summary = [0, 0, 0]
+   let l:summary = [0, 0, 0]
    if exists('b:gitgutter.summary')
-      let s:summary = b:gitgutter.summary
+      let l:summary = b:gitgutter.summary
    endif
-   return max(s:summary) > 0 ? ' +'.s:summary[0].' ~'.s:summary[1].' -'.s:summary[2].' ' : ''
+   return max(l:summary) > 0 ? ' +'.l:summary[0].' ~'.l:summary[1].' -'.l:summary[2].' ' : ''
 endfunction
 
 function! lightlinefunctions#LightlineWinform()
@@ -52,8 +52,8 @@ function! lightlinefunctions#LightlineFileformat()
 endfunction
 
 function! lightlinefunctions#LightlineColorscheme()
-   let s:color = myfunctions#CurrentColorscheme()
-   return winwidth(0) > 80 ? s:color : ''
+   let l:color = myfunctions#CurrentColorscheme()
+   return winwidth(0) > 80 ? l:color : ''
 endfunction
 
 function! lightlinefunctions#LightlineFiletype()
@@ -93,38 +93,39 @@ function! lightlinefunctions#LightlineUpdate()
       return
    endif
    try
+      let l:new_lightline_colorscheme = ''
       for color in g:colorscheme_map
          if has_key (color, 'name') && ((g:colors_name =~ color.name && has_key(color, 'comparison') && color.comparison == 'fuzzy') || g:colors_name == color.name)
             if has_key (color, 'lightlinetheme')
                if color.lightlinetheme == 'colorscheme'
-                  let g:lightline.colorscheme = tr(g:colors_name, '-', '_')
+                  let l:new_lightline_colorscheme = tr(g:colors_name, '-', '_')
                elseif color.lightlinetheme == 'colorscheme_bg'
-                  let g:lightline.colorscheme = join([tr(g:colors_name, '-', '_'), &background], '_')
+                  let l:new_lightline_colorscheme = join([tr(g:colors_name, '-', '_'), &background], '_')
                elseif color.lightlinetheme == 'dropbg'
                   if match(g:colors_name, "Dark") != -1
-                     let s:lightline_names = split (g:colors_name, "Dark")
-                     let g:lightline.colorscheme = s:lightline_names[0]
+                     let l:lightline_names = split (g:colors_name, "Dark")
+                     let l:new_lightline_colorscheme = l:lightline_names[0]
                   elseif match(g:colors_name, "Light") != -1
-                     let s:lightline_names = split (g:colors_name, "Light")
-                     let g:lightline.colorscheme = s:lightline_names[0]
+                     let l:lightline_names = split (g:colors_name, "Light")
+                     let l:new_lightline_colorscheme = l:lightline_names[0]
                   endif
                elseif color.lightlinetheme == 'substitutebg'
-                  let g:lightline.colorscheme = substitute (g:colors_name, color.subpat, &background, "")
+                  let l:new_lightline_colorscheme = substitute (g:colors_name, color.subpat, &background, "")
                else
-                  let g:lightline.colorscheme = color.lightlinetheme
+                  let l:new_lightline_colorscheme = color.lightlinetheme
                endif
             else
-               let g:lightline.colorscheme = 'powerline'
+               let l:new_lightline_colorscheme = 'powerline'
             endif
             if has_key(color, 'runtime') && color.runtime == 'true'
-               exe 'runtime autoload/lightline/colorscheme/' . g:lightline.colorscheme . '.vim'
+               exe 'runtime autoload/lightline/colorscheme/' . l:new_lightline_colorscheme . '.vim'
             endif
             break
          endif
       endfor
-      call lightline#init()
-      call lightline#colorscheme()
-      call lightline#update()
+      if l:new_lightline_colorscheme != ''
+         call lightlinefunctions#SetLightlineColorscheme(l:new_lightline_colorscheme)
+      endif
    endtry
 endfunction
 

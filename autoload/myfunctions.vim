@@ -1,9 +1,9 @@
 function! myfunctions#GitgutterStatus()
-   let s:summary = [0, 0, 0]
+   let l:summary = [0, 0, 0]
    if exists('b:gitgutter.summary')
-      let s:summary = b:gitgutter.summary
+      let l:summary = b:gitgutter.summary
    endif
-   return max(s:summary) > 0 ? ' +'.s:summary[0].' ~'.s:summary[1].' -'.s:summary[2].' ' : ''
+   return max(l:summary) > 0 ? ' +'.l:summary[0].' ~'.l:summary[1].' -'.l:summary[2].' ' : ''
 endfunction
 
 function! myfunctions#CurrentColorscheme()
@@ -36,46 +36,46 @@ function! myfunctions#CurrentColorscheme()
 endfunction
 
 function! myfunctions#ColorschemeHasAirlineTheme(colorscheme)
-   let s:airline_theme_exists = 0
+   let l:airline_theme_exists = 0
    for color in g:colorscheme_map
       if has_key (color, 'name') && ((g:colors_name =~ color.name && has_key(color, 'comparison') && color.comparison == 'fuzzy') || g:colors_name == color.name)
          if has_key(color, 'airlinetheme')
-            let s:airline_theme_exists = 1
+            let l:airline_theme_exists = 1
          endif
          break
       endif
    endfor
-   return s:airline_theme_exists
+   return l:airline_theme_exists
 endfunction
 
 function! s:ColorschemeHasLightlineColorscheme(colorscheme)
-   let s:lightline_theme_exists = 0
+   let l:lightline_theme_exists = 0
    for color in g:colorscheme_map
       if has_key (color, 'name') && ((g:colors_name =~ color.name && has_key(color, 'comparison') && color.comparison == 'fuzzy') || g:colors_name == color.name)
          if has_key(color, 'lightlinetheme')
-            let s:lightline_theme_exists = 1
+            let l:lightline_theme_exists = 1
          endif
          break
       endif
    endfor
-   return s:lightline_theme_exists
+   return l:lightline_theme_exists
 endfunction
 
 function! myfunctions#WhichStatus(colorscheme)
    if (!myfunctions#ColorschemeHasAirlineTheme(a:colorscheme) && !s:ColorschemeHasLightlineColorscheme(a:colorscheme)) || exists('g:buftabline_show')
-      let s:user_status = "none"
+      let l:user_status = "none"
    elseif exists('g:loaded_airline')
-      let s:user_status = "airline"
+      let l:user_status = "airline"
    elseif exists('g:loaded_lightline')
-      let s:user_status = "lightline"
+      let l:user_status = "lightline"
    elseif g:prefer_airline && myfunctions#ColorschemeHasAirlineTheme(a:colorscheme)
-      let s:user_status = "airline"
+      let l:user_status = "airline"
    elseif !g:prefer_airline && s:ColorschemeHasLightlineColorscheme(a:colorscheme)
-      let s:user_status = "lightline"
+      let l:user_status = "lightline"
    elseif myfunctions#ColorschemeHasAirlineTheme(a:colorscheme)
-      let s:user_status = "airline"
+      let l:user_status = "airline"
    elseif s:ColorschemeHasLightlineColorscheme(a:colorscheme)
-      let s:user_status = "lightline"
+      let l:user_status = "lightline"
    endif
-   return s:user_status
+   return l:user_status
 endfunction
