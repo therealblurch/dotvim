@@ -93,7 +93,7 @@ function! lightlinefunctions#LightlineUpdate()
       return
    endif
    try
-      let l:new_lightline_colorscheme = ''
+      let l:new_lightline_colorscheme = 'powerline'
       for color in g:colorscheme_map
          if has_key (color, 'name') && ((g:colors_name =~ color.name && has_key(color, 'comparison') && color.comparison == 'fuzzy') || g:colors_name == color.name)
             if has_key (color, 'lightlinetheme')
@@ -114,8 +114,6 @@ function! lightlinefunctions#LightlineUpdate()
                else
                   let l:new_lightline_colorscheme = color.lightlinetheme
                endif
-            else
-               let l:new_lightline_colorscheme = 'powerline'
             endif
             if has_key(color, 'runtime') && color.runtime == 'true'
                exe 'runtime autoload/lightline/colorscheme/' . l:new_lightline_colorscheme . '.vim'
@@ -123,9 +121,7 @@ function! lightlinefunctions#LightlineUpdate()
             break
          endif
       endfor
-      if l:new_lightline_colorscheme != ''
-         call lightlinefunctions#SetLightlineColorscheme(l:new_lightline_colorscheme)
-      endif
+      call lightlinefunctions#SetLightlineColorscheme(l:new_lightline_colorscheme)
    endtry
 endfunction
 
