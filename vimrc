@@ -172,7 +172,7 @@ let g:colorscheme_map = [
          \ {'name': 'ayu',              'lightlinetheme': 'colorscheme',      'runtime': 'true',                      'airlinetheme': 'colorscheme',          'variant_type': 'ayu_color',                   'variants': ['light', 'dark', 'mirage']},
          \ {'name': 'base16',           'comparison': 'fuzzy',                'lightlinetheme': 'colorscheme',        'airlinetheme': 'colorscheme'},
          \ {'name': 'candid',           'lightlinetheme': 'colorscheme'},
-         \ {'name': 'corvine',          'comparison': 'fussy',                'variant_type': 'colorscheme',          'variant_base': 'corvine',              'variants': ['', '_light']},
+         \ {'name': 'corvine',          'comparison': 'fuzzy',                'variant_type': 'colorscheme',          'variant_base': 'corvine',              'variants': ['', '_light']},
          \ {'name': 'cosmic_latte',     'lightlinetheme': 'colorscheme_bg',   'airlinetheme': 'colorscheme_bg',       'variant_type': 'background'},
          \ {'name': 'darcula',          'lightlinetheme': 'darculaOriginal'},
          \ {'name': 'dark_purple',      'lightlinetheme': 'colorscheme'},
