@@ -139,6 +139,7 @@ Plugin 'tyrannicaltoucan/vim-deep-space',        {'package': 'colors', 'type': '
 Plugin 'vim-scripts/vibrantink',                 {'package': 'colors', 'type': 'start'}
 Plugin 'w0ng/vim-hybrid',                        {'package': 'colors', 'type': 'start'}
 Plugin 'wdhg/dragon-energy',                     {'package': 'colors', 'type': 'start'}
+Plugin 'wmvanvliet/vim-blackboard',              {'package': 'colors', 'type': 'start'}
 Plugin 'xero/sourcerer.vim',                     {'package': 'colors', 'type': 'start'}
 
 " This repositories contain a vim directory which is the only directory that I want
