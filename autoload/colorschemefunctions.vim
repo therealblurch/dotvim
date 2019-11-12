@@ -92,8 +92,12 @@ function! colorschemefunctions#AirlineTheme(colorscheme)
     else
         for color in g:colorscheme_map
             if has_key (color, 'name') && ((g:colors_name =~ color.name && has_key(color, 'comparison') && color.comparison == 'fuzzy') || g:colors_name == color.name)
-                if has_key(color, 'airlinetheme') && color.airlinetheme == 'colorscheme_bg'
-                    exec "AirlineTheme " . a:colorscheme . "_" . &background
+                if has_key(color, 'airlinetheme')
+                    if (color.airlinetheme == 'colorscheme_bg')
+                        exec "AirlineTheme " . a:colorscheme . "_" . &background
+                    elseif (color.airlinetheme != 'colorscheme')
+                        exec "AirlineTheme " . color.airlinetheme
+                    endif
                 endif
                 break
             endif
