@@ -81,6 +81,7 @@ Plugin 'atelierbram/Base2Tone-vim',              {'package': 'colors', 'type': '
 Plugin 'axvr/photon.vim',                        {'package': 'colors', 'type': 'start'}
 Plugin 'ayu-theme/ayu-vim',                      {'package': 'colors', 'type': 'start'}
 Plugin 'chase/focuspoint-vim',                   {'package': 'colors', 'type': 'start'}
+Plugin 'chrisduerr/vim-undead',                  {'package': 'colors', 'type': 'start'}
 Plugin 'chriskempson/base16-vim',                {'package': 'colors', 'type': 'start'}
 Plugin 'cocopon/iceberg.vim',                    {'package': 'colors', 'type': 'start'}
 Plugin 'connorholyday/vim-snazzy',               {'package': 'colors', 'type': 'start'}
