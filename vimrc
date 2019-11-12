@@ -233,8 +233,8 @@ let g:colorscheme_map = [
          \ ]
 
 
-nmap <leader>- :<c-u>call colorschemefunctions#SchemeVariant(-v:count1)<cr>
-nmap <leader>+ :<c-u>call colorschemefunctions#SchemeVariant(+v:count1)<cr>
+nmap <silent> <leader>- :<c-u>call colorschemefunctions#SchemeVariant(-v:count1)<cr>
+nmap <silent> <leader>+ :<c-u>call colorschemefunctions#SchemeVariant(+v:count1)<cr>
 " }}}
 
 " Airline {{{
