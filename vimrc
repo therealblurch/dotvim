@@ -192,6 +192,7 @@ let g:colorscheme_map = [
          \ {'name': 'hybrid_reverse',   'airlinetheme': 'colorscheme',        'variant_type': 'background'},
          \ {'name': 'iceberg',          'lightlinetheme': 'colorscheme',      'airlinetheme': 'colorscheme'},
          \ {'name': 'jellybeans',       'lightlinetheme': 'colorscheme',      'airlinetheme': 'colorscheme'},
+         \ {'name': 'kuroi',            'variant_type': 'background'},
          \ {'name': 'material',         'lightlinetheme': 'material_vim',     'runtime': 'true',                      'variant_type': 'material_theme_style', 'variants': ['default', 'palenight', 'ocean', 'lighter', 'darker']},
          \ {'name': 'materialbox',      'airlinetheme': 'colorscheme',        'variant_type': 'materialbox_contrast', 'variants': ['soft', 'medium', 'hard']},
          \ {'name': 'minimalist',       'airlinetheme': 'colorscheme'},
