@@ -182,6 +182,7 @@ let g:colorscheme_map = [
          \ {'name': 'dracula',          'lightlinetheme': 'colorscheme',      'airlinetheme': 'colorscheme'},
          \ {'name': 'edge',             'lightlinetheme': 'colorscheme',      'runtime': 'true',                      'variant_type': 'background'},
          \ {'name': 'flattened',        'comparison': 'fuzzy',                'lightlinetheme': 'colorscheme',        'airlinetheme': 'colorscheme',          'variant_type': 'colorscheme',                 'variant_base': 'drop',           'variants': ['_light', '_dark']},
+         \ {'name': 'focuspoint',       'airlinetheme': 'colorscheme'},
          \ {'name': 'forest-night',     'lightlinetheme': 'colorscheme',      'airlinetheme': 'colorscheme'},
          \ {'name': 'garbage-oracle',   'lightlinetheme': 'GarbageOracle',    'runtime': 'true',                      'variant_type': 'background'},
          \ {'name': 'github',           'airlinetheme': 'colorscheme'},

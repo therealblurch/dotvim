@@ -81,6 +81,7 @@ Plugin 'arzg/vim-substrata',                     {'package': 'colors', 'type': '
 Plugin 'atelierbram/Base2Tone-vim',              {'package': 'colors', 'type': 'start'}
 Plugin 'axvr/photon.vim',                        {'package': 'colors', 'type': 'start'}
 Plugin 'ayu-theme/ayu-vim',                      {'package': 'colors', 'type': 'start'}
+Plugin 'chase/vim-airline-focuspoint',           {'package': 'colors', 'type': 'start'}
 Plugin 'chase/focuspoint-vim',                   {'package': 'colors', 'type': 'start'}
 Plugin 'chrisduerr/vim-undead',                  {'package': 'colors', 'type': 'start'}
 Plugin 'chriskempson/base16-vim',                {'package': 'colors', 'type': 'start'}
