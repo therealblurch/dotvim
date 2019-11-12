@@ -137,6 +137,7 @@ Plugin 'tomasr/molokai',                         {'package': 'colors', 'type': '
 Plugin 'toupeira/vim-desertink',                 {'package': 'colors', 'type': 'start'}
 Plugin 'tpope/vim-vividchalk',                   {'package': 'colors', 'type': 'start'}
 Plugin 'tyrannicaltoucan/vim-deep-space',        {'package': 'colors', 'type': 'start'}
+Plugin 'victorze/foo',                           {'package': 'colors', 'type': 'start'}
 Plugin 'vim-scripts/vibrantink',                 {'package': 'colors', 'type': 'start'}
 Plugin 'w0ng/vim-hybrid',                        {'package': 'colors', 'type': 'start'}
 Plugin 'wdhg/dragon-energy',                     {'package': 'colors', 'type': 'start'}
