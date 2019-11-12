@@ -88,6 +88,7 @@ Plugin 'chriskempson/base16-vim',                {'package': 'colors', 'type': '
 Plugin 'cocopon/iceberg.vim',                    {'package': 'colors', 'type': 'start'}
 Plugin 'connorholyday/vim-snazzy',               {'package': 'colors', 'type': 'start'}
 Plugin 'croaker/mustang-vim',                    {'package': 'colors', 'type': 'start'}
+Plugin 'cseelus/vim-colors-tone',                {'package': 'colors', 'type': 'start'}
 Plugin 'danilo-augusto/vim-afterglow',           {'package': 'colors', 'type': 'start'}
 Plugin 'davidklsn/vim-sialoquent',               {'package': 'colors', 'type': 'start'}
 Plugin 'dikiaap/minimalist',                     {'package': 'colors', 'type': 'start'}
