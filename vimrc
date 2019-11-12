@@ -423,7 +423,8 @@ let g:lightline_buffer_reservelen = 20
 command! -nargs=1 -complete=custom,lightlinefunctions#LightlineColorschemes LightlineColorscheme
    \ call lightlinefunctions#SetLightlineColorscheme(<q-args>)
  " }}}
- 
+
+" Statusbar Plugin selection {{{
 let g:prefer_airline = 0
 
 augroup StatusBarTheme
@@ -434,7 +435,7 @@ augroup StatusBarTheme
     autocmd Colorscheme * if myfunctions#WhichStatus(g:colors_name) == "none" && exists('g:loaded_airline') | call colorschemefunctions#AirlineTheme(g:colors_name) | endif
     autocmd Colorscheme * if myfunctions#WhichStatus(g:colors_name) == "none" && !exists('g:loaded_lightline') && !exists('g:loaded_airline') | PackAdd vim-buftabline | endif
 augroup END
-
+" }}}
 
 " minisnip {{{
 let g:minisnip_trigger = '<leader>s'
