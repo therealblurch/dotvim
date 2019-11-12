@@ -187,6 +187,7 @@ let g:colorscheme_map = [
          \ {'name': 'github',           'airlinetheme': 'colorscheme'},
          \ {'name': 'greygull',         'airlinetheme': 'colorscheme'},
          \ {'name': 'gruvbox-material', 'lightlinetheme': 'colorscheme',      'runtime': 'true',                      'airlinetheme': 'colorscheme',          'variant_type': 'gruvbox_material_background', 'variants': ['soft', 'medium', 'hard']},
+         \ {'name': 'horizon',          'lightlinetheme': 'colorscheme'},
          \ {'name': 'hybrid',           'airlinetheme': 'colorscheme'},
          \ {'name': 'hybrid_material',  'airlinetheme': 'colorscheme',        'variant_type': 'background'},
          \ {'name': 'hybrid_reverse',   'airlinetheme': 'colorscheme',        'variant_type': 'background'},

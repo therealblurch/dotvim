@@ -115,6 +115,7 @@ Plugin 'nightsense/seabird',                     {'package': 'colors', 'type': '
 Plugin 'nightsense/snow',                        {'package': 'colors', 'type': 'start'}
 Plugin 'nightsense/stellarized',                 {'package': 'colors', 'type': 'start'}
 Plugin 'NLKNguyen/papercolor-theme',             {'package': 'colors', 'type': 'start'}
+Plugin 'ntk148v/vim-horizon',                    {'package': 'colors', 'type': 'start'}
 Plugin 'rakr/vim-one',                           {'package': 'colors', 'type': 'start'}
 Plugin 'reedes/vim-colors-pencil',               {'package': 'colors', 'type': 'start'}
 Plugin 'rhysd/vim-color-spring-night',           {'package': 'colors', 'type': 'start'}
