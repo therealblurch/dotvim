@@ -186,6 +186,26 @@ function! myplugins#callback(plugname, before)
       PackAdd! lightline_foobar.vim
       PackAdd! base16-vim-lightline
       PackAdd! pomodoro.vim
+   elseif a:plugname == "vim-textobj-matchit"
+            \ || a:plugname == "vim-textobj-blanklines"
+            \ || a:plugname == "vim-textobj-backticks"
+            \ || a:plugname == "textobj-gitgutter"
+            \ || a:plugname == "vim-textobj-comment"
+            \ || a:plugname == "vim-textobj-indblock"
+            \ || a:plugname == "vim-textobj-brace"
+            \ || a:plugname == "vim-textobj-datetime"
+            \ || a:plugname == "vim-textobj-diff"
+            \ || a:plugname == "vim-textobj-entire"
+            \ || a:plugname == "vim-textobj-fold"
+            \ || a:plugname == "vim-textobj-function"
+            \ || a:plugname == "vim-textobj-indent"
+            \ || a:plugname == "vim-textobj-path"
+            \ || a:plugname == "vim-textobj-continuous-line"
+            \ || a:plugname == "vim-textobj-pastedtext"
+            \ || a:plugname == "vim-textobj-parameter"
+            \ || a:plugname == "vim-textobj-between"
+            \ || a:plugname == "vim-textobj-keyvalue"
+      PackAdd! vim-textobj-user
    endif
 
 endfunction
