@@ -443,6 +443,8 @@ augroup StatusBarTheme
 augroup END
 
 autocmd VimEnter * call colorschemefunctions#SetLastColorscheme()
+
+command! -nargs=1 -complete=color Colorscheme call xolox#colorscheme_switcher#switch_to(<q-args>)
 " }}}
 
 " minisnip {{{
