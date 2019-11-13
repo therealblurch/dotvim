@@ -12,9 +12,9 @@ Plugin 'drmikehenry/vim-fontsize'
 Plugin 'idanarye/vim-merginal'
 Plugin 'nishigori/increment-activator'
 Plugin 'itchyny/lightline.vim'
+Plugin 'jiangmiao/auto-pairs'
 Plugin 'joereynolds/vim-minisnip'
 Plugin 'junegunn/vim-easy-align'
-Plugin 'kana/vim-smartinput'
 Plugin 'kshenoy/vim-signature'
 Plugin 'lifepillar/vim-mucomplete'
 Plugin 'luochen1990/rainbow'
@@ -168,7 +168,7 @@ PackAdd! numbers.vim
 PackAdd! indentline
 PackAdd! vim-devicons
 PackAdd! vim-highlightedyank
-PackAdd! vim-smartinput
+PackAdd! auto-pairs
 PackAdd! vim-endwise
 
 function! myplugins#callback(plugname, before)
