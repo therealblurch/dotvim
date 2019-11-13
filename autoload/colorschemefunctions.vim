@@ -116,6 +116,6 @@ function! colorschemefunctions#SetLastColorscheme()
             break
         endif
     endfor
+    call xolox#colorscheme_switcher#switch_to(l:last_colorscheme[1])
 
-    exec 'colorscheme  ' . l:last_colorscheme[1]
 endfunction
