@@ -293,11 +293,6 @@ let g:buftabline_separators = 1
 "Color Scheme Switcher {{{
 let g:colorscheme_switcher_exclude_builtins = 1
 " let g:colorscheme_switcher_keep_background = 1
-
-let g:colorscheme_manager_global_last = 1
-let g:colorscheme_manager_file = '~/.vim/.colorscheme'
-let g:colorscheme_manager_remember_background = 1
-let g:colorscheme_manager_start_random = 0
 " }}}
 
 " Easy Align {{{
@@ -431,6 +426,7 @@ command! -nargs=1 -complete=custom,lightlinefunctions#LightlineColorschemes Ligh
 
 " Statusbar Plugin selection {{{
 let g:prefer_airline = 0
+let g:colorscheme_file = '~/.vim/.colorscheme'
 
 augroup StatusBarTheme
     autocmd!
@@ -439,7 +435,7 @@ augroup StatusBarTheme
     autocmd Colorscheme * if myfunctions#WhichStatus(g:colors_name) == "none" && exists('g:loaded_lightline') | call lightlinefunctions#LightlineUpdate() | endif
     autocmd Colorscheme * if myfunctions#WhichStatus(g:colors_name) == "none" && exists('g:loaded_airline') | call colorschemefunctions#AirlineTheme(g:colors_name) | endif
     autocmd Colorscheme * if myfunctions#WhichStatus(g:colors_name) == "none" && !exists('g:loaded_lightline') && !exists('g:loaded_airline') | PackAdd vim-buftabline | endif
-    autocmd Colorscheme * call writefile([&background, g:colors_name], expand(g:colorscheme_manager_file))
+    autocmd Colorscheme * call writefile([&background, g:colors_name], expand(g:colorscheme_file))
 augroup END
 
 autocmd VimEnter * call colorschemefunctions#SetLastColorscheme()
