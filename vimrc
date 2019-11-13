@@ -504,5 +504,5 @@ set statusline+=\ %p%%
 set statusline+=\ %l:%c
 set statusline+=\ 
 " }}}
-"
+
 colorscheme onehalfdark
