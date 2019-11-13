@@ -439,7 +439,10 @@ augroup StatusBarTheme
     autocmd Colorscheme * if myfunctions#WhichStatus(g:colors_name) == "none" && exists('g:loaded_lightline') | call lightlinefunctions#LightlineUpdate() | endif
     autocmd Colorscheme * if myfunctions#WhichStatus(g:colors_name) == "none" && exists('g:loaded_airline') | call colorschemefunctions#AirlineTheme(g:colors_name) | endif
     autocmd Colorscheme * if myfunctions#WhichStatus(g:colors_name) == "none" && !exists('g:loaded_lightline') && !exists('g:loaded_airline') | PackAdd vim-buftabline | endif
+    autocmd Colorscheme * call writefile([&background, g:colors_name], expand(g:colorscheme_manager_file))
 augroup END
+
+autocmd VimEnter * call colorschemefunctions#SetLastColorscheme()
 " }}}
 
 " minisnip {{{
@@ -504,5 +507,3 @@ set statusline+=\ %p%%
 set statusline+=\ %l:%c
 set statusline+=\ 
 " }}}
-
-colorscheme onehalfdark

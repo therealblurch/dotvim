@@ -104,3 +104,18 @@ function! colorschemefunctions#AirlineTheme(colorscheme)
         endfor
     endif
 endfunction
+
+function! colorschemefunctions#SetLastColorscheme()
+    let l:last_colorscheme = readfile(expand(g:colorscheme_manager_file))
+
+    for color in g:colorscheme_map
+        if has_key (color, 'name') && ((color.name =~ l:last_colorscheme[1] && has_key(color, 'comparison') && color.comparison == 'fuzzy') || color.name == last_colorscheme[1])
+            if has_key(color, 'variant_type') && color.variant_type == 'background'
+                exec 'set background=' . l:last_colorscheme[0]
+            endif
+            break
+        endif
+    endfor
+
+    exec 'colorscheme  ' . l:last_colorscheme[1]
+endfunction
