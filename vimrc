@@ -245,6 +245,22 @@ let g:vimspectr_themes = [
             \ 'vimspectr270-light', 'vimspectr300-light', 'vimspectr330-light',
             \ 'vimspectrgrey-light'
             \ ]
+
+let g:base2tone_themes = [
+            \ 'Base2Tone_CaveLight',
+            \ 'Base2Tone_DesertLight',
+            \ 'Base2Tone_DrawbridgeLight',
+            \ 'Base2Tone_EarthLight',
+            \ 'Base2Tone_EveningLight',
+            \ 'Base2Tone_ForestLight',
+            \ 'Base2Tone_HeathLight',
+            \ 'Base2Tone_LakeLight',
+            \ 'Base2Tone_MeadowLight',
+            \ 'Base2Tone_MorningLight',
+            \ 'Base2Tone_PoolLight',
+            \ 'Base2Tone_SeaLight',
+            \ 'Base2Tone_SpaceLight',
+            \ ]
 " }}}
 
 " Airline {{{
