@@ -261,6 +261,19 @@ let g:base2tone_themes = [
             \ 'Base2Tone_SeaLight',
             \ 'Base2Tone_SpaceLight',
             \ ]
+
+let g:atelier_themes = [
+            \ 'base16-atelier-cave-light',
+            \ 'base16-atelier-dune-light',
+            \ 'base16-atelier-estuary-light',
+            \ 'base16-atelier-forest-light',
+            \ 'base16-atelier-heath-light',
+            \ 'base16-atelier-lakeside-light',
+            \ 'base16-atelier-plateau-light',
+            \ 'base16-atelier-savanna-light',
+            \ 'base16-atelier-seaside-light',
+            \ 'base16-atelier-sulphurpool-light',
+            \ ]
 " }}}
 
 " Airline {{{
