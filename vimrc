@@ -237,6 +237,14 @@ let g:colorscheme_map = [
 
 nmap <silent> <leader>- :<c-u>call colorschemefunctions#SchemeVariant(-v:count1)<cr>
 nmap <silent> <leader>+ :<c-u>call colorschemefunctions#SchemeVariant(+v:count1)<cr>
+
+let g:vimspectr_themes = [
+            \ 'vimspectr0-light'  , 'vimspectr30-light' , 'vimspectr60-light' ,
+            \ 'vimspectr90-light' , 'vimspectr120-light', 'vimspectr150-light',
+            \ 'vimspectr180-light', 'vimspectr210-light', 'vimspectr240-light',
+            \ 'vimspectr270-light', 'vimspectr300-light', 'vimspectr330-light',
+            \ 'vimspectrgrey-light'
+            \ ]
 " }}}
 
 " Airline {{{

@@ -1,6 +1,7 @@
 function! colorschemefunctions#SchemeVariant(delta)
     for color in g:colorscheme_map
         if has_key (color, 'name') && ((g:colors_name =~ color.name && has_key(color, 'comparison') && color.comparison == 'fuzzy') || g:colors_name == color.name)
+            echo "Color Found: " . color.name
             if has_key(color, 'variant_type')
                 "BACKGROUND variant: Toggle between dark and light background.
                 if color.variant_type == "background"
@@ -116,6 +117,11 @@ function! colorschemefunctions#SetLastColorscheme()
             break
         endif
     endfor
-    call xolox#colorscheme_switcher#switch_to(l:last_colorscheme[1])
+
+    if l:last_colorscheme[1] =~ 'vimspectr'
+        call xolox#colorscheme_switcher#switch_to(g:vimspectr_themes[localtime() % len(g:vimspectr_themes)])
+    else
+        call xolox#colorscheme_switcher#switch_to(l:last_colorscheme[1])
+    endif
 
 endfunction
