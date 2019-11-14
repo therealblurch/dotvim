@@ -75,6 +75,7 @@ Plugin 'vimtaku/vim-textobj-keyvalue'
 
 Plugin 'arcticicestudio/nord-vim',               {'package': 'colors', 'type': 'start', 'branch': 'develop'}
 Plugin 'adlawson/vim-sorcerer',                  {'package': 'colors', 'type': 'start'}
+Plugin 'agreco/vim-citylights',                  {'package': 'colors', 'type': 'start'}
 Plugin 'aonemd/kuroi.vim',                       {'package': 'colors', 'type': 'start'}
 Plugin 'arzg/vim-corvine',                       {'package': 'colors', 'type': 'start'}
 Plugin 'arzg/vim-substrata',                     {'package': 'colors', 'type': 'start'}
