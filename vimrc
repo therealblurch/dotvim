@@ -426,26 +426,8 @@ let g:colorscheme_file = '~/.vim/.colorscheme'
 
 augroup StatusBarTheme
     autocmd!
-    autocmd ColorschemePre Atelier_CaveDark set background=dark
-    autocmd ColorschemePre Atelier_CaveLight set background=light
-    autocmd ColorschemePre Atelier_DuneDark set background=dark
-    autocmd ColorschemePre Atelier_DuneLight set background=light
-    autocmd ColorschemePre Atelier_EstuaryDark set background=dark
-    autocmd ColorschemePre Atelier_EstuaryLight set background=light
-    autocmd ColorschemePre Atelier_ForestDark set background=dark
-    autocmd ColorschemePre Atelier_ForestLight set background=light
-    autocmd ColorschemePre Atelier_HeathDark set background=dark
-    autocmd ColorschemePre Atelier_HeathLight set background=light
-    autocmd ColorschemePre Atelier_LakesideDark set background=dark
-    autocmd ColorschemePre Atelier_LakesideLight set background=light
-    autocmd ColorschemePre Atelier_PlateauDark set background=dark
-    autocmd ColorschemePre Atelier_PlateauLight set background=light
-    autocmd ColorschemePre Atelier_SavannaDark set background=dark
-    autocmd ColorschemePre Atelier_SavannaLight set background=light
-    autocmd ColorschemePre Atelier_SeasideDark set background=dark
-    autocmd ColorschemePre Atelier_SeasideLight set background=light
-    autocmd ColorschemePre Atelier_SulphurpoolDark set background=dark
-    autocmd ColorschemePre Atelier_SulphurpoolLight set background=light
+    autocmd ColorschemePre Atelier*Dark set background=dark
+    autocmd ColorschemePre Atelier*Light set background=light
     autocmd ColorScheme * if myfunctions#WhichStatus(g:colors_name) == "airline"   | PackAdd vim-airline | call colorschemefunctions#AirlineTheme(g:colors_name) | endif
     autocmd Colorscheme * if myfunctions#WhichStatus(g:colors_name) == "lightline" | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
     autocmd Colorscheme * if myfunctions#WhichStatus(g:colors_name) == "none" && exists('g:loaded_lightline') | call lightlinefunctions#LightlineUpdate() | endif
