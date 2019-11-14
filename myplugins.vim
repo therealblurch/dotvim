@@ -104,6 +104,7 @@ Plugin 'kaicataldo/material.vim',                {'package': 'colors', 'type': '
 Plugin 'KKPMW/oldbook-vim',                      {'package': 'colors', 'type': 'start'}
 Plugin 'KKPMW/sacredforest-vim',                 {'package': 'colors', 'type': 'start'}
 Plugin 'kjssad/quantum.vim',                     {'package': 'colors', 'type': 'start'}
+Plugin 'koirand/tokyo-metro.vim',                {'package': 'colors', 'type': 'start'}
 Plugin 'kristijanhusak/vim-hybrid-material',     {'package': 'colors', 'type': 'start'}
 Plugin 'levelone/tequila-sunrise.vim',           {'package': 'colors', 'type': 'start'}
 Plugin 'lifepillar/vim-solarized8',              {'package': 'colors', 'type': 'start'}

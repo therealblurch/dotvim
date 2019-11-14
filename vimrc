@@ -226,6 +226,7 @@ let g:colorscheme_map = [
          \ {'name': 'stellarized',      'lightlinetheme': 'colorscheme_bg',   'airlinetheme': 'colorscheme_bg',       'variant_type': 'background'},
          \ {'name': 'stormpetrel',      'airlinetheme': 'colorscheme'},
          \ {'name': 'tender',           'lightlinetheme': 'colorscheme',      'airlinetheme': 'colorscheme'},
+         \ {'name': 'tokyo-metro',      'lightlinetheme': 'tokyometro',       'airlinetheme': 'tokyometro'},
          \ {'name': 'typewriter',       'lightlinetheme': 'typewriter_light', 'airlinetheme': 'colorscheme',          'variant_type': 'colorscheme',          'variant_base': 'typewriter',                  'variants': ['', '-night']},
          \ {'name': 'typewriter-night', 'lightlinetheme': 'typewriter_dark',  'airlinetheme': 'colorscheme',          'variant_type': 'colorscheme',          'variant_base': 'typewriter',                  'variants': ['', '-night']},
          \ {'name': 'undead',           'airlinetheme': 'colorscheme',        'variant_type': 'background'},
