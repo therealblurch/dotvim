@@ -130,6 +130,7 @@ Plugin 'sainnhe/edge',                           {'package': 'colors', 'type': '
 Plugin 'sainnhe/gruvbox-material',               {'package': 'colors', 'type': 'start'}
 Plugin 'sainnhe/vim-color-forest-night',         {'package': 'colors', 'type': 'start'}
 Plugin 'sansbrina/vim-garbage-oracle',           {'package': 'colors', 'type': 'start'}
+Plugin 'scottymoon/vim-chalkboard',              {'package': 'colors', 'type': 'start'}
 Plugin 'severij/vadelma',                        {'package': 'colors', 'type': 'start'}
 Plugin 'sickill/vim-monokai',                    {'package': 'colors', 'type': 'start'}
 Plugin 'shapeoflambda/dark-purple.vim',          {'package': 'colors', 'type': 'start'}
