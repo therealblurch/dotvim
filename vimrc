@@ -175,6 +175,7 @@ let g:colorscheme_map = [
          \ {'name': 'atlantis',         'lightlinetheme': 'colorscheme'},
          \ {'name': 'ayu',              'lightlinetheme': 'colorscheme',      'runtime': 'true',                      'airlinetheme': 'colorscheme',          'variant_type': 'ayu_color',                   'variants': ['light', 'dark', 'mirage']},
          \ {'name': 'base16',           'comparison': 'fuzzy',                'lightlinetheme': 'colorscheme',        'airlinetheme': 'colorscheme'},
+         \ {'name': 'blayu',            'lightlinetheme': 'colorscheme',      'airlinetheme': 'colorscheme'},
          \ {'name': 'candid',           'lightlinetheme': 'colorscheme'},
          \ {'name': 'corvine',          'comparison': 'fuzzy',                'variant_type': 'colorscheme',          'variant_base': 'corvine',              'variants': ['', '_light']},
          \ {'name': 'cosmic_latte',     'lightlinetheme': 'colorscheme_bg',   'airlinetheme': 'colorscheme_bg',       'variant_type': 'background'},
