@@ -168,7 +168,6 @@ let g:materialbox_contrast_light = 'hard'
 "     before the new colorscheme is created.
 "
 let g:colorscheme_map = [
-         \ {'name': 'Base2Tone',        'comparison': 'fuzzy',                'lightlinetheme': 'dropbg',             'runtime': 'true',                      'airlinetheme': 'colorscheme',                 'variant_type': 'colorscheme',    'variant_base': 'drop',       'variants': ['Light', 'Dark']},
          \ {'name': 'PaperColor',       'lightlinetheme': 'colorscheme',      'runtime': 'true',                      'airlinetheme': 'colorscheme',          'variant_type': 'background'},
          \ {'name': 'afterglow',        'airlinetheme': 'colorscheme'},
          \ {'name': 'apprentice',       'lightlinetheme': 'colorscheme',      'airlinetheme': 'colorscheme'},
@@ -246,22 +245,6 @@ let g:vimspectr_themes = [
             \ 'vimspectrgrey-light'
             \ ]
 
-let g:base2tone_themes = [
-            \ 'Base2Tone_CaveLight',
-            \ 'Base2Tone_DesertLight',
-            \ 'Base2Tone_DrawbridgeLight',
-            \ 'Base2Tone_EarthLight',
-            \ 'Base2Tone_EveningLight',
-            \ 'Base2Tone_ForestLight',
-            \ 'Base2Tone_HeathLight',
-            \ 'Base2Tone_LakeLight',
-            \ 'Base2Tone_MeadowLight',
-            \ 'Base2Tone_MorningLight',
-            \ 'Base2Tone_PoolLight',
-            \ 'Base2Tone_SeaLight',
-            \ 'Base2Tone_SpaceLight',
-            \ ]
-
 let g:atelier_themes = [
             \ 'base16-atelier-cave-light',
             \ 'base16-atelier-dune-light',
@@ -288,32 +271,6 @@ let g:airline#extensions#tabline#right_alt_sep = "\ue0bb"
 let g:airline_left_sep = "\ue0b8"
 let g:airline_right_sep = "\ue0be"
 let g:airline_theme_map = {
-            \ 'Base2Tone_CaveDark'       : 'Base2Tone_CaveDark',
-            \ 'Base2Tone_CaveLight'      : 'Base2Tone_CaveLight',
-            \ 'Base2Tone_DesertDark'     : 'Base2Tone_DesertDark',
-            \ 'Base2Tone_DesertLight'    : 'Base2Tone_DesertLight',
-            \ 'Base2Tone_DrawbridgeDark' : 'Base2Tone_DrawbridgeDark',
-            \ 'Base2Tone_DrawbridgeLight': 'Base2Tone_DrawbridgeLight',
-            \ 'Base2Tone_EarthDark'      : 'Base2Tone_EarthDark',
-            \ 'Base2Tone_EarthLight'     : 'Base2Tone_EarthLight',
-            \ 'Base2Tone_EveningDark'    : 'Base2Tone_EveningDark',
-            \ 'Base2Tone_EveningLight'   : 'Base2Tone_EveningLight',
-            \ 'Base2Tone_ForestDark'     : 'Base2Tone_ForestDark',
-            \ 'Base2Tone_ForestLight'    : 'Base2Tone_ForestLight',
-            \ 'Base2Tone_HeathDark'      : 'Base2Tone_HeathDark',
-            \ 'Base2Tone_HeathLight'     : 'Base2Tone_HeathLight',
-            \ 'Base2Tone_LakeDark'       : 'Base2Tone_LakeDark',
-            \ 'Base2Tone_LakeLight'      : 'Base2Tone_LakeLight',
-            \ 'Base2Tone_MeadowDark'     : 'Base2Tone_MeadowDark',
-            \ 'Base2Tone_MeadowLight'    : 'Base2Tone_MeadowLight',
-            \ 'Base2Tone_MorningDark'    : 'Base2Tone_MorningDark',
-            \ 'Base2Tone_MorningLight'   : 'Base2Tone_MorningLight',
-            \ 'Base2Tone_PoolDark'       : 'Base2Tone_PoolDark',
-            \ 'Base2Tone_PoolLight'      : 'Base2Tone_PoolLight',
-            \ 'Base2Tone_SeaDark'        : 'Base2Tone_SeaDark',
-            \ 'Base2Tone_SeaLight'       : 'Base2Tone_SeaLight',
-            \ 'Base2Tone_SpaceDark'      : 'Base2Tone_SpaceDark',
-            \ 'Base2Tone_SpaceLight'     : 'Base2Tone_SpaceLight',
             \ 'greygull'                 : 'seagul',
             \ 'hybrid*'                  : 'hybrid',
             \ 'petrel'                   : 'seagull',

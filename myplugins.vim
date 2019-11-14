@@ -79,7 +79,6 @@ Plugin 'agreco/vim-citylights',                  {'package': 'colors', 'type': '
 Plugin 'aonemd/kuroi.vim',                       {'package': 'colors', 'type': 'start'}
 Plugin 'arzg/vim-corvine',                       {'package': 'colors', 'type': 'start'}
 Plugin 'arzg/vim-substrata',                     {'package': 'colors', 'type': 'start'}
-Plugin 'atelierbram/Base2Tone-vim',              {'package': 'colors', 'type': 'start'}
 Plugin 'axvr/photon.vim',                        {'package': 'colors', 'type': 'start'}
 Plugin 'ayu-theme/ayu-vim',                      {'package': 'colors', 'type': 'start'}
 Plugin 'chase/vim-airline-focuspoint',           {'package': 'colors', 'type': 'start'}
