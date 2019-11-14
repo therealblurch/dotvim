@@ -20,7 +20,6 @@ Plugin 'lifepillar/vim-mucomplete'
 Plugin 'luochen1990/rainbow'
 Plugin 'machakann/vim-highlightedyank'
 Plugin 'markonm/traces.vim'
-Plugin 'mike-hearn/base16-vim-lightline'
 Plugin 'myusuf3/numbers.vim'
 Plugin 'rbong/vim-flog'
 Plugin 'rhysd/committia.vim',                    {'type': 'start'}
@@ -79,12 +78,12 @@ Plugin 'agreco/vim-citylights',                  {'package': 'colors', 'type': '
 Plugin 'aonemd/kuroi.vim',                       {'package': 'colors', 'type': 'start'}
 Plugin 'arzg/vim-corvine',                       {'package': 'colors', 'type': 'start'}
 Plugin 'arzg/vim-substrata',                     {'package': 'colors', 'type': 'start'}
+Plugin 'atelierbram/vim-colors_atelier-schemes', {'package': 'colors', 'type': 'start'}
 Plugin 'axvr/photon.vim',                        {'package': 'colors', 'type': 'start'}
 Plugin 'ayu-theme/ayu-vim',                      {'package': 'colors', 'type': 'start'}
 Plugin 'chase/vim-airline-focuspoint',           {'package': 'colors', 'type': 'start'}
 Plugin 'chase/focuspoint-vim',                   {'package': 'colors', 'type': 'start'}
 Plugin 'chrisduerr/vim-undead',                  {'package': 'colors', 'type': 'start'}
-Plugin 'chriskempson/base16-vim',                {'package': 'colors', 'type': 'start'}
 Plugin 'cocopon/iceberg.vim',                    {'package': 'colors', 'type': 'start'}
 Plugin 'connorholyday/vim-snazzy',               {'package': 'colors', 'type': 'start'}
 Plugin 'croaker/mustang-vim',                    {'package': 'colors', 'type': 'start'}
@@ -191,7 +190,6 @@ function! myplugins#callback(plugname, before)
    elseif a:plugname == "lightline.vim"
       PackAdd! lightline-buffer
       PackAdd! lightline_foobar.vim
-      PackAdd! base16-vim-lightline
       PackAdd! pomodoro.vim
    elseif a:plugname == "vim-textobj-matchit"
             \ || a:plugname == "vim-textobj-blanklines"

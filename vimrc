@@ -168,12 +168,12 @@ let g:materialbox_contrast_light = 'hard'
 "     before the new colorscheme is created.
 "
 let g:colorscheme_map = [
+         \ {'name': 'Atelier',          'comparison': 'fuzzy',                'lightlinetheme': 'dropbg',             'runtime': 'true', 'airlinetheme': 'colorscheme',          'variant_type': 'colorscheme',                  'variant_base': 'drop',   'variants': ['Dark', 'Light']},
          \ {'name': 'PaperColor',       'lightlinetheme': 'colorscheme',      'runtime': 'true',                      'airlinetheme': 'colorscheme',          'variant_type': 'background'},
          \ {'name': 'afterglow',        'airlinetheme': 'colorscheme'},
          \ {'name': 'apprentice',       'lightlinetheme': 'colorscheme',      'airlinetheme': 'colorscheme'},
          \ {'name': 'atlantis',         'lightlinetheme': 'colorscheme'},
          \ {'name': 'ayu',              'lightlinetheme': 'colorscheme',      'runtime': 'true',                      'airlinetheme': 'colorscheme',          'variant_type': 'ayu_color',                   'variants': ['light', 'dark', 'mirage']},
-         \ {'name': 'base16',           'comparison': 'fuzzy',                'lightlinetheme': 'colorscheme',        'airlinetheme': 'colorscheme'},
          \ {'name': 'blayu',            'lightlinetheme': 'colorscheme',      'airlinetheme': 'colorscheme'},
          \ {'name': 'candid',           'lightlinetheme': 'colorscheme'},
          \ {'name': 'corvine',          'comparison': 'fuzzy',                'variant_type': 'colorscheme',          'variant_base': 'corvine',              'variants': ['', '_light']},
@@ -246,16 +246,16 @@ let g:vimspectr_themes = [
             \ ]
 
 let g:atelier_themes = [
-            \ 'base16-atelier-cave-light',
-            \ 'base16-atelier-dune-light',
-            \ 'base16-atelier-estuary-light',
-            \ 'base16-atelier-forest-light',
-            \ 'base16-atelier-heath-light',
-            \ 'base16-atelier-lakeside-light',
-            \ 'base16-atelier-plateau-light',
-            \ 'base16-atelier-savanna-light',
-            \ 'base16-atelier-seaside-light',
-            \ 'base16-atelier-sulphurpool-light',
+            \ 'Atelier_CaveLight',
+            \ 'Atelier_DuneLight',
+            \ 'Atelier_EstuaryLight',
+            \ 'Atelier_ForestLight',
+            \ 'Atelier_HeathLight',
+            \ 'Atelier_LakesideLight',
+            \ 'Atelier_PlateauLight',
+            \ 'Atelier_SavannaLight',
+            \ 'Atelier_SeasideLight',
+            \ 'Atelier_SulphurpoolLight',
             \ ]
 " }}}
 
@@ -426,6 +426,26 @@ let g:colorscheme_file = '~/.vim/.colorscheme'
 
 augroup StatusBarTheme
     autocmd!
+    autocmd ColorschemePre Atelier_CaveDark set background=dark
+    autocmd ColorschemePre Atelier_CaveLight set background=light
+    autocmd ColorschemePre Atelier_DuneDark set background=dark
+    autocmd ColorschemePre Atelier_DuneLight set background=light
+    autocmd ColorschemePre Atelier_EstuaryDark set background=dark
+    autocmd ColorschemePre Atelier_EstuaryLight set background=light
+    autocmd ColorschemePre Atelier_ForestDark set background=dark
+    autocmd ColorschemePre Atelier_ForestLight set background=light
+    autocmd ColorschemePre Atelier_HeathDark set background=dark
+    autocmd ColorschemePre Atelier_HeathLight set background=light
+    autocmd ColorschemePre Atelier_LakesideDark set background=dark
+    autocmd ColorschemePre Atelier_LakesideLight set background=light
+    autocmd ColorschemePre Atelier_PlateauDark set background=dark
+    autocmd ColorschemePre Atelier_PlateauLight set background=light
+    autocmd ColorschemePre Atelier_SavannaDark set background=dark
+    autocmd ColorschemePre Atelier_SavannaLight set background=light
+    autocmd ColorschemePre Atelier_SeasideDark set background=dark
+    autocmd ColorschemePre Atelier_SeasideLight set background=light
+    autocmd ColorschemePre Atelier_SulphurpoolDark set background=dark
+    autocmd ColorschemePre Atelier_SulphurpoolLight set background=light
     autocmd ColorScheme * if myfunctions#WhichStatus(g:colors_name) == "airline"   | PackAdd vim-airline | call colorschemefunctions#AirlineTheme(g:colors_name) | endif
     autocmd Colorscheme * if myfunctions#WhichStatus(g:colors_name) == "lightline" | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
     autocmd Colorscheme * if myfunctions#WhichStatus(g:colors_name) == "none" && exists('g:loaded_lightline') | call lightlinefunctions#LightlineUpdate() | endif
