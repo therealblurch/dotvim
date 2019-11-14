@@ -230,11 +230,10 @@ let g:colorscheme_map = [
          \ {'name': 'typewriter',       'lightlinetheme': 'typewriter_light', 'airlinetheme': 'colorscheme',          'variant_type': 'colorscheme',          'variant_base': 'typewriter',                  'variants': ['', '-night']},
          \ {'name': 'typewriter-night', 'lightlinetheme': 'typewriter_dark',  'airlinetheme': 'colorscheme',          'variant_type': 'colorscheme',          'variant_base': 'typewriter',                  'variants': ['', '-night']},
          \ {'name': 'undead',           'airlinetheme': 'colorscheme',        'variant_type': 'background'},
-         \ {'name': 'vimspectr',        'comparison': 'fuzzy',                'variant_type': 'colorscheme',          'variant_base': 'drop',                 'variants': ['-dark', '-light'], },
+         \ {'name': 'vimspectr',        'comparison': 'fuzzy',                'lightlinetheme': 'colorscheme',        'variant_type': 'colorscheme',          'variant_base': 'drop',                 'variants': ['-dark', '-light'], },
          \ {'name': 'vadelma',          'lightlinetheme': 'colorscheme',      'runtime': 'true',                      'variant_type': 'background'},
          \ {'name': 'zenburn',          'airlinetheme': 'colorscheme'},
          \ ]
-
 
 nmap <silent> <leader>- :<c-u>call colorschemefunctions#SchemeVariant(-v:count1)<cr>
 nmap <silent> <leader>+ :<c-u>call colorschemefunctions#SchemeVariant(+v:count1)<cr>
