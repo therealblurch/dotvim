@@ -106,7 +106,7 @@ function! colorschemefunctions#AirlineTheme(colorscheme)
 endfunction
 
 function! colorschemefunctions#SetLastColorscheme()
-    let l:last_colorscheme = readfile(expand(g:colorscheme_manager_file))
+    let l:last_colorscheme = readfile(expand(g:colorscheme_file))
 
     for color in g:colorscheme_map
         if has_key (color, 'name') && ((color.name =~ l:last_colorscheme[1] && has_key(color, 'comparison') && color.comparison == 'fuzzy') || color.name == last_colorscheme[1])
