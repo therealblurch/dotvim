@@ -29,7 +29,7 @@ function! colorschemefunctions#SchemeVariant(delta)
                     endif
                     let l:schemes = map(l:variants, 'l:variant_base.v:val')
                     exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % l:num_variants + l:num_variants) % l:num_variants]
-                "COLORSCHEEM_BG Variant: The colorscheme has variants and also
+                "COLORSCHEME_BG Variant: The colorscheme has variants and also
                 "changes based on the background value.
                 elseif color.variant_type == "colorscheme_bg"
                     let l:num_variants = len(color.variants)
