@@ -79,3 +79,10 @@ function! myfunctions#WhichStatus(colorscheme)
    endif
    return l:user_status
 endfunction
+
+function! myfunctions#ResCur()
+   if line("'\"") <= line("$")
+      silent! normal! g`"
+      return 1
+   endif
+endfunction

@@ -105,7 +105,14 @@ nmap <silent> <leader>ll :PackAdd vim-lion<CR>
 nmap <silent> <leader>lto :PackAdd vim-textobj-entire<CR>
 " }}}
 
-" Colorscheme Options {{{
+" Miscellaneous autocmds {{{
+augroup resCur
+    autocmd!
+    autocmd BufWinEnter * call myfunctions#ResCur()
+augroup END
+" }}}
+
+"Colorscheme Options {{{
 
 "ayu Possible Values: light| dark | mirage
 let ayucolor="light"
