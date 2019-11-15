@@ -1,3 +1,7 @@
+function! colorschemefunctions#VimspectrMap (key, val)
+    return 'vimspectr' . a:val . '-' . &background
+endfunction
+
 function! colorschemefunctions#SchemeVariant(delta)
     for color in g:colorscheme_map
         if has_key (color, 'name') && ((g:colors_name =~ color.name && has_key(color, 'comparison') && color.comparison == 'fuzzy') || g:colors_name == color.name)
@@ -37,6 +41,14 @@ function! colorschemefunctions#SchemeVariant(delta)
                        let &background = (&background == "dark") ? "light" : "dark"
                     endif
                     exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % l:num_variants + l:num_variants) % l:num_variants]
+                elseif color.variant_type == "vimspectr"
+                    let l:num_variants = len(color.variants)
+                    let l:variants = deepcopy(color.variants)
+                    let l:schemes = map(l:variants, function('colorschemefunctions#VimspectrMap'))
+                    exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % l:num_variants + l:num_variants) % l:num_variants]
+                    if a:delta+index(l:schemes, g:colors_name) >= l:num_variants || a:delta+index(l:schemes, g:colors_name) < 0
+                       let &background = (&background == "dark") ? "light" : "dark"
+                    endif
                 "AYU_COLOR Variant: specific to the ayu colorscheme, which
                 "uses a variable to determine which variant to select
                 elseif color.variant_type == "ayu_color"

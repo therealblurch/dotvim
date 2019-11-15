@@ -229,7 +229,7 @@ let g:colorscheme_map = [
          \ {'name': 'typewriter',       'lightlinetheme': 'typewriter_light', 'airlinetheme': 'colorscheme',          'variant_type': 'colorscheme',          'variant_base': 'typewriter',                  'variants': ['', '-night']},
          \ {'name': 'typewriter-night', 'lightlinetheme': 'typewriter_dark',  'airlinetheme': 'colorscheme',          'variant_type': 'colorscheme',          'variant_base': 'typewriter',                  'variants': ['', '-night']},
          \ {'name': 'undead',           'airlinetheme': 'colorscheme',        'variant_type': 'background'},
-         \ {'name': 'vimspectr',        'comparison': 'fuzzy',                'lightlinetheme': 'colorscheme',        'variant_type': 'colorscheme',          'variant_base': 'drop',                 'variants': ['-dark', '-light'], },
+         \ {'name': 'vimspectr',        'comparison': 'fuzzy',                'lightlinetheme': 'colorscheme',        'variant_type': 'vimspectr',          'variants': ['grey', '0', '30', '60', '90', '120', '150', '180', '210', '240', '270', '300', '330'], },
          \ {'name': 'vadelma',          'lightlinetheme': 'colorscheme',      'runtime': 'true',                      'variant_type': 'background'},
          \ {'name': 'zenburn',          'airlinetheme': 'colorscheme'},
          \ ]
