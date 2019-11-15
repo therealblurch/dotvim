@@ -108,6 +108,7 @@ endfunction
 
 function! colorschemefunctions#SetLastColorscheme()
     let l:last_colorscheme = readfile(expand(g:colorscheme_file))
+    let l:colorscheme_is_group_member = 0
 
     for color in g:colorscheme_map
         if has_key (color, 'name') && ((color.name =~ l:last_colorscheme[1] && has_key(color, 'comparison') && color.comparison == 'fuzzy') || color.name == last_colorscheme[1])
@@ -118,22 +119,17 @@ function! colorschemefunctions#SetLastColorscheme()
         endif
     endfor
 
-    if l:last_colorscheme[1] =~ 'vimspectr'
-        if l:last_colorscheme[1] =~ 'light'
-            call xolox#colorscheme_switcher#switch_to(g:vimspectr_light_themes[localtime() % len(g:vimspectr_light_themes)])
-        else
-            call xolox#colorscheme_switcher#switch_to(g:vimspectr_dark_themes[localtime() % len(g:vimspectr_dark_themes)])
-        endif
-    elseif l:last_colorscheme[1] =~ 'Atelier'
-        if l:last_colorscheme[1] =~ 'Light'
-            set background=light
-            call xolox#colorscheme_switcher#switch_to(g:atelier_light_themes[localtime() % len(g:atelier_light_themes)])
-        else
-            set background=dark
-            call xolox#colorscheme_switcher#switch_to(g:atelier_dark_themes[localtime() % len(g:atelier_dark_themes)])
-        endif
-    else
+    for colorscheme_group in values(g:colorscheme_groups)
+        for colorscheme_group_member in colorscheme_group
+            if l:last_colorscheme[1] == colorscheme_group_member
+                call xolox#colorscheme_switcher#switch_to(colorscheme_group[localtime() % len(colorscheme_group)])
+                let l:colorscheme_is_group_member = 1
+                break
+            endif
+        endfor
+    endfor
+
+    if !l:colorscheme_is_group_member
         call xolox#colorscheme_switcher#switch_to(l:last_colorscheme[1])
     endif
-
 endfunction
