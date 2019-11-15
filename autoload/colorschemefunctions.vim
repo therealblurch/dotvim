@@ -126,7 +126,7 @@ function! colorschemefunctions#SetLastColorscheme()
         endif
     elseif l:last_colorscheme[1] =~ 'Atelier'
         if l:last_colorscheme[1] =~ 'Light'
-            set background=light``
+            set background=light
             call xolox#colorscheme_switcher#switch_to(g:atelier_light_themes[localtime() % len(g:atelier_light_themes)])
         else
             set background=dark
