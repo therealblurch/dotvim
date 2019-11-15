@@ -2,6 +2,10 @@ function! colorschemefunctions#VimspectrMap (key, val)
     return 'vimspectr' . a:val . '-' . &background
 endfunction
 
+function! colorschemefunctions#AtelierMap (key, val)
+    return 'Atelier_' . a:val . l:back
+endfunction
+
 function! colorschemefunctions#SchemeVariant(delta)
     for color in g:colorscheme_map
         if has_key (color, 'name') && ((g:colors_name =~ color.name && has_key(color, 'comparison') && color.comparison == 'fuzzy') || g:colors_name == color.name)

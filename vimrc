@@ -168,7 +168,7 @@ let g:materialbox_contrast_light = 'hard'
 "     before the new colorscheme is created.
 "
 let g:colorscheme_map = [
-         \ {'name': 'Atelier',          'comparison': 'fuzzy',                'lightlinetheme': 'dropbg',             'runtime': 'true', 'airlinetheme': 'colorscheme',          'variant_type': 'colorscheme',                  'variant_base': 'drop',   'variants': ['Dark', 'Light']},
+         \ {'name': 'Atelier',          'comparison': 'fuzzy',                'lightlinetheme': 'dropbg',             'runtime': 'true', 'airlinetheme': 'colorscheme',          'variant_type': 'Atelier',                  'variants': ['Cave', 'Dune', 'Estuary', 'Forest', 'Heath', 'Lakeside', 'Plateau', 'Savanna', 'Seaside', 'Sulphurpool']},
          \ {'name': 'PaperColor',       'lightlinetheme': 'colorscheme',      'runtime': 'true',                      'airlinetheme': 'colorscheme',          'variant_type': 'background'},
          \ {'name': 'afterglow',        'airlinetheme': 'colorscheme'},
          \ {'name': 'apprentice',       'lightlinetheme': 'colorscheme',      'airlinetheme': 'colorscheme'},
