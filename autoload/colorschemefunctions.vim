@@ -119,9 +119,19 @@ function! colorschemefunctions#SetLastColorscheme()
     endfor
 
     if l:last_colorscheme[1] =~ 'vimspectr'
-        call xolox#colorscheme_switcher#switch_to(g:vimspectr_themes[localtime() % len(g:vimspectr_themes)])
+        if l:last_colorscheme[1] =~ 'light'
+            call xolox#colorscheme_switcher#switch_to(g:vimspectr_light_themes[localtime() % len(g:vimspectr_light_themes)])
+        else
+            call xolox#colorscheme_switcher#switch_to(g:vimspectr_dark_themes[localtime() % len(g:vimspectr_dark_themes)])
+        endif
     elseif l:last_colorscheme[1] =~ 'Atelier'
-        call xolox#colorscheme_switcher#switch_to(g:atelier_themes[localtime() % len(g:atelier_themes)])
+        if l:last_colorscheme[1] =~ 'Light'
+            set background=light``
+            call xolox#colorscheme_switcher#switch_to(g:atelier_light_themes[localtime() % len(g:atelier_light_themes)])
+        else
+            set background=dark
+            call xolox#colorscheme_switcher#switch_to(g:atelier_dark_themes[localtime() % len(g:atelier_dark_themes)])
+        endif
     else
         call xolox#colorscheme_switcher#switch_to(l:last_colorscheme[1])
     endif

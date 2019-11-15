@@ -1,4 +1,4 @@
-" vim: set sw=4 ts=4 sts=4 et tw=78 foldmarker={{{,}}} foldlevel=0 foldmethod=marker:
+ " vim: set sw=4 ts=4 sts=4 et tw=78 foldmarker={{{,}}} foldlevel=0 foldmethod=marker:
 
 scriptencoding utf-8
 
@@ -237,7 +237,7 @@ let g:colorscheme_map = [
 nmap <silent> <leader>- :<c-u>call colorschemefunctions#SchemeVariant(-v:count1)<cr>
 nmap <silent> <leader>+ :<c-u>call colorschemefunctions#SchemeVariant(+v:count1)<cr>
 
-let g:vimspectr_themes = [
+let g:vimspectr_light_themes = [
             \ 'vimspectr0-light'  , 'vimspectr30-light' , 'vimspectr60-light' ,
             \ 'vimspectr90-light' , 'vimspectr120-light', 'vimspectr150-light',
             \ 'vimspectr180-light', 'vimspectr210-light', 'vimspectr240-light',
@@ -245,7 +245,7 @@ let g:vimspectr_themes = [
             \ 'vimspectrgrey-light'
             \ ]
 
-let g:atelier_themes = [
+let g:atelier_light_themes = [
             \ 'Atelier_CaveLight',
             \ 'Atelier_DuneLight',
             \ 'Atelier_EstuaryLight',
@@ -256,6 +256,27 @@ let g:atelier_themes = [
             \ 'Atelier_SavannaLight',
             \ 'Atelier_SeasideLight',
             \ 'Atelier_SulphurpoolLight',
+            \ ]
+
+let g:vimspectr_dark_themes = [
+            \ 'vimspectr0-dark'  , 'vimspectr30-dark' , 'vimspectr60-dark' ,
+            \ 'vimspectr90-dark' , 'vimspectr120-dark', 'vimspectr150-dark',
+            \ 'vimspectr180-dark', 'vimspectr210-dark', 'vimspectr240-dark',
+            \ 'vimspectr270-dark', 'vimspectr300-dark', 'vimspectr330-dark',
+            \ 'vimspectrgrey-dark'
+            \ ]
+
+let g:atelier_dark_themes = [
+            \ 'Atelier_CaveDark',
+            \ 'Atelier_DuneDark',
+            \ 'Atelier_EstuaryDark',
+            \ 'Atelier_ForestDark',
+            \ 'Atelier_HeathDark',
+            \ 'Atelier_LakesideDark',
+            \ 'Atelier_PlateauDark',
+            \ 'Atelier_SavannaDark',
+            \ 'Atelier_SeasideDark',
+            \ 'Atelier_SulphurpoolDark',
             \ ]
 " }}}
 
