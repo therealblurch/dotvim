@@ -524,6 +524,16 @@ let g:VPPreCommand = "source /home/data/smtd_design/bin/ss brent"
 
 call matchadd('ColorColumn', '\%81v', 100)
 
+" CTRLP {{{
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
+let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+" }}}
+
 " Status line {{{
 function! StatuslineGit()
     let l:branchname = fugitive#head()
