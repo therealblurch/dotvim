@@ -481,8 +481,10 @@ let g:colorscheme_file = '~/.vim/.colorscheme'
 
 augroup StatusBarTheme
     autocmd!
-    autocmd ColorschemePre Atelier*Dark set background=dark
-    autocmd ColorschemePre Atelier*Light set background=light
+    if has('patch-8.0.1777')
+        autocmd ColorschemePre Atelier*Dark set background=dark
+        autocmd ColorschemePre Atelier*Light set background=light
+    endif
     autocmd ColorScheme * if myfunctions#WhichStatus(g:colors_name) == "airline"   | PackAdd vim-airline | call colorschemefunctions#AirlineTheme(g:colors_name) | endif
     autocmd Colorscheme * if myfunctions#WhichStatus(g:colors_name) == "lightline" | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
     autocmd Colorscheme * if myfunctions#WhichStatus(g:colors_name) == "none" && exists('g:loaded_lightline') | call lightlinefunctions#LightlineUpdate() | endif
