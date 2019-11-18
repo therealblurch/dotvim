@@ -3,6 +3,11 @@ function! colorschemefunctions#VimspectrMap (key, val)
 endfunction
 
 function! colorschemefunctions#AtelierMap (key, val)
+    if &background == 'light'
+        let l:back = 'Light'
+    else
+        let l:back = 'Dark'
+    endif
     return 'Atelier_' . a:val . l:back
 endfunction
 
@@ -52,6 +57,11 @@ function! colorschemefunctions#SchemeVariant(delta)
                     if a:delta+index(l:schemes, g:colors_name) >= l:num_variants || a:delta+index(l:schemes, g:colors_name) < 0
                        let &background = (&background == "dark") ? "light" : "dark"
                     endif
+                elseif color.variant_type == "Atelier"
+                    let l:num_variants = len(color.variants)
+                    let l:variants = deepcopy(color.variants)
+                    let l:schemes = map(l:variants, function('colorschemefunctions#AtelierMap'))
+                    exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % l:num_variants + l:num_variants) % l:num_variants]
                 "AYU_COLOR Variant: specific to the ayu colorscheme, which
                 "uses a variable to determine which variant to select
                 elseif color.variant_type == "ayu_color"
