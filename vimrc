@@ -243,6 +243,7 @@ let g:colorscheme_map = [
 
 nmap <silent> <leader>- :<c-u>call colorschemefunctions#SchemeVariant(-v:count1)<cr>
 nmap <silent> <leader>+ :<c-u>call colorschemefunctions#SchemeVariant(+v:count1)<cr>
+nmap <silent> <leader>b :<c-u>call colorschemefunctions#ToggleBackground()<cr>
 
 let g:vimspectr_light_themes = [
             \ 'vimspectr0-light'  , 'vimspectr30-light' , 'vimspectr60-light' ,
