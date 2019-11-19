@@ -151,8 +151,6 @@ function! colorschemefunctions#AirlineTheme(colorscheme)
                 if has_key(color, 'airlinetheme')
                     if (color.airlinetheme == 'colorscheme_bg')
                         exec "AirlineTheme " . a:colorscheme . "_" . &background
-                    elseif (color.airlinetheme != 'colorscheme')
-                        exec "AirlineTheme " . color.airlinetheme
                     endif
                 endif
                 break
