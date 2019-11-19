@@ -649,7 +649,7 @@ let g:airline#extensions#tabline#right_alt_sep = "\ue0bb"
 let g:airline_left_sep = "\ue0b8"
 let g:airline_right_sep = "\ue0be"
 let g:airline_theme_map = {
-            \ 'greygull'                 : 'seagul',
+            \ 'greygull'                 : 'seagull',
             \ 'hybrid*'                  : 'hybrid',
             \ 'petrel'                   : 'seagull',
             \ 'solarized8*'              : 'solarized',
