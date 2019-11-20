@@ -42,7 +42,7 @@ Plugin 'tpope/vim-speeddating'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tyru/capture.vim'
-Plugin 'vhda/verilog_systemverilog.vim'
+Plugin 'vhda/verilog_systemverilog.vim', {'type': 'start'}
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-scripts/VisIncr'
