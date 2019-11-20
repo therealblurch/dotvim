@@ -114,6 +114,7 @@ Plugin 'logico-dev/typewriter',                  {'package': 'colors', 'type': '
 Plugin 'ludokng/vim-odyssey',                    {'package': 'colors', 'type': 'start'}
 Plugin 'mkarmona/materialbox',                   {'package': 'colors', 'type': 'start'}
 Plugin 'nanotech/jellybeans.vim',                {'package': 'colors', 'type': 'start', 'name': 'jellybeans'}
+Plugin 'neutaaaaan/iosvkem',                     {'package': 'colors', 'type': 'start'}
 Plugin 'nightsense/cosmic_latte',                {'package': 'colors', 'type': 'start'}
 Plugin 'nightsense/seabird',                     {'package': 'colors', 'type': 'start'}
 Plugin 'nightsense/snow',                        {'package': 'colors', 'type': 'start'}
