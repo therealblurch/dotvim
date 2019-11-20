@@ -75,6 +75,7 @@ Plugin 'vimtaku/vim-textobj-keyvalue'
 
 Plugin 'Alvarocz/vim-fresh',                     {'package': 'colors', 'type': 'start'}
 Plugin 'Alvarocz/vim-northpole',                 {'package': 'colors', 'type': 'start'}
+Plugin 'archseer/colibri.vim',                   {'package': 'colors', 'type': 'start'}
 Plugin 'arcticicestudio/nord-vim',               {'package': 'colors', 'type': 'start', 'branch': 'develop'}
 Plugin 'adlawson/vim-sorcerer',                  {'package': 'colors', 'type': 'start'}
 Plugin 'agreco/vim-citylights',                  {'package': 'colors', 'type': 'start'}
