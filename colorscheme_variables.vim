@@ -91,6 +91,10 @@ let s:corvine_dict.variant_type = 'colorscheme'
 let s:corvine_dict.variant_base = 'corvine'
 let s:corvine_dict.variants = ['', '_light']
 
+let s:cosme_dict = {}
+let s:cosme_dict.name = 'cosme'
+let s:cosme_dict.lightlinetheme = 'colorscheme'
+
 let s:cosmic_latte_dict = {}
 let s:cosmic_latte_dict.name = 'cosmic_latte'
 let s:cosmic_latte_dict.lightlinetheme = 'colorscheme_bg'
@@ -355,6 +359,7 @@ let g:colorscheme_map = [
          \ s:blayu_dict,
          \ s:candid_dict,
          \ s:corvine_dict,
+         \ s:cosme_dict,
          \ s:cosmic_latte_dict,
          \ s:darcula_dict,
          \ s:dark_purple_dict,

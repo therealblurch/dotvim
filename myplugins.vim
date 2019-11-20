@@ -82,6 +82,7 @@ Plugin 'arzg/vim-substrata',                     {'package': 'colors', 'type': '
 Plugin 'atelierbram/vim-colors_atelier-schemes', {'package': 'colors', 'type': 'start'}
 Plugin 'axvr/photon.vim',                        {'package': 'colors', 'type': 'start'}
 Plugin 'ayu-theme/ayu-vim',                      {'package': 'colors', 'type': 'start'}
+Plugin 'beikome/cosme.vim',                      {'package': 'colors', 'type': 'start'},
 Plugin 'chase/vim-airline-focuspoint',           {'package': 'colors', 'type': 'start'}
 Plugin 'chase/focuspoint-vim',                   {'package': 'colors', 'type': 'start'}
 Plugin 'chrisduerr/vim-undead',                  {'package': 'colors', 'type': 'start'}
