@@ -116,6 +116,7 @@ Plugin 'liuchengxu/space-vim-theme',             {'package': 'colors', 'type': '
 Plugin 'logico-dev/typewriter',                  {'package': 'colors', 'type': 'start'}
 Plugin 'ludokng/vim-odyssey',                    {'package': 'colors', 'type': 'start'}
 Plugin 'mkarmona/materialbox',                   {'package': 'colors', 'type': 'start'}
+Plugin 'mswift42/vim-themes',                    {'package': 'colors', 'type': 'start'}
 Plugin 'nanotech/jellybeans.vim',                {'package': 'colors', 'type': 'start', 'name': 'jellybeans'}
 Plugin 'neutaaaaan/iosvkem',                     {'package': 'colors', 'type': 'start'}
 Plugin 'nightsense/cosmic_latte',                {'package': 'colors', 'type': 'start'}
