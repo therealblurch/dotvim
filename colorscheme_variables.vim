@@ -510,6 +510,28 @@ let g:atelier_dark_themes = [
             \ 'Atelier_SulphurpoolDark',
             \ ]
 
+let g:emacs_themes = [
+            \ 'bergen',
+            \ 'breezy-fall',
+            \ 'darktooth',
+            \ 'foggy-night',
+            \ 'Greymatters',
+            \ 'light-kiss',
+            \ 'madrid',
+            \ 'metalheart',
+            \ 'munich',
+            \ 'Oldlace',
+            \ 'reykjavik',
+            \ 'silkworm',
+            \ 'soft-charcoal',
+            \ 'soft-morning',
+            \ 'soft-stone',
+            \ 'sunny-day',
+            \ 'Thursday',
+            \ 'warm-night',
+            \ 'white-sand'
+            \ ]
+
 let g:colorscheme_groups = {}
 let g:colorscheme_groups.group1 = g:vimspectr_light_themes
 let g:colorscheme_groups.group2 = g:vimspectr_dark_themes
