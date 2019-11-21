@@ -270,6 +270,10 @@ let s:onehalf_dict.variant_type = 'colorscheme'
 let s:onehalf_dict.variant_base = 'drop'
 let s:onehalf_dict.variants = ['light', 'dark']
 
+let s:panic_dict = {}
+let s:panic_dict.name = 'panic'
+let s:panic_dict.airlinetheme = 'colorscheme'
+
 let s:pencil_dict = {}
 let s:pencil_dict.name = 'pencil'
 let s:pencil_dict.lightlinetheme = 'pencil_alter'
@@ -438,6 +442,7 @@ let g:colorscheme_map = [
          \ s:nord_dict,
          \ s:one_dict,
          \ s:onehalf_dict,
+         \ s:panic_dict,
          \ s:pencil_dict,
          \ s:petrel_dict,
          \ s:plastic_dict,

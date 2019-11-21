@@ -103,6 +103,7 @@ Plugin 'flrnd/plastic.vim',                      {'package': 'colors', 'type': '
 Plugin 'gosukiwi/vim-atom-dark',                 {'package': 'colors', 'type': 'start'}
 Plugin 'haishanh/night-owl.vim',                 {'package': 'colors', 'type': 'start'}
 Plugin 'jacoborus/tender.vim',                   {'package': 'colors', 'type': 'start'}
+Plugin 'jdsimcoe/panic.vim',                     {'package': 'colors', 'type': 'start'}
 Plugin 'jnurmine/Zenburn',                       {'package': 'colors', 'type': 'start'}
 Plugin 'kaicataldo/material.vim',                {'package': 'colors', 'type': 'start', 'name': 'material'}
 Plugin 'KKPMW/oldbook-vim',                      {'package': 'colors', 'type': 'start'}
