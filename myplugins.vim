@@ -151,6 +151,7 @@ Plugin 'tjammer/blayu.vim',                      {'package': 'colors', 'type': '
 Plugin 'tomasr/molokai',                         {'package': 'colors', 'type': 'start'}
 Plugin 'toupeira/vim-desertink',                 {'package': 'colors', 'type': 'start'}
 Plugin 'tpope/vim-vividchalk',                   {'package': 'colors', 'type': 'start'}
+Plugin 'trevordmiller/nova-vim',                 {'package': 'colors', 'type': 'start'}
 Plugin 'tyrannicaltoucan/vim-deep-space',        {'package': 'colors', 'type': 'start'}
 Plugin 'victorze/foo',                           {'package': 'colors', 'type': 'start'}
 Plugin 'vim-scripts/vibrantink',                 {'package': 'colors', 'type': 'start'}

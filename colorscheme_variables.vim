@@ -259,6 +259,11 @@ let s:nord_dict.name = 'nord'
 let s:nord_dict.lightlinetheme = 'colorscheme'
 let s:nord_dict.airlinetheme = 'colorscheme'
 
+let s:nova_dict = {}
+let s:nova_dict.name = 'nova'
+let s:nova_dict.lightlinetheme = 'colorscheme'
+let s:nova_dict.airlinetheme = 'colorscheme'
+
 let s:one_dict = {}
 let s:one_dict.name = 'one'
 let s:one_dict.lightlinetheme = 'colorscheme'
@@ -445,6 +450,7 @@ let g:colorscheme_map = [
          \ s:monokai_dict,
          \ s:night_owl_dict,
          \ s:nord_dict,
+         \ s:nova_dict,
          \ s:one_dict,
          \ s:onehalf_dict,
          \ s:panic_dict,
