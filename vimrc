@@ -345,7 +345,7 @@ let g:lightline_buffer_reservelen = 20
 
 command! -nargs=1 -complete=custom,lightlinefunctions#LightlineColorschemes LightlineColorscheme
    \ call lightlinefunctions#SetLightlineColorscheme(<q-args>)
- " }}}
+" }}}
 
 " Statusbar Plugin selection {{{
 let g:prefer_airline = 1
