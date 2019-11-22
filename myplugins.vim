@@ -106,7 +106,7 @@ Plugin 'emhaye/ceudah.vim',                      {'package': 'colors', 'type': '
 Plugin 'endel/vim-github-colorscheme',           {'package': 'colors', 'type': 'start'}
 Plugin 'flrnd/candid.vim',                       {'package': 'colors', 'type': 'start'}
 Plugin 'flrnd/plastic.vim',                      {'package': 'colors', 'type': 'start'}
-Plugin 'gosukiwi/vim-atom-dark',                 {'package': 'colors', 'type': 'start'}
+Plugin 'hachy/eva01.vim',                        {'package': 'colors', 'type': 'start'}
 Plugin 'haishanh/night-owl.vim',                 {'package': 'colors', 'type': 'start'}
 Plugin 'jacoborus/tender.vim',                   {'package': 'colors', 'type': 'start'}
 Plugin 'jdsimcoe/panic.vim',                     {'package': 'colors', 'type': 'start'}
