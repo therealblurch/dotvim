@@ -80,6 +80,7 @@ Plugin 'arcticicestudio/nord-vim',               {'package': 'colors', 'type': '
 Plugin 'arzyu/vim-colors-celadonite',            {'package': 'colors', 'type': 'start'}
 Plugin 'adlawson/vim-sorcerer',                  {'package': 'colors', 'type': 'start'}
 Plugin 'agreco/vim-citylights',                  {'package': 'colors', 'type': 'start'}
+Plugin 'ajmwagar/vim-deus',                      {'package': 'colors', 'type': 'start'}
 Plugin 'aonemd/kuroi.vim',                       {'package': 'colors', 'type': 'start'}
 Plugin 'arzg/vim-corvine',                       {'package': 'colors', 'type': 'start'}
 Plugin 'arzg/vim-substrata',                     {'package': 'colors', 'type': 'start'}

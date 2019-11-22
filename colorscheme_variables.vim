@@ -132,6 +132,10 @@ let s:desertink_dict = {}
 let s:desertink_dict.name = 'desertink'
 let s:desertink_dict.airlinetheme = 'colorscheme'
 
+let s:deus_dict = {}
+let s:deus_dict.name = 'deus'
+let s:deus_dict.airlinetheme = 'colorscheme'
+
 let s:dracula_dict = {}
 let s:dracula_dict.name = 'dracula'
 let s:dracula_dict.lightlinetheme = 'colorscheme'
@@ -416,6 +420,7 @@ let g:colorscheme_map = [
          \ s:deep_space_dict,
          \ s:desert_night_dict,
          \ s:desertink_dict,
+         \ s:deus_dict,
          \ s:dracula_dict,
          \ s:edge_dict,
          \ s:flattened_dict,
