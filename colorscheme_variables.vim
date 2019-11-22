@@ -393,11 +393,6 @@ let s:typewriter_night_dict.variant_type = 'colorscheme'
 let s:typewriter_night_dict.variant_base = 'typewriter'
 let s:typewriter_night_dict.variants = ['', '-night']
 
-let s:undead_dict = {}
-let s:undead_dict.name = 'undead'
-let s:undead_dict.airlinetheme = 'colorscheme'
-let s:undead_dict.variant_type = 'background'
-
 let s:vimspectr_dict = {}
 let s:vimspectr_dict.name = 'vimspectr'
 let s:vimspectr_dict.comparison = 'fuzzy'
@@ -483,7 +478,6 @@ let g:colorscheme_map = [
          \ s:tokyo_metro_dict,
          \ s:typewriter_dict,
          \ s:typewriter_night_dict,
-         \ s:undead_dict,
          \ s:vimspectr_dict,
          \ s:vadelma_dict,
          \ s:zenburn_dict

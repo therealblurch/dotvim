@@ -91,7 +91,6 @@ Plugin 'ayu-theme/ayu-vim',                      {'package': 'colors', 'type': '
 Plugin 'beikome/cosme.vim',                      {'package': 'colors', 'type': 'start'}
 Plugin 'chase/vim-airline-focuspoint',           {'package': 'colors', 'type': 'start'}
 Plugin 'chase/focuspoint-vim',                   {'package': 'colors', 'type': 'start'}
-Plugin 'chrisduerr/vim-undead',                  {'package': 'colors', 'type': 'start'}
 Plugin 'cocopon/iceberg.vim',                    {'package': 'colors', 'type': 'start'}
 Plugin 'connorholyday/vim-snazzy',               {'package': 'colors', 'type': 'start'}
 Plugin 'croaker/mustang-vim',                    {'package': 'colors', 'type': 'start'}
