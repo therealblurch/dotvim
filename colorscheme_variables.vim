@@ -86,6 +86,10 @@ let s:blayu_dict.name = 'blayu'
 let s:blayu_dict.lightlinetheme = 'colorscheme'
 let s:blayu_dict.airlinetheme = 'colorscheme'
 
+let s:bluewery_dict = {}
+let s:bluewery_dict.name = 'bluewery'
+let s:bluewery_dict.lightlinetheme = 'colorscheme'
+
 let s:candid_dict = {}
 let s:candid_dict.name = 'candid'
 let s:candid_dict.lightlinetheme = 'colorscheme'
@@ -419,6 +423,7 @@ let g:colorscheme_map = [
          \ s:atlantis_dict,
          \ s:ayu_dict,
          \ s:blayu_dict,
+         \ s:bluewery_dict,
          \ s:candid_dict,
          \ s:colibri_dict,
          \ s:corvine_dict,

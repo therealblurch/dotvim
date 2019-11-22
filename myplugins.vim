@@ -138,6 +138,7 @@ Plugin 'NLKNguyen/papercolor-theme',             {'package': 'colors', 'type': '
 Plugin 'ntk148v/vim-horizon',                    {'package': 'colors', 'type': 'start'}
 Plugin 'rakr/vim-one',                           {'package': 'colors', 'type': 'start'}
 Plugin 'reedes/vim-colors-pencil',               {'package': 'colors', 'type': 'start'}
+Plugin 'relastle/bluewery.vim',                  {'package': 'colors', 'type': 'start'}
 Plugin 'rhysd/vim-color-spring-night',           {'package': 'colors', 'type': 'start'}
 Plugin 'rhysd/wallaby.vim',                      {'package': 'colors', 'type': 'start'}
 Plugin 'romainl/Apprentice',                     {'package': 'colors', 'type': 'start'}
