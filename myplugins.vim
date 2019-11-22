@@ -159,6 +159,7 @@ Plugin 'w0ng/vim-hybrid',                        {'package': 'colors', 'type': '
 Plugin 'wdhg/dragon-energy',                     {'package': 'colors', 'type': 'start'}
 Plugin 'wmvanvliet/vim-blackboard',              {'package': 'colors', 'type': 'start'}
 Plugin 'xero/sourcerer.vim',                     {'package': 'colors', 'type': 'start'}
+Plugin 'yous/vim-open-color',                    {'package': 'colors', 'type': 'start'}
 
 " This repositories contain a vim directory which is the only directory that I want
 " in the pack.  Because of this they are git submodules and added to the runtimepath

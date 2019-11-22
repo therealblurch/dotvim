@@ -279,6 +279,10 @@ let s:onehalf_dict.variant_type = 'colorscheme'
 let s:onehalf_dict.variant_base = 'drop'
 let s:onehalf_dict.variants = ['light', 'dark']
 
+let s:open_color_dict = {}
+let s:open_color_dict.name = 'open_color'
+let s:open_color_dict.variant_type = 'background'
+
 let s:panic_dict = {}
 let s:panic_dict.name = 'panic'
 let s:panic_dict.airlinetheme = 'colorscheme'
@@ -448,6 +452,7 @@ let g:colorscheme_map = [
          \ s:minimalist_dict,
          \ s:molokai_dict,
          \ s:monokai_dict,
+         \ s:open_color_dict,
          \ s:night_owl_dict,
          \ s:nord_dict,
          \ s:nova_dict,
