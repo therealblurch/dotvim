@@ -553,3 +553,4 @@ let g:colorscheme_groups.group1 = g:vimspectr_light_themes
 let g:colorscheme_groups.group2 = g:vimspectr_dark_themes
 let g:colorscheme_groups.group3 = g:atelier_light_themes
 let g:colorscheme_groups.group4 = g:atelier_dark_themes
+let g:colorscheme_groups.group5 = g:emacs_themes
