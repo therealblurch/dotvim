@@ -77,6 +77,7 @@ Plugin 'alexanderjeurissen/lumiere.vim',         {'package': 'colors', 'type': '
 Plugin 'Alvarocz/vim-northpole',                 {'package': 'colors', 'type': 'start'}
 Plugin 'archseer/colibri.vim',                   {'package': 'colors', 'type': 'start'}
 Plugin 'arcticicestudio/nord-vim',               {'package': 'colors', 'type': 'start', 'branch': 'develop'}
+Plugin 'arzyu/vim-colors-celadonite',            {'package': 'colors', 'type': 'start'}
 Plugin 'adlawson/vim-sorcerer',                  {'package': 'colors', 'type': 'start'}
 Plugin 'agreco/vim-citylights',                  {'package': 'colors', 'type': 'start'}
 Plugin 'aonemd/kuroi.vim',                       {'package': 'colors', 'type': 'start'}
