@@ -19,6 +19,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'kshenoy/vim-signature'
 Plugin 'lifepillar/vim-mucomplete'
+Plugin 'liuchengxu/vim-which-key'
 Plugin 'luochen1990/rainbow'
 Plugin 'machakann/vim-highlightedyank'
 Plugin 'markonm/traces.vim'
@@ -198,6 +199,7 @@ PackAdd! vim-highlightedyank
 PackAdd! auto-pairs
 PackAdd! vim-endwise
 PackAdd! is.vim
+PackAdd! vim-which-key
 
 function! myplugins#callback(plugname, before)
 
