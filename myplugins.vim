@@ -11,7 +11,9 @@ Plugin 'chrisbra/NrrwRgn'
 Plugin 'drmikehenry/vim-fontsize'
 Plugin 'idanarye/vim-merginal'
 Plugin 'nishigori/increment-activator'
+Plugin 'garbas/vim-snipmate'
 Plugin 'haya14busa/is.vim'
+Plugin 'honza/vim-snippets'
 Plugin 'itchyny/lightline.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'junegunn/fzf.vim'
@@ -237,6 +239,8 @@ function! myplugins#callback(plugname, before)
             \ || a:plugname == "vim-textobj-between"
             \ || a:plugname == "vim-textobj-keyvalue"
       PackAdd! vim-textobj-user
+   elseif a:Plugin == "vim-snipmate"
+      PackAdd! vim-snippets
    endif
 
 endfunction
