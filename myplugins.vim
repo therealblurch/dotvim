@@ -24,6 +24,7 @@ Plugin 'luochen1990/rainbow'
 Plugin 'machakann/vim-highlightedyank'
 Plugin 'markonm/traces.vim'
 Plugin 'myusuf3/numbers.vim'
+Plugin 'pelodelfuego/vim-swoop'
 Plugin 'rbong/vim-flog'
 Plugin 'rhysd/committia.vim',                    {'type': 'start'}
 Plugin 'rhysd/conflict-marker.vim'
