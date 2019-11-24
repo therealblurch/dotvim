@@ -11,6 +11,7 @@ Plugin 'chrisbra/NrrwRgn'
 Plugin 'drmikehenry/vim-fontsize'
 Plugin 'idanarye/vim-merginal'
 Plugin 'nishigori/increment-activator'
+Plugin 'haya14busa/is.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'joereynolds/vim-minisnip'
@@ -196,6 +197,7 @@ PackAdd! vim-devicons
 PackAdd! vim-highlightedyank
 PackAdd! auto-pairs
 PackAdd! vim-endwise
+PackAdd! is.vim
 
 function! myplugins#callback(plugname, before)
 
