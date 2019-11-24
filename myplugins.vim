@@ -44,6 +44,7 @@ Plugin 'tpope/vim-speeddating'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tyru/capture.vim'
+Plugin 'unblevable/quick-scope'
 Plugin 'vhda/verilog_systemverilog.vim', {'type': 'start'}
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -200,6 +201,7 @@ PackAdd! auto-pairs
 PackAdd! vim-endwise
 PackAdd! is.vim
 PackAdd! vim-which-key
+PackAdd! quick-scope
 
 function! myplugins#callback(plugname, before)
 
