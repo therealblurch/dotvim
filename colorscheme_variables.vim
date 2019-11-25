@@ -88,7 +88,11 @@ let s:blayu_dict.airlinetheme = 'colorscheme'
 
 let s:bluewery_dict = {}
 let s:bluewery_dict.name = 'bluewery'
+let s:bluewery_dict.comparison = 'fuzzy'
 let s:bluewery_dict.lightlinetheme = 'colorscheme'
+let s:bluewery_dict.variant_type = 'colorscheme'
+let s:bluewery_dict.variant_base = 'bluewery'
+let s:bluewery_dict.variants = ['', '-light']
 
 let s:candid_dict = {}
 let s:candid_dict.name = 'candid'
