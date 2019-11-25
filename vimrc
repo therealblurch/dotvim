@@ -371,10 +371,6 @@ autocmd VimEnter * call colorschemefunctions#SetLastColorscheme()
 command! -nargs=1 -complete=color Colorscheme call xolox#colorscheme_switcher#switch_to(<q-args>)
 " }}}
 
-" minisnip {{{
-let g:minisnip_trigger = '<leader>s'
-"}}}
-
 " mucomplete {{{
 if has('patch-8.0.0283')
 else
@@ -388,6 +384,11 @@ let g:mucomplete#enable_auto_at_startup=1
 let g:rainbow_active = 1
 " }}}
 
+" Snipmate {{{
+imap <leader>s <Plug>snipMateNextOrTrigger
+smap <leader>s <Plug>snipMateNextOrTrigger
+" }}}
+
 " System Verilog {{{
 nnoremap <leader>i :VerilogFollowInstance<CR>
 nnoremap <leader>I :VerilogFollowPort<CR>
@@ -398,6 +399,9 @@ nnoremap <leader>u :VerilogGotoInstanceStart<CR>
 let g:VPPreCommand = "source /home/data/smtd_design/bin/ss brent"
 " }}}
 
+" which-key {{{
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+" }}}
 call matchadd('ColorColumn', '\%81v', 100)
 
 " Status line {{{

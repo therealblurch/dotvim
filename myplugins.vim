@@ -11,18 +11,23 @@ Plugin 'chrisbra/NrrwRgn'
 Plugin 'drmikehenry/vim-fontsize'
 Plugin 'idanarye/vim-merginal'
 Plugin 'nishigori/increment-activator'
+Plugin 'garbas/vim-snipmate'
+Plugin 'haya14busa/is.vim'
+Plugin 'honza/vim-snippets'
 Plugin 'itchyny/lightline.vim'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'joereynolds/vim-minisnip'
 Plugin 'junegunn/fzf.vim'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'junegunn/vim-peekaboo', {'type': 'start'}
 Plugin 'kshenoy/vim-signature'
 Plugin 'lifepillar/vim-mucomplete'
+Plugin 'liuchengxu/vim-which-key'
 Plugin 'luochen1990/rainbow'
 Plugin 'machakann/vim-highlightedyank'
+Plugin 'MarcWeber/vim-addon-mw-utils', {'type': 'start'}
 Plugin 'markonm/traces.vim'
 Plugin 'myusuf3/numbers.vim'
+Plugin 'pelodelfuego/vim-swoop'
 Plugin 'rbong/vim-flog'
 Plugin 'rhysd/committia.vim',                    {'type': 'start'}
 Plugin 'rhysd/conflict-marker.vim'
@@ -33,6 +38,7 @@ Plugin 'sainnhe/lightline_foobar.vim'
 Plugin 'taohexxx/lightline-buffer'
 Plugin 'tommcdo/vim-lion'
 Plugin 'tomtom/tcomment_vim'
+Plugin 'tomtom/tlib_vim', {'type': 'start'}
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
@@ -43,6 +49,7 @@ Plugin 'tpope/vim-speeddating'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tyru/capture.vim'
+Plugin 'unblevable/quick-scope'
 Plugin 'vhda/verilog_systemverilog.vim', {'type': 'start'}
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -197,6 +204,9 @@ PackAdd! vim-devicons
 PackAdd! vim-highlightedyank
 PackAdd! auto-pairs
 PackAdd! vim-endwise
+PackAdd! is.vim
+PackAdd! vim-which-key
+PackAdd! quick-scope
 
 function! myplugins#callback(plugname, before)
 
@@ -232,6 +242,8 @@ function! myplugins#callback(plugname, before)
             \ || a:plugname == "vim-textobj-between"
             \ || a:plugname == "vim-textobj-keyvalue"
       PackAdd! vim-textobj-user
+   elseif a:plugname == "vim-snipmate"
+      PackAdd! vim-snippets
    endif
 
 endfunction
