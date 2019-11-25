@@ -11,20 +11,20 @@ Plugin 'chrisbra/NrrwRgn'
 Plugin 'drmikehenry/vim-fontsize'
 Plugin 'idanarye/vim-merginal'
 Plugin 'nishigori/increment-activator'
-Plugin 'garbas/vim-snipmate', {'type': 'start'}
+Plugin 'garbas/vim-snipmate'
 Plugin 'haya14busa/is.vim'
-Plugin 'honza/vim-snippets', {'type': 'start'}
+Plugin 'honza/vim-snippets'
 Plugin 'itchyny/lightline.vim'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'junegunn/fzf.vim'
 Plugin 'junegunn/vim-easy-align'
-Plugin 'junegunn/vim-peekaboo', {'type': 'start'}
+Plugin 'junegunn/vim-peekaboo',                  {'type': 'start'}
 Plugin 'kshenoy/vim-signature'
 Plugin 'lifepillar/vim-mucomplete'
 Plugin 'liuchengxu/vim-which-key'
 Plugin 'luochen1990/rainbow'
 Plugin 'machakann/vim-highlightedyank'
-Plugin 'MarcWeber/vim-addon-mw-utils', {'type': 'start'}
+Plugin 'MarcWeber/vim-addon-mw-utils',           {'type': 'start'}
 Plugin 'markonm/traces.vim'
 Plugin 'myusuf3/numbers.vim'
 Plugin 'pelodelfuego/vim-swoop'
@@ -38,7 +38,7 @@ Plugin 'sainnhe/lightline_foobar.vim'
 Plugin 'taohexxx/lightline-buffer'
 Plugin 'tommcdo/vim-lion'
 Plugin 'tomtom/tcomment_vim'
-Plugin 'tomtom/tlib_vim', {'type': 'start'}
+Plugin 'tomtom/tlib_vim',                        {'type': 'start'}
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
@@ -50,13 +50,13 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tyru/capture.vim'
 Plugin 'unblevable/quick-scope'
-Plugin 'vhda/verilog_systemverilog.vim', {'type': 'start'}
+Plugin 'vhda/verilog_systemverilog.vim',         {'type': 'start'}
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-scripts/VisIncr'
 Plugin 'wellle/visual-split.vim'
-Plugin 'xolox/vim-misc', {'type': 'start'}
-Plugin 'xolox/vim-colorscheme-switcher', {'type': 'start'}
+Plugin 'xolox/vim-misc',                         {'type': 'start'}
+Plugin 'xolox/vim-colorscheme-switcher',         {'type': 'start'}
 Plugin 'Yggdroot/indentline'
 Plugin 'zhuzhzh/verilog_emacsauto.vim'
 
@@ -207,6 +207,8 @@ PackAdd! vim-endwise
 PackAdd! is.vim
 PackAdd! vim-which-key
 PackAdd! quick-scope
+PackAdd! vim-snipmate
+PackAdd! vim-snippets
 
 function! myplugins#callback(plugname, before)
 
