@@ -12,7 +12,8 @@ Plugin 'drmikehenry/vim-fontsize'
 Plugin 'idanarye/vim-merginal'
 Plugin 'nishigori/increment-activator'
 Plugin 'garbas/vim-snipmate'
-Plugin 'haya14busa/is.vim'
+Plugin 'haya14busa/incsearch.vim'
+Plugin 'haya14busa/incsearch-fuzzy.vim'
 Plugin 'honza/vim-snippets'
 Plugin 'itchyny/lightline.vim'
 Plugin 'jiangmiao/auto-pairs'
@@ -27,6 +28,7 @@ Plugin 'machakann/vim-highlightedyank'
 Plugin 'MarcWeber/vim-addon-mw-utils',           {'type': 'start'}
 Plugin 'markonm/traces.vim'
 Plugin 'myusuf3/numbers.vim'
+Plugin 'osyo-manga/vim-anzu',                    {'type': 'start'}
 Plugin 'pelodelfuego/vim-swoop'
 Plugin 'rbong/vim-flog'
 Plugin 'rhysd/committia.vim',                    {'type': 'start'}
@@ -204,7 +206,9 @@ PackAdd! vim-devicons
 PackAdd! vim-highlightedyank
 PackAdd! auto-pairs
 PackAdd! vim-endwise
-PackAdd! is.vim
+PackAdd! vim-anzu
+PackAdd! incsearch.vim
+PackAdd! incsearch-fuzzy.vim
 PackAdd! vim-which-key
 PackAdd! quick-scope
 PackAdd! vim-snipmate
