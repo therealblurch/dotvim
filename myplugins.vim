@@ -213,6 +213,7 @@ function! myplugins#callback(plugname, before)
    if !a:before
       if a:plugname == "vim-airline"
          let g:airline_section_x = airline#section#create_right(['%-20{myfunctions#CurrentColorscheme()}', 'bookmark', 'tagbar', 'vista', 'gutentags', 'grepper', 'filetype'])
+         let g:airline_section_c = airline#section#create(['%<', 'file', g:airline_symbols.space, 'readonly', '%{myfunctions#MU()}'])
       endif
    endif
 
