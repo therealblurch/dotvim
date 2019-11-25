@@ -23,6 +23,7 @@ Plugin 'lifepillar/vim-mucomplete'
 Plugin 'liuchengxu/vim-which-key'
 Plugin 'luochen1990/rainbow'
 Plugin 'machakann/vim-highlightedyank'
+Plugin 'MarcWeber/vim-addon-mw-utils', {'type': 'start'}
 Plugin 'markonm/traces.vim'
 Plugin 'myusuf3/numbers.vim'
 Plugin 'pelodelfuego/vim-swoop'
@@ -36,6 +37,7 @@ Plugin 'sainnhe/lightline_foobar.vim'
 Plugin 'taohexxx/lightline-buffer'
 Plugin 'tommcdo/vim-lion'
 Plugin 'tomtom/tcomment_vim'
+Plugin 'tomtom/tlib_vim', {'type': 'start'}
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
@@ -239,7 +241,7 @@ function! myplugins#callback(plugname, before)
             \ || a:plugname == "vim-textobj-between"
             \ || a:plugname == "vim-textobj-keyvalue"
       PackAdd! vim-textobj-user
-   elseif a:Plugin == "vim-snipmate"
+   elseif a:plugname == "vim-snipmate"
       PackAdd! vim-snippets
    endif
 
