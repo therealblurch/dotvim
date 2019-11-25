@@ -180,6 +180,14 @@ let g:airline_theme_map = {
 
 " }}}
 
+" autopairs {{{
+" Map space so that autopairs works with mucomplete
+let g:AutoPairsMapSpace = 0
+imap <silent> <expr> <space> pumvisible()
+            \ ? "<space>"
+            \ : "<c-r>=AutoPairsSpace()<cr>"
+" }}}
+
 " buftabline {{{
 let g:buftabline_numbers = 1
 let g:buftabline_indicators = 1
@@ -374,10 +382,31 @@ command! -nargs=1 -complete=color Colorscheme call xolox#colorscheme_switcher#sw
 " mucomplete {{{
 if has('patch-8.0.0283')
 else
-    imap <Plug>MyCR <Plug>(MUcompleteCR)
+    let g:AutoPairsMapCR = 0
+    imap <Plug>MyCR <Plug>(MUcompleteCR)<Plug>AutoPairsReturn
     imap <cr> <Plug>MyCR
 endif
 let g:mucomplete#enable_auto_at_startup=1
+
+imap <expr> <right> mucomplete#extend_fwd("\<right>")
+imap <expr> <left> mucomplete#extend_bwd("\<left>") 
+
+let g:mucomplete#chains = {
+            \ 'default': ['snip', 'path', 'omni', 'keyn', 'dict', 'uspl'],
+            \ 'verilog_systemverilog': ['snip', 'tags', 'path', 'omni', 'keyn', 'dict', 'uspl'],
+            \ 'vim': ['snip', 'path', 'cmd', 'keyn'],
+            \ }
+
+inoremap <plug>MyEnter <cr>
+imap <silent> <expr> <plug>MyCR (pumvisible()
+            \ ? "\<c-y>\<plug>snipMateTrigger"
+            \ : "\<plug>MyEnter<plug>AutoPairsReturn")
+imap <cr> <plug>MyCR
+
+" }}}
+
+" peekaboo {{{
+let g:peekaboo_ins_prefix = '<c-x>'
 " }}}
 
 " Rainbow {{{
@@ -387,6 +416,9 @@ let g:rainbow_active = 1
 " Snipmate {{{
 imap <leader>s <Plug>snipMateNextOrTrigger
 smap <leader>s <Plug>snipMateNextOrTrigger
+
+let g:snipMate = {}
+let g:snipMate['no_match_completion_feedkeys_chars'] = ''
 " }}}
 
 " System Verilog {{{
