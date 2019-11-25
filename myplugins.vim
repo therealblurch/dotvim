@@ -16,6 +16,7 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'joereynolds/vim-minisnip'
 Plugin 'junegunn/fzf.vim'
 Plugin 'junegunn/vim-easy-align'
+Plugin 'junegunn/vim-peekaboo', {'type': 'start'}
 Plugin 'kshenoy/vim-signature'
 Plugin 'lifepillar/vim-mucomplete'
 Plugin 'luochen1990/rainbow'
