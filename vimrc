@@ -371,10 +371,6 @@ autocmd VimEnter * call colorschemefunctions#SetLastColorscheme()
 command! -nargs=1 -complete=color Colorscheme call xolox#colorscheme_switcher#switch_to(<q-args>)
 " }}}
 
-" minisnip {{{
-let g:minisnip_trigger = '<leader>s'
-"}}}
-
 " mucomplete {{{
 if has('patch-8.0.0283')
 else
