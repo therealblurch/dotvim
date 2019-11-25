@@ -86,3 +86,8 @@ function! myfunctions#ResCur()
       return 1
    endif
 endfunction
+
+function! myfunctions#MU()
+   return get(g:mucomplete#msg#short_methods,
+            \ get(g:, 'mucomplete_current_method', ''), '')
+endfunction

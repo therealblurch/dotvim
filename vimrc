@@ -427,6 +427,7 @@ set statusline+=
 set statusline+=%{StatuslineGit()}
 set statusline+=\ %f
 set statusline+=%m\ 
+set statusline+=%{myfunctions#MU()}\ 
 set statusline+=%=
 set statusline+=%{myfunctions#CurrentColorscheme()}\ 
 set statusline+=%#CursorColumn#
