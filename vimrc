@@ -267,12 +267,17 @@ map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
 
 let g:incsearch#auto_nohlsearch = 1
+let g:asterisk#keeppos = 1
 map n  <Plug>(incsearch-nohl)<Plug>(anzu-n-with-echo)
 map N  <Plug>(incsearch-nohl)<Plug>(anzu-N-with-echo)
-map *  <Plug>(incsearch-nohl-*)
-map #  <Plug>(incsearch-nohl-#)
-map g* <Plug>(incsearch-nohl-g*)
-map g# <Plug>(incsearch-nohl-g#)
+map *  <Plug>(incsearch-nohl)<Plug>(asterisk-*)
+map #  <Plug>(incsearch-nohl)<Plug>(asterisk-#)
+map g* <Plug>(incsearch-nohl)<Plug>(asterisk-g*)
+map g# <Plug>(incsearch-nohl)<Plug>(asterisk-g#)
+map z*  <Plug>(incsearch-nohl)<Plug>(asterisk-z*)
+map z#  <Plug>(incsearch-nohl)<Plug>(asterisk-z#)
+map zg* <Plug>(incsearch-nohl)<Plug>(asterisk-zg*)
+map zg# <Plug>(incsearch-nohl)<Plug>(asterisk-zg#)
 
 function! s:config_fuzzy(...) abort
   return extend(copy({

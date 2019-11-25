@@ -14,6 +14,7 @@ Plugin 'nishigori/increment-activator'
 Plugin 'garbas/vim-snipmate'
 Plugin 'haya14busa/incsearch.vim'
 Plugin 'haya14busa/incsearch-fuzzy.vim'
+Plugin 'haya14busa/vim-asterisk'
 Plugin 'honza/vim-snippets'
 Plugin 'itchyny/lightline.vim'
 Plugin 'jiangmiao/auto-pairs'
@@ -209,6 +210,7 @@ PackAdd! vim-endwise
 PackAdd! vim-anzu
 PackAdd! incsearch.vim
 PackAdd! incsearch-fuzzy.vim
+PackAdd! vim-asterisk
 PackAdd! vim-which-key
 PackAdd! quick-scope
 PackAdd! vim-snipmate
