@@ -111,6 +111,8 @@ augroup resCur
     autocmd!
     autocmd BufWinEnter * call myfunctions#ResCur()
 augroup END
+
+autocmd FileType gitcommit setlocal spell
 " }}}
 
 "Colorscheme Options {{{
