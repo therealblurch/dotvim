@@ -271,7 +271,7 @@ endif
    let g:lightline = {}
    let g:lightline.active = {
                             \ 'left': [['mode', 'paste'],
-                            \         ['gitgutter', 'fugitive', 'readonly', 'filename']],
+                            \         ['gitgutter', 'fugitive', 'readonly', 'filename', 'mucomplete']],
                             \ 'right': [['obsession', 'lineinfo'],
                             \          ['percent', 'winform', 'pomodoro'],
                             \          ['fileformat', 'fileencoding', 'filetype', 'colorscheme']]
@@ -297,7 +297,8 @@ endif
                                         \ 'bufferinfo': 'lightline#buffer#bufferinfo',
                                         \ 'gitgutter': 'lightlinefunctions#LightlineGitgutter',
                                         \ 'pomodoro': 'lightlinefunctions#PomodoroStatus',
-                                        \ 'obsession': 'ObsessionStatus'
+                                        \ 'obsession': 'ObsessionStatus',
+                                        \ 'mucomplete': 'myfunctions#MU'
                                         \ }
     let g:lightline.tabline = {
                              \ 'left': [ [ 'bufferinfo' ],
