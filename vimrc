@@ -384,6 +384,11 @@ let g:mucomplete#enable_auto_at_startup=1
 let g:rainbow_active = 1
 " }}}
 
+" Snipmate {{{
+imap <leader>s <Plug>snipMateNextOrTrigger
+smap <leader>s <Plug>snipMateNextOrTrigger
+" }}}
+
 " System Verilog {{{
 nnoremap <leader>i :VerilogFollowInstance<CR>
 nnoremap <leader>I :VerilogFollowPort<CR>
