@@ -226,6 +226,8 @@ let s:forest_night_dict.airlinetheme = 'colorscheme'
 let s:greygull_dict = {}
 let s:greygull_dict.name = 'greygull'
 let s:greygull_dict.airlinetheme = 'colorscheme'
+let s:greygull_dict.variant_type = "colorscheme_group"
+let s:greygull_dict.variants = g:seadbird_themes
 
 let s:gruvbox_material_dict = {}
 let s:gruvbox_material_dict.name = 'gruvbox-material'
@@ -331,6 +333,8 @@ let s:pencil_dict.variant_type = 'background'
 let s:petrel_dict = {}
 let s:petrel_dict.name = 'petrel'
 let s:petrel_dict.airlinetheme = 'colorscheme'
+let s:petrel_dict.variant_type = "colorscheme_group"
+let s:petrel_dict.variants = g:seadbird_themes
 
 let s:plastic_dict = {}
 let s:plastic_dict.name = 'plastic'
@@ -348,6 +352,8 @@ let s:sacredforest_dict.lightlinetheme = 'colorscheme'
 let s:seagull_dict = {}
 let s:seagull_dict.name = 'seagull'
 let s:seagull_dict.airlinetheme = 'colorscheme'
+let s:seagull_dict.variant_type = "colorscheme_group"
+let s:seagull_dict.variants = g:seadbird_themes
 
 let s:sialoquent_dict = {}
 let s:sialoquent_dict.name = 'sialoquent'
@@ -397,6 +403,8 @@ let s:stellarized_dict.variant_type = 'background'
 let s:stormpetrel_dict = {}
 let s:stormpetrel_dict.name = 'stormpetrel'
 let s:stormpetrel_dict.airlinetheme = 'colorscheme'
+let s:stormpetrel_dict.variant_type = "colorscheme_group"
+let s:stormpetrel_dict.variants = g:seadbird_themes
 
 let s:tender_dict = {}
 let s:tender_dict.name = 'tender'

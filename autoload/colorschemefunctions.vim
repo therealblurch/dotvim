@@ -79,6 +79,9 @@ function! colorschemefunctions#SchemeVariant(delta)
                        let &background = (&background == "dark") ? "light" : "dark"
                     endif
                     exe 'colors' l:schemes[((a:delta+index(l:schemes, g:colors_name)) % l:num_variants + l:num_variants) % l:num_variants]
+                elseif color.variant_type == "colorscheme_group"
+                    let l:num_variants = len(color.variants)
+                    exe 'colors' color.variants[((a:delta+index(color.variants, g:colors_name)) % l:num_variants + l:num_variants) % l:num_variants]
                 elseif color.variant_type == "vimspectr"
                     let l:num_variants = len(color.variants)
                     let l:variants = deepcopy(color.variants)
