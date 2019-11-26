@@ -108,7 +108,6 @@ Plugin 'davidklsn/vim-sialoquent',               {'package': 'colors', 'type': '
 Plugin 'dikiaap/minimalist',                     {'package': 'colors', 'type': 'start'}
 Plugin 'doums/darcula',                          {'package': 'colors', 'type': 'start'}
 Plugin 'dracula/vim',                            {'package': 'colors', 'type': 'start', 'name': 'dracula'}
-Plugin 'endel/vim-github-colorscheme',           {'package': 'colors', 'type': 'start'}
 Plugin 'flrnd/candid.vim',                       {'package': 'colors', 'type': 'start'}
 Plugin 'flrnd/plastic.vim',                      {'package': 'colors', 'type': 'start'}
 Plugin 'habamax/vim-colors-defminus',            {'package': 'colors', 'type': 'start'}

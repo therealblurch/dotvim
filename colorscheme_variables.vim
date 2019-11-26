@@ -184,10 +184,6 @@ let s:garbage_oracle_dict.lightlinetheme = 'GarbageOracle'
 let s:garbage_oracle_dict.runtime = 'true'
 let s:garbage_oracle_dict.variant_type = 'background'
 
-let s:github_dict = {}
-let s:github_dict.name = 'github'
-let s:github_dict.airlinetheme = 'colorscheme'
-
 let s:greygull_dict = {}
 let s:greygull_dict.name = 'greygull'
 let s:greygull_dict.airlinetheme = 'colorscheme'
