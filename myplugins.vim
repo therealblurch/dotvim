@@ -110,7 +110,6 @@ Plugin 'doums/darcula',                          {'package': 'colors', 'type': '
 Plugin 'dracula/vim',                            {'package': 'colors', 'type': 'start', 'name': 'dracula'}
 Plugin 'flrnd/candid.vim',                       {'package': 'colors', 'type': 'start'}
 Plugin 'flrnd/plastic.vim',                      {'package': 'colors', 'type': 'start'}
-Plugin 'habamax/vim-colors-defnoche',            {'package': 'colors', 'type': 'start'}
 Plugin 'hachy/eva01.vim',                        {'package': 'colors', 'type': 'start'}
 Plugin 'haishanh/night-owl.vim',                 {'package': 'colors', 'type': 'start'}
 Plugin 'HenryNewcomer/vim-theme-papaya',         {'package': 'colors', 'type': 'start'}
