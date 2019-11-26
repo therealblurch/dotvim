@@ -86,7 +86,6 @@ Plugin 'vimtaku/vim-textobj-keyvalue',          {'type': 'start'}
 Plugin 'alexanderjeurissen/lumiere.vim',         {'package': 'colors', 'type': 'start'}
 Plugin 'archseer/colibri.vim',                   {'package': 'colors', 'type': 'start'}
 Plugin 'arcticicestudio/nord-vim',               {'package': 'colors', 'type': 'start', 'branch': 'develop'}
-Plugin 'arzyu/vim-colors-celadonite',            {'package': 'colors', 'type': 'start'}
 Plugin 'adlawson/vim-sorcerer',                  {'package': 'colors', 'type': 'start'}
 Plugin 'agreco/vim-citylights',                  {'package': 'colors', 'type': 'start'}
 Plugin 'agude/vim-eldar',                        {'package': 'colors', 'type': 'start'}
