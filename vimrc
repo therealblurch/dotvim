@@ -27,6 +27,7 @@ set nowrap
 set path=**
 set runtimepath+=~/.fzf
 set runtimepath+=~/.vim/plug/onehalf/vim
+set scrolloff=10
 set sessionoptions=blank,buffers,curdir,folds,tabpages,winsize,globals
 set shortmess+=filmnrxoOtTc
 set showcmd
