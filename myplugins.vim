@@ -6,83 +6,83 @@ augroup myplugins | au! | augroup END
 
 Plugin 'ap/vim-buftabline'
 Plugin 'brooth/far.vim'
-Plugin 'airblade/vim-gitgutter'
+Plugin 'airblade/vim-gitgutter',                {'type': 'start'}
 Plugin 'chrisbra/NrrwRgn'
 Plugin 'drmikehenry/vim-fontsize'
 Plugin 'idanarye/vim-merginal'
 Plugin 'nishigori/increment-activator'
-Plugin 'garbas/vim-snipmate'
-Plugin 'haya14busa/incsearch.vim'
-Plugin 'haya14busa/incsearch-fuzzy.vim'
+Plugin 'garbas/vim-snipmate',                   {'type': 'start'}
+Plugin 'haya14busa/incsearch.vim',              {'type': 'start'}
+Plugin 'haya14busa/incsearch-fuzzy.vim',        {'type': 'start'}
 Plugin 'haya14busa/vim-asterisk'
-Plugin 'honza/vim-snippets'
+Plugin 'honza/vim-snippets',                    {'type': 'start'}
 Plugin 'itchyny/lightline.vim'
-Plugin 'jiangmiao/auto-pairs'
+Plugin 'jiangmiao/auto-pairs',                  {'type': 'start'}
 Plugin 'junegunn/fzf.vim'
 Plugin 'junegunn/vim-easy-align'
-Plugin 'junegunn/vim-peekaboo',                  {'type': 'start'}
-Plugin 'kshenoy/vim-signature'
-Plugin 'lifepillar/vim-mucomplete'
-Plugin 'liuchengxu/vim-which-key'
+Plugin 'junegunn/vim-peekaboo',                 {'type': 'start'}
+Plugin 'kshenoy/vim-signature',                 {'type': 'start'}
+Plugin 'lifepillar/vim-mucomplete',             {'type': 'start'}
+Plugin 'liuchengxu/vim-which-key',              {'type': 'start'}
 Plugin 'luochen1990/rainbow'
-Plugin 'machakann/vim-highlightedyank'
-Plugin 'MarcWeber/vim-addon-mw-utils',           {'type': 'start'}
-Plugin 'markonm/traces.vim'
-Plugin 'myusuf3/numbers.vim'
-Plugin 'osyo-manga/vim-anzu',                    {'type': 'start'}
+Plugin 'machakann/vim-highlightedyank',         {'type': 'start'},                     {'type': 'start'}
+Plugin 'MarcWeber/vim-addon-mw-utils',          {'type': 'start'}
+Plugin 'markonm/traces.vim',                    {'type': 'start'}
+Plugin 'myusuf3/numbers.vim',                   {'type': 'start'},                     {'type': 'start'}
+Plugin 'osyo-manga/vim-anzu',                   {'type': 'start'}
 Plugin 'pelodelfuego/vim-swoop'
 Plugin 'rbong/vim-flog'
-Plugin 'rhysd/committia.vim',                    {'type': 'start'}
+Plugin 'rhysd/committia.vim',                   {'type': 'start'}
 Plugin 'rhysd/conflict-marker.vim'
 Plugin 'rhysd/git-messenger.vim'
 Plugin 'rmolin88/pomodoro.vim'
-Plugin 'ryanoasis/vim-devicons'
+Plugin 'ryanoasis/vim-devicons',                {'type': 'start'}
 Plugin 'sainnhe/lightline_foobar.vim'
 Plugin 'taohexxx/lightline-buffer'
 Plugin 'tommcdo/vim-lion'
 Plugin 'tomtom/tcomment_vim'
-Plugin 'tomtom/tlib_vim',                        {'type': 'start'}
-Plugin 'tpope/vim-dispatch'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-fugitive'
+Plugin 'tomtom/tlib_vim',                       {'type': 'start'}
+Plugin 'tpope/vim-dispatch',                    {'type': 'start'}
+Plugin 'tpope/vim-endwise',                     {'type': 'start'}
+Plugin 'tpope/vim-fugitive',                    {'type': 'start'}
 Plugin 'tpope/vim-obsession'
-Plugin 'tpope/vim-sensible'
-Plugin 'tpope/vim-sleuth'
+Plugin 'tpope/vim-sensible',                    {'type': 'start'}
+Plugin 'tpope/vim-sleuth',                      {'type': 'start'}
 Plugin 'tpope/vim-speeddating'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tyru/capture.vim'
-Plugin 'unblevable/quick-scope'
-Plugin 'vhda/verilog_systemverilog.vim',         {'type': 'start'}
+Plugin 'unblevable/quick-scope',                {'type': 'start'}
+Plugin 'vhda/verilog_systemverilog.vim',        {'type': 'start'}
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-scripts/VisIncr'
 Plugin 'wellle/visual-split.vim'
-Plugin 'xolox/vim-misc',                         {'type': 'start'}
-Plugin 'xolox/vim-colorscheme-switcher',         {'type': 'start'}
-Plugin 'Yggdroot/indentline'
+Plugin 'xolox/vim-misc',                        {'type': 'start'}
+Plugin 'xolox/vim-colorscheme-switcher',        {'type': 'start'}
+Plugin 'Yggdroot/indentline',                   {'type': 'start'}
 Plugin 'zhuzhzh/verilog_emacsauto.vim'
 
-Plugin 'adriaanzon/vim-textobj-matchit'
-Plugin 'deathlyfrantic/vim-textobj-blanklines'
-Plugin 'fvictorio/vim-textobj-backticks'
-Plugin 'gilligan/textobj-gitgutter'
-Plugin 'glts/vim-textobj-comment'
-Plugin 'glts/vim-textobj-indblock'
-Plugin 'Julian/vim-textobj-brace'
-Plugin 'kana/vim-textobj-datetime'
-Plugin 'kana/vim-textobj-diff'
-Plugin 'kana/vim-textobj-entire'
-Plugin 'kana/vim-textobj-fold'
-Plugin 'kana/vim-textobj-function'
-Plugin 'kana/vim-textobj-indent'
-Plugin 'kana/vim-textobj-user'
-Plugin 'paulhybryant/vim-textobj-path'
-Plugin 'rhysd/vim-textobj-continuous-line'
-Plugin 'saaguero/vim-textobj-pastedtext'
-Plugin 'sgur/vim-textobj-parameter'
-Plugin 'thinca/vim-textobj-between'
-Plugin 'vimtaku/vim-textobj-keyvalue'
+Plugin 'adriaanzon/vim-textobj-matchit',        {'type': 'start'}
+Plugin 'deathlyfrantic/vim-textobj-blanklines', {'type': 'start'}
+Plugin 'fvictorio/vim-textobj-backticks',       {'type': 'start'}
+Plugin 'gilligan/textobj-gitgutter',            {'type': 'start'}
+Plugin 'glts/vim-textobj-comment',              {'type': 'start'}
+Plugin 'glts/vim-textobj-indblock',             {'type': 'start'}
+Plugin 'Julian/vim-textobj-brace',              {'type': 'start'}
+Plugin 'kana/vim-textobj-datetime',             {'type': 'start'}
+Plugin 'kana/vim-textobj-diff',                 {'type': 'start'}
+Plugin 'kana/vim-textobj-entire',               {'type': 'start'}
+Plugin 'kana/vim-textobj-fold',                 {'type': 'start'}
+Plugin 'kana/vim-textobj-function',             {'type': 'start'}
+Plugin 'kana/vim-textobj-indent',               {'type': 'start'}
+Plugin 'kana/vim-textobj-user',                 {'type': 'start'}
+Plugin 'paulhybryant/vim-textobj-path',         {'type': 'start'}
+Plugin 'rhysd/vim-textobj-continuous-line',     {'type': 'start'}
+Plugin 'saaguero/vim-textobj-pastedtext',       {'type': 'start'}
+Plugin 'sgur/vim-textobj-parameter',            {'type': 'start'}
+Plugin 'thinca/vim-textobj-between',            {'type': 'start'}
+Plugin 'vimtaku/vim-textobj-keyvalue',          {'type': 'start'}
 
 Plugin 'alexanderjeurissen/lumiere.vim',         {'package': 'colors', 'type': 'start'}
 Plugin 'Alvarocz/vim-northpole',                 {'package': 'colors', 'type': 'start'}
@@ -197,28 +197,6 @@ command! -nargs=1 -complete=custom,PackList
    \ PackOpenUrl packadd autopac | runtime OPT autopac.vim | call openbrowser#open(
    \ autopac#impl#pluginfo(<q-args>).url)
 
-PackAdd! vim-sensible
-PackAdd! vim-sleuth
-PackAdd! vim-mucomplete
-PackAdd! vim-fugitive
-PackAdd! vim-signature
-PackAdd! vim-gitgutter
-PackAdd! traces.vim
-PackAdd! numbers.vim
-PackAdd! indentline
-PackAdd! vim-devicons
-PackAdd! vim-highlightedyank
-PackAdd! auto-pairs
-PackAdd! vim-endwise
-PackAdd! vim-anzu
-PackAdd! incsearch.vim
-PackAdd! incsearch-fuzzy.vim
-PackAdd! vim-asterisk
-PackAdd! vim-which-key
-PackAdd! quick-scope
-PackAdd! vim-snipmate
-PackAdd! vim-snippets
-
 function! myplugins#callback(plugname, before)
 
    if !a:before
@@ -234,26 +212,6 @@ function! myplugins#callback(plugname, before)
       PackAdd! lightline-buffer
       PackAdd! lightline_foobar.vim
       PackAdd! pomodoro.vim
-   elseif a:plugname == "vim-textobj-matchit"
-            \ || a:plugname == "vim-textobj-blanklines"
-            \ || a:plugname == "vim-textobj-backticks"
-            \ || a:plugname == "textobj-gitgutter"
-            \ || a:plugname == "vim-textobj-comment"
-            \ || a:plugname == "vim-textobj-indblock"
-            \ || a:plugname == "vim-textobj-brace"
-            \ || a:plugname == "vim-textobj-datetime"
-            \ || a:plugname == "vim-textobj-diff"
-            \ || a:plugname == "vim-textobj-entire"
-            \ || a:plugname == "vim-textobj-fold"
-            \ || a:plugname == "vim-textobj-function"
-            \ || a:plugname == "vim-textobj-indent"
-            \ || a:plugname == "vim-textobj-path"
-            \ || a:plugname == "vim-textobj-continuous-line"
-            \ || a:plugname == "vim-textobj-pastedtext"
-            \ || a:plugname == "vim-textobj-parameter"
-            \ || a:plugname == "vim-textobj-between"
-            \ || a:plugname == "vim-textobj-keyvalue"
-      PackAdd! vim-textobj-user
    endif
 
 endfunction
