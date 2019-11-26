@@ -38,6 +38,7 @@ Plugin 'rhysd/git-messenger.vim'
 Plugin 'rmolin88/pomodoro.vim'
 Plugin 'ryanoasis/vim-devicons',                {'type': 'start'}
 Plugin 'sainnhe/lightline_foobar.vim'
+Plugin 'scrooloose/nerdtree'
 Plugin 'taohexxx/lightline-buffer'
 Plugin 'tommcdo/vim-lion'
 Plugin 'tomtom/tcomment_vim'
@@ -60,6 +61,7 @@ Plugin 'vim-scripts/VisIncr'
 Plugin 'wellle/visual-split.vim'
 Plugin 'xolox/vim-misc',                        {'type': 'start'}
 Plugin 'xolox/vim-colorscheme-switcher',        {'type': 'start'}
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'Yggdroot/indentline',                   {'type': 'start'}
 Plugin 'zhuzhzh/verilog_emacsauto.vim'
 
@@ -212,6 +214,8 @@ function! myplugins#callback(plugname, before)
       PackAdd! lightline-buffer
       PackAdd! lightline_foobar.vim
       PackAdd! pomodoro.vim
+   elseif a:plugname == "nerdtree"
+      PackAdd! nerdtree-git-plugin
    endif
 
 endfunction

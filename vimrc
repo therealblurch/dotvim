@@ -437,6 +437,21 @@ imap <cr> <plug>MyCR
 
 " }}}
 
+" nerdtree {{{
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ 'Ignored'   : '☒',
+    \ "Unknown"   : "?"
+    \ }
+" }}}
+
 " peekaboo {{{
 let g:peekaboo_ins_prefix = '<c-x>'
 " }}}
