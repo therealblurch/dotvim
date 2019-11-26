@@ -123,10 +123,6 @@ let s:darcula_dict = {}
 let s:darcula_dict.name = 'darcula'
 let s:darcula_dict.lightlinetheme = 'darculaOriginal'
 
-let s:dark_purple_dict = {}
-let s:dark_purple_dict.name = 'dark_purple'
-let s:dark_purple_dict.lightlinetheme = 'colorscheme'
-
 let s:deep_space_dict = {}
 let s:deep_space_dict.name = 'deep-space'
 let s:deep_space_dict.lightlinetheme = 'deepspace'
@@ -189,10 +185,6 @@ let s:gruvbox_material_dict.runtime = 'true'
 let s:gruvbox_material_dict.airlinetheme = 'colorscheme'
 let s:gruvbox_material_dict.variant_type = 'gruvbox_material_background'
 let s:gruvbox_material_dict.variants = ['soft', 'medium', 'hard']
-
-let s:hybrid_dict = {}
-let s:hybrid_dict.name = 'hybrid'
-let s:hybrid_dict.airlinetheme = 'colorscheme'
 
 let s:hybrid_material_dict = {}
 let s:hybrid_material_dict.name = 'hybrid_material'
@@ -427,7 +419,6 @@ let g:colorscheme_map = [
          \ s:forest_night_dict,
          \ s:greygull_dict,
          \ s:gruvbox_material_dict,
-         \ s:hybrid_dict,
          \ s:hybrid_material_dict,
          \ s:hybrid_reverse_dict,
          \ s:iceberg_dict,
