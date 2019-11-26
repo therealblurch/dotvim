@@ -54,7 +54,7 @@ set wildignore+=tags
 set wildignore+=*.tar.*
 set wildmode=longest:full,full
 
-let mapleader = ','
+let mapleader = '\'
 
 " General maps to make life easier {{{
 
