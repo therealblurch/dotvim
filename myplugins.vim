@@ -12,9 +12,6 @@ Plugin 'drmikehenry/vim-fontsize'
 Plugin 'idanarye/vim-merginal'
 Plugin 'nishigori/increment-activator'
 Plugin 'garbas/vim-snipmate',                   {'type': 'start'}
-Plugin 'haya14busa/incsearch.vim',              {'type': 'start'}
-Plugin 'haya14busa/incsearch-fuzzy.vim',        {'type': 'start'}
-Plugin 'haya14busa/vim-asterisk',               {'type': 'start'}
 Plugin 'honza/vim-snippets',                    {'type': 'start'}
 Plugin 'itchyny/lightline.vim'
 Plugin 'jiangmiao/auto-pairs',                  {'type': 'start'}

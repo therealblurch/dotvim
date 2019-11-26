@@ -182,6 +182,14 @@ let g:airline_theme_map = {
 
 " }}}
 
+" anzu {{{
+nmap n <Plug>(anzu-n)
+nmap N <Plug>(anzu-N)
+nmap * <Plug>(anzu-star)
+nmap # <Plug>(anzu-sharp)
+" }}}
+
+
 " autopairs {{{
 " Map space so that autopairs works with mucomplete
 let g:AutoPairsMapSpace = 0
@@ -261,35 +269,6 @@ endif
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 nnoremap <Space>/ :Ag<SPACE>
-" }}}
-
-" incsearch {{{
-map /  <Plug>(incsearch-forward)
-map ?  <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
-
-let g:incsearch#auto_nohlsearch = 1
-let g:asterisk#keeppos = 1
-map n  <Plug>(incsearch-nohl)<Plug>(anzu-n-with-echo)
-map N  <Plug>(incsearch-nohl)<Plug>(anzu-N-with-echo)
-map *  <Plug>(incsearch-nohl)<Plug>(asterisk-*)
-map #  <Plug>(incsearch-nohl)<Plug>(asterisk-#)
-map g* <Plug>(incsearch-nohl)<Plug>(asterisk-g*)
-map g# <Plug>(incsearch-nohl)<Plug>(asterisk-g#)
-map z*  <Plug>(incsearch-nohl)<Plug>(asterisk-z*)
-map z#  <Plug>(incsearch-nohl)<Plug>(asterisk-z#)
-map zg* <Plug>(incsearch-nohl)<Plug>(asterisk-zg*)
-map zg# <Plug>(incsearch-nohl)<Plug>(asterisk-zg#)
-
-function! s:config_fuzzy(...) abort
-  return extend(copy({
-  \   'converters': [incsearch#config#fuzzy#converter()],
-  \   'is_expr': 0,
-  \   'is_stay': 1
-  \ }), get(a:, 1, {}))
-endfunction
-
-noremap <silent><expr> z/ incsearch#go(<SID>config_fuzzy())
 " }}}
 
 " Indentline {{{
