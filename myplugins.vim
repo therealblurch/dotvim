@@ -148,7 +148,6 @@ Plugin 'sainnhe/vim-color-desert-night',         {'package': 'colors', 'type': '
 Plugin 'sainnhe/edge',                           {'package': 'colors', 'type': 'start'}
 Plugin 'sainnhe/gruvbox-material',               {'package': 'colors', 'type': 'start'}
 Plugin 'sainnhe/vim-color-forest-night',         {'package': 'colors', 'type': 'start'}
-Plugin 'sansbrina/vim-garbage-oracle',           {'package': 'colors', 'type': 'start'}
 Plugin 'severij/vadelma',                        {'package': 'colors', 'type': 'start'}
 Plugin 'sfi0zy/atlantic-dark.vim',               {'package': 'colors', 'type': 'start'}
 Plugin 'sickill/vim-monokai',                    {'package': 'colors', 'type': 'start'}
