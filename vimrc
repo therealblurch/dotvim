@@ -459,8 +459,9 @@ let g:VPPreCommand = "source /home/data/smtd_design/bin/ss brent"
 " }}}
 
 " which-key {{{
-nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+nnoremap <silent> <leader> :WhichKey '\'<CR>
 " }}}
+
 call matchadd('ColorColumn', '\%81v', 100)
 
 " Status line {{{
