@@ -84,7 +84,6 @@ Plugin 'thinca/vim-textobj-between',            {'type': 'start'}
 Plugin 'vimtaku/vim-textobj-keyvalue',          {'type': 'start'}
 
 Plugin 'alexanderjeurissen/lumiere.vim',         {'package': 'colors', 'type': 'start'}
-Plugin 'Alvarocz/vim-northpole',                 {'package': 'colors', 'type': 'start'}
 Plugin 'archseer/colibri.vim',                   {'package': 'colors', 'type': 'start'}
 Plugin 'arcticicestudio/nord-vim',               {'package': 'colors', 'type': 'start', 'branch': 'develop'}
 Plugin 'arzyu/vim-colors-celadonite',            {'package': 'colors', 'type': 'start'}
