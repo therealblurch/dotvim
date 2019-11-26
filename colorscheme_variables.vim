@@ -196,10 +196,6 @@ let s:gruvbox_material_dict.airlinetheme = 'colorscheme'
 let s:gruvbox_material_dict.variant_type = 'gruvbox_material_background'
 let s:gruvbox_material_dict.variants = ['soft', 'medium', 'hard']
 
-let s:horizon_dict = {}
-let s:horizon_dict.name = 'horizon'
-let s:horizon_dict.lightlinetheme = 'colorscheme'
-
 let s:hybrid_dict = {}
 let s:hybrid_dict.name = 'hybrid'
 let s:hybrid_dict.airlinetheme = 'colorscheme'
