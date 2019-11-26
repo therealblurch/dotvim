@@ -25,10 +25,10 @@ Plugin 'kshenoy/vim-signature',                 {'type': 'start'}
 Plugin 'lifepillar/vim-mucomplete',             {'type': 'start'}
 Plugin 'liuchengxu/vim-which-key',              {'type': 'start'}
 Plugin 'luochen1990/rainbow'
-Plugin 'machakann/vim-highlightedyank',         {'type': 'start'},                     {'type': 'start'}
+Plugin 'machakann/vim-highlightedyank',         {'type': 'start'}
 Plugin 'MarcWeber/vim-addon-mw-utils',          {'type': 'start'}
 Plugin 'markonm/traces.vim',                    {'type': 'start'}
-Plugin 'myusuf3/numbers.vim',                   {'type': 'start'},                     {'type': 'start'}
+Plugin 'myusuf3/numbers.vim',                   {'type': 'start'}
 Plugin 'osyo-manga/vim-anzu',                   {'type': 'start'}
 Plugin 'pelodelfuego/vim-swoop'
 Plugin 'rbong/vim-flog'
