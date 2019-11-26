@@ -1,3 +1,45 @@
+let g:vimspectr_light_themes = [
+            \ 'vimspectr0-light'  , 'vimspectr30-light' , 'vimspectr60-light' ,
+            \ 'vimspectr90-light' , 'vimspectr120-light', 'vimspectr150-light',
+            \ 'vimspectr180-light', 'vimspectr210-light', 'vimspectr240-light',
+            \ 'vimspectr270-light', 'vimspectr300-light', 'vimspectr330-light',
+            \ 'vimspectrgrey-light'
+            \ ]
+
+let g:atelier_light_themes = [
+            \ 'Atelier_CaveLight',
+            \ 'Atelier_DuneLight',
+            \ 'Atelier_EstuaryLight',
+            \ 'Atelier_ForestLight',
+            \ 'Atelier_HeathLight',
+            \ 'Atelier_LakesideLight',
+            \ 'Atelier_PlateauLight',
+            \ 'Atelier_SavannaLight',
+            \ 'Atelier_SeasideLight',
+            \ 'Atelier_SulphurpoolLight',
+            \ ]
+
+let g:vimspectr_dark_themes = [
+            \ 'vimspectr0-dark'  , 'vimspectr30-dark' , 'vimspectr60-dark' ,
+            \ 'vimspectr90-dark' , 'vimspectr120-dark', 'vimspectr150-dark',
+            \ 'vimspectr180-dark', 'vimspectr210-dark', 'vimspectr240-dark',
+            \ 'vimspectr270-dark', 'vimspectr300-dark', 'vimspectr330-dark',
+            \ 'vimspectrgrey-dark'
+            \ ]
+
+let g:atelier_dark_themes = [
+            \ 'Atelier_CaveDark',
+            \ 'Atelier_DuneDark',
+            \ 'Atelier_EstuaryDark',
+            \ 'Atelier_ForestDark',
+            \ 'Atelier_HeathDark',
+            \ 'Atelier_LakesideDark',
+            \ 'Atelier_PlateauDark',
+            \ 'Atelier_SavannaDark',
+            \ 'Atelier_SeasideDark',
+            \ 'Atelier_SulphurpoolDark',
+            \ ]
+
 "g:colorscheme_map is a list of dictionaries that specify options for
 "colorschemes.  The dictionary keys are as follows:
 " name : the name of the colorscheme
@@ -459,48 +501,6 @@ let g:colorscheme_map = [
          \ s:vadelma_dict,
          \ s:zenburn_dict
          \ ]
-
-let g:vimspectr_light_themes = [
-            \ 'vimspectr0-light'  , 'vimspectr30-light' , 'vimspectr60-light' ,
-            \ 'vimspectr90-light' , 'vimspectr120-light', 'vimspectr150-light',
-            \ 'vimspectr180-light', 'vimspectr210-light', 'vimspectr240-light',
-            \ 'vimspectr270-light', 'vimspectr300-light', 'vimspectr330-light',
-            \ 'vimspectrgrey-light'
-            \ ]
-
-let g:atelier_light_themes = [
-            \ 'Atelier_CaveLight',
-            \ 'Atelier_DuneLight',
-            \ 'Atelier_EstuaryLight',
-            \ 'Atelier_ForestLight',
-            \ 'Atelier_HeathLight',
-            \ 'Atelier_LakesideLight',
-            \ 'Atelier_PlateauLight',
-            \ 'Atelier_SavannaLight',
-            \ 'Atelier_SeasideLight',
-            \ 'Atelier_SulphurpoolLight',
-            \ ]
-
-let g:vimspectr_dark_themes = [
-            \ 'vimspectr0-dark'  , 'vimspectr30-dark' , 'vimspectr60-dark' ,
-            \ 'vimspectr90-dark' , 'vimspectr120-dark', 'vimspectr150-dark',
-            \ 'vimspectr180-dark', 'vimspectr210-dark', 'vimspectr240-dark',
-            \ 'vimspectr270-dark', 'vimspectr300-dark', 'vimspectr330-dark',
-            \ 'vimspectrgrey-dark'
-            \ ]
-
-let g:atelier_dark_themes = [
-            \ 'Atelier_CaveDark',
-            \ 'Atelier_DuneDark',
-            \ 'Atelier_EstuaryDark',
-            \ 'Atelier_ForestDark',
-            \ 'Atelier_HeathDark',
-            \ 'Atelier_LakesideDark',
-            \ 'Atelier_PlateauDark',
-            \ 'Atelier_SavannaDark',
-            \ 'Atelier_SeasideDark',
-            \ 'Atelier_SulphurpoolDark',
-            \ ]
 
 let g:colorscheme_groups = {}
 let g:colorscheme_groups.group1 = g:vimspectr_light_themes
