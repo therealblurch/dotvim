@@ -415,7 +415,6 @@ let g:colorscheme_map = [
          \ s:cosme_dict,
          \ s:cosmic_latte_dict,
          \ s:darcula_dict,
-         \ s:dark_purple_dict,
          \ s:deep_space_dict,
          \ s:desert_night_dict,
          \ s:desertink_dict,
