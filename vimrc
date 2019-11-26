@@ -104,7 +104,6 @@ inoremap <F6> <C-R>=strftime("%c")<CR>
 
 nmap <silent> <leader>ls :PackAdd vim-surround<CR>
 nmap <silent> <leader>ll :PackAdd vim-lion<CR>
-nmap <silent> <leader>lto :PackAdd vim-textobj-entire<CR>
 " }}}
 
 " Miscellaneous autocmds {{{
