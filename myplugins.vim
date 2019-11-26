@@ -105,7 +105,6 @@ Plugin 'croaker/mustang-vim',                    {'package': 'colors', 'type': '
 Plugin 'cseelus/vim-colors-tone',                {'package': 'colors', 'type': 'start'}
 Plugin 'danilo-augusto/vim-afterglow',           {'package': 'colors', 'type': 'start'}
 Plugin 'davidklsn/vim-sialoquent',               {'package': 'colors', 'type': 'start'}
-Plugin 'dgraham/xcode-low-key-vim',              {'package': 'colors', 'type': 'start'}
 Plugin 'dikiaap/minimalist',                     {'package': 'colors', 'type': 'start'}
 Plugin 'doums/darcula',                          {'package': 'colors', 'type': 'start'}
 Plugin 'dracula/vim',                            {'package': 'colors', 'type': 'start', 'name': 'dracula'}
