@@ -120,6 +120,31 @@ let g:light_themes = [
             \ 'typewriter',
             \ ]
 
+let g:variable_themes = [
+            \ 'ayu',
+            \ 'colibri',
+            \ 'cosmic_latte',
+            \ 'edge',
+            \ 'gruvbox-material',
+            \ 'hybrid_material',
+            \ 'hybrid_reverse',
+            \ 'kuroi',
+            \ 'material',
+            \ 'materialbox',
+            \ 'one',
+            \ 'open-color',
+            \ 'PaperColor',
+            \ 'pencil',
+            \ 'quantum',
+            \ 'snow',
+            \ 'solarized8',
+            \ 'solarized8_flat',
+            \ 'solarized8_high',
+            \ 'solarized8_low',
+            \ 'space_vim_theme',
+            \ 'stellarized',
+            \ 'vadelma',
+            \ ]
 
 "g:colorscheme_map is a list of dictionaries that specify options for
 "colorschemes.  The dictionary keys are as follows:
@@ -599,3 +624,4 @@ let g:colorscheme_groups.group4 = g:atelier_dark_themes
 let g:colorscheme_groups.group5 = g:seadbird_themes
 let g:colorscheme_groups.group6 = g:dark_themes
 let g:colorscheme_groups.group7 = g:light_themes
+let g:colorscheme_groups.group8 = g:variable_themes
