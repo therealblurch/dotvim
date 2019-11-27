@@ -111,6 +111,15 @@ let g:dark_themes = [
             \ 'zenburn'
             \ ]
 
+let g:light_themes = [
+            \ 'bluewery-light',
+            \ 'corvine_light',
+            \ 'flattened_light',
+            \ 'lumiere',
+            \ 'onehalflight',
+            \ 'typewriter',
+            \ ]
+
 
 "g:colorscheme_map is a list of dictionaries that specify options for
 "colorschemes.  The dictionary keys are as follows:
@@ -589,3 +598,4 @@ let g:colorscheme_groups.group3 = g:atelier_light_themes
 let g:colorscheme_groups.group4 = g:atelier_dark_themes
 let g:colorscheme_groups.group5 = g:seadbird_themes
 let g:colorscheme_groups.group6 = g:dark_themes
+let g:colorscheme_groups.group7 = g:light_themes
