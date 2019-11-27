@@ -47,6 +47,71 @@ let g:seadbird_themes = [
             \ 'stormpetrel'
             \ ]
 
+let g:dark_themes = [
+            \ 'dracula',
+            \ 'nord',
+            \ 'afterglow',
+            \ 'apprentice',
+            \ 'atlantic-dark',
+            \ 'atlantis',
+            \ 'atom-dark',
+            \ 'atomified',
+            \ 'blackboard',
+            \ 'blayu',
+            \ 'bluewery',
+            \ 'borland',
+            \ 'candid',
+            \ 'citylights',
+            \ 'corvine',
+            \ 'cosme',
+            \ 'darcula',
+            \ 'deep-space',
+            \ 'desert-night',
+            \ 'desertink',
+            \ 'deus',
+            \ 'dragon-energy',
+            \ 'eldar',
+            \ 'eva01',
+            \ 'flattened_dark',
+            \ 'focuspoint',
+            \ 'foo-abyss',
+            \ 'foo-hyper',
+            \ 'foo-mrrobot',
+            \ 'forest-night',
+            \ 'iceberg',
+            \ 'jellybeans',
+            \ 'minimalist',
+            \ 'molokai',
+            \ 'monokai',
+            \ 'mustang',
+            \ 'night-owl',
+            \ 'nova',
+            \ 'odyssey',
+            \ 'onehalfdark',
+            \ 'panic',
+            \ 'photon',
+            \ 'plastic',
+            \ 'sacredforest',
+            \ 'sialoquent',
+            \ 'snazzy',
+            \ 'sorceror',
+            \ 'sourceror',
+            \ 'spring-night',
+            \ 'srcery',
+            \ 'substrata',
+            \ 'tender',
+            \ 'tequila-sunrise',
+            \ 'tokyo-metro',
+            \ 'tone',
+            \ 'typewriter-night',
+            \ 'vibrantink',
+            \ 'vividchalk',
+            \ 'wallaby',
+            \ 'wildcherry',
+            \ 'zenburn'
+            \ ]
+
+
 "g:colorscheme_map is a list of dictionaries that specify options for
 "colorschemes.  The dictionary keys are as follows:
 " name : the name of the colorscheme
@@ -523,3 +588,4 @@ let g:colorscheme_groups.group2 = g:vimspectr_dark_themes
 let g:colorscheme_groups.group3 = g:atelier_light_themes
 let g:colorscheme_groups.group4 = g:atelier_dark_themes
 let g:colorscheme_groups.group5 = g:seadbird_themes
+let g:colorscheme_groups.group6 = g:dark_themes
