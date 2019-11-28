@@ -65,7 +65,6 @@ let g:dark_themes = [
             \ 'desert-night',
             \ 'desertink',
             \ 'deus',
-            \ 'dragon-energy',
             \ 'eldar',
             \ 'eva01',
             \ 'flattened_dark',

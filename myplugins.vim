@@ -154,7 +154,6 @@ Plugin 'tpope/vim-vividchalk',                   {'package': 'colors', 'type': '
 Plugin 'tyrannicaltoucan/vim-deep-space',        {'package': 'colors', 'type': 'start'}
 Plugin 'victorze/foo',                           {'package': 'colors', 'type': 'start'}
 Plugin 'vim-scripts/vibrantink',                 {'package': 'colors', 'type': 'start'}
-Plugin 'wdhg/dragon-energy',                     {'package': 'colors', 'type': 'start'}
 Plugin 'wmvanvliet/vim-blackboard',              {'package': 'colors', 'type': 'start'}
 Plugin 'xero/sourcerer.vim',                     {'package': 'colors', 'type': 'start'}
 Plugin 'yous/vim-open-color',                    {'package': 'colors', 'type': 'start'}
