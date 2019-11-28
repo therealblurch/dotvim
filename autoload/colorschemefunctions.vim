@@ -49,14 +49,12 @@ function! colorschemefunctions#SchemeVariant(delta)
     for color in g:colorscheme_map
         if has_key (color, 'name') && ((g:colors_name =~ color.name && has_key(color, 'comparison') && color.comparison == 'fuzzy') || g:colors_name == color.name)
             if has_key(color, 'variant_type')
-                "BACKGROUND variant: Toggle between dark and light background.
                 if color.variant_type == "background"
                     let &background = (&background == "dark") ? "light" : "dark"
-                "COLORSCHEME variant: Toggle between light and dark versions
-                " of the same colorscheme.
                 else
                     let l:num_variants = len(color.variants)
                     let l:variants = deepcopy(color.variants)
+
                     if color.variant_type == 'colorscheme'
                         if color.variant_base == 'drop'
                             for variant in color.variants
@@ -68,8 +66,7 @@ function! colorschemefunctions#SchemeVariant(delta)
                         else
                             let l:variant_base = color.variant_base
                         endif
-                    elseif color.variant_type == 'colorscheme_bg'
-                        let l:variant_base = color.variant_base
+                        let l:schemes = map(l:variants, 'l:variant_base.v:val')
                     elseif color.variant_type == 'colorscheme_bg'
                         let l:variant_base = color.variant_base
                         let l:schemes = map(l:variants, 'l:variant_base.v:val')
@@ -120,7 +117,7 @@ function! colorschemefunctions#SchemeVariant(delta)
                         exe 'colors' l:next_scheme
                     endif
 
-                    if color.variant_type == 'colorscheme_bg' || color.variant_type == 'vimspectr' || color.variant_type == 'gruvbox_material_background' || color.variant_type == 'materialbox_contrast'
+                    if color.variant_type == 'colorscheme_bg' || color.variant_type == 'gruvbox_material_background' || color.variant_type == 'materialbox_contrast'
                         if a:delta+index(l:schemes, l:current_scheme) >= l:num_variants || a:delta+index(l:schemes, l:current_scheme) < 0
                             let &background = (&background == 'dark') ? 'light' : 'dark'
                         endif
