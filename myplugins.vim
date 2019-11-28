@@ -144,7 +144,6 @@ Plugin 'severij/vadelma',                        {'package': 'colors', 'type': '
 Plugin 'sfi0zy/atlantic-dark.vim',               {'package': 'colors', 'type': 'start'}
 Plugin 'sickill/vim-monokai',                    {'package': 'colors', 'type': 'start'}
 Plugin 'Siphalor/vim-atomified',                 {'package': 'colors', 'type': 'start'}
-Plugin 'sliminality/wild-cherry-vim',            {'package': 'colors', 'type': 'start'}
 Plugin 'srcery-colors/srcery-vim',               {'package': 'colors', 'type': 'start'}
 Plugin 'tjammer/blayu.vim',                      {'package': 'colors', 'type': 'start'}
 Plugin 'tomasr/molokai',                         {'package': 'colors', 'type': 'start'}

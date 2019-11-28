@@ -98,7 +98,6 @@ let g:dark_themes = [
             \ 'vibrantink',
             \ 'vividchalk',
             \ 'wallaby',
-            \ 'wildcherry',
             \ 'zenburn'
             \ ]
 
