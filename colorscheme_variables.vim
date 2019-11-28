@@ -78,7 +78,6 @@ let g:dark_themes = [
             \ 'foo-hyper',
             \ 'foo-mrrobot',
             \ 'forest-night',
-            \ 'iceberg',
             \ 'jellybeans',
             \ 'minimalist',
             \ 'molokai',
@@ -346,11 +345,6 @@ let s:hybrid_reverse_dict.name = 'hybrid_reverse'
 let s:hybrid_reverse_dict.airlinetheme = 'colorscheme'
 let s:hybrid_reverse_dict.variant_type = 'background'
 
-let s:iceberg_dict = {}
-let s:iceberg_dict.name = 'iceberg'
-let s:iceberg_dict.lightlinetheme = 'colorscheme'
-let s:iceberg_dict.airlinetheme = 'colorscheme'
-
 let s:jellybeans_dict = {}
 let s:jellybeans_dict.name = 'jellybeans'
 let s:jellybeans_dict.lightlinetheme = 'colorscheme'
@@ -577,7 +571,6 @@ let g:colorscheme_map = [
          \ s:gruvbox_material_dict,
          \ s:hybrid_material_dict,
          \ s:hybrid_reverse_dict,
-         \ s:iceberg_dict,
          \ s:jellybeans_dict,
          \ s:kuroi_dict,
          \ s:material_dict,
