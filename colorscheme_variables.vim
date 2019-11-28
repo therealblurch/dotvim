@@ -91,7 +91,6 @@ let g:dark_themes = [
             \ 'spring-night',
             \ 'srcery',
             \ 'tender',
-            \ 'tequila-sunrise',
             \ 'tokyo-metro',
             \ 'tone',
             \ 'typewriter-night',

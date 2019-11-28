@@ -115,7 +115,6 @@ Plugin 'kjssad/quantum.vim',                     {'package': 'colors', 'type': '
 Plugin 'koirand/tokyo-metro.vim',                {'package': 'colors', 'type': 'start'}
 Plugin 'kristijanhusak/vim-hybrid-material',     {'package': 'colors', 'type': 'start'}
 Plugin 'letorbi/vim-colors-modern-borland',      {'package': 'colors', 'type': 'start'}
-Plugin 'levelone/tequila-sunrise.vim',           {'package': 'colors', 'type': 'start'}
 Plugin 'lifepillar/vim-solarized8',              {'package': 'colors', 'type': 'start'}
 Plugin 'liuchengxu/space-vim-theme',             {'package': 'colors', 'type': 'start'}
 Plugin 'logico-dev/typewriter',                  {'package': 'colors', 'type': 'start'}
