@@ -48,8 +48,6 @@ let g:seadbird_themes = [
             \ ]
 
 let g:dark_themes = [
-            \ 'dracula',
-            \ 'nord',
             \ 'afterglow',
             \ 'apprentice',
             \ 'atlantic-dark',
