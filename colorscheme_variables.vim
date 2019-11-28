@@ -75,7 +75,6 @@ let g:dark_themes = [
             \ 'foo-mrrobot',
             \ 'forest-night',
             \ 'jellybeans',
-            \ 'minimalist',
             \ 'molokai',
             \ 'monokai',
             \ 'mustang',
@@ -353,10 +352,6 @@ let s:materialbox_dict.airlinetheme = 'colorscheme'
 let s:materialbox_dict.variant_type = 'materialbox_contrast'
 let s:materialbox_dict.variants = ['soft', 'medium', 'hard']
 
-let s:minimalist_dict = {}
-let s:minimalist_dict.name = 'minimalist'
-let s:minimalist_dict.airlinetheme = 'colorscheme'
-
 let s:molokai_dict = {}
 let s:molokai_dict.name = 'molokai'
 let s:molokai_dict.airlinetheme = 'colorscheme'
@@ -559,7 +554,6 @@ let g:colorscheme_map = [
          \ s:jellybeans_dict,
          \ s:material_dict,
          \ s:materialbox_dict,
-         \ s:minimalist_dict,
          \ s:molokai_dict,
          \ s:monokai_dict,
          \ s:open_color_dict,
