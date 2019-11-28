@@ -91,7 +91,6 @@ let g:dark_themes = [
             \ 'sourceror',
             \ 'spring-night',
             \ 'srcery',
-            \ 'substrata',
             \ 'tender',
             \ 'tequila-sunrise',
             \ 'tokyo-metro',
