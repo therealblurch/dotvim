@@ -112,7 +112,6 @@ let g:light_themes = [
 
 let g:variable_themes = [
             \ 'ayu',
-            \ 'colibri',
             \ 'cosmic_latte',
             \ 'edge',
             \ 'gruvbox-material',
@@ -234,10 +233,6 @@ let s:bluewery_dict.variants = ['', '-light']
 let s:candid_dict = {}
 let s:candid_dict.name = 'candid'
 let s:candid_dict.lightlinetheme = 'colorscheme'
-
-let s:colibri_dict = {}
-let s:colibri_dict.name = 'colibri'
-let s:colibri_dict.variant_type = 'background'
 
 let s:corvine_dict = {}
 let s:corvine_dict.name = 'corvine'
@@ -525,7 +520,6 @@ let g:colorscheme_map = [
          \ s:blayu_dict,
          \ s:bluewery_dict,
          \ s:candid_dict,
-         \ s:colibri_dict,
          \ s:corvine_dict,
          \ s:cosme_dict,
          \ s:cosmic_latte_dict,
