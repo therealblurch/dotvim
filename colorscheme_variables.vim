@@ -122,7 +122,6 @@ let g:variable_themes = [
             \ 'gruvbox-material',
             \ 'hybrid_material',
             \ 'hybrid_reverse',
-            \ 'kuroi',
             \ 'material',
             \ 'materialbox',
             \ 'one',
@@ -341,10 +340,6 @@ let s:jellybeans_dict.name = 'jellybeans'
 let s:jellybeans_dict.lightlinetheme = 'colorscheme'
 let s:jellybeans_dict.airlinetheme = 'colorscheme'
 
-let s:kuroi_dict = {}
-let s:kuroi_dict.name = 'kuroi'
-let s:kuroi_dict.variant_type = 'background'
-
 let s:material_dict = {}
 let s:material_dict.name = 'material'
 let s:material_dict.lightlinetheme = 'material_vim'
@@ -562,7 +557,6 @@ let g:colorscheme_map = [
          \ s:hybrid_material_dict,
          \ s:hybrid_reverse_dict,
          \ s:jellybeans_dict,
-         \ s:kuroi_dict,
          \ s:material_dict,
          \ s:materialbox_dict,
          \ s:minimalist_dict,

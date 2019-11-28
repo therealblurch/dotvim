@@ -89,7 +89,6 @@ Plugin 'adlawson/vim-sorcerer',                  {'package': 'colors', 'type': '
 Plugin 'agreco/vim-citylights',                  {'package': 'colors', 'type': 'start'}
 Plugin 'agude/vim-eldar',                        {'package': 'colors', 'type': 'start'}
 Plugin 'ajmwagar/vim-deus',                      {'package': 'colors', 'type': 'start'}
-Plugin 'aonemd/kuroi.vim',                       {'package': 'colors', 'type': 'start'}
 Plugin 'arzg/vim-corvine',                       {'package': 'colors', 'type': 'start'}
 Plugin 'arzg/vim-substrata',                     {'package': 'colors', 'type': 'start'}
 Plugin 'atelierbram/vim-colors_atelier-schemes', {'package': 'colors', 'type': 'start'}
