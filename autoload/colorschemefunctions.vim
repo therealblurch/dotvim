@@ -41,8 +41,85 @@ function! colorschemefunctions#ToggleBackground()
     endfor
 endfunction
 
-function! colorschemefunctions#GetNextScheme (delta, schemes, current_scheme, num_variants)
-    return a:schemes[((a:delta+index(a:schemes, a:current_scheme)) % a:num_variants + a:num_variants) % a:num_variants]
+function! colorschemefunctions#GetColorschemeVariantList (colordict)
+    let l:variants = deepcopy(a:colordict.variants)
+    if a:colordict.variant_type == 'colorscheme'
+        if a:colordict.variant_base == 'drop'
+            for variant in a:colordict.variants
+                if match(g:colors_name, variant) != -1
+                    let l:variant_list = split(g:colors_name, variant)
+                    let l:variant_base = l:variant_list[0]
+                endif
+            endfor
+        else
+            let l:variant_base = a:colordict.variant_base
+        endif
+        return map(l:variants, 'l:variant_base.v:val')
+    elseif a:colordict.variant_type == 'colorscheme_bg'
+        let l:variant_base = a:colordict.variant_base
+        return map(l:variants, 'l:variant_base.v:val')
+    elseif a:colordict.variant_type == 'vimspectr'
+        return map(l:variants, function('colorschemefunctions#VimspectrMap'))
+    elseif a:colordict.variant_type == 'Atelier'
+        return map(l:variants, function('colorschemefunctions#AtelierMap'))
+    else
+        return a:colordict.variants
+    endif
+endfunction
+
+function! colorschemefunctions#GetCurrentColorschemeVariant (colordict)
+    if a:colordict.variant_type == 'ayu_color'
+        return g:ayucolor
+    elseif a:colordict.variant_type == 'material_theme_style'
+        return g:material_theme_style
+    elseif a:colordict.variant_type == 'gruvbox_material_background'
+        return g:gruvbox_material_background
+    elseif a:colordict.variant_type == 'materialbox_contrast'
+        if &background == 'light'
+            return g:materialbox_contrast_light
+        else
+            return g:materialbox_contrast_dark
+        endif
+    else
+        return g:colors_name
+    endif
+endfunction
+
+function colorschemefunctions#GetNextColorscheme (colordict, next_scheme)
+    if a:colordict.variant_type == 'ayu_color'
+        let g:ayucolor = a:next_scheme
+        let ayucolor = g:ayucolor
+        return 'ayu'
+    elseif a:colordict.variant_type == 'material_theme_style'
+        let g:material_theme_style = a:next_scheme
+        return 'material'
+    elseif a:colordict.variant_type == 'gruvbox_material_background'
+        let g:gruvbox_material_background = a:next_scheme
+        return 'gruvbox-material'
+    elseif a:colordict.variant_type == 'materialbox_contrast'
+        if &background == 'light'
+            let g:materialbox_contrast_light = a:next_scheme
+        else
+            let g:materialbox_contrast_dark = a:next_scheme
+        endif
+        return 'materialbox'
+    else
+        return a:next_scheme
+    endif
+endfunction
+
+function! colorschemefunctions#PossiblyToggleBackground (delta, colordict, variants, current_variant)
+    let l:num_variants = len(a:variants)
+    if a:colordict.variant_type == 'colorscheme_bg' || a:colordict.variant_type == 'gruvbox_material_background' || a:colordict.variant_type == 'materialbox_contrast'
+        if a:delta+index(a:variants, a:current_variant) >= l:num_variants || a:delta+index(a:variants, a:current_variant) < 0
+            let &background = (&background == 'dark') ? 'light' : 'dark'
+        endif
+    endif
+endfunction
+
+function! colorschemefunctions#GetNextScheme (delta, schemes, current_scheme)
+    let l:num_variants = len(a:schemes)
+    return a:schemes[((a:delta+index(a:schemes, a:current_scheme)) % l:num_variants + l:num_variants) % l:num_variants]
 endfunction
 
 function! colorschemefunctions#SchemeVariant(delta)
@@ -52,76 +129,11 @@ function! colorschemefunctions#SchemeVariant(delta)
                 if color.variant_type == "background"
                     let &background = (&background == "dark") ? "light" : "dark"
                 else
-                    let l:num_variants = len(color.variants)
-                    let l:variants = deepcopy(color.variants)
-
-                    if color.variant_type == 'colorscheme'
-                        if color.variant_base == 'drop'
-                            for variant in color.variants
-                                if match(g:colors_name, variant) != -1
-                                    let l:variant_list = split(g:colors_name, variant)
-                                    let l:variant_base = l:variant_list[0]
-                                endif
-                            endfor
-                        else
-                            let l:variant_base = color.variant_base
-                        endif
-                        let l:schemes = map(l:variants, 'l:variant_base.v:val')
-                    elseif color.variant_type == 'colorscheme_bg'
-                        let l:variant_base = color.variant_base
-                        let l:schemes = map(l:variants, 'l:variant_base.v:val')
-                    elseif color.variant_type == 'vimspectr'
-                        let l:schemes = map(l:variants, function('colorschemefunctions#VimspectrMap'))
-                    elseif color.variant_type == 'Atelier'
-                        let l:schemes = map(l:variants, function('colorschemefunctions#AtelierMap'))
-                    else
-                        let l:schemes = color.variants
-                    endif
-
-                    if color.variant_type == 'ayu_color'
-                        let l:current_scheme = g:ayucolor
-                    elseif color.variant_type == 'material_theme_style'
-                        let l:current_scheme = g:material_theme_style
-                    elseif color.variant_type == 'gruvbox_material_background'
-                        let l:current_scheme = g:gruvbox_material_background
-                    elseif color.variant_type == 'materialbox_contrast'
-                        if &background == 'light'
-                            let l:current_scheme = g:materialbox_contrast_light
-                        else
-                            let l:current_scheme = g:materialbox_contrast_dark
-                        endif
-                    else
-                        let l:current_scheme = g:colors_name
-                    endif
-
-                    let l:next_scheme = colorschemefunctions#GetNextScheme(a:delta, l:schemes, l:current_scheme, l:num_variants)
-
-                    if color.variant_type == 'ayu_color'
-                        let g:ayucolor = l:next_scheme
-                        let ayucolor = g:ayucolor
-                        exe 'colors ayu'
-                    elseif color.variant_type == 'material_theme_style'
-                        let g:material_theme_style = l:next_scheme
-                        exe 'colors material'
-                    elseif color.variant_type == 'gruvbox_material_background'
-                        let g:gruvbox_material_background = l:next_scheme
-                        exe 'colors gruvbox-material'
-                    elseif color.variant_type == 'materialbox_contrast'
-                        if &background == 'light'
-                            let g:materialbox_contrast_light = l:next_scheme
-                        else
-                            let g:materialbox_contrast_dark = l:next_scheme
-                        endif
-                        exe 'colors materialbox'
-                    else
-                        exe 'colors' l:next_scheme
-                    endif
-
-                    if color.variant_type == 'colorscheme_bg' || color.variant_type == 'gruvbox_material_background' || color.variant_type == 'materialbox_contrast'
-                        if a:delta+index(l:schemes, l:current_scheme) >= l:num_variants || a:delta+index(l:schemes, l:current_scheme) < 0
-                            let &background = (&background == 'dark') ? 'light' : 'dark'
-                        endif
-                    endif
+                    let l:schemes = colorschemefunctions#GetColorschemeVariantList (color)
+                    let l:current_scheme = colorschemefunctions#GetCurrentColorschemeVariant (color)
+                    let l:next_scheme = colorschemefunctions#GetNextScheme(a:delta, l:schemes, l:current_scheme)
+                    call xolox#colorscheme_switcher#switch_to(colorschemefunctions#GetNextColorscheme(color, l:next_scheme))
+                    call colorschemefunctions#PossiblyToggleBackground (a:delta, color, l:schemes, l:current_scheme)
                 endif
                 break
             endif
