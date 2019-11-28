@@ -114,7 +114,6 @@ let g:light_themes = [
             \ 'bluewery-light',
             \ 'corvine_light',
             \ 'flattened_light',
-            \ 'lumiere',
             \ 'onehalflight',
             \ 'typewriter',
             \ ]

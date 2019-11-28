@@ -83,7 +83,6 @@ Plugin 'sgur/vim-textobj-parameter',            {'type': 'start'}
 Plugin 'thinca/vim-textobj-between',            {'type': 'start'}
 Plugin 'vimtaku/vim-textobj-keyvalue',          {'type': 'start'}
 
-Plugin 'alexanderjeurissen/lumiere.vim',         {'package': 'colors', 'type': 'start'}
 Plugin 'archseer/colibri.vim',                   {'package': 'colors', 'type': 'start'}
 Plugin 'arcticicestudio/nord-vim',               {'package': 'colors', 'type': 'start', 'branch': 'develop'}
 Plugin 'adlawson/vim-sorcerer',                  {'package': 'colors', 'type': 'start'}
