@@ -61,7 +61,6 @@ let g:dark_themes = [
             \ 'citylights',
             \ 'corvine',
             \ 'cosme',
-            \ 'darcula',
             \ 'deep-space',
             \ 'desert-night',
             \ 'desertink',
@@ -261,10 +260,6 @@ let s:cosmic_latte_dict.name = 'cosmic_latte'
 let s:cosmic_latte_dict.lightlinetheme = 'colorscheme_bg'
 let s:cosmic_latte_dict.airlinetheme = 'colorscheme_bg'
 let s:cosmic_latte_dict.variant_type = 'background'
-
-let s:darcula_dict = {}
-let s:darcula_dict.name = 'darcula'
-let s:darcula_dict.lightlinetheme = 'darculaOriginal'
 
 let s:deep_space_dict = {}
 let s:deep_space_dict.name = 'deep-space'
@@ -552,7 +547,6 @@ let g:colorscheme_map = [
          \ s:corvine_dict,
          \ s:cosme_dict,
          \ s:cosmic_latte_dict,
-         \ s:darcula_dict,
          \ s:deep_space_dict,
          \ s:desert_night_dict,
          \ s:desertink_dict,
