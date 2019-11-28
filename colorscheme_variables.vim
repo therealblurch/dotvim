@@ -57,7 +57,6 @@ let g:dark_themes = [
             \ 'blackboard',
             \ 'blayu',
             \ 'bluewery',
-            \ 'borland',
             \ 'candid',
             \ 'citylights',
             \ 'corvine',
