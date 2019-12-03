@@ -147,7 +147,7 @@ endfunction
 
 function! colorschemefunctions#AirlineTheme(colorscheme)
     if !myfunctions#ColorschemeHasAirlineTheme(g:colors_name)
-        exec "AirlineTheme dark"
+        exec "AirlineTheme solarized_flood"
     else
         for color in g:colorscheme_map
             if has_key (color, 'name') && ((g:colors_name =~ color.name && has_key(color, 'comparison') && color.comparison == 'fuzzy') || g:colors_name == color.name)
