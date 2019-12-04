@@ -97,36 +97,31 @@ function! s:GetNextScheme (delta, schemes, current_scheme)
 endfunction
 
 function! colorschemefunctions#ToggleBackground()
-    for color in g:colorscheme_map
-        if has_key(color, 'name') && ((g:colors_name =~ color.name && has_key(color, 'comparison') && color.comparison == 'fuzzy') || g:colors_name == color.name)
-            if has_key(color, 'variant_type')
-                if color.variant_type == 'background' || color.variant_type == 'colorscheme_bg' || color.variant_type == 'gruvbox_material_background'
-                    call s:ToggleBG()
-                elseif color.variant_type == 'Atelier'
-                    let l:new_colors_name = (g:colors_name =~# 'Dark') ? substitute(g:colors_name, 'Dark', 'Light', '') : substitute(g:colors_name, 'Light', 'Dark', '')
-                    call xolox#colorscheme_switcher#switch_to(l:new_colors_name)
-                elseif color.variant_type == 'vimspectr'
-                    let l:new_colors_name = (g:colors_name =~# 'dark') ? substitute(g:colors_name, 'dark', 'light', '') : substitute(g:colors_name, 'light', 'dark', '')
-                    call xolox#colorscheme_switcher#switch_to(l:new_colors_name)
-                elseif color.variant_type == 'colorscheme' && color.variant_base == 'drop'
-                    let l:new_colors_name = (g:colors_name =~# 'dark') ? substitute(g:colors_name, 'dark', 'light', '') : substitute(g:colors_name, 'light', 'dark', '')
-                    call xolox#colorscheme_switcher#switch_to(l:new_colors_name)
-                elseif color.variant_type == 'materialbox_contrast'
-                    if (&background == 'dark')
-                        let g:materialbox_contrast_light = g:materialbox_contrast_dark
-                        let &background = 'light'
-                    else
-                        let g:materialbox_contrast_dark = g:materialbox_contrast_light
-                        let &background = 'dark'
-                    endif
-                endif
-            endif
-            break
+    let l:variant_type = myfunctions#GetColorAttribute(g:colors_name, 'variant_type')
+    if l:variant_type == 'background' || l:variant_type == 'colorscheme_bg' || l:variant_type == 'gruvbox_material_background'
+        call s:ToggleBG()
+    elseif l:variant_type == 'Atelier'
+        let l:new_colors_name = (g:colors_name =~# 'Dark') ? substitute(g:colors_name, 'Dark', 'Light', '') : substitute(g:colors_name, 'Light', 'Dark', '')
+        call xolox#colorscheme_switcher#switch_to(l:new_colors_name)
+    elseif l:variant_type == 'vimspectr'
+        let l:new_colors_name = (g:colors_name =~# 'dark') ? substitute(g:colors_name, 'dark', 'light', '') : substitute(g:colors_name, 'light', 'dark', '')
+        call xolox#colorscheme_switcher#switch_to(l:new_colors_name)
+    elseif l:variant_type == 'colorscheme' && color.variant_base == 'drop'
+        let l:new_colors_name = (g:colors_name =~# 'dark') ? substitute(g:colors_name, 'dark', 'light', '') : substitute(g:colors_name, 'light', 'dark', '')
+        call xolox#colorscheme_switcher#switch_to(l:new_colors_name)
+    elseif l:variant_type == 'materialbox_contrast'
+        if (&background == 'dark')
+            let g:materialbox_contrast_light = g:materialbox_contrast_dark
+            let &background = 'light'
+        else
+            let g:materialbox_contrast_dark = g:materialbox_contrast_light
+            let &background = 'dark'
         endif
-    endfor
+    endif
 endfunction
 
 function! colorschemefunctions#SchemeVariant(delta)
+    let l:variant_type = myfunctions#GetColorAttribute(g:colors_name, 'variant_type')
     for color in g:colorscheme_map
         if has_key (color, 'name') && ((g:colors_name =~ color.name && has_key(color, 'comparison') && color.comparison == 'fuzzy') || g:colors_name == color.name)
             if has_key(color, 'variant_type')

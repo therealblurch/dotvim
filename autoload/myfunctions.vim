@@ -6,58 +6,59 @@ function! myfunctions#GitgutterStatus()
    return max(l:summary) > 0 ? ' +'.l:summary[0].' ~'.l:summary[1].' -'.l:summary[2].' ' : ''
 endfunction
 
-function! myfunctions#CurrentColorscheme()
-   let l:color_name = g:colors_name
+function! myfunctions#GetColorAttribute (color_name, key)
    for color in g:colorscheme_map
-      if has_key (color, 'name') && ((g:colors_name =~ color.name && has_key(color, 'comparison') && color.comparison == 'fuzzy') || g:colors_name == color.name)
-         if has_key(color, 'variant_type')
-            if color.variant_type == 'colorscheme'
-               let l:color_name = g:colors_name
-            elseif color.variant_type == 'background'
-               let l:color_name = g:colors_name . '/' . &background
-            elseif color.variant_type == 'ayu_color'
-               let l:color_name = g:colors_name . '/' . g:ayucolor
-            elseif color.variant_type == 'gruvbox_material_background'
-               let l:color_name = g:colors_name . '/' . g:gruvbox_material_background
-            elseif color.variant_type == 'material_theme_style'
-               let l:color_name = g:colors_name . '/' . g:material_theme_style
-            elseif color.variant_type == 'materialbox_contrast'
-               if &background == "light"
-                  let l:color_name = g:colors_name . '/' . g:materialbox_contrast_light
-               else
-                  let l:color_name = g:colors_name . '/' . g:materialbox_contrast_dark
-               endif
-            endif
+      if a:color_name == color.name || (has_key(color, 'comparison') && color.comparison == 'fuzzy' && a:color_name =~ color.name)
+         if has_key(color, a:key)
+            return color[a:key]
+         else
+            return -1
          endif
-         break
       endif
    endfor
+   return -1
+endfunction
+
+function! myfunctions#CurrentColorscheme()
+   let l:color_name = g:colors_name
+   let l:variant_type = myfunctions#GetColorAttribute(g:colors_name, 'variant_type')
+   if l:variant_type == 'colorscheme'
+      let l:color_name = g:colors_name
+   elseif l:variant_type == 'background'
+      let l:color_name = g:colors_name . '/' . &background
+   elseif l:variant_type == 'ayu_color'
+      let l:color_name = g:colors_name . '/' . g:ayucolor
+   elseif l:variant_type == 'gruvbox_material_background'
+      let l:color_name = g:colors_name . '/' . g:gruvbox_material_background
+   elseif l:variant_type == 'material_theme_style'
+      let l:color_name = g:colors_name . '/' . g:material_theme_style
+   elseif l:variant_type == 'materialbox_contrast'
+      if &background == "light"
+         let l:color_name = g:colors_name . '/' . g:materialbox_contrast_light
+      else
+         let l:color_name = g:colors_name . '/' . g:materialbox_contrast_dark
+      endif
+   endif
    return l:color_name
 endfunction
 
 function! myfunctions#ColorschemeHasAirlineTheme(colorscheme)
-   let l:airline_theme_exists = 0
-   for color in g:colorscheme_map
-      if has_key (color, 'name') && ((g:colors_name =~ color.name && has_key(color, 'comparison') && color.comparison == 'fuzzy') || g:colors_name == color.name)
-         if has_key(color, 'airlinetheme')
-            let l:airline_theme_exists = 1
-         endif
-         break
-      endif
-   endfor
+   let l:airline_theme = myfunctions#GetColorAttribute(a:colorscheme, 'airlinetheme')
+   if l:airline_theme == -1
+      let l:airline_theme_exists = 0
+   else
+      let l:airline_theme_exists = 1
+   endif
    return l:airline_theme_exists
 endfunction
 
 function! s:ColorschemeHasLightlineColorscheme(colorscheme)
-   let l:lightline_theme_exists = 0
-   for color in g:colorscheme_map
-      if has_key (color, 'name') && ((g:colors_name =~ color.name && has_key(color, 'comparison') && color.comparison == 'fuzzy') || g:colors_name == color.name)
-         if has_key(color, 'lightlinetheme')
-            let l:lightline_theme_exists = 1
-         endif
-         break
-      endif
-   endfor
+   let l:lightline_theme = myfunctions#GetColorAttribute(a:colorscheme, 'lightlinetheme')
+   if l:lightline_theme == -1
+      let l:lightline_theme_exists = 0
+   else
+      let l:lightline_theme_exists = 1
+   endif
    return l:lightline_theme_exists
 endfunction
 
