@@ -368,8 +368,14 @@ let s:one_dict.airlinetheme = 'colorscheme'
 let s:one_dict.variant_type = 'background'
 
 let s:onehalf_dict = {}
-let s:onehalf_dict.name = 'onehalf'
-let s:onehalf_dict.comparison = 'fuzzy'
+let s:onehalf_dict.name = 'onehalfdark'
+let s:onehalf_dict.lightlinetheme = 'onehalfdark'
+let s:onehalf_dict.variant_type = 'colorscheme'
+let s:onehalf_dict.variant_base = 'drop'
+let s:onehalf_dict.variants = ['light', 'dark']
+
+let s:onehalf_dict = {}
+let s:onehalf_dict.name = 'onehalflight'
 let s:onehalf_dict.lightlinetheme = 'onehalfdark'
 let s:onehalf_dict.variant_type = 'colorscheme'
 let s:onehalf_dict.variant_base = 'drop'
