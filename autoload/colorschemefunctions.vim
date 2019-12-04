@@ -162,30 +162,30 @@ function! colorschemefunctions#AirlineTheme(colorscheme)
     endif
 endfunction
 
+function s:SetLastBackground (color, background)
+    for color in g:colorscheme_map
+        if has_key (color, 'name') && ((color.name =~ a:color && has_key(color, 'comparison') && color.comparison == 'fuzzy') || color.name == a:color)
+            if has_key(color, 'variant_type')
+                if color.variant_type == 'background' || color.variant_type == 'gruvbox_material_background' || color.variant_type == 'materialbox_contrast' || color.variant_type == 'colorscheme_bg' || color.variant_type == 'Atelier'
+                    exec 'set background='.a:background
+                endif
+            endif
+        endif
+    endfor
+endfunction
+
 function! colorschemefunctions#SetLastColorscheme()
     let l:last_colorscheme = readfile(expand(g:colorscheme_file))
     let l:colorscheme_is_group_member = 0
-
+    let l:new_colorscheme = l:last_colorscheme[1]
     for colorscheme_group in values(g:colorscheme_groups)
         for colorscheme_group_member in colorscheme_group
             if l:last_colorscheme[1] == colorscheme_group_member
-                call xolox#colorscheme_switcher#switch_to(colorscheme_group[localtime() % len(colorscheme_group)])
-                let l:colorscheme_is_group_member = 1
+                let l:new_colorscheme = colorscheme_group[localtime() % len(colorscheme_group)]
                 break
             endif
         endfor
     endfor
-
-    if !l:colorscheme_is_group_member
-        call xolox#colorscheme_switcher#switch_to(l:last_colorscheme[1])
-    endif
-
-    for color in g:colorscheme_map
-        if has_key (color, 'name') && ((color.name =~ g:colors_name && has_key(color, 'comparison') && color.comparison == 'fuzzy') || color.name == g:colors_name)
-            if has_key(color, 'variant_type') && (color.variant_type == 'background' || color.variant_type == 'gruvbox_material_background' || color.variant_type == 'materialbox_contrast' || color.variant_type == 'colorscheme_bg' || color.variant_type == 'Atelier')
-                exec 'set background=' . l:last_colorscheme[0]
-            endif
-            break
-        endif
-    endfor
+    call s:SetLastBackground (l:last_colorscheme[1],l:last_colorscheme[0])
+    call xolox#colorscheme_switcher#switch_to(l:new_colorscheme)
 endfunction
