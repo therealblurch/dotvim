@@ -190,7 +190,6 @@ nmap * <Plug>(anzu-star)
 nmap # <Plug>(anzu-sharp)
 " }}}
 
-
 " autopairs {{{
 " Map space so that autopairs works with mucomplete
 let g:AutoPairsMapSpace = 0
