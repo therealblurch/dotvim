@@ -162,7 +162,7 @@ function! colorschemefunctions#AirlineTheme(colorscheme)
     endif
 endfunction
 
-function s:SetLastBackground (color, background)
+function! s:SetLastBackground (color, background)
     for color in g:colorscheme_map
         if has_key (color, 'name') && ((color.name =~ a:color && has_key(color, 'comparison') && color.comparison == 'fuzzy') || color.name == a:color)
             if has_key(color, 'variant_type')
@@ -174,18 +174,21 @@ function s:SetLastBackground (color, background)
     endfor
 endfunction
 
-function! colorschemefunctions#SetLastColorscheme()
-    let l:last_colorscheme = readfile(expand(g:colorscheme_file))
-    let l:colorscheme_is_group_member = 0
-    let l:new_colorscheme = l:last_colorscheme[1]
+function! s:ChooseNextColorscheme (last_colorscheme)
+    let l:new_colorscheme = a:last_colorscheme
     for colorscheme_group in values(g:colorscheme_groups)
         for colorscheme_group_member in colorscheme_group
-            if l:last_colorscheme[1] == colorscheme_group_member
+            if a:last_colorscheme == colorscheme_group_member
                 let l:new_colorscheme = colorscheme_group[localtime() % len(colorscheme_group)]
                 break
             endif
         endfor
     endfor
+    return l:new_colorscheme
+endfunction
+
+function! colorschemefunctions#SetLastColorscheme()
+    let l:last_colorscheme = readfile(expand(g:colorscheme_file))
     call s:SetLastBackground (l:last_colorscheme[1],l:last_colorscheme[0])
-    call xolox#colorscheme_switcher#switch_to(l:new_colorscheme)
+    call xolox#colorscheme_switcher#switch_to(s:ChooseNextColorscheme(l:last_colorscheme[1]))
 endfunction
