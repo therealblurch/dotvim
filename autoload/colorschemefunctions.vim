@@ -121,52 +121,34 @@ function! colorschemefunctions#ToggleBackground()
 endfunction
 
 function! colorschemefunctions#SchemeVariant(delta)
-    let l:variant_type = myfunctions#GetColorAttribute(g:colors_name, 'variant_type')
-    for color in g:colorscheme_map
-        if has_key (color, 'name') && ((g:colors_name =~ color.name && has_key(color, 'comparison') && color.comparison == 'fuzzy') || g:colors_name == color.name)
-            if has_key(color, 'variant_type')
-                if color.variant_type == "background"
-                    call s:ToggleBG()
-                else
-                    let l:schemes = s:GetColorschemeVariantList (color)
-                    let l:current_scheme = s:GetCurrentColorschemeVariant (color)
-                    let l:next_scheme = s:GetNextScheme(a:delta, l:schemes, l:current_scheme)
-                    call xolox#colorscheme_switcher#switch_to(s:GetNextColorscheme(color, l:next_scheme))
-                    call s:PossiblyToggleBackground (a:delta, color, l:schemes, l:current_scheme)
-                endif
-                break
-            endif
-        endif
-    endfor
+    let l:color = myfunctions#GetColorDictionary(g:colors_name)
+    let l:variant_type = myfunctions#GetColorAttribute(l:colors, 'variant_type')
+    if l:variant_type == 'background'
+        call s:ToggleBG()
+    else
+        
+        let l:schemes = s:GetColorschemeVariantList (l:color)
+        let l:current_scheme = s:GetCurrentColorschemeVariant (l:color)
+        let l:next_scheme = s:GetNextScheme(a:delta, l:schemes, l:current_scheme)
+        call xolox#colorscheme_switcher#switch_to(s:GetNextColorscheme(l:color, l:next_scheme))
+        call s:PossiblyToggleBackground (a:delta, l:color, l:schemes, l:current_scheme)
+    endif
 endfunction
 
 function! colorschemefunctions#AirlineTheme(colorscheme)
-    if !myfunctions#ColorschemeHasAirlineTheme(g:colors_name)
+    let l:airlinetheme = myfunctions#GetColorAttribute(g:colors_name, 'airlinetheme')
+    if empty(l:airlinetheme)
         exec "AirlineTheme solarized_flood"
-    else
-        for color in g:colorscheme_map
-            if has_key (color, 'name') && ((g:colors_name =~ color.name && has_key(color, 'comparison') && color.comparison == 'fuzzy') || g:colors_name == color.name)
-                if has_key(color, 'airlinetheme')
-                    if (color.airlinetheme == 'colorscheme_bg')
-                        exec "AirlineTheme " . a:colorscheme . "_" . &background
-                    endif
-                endif
-                break
-            endif
-        endfor
+    elseif l:airlinetheme == 'colorscheme_bg'
+        exec "AirlineTheme " . a:colorscheme . "_" . &background
     endif
 endfunction
 
 function! s:SetLastBackground (color, background)
-    for color in g:colorscheme_map
-        if has_key (color, 'name') && ((color.name =~ a:color && has_key(color, 'comparison') && color.comparison == 'fuzzy') || color.name == a:color)
-            if has_key(color, 'variant_type')
-                if color.variant_type == 'background' || color.variant_type == 'gruvbox_material_background' || color.variant_type == 'materialbox_contrast' || color.variant_type == 'colorscheme_bg' || color.variant_type == 'Atelier'
-                    exec 'set background='.a:background
-                endif
-            endif
-        endif
-    endfor
+    let l:variant_type = myfunctions#GetColorAttribute(a:color, 'variant_type')
+    if l:variant_type == 'background' || l:variant_type == 'gruvbox_material_background' || l:variant_type == 'materialbox_contrast' || l:variant_type == 'colorscheme_bg' || l:variant_type == 'Atelier'
+        exec 'set background='.a:background
+    endif
 endfunction
 
 function! s:ChooseNextColorscheme (last_colorscheme)
