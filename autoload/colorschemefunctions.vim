@@ -122,7 +122,8 @@ endfunction
 
 function! colorschemefunctions#SchemeVariant(delta)
     let l:color = myfunctions#GetColorDictionary(g:colors_name)
-    let l:variant_type = myfunctions#GetColorAttribute(l:colors, 'variant_type')
+    echo 'variant_type' l:variant_type
+    let l:variant_type = myfunctions#GetColorAttribute(l:color, 'variant_type')
     if l:variant_type == 'background'
         call s:ToggleBG()
     else
