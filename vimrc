@@ -159,6 +159,7 @@ let g:airline_theme_map = {
             \ 'solarized8*'              : 'solarized',
             \ 'stormpetrel'              : 'seagull',
             \ 'tokyo-metro'              : 'tokyometro',
+            \ 'edge'                     : 'distinguished',
             \ 'Atelier_CaveDark'         : 'Atelier_CaveDark',
             \ 'Atelier_CaveLight'        : 'Atelier_CaveLight',
             \ 'Atelier_DuneDark'         : 'Atelier_DuneDark',
@@ -406,7 +407,7 @@ imap <expr> <left> mucomplete#extend_bwd("\<left>")
 
 let g:mucomplete#chains = {
             \ 'default': ['snip', 'path', 'omni', 'keyn', 'dict', 'uspl'],
-            \ 'verilog_systemverilog': ['snip', 'tags', 'path', 'omni', 'keyn', 'dict', 'uspl'],
+            \ 'verilog_systemverilog': ['snip', 'tags', 'path', 'omni', 'keyn'],
             \ 'vim': ['snip', 'path', 'cmd', 'keyn'],
             \ }
 
