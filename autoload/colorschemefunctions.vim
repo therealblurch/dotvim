@@ -127,8 +127,7 @@ function! colorschemefunctions#SchemeVariant(delta)
     let l:variant_type = myfunctions#GetColorAttribute(g:colors_name, 'variant_type')
     if l:variant_type == 'background'
         call s:ToggleBG()
-    else
-        
+    elseif l:variant_type != ''
         let l:schemes = s:GetColorschemeVariantList (l:color)
         let l:current_scheme = s:GetCurrentColorschemeVariant (l:color)
         let l:next_scheme = s:GetNextScheme(a:delta, l:schemes, l:current_scheme)
