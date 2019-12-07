@@ -16,28 +16,30 @@ function! s:ToggleBG()
 endfunction
 
 function! s:GetColorschemeVariantList (colordict)
-    let l:variants = deepcopy(a:colordict.variants)
-    if a:colordict.variant_type == 'colorscheme'
-        if a:colordict.variant_base == 'drop'
-            for variant in a:colordict.variants
-                if match(g:colors_name, variant) != -1
-                    let l:variant_list = split(g:colors_name, variant)
-                    let l:variant_base = l:variant_list[0]
-                endif
-            endfor
-        else
+    if has_key(a:colordict,'variants')
+        let l:variants = deepcopy(a:colordict.variants)
+        if a:colordict.variant_type == 'colorscheme'
+            if a:colordict.variant_base == 'drop'
+                for variant in a:colordict.variants
+                    if match(g:colors_name, variant) != -1
+                        let l:variant_list = split(g:colors_name, variant)
+                        let l:variant_base = l:variant_list[0]
+                    endif
+                endfor
+            else
+                let l:variant_base = a:colordict.variant_base
+            endif
+            return map(l:variants, 'l:variant_base.v:val')
+        elseif a:colordict.variant_type == 'colorscheme_bg'
             let l:variant_base = a:colordict.variant_base
+            return map(l:variants, 'l:variant_base.v:val')
+        elseif a:colordict.variant_type == 'vimspectr'
+            return map(l:variants, function('s:VimspectrMap'))
+        elseif a:colordict.variant_type == 'Atelier'
+            return map(l:variants, function('s:AtelierMap'))
+        else
+            return a:colordict.variants
         endif
-        return map(l:variants, 'l:variant_base.v:val')
-    elseif a:colordict.variant_type == 'colorscheme_bg'
-        let l:variant_base = a:colordict.variant_base
-        return map(l:variants, 'l:variant_base.v:val')
-    elseif a:colordict.variant_type == 'vimspectr'
-        return map(l:variants, function('s:VimspectrMap'))
-    elseif a:colordict.variant_type == 'Atelier'
-        return map(l:variants, function('s:AtelierMap'))
-    else
-        return a:colordict.variants
     endif
 endfunction
 
