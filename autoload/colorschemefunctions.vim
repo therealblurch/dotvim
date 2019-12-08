@@ -29,18 +29,19 @@ function! s:GetColorschemeVariantList (colordict)
             else
                 let l:variant_base = a:colordict.variant_base
             endif
-            return map(l:variants, 'l:variant_base.v:val')
+            let s:variant_list =  map(l:variants, 'l:variant_base.v:val')
         elseif a:colordict.variant_type == 'colorscheme_bg'
             let l:variant_base = a:colordict.variant_base
-            return map(l:variants, 'l:variant_base.v:val')
+            let s:variant_list =  map(l:variants, 'l:variant_base.v:val')
         elseif a:colordict.variant_type == 'vimspectr'
-            return map(l:variants, function('s:VimspectrMap'))
+            let s:variant_list =  map(l:variants, function('s:VimspectrMap'))
         elseif a:colordict.variant_type == 'Atelier'
-            return map(l:variants, function('s:AtelierMap'))
+            let s:variant_list =  map(l:variants, function('s:AtelierMap'))
         else
-            return a:colordict.variants
+            let s:variant_list =  a:colordict.variants
         endif
     endif
+    return s:variant_list
 endfunction
 
 function! s:GetCurrentColorschemeVariant (colordict)
@@ -66,23 +67,24 @@ function s:GetNextColorscheme (colordict, next_scheme)
     if a:colordict.variant_type == 'ayu_color'
         let g:ayucolor = a:next_scheme
         let ayucolor = g:ayucolor
-        return 'ayu'
+        let s:next_colorscheme = 'ayu'
     elseif a:colordict.variant_type == 'material_theme_style'
         let g:material_theme_style = a:next_scheme
-        return 'material'
+        let s:next_colorscheme = 'material'
     elseif a:colordict.variant_type == 'gruvbox_material_background'
         let g:gruvbox_material_background = a:next_scheme
-        return 'gruvbox-material'
+        let s:next_colorscheme = 'gruvbox-material'
     elseif a:colordict.variant_type == 'materialbox_contrast'
         if &background == 'light'
             let g:materialbox_contrast_light = a:next_scheme
         else
             let g:materialbox_contrast_dark = a:next_scheme
         endif
-        return 'materialbox'
+        let s:next_colorscheme = 'materialbox'
     else
-        return a:next_scheme
+        let s:next_colorscheme = a:next_scheme
     endif
+    return s:next_colorscheme
 endfunction
 
 function! s:PossiblyToggleBackground (delta, colordict, variants, current_variant)

@@ -11,7 +11,7 @@ function! myfunctions#GetColorDictionary(color_name)
    for color in g:colorscheme_map
       if a:color_name == color.name || (has_key(color, 'comparison') && color.comparison == 'fuzzy' && a:color_name =~ color.name)
          let l:color = color
-         return l:color
+         break
       endif
    endfor
    return l:color
