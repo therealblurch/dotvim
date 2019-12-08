@@ -140,7 +140,7 @@ endfunction
 function! colorschemefunctions#AirlineTheme(colorscheme)
     let l:airlinetheme = myfunctions#GetColorAttribute(g:colors_name, 'airlinetheme')
     if empty(l:airlinetheme)
-        exec "AirlineTheme solarized_flood"
+        exec "AirlineTheme distinguished"
     elseif l:airlinetheme == 'colorscheme_bg'
         exec "AirlineTheme " . a:colorscheme . "_" . &background
     endif
