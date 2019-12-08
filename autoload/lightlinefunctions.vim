@@ -108,12 +108,14 @@ function! lightlinefunctions#LightlineUpdate()
             let l:new_lightline_colorscheme = l:lightline_names[0]
          endif
       elseif l:lightlinetheme == 'substitutebg'
-         let l:new_lightline_colorscheme = substitute (g:colors_name, color.subpat, &background, "")
+         let s:subpat = myfunctions#GetColorAttribute(g:colors_name, 'subpat')
+         let l:new_lightline_colorscheme = substitute (g:colors_name, s:subpat, &background, "")
       else
          let l:new_lightline_colorscheme = l:lightlinetheme
       endif
-      if !empty(myfunctions#GetColorAttribute(g:colors_name, 'runtime'))jj
+      if !empty(myfunctions#GetColorAttribute(g:colors_name, 'runtime'))
          exe 'runtime autoload/lightline/colorscheme/' . l:new_lightline_colorscheme . '.vim'
+      endif
       call lightlinefunctions#SetLightlineColorscheme(l:new_lightline_colorscheme)
    endtry
 endfunction
