@@ -45,20 +45,21 @@ endfunction
 
 function! s:GetCurrentColorschemeVariant (colordict)
     if a:colordict.variant_type == 'ayu_color'
-        return g:ayucolor
+        let l:variant = g:ayucolor
     elseif a:colordict.variant_type == 'material_theme_style'
-        return g:material_theme_style
+        let l:variant = g:material_theme_style
     elseif a:colordict.variant_type == 'gruvbox_material_background'
-        return g:gruvbox_material_background
+        let l:variant = g:gruvbox_material_background
     elseif a:colordict.variant_type == 'materialbox_contrast'
         if &background == 'light'
-            return g:materialbox_contrast_light
+            let l:variant = g:materialbox_contrast_light
         else
-            return g:materialbox_contrast_dark
+            let l:variant = g:materialbox_contrast_dark
         endif
     else
-        return g:colors_name
+        let l:variant = g:colors_name
     endif
+    return l:variant
 endfunction
 
 function s:GetNextColorscheme (colordict, next_scheme)
