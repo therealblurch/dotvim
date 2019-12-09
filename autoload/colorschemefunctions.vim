@@ -148,13 +148,6 @@ function! colorschemefunctions#AirlineTheme(colorscheme)
     endif
 endfunction
 
-function! s:SetLastBackground (color, background)
-    let l:variant_type = myfunctions#GetColorAttribute(a:color, 'variant_type')
-    if l:variant_type == 'background' || l:variant_type == 'gruvbox_material_background' || l:variant_type == 'materialbox_contrast' || l:variant_type == 'colorscheme_bg' || l:variant_type == 'Atelier'
-        exec 'set background='.a:background
-    endif
-endfunction
-
 function! s:ChooseNextColorscheme (last_colorscheme)
     let l:new_colorscheme = a:last_colorscheme
     for colorscheme_group in values(g:colorscheme_groups)
@@ -170,6 +163,6 @@ endfunction
 
 function! colorschemefunctions#SetLastColorscheme()
     let l:last_colorscheme = readfile(expand(g:colorscheme_file))
-    call s:SetLastBackground (l:last_colorscheme[1],l:last_colorscheme[0])
+    exec 'set background='.l:last_colorscheme[0]
     call xolox#colorscheme_switcher#switch_to(s:ChooseNextColorscheme(l:last_colorscheme[1]))
 endfunction
