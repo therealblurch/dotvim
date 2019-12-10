@@ -44,6 +44,47 @@ function! s:GetColorschemeVariantList (colordict)
     return s:variant_list
 endfunction
 
+function! colorschemefunctions#GetColorDictionary(color_name)
+   let l:color = {}
+   for color in g:colorscheme_map
+      if a:color_name == color.name || (has_key(color, 'comparison') && color.comparison == 'fuzzy' && a:color_name =~ color.name)
+         let l:color = color
+         break
+      endif
+   endfor
+   return l:color
+endfunction
+
+function! colorschemefunctions#GetColorAttribute(color_name, key)
+   let l:key = ''
+   let l:color = colorschemefunctions#GetColorDictionary(a:color_name)
+   if has_key (l:color, a:key)
+      let l:key = l:color[a:key]
+   endif
+   return l:key
+endfunction
+
+function! colorschemefunctions#CurrentColorscheme()
+   let l:color_name = g:colors_name
+   let l:variant_type = colorschemefunctions#GetColorAttribute(g:colors_name, 'variant_type')
+   if l:variant_type == 'background'
+      let l:color_name = g:colors_name . '/' . &background
+   elseif l:variant_type == 'ayu_color'
+      let l:color_name = g:colors_name . '/' . g:ayucolor
+   elseif l:variant_type == 'gruvbox_material_background'
+      let l:color_name = g:colors_name . '/' . g:gruvbox_material_background
+   elseif l:variant_type == 'material_theme_style'
+      let l:color_name = g:colors_name . '/' . g:material_theme_style
+   elseif l:variant_type == 'materialbox_contrast'
+      if &background == "light"
+         let l:color_name = g:colors_name . '/' . g:materialbox_contrast_light
+      else
+         let l:color_name = g:colors_name . '/' . g:materialbox_contrast_dark
+      endif
+   endif
+   return l:color_name
+endfunction
+
 function! s:GetCurrentColorschemeVariant (colordict)
     if a:colordict.variant_type == 'ayu_color'
         let l:variant = g:ayucolor
@@ -102,7 +143,7 @@ function! s:GetNextScheme (delta, schemes, current_scheme)
 endfunction
 
 function! colorschemefunctions#ToggleBackground()
-    let l:variant_type = myfunctions#GetColorAttribute(g:colors_name, 'variant_type')
+    let l:variant_type = colorschemefunctions#GetColorAttribute(g:colors_name, 'variant_type')
     if l:variant_type == 'background' || l:variant_type == 'colorscheme_bg' || l:variant_type == 'gruvbox_material_background'
         call s:ToggleBG()
     elseif l:variant_type == 'Atelier'
@@ -126,8 +167,8 @@ function! colorschemefunctions#ToggleBackground()
 endfunction
 
 function! colorschemefunctions#SchemeVariant(delta)
-    let l:color = myfunctions#GetColorDictionary(g:colors_name)
-    let l:variant_type = myfunctions#GetColorAttribute(g:colors_name, 'variant_type')
+    let l:color = colorschemefunctions#GetColorDictionary(g:colors_name)
+    let l:variant_type = colorschemefunctions#GetColorAttribute(g:colors_name, 'variant_type')
     if l:variant_type == 'background'
         call s:ToggleBG()
     elseif l:variant_type != ''
@@ -140,7 +181,7 @@ function! colorschemefunctions#SchemeVariant(delta)
 endfunction
 
 function! colorschemefunctions#AirlineTheme(colorscheme)
-    let l:airlinetheme = myfunctions#GetColorAttribute(g:colors_name, 'airlinetheme')
+    let l:airlinetheme = colorschemefunctions#GetColorAttribute(g:colors_name, 'airlinetheme')
     if empty(l:airlinetheme)
         exec "AirlineTheme distinguished"
     elseif l:airlinetheme == 'colorscheme_bg'

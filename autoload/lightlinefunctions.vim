@@ -52,7 +52,7 @@ function! lightlinefunctions#LightlineFileformat()
 endfunction
 
 function! lightlinefunctions#LightlineColorscheme()
-   let l:color = myfunctions#CurrentColorscheme()
+   let l:color = colorschemefunctions#CurrentColorscheme()
    return winwidth(0) > 80 ? l:color : ''
 endfunction
 
@@ -94,7 +94,7 @@ function! lightlinefunctions#LightlineUpdate()
    endif
    try
       let l:new_lightline_colorscheme = 'powerline'
-      let l:lightlinetheme = myfunctions#GetColorAttribute(g:colors_name, 'lightlinetheme')
+      let l:lightlinetheme = colorschemefunctions#GetColorAttribute(g:colors_name, 'lightlinetheme')
       if l:lightlinetheme == 'colorscheme'
          let l:new_lightline_colorscheme = tr(g:colors_name, '-', '_')
       elseif l:lightlinetheme == 'colorscheme_bg'
@@ -108,12 +108,12 @@ function! lightlinefunctions#LightlineUpdate()
             let l:new_lightline_colorscheme = l:lightline_names[0]
          endif
       elseif l:lightlinetheme == 'substitutebg'
-         let s:subpat = myfunctions#GetColorAttribute(g:colors_name, 'subpat')
+         let s:subpat = colorschemefunctions#GetColorAttribute(g:colors_name, 'subpat')
          let l:new_lightline_colorscheme = substitute (g:colors_name, s:subpat, &background, "")
       else
          let l:new_lightline_colorscheme = l:lightlinetheme
       endif
-      if !empty(myfunctions#GetColorAttribute(g:colors_name, 'runtime'))
+      if !empty(colorschemefunctions#GetColorAttribute(g:colors_name, 'runtime'))
          exe 'runtime autoload/lightline/colorscheme/' . l:new_lightline_colorscheme . '.vim'
       endif
       call lightlinefunctions#SetLightlineColorscheme(l:new_lightline_colorscheme)
