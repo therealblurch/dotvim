@@ -64,6 +64,14 @@ function! colorschemefunctions#GetColorAttribute(color_name, key)
    return l:key
 endfunction
 
+function! colorschemefunctions#GetColorAttributefromDictionary(color_dict, key)
+   let l:key = ''
+   if has_key (a:color_dict, a:key)
+      let l:key = a:color_dict[a:key]
+   endif
+   return l:key
+endfunction
+
 function! colorschemefunctions#CurrentColorscheme()
    let l:color_name = g:colors_name
    let l:variant_type = colorschemefunctions#GetColorAttribute(g:colors_name, 'variant_type')
@@ -168,7 +176,7 @@ endfunction
 
 function! colorschemefunctions#SchemeVariant(delta)
     let l:color = colorschemefunctions#GetColorDictionary(g:colors_name)
-    let l:variant_type = colorschemefunctions#GetColorAttribute(g:colors_name, 'variant_type')
+    let l:variant_type = colorschemefunctions#GetColorAttributefromDictionary(l:color, 'variant_type')
     if l:variant_type == 'background'
         call s:ToggleBG()
     elseif l:variant_type != ''
