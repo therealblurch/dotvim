@@ -491,7 +491,7 @@ set statusline+=\ %f
 set statusline+=%m\ 
 set statusline+=%{myfunctions#MU()}\ 
 set statusline+=%=
-set statusline+=%{myfunctions#CurrentColorscheme()}\ 
+set statusline+=%{colorschemefunctions#CurrentColorscheme()}\ 
 set statusline+=%#CursorColumn#
 set statusline+=\ %y
 set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
