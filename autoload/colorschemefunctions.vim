@@ -74,7 +74,7 @@ endfunction
 
 function! colorschemefunctions#CurrentColorscheme()
    let l:color_name = g:colors_name
-   let l:variant_type = colorschemefunctions#GetColorAttribute(g:colors_name, 'variant_type')
+   let l:variant_type = colorschemefunctions#GetColorAttributefromDictionary(g:current_color_dictionary, 'variant_type')
    if l:variant_type == 'background'
       let l:color_name = g:colors_name . '/' . &background
    elseif l:variant_type == 'ayu_color'
@@ -151,7 +151,7 @@ function! s:GetNextScheme (delta, schemes, current_scheme)
 endfunction
 
 function! colorschemefunctions#ToggleBackground()
-    let l:variant_type = colorschemefunctions#GetColorAttribute(g:colors_name, 'variant_type')
+    let l:variant_type = colorschemefunctions#GetColorAttributefromDictionary(g:current_color_dictionary, 'variant_type')
     if l:variant_type == 'background' || l:variant_type == 'colorscheme_bg' || l:variant_type == 'gruvbox_material_background'
         call s:ToggleBG()
     elseif l:variant_type == 'Atelier'
@@ -175,21 +175,20 @@ function! colorschemefunctions#ToggleBackground()
 endfunction
 
 function! colorschemefunctions#SchemeVariant(delta)
-    let l:color = colorschemefunctions#GetColorDictionary(g:colors_name)
-    let l:variant_type = colorschemefunctions#GetColorAttributefromDictionary(l:color, 'variant_type')
+    let l:variant_type = colorschemefunctions#GetColorAttributefromDictionary(g:current_color_dictionary, 'variant_type')
     if l:variant_type == 'background'
         call s:ToggleBG()
     elseif l:variant_type != ''
-        let l:schemes = s:GetColorschemeVariantList (l:color)
-        let l:current_scheme = s:GetCurrentColorschemeVariant (l:color)
+        let l:schemes = s:GetColorschemeVariantList (g:current_color_dictionary)
+        let l:current_scheme = s:GetCurrentColorschemeVariant (g:current_color_dictionary)
         let l:next_scheme = s:GetNextScheme(a:delta, l:schemes, l:current_scheme)
-        call xolox#colorscheme_switcher#switch_to(s:GetNextColorscheme(l:color, l:next_scheme))
-        call s:PossiblyToggleBackground (a:delta, l:color, l:schemes, l:current_scheme)
+        call xolox#colorscheme_switcher#switch_to(s:GetNextColorscheme(g:current_color_dictionary, l:next_scheme))
+        call s:PossiblyToggleBackground (a:delta, g:current_color_dictionary, l:schemes, l:current_scheme)
     endif
 endfunction
 
 function! colorschemefunctions#AirlineTheme(colorscheme)
-    let l:airlinetheme = colorschemefunctions#GetColorAttribute(g:colors_name, 'airlinetheme')
+    let l:airlinetheme = colorschemefunctions#GetColorAttributefromDictionary(g:current_color_dictionary, 'airlinetheme')
     if empty(l:airlinetheme)
         exec "AirlineTheme distinguished"
     elseif l:airlinetheme == 'colorscheme_bg'
