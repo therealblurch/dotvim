@@ -249,6 +249,10 @@ let s:cosmic_latte_dict.lightlinetheme = 'colorscheme_bg'
 let s:cosmic_latte_dict.airlinetheme = 'colorscheme_bg'
 let s:cosmic_latte_dict.variant_type = 'background'
 
+let s:cryslominsa_dict = {}
+let s:cryslominsa_dict.name = 'cryslominsa'
+let s:cryslominsa_dict.lightlinetheme = 'colorscheme'
+
 let s:deep_space_dict = {}
 let s:deep_space_dict.name = 'deep-space'
 let s:deep_space_dict.lightlinetheme = 'deepspace'
@@ -276,6 +280,10 @@ let s:edge_dict.name = 'edge'
 let s:edge_dict.lightlinetheme = 'colorscheme'
 let s:edge_dict.runtime = 'true'
 let s:edge_dict.variant_type = 'background'
+
+let s:fairy_garden_dict = {}
+let s:fairy_garden_dict.name = 'fairy-garden'
+let s:fairy_garden_dict.lightlinetheme = 'colorscheme'
 
 let s:flattened_dict = {}
 let s:flattened_dict.name = 'flattened'
@@ -306,6 +314,10 @@ let s:greygull_dict.airlinetheme = 'colorscheme'
 let s:greygull_dict.variant_type = "colorscheme_group"
 let s:greygull_dict.variants = g:seadbird_themes
 
+let s:grimoire_dict = {}
+let s:grimoire_dict.name = 'grimoire'
+let s:grimoire_dict.lightlinetheme = 'colorscheme'
+
 let s:gruvbox_material_dict = {}
 let s:gruvbox_material_dict.name = 'gruvbox-material'
 let s:gruvbox_material_dict.lightlinetheme = 'colorscheme'
@@ -324,10 +336,18 @@ let s:hybrid_reverse_dict.name = 'hybrid_reverse'
 let s:hybrid_reverse_dict.airlinetheme = 'colorscheme'
 let s:hybrid_reverse_dict.variant_type = 'background'
 
+let s:ice_age_dict = {}
+let s:ice_age_dict.name = 'ice-age'
+let s:ice_age_dict.lightlinetheme = 'colorscheme'
+
 let s:jellybeans_dict = {}
 let s:jellybeans_dict.name = 'jellybeans'
 let s:jellybeans_dict.lightlinetheme = 'colorscheme'
 let s:jellybeans_dict.airlinetheme = 'colorscheme'
+
+let s:lost_schrine_dict = {}
+let s:lost_schrine_dict.name = 'lost-schrine'
+let s:lost_schrine_dict.lightlinetheme = 'colorscheme'
 
 let s:material_dict = {}
 let s:material_dict.name = 'material'
@@ -510,15 +530,18 @@ let s:vadelma_dict.lightlinetheme = 'colorscheme'
 let s:vadelma_dict.runtime = 'true'
 let s:vadelma_dict.variant_type = 'background'
 
+let s:vanilla_cake_dict = {}
+let s:vanilla_cake_dict.name = 'vanilla-cake'
+let s:vanilla_cake_dict.lightlinetheme = 'colorscheme'
+
 let s:zenburn_dict = {}
 let s:zenburn_dict.name = 'zenburn'
 let s:zenburn_dict.airlinetheme = 'colorscheme'
 
 let g:colorscheme_map = [
-         \ s:atelier_dict,
-         \ s:papercolor_dict,
          \ s:afterglow_dict,
          \ s:apprentice_dict,
+         \ s:atelier_dict,
          \ s:atlantis_dict,
          \ s:ayu_dict,
          \ s:blayu_dict,
@@ -527,31 +550,37 @@ let g:colorscheme_map = [
          \ s:corvine_dict,
          \ s:cosme_dict,
          \ s:cosmic_latte_dict,
+         \ s:cryslominsa_dict,
          \ s:deep_space_dict,
-         \ s:desert_night_dict,
          \ s:desertink_dict,
+         \ s:desert_night_dict,
          \ s:deus_dict,
          \ s:dracula_dict,
          \ s:edge_dict,
+         \ s:fairy_garden_dict,
          \ s:flattened_dict,
          \ s:focuspoint_dict,
          \ s:foo_dict,
          \ s:forest_night_dict,
          \ s:greygull_dict,
+         \ s:grimoire_dict,
          \ s:gruvbox_material_dict,
          \ s:hybrid_material_dict,
          \ s:hybrid_reverse_dict,
+         \ s:ice_age_dict,
          \ s:jellybeans_dict,
-         \ s:material_dict,
+         \ s:lost_schrine_dict,
          \ s:materialbox_dict,
+         \ s:material_dict,
          \ s:molokai_dict,
          \ s:monokai_dict,
-         \ s:open_color_dict,
          \ s:night_owl_dict,
          \ s:nord_dict,
          \ s:one_dict,
          \ s:onehalf_dict,
+         \ s:open_color_dict,
          \ s:panic_dict,
+         \ s:papercolor_dict,
          \ s:pencil_dict,
          \ s:petrel_dict,
          \ s:plastic_dict,
@@ -571,8 +600,9 @@ let g:colorscheme_map = [
          \ s:tokyo_metro_dict,
          \ s:typewriter_dict,
          \ s:typewriter_night_dict,
-         \ s:vimspectr_dict,
          \ s:vadelma_dict,
+         \ s:vanilla_cake_dict,
+         \ s:vimspectr_dict,
          \ s:zenburn_dict
          \ ]
 
