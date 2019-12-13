@@ -188,7 +188,7 @@ function! colorschemefunctions#SchemeVariant(delta)
 endfunction
 
 function! colorschemefunctions#AirlineTheme(colorscheme)
-    let l:airlinetheme = colorschemefunctions#GetColorAttributefromDictionary(g:current_color_dictionary, 'airlinetheme')
+    let l:airlinetheme = colorschemefunctions#GetColorAttribute(a:colorscheme, 'airlinetheme')
     if empty(l:airlinetheme)
         exec "AirlineTheme distinguished"
     elseif l:airlinetheme == 'colorscheme_bg'
