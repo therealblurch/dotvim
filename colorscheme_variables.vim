@@ -69,9 +69,6 @@ let g:dark_themes = [
             \ 'eva01',
             \ 'flattened_dark',
             \ 'focuspoint',
-            \ 'foo-abyss',
-            \ 'foo-hyper',
-            \ 'foo-mrrobot',
             \ 'forest-night',
             \ 'jellybeans',
             \ 'molokai',
@@ -297,11 +294,6 @@ let s:flattened_dict.variants = ['_light', '_dark']
 let s:focuspoint_dict = {}
 let s:focuspoint_dict.name = 'focuspoint'
 let s:focuspoint_dict.airlinetheme = 'colorscheme'
-
-let s:foo_dict = {}
-let s:foo_dict.name = 'foo'
-let s:foo_dict.comparison = 'fuzzy'
-let s:foo_dict.airlinetheme = 'colorscheme'
 
 let s:forest_night_dict = {}
 let s:forest_night_dict.name = 'forest-night'
@@ -560,7 +552,6 @@ let g:colorscheme_map = [
          \ s:fairy_garden_dict,
          \ s:flattened_dict,
          \ s:focuspoint_dict,
-         \ s:foo_dict,
          \ s:forest_night_dict,
          \ s:greygull_dict,
          \ s:grimoire_dict,
