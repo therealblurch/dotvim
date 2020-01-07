@@ -119,6 +119,7 @@ Plugin 'letorbi/vim-colors-modern-borland',      {'package': 'colors', 'type': '
 Plugin 'liuchengxu/space-vim-theme',             {'package': 'colors', 'type': 'start'}
 Plugin 'logico-dev/typewriter',                  {'package': 'colors', 'type': 'start'}
 Plugin 'ludokng/vim-odyssey',                    {'package': 'colors', 'type': 'start'}
+Plugin 'megantiu/true.vim',                      {'package': 'colors', 'type': 'start'}
 Plugin 'mkarmona/materialbox',                   {'package': 'colors', 'type': 'start'}
 Plugin 'nanotech/jellybeans.vim',                {'package': 'colors', 'type': 'start', 'name': 'jellybeans'}
 Plugin 'nightsense/cosmic_latte',                {'package': 'colors', 'type': 'start'}

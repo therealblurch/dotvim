@@ -479,6 +479,10 @@ let s:tokyo_metro_dict.name = 'tokyo-metro'
 let s:tokyo_metro_dict.lightlinetheme = 'tokyometro'
 let s:tokyo_metro_dict.airlinetheme = 'colorscheme'
 
+let s:true_dict = {}
+let s:true_dict.name = 'true'
+let s:true_dict.airlinetheme = 'colorscheme'
+
 let s:typewriter_dict = {}
 let s:typewriter_dict.name = 'typewriter'
 let s:typewriter_dict.lightlinetheme = 'typewriter_light'
@@ -581,6 +585,7 @@ let g:colorscheme_map = [
          \ s:stormpetrel_dict,
          \ s:tender_dict,
          \ s:tokyo_metro_dict,
+         \ s:true_dict,
          \ s:typewriter_dict,
          \ s:typewriter_night_dict,
          \ s:vadelma_dict,
