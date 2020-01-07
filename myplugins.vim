@@ -145,6 +145,7 @@ Plugin 'sfi0zy/atlantic-dark.vim',               {'package': 'colors', 'type': '
 Plugin 'sickill/vim-monokai',                    {'package': 'colors', 'type': 'start'}
 Plugin 'Siphalor/vim-atomified',                 {'package': 'colors', 'type': 'start'}
 Plugin 'srcery-colors/srcery-vim',               {'package': 'colors', 'type': 'start'}
+Plugin 'stillwwater/vim-nebula',                 {'package': 'colors', 'type': 'start'}
 Plugin 'tjammer/blayu.vim',                      {'package': 'colors', 'type': 'start'}
 Plugin 'tomasr/molokai',                         {'package': 'colors', 'type': 'start'}
 Plugin 'toupeira/vim-desertink',                 {'package': 'colors', 'type': 'start'}

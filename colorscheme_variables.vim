@@ -362,6 +362,10 @@ let s:monokai_dict = {}
 let s:monokai_dict.name = 'monokai'
 let s:monokai_dict.airlinetheme = 'colorscheme'
 
+let s:nebula_dict = {}
+let s:nebula_dict.name = 'nebula'
+let s:nebula_dict.variant_type = 'background'
+
 let s:night_owl_dict = {}
 let s:night_owl_dict.name = 'night-owl'
 let s:night_owl_dict.lightlinetheme = 'nightowl'
@@ -567,6 +571,7 @@ let g:colorscheme_map = [
          \ s:material_dict,
          \ s:molokai_dict,
          \ s:monokai_dict,
+         \ s:nebula_dict,
          \ s:night_owl_dict,
          \ s:nord_dict,
          \ s:one_dict,
