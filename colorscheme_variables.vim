@@ -120,10 +120,6 @@ let g:variable_themes = [
             \ 'pencil',
             \ 'quantum',
             \ 'snow',
-            \ 'solarized8',
-            \ 'solarized8_flat',
-            \ 'solarized8_high',
-            \ 'solarized8_low',
             \ 'space_vim_theme',
             \ 'stellarized',
             \ 'vadelma',
@@ -446,16 +442,6 @@ let s:snow_dict.lightlinetheme = 'colorscheme_bg'
 let s:snow_dict.airlinetheme = 'colorscheme_bg'
 let s:snow_dict.variant_type = 'background'
 
-let s:solarized8_dict = {}
-let s:solarized8_dict.name = 'solarized8'
-let s:solarized8_dict.comparison = 'fuzzy'
-let s:solarized8_dict.lightlinetheme = 'solarized'
-let s:solarized8_dict.runtime = 'true'
-let s:solarized8_dict.airlinetheme = 'colorscheme'
-let s:solarized8_dict.variant_type = 'colorscheme_bg'
-let s:solarized8_dict.variant_base = 'solarized8'
-let s:solarized8_dict.variants = ['', '_low', '_flat', '_high']
-
 let s:space_vim_theme_dict = {}
 let s:space_vim_theme_dict.name = 'space_vim_theme'
 let s:space_vim_theme_dict.lightlinetheme = 'substitutebg'
@@ -581,7 +567,6 @@ let g:colorscheme_map = [
          \ s:sialoquent_dict,
          \ s:snazzy_dict,
          \ s:snow_dict,
-         \ s:solarized8_dict,
          \ s:space_vim_theme_dict,
          \ s:spring_night_dict,
          \ s:srcery_dict,
