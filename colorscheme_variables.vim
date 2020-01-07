@@ -246,6 +246,10 @@ let s:cryslominsa_dict = {}
 let s:cryslominsa_dict.name = 'cryslominsa'
 let s:cryslominsa_dict.lightlinetheme = 'colorscheme'
 
+let s:darkspace_dict = {}
+let s:darkspace_dict.name = 'darkspace'
+let s:darkspace_dict.airlinetheme = 'colorscheme'
+
 let s:deep_space_dict = {}
 let s:deep_space_dict.name = 'deep-space'
 let s:deep_space_dict.lightlinetheme = 'deepspace'
@@ -540,6 +544,7 @@ let g:colorscheme_map = [
          \ s:cosme_dict,
          \ s:cosmic_latte_dict,
          \ s:cryslominsa_dict,
+         \ s:darkspace_dict,
          \ s:deep_space_dict,
          \ s:desertink_dict,
          \ s:desert_night_dict,
