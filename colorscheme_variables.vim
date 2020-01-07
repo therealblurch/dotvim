@@ -512,6 +512,13 @@ let s:vanilla_cake_dict = {}
 let s:vanilla_cake_dict.name = 'vanilla-cake'
 let s:vanilla_cake_dict.lightlinetheme = 'colorscheme'
 
+let s:xcode_dict = {}
+let s:xcode_dict.name = 'xcode'
+let s:xcode_dict.comparison = 'fuzzy'
+let s:xcode_dict.variant_type = 'colorscheme'
+let s:xcode_dict.variant_base = 'xcode'
+let s:xcode_dict.variants = ['dark', 'light']
+
 let s:zenburn_dict = {}
 let s:zenburn_dict.name = 'zenburn'
 let s:zenburn_dict.airlinetheme = 'colorscheme'
@@ -579,6 +586,7 @@ let g:colorscheme_map = [
          \ s:vadelma_dict,
          \ s:vanilla_cake_dict,
          \ s:vimspectr_dict,
+         \ s:xcode_dict,
          \ s:zenburn_dict
          \ ]
 
