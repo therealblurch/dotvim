@@ -102,6 +102,7 @@ Plugin 'cseelus/vim-colors-tone',                {'package': 'colors', 'type': '
 Plugin 'danilo-augusto/vim-afterglow',           {'package': 'colors', 'type': 'start'}
 Plugin 'davidklsn/vim-sialoquent',               {'package': 'colors', 'type': 'start'}
 Plugin 'dracula/vim',                            {'package': 'colors', 'type': 'start', 'name': 'dracula'}
+Plugin 'eemed/sitruuna.vim',                     {'package': 'colors', 'type': 'start'}
 Plugin 'flrnd/candid.vim',                       {'package': 'colors', 'type': 'start'}
 Plugin 'flrnd/plastic.vim',                      {'package': 'colors', 'type': 'start'}
 Plugin 'hachy/eva01.vim',                        {'package': 'colors', 'type': 'start'}
