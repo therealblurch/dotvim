@@ -156,7 +156,6 @@ let g:airline_theme_map = {
             \ 'greygull'                 : 'seagull',
             \ 'hybrid*'                  : 'hybrid',
             \ 'petrel'                   : 'seagull',
-            \ 'solarized8*'              : 'solarized',
             \ 'stormpetrel'              : 'seagull',
             \ 'tokyo-metro'              : 'tokyometro',
             \ 'edge'                     : 'distinguished',
