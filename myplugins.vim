@@ -95,6 +95,8 @@ Plugin 'atelierbram/vim-colors_atelier-schemes', {'package': 'colors', 'type': '
 Plugin 'axvr/photon.vim',                        {'package': 'colors', 'type': 'start'}
 Plugin 'ayu-theme/ayu-vim',                      {'package': 'colors', 'type': 'start'}
 Plugin 'beikome/cosme.vim',                      {'package': 'colors', 'type': 'start'}
+Plugin 'bluz71/vim-nightfly-guicolors',          {'package': 'colors', 'type': 'start'}
+Plugin 'bluz71/vim-moonfly-colors',              {'package': 'colors', 'type': 'start'}
 Plugin 'chase/vim-airline-focuspoint',           {'package': 'colors', 'type': 'start'}
 Plugin 'chase/focuspoint-vim',                   {'package': 'colors', 'type': 'start'}
 Plugin 'connorholyday/vim-snazzy',               {'package': 'colors', 'type': 'start'}

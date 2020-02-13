@@ -47,6 +47,12 @@ let g:seadbird_themes = [
             \ 'stormpetrel'
             \ ]
 
+let g:xcode_themes = [
+            \ 'xcodedark',
+            \ 'xcodelight',
+            \ 'xcodewwdc',
+            \ ]
+
 let g:dark_themes = [
             \ 'afterglow',
             \ 'apprentice',
@@ -103,26 +109,6 @@ let g:light_themes = [
             \ 'flattened_light',
             \ 'onehalflight',
             \ 'typewriter',
-            \ ]
-
-let g:variable_themes = [
-            \ 'ayu',
-            \ 'cosmic_latte',
-            \ 'edge',
-            \ 'gruvbox-material',
-            \ 'hybrid_material',
-            \ 'hybrid_reverse',
-            \ 'material',
-            \ 'materialbox',
-            \ 'one',
-            \ 'open-color',
-            \ 'PaperColor',
-            \ 'pencil',
-            \ 'quantum',
-            \ 'snow',
-            \ 'space_vim_theme',
-            \ 'stellarized',
-            \ 'vadelma',
             \ ]
 
 "g:colorscheme_map is a list of dictionaries that specify options for
@@ -362,6 +348,10 @@ let s:monokai_dict = {}
 let s:monokai_dict.name = 'monokai'
 let s:monokai_dict.airlinetheme = 'colorscheme'
 
+let s:moonfly_dict = {}
+let s:moonfly_dict.name = 'moonfly'
+let s:moonfly_dict.lightlinetheme = 'colorscheme'
+
 let s:nebula_dict = {}
 let s:nebula_dict.name = 'nebula'
 let s:nebula_dict.variant_type = 'background'
@@ -370,6 +360,10 @@ let s:night_owl_dict = {}
 let s:night_owl_dict.name = 'night-owl'
 let s:night_owl_dict.lightlinetheme = 'nightowl'
 let s:night_owl_dict.airlinetheme = 'colorscheme'
+
+let s:nightfly_dict = {}
+let s:nightfly_dict.name = 'nightfly'
+let s:nightfly_dict.lightlinetheme = 'colorscheme'
 
 let s:nord_dict = {}
 let s:nord_dict.name = 'nord'
@@ -529,7 +523,7 @@ let s:xcode_dict.name = 'xcode'
 let s:xcode_dict.comparison = 'fuzzy'
 let s:xcode_dict.variant_type = 'colorscheme'
 let s:xcode_dict.variant_base = 'xcode'
-let s:xcode_dict.variants = ['dark', 'light']
+let s:xcode_dict.variants = ['dark', 'light', 'wwdc']
 
 let s:zenburn_dict = {}
 let s:zenburn_dict.name = 'zenburn'
@@ -613,4 +607,4 @@ let g:colorscheme_groups.group4 = g:atelier_dark_themes
 let g:colorscheme_groups.group5 = g:seadbird_themes
 let g:colorscheme_groups.group6 = g:dark_themes
 let g:colorscheme_groups.group7 = g:light_themes
-let g:colorscheme_groups.group8 = g:variable_themes
+let g:colorscheme_groups.group7 = g:xcode_themes
