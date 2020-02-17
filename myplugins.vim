@@ -4,7 +4,6 @@ let g:vimball = expand('~/vimfiles/pack/unmanaged/opt/')
 
 augroup myplugins | au! | augroup END
 
-Plugin 'andymass/vim-matchup',                  {'type': 'start'}
 Plugin 'ap/vim-buftabline'
 Plugin 'brooth/far.vim'
 Plugin 'airblade/vim-gitgutter',                {'type': 'start'}
@@ -180,9 +179,6 @@ function! myplugins#callback(plugname, before)
       if a:plugname == "vim-airline"
          let g:airline_section_x = airline#section#create_right(['%-20{colorschemefunctions#CurrentColorscheme()}', 'bookmark', 'tagbar', 'vista', 'gutentags', 'grepper', 'filetype'])
          let g:airline_section_c = airline#section#create(['%<', 'file', g:airline_symbols.space, 'readonly', '%{myfunctions#MU()}'])
-      endif
-      if a:plugname == 'vim-sensible'
-         let g:loaded_matchit=1
       endif
    endif
 
