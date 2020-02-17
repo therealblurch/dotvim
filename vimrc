@@ -230,7 +230,7 @@ autocmd FileType verilog_systemverilog
         \ let b:endwise_words = 'begin,module,case,function,primitive,specify,task' |
         \ let b:endwise_pattern = '\<\%(\zs\zebegin\|module\|case\|function\|primitive\|specify\|task\)\>.*$' |
         \ let b:endwise_syngroups = 'verilogConditional,verilogLabel,verilogStatement'
-}}}
+"}}}
 
 " FZF {{{
 let g:fzf_colors =
