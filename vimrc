@@ -393,12 +393,6 @@ command! -nargs=1 -complete=color Colorscheme call xolox#colorscheme_switcher#sw
 " }}}
 
 " mucomplete {{{
-if has('patch-8.0.0283')
-else
-    let g:AutoPairsMapCR = 0
-    imap <Plug>MyCR <Plug>(MUcompleteCR)<Plug>AutoPairsReturn
-    imap <cr> <Plug>MyCR
-endif
 let g:mucomplete#enable_auto_at_startup=1
 
 imap <expr> <right> mucomplete#extend_fwd("\<right>")
@@ -409,13 +403,6 @@ let g:mucomplete#chains = {
             \ 'verilog_systemverilog': ['snip', 'tags', 'path', 'omni', 'keyn'],
             \ 'vim': ['snip', 'path', 'cmd', 'keyn'],
             \ }
-
-inoremap <plug>MyEnter <cr>
-imap <silent> <expr> <plug>MyCR (pumvisible()
-            \ ? "\<c-y>\<plug>snipMateTrigger"
-            \ : "\<plug>MyEnter<plug>AutoPairsReturn")
-imap <cr> <plug>MyCR
-
 " }}}
 
 " nerdtree {{{
