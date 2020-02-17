@@ -190,12 +190,6 @@ nmap * <Plug>(anzu-star)
 nmap # <Plug>(anzu-sharp)
 " }}}
 
-" pear-tree {{{
-let g:pear_tree_smart_openers = 1
-let g:pear_tree_smart_closers = 1
-let g:pear_tree_smart_backspace = 1
-" }}}
-
 " buftabline {{{
 let g:buftabline_numbers = 1
 let g:buftabline_indicators = 1

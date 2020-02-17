@@ -27,6 +27,7 @@ Plugin 'markonm/traces.vim',                    {'type': 'start'}
 Plugin 'myusuf3/numbers.vim',                   {'type': 'start'}
 Plugin 'osyo-manga/vim-anzu',                   {'type': 'start'}
 Plugin 'pelodelfuego/vim-swoop'
+Plugin 'Raimondi/delimitMate',                  {'type': 'start'}
 Plugin 'rbong/vim-flog'
 Plugin 'rhysd/committia.vim',                   {'type': 'start'}
 Plugin 'rhysd/conflict-marker.vim'
@@ -36,7 +37,6 @@ Plugin 'ryanoasis/vim-devicons',                {'type': 'start'}
 Plugin 'sainnhe/lightline_foobar.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'taohexxx/lightline-buffer'
-Plugin 'tmsvg/pear-tree',                       {'type': 'start'}
 Plugin 'tommcdo/vim-lion'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tomtom/tlib_vim',                       {'type': 'start'}
