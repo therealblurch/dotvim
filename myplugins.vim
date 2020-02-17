@@ -36,6 +36,7 @@ Plugin 'ryanoasis/vim-devicons',                {'type': 'start'}
 Plugin 'sainnhe/lightline_foobar.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'taohexxx/lightline-buffer'
+Plugin 'tmsvg/pear-tree',                       {'type': 'start'}
 Plugin 'tommcdo/vim-lion'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'tomtom/tlib_vim',                       {'type': 'start'}
