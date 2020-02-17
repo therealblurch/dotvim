@@ -14,7 +14,6 @@ Plugin 'nishigori/increment-activator'
 Plugin 'garbas/vim-snipmate',                   {'type': 'start'}
 Plugin 'honza/vim-snippets',                    {'type': 'start'}
 Plugin 'itchyny/lightline.vim'
-Plugin 'jiangmiao/auto-pairs',                  {'type': 'start'}
 Plugin 'junegunn/fzf.vim'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'junegunn/vim-peekaboo',                 {'type': 'start'}
