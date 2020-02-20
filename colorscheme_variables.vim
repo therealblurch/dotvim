@@ -444,6 +444,13 @@ let s:snow_dict.lightlinetheme = 'colorscheme_bg'
 let s:snow_dict.airlinetheme = 'colorscheme_bg'
 let s:snow_dict.variant_type = 'background'
 
+let s:sonokai_dict = {}
+let s:sonokai_dict.name = 'sonokai'
+let s:sonokai_dict.lightlinetheme = 'colorscheme'
+let s:sonokai_dict.airlinetheme = 'colorscheme'
+let s:sonokai_dict.variant_type = 'sonokai_style'
+let s:sonokai_dict.variants = ['shusia', 'andromeda', 'atlantis', 'maia']
+
 let s:space_vim_theme_dict = {}
 let s:space_vim_theme_dict.name = 'space_vim_theme'
 let s:space_vim_theme_dict.lightlinetheme = 'substitutebg'
@@ -582,6 +589,7 @@ let g:colorscheme_map = [
          \ s:sialoquent_dict,
          \ s:snazzy_dict,
          \ s:snow_dict,
+         \ s:sonokai_dict,
          \ s:space_vim_theme_dict,
          \ s:spring_night_dict,
          \ s:srcery_dict,
