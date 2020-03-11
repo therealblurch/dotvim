@@ -118,7 +118,7 @@ autocmd FileType gitcommit setlocal spell
 
 "Colorscheme Options {{{
 
-"ayu Possible Values: light| dark | mirage
+"ayu Possible Values: light | dark | mirage
 let ayucolor="light"
 let g:ayucolor=ayucolor
 
