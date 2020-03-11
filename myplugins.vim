@@ -4,7 +4,6 @@ let g:vimball = expand('~/vimfiles/pack/unmanaged/opt/')
 
 augroup myplugins | au! | augroup END
 
-Plugin 'ap/vim-buftabline'
 Plugin 'brooth/far.vim'
 Plugin 'airblade/vim-gitgutter',                {'type': 'start'}
 Plugin 'chrisbra/NrrwRgn',                      {'type': 'start'}
@@ -32,7 +31,6 @@ Plugin 'rbong/vim-flog',                        {'type': 'start'}
 Plugin 'rhysd/committia.vim',                   {'type': 'start'}
 Plugin 'rhysd/conflict-marker.vim',             {'type': 'start'}
 Plugin 'rhysd/git-messenger.vim',               {'type': 'start'}
-Plugin 'rmolin88/pomodoro.vim'
 Plugin 'ryanoasis/vim-devicons',                {'type': 'start'}
 Plugin 'sainnhe/lightline_foobar.vim'
 Plugin 'scrooloose/nerdtree'
