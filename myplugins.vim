@@ -11,6 +11,8 @@ Plugin 'drmikehenry/vim-fontsize',              {'type': 'start'}
 Plugin 'idanarye/vim-merginal',                 {'type': 'start'}
 Plugin 'nishigori/increment-activator',         {'type': 'start'}
 Plugin 'garbas/vim-snipmate',                   {'type': 'start'}
+Plugin 'haya14busa/incsearch.vim',              {'type': 'start'}
+Plugin 'haya14busa/incsearch-fuzzy.vim',        {'type': 'start'}
 Plugin 'honza/vim-snippets',                    {'type': 'start'}
 Plugin 'itchyny/lightline.vim'
 Plugin 'junegunn/fzf.vim',                      {'type': 'start'}
