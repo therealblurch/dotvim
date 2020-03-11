@@ -4,17 +4,17 @@ let g:vimball = expand('~/vimfiles/pack/unmanaged/opt/')
 
 augroup myplugins | au! | augroup END
 
-Plugin 'brooth/far.vim'
+Plugin 'brooth/far.vim',                        {'type': 'start'}
 Plugin 'airblade/vim-gitgutter',                {'type': 'start'}
 Plugin 'chrisbra/NrrwRgn',                      {'type': 'start'}
 Plugin 'drmikehenry/vim-fontsize',              {'type': 'start'}
-Plugin 'idanarye/vim-merginal'
+Plugin 'idanarye/vim-merginal',                 {'type': 'start'}
 Plugin 'nishigori/increment-activator',         {'type': 'start'}
 Plugin 'garbas/vim-snipmate',                   {'type': 'start'}
 Plugin 'honza/vim-snippets',                    {'type': 'start'}
 Plugin 'itchyny/lightline.vim'
-Plugin 'junegunn/fzf.vim'
-Plugin 'junegunn/vim-easy-align'
+Plugin 'junegunn/fzf.vim',                      {'type': 'start'}
+Plugin 'junegunn/vim-easy-align',               {'type': 'start'}
 Plugin 'junegunn/vim-peekaboo',                 {'type': 'start'}
 Plugin 'kshenoy/vim-signature',                 {'type': 'start'}
 Plugin 'lifepillar/vim-mucomplete',             {'type': 'start'}
@@ -25,7 +25,7 @@ Plugin 'MarcWeber/vim-addon-mw-utils',          {'type': 'start'}
 Plugin 'markonm/traces.vim',                    {'type': 'start'}
 Plugin 'myusuf3/numbers.vim',                   {'type': 'start'}
 Plugin 'osyo-manga/vim-anzu',                   {'type': 'start'}
-Plugin 'pelodelfuego/vim-swoop'
+Plugin 'pelodelfuego/vim-swoop',                {'type': 'start'}
 Plugin 'Raimondi/delimitMate',                  {'type': 'start'}
 Plugin 'rbong/vim-flog',                        {'type': 'start'}
 Plugin 'rhysd/committia.vim',                   {'type': 'start'}
@@ -33,7 +33,7 @@ Plugin 'rhysd/conflict-marker.vim',             {'type': 'start'}
 Plugin 'rhysd/git-messenger.vim',               {'type': 'start'}
 Plugin 'ryanoasis/vim-devicons',                {'type': 'start'}
 Plugin 'sainnhe/lightline_foobar.vim'
-Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree',                   {'type': 'start'}
 Plugin 'taohexxx/lightline-buffer'
 Plugin 'tommcdo/vim-lion',                      {'type': 'start'}
 Plugin 'tomtom/tcomment_vim',                   {'type': 'start'}
@@ -41,7 +41,7 @@ Plugin 'tomtom/tlib_vim',                       {'type': 'start'}
 Plugin 'tpope/vim-dispatch',                    {'type': 'start'}
 Plugin 'tpope/vim-endwise',                     {'type': 'start'}
 Plugin 'tpope/vim-fugitive',                    {'type': 'start'}
-Plugin 'tpope/vim-obsession'
+Plugin 'tpope/vim-obsession',                   {'type': 'start'}
 Plugin 'tpope/vim-sensible',                    {'type': 'start'}
 Plugin 'tpope/vim-sleuth',                      {'type': 'start'}
 Plugin 'tpope/vim-speeddating'
