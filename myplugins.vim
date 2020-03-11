@@ -8,9 +8,9 @@ Plugin 'ap/vim-buftabline'
 Plugin 'brooth/far.vim'
 Plugin 'airblade/vim-gitgutter',                {'type': 'start'}
 Plugin 'chrisbra/NrrwRgn',                      {'type': 'start'}
-Plugin 'drmikehenry/vim-fontsize'
+Plugin 'drmikehenry/vim-fontsize',              {'type': 'start'}
 Plugin 'idanarye/vim-merginal'
-Plugin 'nishigori/increment-activator'
+Plugin 'nishigori/increment-activator',         {'type': 'start'}
 Plugin 'garbas/vim-snipmate',                   {'type': 'start'}
 Plugin 'honza/vim-snippets',                    {'type': 'start'}
 Plugin 'itchyny/lightline.vim'
@@ -28,17 +28,17 @@ Plugin 'myusuf3/numbers.vim',                   {'type': 'start'}
 Plugin 'osyo-manga/vim-anzu',                   {'type': 'start'}
 Plugin 'pelodelfuego/vim-swoop'
 Plugin 'Raimondi/delimitMate',                  {'type': 'start'}
-Plugin 'rbong/vim-flog'
+Plugin 'rbong/vim-flog',                        {'type': 'start'}
 Plugin 'rhysd/committia.vim',                   {'type': 'start'}
-Plugin 'rhysd/conflict-marker.vim'
-Plugin 'rhysd/git-messenger.vim'
+Plugin 'rhysd/conflict-marker.vim',             {'type': 'start'}
+Plugin 'rhysd/git-messenger.vim',               {'type': 'start'}
 Plugin 'rmolin88/pomodoro.vim'
 Plugin 'ryanoasis/vim-devicons',                {'type': 'start'}
 Plugin 'sainnhe/lightline_foobar.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'taohexxx/lightline-buffer'
-Plugin 'tommcdo/vim-lion'
-Plugin 'tomtom/tcomment_vim'
+Plugin 'tommcdo/vim-lion',                      {'type': 'start'}
+Plugin 'tomtom/tcomment_vim',                   {'type': 'start'}
 Plugin 'tomtom/tlib_vim',                       {'type': 'start'}
 Plugin 'tpope/vim-dispatch',                    {'type': 'start'}
 Plugin 'tpope/vim-endwise',                     {'type': 'start'}
@@ -47,14 +47,14 @@ Plugin 'tpope/vim-obsession'
 Plugin 'tpope/vim-sensible',                    {'type': 'start'}
 Plugin 'tpope/vim-sleuth',                      {'type': 'start'}
 Plugin 'tpope/vim-speeddating'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'tyru/capture.vim'
+Plugin 'tpope/vim-surround',                    {'type': 'start'}
+Plugin 'tpope/vim-unimpaired',                  {'type': 'start'}
+Plugin 'tyru/capture.vim',                      {'type': 'start'}
 Plugin 'unblevable/quick-scope',                {'type': 'start'}
 Plugin 'vhda/verilog_systemverilog.vim',        {'type': 'start'}
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'vim-scripts/VisIncr'
+Plugin 'vim-scripts/VisIncr',                   {'type': 'start'}
 Plugin 'wellle/visual-split.vim'
 Plugin 'xolox/vim-misc',                        {'type': 'start'}
 Plugin 'xolox/vim-colorscheme-switcher',        {'type': 'start'}
