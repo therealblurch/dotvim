@@ -186,13 +186,6 @@ let g:airline_theme_map = {
 
 " }}}
 
-" anzu {{{
-nmap n <Plug>(anzu-n)
-nmap N <Plug>(anzu-N)
-nmap * <Plug>(anzu-star)
-nmap # <Plug>(anzu-sharp)
-" }}}
-
 " buftabline {{{
 let g:buftabline_numbers = 1
 let g:buftabline_indicators = 1
