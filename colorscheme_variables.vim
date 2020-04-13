@@ -258,12 +258,6 @@ let s:dracula_dict.name = 'dracula'
 let s:dracula_dict.lightlinetheme = 'colorscheme'
 let s:dracula_dict.airlinetheme = 'colorscheme'
 
-let s:edge_dict = {}
-let s:edge_dict.name = 'edge'
-let s:edge_dict.lightlinetheme = 'colorscheme'
-let s:edge_dict.runtime = 'true'
-let s:edge_dict.variant_type = 'background'
-
 let s:fairy_garden_dict = {}
 let s:fairy_garden_dict.name = 'fairy-garden'
 let s:fairy_garden_dict.lightlinetheme = 'colorscheme'
@@ -555,7 +549,6 @@ let g:colorscheme_map = [
          \ s:desert_night_dict,
          \ s:deus_dict,
          \ s:dracula_dict,
-         \ s:edge_dict,
          \ s:fairy_garden_dict,
          \ s:flattened_dict,
          \ s:focuspoint_dict,

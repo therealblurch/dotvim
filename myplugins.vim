@@ -139,7 +139,6 @@ Plugin 'rhysd/wallaby.vim',                      {'package': 'colors', 'type': '
 Plugin 'romainl/Apprentice',                     {'package': 'colors', 'type': 'start'}
 Plugin 'romainl/flattened',                      {'package': 'colors', 'type': 'start'}
 Plugin 'sainnhe/archived-colors',                {'package': 'colors', 'type': 'start'}
-Plugin 'sainnhe/edge',                           {'package': 'colors', 'type': 'start'}
 Plugin 'sainnhe/gruvbox-material',               {'package': 'colors', 'type': 'start'}
 Plugin 'sainnhe/sonokai',                        {'package': 'colors', 'type': 'start'}
 Plugin 'sainnhe/vim-color-forest-night',         {'package': 'colors', 'type': 'start'}
