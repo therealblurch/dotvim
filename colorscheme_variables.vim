@@ -334,6 +334,10 @@ let s:materialbox_dict.airlinetheme = 'colorscheme'
 let s:materialbox_dict.variant_type = 'materialbox_contrast'
 let s:materialbox_dict.variants = ['soft', 'medium', 'hard']
 
+let s:miramare_dict = {}
+let s:miramare_dict.name = 'miramare'
+let s:miramare_dict.airlinetheme = 'colorscheme'
+
 let s:molokai_dict = {}
 let s:molokai_dict.name = 'molokai'
 let s:molokai_dict.airlinetheme = 'colorscheme'
@@ -563,6 +567,7 @@ let g:colorscheme_map = [
          \ s:lost_schrine_dict,
          \ s:materialbox_dict,
          \ s:material_dict,
+         \ s:miramare_dict,
          \ s:molokai_dict,
          \ s:monokai_dict,
          \ s:nebula_dict,
