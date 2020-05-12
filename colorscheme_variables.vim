@@ -71,7 +71,6 @@ let g:dark_themes = [
             \ 'desert-night',
             \ 'desertink',
             \ 'deus',
-            \ 'eldar',
             \ 'eva01',
             \ 'flattened_dark',
             \ 'focuspoint',
@@ -83,7 +82,6 @@ let g:dark_themes = [
             \ 'night-owl',
             \ 'odyssey',
             \ 'onehalfdark',
-            \ 'panic',
             \ 'photon',
             \ 'plastic',
             \ 'sacredforest',
@@ -334,10 +332,6 @@ let s:materialbox_dict.airlinetheme = 'colorscheme'
 let s:materialbox_dict.variant_type = 'materialbox_contrast'
 let s:materialbox_dict.variants = ['soft', 'medium', 'hard']
 
-let s:miramare_dict = {}
-let s:miramare_dict.name = 'miramare'
-let s:miramare_dict.airlinetheme = 'colorscheme'
-
 let s:molokai_dict = {}
 let s:molokai_dict.name = 'molokai'
 let s:molokai_dict.airlinetheme = 'colorscheme'
@@ -345,14 +339,6 @@ let s:molokai_dict.airlinetheme = 'colorscheme'
 let s:monokai_dict = {}
 let s:monokai_dict.name = 'monokai'
 let s:monokai_dict.airlinetheme = 'colorscheme'
-
-let s:moonfly_dict = {}
-let s:moonfly_dict.name = 'moonfly'
-let s:moonfly_dict.lightlinetheme = 'colorscheme'
-
-let s:nebula_dict = {}
-let s:nebula_dict.name = 'nebula'
-let s:nebula_dict.variant_type = 'background'
 
 let s:night_owl_dict = {}
 let s:night_owl_dict.name = 'night-owl'
@@ -392,10 +378,6 @@ let s:onehalf_dict.variants = ['light', 'dark']
 let s:open_color_dict = {}
 let s:open_color_dict.name = 'open-color'
 let s:open_color_dict.variant_type = 'background'
-
-let s:panic_dict = {}
-let s:panic_dict.name = 'panic'
-let s:panic_dict.airlinetheme = 'colorscheme'
 
 let s:pencil_dict = {}
 let s:pencil_dict.name = 'pencil'
@@ -567,16 +549,13 @@ let g:colorscheme_map = [
          \ s:lost_schrine_dict,
          \ s:materialbox_dict,
          \ s:material_dict,
-         \ s:miramare_dict,
          \ s:molokai_dict,
          \ s:monokai_dict,
-         \ s:nebula_dict,
          \ s:night_owl_dict,
          \ s:nord_dict,
          \ s:one_dict,
          \ s:onehalf_dict,
          \ s:open_color_dict,
-         \ s:panic_dict,
          \ s:papercolor_dict,
          \ s:pencil_dict,
          \ s:petrel_dict,

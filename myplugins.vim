@@ -85,7 +85,6 @@ Plugin 'vimtaku/vim-textobj-keyvalue',          {'type': 'start'}
 Plugin 'arcticicestudio/nord-vim',               {'package': 'colors', 'type': 'start', 'branch': 'develop'}
 Plugin 'adlawson/vim-sorcerer',                  {'package': 'colors', 'type': 'start'}
 Plugin 'agreco/vim-citylights',                  {'package': 'colors', 'type': 'start'}
-Plugin 'agude/vim-eldar',                        {'package': 'colors', 'type': 'start'}
 Plugin 'ajmwagar/vim-deus',                      {'package': 'colors', 'type': 'start'}
 Plugin 'arzg/vim-corvine',                       {'package': 'colors', 'type': 'start'}
 Plugin 'arzg/vim-colors-xcode',                  {'package': 'colors', 'type': 'start'}
@@ -94,7 +93,6 @@ Plugin 'axvr/photon.vim',                        {'package': 'colors', 'type': '
 Plugin 'ayu-theme/ayu-vim',                      {'package': 'colors', 'type': 'start'}
 Plugin 'beikome/cosme.vim',                      {'package': 'colors', 'type': 'start'}
 Plugin 'bluz71/vim-nightfly-guicolors',          {'package': 'colors', 'type': 'start'}
-Plugin 'bluz71/vim-moonfly-colors',              {'package': 'colors', 'type': 'start'}
 Plugin 'chase/vim-airline-focuspoint',           {'package': 'colors', 'type': 'start'}
 Plugin 'chase/focuspoint-vim',                   {'package': 'colors', 'type': 'start'}
 Plugin 'connorholyday/vim-snazzy',               {'package': 'colors', 'type': 'start'}
@@ -103,15 +101,12 @@ Plugin 'cseelus/vim-colors-tone',                {'package': 'colors', 'type': '
 Plugin 'danilo-augusto/vim-afterglow',           {'package': 'colors', 'type': 'start'}
 Plugin 'davidklsn/vim-sialoquent',               {'package': 'colors', 'type': 'start'}
 Plugin 'dracula/vim',                            {'package': 'colors', 'type': 'start', 'name': 'dracula'}
-Plugin 'eemed/sitruuna.vim',                     {'package': 'colors', 'type': 'start'}
 Plugin 'flrnd/candid.vim',                       {'package': 'colors', 'type': 'start'}
 Plugin 'flrnd/plastic.vim',                      {'package': 'colors', 'type': 'start'}
-Plugin 'franbach/miramare',                      {'package': 'colors', 'type': 'start'}
 Plugin 'hachy/eva01.vim',                        {'package': 'colors', 'type': 'start'}
 Plugin 'haishanh/night-owl.vim',                 {'package': 'colors', 'type': 'start'}
 Plugin 'gosukiwi/vim-atom-dark',                 {'package': 'colors', 'type': 'start'}
 Plugin 'jacoborus/tender.vim',                   {'package': 'colors', 'type': 'start'}
-Plugin 'jdsimcoe/panic.vim',                     {'package': 'colors', 'type': 'start'}
 Plugin 'jnurmine/Zenburn',                       {'package': 'colors', 'type': 'start'}
 Plugin 'kaicataldo/material.vim',                {'package': 'colors', 'type': 'start', 'name': 'material'}
 Plugin 'KKPMW/sacredforest-vim',                 {'package': 'colors', 'type': 'start'}
@@ -148,7 +143,6 @@ Plugin 'sfi0zy/atlantic-dark.vim',               {'package': 'colors', 'type': '
 Plugin 'sickill/vim-monokai',                    {'package': 'colors', 'type': 'start'}
 Plugin 'Siphalor/vim-atomified',                 {'package': 'colors', 'type': 'start'}
 Plugin 'srcery-colors/srcery-vim',               {'package': 'colors', 'type': 'start'}
-Plugin 'stillwwater/vim-nebula',                 {'package': 'colors', 'type': 'start'}
 Plugin 'tjammer/blayu.vim',                      {'package': 'colors', 'type': 'start'}
 Plugin 'tomasr/molokai',                         {'package': 'colors', 'type': 'start'}
 Plugin 'toupeira/vim-desertink',                 {'package': 'colors', 'type': 'start'}
