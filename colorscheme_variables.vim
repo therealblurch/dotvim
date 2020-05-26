@@ -88,7 +88,6 @@ let g:dark_themes = [
             \ 'sialoquent',
             \ 'snazzy',
             \ 'sorceror',
-            \ 'sourceror',
             \ 'spring-night',
             \ 'srcery',
             \ 'tender',
