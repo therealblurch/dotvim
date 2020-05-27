@@ -404,7 +404,6 @@ augroup StatusBarTheme
     autocmd Colorscheme * if myfunctions#WhichStatus(g:colors_name) == "none" && !exists('g:loaded_lightline') && !exists('g:loaded_airline') | PackAdd vim-buftabline | endif
     autocmd Colorscheme * call writefile([&background, g:colors_name], expand(g:colorscheme_file)) | let g:current_color_dictionary = colorschemefunctions#GetColorDictionary(g:colors_name)
     autocmd Colorscheme borland hi! Cursor guifg=#003078 guibg=#a85700
-    autocmd Colorscheme * hi Comment gui=italic | hi SpecialComment gui=italic | hi Todo gui=italic
 augroup END
 
 autocmd VimEnter * call colorschemefunctions#SetLastColorscheme()
