@@ -83,7 +83,6 @@ Plugin 'thinca/vim-textobj-between',            {'type': 'start'}
 Plugin 'vimtaku/vim-textobj-keyvalue',          {'type': 'start'}
 
 Plugin 'arcticicestudio/nord-vim',               {'package': 'colors', 'type': 'start', 'branch': 'develop'}
-Plugin 'adlawson/vim-sorcerer',                  {'package': 'colors', 'type': 'start'}
 Plugin 'agreco/vim-citylights',                  {'package': 'colors', 'type': 'start'}
 Plugin 'ajmwagar/vim-deus',                      {'package': 'colors', 'type': 'start'}
 Plugin 'arzg/vim-corvine',                       {'package': 'colors', 'type': 'start'}
@@ -150,7 +149,6 @@ Plugin 'tpope/vim-vividchalk',                   {'package': 'colors', 'type': '
 Plugin 'tyrannicaltoucan/vim-deep-space',        {'package': 'colors', 'type': 'start'}
 Plugin 'vim-scripts/vibrantink',                 {'package': 'colors', 'type': 'start'}
 Plugin 'wmvanvliet/vim-blackboard',              {'package': 'colors', 'type': 'start'}
-Plugin 'xero/sourcerer.vim',                     {'package': 'colors', 'type': 'start'}
 Plugin 'yous/vim-open-color',                    {'package': 'colors', 'type': 'start'}
 
 " This repositories contain a vim directory which is the only directory that I want
