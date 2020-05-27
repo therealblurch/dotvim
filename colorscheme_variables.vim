@@ -53,61 +53,6 @@ let g:xcode_themes = [
             \ 'xcodewwdc',
             \ ]
 
-let g:dark_themes = [
-            \ 'afterglow',
-            \ 'apprentice',
-            \ 'atlantic-dark',
-            \ 'atlantis',
-            \ 'atom-dark',
-            \ 'atomified',
-            \ 'blackboard',
-            \ 'blayu',
-            \ 'bluewery',
-            \ 'candid',
-            \ 'citylights',
-            \ 'corvine',
-            \ 'cosme',
-            \ 'deep-space',
-            \ 'desert-night',
-            \ 'desertink',
-            \ 'deus',
-            \ 'eva01',
-            \ 'flattened_dark',
-            \ 'focuspoint',
-            \ 'forest-night',
-            \ 'jellybeans',
-            \ 'molokai',
-            \ 'monokai',
-            \ 'mustang',
-            \ 'night-owl',
-            \ 'odyssey',
-            \ 'onehalfdark',
-            \ 'photon',
-            \ 'plastic',
-            \ 'sacredforest',
-            \ 'sialoquent',
-            \ 'snazzy',
-            \ 'sorceror',
-            \ 'spring-night',
-            \ 'srcery',
-            \ 'tender',
-            \ 'tokyo-metro',
-            \ 'tone',
-            \ 'typewriter-night',
-            \ 'vibrantink',
-            \ 'vividchalk',
-            \ 'wallaby',
-            \ 'zenburn'
-            \ ]
-
-let g:light_themes = [
-            \ 'bluewery-light',
-            \ 'corvine_light',
-            \ 'flattened_light',
-            \ 'onehalflight',
-            \ 'typewriter',
-            \ ]
-
 "g:colorscheme_map is a list of dictionaries that specify options for
 "colorschemes.  The dictionary keys are as follows:
 " name : the name of the colorscheme
@@ -589,6 +534,4 @@ let g:colorscheme_groups.group2 = g:vimspectr_dark_themes
 let g:colorscheme_groups.group3 = g:atelier_light_themes
 let g:colorscheme_groups.group4 = g:atelier_dark_themes
 let g:colorscheme_groups.group5 = g:seadbird_themes
-let g:colorscheme_groups.group6 = g:dark_themes
-let g:colorscheme_groups.group7 = g:light_themes
-let g:colorscheme_groups.group7 = g:xcode_themes
+let g:colorscheme_groups.group6 = g:xcode_themes
