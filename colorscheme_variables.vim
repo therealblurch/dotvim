@@ -358,10 +358,6 @@ let s:sialoquent_dict = {}
 let s:sialoquent_dict.name = 'sialoquent'
 let s:sialoquent_dict.lightlinetheme = 'colorscheme'
 
-let s:snazzy_dict = {}
-let s:snazzy_dict.name = 'snazzy'
-let s:snazzy_dict.lightlinetheme = 'colorscheme'
-
 let s:snow_dict = {}
 let s:snow_dict.name = 'snow'
 let s:snow_dict.lightlinetheme = 'colorscheme_bg'
@@ -508,7 +504,6 @@ let g:colorscheme_map = [
          \ s:sacredforest_dict,
          \ s:seagull_dict,
          \ s:sialoquent_dict,
-         \ s:snazzy_dict,
          \ s:snow_dict,
          \ s:sonokai_dict,
          \ s:space_vim_theme_dict,
