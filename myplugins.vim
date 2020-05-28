@@ -134,7 +134,6 @@ Plugin 'romainl/Apprentice',                     {'package': 'colors', 'type': '
 Plugin 'romainl/flattened',                      {'package': 'colors', 'type': 'start'}
 Plugin 'sainnhe/archived-colors',                {'package': 'colors', 'type': 'start'}
 Plugin 'sainnhe/gruvbox-material',               {'package': 'colors', 'type': 'start'}
-Plugin 'sainnhe/sonokai',                        {'package': 'colors', 'type': 'start'}
 Plugin 'sainnhe/vim-color-forest-night',         {'package': 'colors', 'type': 'start'}
 Plugin 'severij/vadelma',                        {'package': 'colors', 'type': 'start'}
 Plugin 'sfi0zy/atlantic-dark.vim',               {'package': 'colors', 'type': 'start'}
