@@ -7,6 +7,7 @@ augroup myplugins | au! | augroup END
 Plugin 'brooth/far.vim',                        {'type': 'start'}
 Plugin 'airblade/vim-gitgutter',                {'type': 'start'}
 Plugin 'chrisbra/NrrwRgn',                      {'type': 'start'}
+Plugin 'cohama/agit.vim',                       {'type': 'start'}
 Plugin 'drmikehenry/vim-fontsize',              {'type': 'start'}
 Plugin 'idanarye/vim-merginal',                 {'type': 'start'}
 Plugin 'nishigori/increment-activator',         {'type': 'start'}
