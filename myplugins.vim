@@ -60,6 +60,7 @@ Plugin 'xolox/vim-colorscheme-switcher',        {'type': 'start'}
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'Yggdroot/indentline',                   {'type': 'start'}
 Plugin 'zhuzhzh/verilog_emacsauto.vim'
+Plugin 'AndrewRadev/switch.vim',                {'type': 'start'}
 
 Plugin 'adriaanzon/vim-textobj-matchit',        {'type': 'start'}
 Plugin 'deathlyfrantic/vim-textobj-blanklines', {'type': 'start'}
