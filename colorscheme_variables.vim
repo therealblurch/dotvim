@@ -323,6 +323,11 @@ let s:open_color_dict = {}
 let s:open_color_dict.name = 'open-color'
 let s:open_color_dict.variant_type = 'background'
 
+let s:palenight_dict = {}
+let s:palenight_dict.name = 'palenight'
+let s:palenight_dict.lightlietheme = 'colorscheme'
+let s:palenight_dict.airlinetheme = 'colorscheme'
+
 let s:pencil_dict = {}
 let s:pencil_dict.name = 'pencil'
 let s:pencil_dict.lightlinetheme = 'pencil_alter'
@@ -489,6 +494,7 @@ let g:colorscheme_map = [
          \ s:one_dict,
          \ s:onehalf_dict,
          \ s:open_color_dict,
+         \ s:palenight_dict,
          \ s:papercolor_dict,
          \ s:pencil_dict,
          \ s:petrel_dict,
