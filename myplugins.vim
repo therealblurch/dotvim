@@ -11,8 +11,8 @@ Plugin 'drmikehenry/vim-fontsize',              {'type': 'start'}
 Plugin 'idanarye/vim-merginal',                 {'type': 'start'}
 Plugin 'nishigori/increment-activator',         {'type': 'start'}
 Plugin 'garbas/vim-snipmate',                   {'type': 'start'}
-Plugin 'haya14busa/incsearch.vim',              {'type': 'start'}
-Plugin 'haya14busa/incsearch-fuzzy.vim',        {'type': 'start'}
+Plugin 'haya14busa/is.vim',                     {'type': 'start'}
+Plugin 'haya14busa/vim-asterisk',               {'type': 'start'}
 Plugin 'honza/vim-snippets',                    {'type': 'start'}
 Plugin 'itchyny/lightline.vim'
 Plugin 'junegunn/fzf.vim',                      {'type': 'start'}
@@ -26,6 +26,7 @@ Plugin 'machakann/vim-highlightedyank',         {'type': 'start'}
 Plugin 'MarcWeber/vim-addon-mw-utils',          {'type': 'start'}
 Plugin 'markonm/traces.vim',                    {'type': 'start'}
 Plugin 'myusuf3/numbers.vim',                   {'type': 'start'}
+Plugin 'osyo-manga/vim-anzu',                   {'type': 'start'}
 Plugin 'pelodelfuego/vim-swoop',                {'type': 'start'}
 Plugin 'Raimondi/delimitMate',                  {'type': 'start'}
 Plugin 'rbong/vim-flog',                        {'type': 'start'}
