@@ -232,6 +232,14 @@ let s:grimoire_dict = {}
 let s:grimoire_dict.name = 'grimoire'
 let s:grimoire_dict.lightlinetheme = 'colorscheme'
 
+let s:gruvbox_dict = {}
+let s:gruvbox_dict.name = 'gruvbox'
+let s:gruvbox_dict.lightlinetheme = 'colorscheme'
+let s:gruvbox_dict.runtime = 'true'
+let s:gruvbox_dict.airlinetheme = 'colorscheme'
+let s:gruvbox_dict.variant_type = 'gruvbox_contrast'
+let s:gruvbox_dict.variants = ['soft', 'medium', 'hard']
+
 let s:gruvbox_material_dict = {}
 let s:gruvbox_material_dict.name = 'gruvbox-material'
 let s:gruvbox_material_dict.lightlinetheme = 'colorscheme'
@@ -479,6 +487,7 @@ let g:colorscheme_map = [
          \ s:forest_night_dict,
          \ s:greygull_dict,
          \ s:grimoire_dict,
+         \ s:gruvbox_dict,
          \ s:gruvbox_material_dict,
          \ s:hybrid_material_dict,
          \ s:hybrid_reverse_dict,
