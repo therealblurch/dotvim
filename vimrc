@@ -122,9 +122,6 @@ autocmd FileType gitcommit setlocal spell
 let ayucolor="light"
 let g:ayucolor=ayucolor
 
-"sonokai_style Possible Values: shusia | andromeda | atlantis | maia
-let g:sonokai_style="shusia"
-
 "material Possible Values: default | palenight | ocean | lighter | darker
 let g:material_theme_style="palenight"
 
