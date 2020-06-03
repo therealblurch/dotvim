@@ -154,6 +154,15 @@ Plugin 'vim-scripts/vibrantink',                 {'package': 'colors', 'type': '
 Plugin 'wmvanvliet/vim-blackboard',              {'package': 'colors', 'type': 'start'}
 Plugin 'yous/vim-open-color',                    {'package': 'colors', 'type': 'start'}
 
+Plugin 'hsitz/VimOrganizer',                     {'package': 'write'}
+Plugin 'jceb/vim-orgmode',                       {'package': 'write'}
+Plugin 'junegunn/vim-journal',                   {'package': 'write'}
+Plugin 'mattn/calendar-vim',                     {'package': 'write'}
+Plugin 'vimoutliner/vimoutliner',                {'package': 'write'}
+Plugin 'vim-voom/VOoM',                          {'package': 'write'}
+Plugin 'vimwiki/vimwiki',                        {'package': 'write'}
+Plugin 'xolox/vim-notes',                        {'package': 'write'}
+
 " This repositories contain a vim directory which is the only directory that I want
 " in the pack.  Because of this they are git submodules and added to the runtimepath
 " in vimrc.
