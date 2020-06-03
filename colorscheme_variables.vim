@@ -40,6 +40,28 @@ let g:atelier_dark_themes = [
             \ 'Atelier_SulphurpoolDark',
             \ ]
 
+let g:tempus_light_themes = [
+            \ 'tempus_dawn',
+            \ 'tempus_day',
+            \ 'tempus_fugit',
+            \ 'tempus_past',
+            \ 'tempus_totus'
+            \ ]
+
+let g:tempus_dark_themes = [
+            \ 'tempus_autumn',
+            \ 'tempus_classic',
+            \ 'tempus_dusk',
+            \ 'tempus_future',
+            \ 'tempus_night',
+            \ 'tempus_rift',
+            \ 'tempus_spring',
+            \ 'tempus_summer', 
+            \ 'tempus_tempest',
+            \ 'tempus_warp',
+            \ 'tempus_winter'
+            \ ]
+
 let g:seadbird_themes = [
             \ 'greygull',
             \ 'petrel',
@@ -404,6 +426,12 @@ let s:stormpetrel_dict.airlinetheme = 'colorscheme'
 let s:stormpetrel_dict.variant_type = "colorscheme_group"
 let s:stormpetrel_dict.variants = g:seadbird_themes
 
+let s:tempus_dict = {}
+let s:tempus_dict.name = 'tempus'
+let s:tempus_dict.comparison = 'fuzzy'
+let s:tempus_dict.variant_type = 'tempus'
+let s:tempus_dict.variants = ['autumn', 'classic', 'dusk', 'future', 'night', 'rift', 'spring', 'summer', 'tempest', 'warp', 'winter', 'dawn', 'day', 'fugit', 'past', 'totus']
+
 let s:tender_dict = {}
 let s:tender_dict.name = 'tender'
 let s:tender_dict.lightlinetheme = 'colorscheme'
@@ -518,6 +546,7 @@ let g:colorscheme_map = [
          \ s:srcery_dict,
          \ s:stellarized_dict,
          \ s:stormpetrel_dict,
+         \ s:tempus_dict,
          \ s:tender_dict,
          \ s:tokyo_metro_dict,
          \ s:true_dict,
@@ -537,3 +566,5 @@ let g:colorscheme_groups.group3 = g:atelier_light_themes
 let g:colorscheme_groups.group4 = g:atelier_dark_themes
 let g:colorscheme_groups.group5 = g:seadbird_themes
 let g:colorscheme_groups.group6 = g:xcode_themes
+let g:colorscheme_groups.group7 = g:tempus_light_themes
+let g:colorscheme_groups.group8 = g:tempus_dark_themes 

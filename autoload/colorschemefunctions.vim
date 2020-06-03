@@ -2,6 +2,10 @@ function! s:VimspectrMap (key, val)
     return 'vimspectr' . a:val . '-' . &background
 endfunction
 
+function! s:TempusMap (key, val)
+    return 'tempus' . '_' . a:val
+endfunction
+
 function! s:AtelierMap (key, val)
     if &background == 'light'
         let l:back = 'Light'
@@ -35,6 +39,8 @@ function! s:GetColorschemeVariantList (colordict)
             let s:variant_list =  map(l:variants, 'l:variant_base.v:val')
         elseif a:colordict.variant_type == 'vimspectr'
             let s:variant_list =  map(l:variants, function('s:VimspectrMap'))
+        elseif a:colordict.variant_type == 'tempus'
+            let s:variant_list =  map(l:variants, function('s:TempusMap'))
         elseif a:colordict.variant_type == 'Atelier'
             let s:variant_list =  map(l:variants, function('s:AtelierMap'))
         else

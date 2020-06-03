@@ -153,6 +153,7 @@ Plugin 'tyrannicaltoucan/vim-deep-space',        {'package': 'colors', 'type': '
 Plugin 'vim-scripts/vibrantink',                 {'package': 'colors', 'type': 'start'}
 Plugin 'wmvanvliet/vim-blackboard',              {'package': 'colors', 'type': 'start'}
 Plugin 'yous/vim-open-color',                    {'package': 'colors', 'type': 'start'}
+Plugin 'http://gitlab.com/protesilaos/tempus-themes-vim.git', {'package': 'colors', 'type': 'start'}
 
 Plugin 'hsitz/VimOrganizer',                     {'package': 'write'}
 Plugin 'jceb/vim-orgmode',                       {'package': 'write'}
