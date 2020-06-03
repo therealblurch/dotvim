@@ -163,6 +163,7 @@ Plugin 'vimoutliner/vimoutliner',                {'package': 'write'}
 Plugin 'vim-voom/VOoM',                          {'package': 'write'}
 Plugin 'vimwiki/vimwiki',                        {'package': 'write'}
 Plugin 'xolox/vim-notes',                        {'package': 'write'}
+Plugin 'dhruvasagar/vim-dotoo',                  {'package': 'write'}
 
 " This repositories contain a vim directory which is the only directory that I want
 " in the pack.  Because of this they are git submodules and added to the runtimepath
