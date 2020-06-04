@@ -29,6 +29,7 @@ Plugin 'machakann/vim-highlightedyank',         {'type': 'start'}
 Plugin 'MarcWeber/vim-addon-mw-utils',          {'type': 'start'}
 Plugin 'markonm/traces.vim',                    {'type': 'start'}
 Plugin 'myusuf3/numbers.vim',                   {'type': 'start'}
+Plugin 'Olical/vim-enmasse',                    {'type': 'start'}
 Plugin 'osyo-manga/vim-anzu',                   {'type': 'start'}
 Plugin 'pelodelfuego/vim-swoop',                {'type': 'start'}
 Plugin 'Raimondi/delimitMate',                  {'type': 'start'}
