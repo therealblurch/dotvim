@@ -20,6 +20,7 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'junegunn/fzf.vim',                      {'type': 'start'}
 Plugin 'junegunn/vim-easy-align',               {'type': 'start'}
 Plugin 'junegunn/vim-peekaboo',                 {'type': 'start'}
+Plugin 'justinmk/vim-sneak',                    {'type': 'start'}
 Plugin 'kshenoy/vim-signature',                 {'type': 'start'}
 Plugin 'lifepillar/vim-mucomplete',             {'type': 'start'}
 Plugin 'liuchengxu/vim-which-key',              {'type': 'start'}
