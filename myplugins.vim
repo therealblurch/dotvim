@@ -9,6 +9,7 @@ Plugin 'airblade/vim-gitgutter',                {'type': 'start'}
 Plugin 'chrisbra/NrrwRgn',                      {'type': 'start'}
 Plugin 'cohama/agit.vim',                       {'type': 'start'}
 Plugin 'drmikehenry/vim-fontsize',              {'type': 'start'}
+Plugin 'easymotion/vim-easymotion',             {'type': 'start'}
 Plugin 'idanarye/vim-merginal',                 {'type': 'start'}
 Plugin 'nishigori/increment-activator',         {'type': 'start'}
 Plugin 'garbas/vim-snipmate',                   {'type': 'start'}
