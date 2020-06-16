@@ -145,12 +145,12 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
-let g:airline#extensions#tabline#left_sep = "\ue0bc"
-let g:airline#extensions#tabline#left_alt_sep = "\ue0bb"
-let g:airline#extensions#tabline#right_sep = "\ue0ba"
-let g:airline#extensions#tabline#right_alt_sep = "\ue0bb"
-let g:airline_left_sep = "\ue0b8"
-let g:airline_right_sep = "\ue0be"
+let g:airline#extensions#tabline#left_sep = ''
+let g:airline#extensions#tabline#left_alt_sep = ''
+let g:airline#extensions#tabline#right_sep = ''
+let g:airline#extensions#tabline#right_alt_sep = ''
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
 let g:airline_theme_map = {
             \ 'foo*'                     : 'distinquished',
             \ 'greygull'                 : 'seagull',
@@ -323,10 +323,10 @@ endif
                              \           [ 'bufferbefore', 'buffercurrent', 'bufferafter' ] ],
                              \ 'right': [ [ 'close' ] ]
                              \ }
-    let g:lightline.separator = { 'left': "\ue0b8", 'right': "\ue0be" }
-    let g:lightline.subseparator = { 'left': "\ue0b9", 'right': "\ue0b9" }
-    let g:lightline.tabline_separator = { 'left': "\ue0bc", 'right': "\ue0ba" }
-    let g:lightline.tabline_subseparator = { 'left': "\ue0bb", 'right': "\ue0bb" }
+    let g:lightline.separator = { 'left': '', 'right': '' }
+    let g:lightline.subseparator = { 'left': '', 'right': '' }
+    let g:lightline.tabline_separator = { 'left': '', 'right': '' }
+    let g:lightline.tabline_subseparator = { 'left': '', 'right': '' }
     let g:lightline.tab = {
                          \ 'active': [ 'tabnum', 'filename', 'modified' ],
                          \ 'inactive': [ 'tabnum', 'filename', 'modified' ]
