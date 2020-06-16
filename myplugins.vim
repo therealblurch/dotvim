@@ -17,7 +17,6 @@ Plugin 'haya14busa/is.vim',                     {'type': 'start'}
 Plugin 'haya14busa/vim-asterisk',               {'type': 'start'}
 Plugin 'honza/vim-snippets',                    {'type': 'start'}
 Plugin 'itchyny/lightline.vim'
-Plugin 'junegunn/fzf.vim',                      {'type': 'start'}
 Plugin 'junegunn/vim-easy-align',               {'type': 'start'}
 Plugin 'junegunn/vim-peekaboo',                 {'type': 'start'}
 Plugin 'justinmk/vim-sneak',                    {'type': 'start'}
