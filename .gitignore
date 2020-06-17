@@ -1,5 +1,6 @@
 pack/general
 pack/colors
+pack/write
 cache
 .netrwhist
 .colorscheme
