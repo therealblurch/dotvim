@@ -89,41 +89,16 @@ Plugin 'thinca/vim-textobj-between',            {'type': 'start'}
 Plugin 'vimtaku/vim-textobj-keyvalue',          {'type': 'start'}
 
 Plugin 'arcticicestudio/nord-vim',               {'package': 'colors', 'type': 'start', 'branch': 'develop'}
-Plugin 'agreco/vim-citylights',                  {'package': 'colors', 'type': 'start'}
-Plugin 'ajmwagar/vim-deus',                      {'package': 'colors', 'type': 'start'}
-Plugin 'arzg/vim-corvine',                       {'package': 'colors', 'type': 'start'}
-Plugin 'arzg/vim-colors-xcode',                  {'package': 'colors', 'type': 'start'}
 Plugin 'atelierbram/vim-colors_atelier-schemes', {'package': 'colors', 'type': 'start'}
-Plugin 'axvr/photon.vim',                        {'package': 'colors', 'type': 'start'}
 Plugin 'ayu-theme/ayu-vim',                      {'package': 'colors', 'type': 'start'}
-Plugin 'beikome/cosme.vim',                      {'package': 'colors', 'type': 'start'}
-Plugin 'bluz71/vim-nightfly-guicolors',          {'package': 'colors', 'type': 'start'}
-Plugin 'chase/vim-airline-focuspoint',           {'package': 'colors', 'type': 'start'}
-Plugin 'chase/focuspoint-vim',                   {'package': 'colors', 'type': 'start'}
 Plugin 'croaker/mustang-vim',                    {'package': 'colors', 'type': 'start'}
-Plugin 'cseelus/vim-colors-tone',                {'package': 'colors', 'type': 'start'}
-Plugin 'danilo-augusto/vim-afterglow',           {'package': 'colors', 'type': 'start'}
-Plugin 'davidklsn/vim-sialoquent',               {'package': 'colors', 'type': 'start'}
 Plugin 'dracula/vim',                            {'package': 'colors', 'type': 'start', 'name': 'dracula'}
 Plugin 'drewtempelmeyer/palenight.vim',          {'package': 'colors', 'type': 'start'}
-Plugin 'flrnd/candid.vim',                       {'package': 'colors', 'type': 'start'}
-Plugin 'flrnd/plastic.vim',                      {'package': 'colors', 'type': 'start'}
-Plugin 'hachy/eva01.vim',                        {'package': 'colors', 'type': 'start'}
-Plugin 'haishanh/night-owl.vim',                 {'package': 'colors', 'type': 'start'}
-Plugin 'gosukiwi/vim-atom-dark',                 {'package': 'colors', 'type': 'start'}
 Plugin 'gruvbox-community/gruvbox',              {'package': 'colors', 'type': 'start'}
-Plugin 'jacoborus/tender.vim',                   {'package': 'colors', 'type': 'start'}
-Plugin 'jnurmine/Zenburn',                       {'package': 'colors', 'type': 'start'}
 Plugin 'kaicataldo/material.vim',                {'package': 'colors', 'type': 'start', 'name': 'material'}
-Plugin 'KKPMW/sacredforest-vim',                 {'package': 'colors', 'type': 'start'}
-Plugin 'kjssad/quantum.vim',                     {'package': 'colors', 'type': 'start'}
-Plugin 'koirand/tokyo-metro.vim',                {'package': 'colors', 'type': 'start'}
 Plugin 'kristijanhusak/vim-hybrid-material',     {'package': 'colors', 'type': 'start'}
-Plugin 'letorbi/vim-colors-modern-borland',      {'package': 'colors', 'type': 'start'}
 Plugin 'liuchengxu/space-vim-theme',             {'package': 'colors', 'type': 'start'}
 Plugin 'logico-dev/typewriter',                  {'package': 'colors', 'type': 'start'}
-Plugin 'ludokng/vim-odyssey',                    {'package': 'colors', 'type': 'start'}
-Plugin 'megantiu/true.vim',                      {'package': 'colors', 'type': 'start'}
 Plugin 'mkarmona/materialbox',                   {'package': 'colors', 'type': 'start'}
 Plugin 'nanotech/jellybeans.vim',                {'package': 'colors', 'type': 'start', 'name': 'jellybeans'}
 Plugin 'nightsense/cosmic_latte',                {'package': 'colors', 'type': 'start'}
@@ -131,31 +106,19 @@ Plugin 'nightsense/seabird',                     {'package': 'colors', 'type': '
 Plugin 'nightsense/snow',                        {'package': 'colors', 'type': 'start'}
 Plugin 'nightsense/stellarized',                 {'package': 'colors', 'type': 'start'}
 Plugin 'nightsense/vimspectr',                   {'package': 'colors', 'type': 'start'}
-Plugin 'niklas-8/vim-darkspace',                 {'package': 'colors', 'type': 'start'}
 Plugin 'NLKNguyen/papercolor-theme',             {'package': 'colors', 'type': 'start'}
-Plugin 'rakr/vim-one',                           {'package': 'colors', 'type': 'start'}
 Plugin 'reedes/vim-colors-pencil',               {'package': 'colors', 'type': 'start'}
-Plugin 'relastle/bluewery.vim',                  {'package': 'colors', 'type': 'start'}
-Plugin 'rhysd/vim-color-spring-night',           {'package': 'colors', 'type': 'start'}
-Plugin 'rhysd/wallaby.vim',                      {'package': 'colors', 'type': 'start'}
 Plugin 'romainl/Apprentice',                     {'package': 'colors', 'type': 'start'}
 Plugin 'romainl/flattened',                      {'package': 'colors', 'type': 'start'}
-Plugin 'sainnhe/archived-colors',                {'package': 'colors', 'type': 'start'}
 Plugin 'sainnhe/gruvbox-material',               {'package': 'colors', 'type': 'start'}
-Plugin 'sainnhe/vim-color-forest-night',         {'package': 'colors', 'type': 'start'}
 Plugin 'severij/vadelma',                        {'package': 'colors', 'type': 'start'}
-Plugin 'sfi0zy/atlantic-dark.vim',               {'package': 'colors', 'type': 'start'}
 Plugin 'sickill/vim-monokai',                    {'package': 'colors', 'type': 'start'}
-Plugin 'Siphalor/vim-atomified',                 {'package': 'colors', 'type': 'start'}
 Plugin 'srcery-colors/srcery-vim',               {'package': 'colors', 'type': 'start'}
-Plugin 'tjammer/blayu.vim',                      {'package': 'colors', 'type': 'start'}
 Plugin 'tomasr/molokai',                         {'package': 'colors', 'type': 'start'}
 Plugin 'toupeira/vim-desertink',                 {'package': 'colors', 'type': 'start'}
 Plugin 'tpope/vim-vividchalk',                   {'package': 'colors', 'type': 'start'}
 Plugin 'tyrannicaltoucan/vim-deep-space',        {'package': 'colors', 'type': 'start'}
 Plugin 'vim-scripts/vibrantink',                 {'package': 'colors', 'type': 'start'}
-Plugin 'wmvanvliet/vim-blackboard',              {'package': 'colors', 'type': 'start'}
-Plugin 'yous/vim-open-color',                    {'package': 'colors', 'type': 'start'}
 Plugin 'http://gitlab.com/protesilaos/tempus-themes-vim.git', {'package': 'colors', 'type': 'start'}
 
 Plugin 'hsitz/VimOrganizer',                     {'package': 'write'}
