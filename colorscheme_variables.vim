@@ -69,12 +69,6 @@ let g:seadbird_themes = [
             \ 'stormpetrel'
             \ ]
 
-let g:xcode_themes = [
-            \ 'xcodedark',
-            \ 'xcodelight',
-            \ 'xcodewwdc',
-            \ ]
-
 "g:colorscheme_map is a list of dictionaries that specify options for
 "colorschemes.  The dictionary keys are as follows:
 " name : the name of the colorscheme
@@ -104,13 +98,6 @@ let g:xcode_themes = [
 "      colorscheme: Use variant_base to choose different versions of the
 "         colorscheme
 "      colorscheme_bg: Use variant base to choose different versions of the
-"         colorscheme.  The background can also be toggled to select a light
-"         and dark version of each variant.
-"      ayu_color: ayu colorscheme.  Change the value of ayucolor variable.
-"      material_theme_style: material colorscheme.  Change the value of
-"         g:material_theme_style.
-"      gruvbox_material_background: gruvbox_material colorscheme.  Change the
-"         value of g:gruvbox_material_background.  The background will also
 "         toggle to select a light and dark version of each variant.
 "      materialbox_contrast: materialbox colorscheme.  Change the value of
 "          g:materialbox_contrast_dark or g:materialbox_contrast_light based on
@@ -137,18 +124,10 @@ let s:papercolor_dict.runtime = 'true'
 let s:papercolor_dict.airlinetheme = 'colorscheme'
 let s:papercolor_dict.variant_type = 'background'
 
-let s:afterglow_dict = {}
-let s:afterglow_dict.name = 'afterglow'
-let s:afterglow_dict.airlinetheme = 'colorscheme'
-
 let s:apprentice_dict = {}
 let s:apprentice_dict.name = 'apprentice'
 let s:apprentice_dict.lightlinetheme = 'colorscheme'
 let s:apprentice_dict.airlinetheme = 'colorscheme'
-
-let s:atlantis_dict = {}
-let s:atlantis_dict.name = 'atlantis'
-let s:atlantis_dict.lightlinetheme = 'colorscheme'
 
 let s:ayu_dict = {}
 let s:ayu_dict.name = 'ayu'
@@ -158,73 +137,25 @@ let s:ayu_dict.airlinetheme = 'colorscheme'
 let s:ayu_dict.variant_type = 'ayu_color'
 let s:ayu_dict.variants = ['light', 'dark', 'mirage']
 
-let s:blayu_dict = {}
-let s:blayu_dict.name = 'blayu'
-let s:blayu_dict.lightlinetheme = 'colorscheme'
-let s:blayu_dict.airlinetheme = 'colorscheme'
-
-let s:bluewery_dict = {}
-let s:bluewery_dict.name = 'bluewery'
-let s:bluewery_dict.comparison = 'fuzzy'
-let s:bluewery_dict.lightlinetheme = 'colorscheme'
-let s:bluewery_dict.variant_type = 'colorscheme'
-let s:bluewery_dict.variant_base = 'bluewery'
-let s:bluewery_dict.variants = ['', '-light']
-
-let s:candid_dict = {}
-let s:candid_dict.name = 'candid'
-let s:candid_dict.lightlinetheme = 'colorscheme'
-
-let s:corvine_dict = {}
-let s:corvine_dict.name = 'corvine'
-let s:corvine_dict.comparison = 'fuzzy'
-let s:corvine_dict.variant_type = 'colorscheme'
-let s:corvine_dict.variant_base = 'corvine'
-let s:corvine_dict.variants = ['', '_light']
-
-let s:cosme_dict = {}
-let s:cosme_dict.name = 'cosme'
-let s:cosme_dict.lightlinetheme = 'colorscheme'
-
 let s:cosmic_latte_dict = {}
 let s:cosmic_latte_dict.name = 'cosmic_latte'
 let s:cosmic_latte_dict.lightlinetheme = 'colorscheme_bg'
 let s:cosmic_latte_dict.airlinetheme = 'colorscheme_bg'
 let s:cosmic_latte_dict.variant_type = 'background'
 
-let s:cryslominsa_dict = {}
-let s:cryslominsa_dict.name = 'cryslominsa'
-let s:cryslominsa_dict.lightlinetheme = 'colorscheme'
-
-let s:darkspace_dict = {}
-let s:darkspace_dict.name = 'darkspace'
-let s:darkspace_dict.airlinetheme = 'colorscheme'
-
 let s:deep_space_dict = {}
 let s:deep_space_dict.name = 'deep-space'
 let s:deep_space_dict.lightlinetheme = 'deepspace'
 let s:deep_space_dict.airlinetheme = 'colorscheme'
 
-let s:desert_night_dict = {}
-let s:desert_night_dict.name = 'desert-night'
-let s:desert_night_dict.lightlinetheme = 'colorscheme'
-
 let s:desertink_dict = {}
 let s:desertink_dict.name = 'desertink'
 let s:desertink_dict.airlinetheme = 'colorscheme'
-
-let s:deus_dict = {}
-let s:deus_dict.name = 'deus'
-let s:deus_dict.airlinetheme = 'colorscheme'
 
 let s:dracula_dict = {}
 let s:dracula_dict.name = 'dracula'
 let s:dracula_dict.lightlinetheme = 'colorscheme'
 let s:dracula_dict.airlinetheme = 'colorscheme'
-
-let s:fairy_garden_dict = {}
-let s:fairy_garden_dict.name = 'fairy-garden'
-let s:fairy_garden_dict.lightlinetheme = 'colorscheme'
 
 let s:flattened_dict = {}
 let s:flattened_dict.name = 'flattened'
@@ -235,24 +166,11 @@ let s:flattened_dict.variant_type = 'colorscheme'
 let s:flattened_dict.variant_base = 'drop'
 let s:flattened_dict.variants = ['_light', '_dark']
 
-let s:focuspoint_dict = {}
-let s:focuspoint_dict.name = 'focuspoint'
-let s:focuspoint_dict.airlinetheme = 'colorscheme'
-
-let s:forest_night_dict = {}
-let s:forest_night_dict.name = 'forest-night'
-let s:forest_night_dict.lightlinetheme = 'colorscheme'
-let s:forest_night_dict.airlinetheme = 'colorscheme'
-
 let s:greygull_dict = {}
 let s:greygull_dict.name = 'greygull'
 let s:greygull_dict.airlinetheme = 'colorscheme'
 let s:greygull_dict.variant_type = "colorscheme_group"
 let s:greygull_dict.variants = g:seadbird_themes
-
-let s:grimoire_dict = {}
-let s:grimoire_dict.name = 'grimoire'
-let s:grimoire_dict.lightlinetheme = 'colorscheme'
 
 let s:gruvbox_dict = {}
 let s:gruvbox_dict.name = 'gruvbox'
@@ -280,18 +198,10 @@ let s:hybrid_reverse_dict.name = 'hybrid_reverse'
 let s:hybrid_reverse_dict.airlinetheme = 'colorscheme'
 let s:hybrid_reverse_dict.variant_type = 'background'
 
-let s:ice_age_dict = {}
-let s:ice_age_dict.name = 'ice-age'
-let s:ice_age_dict.lightlinetheme = 'colorscheme'
-
 let s:jellybeans_dict = {}
 let s:jellybeans_dict.name = 'jellybeans'
 let s:jellybeans_dict.lightlinetheme = 'colorscheme'
 let s:jellybeans_dict.airlinetheme = 'colorscheme'
-
-let s:lost_schrine_dict = {}
-let s:lost_schrine_dict.name = 'lost-schrine'
-let s:lost_schrine_dict.lightlinetheme = 'colorscheme'
 
 let s:material_dict = {}
 let s:material_dict.name = 'material'
@@ -314,44 +224,24 @@ let s:monokai_dict = {}
 let s:monokai_dict.name = 'monokai'
 let s:monokai_dict.airlinetheme = 'colorscheme'
 
-let s:night_owl_dict = {}
-let s:night_owl_dict.name = 'night-owl'
-let s:night_owl_dict.lightlinetheme = 'nightowl'
-let s:night_owl_dict.airlinetheme = 'colorscheme'
-
-let s:nightfly_dict = {}
-let s:nightfly_dict.name = 'nightfly'
-let s:nightfly_dict.lightlinetheme = 'colorscheme'
-
 let s:nord_dict = {}
 let s:nord_dict.name = 'nord'
 let s:nord_dict.lightlinetheme = 'colorscheme'
 let s:nord_dict.airlinetheme = 'colorscheme'
 
-let s:one_dict = {}
-let s:one_dict.name = 'one'
-let s:one_dict.lightlinetheme = 'colorscheme'
-let s:one_dict.runtime = 'true'
-let s:one_dict.airlinetheme = 'colorscheme'
-let s:one_dict.variant_type = 'background'
+let s:onehalfdark_dict = {}
+let s:onehalfdark_dict.name = 'onehalfdark'
+let s:onehalfdark_dict.lightlinetheme = 'onehalfdark'
+let s:onehalfdark_dict.variant_type = 'colorscheme'
+let s:onehalfdark_dict.variant_base = 'drop'
+let s:onehalfdark_dict.variants = ['light', 'dark']
 
-let s:onehalf_dict = {}
-let s:onehalf_dict.name = 'onehalfdark'
-let s:onehalf_dict.lightlinetheme = 'onehalfdark'
-let s:onehalf_dict.variant_type = 'colorscheme'
-let s:onehalf_dict.variant_base = 'drop'
-let s:onehalf_dict.variants = ['light', 'dark']
-
-let s:onehalf_dict = {}
-let s:onehalf_dict.name = 'onehalflight'
-let s:onehalf_dict.lightlinetheme = 'onehalfdark'
-let s:onehalf_dict.variant_type = 'colorscheme'
-let s:onehalf_dict.variant_base = 'drop'
-let s:onehalf_dict.variants = ['light', 'dark']
-
-let s:open_color_dict = {}
-let s:open_color_dict.name = 'open-color'
-let s:open_color_dict.variant_type = 'background'
+let s:onehalflight_dict = {}
+let s:onehalflight_dict.name = 'onehalflight'
+let s:onehalflight_dict.lightlinetheme = 'onehalfdark'
+let s:onehalflight_dict.variant_type = 'colorscheme'
+let s:onehalflight_dict.variant_base = 'drop'
+let s:onehalflight_dict.variants = ['light', 'dark']
 
 let s:palenight_dict = {}
 let s:palenight_dict.name = 'palenight'
@@ -370,28 +260,11 @@ let s:petrel_dict.airlinetheme = 'colorscheme'
 let s:petrel_dict.variant_type = "colorscheme_group"
 let s:petrel_dict.variants = g:seadbird_themes
 
-let s:plastic_dict = {}
-let s:plastic_dict.name = 'plastic'
-let s:plastic_dict.lightlinetheme = 'colorscheme'
-
-let s:quantum_dict = {}
-let s:quantum_dict.name = 'quantum'
-let s:quantum_dict.lightlinetheme = 'colorscheme'
-let s:quantum_dict.variant_type = 'background'
-
-let s:sacredforest_dict = {}
-let s:sacredforest_dict.name = 'sacredforest'
-let s:sacredforest_dict.lightlinetheme = 'colorscheme'
-
 let s:seagull_dict = {}
 let s:seagull_dict.name = 'seagull'
 let s:seagull_dict.airlinetheme = 'colorscheme'
 let s:seagull_dict.variant_type = "colorscheme_group"
 let s:seagull_dict.variants = g:seadbird_themes
-
-let s:sialoquent_dict = {}
-let s:sialoquent_dict.name = 'sialoquent'
-let s:sialoquent_dict.lightlinetheme = 'colorscheme'
 
 let s:snow_dict = {}
 let s:snow_dict.name = 'snow'
@@ -404,10 +277,6 @@ let s:space_vim_theme_dict.name = 'space_vim_theme'
 let s:space_vim_theme_dict.lightlinetheme = 'substitutebg'
 let s:space_vim_theme_dict.subpat = 'theme'
 let s:space_vim_theme_dict.variant_type = 'background'
-
-let s:spring_night_dict = {}
-let s:spring_night_dict.name = 'spring-night'
-let s:spring_night_dict.airlinetheme = 'colorscheme'
 
 let s:srcery_dict = {}
 let s:srcery_dict.name = 'srcery'
@@ -431,16 +300,6 @@ let s:tempus_dict.name = 'tempus'
 let s:tempus_dict.comparison = 'fuzzy'
 let s:tempus_dict.variant_type = 'tempus'
 let s:tempus_dict.variants = ['autumn', 'classic', 'dusk', 'future', 'night', 'rift', 'spring', 'summer', 'tempest', 'warp', 'winter', 'dawn', 'day', 'fugit', 'past', 'totus']
-
-let s:tender_dict = {}
-let s:tender_dict.name = 'tender'
-let s:tender_dict.lightlinetheme = 'colorscheme'
-let s:tender_dict.airlinetheme = 'colorscheme'
-
-let s:tokyo_metro_dict = {}
-let s:tokyo_metro_dict.name = 'tokyo-metro'
-let s:tokyo_metro_dict.lightlinetheme = 'tokyometro'
-let s:tokyo_metro_dict.airlinetheme = 'colorscheme'
 
 let s:true_dict = {}
 let s:true_dict.name = 'true'
@@ -475,88 +334,44 @@ let s:vadelma_dict.lightlinetheme = 'colorscheme'
 let s:vadelma_dict.runtime = 'true'
 let s:vadelma_dict.variant_type = 'background'
 
-let s:vanilla_cake_dict = {}
-let s:vanilla_cake_dict.name = 'vanilla-cake'
-let s:vanilla_cake_dict.lightlinetheme = 'colorscheme'
-
-let s:xcode_dict = {}
-let s:xcode_dict.name = 'xcode'
-let s:xcode_dict.comparison = 'fuzzy'
-let s:xcode_dict.variant_type = 'colorscheme'
-let s:xcode_dict.variant_base = 'xcode'
-let s:xcode_dict.variants = ['dark', 'light', 'wwdc']
-
-let s:zenburn_dict = {}
-let s:zenburn_dict.name = 'zenburn'
-let s:zenburn_dict.airlinetheme = 'colorscheme'
-
 let g:colorscheme_map = [
-         \ s:afterglow_dict,
          \ s:apprentice_dict,
          \ s:atelier_dict,
-         \ s:atlantis_dict,
          \ s:ayu_dict,
-         \ s:blayu_dict,
-         \ s:bluewery_dict,
-         \ s:candid_dict,
-         \ s:corvine_dict,
-         \ s:cosme_dict,
          \ s:cosmic_latte_dict,
-         \ s:cryslominsa_dict,
-         \ s:darkspace_dict,
          \ s:deep_space_dict,
          \ s:desertink_dict,
-         \ s:desert_night_dict,
-         \ s:deus_dict,
          \ s:dracula_dict,
-         \ s:fairy_garden_dict,
          \ s:flattened_dict,
-         \ s:focuspoint_dict,
-         \ s:forest_night_dict,
          \ s:greygull_dict,
-         \ s:grimoire_dict,
          \ s:gruvbox_dict,
          \ s:gruvbox_material_dict,
          \ s:hybrid_material_dict,
          \ s:hybrid_reverse_dict,
-         \ s:ice_age_dict,
          \ s:jellybeans_dict,
-         \ s:lost_schrine_dict,
          \ s:materialbox_dict,
          \ s:material_dict,
          \ s:molokai_dict,
          \ s:monokai_dict,
-         \ s:night_owl_dict,
          \ s:nord_dict,
-         \ s:one_dict,
-         \ s:onehalf_dict,
-         \ s:open_color_dict,
+         \ s:onehalfdark_dict,
+         \ s:onehalflight_dict,
          \ s:palenight_dict,
          \ s:papercolor_dict,
          \ s:pencil_dict,
          \ s:petrel_dict,
-         \ s:plastic_dict,
-         \ s:quantum_dict,
-         \ s:sacredforest_dict,
          \ s:seagull_dict,
-         \ s:sialoquent_dict,
          \ s:snow_dict,
          \ s:space_vim_theme_dict,
-         \ s:spring_night_dict,
          \ s:srcery_dict,
          \ s:stellarized_dict,
          \ s:stormpetrel_dict,
          \ s:tempus_dict,
-         \ s:tender_dict,
-         \ s:tokyo_metro_dict,
          \ s:true_dict,
          \ s:typewriter_dict,
          \ s:typewriter_night_dict,
          \ s:vadelma_dict,
-         \ s:vanilla_cake_dict,
          \ s:vimspectr_dict,
-         \ s:xcode_dict,
-         \ s:zenburn_dict
          \ ]
 
 let g:colorscheme_groups = {}
@@ -565,6 +380,5 @@ let g:colorscheme_groups.group2 = g:vimspectr_dark_themes
 let g:colorscheme_groups.group3 = g:atelier_light_themes
 let g:colorscheme_groups.group4 = g:atelier_dark_themes
 let g:colorscheme_groups.group5 = g:seadbird_themes
-let g:colorscheme_groups.group6 = g:xcode_themes
-let g:colorscheme_groups.group7 = g:tempus_light_themes
-let g:colorscheme_groups.group8 = g:tempus_dark_themes 
+let g:colorscheme_groups.group6 = g:tempus_light_themes
+let g:colorscheme_groups.group7 = g:tempus_dark_themes 
