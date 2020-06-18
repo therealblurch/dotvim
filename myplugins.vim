@@ -110,6 +110,7 @@ Plugin 'NLKNguyen/papercolor-theme',             {'package': 'colors', 'type': '
 Plugin 'reedes/vim-colors-pencil',               {'package': 'colors', 'type': 'start'}
 Plugin 'romainl/Apprentice',                     {'package': 'colors', 'type': 'start'}
 Plugin 'romainl/flattened',                      {'package': 'colors', 'type': 'start'}
+Plugin 'sainnhe/edge',                           {'package': 'colors', 'type': 'start'}
 Plugin 'sainnhe/gruvbox-material',               {'package': 'colors', 'type': 'start'}
 Plugin 'severij/vadelma',                        {'package': 'colors', 'type': 'start'}
 Plugin 'sickill/vim-monokai',                    {'package': 'colors', 'type': 'start'}

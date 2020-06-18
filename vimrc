@@ -125,6 +125,9 @@ let g:ayucolor=ayucolor
 "material Possible Values: default | palenight | ocean | lighter | darker
 let g:material_theme_style="palenight"
 
+"edge Possible Values: default | aura | neon
+let g:edge_style="default"
+
 "Initial setting for g:gruvbox_material_background
 let g:gruvbox_material_background = 'hard'
 

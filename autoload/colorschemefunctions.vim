@@ -91,6 +91,8 @@ function! colorschemefunctions#CurrentColorscheme()
       let l:color_name = g:colors_name . '/' . g:gruvbox_material_background
    elseif l:variant_type == 'material_theme_style'
       let l:color_name = g:colors_name . '/' . g:material_theme_style
+   elseif l:variant_type == 'edge_style'
+      let l:color_name = g:colors_name . '/' . g:edge_style
    elseif l:variant_type == 'gruvbox_contrast'
       if &background == "light"
          let l:color_name = g:colors_name . '/' . g:gruvbox_contrast_light
@@ -114,6 +116,8 @@ function! s:GetCurrentColorschemeVariant (colordict)
         let l:variant = g:sonokai_style
     elseif a:colordict.variant_type == 'material_theme_style'
         let l:variant = g:material_theme_style
+    elseif a:colordict.variant_type == 'edge_style'
+        let l:variant = g:edge_style
     elseif a:colordict.variant_type == 'gruvbox_material_background'
         let l:variant = g:gruvbox_material_background
     elseif a:colordict.variant_type == 'gruvbox_contrast'
@@ -145,6 +149,9 @@ function s:GetNextColorscheme (colordict, next_scheme)
     elseif a:colordict.variant_type == 'material_theme_style'
         let g:material_theme_style = a:next_scheme
         let s:next_colorscheme = 'material'
+    elseif a:colordict.variant_type == 'edge_style'
+        let g:edge_style = a:next_scheme
+        let s:next_colorscheme = 'edge'
     elseif a:colordict.variant_type == 'gruvbox_material_background'
         let g:gruvbox_material_background = a:next_scheme
         let s:next_colorscheme = 'gruvbox-material'
@@ -170,7 +177,7 @@ endfunction
 
 function! s:PossiblyToggleBackground (delta, colordict, variants, current_variant)
     let l:num_variants = len(a:variants)
-    if a:colordict.variant_type == 'colorscheme_bg' || a:colordict.variant_type == 'gruvbox_material_background' || a:colordict.variant_type == 'materialbox_contrast' || a:colordict.variant_type == 'gruvbox_contrast'
+    if a:colordict.variant_type == 'colorscheme_bg' || a:colordict.variant_type == 'gruvbox_material_background' || a:colordict.variant_type == 'materialbox_contrast' || a:colordict.variant_type == 'gruvbox_contrast' || a:colordict.variant_type == 'edge_style'
         if a:delta+index(a:variants, a:current_variant) >= l:num_variants || a:delta+index(a:variants, a:current_variant) < 0
             call s:ToggleBG()
         endif
@@ -184,7 +191,7 @@ endfunction
 
 function! colorschemefunctions#ToggleBackground()
     let l:variant_type = colorschemefunctions#GetColorAttributefromDictionary(g:current_color_dictionary, 'variant_type')
-    if l:variant_type == 'background' || l:variant_type == 'colorscheme_bg' || l:variant_type == 'gruvbox_material_background'
+    if l:variant_type == 'background' || l:variant_type == 'colorscheme_bg' || l:variant_type == 'gruvbox_material_background' || l:variant_type == 'edge_style'
         call s:ToggleBG()
     elseif l:variant_type == 'Atelier'
         let l:new_colors_name = (g:colors_name =~# 'Dark') ? substitute(g:colors_name, 'Dark', 'Light', '') : substitute(g:colors_name, 'Light', 'Dark', '')

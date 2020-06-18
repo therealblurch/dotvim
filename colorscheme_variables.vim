@@ -157,6 +157,14 @@ let s:dracula_dict.name = 'dracula'
 let s:dracula_dict.lightlinetheme = 'colorscheme'
 let s:dracula_dict.airlinetheme = 'colorscheme'
 
+let s:edge_dict = {}
+let s:edge_dict.name = 'edge'
+let s:edge_dict.lightlinetheme = 'colorscheme'
+let s:edge_dict.airlinetheme = 'colorscheme'
+let s:edge_dict.runtime = 'true'
+let s:edge_dict.variant_type = 'edge_style'
+let s:edge_dict.variants = ['default', 'aura', 'neon']
+
 let s:flattened_dict = {}
 let s:flattened_dict.name = 'flattened'
 let s:flattened_dict.comparison = 'fuzzy'
@@ -342,6 +350,7 @@ let g:colorscheme_map = [
          \ s:deep_space_dict,
          \ s:desertink_dict,
          \ s:dracula_dict,
+         \ s:edge_dict,
          \ s:flattened_dict,
          \ s:greygull_dict,
          \ s:gruvbox_dict,
