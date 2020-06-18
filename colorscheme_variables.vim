@@ -237,6 +237,11 @@ let s:nord_dict.name = 'nord'
 let s:nord_dict.lightlinetheme = 'colorscheme'
 let s:nord_dict.airlinetheme = 'colorscheme'
 
+let s:one_dict = {}
+let s:one_dict.name = 'one'
+let s:one_dict.airlinetheme = 'colorscheme'
+let s:one_dict.variant_type = 'colorscheme_bg'
+
 let s:onehalfdark_dict = {}
 let s:onehalfdark_dict.name = 'onehalfdark'
 let s:onehalfdark_dict.lightlinetheme = 'onehalfdark'
@@ -363,6 +368,7 @@ let g:colorscheme_map = [
          \ s:molokai_dict,
          \ s:monokai_dict,
          \ s:nord_dict,
+         \ s:one_dict,
          \ s:onehalfdark_dict,
          \ s:onehalflight_dict,
          \ s:palenight_dict,

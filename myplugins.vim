@@ -107,6 +107,7 @@ Plugin 'nightsense/snow',                        {'package': 'colors', 'type': '
 Plugin 'nightsense/stellarized',                 {'package': 'colors', 'type': 'start'}
 Plugin 'nightsense/vimspectr',                   {'package': 'colors', 'type': 'start'}
 Plugin 'NLKNguyen/papercolor-theme',             {'package': 'colors', 'type': 'start'}
+Plugin 'rakr/vim-one',                           {'package': 'colors', 'type': 'start'}
 Plugin 'reedes/vim-colors-pencil',               {'package': 'colors', 'type': 'start'}
 Plugin 'romainl/Apprentice',                     {'package': 'colors', 'type': 'start'}
 Plugin 'romainl/flattened',                      {'package': 'colors', 'type': 'start'}
