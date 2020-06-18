@@ -85,8 +85,6 @@ function! colorschemefunctions#CurrentColorscheme()
       let l:color_name = g:colors_name . '/' . &background
    elseif l:variant_type == 'ayu_color'
       let l:color_name = g:colors_name . '/' . g:ayucolor
-   elseif l:variant_type == 'sonokai_style'
-      let l:color_name = g:colors_name . '/' . g:sonokai_style
    elseif l:variant_type == 'gruvbox_material_background'
       let l:color_name = g:colors_name . '/' . g:gruvbox_material_background
    elseif l:variant_type == 'material_theme_style'
@@ -106,8 +104,6 @@ endfunction
 function! s:GetCurrentColorschemeVariant (colordict)
     if a:colordict.variant_type == 'ayu_color'
         let l:variant = g:ayucolor
-     elseif a:colordict.variant_type == 'sonokai_style'
-        let l:variant = g:sonokai_style
     elseif a:colordict.variant_type == 'material_theme_style'
         let l:variant = g:material_theme_style
     elseif a:colordict.variant_type == 'edge_style'
@@ -131,9 +127,6 @@ function s:GetNextColorscheme (colordict, next_scheme)
         let g:ayucolor = a:next_scheme
         let ayucolor = g:ayucolor
         let s:next_colorscheme = 'ayu'
-     elseif a:colordict.variant_type == 'sonokai_style'
-        let g:sonokai_style = a:next_scheme
-        let s:next_colorscheme = 'sonokai'
     elseif a:colordict.variant_type == 'material_theme_style'
         let g:material_theme_style = a:next_scheme
         let s:next_colorscheme = 'material'
