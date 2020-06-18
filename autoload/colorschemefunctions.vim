@@ -93,12 +93,6 @@ function! colorschemefunctions#CurrentColorscheme()
       let l:color_name = g:colors_name . '/' . g:material_theme_style
    elseif l:variant_type == 'edge_style'
       let l:color_name = g:colors_name . '/' . g:edge_style
-   elseif l:variant_type == 'gruvbox_contrast'
-      if &background == "light"
-         let l:color_name = g:colors_name . '/' . g:gruvbox_contrast_light
-      else
-         let l:color_name = g:colors_name . '/' . g:gruvbox_contrast_dark
-      endif
    elseif l:variant_type == 'materialbox_contrast'
       if &background == "light"
          let l:color_name = g:colors_name . '/' . g:materialbox_contrast_light
@@ -120,12 +114,6 @@ function! s:GetCurrentColorschemeVariant (colordict)
         let l:variant = g:edge_style
     elseif a:colordict.variant_type == 'gruvbox_material_background'
         let l:variant = g:gruvbox_material_background
-    elseif a:colordict.variant_type == 'gruvbox_contrast'
-        if &background == 'light'
-            let l:variant = g:gruvbox_contrast_light
-        else
-            let l:variant = g:gruvbox_contrast_dark
-        endif
     elseif a:colordict.variant_type == 'materialbox_contrast'
         if &background == 'light'
             let l:variant = g:materialbox_contrast_light
@@ -155,13 +143,6 @@ function s:GetNextColorscheme (colordict, next_scheme)
     elseif a:colordict.variant_type == 'gruvbox_material_background'
         let g:gruvbox_material_background = a:next_scheme
         let s:next_colorscheme = 'gruvbox-material'
-    elseif a:colordict.variant_type == 'gruvbox_contrast'
-        if &background == 'light'
-            let g:gruvbox_contrast_light = a:next_scheme
-        else
-            let g:gruvbox_contrast_dark = a:next_scheme
-        endif
-        let s:next_colorscheme = 'gruvbox'
     elseif a:colordict.variant_type == 'materialbox_contrast'
         if &background == 'light'
             let g:materialbox_contrast_light = a:next_scheme
@@ -177,7 +158,7 @@ endfunction
 
 function! s:PossiblyToggleBackground (delta, colordict, variants, current_variant)
     let l:num_variants = len(a:variants)
-    if a:colordict.variant_type == 'colorscheme_bg' || a:colordict.variant_type == 'gruvbox_material_background' || a:colordict.variant_type == 'materialbox_contrast' || a:colordict.variant_type == 'gruvbox_contrast' || a:colordict.variant_type == 'edge_style'
+    if a:colordict.variant_type == 'colorscheme_bg' || a:colordict.variant_type == 'gruvbox_material_background' || a:colordict.variant_type == 'materialbox_contrast' || a:colordict.variant_type == 'edge_style'
         if a:delta+index(a:variants, a:current_variant) >= l:num_variants || a:delta+index(a:variants, a:current_variant) < 0
             call s:ToggleBG()
         endif
@@ -202,14 +183,6 @@ function! colorschemefunctions#ToggleBackground()
     elseif l:variant_type == 'colorscheme' && color.variant_base == 'drop'
         let l:new_colors_name = (g:colors_name =~# 'dark') ? substitute(g:colors_name, 'dark', 'light', '') : substitute(g:colors_name, 'light', 'dark', '')
         call xolox#colorscheme_switcher#switch_to(l:new_colors_name)
-    elseif l:variant_type == 'gruvbox_contrast'
-        if (&background == 'dark')
-            let g:gruvbox_contrast_light = g:gruvbox_contrast_dark
-            let &background = 'light'
-        else
-            let g:gruvbox_contrast_dark = g:gruvbox_contrast_light
-            let &background = 'dark'
-        endif
     elseif l:variant_type == 'materialbox_contrast'
         if (&background == 'dark')
             let g:materialbox_contrast_light = g:materialbox_contrast_dark

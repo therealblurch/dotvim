@@ -94,7 +94,6 @@ Plugin 'ayu-theme/ayu-vim',                      {'package': 'colors', 'type': '
 Plugin 'croaker/mustang-vim',                    {'package': 'colors', 'type': 'start'}
 Plugin 'dracula/vim',                            {'package': 'colors', 'type': 'start', 'name': 'dracula'}
 Plugin 'drewtempelmeyer/palenight.vim',          {'package': 'colors', 'type': 'start'}
-Plugin 'gruvbox-community/gruvbox',              {'package': 'colors', 'type': 'start'}
 Plugin 'kaicataldo/material.vim',                {'package': 'colors', 'type': 'start', 'name': 'material'}
 Plugin 'kristijanhusak/vim-hybrid-material',     {'package': 'colors', 'type': 'start'}
 Plugin 'liuchengxu/space-vim-theme',             {'package': 'colors', 'type': 'start'}
