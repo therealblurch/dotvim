@@ -148,10 +148,6 @@ let s:deep_space_dict.name = 'deep-space'
 let s:deep_space_dict.lightlinetheme = 'deepspace'
 let s:deep_space_dict.airlinetheme = 'colorscheme'
 
-let s:desertink_dict = {}
-let s:desertink_dict.name = 'desertink'
-let s:desertink_dict.airlinetheme = 'colorscheme'
-
 let s:dracula_dict = {}
 let s:dracula_dict.name = 'dracula'
 let s:dracula_dict.lightlinetheme = 'colorscheme'
@@ -188,21 +184,6 @@ let s:gruvbox_material_dict.airlinetheme = 'colorscheme'
 let s:gruvbox_material_dict.variant_type = 'gruvbox_material_background'
 let s:gruvbox_material_dict.variants = ['soft', 'medium', 'hard']
 
-let s:hybrid_material_dict = {}
-let s:hybrid_material_dict.name = 'hybrid_material'
-let s:hybrid_material_dict.airlinetheme = 'colorscheme'
-let s:hybrid_material_dict.variant_type = 'background'
-
-let s:hybrid_reverse_dict = {}
-let s:hybrid_reverse_dict.name = 'hybrid_reverse'
-let s:hybrid_reverse_dict.airlinetheme = 'colorscheme'
-let s:hybrid_reverse_dict.variant_type = 'background'
-
-let s:jellybeans_dict = {}
-let s:jellybeans_dict.name = 'jellybeans'
-let s:jellybeans_dict.lightlinetheme = 'colorscheme'
-let s:jellybeans_dict.airlinetheme = 'colorscheme'
-
 let s:material_dict = {}
 let s:material_dict.name = 'material'
 let s:material_dict.lightlinetheme = 'material_vim'
@@ -215,14 +196,6 @@ let s:materialbox_dict.name = 'materialbox'
 let s:materialbox_dict.airlinetheme = 'colorscheme'
 let s:materialbox_dict.variant_type = 'materialbox_contrast'
 let s:materialbox_dict.variants = ['soft', 'medium', 'hard']
-
-let s:molokai_dict = {}
-let s:molokai_dict.name = 'molokai'
-let s:molokai_dict.airlinetheme = 'colorscheme'
-
-let s:monokai_dict = {}
-let s:monokai_dict.name = 'monokai'
-let s:monokai_dict.airlinetheme = 'colorscheme'
 
 let s:nord_dict = {}
 let s:nord_dict.name = 'nord'
@@ -306,10 +279,6 @@ let s:tempus_dict.comparison = 'fuzzy'
 let s:tempus_dict.variant_type = 'tempus'
 let s:tempus_dict.variants = ['autumn', 'classic', 'dusk', 'future', 'night', 'rift', 'spring', 'summer', 'tempest', 'warp', 'winter', 'dawn', 'day', 'fugit', 'past', 'totus']
 
-let s:true_dict = {}
-let s:true_dict.name = 'true'
-let s:true_dict.airlinetheme = 'colorscheme'
-
 let s:typewriter_dict = {}
 let s:typewriter_dict.name = 'typewriter'
 let s:typewriter_dict.lightlinetheme = 'typewriter_light'
@@ -345,19 +314,13 @@ let g:colorscheme_map = [
          \ s:ayu_dict,
          \ s:cosmic_latte_dict,
          \ s:deep_space_dict,
-         \ s:desertink_dict,
          \ s:dracula_dict,
          \ s:edge_dict,
          \ s:flattened_dict,
          \ s:greygull_dict,
          \ s:gruvbox_material_dict,
-         \ s:hybrid_material_dict,
-         \ s:hybrid_reverse_dict,
-         \ s:jellybeans_dict,
          \ s:materialbox_dict,
          \ s:material_dict,
-         \ s:molokai_dict,
-         \ s:monokai_dict,
          \ s:nord_dict,
          \ s:one_dict,
          \ s:onehalfdark_dict,
@@ -373,7 +336,6 @@ let g:colorscheme_map = [
          \ s:stellarized_dict,
          \ s:stormpetrel_dict,
          \ s:tempus_dict,
-         \ s:true_dict,
          \ s:typewriter_dict,
          \ s:typewriter_night_dict,
          \ s:vadelma_dict,
