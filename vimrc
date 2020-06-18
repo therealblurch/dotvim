@@ -379,7 +379,7 @@ command! -nargs=1 -complete=color Colorscheme call xolox#colorscheme_switcher#sw
 let g:mucomplete#enable_auto_at_startup=1
 
 imap <expr> <right> mucomplete#extend_fwd("\<right>")
-imap <expr> <left> mucomplete#extend_bwd("\<left>") 
+imap <expr> <left> mucomplete#extend_bwd("\<left>")
 
 let g:mucomplete#chains = {
             \ 'default': ['snip', 'path', 'omni', 'keyn', 'dict', 'uspl'],
