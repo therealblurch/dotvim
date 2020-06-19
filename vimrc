@@ -433,38 +433,3 @@ nnoremap <silent> <leader> :WhichKey '\'<CR>
 " }}}
 
 call matchadd('ColorColumn', '\%81v', 100)
-
-" Status line {{{
-function! StatuslineGit()
-    let l:branchname = fugitive#head()
-    if strlen(l:branchname) > 0
-        return ' '.l:branchname.' '
-    else
-        return ' clean '
-    endif
-endfunction
-
-set statusline=
-set statusline+=%#PmenuSel#
-set statusline+=%{(mode()=='n')?'\ \ NORMAL\ ':''}
-set statusline+=%{(mode()=='i')?'\ \ INSERT\ ':''}
-set statusline+=%{(mode()=='v')?'\ \ VISUAL\ ':''}
-set statusline+=%{(mode()=='r')?'\ \ REPLACE\ ':''}
-set statusline+=%#LineNr#
-set statusline+=\ 
-set statusline+=%{myfunctions#GitgutterStatus()}
-set statusline+=
-set statusline+=%{StatuslineGit()}
-set statusline+=\ %f
-set statusline+=%m\ 
-set statusline+=%{myfunctions#MU()}\ 
-set statusline+=%=
-set statusline+=%{colorschemefunctions#CurrentColorscheme()}\ 
-set statusline+=%#CursorColumn#
-set statusline+=\ %y
-set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
-set statusline+=\[%{&fileformat}\]
-set statusline+=\ %p%%
-set statusline+=\ %l:%c
-set statusline+=\ 
-" }}}
