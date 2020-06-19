@@ -188,6 +188,11 @@ let s:gruvbox_material_dict.airlinetheme = 'colorscheme'
 let s:gruvbox_material_dict.variant_type = 'gruvbox_material_background'
 let s:gruvbox_material_dict.variants = ['soft', 'medium', 'hard']
 
+let s:iceberg_dict = {}
+let s:iceberg_dict.name = 'iceberg'
+let s:iceberg_dict.lightlietheme = 'colorscheme'
+let s:iceberg_dict.airlinetheme = 'colorscheme'
+
 let s:jellybeans_dict = {}
 let s:jellybeans_dict.name = 'jellybeans'
 let s:jellybeans_dict.airlinetheme = 'colorscheme'
@@ -329,6 +334,7 @@ let g:colorscheme_map = [
          \ s:greygull_dict,
          \ s:gruvbox_material_dict,
          \ s:jellybeans_dict,
+         \ s:iceberg_dict,
          \ s:materialbox_dict,
          \ s:material_dict,
          \ s:nord_dict,
