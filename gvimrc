@@ -7,7 +7,7 @@ let g:fontlist=[
   \ 'Anonymice\ Powerline\ Plus\ Nerd\ File\ Types\ Mono\ 12',
   \ 'AurulentSansMono\ Nerd\ Font\ Mono\ 12',
   \ 'CaskaydiaCove\ Nerd\ Font\ Mono\ 12',
-  \ 'Cousine\ Ned\ Font\ Mono\ 12',
+  \ 'Cousine\ Nerd\ Font\ Mono\ 12',
   \ 'DaddyTimeMono\ Nerd\ Font\ Mono\ 12',
   \ 'DejaVu\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ Mono\ 12',
   \ 'Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ Mono\ 12',
