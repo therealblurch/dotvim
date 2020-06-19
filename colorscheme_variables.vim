@@ -148,6 +148,10 @@ let s:deep_space_dict.name = 'deep-space'
 let s:deep_space_dict.lightlinetheme = 'deepspace'
 let s:deep_space_dict.airlinetheme = 'colorscheme'
 
+let s:desertink_dict = {}
+let s:desertink_dict.name = 'desertink'
+let s:desertink_dict.airlinetheme = 'colorscheme'
+
 let s:dracula_dict = {}
 let s:dracula_dict.name = 'dracula'
 let s:dracula_dict.lightlinetheme = 'colorscheme'
@@ -183,6 +187,10 @@ let s:gruvbox_material_dict.runtime = 'true'
 let s:gruvbox_material_dict.airlinetheme = 'colorscheme'
 let s:gruvbox_material_dict.variant_type = 'gruvbox_material_background'
 let s:gruvbox_material_dict.variants = ['soft', 'medium', 'hard']
+
+let s:jellybeans_dict = {}
+let s:jellybeans_dict.name = 'jellybeans'
+let s:jellybeans_dict.airlinetheme = 'colorscheme'
 
 let s:material_dict = {}
 let s:material_dict.name = 'material'
@@ -314,11 +322,13 @@ let g:colorscheme_map = [
          \ s:ayu_dict,
          \ s:cosmic_latte_dict,
          \ s:deep_space_dict,
+         \ s:desertink_dict,
          \ s:dracula_dict,
          \ s:edge_dict,
          \ s:flattened_dict,
          \ s:greygull_dict,
          \ s:gruvbox_material_dict,
+         \ s:jellybeans_dict,
          \ s:materialbox_dict,
          \ s:material_dict,
          \ s:nord_dict,

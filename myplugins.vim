@@ -91,11 +91,9 @@ Plugin 'vimtaku/vim-textobj-keyvalue',          {'type': 'start'}
 Plugin 'arcticicestudio/nord-vim',               {'package': 'colors', 'type': 'start', 'branch': 'develop'}
 Plugin 'atelierbram/vim-colors_atelier-schemes', {'package': 'colors', 'type': 'start'}
 Plugin 'ayu-theme/ayu-vim',                      {'package': 'colors', 'type': 'start'}
-Plugin 'croaker/mustang-vim',                    {'package': 'colors', 'type': 'start'}
 Plugin 'dracula/vim',                            {'package': 'colors', 'type': 'start', 'name': 'dracula'}
 Plugin 'drewtempelmeyer/palenight.vim',          {'package': 'colors', 'type': 'start'}
 Plugin 'kaicataldo/material.vim',                {'package': 'colors', 'type': 'start', 'name': 'material'}
-Plugin 'kristijanhusak/vim-hybrid-material',     {'package': 'colors', 'type': 'start'}
 Plugin 'liuchengxu/space-vim-theme',             {'package': 'colors', 'type': 'start'}
 Plugin 'logico-dev/typewriter',                  {'package': 'colors', 'type': 'start'}
 Plugin 'mkarmona/materialbox',                   {'package': 'colors', 'type': 'start'}
@@ -113,13 +111,9 @@ Plugin 'romainl/flattened',                      {'package': 'colors', 'type': '
 Plugin 'sainnhe/edge',                           {'package': 'colors', 'type': 'start'}
 Plugin 'sainnhe/gruvbox-material',               {'package': 'colors', 'type': 'start'}
 Plugin 'severij/vadelma',                        {'package': 'colors', 'type': 'start'}
-Plugin 'sickill/vim-monokai',                    {'package': 'colors', 'type': 'start'}
 Plugin 'srcery-colors/srcery-vim',               {'package': 'colors', 'type': 'start'}
-Plugin 'tomasr/molokai',                         {'package': 'colors', 'type': 'start'}
 Plugin 'toupeira/vim-desertink',                 {'package': 'colors', 'type': 'start'}
-Plugin 'tpope/vim-vividchalk',                   {'package': 'colors', 'type': 'start'}
 Plugin 'tyrannicaltoucan/vim-deep-space',        {'package': 'colors', 'type': 'start'}
-Plugin 'vim-scripts/vibrantink',                 {'package': 'colors', 'type': 'start'}
 Plugin 'http://gitlab.com/protesilaos/tempus-themes-vim.git', {'package': 'colors', 'type': 'start'}
 
 Plugin 'hsitz/VimOrganizer',                     {'package': 'write'}
