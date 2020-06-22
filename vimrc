@@ -1,4 +1,4 @@
- " vim: set sw=4 ts=4 sts=4 et tw=78 foldmarker={{{,}}} foldlevel=0 foldmethod=marker:
+ " vim: set sw=2 ts=2 sts=2 et tw=78 foldmarker={{{,}}} foldlevel=0 foldmethod=marker:
 
 scriptencoding utf-8
 
@@ -9,7 +9,7 @@ set backupskip+=*_gates.v
 set belloff+=ctrlg
 set completeopt+=menuone,noselect
 if has("patch-8.1.0360")
-    set diffopt+=internal,algorithm:patience
+  set diffopt+=internal,algorithm:patience
 endif
 set directory=~/.vim/cache/swap
 set grepprg=ag\ --nogroup\ --nocolor
@@ -18,7 +18,7 @@ set hlsearch
 set ignorecase
 set list
 if !has('win64') && !has('win32')
-    set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
+  set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 endif
 set modeline
 set nojoinspaces
@@ -36,12 +36,12 @@ set showtabline=2
 set smartcase
 set tags=$PROJ_USER/rtl/tags
 if !has('gui_running')
-    set termguicolors
+  set termguicolors
 endif
 if has('persistent_undo')
-   set undofile
-   set undolevels=1000
-   set undoreload=10000
+ set undofile
+ set undolevels=1000
+ set undoreload=10000
 endif
 set undodir=~/.vim/cache/undo
 set updatetime=250
@@ -109,8 +109,8 @@ nmap <silent> <leader>lf :PackAdd vim-fontsize<CR>
 
 " Miscellaneous autocmds {{{
 augroup resCur
-    autocmd!
-    autocmd BufWinEnter * call myfunctions#ResCur()
+  autocmd!
+  autocmd BufWinEnter * call myfunctions#ResCur()
 augroup END
 
 autocmd FileType gitcommit setlocal spell
@@ -155,34 +155,34 @@ let g:airline#extensions#tabline#right_alt_sep = ''
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 let g:airline_theme_map = {
-            \ 'foo*'                     : 'distinquished',
-            \ 'greygull'                 : 'seagull',
-            \ 'hybrid*'                  : 'hybrid',
-            \ 'petrel'                   : 'seagull',
-            \ 'stormpetrel'              : 'seagull',
-            \ 'tokyo-metro'              : 'tokyometro',
-            \ 'edge'                     : 'distinguished',
-            \ 'Atelier_CaveDark'         : 'Atelier_CaveDark',
-            \ 'Atelier_CaveLight'        : 'Atelier_CaveLight',
-            \ 'Atelier_DuneDark'         : 'Atelier_DuneDark',
-            \ 'Atelier_DuneLight'        : 'Atelier_DuneLight',
-            \ 'Atelier_EstuaryDark'      : 'Atelier_EstuaryDark',
-            \ 'Atelier_EstuaryLight'     : 'Atelier_EstuaryLight',
-            \ 'Atelier_ForestDark'       : 'Atelier_ForestDark',
-            \ 'Atelier_ForestLight'      : 'Atelier_ForestLight',
-            \ 'Atelier_HeathDark'        : 'Atelier_HeathDark',
-            \ 'Atelier_HeathLight'       : 'Atelier_HeathLight',
-            \ 'Atelier_LakesideDark'     : 'Atelier_LakesideDark',
-            \ 'Atelier_LakesideLight'    : 'Atelier_LakesideLight',
-            \ 'Atelier_PlateauDark'      : 'Atelier_PlateauDark',
-            \ 'Atelier_PlateauLight'     : 'Atelier_PlateauLight',
-            \ 'Atelier_SavannaDark'      : 'Atelier_SavannaDark',
-            \ 'Atelier_SavannaLight'     : 'Atelier_SavannaLight',
-            \ 'Atelier_SeasideDark'      : 'Atelier_SeasideDark',
-            \ 'Atelier_SeasideLight'     : 'Atelier_SeasideLight',
-            \ 'Atelier_SulphurpoolDark'  : 'Atelier_SulphurpoolDark',
-            \ 'Atelier_SulphurpoolLight' : 'Atelier_SulphurpoolLight',
-            \ }
+                        \ 'foo*'                     : 'distinquished',
+                        \ 'greygull'                 : 'seagull',
+                        \ 'hybrid*'                  : 'hybrid',
+                        \ 'petrel'                   : 'seagull',
+                        \ 'stormpetrel'              : 'seagull',
+                        \ 'tokyo-metro'              : 'tokyometro',
+                        \ 'edge'                     : 'distinguished',
+                        \ 'Atelier_CaveDark'         : 'Atelier_CaveDark',
+                        \ 'Atelier_CaveLight'        : 'Atelier_CaveLight',
+                        \ 'Atelier_DuneDark'         : 'Atelier_DuneDark',
+                        \ 'Atelier_DuneLight'        : 'Atelier_DuneLight',
+                        \ 'Atelier_EstuaryDark'      : 'Atelier_EstuaryDark',
+                        \ 'Atelier_EstuaryLight'     : 'Atelier_EstuaryLight',
+                        \ 'Atelier_ForestDark'       : 'Atelier_ForestDark',
+                        \ 'Atelier_ForestLight'      : 'Atelier_ForestLight',
+                        \ 'Atelier_HeathDark'        : 'Atelier_HeathDark',
+                        \ 'Atelier_HeathLight'       : 'Atelier_HeathLight',
+                        \ 'Atelier_LakesideDark'     : 'Atelier_LakesideDark',
+                        \ 'Atelier_LakesideLight'    : 'Atelier_LakesideLight',
+                        \ 'Atelier_PlateauDark'      : 'Atelier_PlateauDark',
+                        \ 'Atelier_PlateauLight'     : 'Atelier_PlateauLight',
+                        \ 'Atelier_SavannaDark'      : 'Atelier_SavannaDark',
+                        \ 'Atelier_SavannaLight'     : 'Atelier_SavannaLight',
+                        \ 'Atelier_SeasideDark'      : 'Atelier_SeasideDark',
+                        \ 'Atelier_SeasideLight'     : 'Atelier_SeasideLight',
+                        \ 'Atelier_SulphurpoolDark'  : 'Atelier_SulphurpoolDark',
+                        \ 'Atelier_SulphurpoolLight' : 'Atelier_SulphurpoolLight',
+                        \ }
 
 " }}}
 
@@ -216,21 +216,21 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 
 " endwise for verilog_systemverilog {{{
 autocmd FileType verilog_systemverilog
-        \ let b:endwise_addition = '\="end" . submatch(0)' |
-        \ let b:endwise_words = 'begin,module,case,function,primitive,specify,task' |
-        \ let b:endwise_pattern = '\<\%(\zs\zebegin\|module\|case\|function\|primitive\|specify\|task\)\>.*$' |
-        \ let b:endwise_syngroups = 'verilogConditional,verilogLabel,verilogStatement'
+  \ let b:endwise_addition = '\="end" . submatch(0)' |
+  \ let b:endwise_words = 'begin,module,case,function,primitive,specify,task' |
+  \ let b:endwise_pattern = '\<\%(\zs\zebegin\|module\|case\|function\|primitive\|specify\|task\)\>.*$' |
+  \ let b:endwise_syngroups = 'verilogConditional,verilogLabel,verilogStatement'
 "}}}
 
 " gitgutter {{{
 let g:gitgutter_highlight_lines = 1
 if has('gui_running') && !has('win64') && !has('win32')
-    " Use fontawesome icons as signs
-    let g:gitgutter_sign_added = ''
-    let g:gitgutter_sign_modified = ''
-    let g:gitgutter_sign_removed = ''
-    let g:gitgutter_sign_removed_first_line = ''
-    let g:gitgutter_sign_modified_removed = ''
+  " Use fontawesome icons as signs
+  let g:gitgutter_sign_added = ''
+  let g:gitgutter_sign_modified = ''
+  let g:gitgutter_sign_removed = ''
+  let g:gitgutter_sign_removed_first_line = ''
+  let g:gitgutter_sign_modified_removed = ''
 endif
 " }}}
 
@@ -256,67 +256,67 @@ nmap <Esc><Esc> <Plug>(anzu-clear-search-status)
 
 " Indentline {{{
 if !has('win64') && !has('win32')
-    let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+  let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 endif
 " }}}
 
 " Lightline {{{
-    let g:lightline = {}
-    let g:lightline.active = {
-                             \ 'left': [['mode', 'paste'],
-                             \         ['gitgutter', 'fugitive', 'readonly', 'filename', 'mucomplete']],
-                             \ 'right': [['obsession', 'lineinfo'],
-                             \          ['percent', 'winform', 'pomodoro'],
-                             \          ['fileformat', 'fileencoding', 'filetype', 'colorscheme']]
-                             \ }
-    let g:lightline.component = {
-                                   \ 'charvaluehex': '0x%B',
-                                   \ 'lineinfo': ' %3l[%L]:%-2v',
-                                   \ 'separator': ''
+let g:lightline = {}
+let g:lightline.active = {
+                       \ 'left': [['mode', 'paste'],
+                       \         ['gitgutter', 'fugitive', 'readonly', 'filename', 'mucomplete']],
+                       \ 'right': [['obsession', 'lineinfo'],
+                       \          ['percent', 'winform', 'pomodoro'],
+                       \          ['fileformat', 'fileencoding', 'filetype', 'colorscheme']]
+                       \ }
+let g:lightline.component = {
+                          \ 'charvaluehex': '0x%B',
+                          \ 'lineinfo': ' %3l[%L]:%-2v',
+                          \ 'separator': ''
+                          \ }
+let g:lightline.component_function = {
+                                   \ 'readonly': 'lightlinefunctions#LightlineReadonly',
+                                   \ 'fugitive': 'lightlinefunctions#LightlineFugitive',
+                                   \ 'gitbranch': 'fugitive#head',
+                                   \ 'modified': 'lightlinefunctions#LightlineModified',
+                                   \ 'filename': 'lightlinefunctions#LightlineFilename',
+                                   \ 'filepath': 'lightlinefunctions#LightlineFilepath',
+                                   \ 'fileformat': 'lightlinefunctions#LightlineFileformat',
+                                   \ 'filetype': 'lightlinefunctions#LightlineFiletype',
+                                   \ 'fileencoding': 'lightlinefunctions#LightlineFileencoding',
+                                   \ 'mode': 'lightlinefunctions#LightlineMode',
+                                   \ 'winform': 'lightlinefunctions#LightlineWinform',
+                                   \ 'colorscheme': 'lightlinefunctions#LightlineColorscheme',
+                                   \ 'bufferinfo': 'lightline#buffer#bufferinfo',
+                                   \ 'gitgutter': 'lightlinefunctions#LightlineGitgutter',
+                                   \ 'pomodoro': 'lightlinefunctions#PomodoroStatus',
+                                   \ 'obsession': 'ObsessionStatus',
+                                   \ 'mucomplete': 'myfunctions#MU'
                                    \ }
-    let g:lightline.component_function = {
-                                        \ 'readonly': 'lightlinefunctions#LightlineReadonly',
-                                        \ 'fugitive': 'lightlinefunctions#LightlineFugitive',
-                                        \ 'gitbranch': 'fugitive#head',
-                                        \ 'modified': 'lightlinefunctions#LightlineModified',
-                                        \ 'filename': 'lightlinefunctions#LightlineFilename',
-                                        \ 'filepath': 'lightlinefunctions#LightlineFilepath',
-                                        \ 'fileformat': 'lightlinefunctions#LightlineFileformat',
-                                        \ 'filetype': 'lightlinefunctions#LightlineFiletype',
-                                        \ 'fileencoding': 'lightlinefunctions#LightlineFileencoding',
-                                        \ 'mode': 'lightlinefunctions#LightlineMode',
-                                        \ 'winform': 'lightlinefunctions#LightlineWinform',
-                                        \ 'colorscheme': 'lightlinefunctions#LightlineColorscheme',
-                                        \ 'bufferinfo': 'lightline#buffer#bufferinfo',
-                                        \ 'gitgutter': 'lightlinefunctions#LightlineGitgutter',
-                                        \ 'pomodoro': 'lightlinefunctions#PomodoroStatus',
-                                        \ 'obsession': 'ObsessionStatus',
-                                        \ 'mucomplete': 'myfunctions#MU'
-                                        \ }
-    let g:lightline.tabline = {
-                             \ 'left': [ [ 'bufferinfo' ],
-                             \           [ 'separator' ],
-                             \           [ 'bufferbefore', 'buffercurrent', 'bufferafter' ] ],
-                             \ 'right': [ [ 'close' ] ]
-                             \ }
-    let g:lightline.separator = { 'left': '', 'right': '' }
-    let g:lightline.subseparator = { 'left': '', 'right': '' }
-    let g:lightline.tabline_separator = { 'left': '', 'right': '' }
-    let g:lightline.tabline_subseparator = { 'left': '', 'right': '' }
-    let g:lightline.tab = {
-                         \ 'active': [ 'tabnum', 'filename', 'modified' ],
-                         \ 'inactive': [ 'tabnum', 'filename', 'modified' ]
-                         \ }
-    let g:lightline.component_expand = {
-                                       \ 'buffercurrent': 'lightline#buffer#buffercurrent',
-                                       \ 'bufferbefore': 'lightline#buffer#bufferbefore',
-                                       \ 'bufferafter': 'lightline#buffer#bufferafter'
-                                       \ }
-    let g:lightline.component_type = {
-                                     \ 'buffercurrent': 'tabsel',
-                                     \ 'bufferbefore': 'raw',
-                                     \ 'bufferafter': 'raw'
-                                     \ }
+let g:lightline.tabline = {
+                        \ 'left': [ [ 'bufferinfo' ],
+                        \           [ 'separator' ],
+                        \           [ 'bufferbefore', 'buffercurrent', 'bufferafter' ] ],
+                        \ 'right': [ [ 'close' ] ]
+                        \ }
+let g:lightline.separator = { 'left': '', 'right': '' }
+let g:lightline.subseparator = { 'left': '', 'right': '' }
+let g:lightline.tabline_separator = { 'left': '', 'right': '' }
+let g:lightline.tabline_subseparator = { 'left': '', 'right': '' }
+let g:lightline.tab = {
+                    \ 'active': [ 'tabnum', 'filename', 'modified' ],
+                    \ 'inactive': [ 'tabnum', 'filename', 'modified' ]
+                    \ }
+let g:lightline.component_expand = {
+                                 \ 'buffercurrent': 'lightline#buffer#buffercurrent',
+                                 \ 'bufferbefore': 'lightline#buffer#bufferbefore',
+                                 \ 'bufferafter': 'lightline#buffer#bufferafter'
+                                 \ }
+let g:lightline.component_type = {
+                               \ 'buffercurrent': 'tabsel',
+                               \ 'bufferbefore': 'raw',
+                               \ 'bufferafter': 'raw'
+                               \ }
 
 let g:lightline#bufferline#min_buffer_count = 2
 let g:lightline#bufferline#enable_devicons = 1
@@ -354,19 +354,19 @@ let g:prefer_airline = 0
 let g:colorscheme_file = '~/.vim/.colorscheme'
 
 augroup StatusBarTheme
-    autocmd!
-    if has('patch-8.0.1777')
-        autocmd ColorschemePre Atelier*Dark set background=dark
-        autocmd ColorschemePre Atelier*Light set background=light
-        autocmd ColorschemePre vimspectr*dark set background=dark
-        autocmd ColorschemePre vimspectr*light set background=light
-    endif
-    autocmd ColorScheme * if myfunctions#WhichStatus(g:colors_name) == "airline"   | PackAdd vim-airline | call colorschemefunctions#AirlineTheme(g:colors_name) | endif
-    autocmd Colorscheme * if myfunctions#WhichStatus(g:colors_name) == "lightline" | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-    autocmd Colorscheme * if myfunctions#WhichStatus(g:colors_name) == "none" && exists('g:loaded_lightline') | call lightlinefunctions#LightlineUpdate() | endif
-    autocmd Colorscheme * if myfunctions#WhichStatus(g:colors_name) == "none" && exists('g:loaded_airline') | call colorschemefunctions#AirlineTheme(g:colors_name) | endif
-    autocmd Colorscheme * if myfunctions#WhichStatus(g:colors_name) == "none" && !exists('g:loaded_lightline') && !exists('g:loaded_airline') | PackAdd vim-buftabline | endif
-    autocmd Colorscheme * call writefile([&background, g:colors_name], expand(g:colorscheme_file)) | let g:current_color_dictionary = colorschemefunctions#GetColorDictionary(g:colors_name)
+  autocmd!
+  if has('patch-8.0.1777')
+    autocmd ColorschemePre Atelier*Dark set background=dark
+    autocmd ColorschemePre Atelier*Light set background=light
+    autocmd ColorschemePre vimspectr*dark set background=dark
+    autocmd ColorschemePre vimspectr*light set background=light
+  endif
+  autocmd ColorScheme * if myfunctions#WhichStatus(g:colors_name) == "airline"   | PackAdd vim-airline | call colorschemefunctions#AirlineTheme(g:colors_name) | endif
+  autocmd Colorscheme * if myfunctions#WhichStatus(g:colors_name) == "lightline" | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
+  autocmd Colorscheme * if myfunctions#WhichStatus(g:colors_name) == "none" && exists('g:loaded_lightline') | call lightlinefunctions#LightlineUpdate() | endif
+  autocmd Colorscheme * if myfunctions#WhichStatus(g:colors_name) == "none" && exists('g:loaded_airline') | call colorschemefunctions#AirlineTheme(g:colors_name) | endif
+  autocmd Colorscheme * if myfunctions#WhichStatus(g:colors_name) == "none" && !exists('g:loaded_lightline') && !exists('g:loaded_airline') | PackAdd vim-buftabline | endif
+  autocmd Colorscheme * call writefile([&background, g:colors_name], expand(g:colorscheme_file)) | let g:current_color_dictionary = colorschemefunctions#GetColorDictionary(g:colors_name)
 augroup END
 
 autocmd VimEnter * call colorschemefunctions#SetLastColorscheme()
@@ -381,25 +381,25 @@ imap <expr> <right> mucomplete#extend_fwd("\<right>")
 imap <expr> <left> mucomplete#extend_bwd("\<left>")
 
 let g:mucomplete#chains = {
-            \ 'default': ['snip', 'path', 'omni', 'keyn', 'dict', 'uspl'],
-            \ 'verilog_systemverilog': ['snip', 'tags', 'path', 'omni', 'keyn'],
-            \ 'vim': ['snip', 'path', 'cmd', 'keyn'],
-            \ }
+                        \ 'default': ['snip', 'path', 'omni', 'keyn', 'dict', 'uspl'],
+                        \ 'verilog_systemverilog': ['snip', 'tags', 'path', 'omni', 'keyn'],
+                        \ 'vim': ['snip', 'path', 'cmd', 'keyn'],
+                        \ }
 " }}}
 
 " nerdtree {{{
 let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "✹",
-    \ "Staged"    : "✚",
-    \ "Untracked" : "✭",
-    \ "Renamed"   : "➜",
-    \ "Unmerged"  : "",
-    \ "Deleted"   : "✖",
-    \ "Dirty"     : "✗",
-    \ "Clean"     : "✔︎",
-    \ 'Ignored'   : '☒',
-    \ "Unknown"   : "?"
-    \ }
+                                 \ "Modified"  : "✹",
+                                 \ "Staged"    : "✚",
+                                 \ "Untracked" : "✭",
+                                 \ "Renamed"   : "➜",
+                                 \ "Unmerged"  : "",
+                                 \ "Deleted"   : "✖",
+                                 \ "Dirty"     : "✗",
+                                 \ "Clean"     : "✔︎",
+                                 \ 'Ignored'   : '☒',
+                                 \ "Unknown"   : "?"
+                                 \ }
 " }}}
 
 " peekaboo {{{
