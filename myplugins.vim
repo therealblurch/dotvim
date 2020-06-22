@@ -116,7 +116,6 @@ Plugin 'severij/vadelma',                        {'package': 'colors', 'type': '
 Plugin 'srcery-colors/srcery-vim',               {'package': 'colors', 'type': 'start'}
 Plugin 'toupeira/vim-desertink',                 {'package': 'colors', 'type': 'start'}
 Plugin 'tyrannicaltoucan/vim-deep-space',        {'package': 'colors', 'type': 'start'}
-Plugin 'http://gitlab.com/protesilaos/tempus-themes-vim.git', {'package': 'colors', 'type': 'start'}
 
 Plugin 'dhruvasagar/vim-table-mode',             {'package': 'write'}
 Plugin 'godlygeek/tabular',                      {'package': 'write'}
