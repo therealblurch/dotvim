@@ -118,6 +118,8 @@ Plugin 'toupeira/vim-desertink',                 {'package': 'colors', 'type': '
 Plugin 'tyrannicaltoucan/vim-deep-space',        {'package': 'colors', 'type': 'start'}
 Plugin 'http://gitlab.com/protesilaos/tempus-themes-vim.git', {'package': 'colors', 'type': 'start'}
 
+Plugin 'dhruvasagar/vim-table-mode',             {'package': 'write'}
+Plugin 'godlygeek/tabular',                      {'package': 'write'}
 Plugin 'hsitz/VimOrganizer',                     {'package': 'write'}
 Plugin 'jceb/vim-orgmode',                       {'package': 'write'}
 Plugin 'junegunn/vim-journal',                   {'package': 'write'}
