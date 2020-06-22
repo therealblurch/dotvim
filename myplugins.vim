@@ -136,29 +136,29 @@ Plugin 'dhruvasagar/vim-dotoo',                  {'package': 'write'}
 " Plugin 'sonph/onehalf',                    {'package': 'colors', 'type': 'start'}
 
 command! -nargs=1 -complete=custom,PackList
-   \ PackOpenDir packadd autopac | runtime OPT autopac.vim | call term_start(&shell,
-   \    {'cwd': autopac#impl#pluginfo(<q-args>).dir,
-   \    'term_finish': 'close'})
+  \ PackOpenDir packadd autopac | runtime OPT autopac.vim | call term_start(&shell,
+  \    {'cwd': autopac#impl#pluginfo(<q-args>).dir,
+  \    'term_finish': 'close'})
 
 command! -nargs=1 -complete=custom,PackList
-   \ PackOpenUrl packadd autopac | runtime OPT autopac.vim | call openbrowser#open(
-   \ autopac#impl#pluginfo(<q-args>).url)
+  \ PackOpenUrl packadd autopac | runtime OPT autopac.vim | call openbrowser#open(
+  \ autopac#impl#pluginfo(<q-args>).url)
 
 function! myplugins#callback(plugname, before)
 
-   if !a:before
-      if a:plugname == "vim-airline"
-         let g:airline_section_x = airline#section#create_right(['%-20{colorschemefunctions#CurrentColorscheme()}', 'bookmark', 'tagbar', 'vista', 'gutentags', 'grepper', 'filetype'])
-         let g:airline_section_c = airline#section#create(['%<', 'file', g:airline_symbols.space, 'readonly', '%{myfunctions#MU()}'])
-      endif
-   endif
+  if !a:before
+    if a:plugname == "vim-airline"
+      let g:airline_section_x = airline#section#create_right(['%-20{colorschemefunctions#CurrentColorscheme()}', 'bookmark', 'tagbar', 'vista', 'gutentags', 'grepper', 'filetype'])
+      let g:airline_section_c = airline#section#create(['%<', 'file', g:airline_symbols.space, 'readonly', '%{myfunctions#MU()}'])
+    endif
+  endif
 
-   if a:plugname == "vim-airline"
-      PackAdd! vim-airline-themes
-   elseif a:plugname == "lightline.vim"
-      PackAdd! lightline-buffer
-      PackAdd! lightline_foobar.vim
-      PackAdd! pomodoro.vim
-   endif
+  if a:plugname == "vim-airline"
+    PackAdd! vim-airline-themes
+  elseif a:plugname == "lightline.vim"
+    PackAdd! lightline-buffer
+    PackAdd! lightline_foobar.vim
+    PackAdd! pomodoro.vim
+  endif
 
 endfunction
