@@ -350,7 +350,7 @@ command! -nargs=1 -complete=custom,lightlinefunctions#LightlineColorschemes Ligh
 " }}}
 
 " Statusbar Plugin selection {{{
-let g:prefer_airline = 1
+let g:prefer_airline = 0
 let g:colorscheme_file = '~/.vim/.colorscheme'
 
 augroup StatusBarTheme
