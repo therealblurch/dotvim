@@ -96,7 +96,7 @@ nnoremap cp :pwd<cr> " Print current working directory
 
 " Edit/source .vimrc
 noremap <leader>evi :tabedit ~/.vim/vimrc<CR>
-noremap <leader>sv :source ~/.vim/vimrc<CR>
+noremap <leader>sv  :source ~/.vim/vimrc<CR>
 
 " Timestamps
 nnoremap <F6> "=strftime("%c")
@@ -119,20 +119,20 @@ autocmd FileType gitcommit setlocal spell
 "Colorscheme Options {{{
 
 "ayu Possible Values: light | dark | mirage
-let ayucolor="light"
-let g:ayucolor=ayucolor
+let ayucolor   = "light"
+let g:ayucolor = ayucolor
 
 "material Possible Values: default | palenight | ocean | lighter | darker
-let g:material_theme_style="palenight"
+let g:material_theme_style = "palenight"
 
 "edge Possible Values: default | aura | neon
-let g:edge_style="default"
+let g:edge_style = "default"
 
 "Initial setting for g:gruvbox_material_background
 let g:gruvbox_material_background = 'hard'
 
 "Initial setting for materialbox
-let g:materialbox_contrast_dark = 'hard'
+let g:materialbox_contrast_dark  = 'hard'
 let g:materialbox_contrast_light = 'hard'
 
 source ~/.vim/colorscheme_variables.vim
@@ -144,45 +144,43 @@ nmap <silent> <leader>A :<c-u>call xolox#colorscheme_switcher#switch_to('Atelier
 " }}}
 
 " Airline {{{
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts                   = 1
+let g:airline#extensions#tabline#enabled        = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail'
-let g:airline#extensions#tabline#left_sep = ''
-let g:airline#extensions#tabline#left_alt_sep = ''
-let g:airline#extensions#tabline#right_sep = ''
-let g:airline#extensions#tabline#right_alt_sep = ''
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
-let g:airline_theme_map = {
-                        \ 'foo*'                     : 'distinquished',
-                        \ 'greygull'                 : 'seagull',
-                        \ 'hybrid*'                  : 'hybrid',
-                        \ 'petrel'                   : 'seagull',
-                        \ 'stormpetrel'              : 'seagull',
-                        \ 'tokyo-metro'              : 'tokyometro',
-                        \ 'edge'                     : 'distinguished',
-                        \ 'Atelier_CaveDark'         : 'Atelier_CaveDark',
-                        \ 'Atelier_CaveLight'        : 'Atelier_CaveLight',
-                        \ 'Atelier_DuneDark'         : 'Atelier_DuneDark',
-                        \ 'Atelier_DuneLight'        : 'Atelier_DuneLight',
-                        \ 'Atelier_EstuaryDark'      : 'Atelier_EstuaryDark',
-                        \ 'Atelier_EstuaryLight'     : 'Atelier_EstuaryLight',
-                        \ 'Atelier_ForestDark'       : 'Atelier_ForestDark',
-                        \ 'Atelier_ForestLight'      : 'Atelier_ForestLight',
-                        \ 'Atelier_HeathDark'        : 'Atelier_HeathDark',
-                        \ 'Atelier_HeathLight'       : 'Atelier_HeathLight',
-                        \ 'Atelier_LakesideDark'     : 'Atelier_LakesideDark',
-                        \ 'Atelier_LakesideLight'    : 'Atelier_LakesideLight',
-                        \ 'Atelier_PlateauDark'      : 'Atelier_PlateauDark',
-                        \ 'Atelier_PlateauLight'     : 'Atelier_PlateauLight',
-                        \ 'Atelier_SavannaDark'      : 'Atelier_SavannaDark',
-                        \ 'Atelier_SavannaLight'     : 'Atelier_SavannaLight',
-                        \ 'Atelier_SeasideDark'      : 'Atelier_SeasideDark',
-                        \ 'Atelier_SeasideLight'     : 'Atelier_SeasideLight',
-                        \ 'Atelier_SulphurpoolDark'  : 'Atelier_SulphurpoolDark',
-                        \ 'Atelier_SulphurpoolLight' : 'Atelier_SulphurpoolLight',
-                        \ }
+let g:airline#extensions#tabline#formatter      = 'unique_tail'
+let g:airline#extensions#tabline#left_sep       = ''
+let g:airline#extensions#tabline#left_alt_sep   = ''
+let g:airline#extensions#tabline#right_sep      = ''
+let g:airline#extensions#tabline#right_alt_sep  = ''
+let g:airline_left_sep                          = ''
+let g:airline_right_sep                         = ''
+let g:airline_theme_map                         = {
+                                                \ 'foo*'                     : 'distinquished',
+                                                \ 'greygull'                 : 'seagull',
+                                                \ 'petrel'                   : 'seagull',
+                                                \ 'stormpetrel'              : 'seagull',
+                                                \ 'edge'                     : 'distinguished',
+                                                \ 'Atelier_CaveDark'         : 'Atelier_CaveDark',
+                                                \ 'Atelier_CaveLight'        : 'Atelier_CaveLight',
+                                                \ 'Atelier_DuneDark'         : 'Atelier_DuneDark',
+                                                \ 'Atelier_DuneLight'        : 'Atelier_DuneLight',
+                                                \ 'Atelier_EstuaryDark'      : 'Atelier_EstuaryDark',
+                                                \ 'Atelier_EstuaryLight'     : 'Atelier_EstuaryLight',
+                                                \ 'Atelier_ForestDark'       : 'Atelier_ForestDark',
+                                                \ 'Atelier_ForestLight'      : 'Atelier_ForestLight',
+                                                \ 'Atelier_HeathDark'        : 'Atelier_HeathDark',
+                                                \ 'Atelier_HeathLight'       : 'Atelier_HeathLight',
+                                                \ 'Atelier_LakesideDark'     : 'Atelier_LakesideDark',
+                                                \ 'Atelier_LakesideLight'    : 'Atelier_LakesideLight',
+                                                \ 'Atelier_PlateauDark'      : 'Atelier_PlateauDark',
+                                                \ 'Atelier_PlateauLight'     : 'Atelier_PlateauLight',
+                                                \ 'Atelier_SavannaDark'      : 'Atelier_SavannaDark',
+                                                \ 'Atelier_SavannaLight'     : 'Atelier_SavannaLight',
+                                                \ 'Atelier_SeasideDark'      : 'Atelier_SeasideDark',
+                                                \ 'Atelier_SeasideLight'     : 'Atelier_SeasideLight',
+                                                \ 'Atelier_SulphurpoolDark'  : 'Atelier_SulphurpoolDark',
+                                                \ 'Atelier_SulphurpoolLight' : 'Atelier_SulphurpoolLight',
+                                                \ }
 
 " }}}
 
@@ -216,9 +214,9 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 
 " endwise for verilog_systemverilog {{{
 autocmd FileType verilog_systemverilog
-  \ let b:endwise_addition = '\="end" . submatch(0)' |
-  \ let b:endwise_words = 'begin,module,case,function,primitive,specify,task' |
-  \ let b:endwise_pattern = '\<\%(\zs\zebegin\|module\|case\|function\|primitive\|specify\|task\)\>.*$' |
+  \ let b:endwise_addition  = '\="end" . submatch(0)' |
+  \ let b:endwise_words     = 'begin,module,case,function,primitive,specify,task' |
+  \ let b:endwise_pattern   = '\<\%(\zs\zebegin\|module\|case\|function\|primitive\|specify\|task\)\>.*$' |
   \ let b:endwise_syngroups = 'verilogConditional,verilogLabel,verilogStatement'
 "}}}
 
@@ -226,11 +224,11 @@ autocmd FileType verilog_systemverilog
 let g:gitgutter_highlight_lines = 1
 if has('gui_running') && !has('win64') && !has('win32')
   " Use fontawesome icons as signs
-  let g:gitgutter_sign_added = ''
-  let g:gitgutter_sign_modified = ''
-  let g:gitgutter_sign_removed = ''
+  let g:gitgutter_sign_added              = ''
+  let g:gitgutter_sign_modified           = ''
+  let g:gitgutter_sign_removed            = ''
   let g:gitgutter_sign_removed_first_line = ''
-  let g:gitgutter_sign_modified_removed = ''
+  let g:gitgutter_sign_modified_removed   = ''
 endif
 " }}}
 
@@ -242,11 +240,11 @@ nnoremap <Space>/ :Ag<SPACE>
 
 " incsearch {{{
 
-map n <Plug>(is-nohl)<Plug>(anzu-n-with-echo)
-map N <Plug>(is-nohl)<Plug>(anzu-N-with-echo)
-map * <Plug>(asterisk-z*)<Plug>(is-nohl-1)
+map n  <Plug>(is-nohl)<Plug>(anzu-n-with-echo)
+map N  <Plug>(is-nohl)<Plug>(anzu-N-with-echo)
+map *  <Plug>(asterisk-z*)<Plug>(is-nohl-1)
 map g* <Plug>(asterisk-gz*)<Plug>(is-nohl-1)
-map # <Plug>(asterisk-z#)<Plug>(is_nohl-1)
+map #  <Plug>(asterisk-z#)<Plug>(is_nohl-1)
 map g# <Plug>(asterisk-gz#)<Plug>(is_nohl-1)
 " }}}
 
@@ -261,89 +259,89 @@ endif
 " }}}
 
 " Lightline {{{
-let g:lightline = {}
-let g:lightline.active = {
-                       \ 'left': [['mode', 'paste'],
-                       \         ['gitgutter', 'fugitive', 'readonly', 'filename', 'mucomplete']],
-                       \ 'right': [['obsession', 'lineinfo'],
-                       \          ['percent', 'winform', 'pomodoro'],
-                       \          ['fileformat', 'fileencoding', 'filetype', 'colorscheme']]
-                       \ }
-let g:lightline.component = {
-                          \ 'charvaluehex': '0x%B',
-                          \ 'lineinfo': ' %3l[%L]:%-2v',
-                          \ 'separator': ''
-                          \ }
-let g:lightline.component_function = {
-                                   \ 'readonly': 'lightlinefunctions#LightlineReadonly',
-                                   \ 'fugitive': 'lightlinefunctions#LightlineFugitive',
-                                   \ 'gitbranch': 'fugitive#head',
-                                   \ 'modified': 'lightlinefunctions#LightlineModified',
-                                   \ 'filename': 'lightlinefunctions#LightlineFilename',
-                                   \ 'filepath': 'lightlinefunctions#LightlineFilepath',
-                                   \ 'fileformat': 'lightlinefunctions#LightlineFileformat',
-                                   \ 'filetype': 'lightlinefunctions#LightlineFiletype',
-                                   \ 'fileencoding': 'lightlinefunctions#LightlineFileencoding',
-                                   \ 'mode': 'lightlinefunctions#LightlineMode',
-                                   \ 'winform': 'lightlinefunctions#LightlineWinform',
-                                   \ 'colorscheme': 'lightlinefunctions#LightlineColorscheme',
-                                   \ 'bufferinfo': 'lightline#buffer#bufferinfo',
-                                   \ 'gitgutter': 'lightlinefunctions#LightlineGitgutter',
-                                   \ 'pomodoro': 'lightlinefunctions#PomodoroStatus',
-                                   \ 'obsession': 'ObsessionStatus',
-                                   \ 'mucomplete': 'myfunctions#MU'
-                                   \ }
-let g:lightline.tabline = {
-                        \ 'left': [ [ 'bufferinfo' ],
-                        \           [ 'separator' ],
-                        \           [ 'bufferbefore', 'buffercurrent', 'bufferafter' ] ],
-                        \ 'right': [ [ 'close' ] ]
-                        \ }
-let g:lightline.separator = { 'left': '', 'right': '' }
-let g:lightline.subseparator = { 'left': '', 'right': '' }
-let g:lightline.tabline_separator = { 'left': '', 'right': '' }
-let g:lightline.tabline_subseparator = { 'left': '', 'right': '' }
-let g:lightline.tab = {
-                    \ 'active': [ 'tabnum', 'filename', 'modified' ],
-                    \ 'inactive': [ 'tabnum', 'filename', 'modified' ]
-                    \ }
-let g:lightline.component_expand = {
-                                 \ 'buffercurrent': 'lightline#buffer#buffercurrent',
-                                 \ 'bufferbefore': 'lightline#buffer#bufferbefore',
-                                 \ 'bufferafter': 'lightline#buffer#bufferafter'
-                                 \ }
-let g:lightline.component_type = {
-                               \ 'buffercurrent': 'tabsel',
-                               \ 'bufferbefore': 'raw',
-                               \ 'bufferafter': 'raw'
-                               \ }
+let g:lightline                              = {}
+let g:lightline.active                       = {
+                                             \ 'left': [['mode', 'paste'],
+                                             \         ['gitgutter', 'fugitive', 'readonly', 'filename', 'mucomplete']],
+                                             \ 'right': [['obsession', 'lineinfo'],
+                                             \          ['percent', 'winform', 'pomodoro'],
+                                             \          ['fileformat', 'fileencoding', 'filetype', 'colorscheme']]
+                                             \ }
+let g:lightline.component                    = {
+                                             \ 'charvaluehex': '0x%B',
+                                             \ 'lineinfo': ' %3l[%L]:%-2v',
+                                             \ 'separator': ''
+                                             \ }
+let g:lightline.component_function           = {
+                                             \ 'readonly': 'lightlinefunctions#LightlineReadonly',
+                                             \ 'fugitive': 'lightlinefunctions#LightlineFugitive',
+                                             \ 'gitbranch': 'fugitive#head',
+                                             \ 'modified': 'lightlinefunctions#LightlineModified',
+                                             \ 'filename': 'lightlinefunctions#LightlineFilename',
+                                             \ 'filepath': 'lightlinefunctions#LightlineFilepath',
+                                             \ 'fileformat': 'lightlinefunctions#LightlineFileformat',
+                                             \ 'filetype': 'lightlinefunctions#LightlineFiletype',
+                                             \ 'fileencoding': 'lightlinefunctions#LightlineFileencoding',
+                                             \ 'mode': 'lightlinefunctions#LightlineMode',
+                                             \ 'winform': 'lightlinefunctions#LightlineWinform',
+                                             \ 'colorscheme': 'lightlinefunctions#LightlineColorscheme',
+                                             \ 'bufferinfo': 'lightline#buffer#bufferinfo',
+                                             \ 'gitgutter': 'lightlinefunctions#LightlineGitgutter',
+                                             \ 'pomodoro': 'lightlinefunctions#PomodoroStatus',
+                                             \ 'obsession': 'ObsessionStatus',
+                                             \ 'mucomplete': 'myfunctions#MU'
+                                             \ }
+let g:lightline.tabline                      = {
+                                             \ 'left': [ [ 'bufferinfo' ],
+                                             \           [ 'separator' ],
+                                             \           [ 'bufferbefore', 'buffercurrent', 'bufferafter' ] ],
+                                             \ 'right': [ [ 'close' ] ]
+                                             \ }
+let g:lightline.separator                    = { 'left': '', 'right': '' }
+let g:lightline.subseparator                 = { 'left': '', 'right': '' }
+let g:lightline.tabline_separator            = { 'left': '', 'right': '' }
+let g:lightline.tabline_subseparator         = { 'left': '', 'right': '' }
+let g:lightline.tab                          = {
+                                             \ 'active': [ 'tabnum', 'filename', 'modified' ],
+                                             \ 'inactive': [ 'tabnum', 'filename', 'modified' ]
+                                             \ }
+let g:lightline.component_expand             = {
+                                             \ 'buffercurrent': 'lightline#buffer#buffercurrent',
+                                             \ 'bufferbefore': 'lightline#buffer#bufferbefore',
+                                             \ 'bufferafter': 'lightline#buffer#bufferafter'
+                                             \ }
+let g:lightline.component_type               = {
+                                             \ 'buffercurrent': 'tabsel',
+                                             \ 'bufferbefore': 'raw',
+                                             \ 'bufferafter': 'raw'
+                                             \ }
 
-let g:lightline#bufferline#min_buffer_count = 2
-let g:lightline#bufferline#enable_devicons = 1
-let g:lightline#bufferline#show_number = 1
+let g:lightline#bufferline#min_buffer_count  = 2
+let g:lightline#bufferline#enable_devicons   = 1
+let g:lightline#bufferline#show_number       = 1
 let g:lightline#bufferline#filename_modifier = ':t'
 
 " lightline-buffer ui settings
 " replace these symbols with ascii characters if your environment does not support unicode
 
-let g:lightline_buffer_logo = ' '
-let g:lightline_buffer_readonly_icon = ''
-let g:lightline_buffer_modified_icon = '✭'
-let g:lightline_buffer_expand_left_icon = '◀ '
-let g:lightline_buffer_expand_right_icon = ' ▶'
-let g:lightline_buffer_separator_icon = '  '
-let g:lightline_buffer_git_icon = ' '
-let g:lightline_buffer_ellipsis_icon = '..'
-let g:lightline_buffer_active_buffer_left_icon = ''
+let g:lightline_buffer_logo                     = ' '
+let g:lightline_buffer_readonly_icon            = ''
+let g:lightline_buffer_modified_icon            = '✭'
+let g:lightline_buffer_expand_left_icon         = '◀ '
+let g:lightline_buffer_expand_right_icon        = ' ▶'
+let g:lightline_buffer_separator_icon           = '  '
+let g:lightline_buffer_git_icon                 = ' '
+let g:lightline_buffer_ellipsis_icon            = '..'
+let g:lightline_buffer_active_buffer_left_icon  = ''
 let g:lightline_buffer_active_buffer_right_icon = ''
-let g:lightline_buffer_enable_devicons = 1
-let g:lightline_buffer_show_bufnr = 1
-let g:lightline_buffer_fname_mod = ':t'
-let g:lightline_buffer_maxflen = 30
-let g:lightline_buffer_maxfextlen = 3
-let g:lightline_buffer_minflen = 16
-let g:lightline_buffer_minfextlen = 3
-let g:lightline_buffer_reservelen = 20
+let g:lightline_buffer_enable_devicons          = 1
+let g:lightline_buffer_show_bufnr               = 1
+let g:lightline_buffer_fname_mod                = ':t'
+let g:lightline_buffer_maxflen                  = 30
+let g:lightline_buffer_maxfextlen               = 3
+let g:lightline_buffer_minflen                  = 16
+let g:lightline_buffer_minfextlen               = 3
+let g:lightline_buffer_reservelen               = 20
 
 command! -nargs=1 -complete=custom,lightlinefunctions#LightlineColorschemes LightlineColorscheme
    \ call lightlinefunctions#SetLightlineColorscheme(<q-args>)
