@@ -261,14 +261,14 @@ endif
 " }}}
 
 " Lightline {{{
-   let g:lightline = {}
-   let g:lightline.active = {
-                            \ 'left': [['mode', 'paste'],
-                            \         ['gitgutter', 'fugitive', 'readonly', 'filename', 'mucomplete']],
-                            \ 'right': [['obsession', 'lineinfo'],
-                            \          ['percent', 'winform', 'pomodoro'],
-                            \          ['fileformat', 'fileencoding', 'filetype', 'colorscheme']]
-                            \ }
+    let g:lightline = {}
+    let g:lightline.active = {
+                             \ 'left': [['mode', 'paste'],
+                             \         ['gitgutter', 'fugitive', 'readonly', 'filename', 'mucomplete']],
+                             \ 'right': [['obsession', 'lineinfo'],
+                             \          ['percent', 'winform', 'pomodoro'],
+                             \          ['fileformat', 'fileencoding', 'filetype', 'colorscheme']]
+                             \ }
     let g:lightline.component = {
                                    \ 'charvaluehex': '0x%B',
                                    \ 'lineinfo': ' %3l[%L]:%-2v',
