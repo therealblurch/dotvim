@@ -21,7 +21,7 @@ let g:fontlist=[
   \ 'Inconsolata\ for\ Powerline\ Plus\ Nerd\ File\ Types\ Mono\ Medium\ 12',
   \ 'InconsolataLGC\ iCursive\ S12\ Medium\ 12',
   \ 'Liberation\ Mono\ for\ Powerline\ 12',
-  \ 'Literation\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types\ Mono\ 12',
+  \ 'Literation\ Mono\ Powerline\ Plus\ Nerd\ File\ Types\ Mono\ 12',
   \ 'Meslo\ iCursive\ S12\ 12',
   \ 'Meslo\ LG\ M\ for\ Powerline\ Plus\ Nerd\ File\ Types\ Mono\ 12',
   \ 'Monofur\ Nerd\ Font\ Mono\ 12',
