@@ -63,7 +63,7 @@ Plugin 'wellle/targets.vim',                    {'type': 'start'}
 Plugin 'wellle/visual-split.vim'
 Plugin 'xolox/vim-misc',                        {'type': 'start'}
 Plugin 'xolox/vim-colorscheme-switcher',        {'type': 'start'}
-Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'Xuyuanp/nerdtree-git-plugin',           {'type': 'start'}
 Plugin 'Yggdroot/indentline',                   {'type': 'start'}
 Plugin 'zhuzhzh/verilog_emacsauto.vim'
 Plugin 'AndrewRadev/switch.vim',                {'type': 'start'}
@@ -159,8 +159,6 @@ function! myplugins#callback(plugname, before)
       PackAdd! lightline-buffer
       PackAdd! lightline_foobar.vim
       PackAdd! pomodoro.vim
-   elseif a:plugname == "nerdtree"
-      PackAdd! nerdtree-git-plugin
    endif
 
 endfunction
