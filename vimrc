@@ -7,6 +7,7 @@ runtime OPT autopac.vim
 set backupskip+=*_layout*.v
 set backupskip+=*_gates.v
 set belloff+=ctrlg
+set clipboard=unnamed,unnamedplus
 set completeopt+=menuone,noselect
 if has("patch-8.1.0360")
   set diffopt+=internal,algorithm:patience
