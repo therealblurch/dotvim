@@ -101,10 +101,6 @@ noremap <leader>sv  :source ~/.vim/vimrc<CR>
 " Timestamps
 nnoremap <F6> "=strftime("%c")
 inoremap <F6> <C-R>=strftime("%c")<CR>
-
-nmap <silent> <leader>ls :PackAdd vim-surround<CR>
-nmap <silent> <leader>ll :PackAdd vim-lion<CR>
-nmap <silent> <leader>lf :PackAdd vim-fontsize<CR>
 " }}}
 
 " Miscellaneous autocmds {{{
