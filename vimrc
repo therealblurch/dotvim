@@ -154,6 +154,7 @@ let g:airline_right_sep                         = ''
 let g:airline_theme_map                         = {
                                                 \ 'foo*'                     : 'distinquished',
                                                 \ 'greygull'                 : 'seagull',
+                                                \ 'gruvbox-material'         : 'gruvbox_material',
                                                 \ 'petrel'                   : 'seagull',
                                                 \ 'stormpetrel'              : 'seagull',
                                                 \ 'edge'                     : 'distinguished',
