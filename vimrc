@@ -259,7 +259,7 @@ endif
 let g:lightline                              = {}
 let g:lightline.active                       = {
                                              \ 'left': [['mode', 'paste'],
-                                             \         ['gitgutter', 'fugitive', 'readonly', 'filename', 'mucomplete']],
+                                             \         ['gitgutter', 'fugitive', 'readonly', 'filename']],
                                              \ 'right': [['obsession', 'lineinfo'],
                                              \          ['percent', 'winform', 'pomodoro'],
                                              \          ['fileformat', 'fileencoding', 'filetype', 'colorscheme']]
