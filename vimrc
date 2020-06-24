@@ -10,7 +10,7 @@ set belloff+=ctrlg
 set clipboard=unnamed,unnamedplus
 set completeopt+=menuone,noselect
 if has("patch-8.1.0360")
-  set diffopt+=internal,algorithm:patience
+  set diffopt+=internal,algorithm:histogram
 endif
 set directory=~/.vim/cache/swap
 set grepprg=ag\ --nogroup\ --nocolor
