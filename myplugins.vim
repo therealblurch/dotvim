@@ -29,6 +29,7 @@ Plugin 'machakann/vim-highlightedyank',         {'type': 'start'}
 Plugin 'MarcWeber/vim-addon-mw-utils',          {'type': 'start'}
 Plugin 'MattesGroeger/vim-bookmarks',           {'type': 'start'}
 Plugin 'markonm/traces.vim',                    {'type': 'start'}
+Plugin 'mhinz/vim-grepper',                     {'type': 'start'}
 Plugin 'mox-mox/vim-localsearch',               {'type': 'start'}
 Plugin 'myusuf3/numbers.vim',                   {'type': 'start'}
 Plugin 'Olical/vim-enmasse',                    {'type': 'start'}
