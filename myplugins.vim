@@ -27,6 +27,7 @@ Plugin 'liuchengxu/vim-which-key',              {'type': 'start'}
 Plugin 'luochen1990/rainbow',                   {'type': 'start'}
 Plugin 'machakann/vim-highlightedyank',         {'type': 'start'}
 Plugin 'MarcWeber/vim-addon-mw-utils',          {'type': 'start'}
+Plugin 'MattesGroeger/vim-bookmarks',           {'type': 'start'}
 Plugin 'markonm/traces.vim',                    {'type': 'start'}
 Plugin 'mox-mox/vim-localsearch',               {'type': 'start'}
 Plugin 'myusuf3/numbers.vim',                   {'type': 'start'}
