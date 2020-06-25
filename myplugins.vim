@@ -46,6 +46,7 @@ Plugin 'scrooloose/nerdtree',                   {'type': 'start'}
 Plugin 'taohexxx/lightline-buffer'
 Plugin 'tommcdo/vim-lion',                      {'type': 'start'}
 Plugin 'tomtom/tcomment_vim',                   {'type': 'start'}
+Plugin 'tomtom/tinykeymap_vim',                 {'type': 'start'}
 Plugin 'tomtom/tlib_vim',                       {'type': 'start'}
 Plugin 'tpope/vim-dispatch',                    {'type': 'start'}
 Plugin 'tpope/vim-endwise',                     {'type': 'start'}
