@@ -428,4 +428,8 @@ let g:VPPreCommand = "source /home/data/smtd_design/bin/ss brent"
 nnoremap <silent> <leader> :WhichKey '\'<CR>
 " }}}
 
+"localsearch {{{
+nmap <leader>/ <Plug>localsearch_toggle
+" }}}
+
 call matchadd('ColorColumn', '\%81v', 100)
