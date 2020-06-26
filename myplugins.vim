@@ -42,6 +42,7 @@ Plugin 'rhysd/git-messenger.vim',               {'type': 'start'}
 Plugin 'ryanoasis/vim-devicons',                {'type': 'start'}
 Plugin 'sainnhe/lightline_foobar.vim'
 Plugin 'scrooloose/nerdtree',                   {'type': 'start'}
+Plugin 'sjl/gundo.vim',                         {'type': 'start'}
 Plugin 'taohexxx/lightline-buffer'
 Plugin 'tommcdo/vim-lion',                      {'type': 'start'}
 Plugin 'tomtom/tcomment_vim',                   {'type': 'start'}
