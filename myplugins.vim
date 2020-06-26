@@ -54,7 +54,7 @@ Plugin 'tpope/vim-fugitive',                    {'type': 'start'}
 Plugin 'tpope/vim-obsession',                   {'type': 'start'}
 Plugin 'tpope/vim-sensible',                    {'type': 'start'}
 Plugin 'tpope/vim-sleuth',                      {'type': 'start'}
-Plugin 'tpope/vim-speeddating'
+Plugin 'tpope/vim-speeddating',                 {'type': 'start'}
 Plugin 'tpope/vim-surround',                    {'type': 'start'}
 Plugin 'tpope/vim-unimpaired',                  {'type': 'start'}
 Plugin 'tyru/capture.vim',                      {'type': 'start'}
@@ -69,7 +69,7 @@ Plugin 'xolox/vim-misc',                        {'type': 'start'}
 Plugin 'xolox/vim-colorscheme-switcher',        {'type': 'start'}
 Plugin 'Xuyuanp/nerdtree-git-plugin',           {'type': 'start'}
 Plugin 'Yggdroot/indentline',                   {'type': 'start'}
-Plugin 'zhuzhzh/verilog_emacsauto.vim'
+Plugin 'zhuzhzh/verilog_emacsauto.vim',         {'type': 'start'}
 Plugin 'AndrewRadev/switch.vim',                {'type': 'start'}
 
 Plugin 'adriaanzon/vim-textobj-matchit',        {'type': 'start'}
@@ -121,17 +121,17 @@ Plugin 'srcery-colors/srcery-vim',               {'package': 'colors', 'type': '
 Plugin 'toupeira/vim-desertink',                 {'package': 'colors', 'type': 'start'}
 Plugin 'tyrannicaltoucan/vim-deep-space',        {'package': 'colors', 'type': 'start'}
 
-Plugin 'dhruvasagar/vim-table-mode',             {'package': 'write'}
-Plugin 'godlygeek/tabular',                      {'package': 'write'}
-Plugin 'hsitz/VimOrganizer',                     {'package': 'write'}
-Plugin 'jceb/vim-orgmode',                       {'package': 'write'}
-Plugin 'junegunn/vim-journal',                   {'package': 'write'}
-Plugin 'mattn/calendar-vim',                     {'package': 'write'}
-Plugin 'vimoutliner/vimoutliner',                {'package': 'write'}
-Plugin 'vim-voom/VOoM',                          {'package': 'write'}
-Plugin 'vimwiki/vimwiki',                        {'package': 'write'}
-Plugin 'xolox/vim-notes',                        {'package': 'write'}
-Plugin 'dhruvasagar/vim-dotoo',                  {'package': 'write'}
+Plugin 'dhruvasagar/vim-table-mode',             {'package': 'write', 'type': 'start'}
+Plugin 'godlygeek/tabular',                      {'package': 'write', 'type': 'start'}
+Plugin 'hsitz/VimOrganizer',                     {'package': 'write', 'type': 'start'}
+Plugin 'jceb/vim-orgmode',                       {'package': 'write', 'type': 'start'}
+Plugin 'junegunn/vim-journal',                   {'package': 'write', 'type': 'start'}
+Plugin 'mattn/calendar-vim',                     {'package': 'write', 'type': 'start'}
+Plugin 'vimoutliner/vimoutliner',                {'package': 'write', 'type': 'start'}
+Plugin 'vim-voom/VOoM',                          {'package': 'write', 'type': 'start'}
+Plugin 'vimwiki/vimwiki',                        {'package': 'write', 'type': 'start'}
+Plugin 'xolox/vim-notes',                        {'package': 'write', 'type': 'start'}
+Plugin 'dhruvasagar/vim-dotoo',                  {'package': 'write', 'type': 'start'}
 
 " This repositories contain a vim directory which is the only directory that I want
 " in the pack.  Because of this they are git submodules and added to the runtimepath
