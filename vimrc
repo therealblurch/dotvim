@@ -142,8 +142,17 @@ nmap <silent> <leader>A :<c-u>call xolox#colorscheme_switcher#switch_to('Atelier
 
 " Airline {{{
 let g:airline_powerline_fonts                   = 1
+let g:airline#extensions#grepper#enabled        = 1
 let g:airline#extensions#tabline#enabled        = 1
+let g:airline#extensions#tabline#show_buffers   = 1
+let g:airline#extensions#tabline#show_tabs      = 1
+let g:airline#extensions#tabline#show_tab_nr    = 1
+let g:airline#extensions#tabline#tab_nr_type    = 2
+let g:airline#extensions#tabline#show_tab_count = 1
+let g:airline#extensions#tabline#show_tab_type  = 1
+let g:airline#extensions#tabline#alt_sep        = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#tabline#fnamemod       = ':t'
 let g:airline#extensions#tabline#formatter      = 'unique_tail'
 let g:airline#extensions#tabline#left_sep       = ''
 let g:airline#extensions#tabline#left_alt_sep   = ''
