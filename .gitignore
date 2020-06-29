@@ -1,6 +1,4 @@
-pack/general
-pack/colors
-pack/write
+pack/packager/start
 cache
 .netrwhist
 .colorscheme
