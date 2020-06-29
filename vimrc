@@ -514,11 +514,22 @@ augroup StatusBarTheme
                       \ | let g:airline_section_c = airline#section#create(['%<', 'file', g:airline_symbols.space, 'readonly', '%{myfunctions#MU()}'])
                       \ | call colorschemefunctions#AirlineTheme(g:colors_name)
                     \ | endif
-  autocmd Colorscheme * if myfunctions#WhichStatus(g:colors_name) == "lightline" | PackAdd lightline.vim | call lightlinefunctions#LightlineUpdate() | endif
-  autocmd Colorscheme * if myfunctions#WhichStatus(g:colors_name) == "none" && exists('g:loaded_lightline') | call lightlinefunctions#LightlineUpdate() | endif
-  autocmd Colorscheme * if myfunctions#WhichStatus(g:colors_name) == "none" && exists('g:loaded_airline') | call colorschemefunctions#AirlineTheme(g:colors_name) | endif
-  autocmd Colorscheme * if myfunctions#WhichStatus(g:colors_name) == "none" && !exists('g:loaded_lightline') && !exists('g:loaded_airline') | PackAdd vim-buftabline | endif
-  autocmd Colorscheme * call writefile([&background, g:colors_name], expand(g:colorscheme_file)) | let g:current_color_dictionary = colorschemefunctions#GetColorDictionary(g:colors_name)
+  autocmd Colorscheme * if myfunctions#WhichStatus(g:colors_name) == "lightline"
+                      \ | packadd lightline.vim | packadd lightline-buffer
+                      \ | packadd lightline_foobar.vim
+                      \ | call lightlinefunctions#LightlineUpdate()
+                    \ | endif
+  autocmd Colorscheme * if myfunctions#WhichStatus(g:colors_name) == "none" && exists('g:loaded_lightline')
+                      \ | call lightlinefunctions#LightlineUpdate()
+                    \ | endif
+  autocmd Colorscheme * if myfunctions#WhichStatus(g:colors_name) == "none" && exists('g:loaded_airline')
+                      \ | call colorschemefunctions#AirlineTheme(g:colors_name)
+                    \ | endif
+  autocmd Colorscheme * if myfunctions#WhichStatus(g:colors_name) == "none" && !exists('g:loaded_lightline') && !exists('g:loaded_airline')
+                      \ | packadd vim-buftabline
+                    \ | endif
+  autocmd Colorscheme * call writefile([&background, g:colors_name], expand(g:colorscheme_file))
+                    \ | let g:current_color_dictionary = colorschemefunctions#GetColorDictionary(g:colors_name)
 augroup END
 
 autocmd VimEnter * call colorschemefunctions#SetLastColorscheme()
