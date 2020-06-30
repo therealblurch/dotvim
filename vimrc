@@ -174,7 +174,6 @@ function! PackagerInit() abort
   call packager#add('sainnhe/edge',                           {'package': 'colors'})
   call packager#add('sainnhe/gruvbox-material',               {'package': 'colors'})
   call packager#add('severij/vadelma',                        {'package': 'colors'})
-  call packager#add('sonph/onehalf',                          {'package': 'colors',  'rtp': 'vim/'})
   call packager#add('srcery-colors/srcery-vim',               {'package': 'colors'})
   call packager#add('toupeira/vim-desertink',                 {'package': 'colors'})
   call packager#add('tyrannicaltoucan/vim-deep-space',        {'package': 'colors'})
