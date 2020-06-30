@@ -1,9 +1,4 @@
-pack/packager/start
-pack/packager/opt/lightline-buffer
-pack/packager/opt/lightline.vim
-pack/packager/opt/lightline_foobar.vim
-pack/packager/opt/vim-airline
-pack/packager/opt/vim-airline-themes
+pack/packager
 pack/colors
 pack/general
 pack/write
