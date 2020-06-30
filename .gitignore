@@ -4,6 +4,9 @@ pack/packager/opt/lightline.vim
 pack/packager/opt/lightline_foobar.vim
 pack/packager/opt/vim-airline
 pack/packager/opt/vim-airline-themes
+pack/colors
+pack/general
+pack/write
 cache
 .netrwhist
 .colorscheme
