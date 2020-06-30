@@ -1,9 +1,4 @@
-pack/packager
-pack/colors
-pack/general
-pack/write
-pack/git
-pack/status
+pack
 cache
 .netrwhist
 .colorscheme
