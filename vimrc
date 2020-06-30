@@ -524,8 +524,7 @@ augroup StatusBarTheme
   autocmd ColorScheme * if myfunctions#WhichStatus(g:colors_name) == "airline"
                       \ | packadd vim-airline
                       \ | packadd vim-airline-themes
-                      \ | let g:airline_section_x = airline#section#create_right(['%-20{colorschemefunctions#CurrentColorscheme()}', 'bookmark', 'tagbar', 'vista', 'gutentags', 'grepper', 'filetype'])
-                      \ | let g:airline_section_c = airline#section#create(['%<', 'file', g:airline_symbols.space, 'readonly', '%{myfunctions#MU()}'])
+                      \ | let g:airline_section_x = airline#section#create_right(['%-25{colorschemefunctions#CurrentColorscheme()}', 'bookmark', 'tagbar', 'vista', 'gutentags', 'grepper', 'filetype'])
                       \ | call colorschemefunctions#AirlineTheme(g:colors_name)
                     \ | endif
   autocmd Colorscheme * if myfunctions#WhichStatus(g:colors_name) == "lightline"
