@@ -7,6 +7,8 @@ pack/packager/opt/vim-airline-themes
 pack/colors
 pack/general
 pack/write
+pack/git
+pack/status
 cache
 .netrwhist
 .colorscheme
