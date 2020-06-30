@@ -196,21 +196,7 @@ let s:nord_dict.airlinetheme               = 'colorscheme'
 let s:one_dict                             = {}
 let s:one_dict.name                        = 'one'
 let s:one_dict.airlinetheme                = 'colorscheme'
-let s:one_dict.variant_type                = 'colorscheme_bg'
-
-let s:onehalfdark_dict                     = {}
-let s:onehalfdark_dict.name                = 'onehalfdark'
-let s:onehalfdark_dict.lightlinetheme      = 'onehalfdark'
-let s:onehalfdark_dict.variant_type        = 'colorscheme'
-let s:onehalfdark_dict.variant_base        = 'drop'
-let s:onehalfdark_dict.variants            = ['light', 'dark']
-
-let s:onehalflight_dict                    = {}
-let s:onehalflight_dict.name               = 'onehalflight'
-let s:onehalflight_dict.lightlinetheme     = 'onehalfdark'
-let s:onehalflight_dict.variant_type       = 'colorscheme'
-let s:onehalflight_dict.variant_base       = 'drop'
-let s:onehalflight_dict.variants           = ['light', 'dark']
+let s:one_dict.variant_type                = 'background'
 
 let s:palenight_dict                       = {}
 let s:palenight_dict.name                  = 'palenight'
@@ -311,8 +297,6 @@ let g:colorscheme_map = [
                       \ s:material_dict,
                       \ s:nord_dict,
                       \ s:one_dict,
-                      \ s:onehalfdark_dict,
-                      \ s:onehalflight_dict,
                       \ s:palenight_dict,
                       \ s:papercolor_dict,
                       \ s:pencil_dict,
