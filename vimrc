@@ -102,7 +102,7 @@ function! PackagerInit() abort
   call packager#add('liuchengxu/vim-which-key')
   call packager#add('luochen1990/rainbow')
   call packager#add('machakann/vim-highlightedyank')
-  call packager#add('MarcWeber/vim-addon-mw-utils')
+  call packager#add('MarcWeber/vim-addon-mw-utils')                                                             "Dependancy for snipmate
   call packager#add('markonm/traces.vim')
   call packager#add('mhinz/vim-grepper')
   call packager#add('mox-mox/vim-localsearch')
@@ -117,7 +117,7 @@ function! PackagerInit() abort
   call packager#add('tommcdo/vim-lion')
   call packager#add('tomtom/tcomment_vim')
   call packager#add('tomtom/tinykeymap_vim')
-  call packager#add('tomtom/tlib_vim')
+  call packager#add('tomtom/tlib_vim')                                                                          "Dependancy for snipmate, tcomment, and tinykeymap
   call packager#add('tpope/vim-capslock')
   call packager#add('tpope/vim-dispatch')
   call packager#add('tpope/vim-endwise')
