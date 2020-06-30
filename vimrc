@@ -125,6 +125,7 @@ function! PackagerInit() abort
   call packager#add('tpope/vim-dispatch')
   call packager#add('tpope/vim-endwise')
   call packager#add('tpope/vim-obsession')
+  call packager#add('tpope/vim-repeat')
   call packager#add('tpope/vim-sensible')
   call packager#add('tpope/vim-sleuth')
   call packager#add('tpope/vim-speeddating')
