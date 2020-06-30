@@ -1,0 +1,4 @@
+vimrc gitlab-language=VimL
+gvimrc gitlab-language=VimL
+*.vim gitlab-language=VimL
+
