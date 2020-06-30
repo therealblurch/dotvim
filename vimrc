@@ -142,6 +142,7 @@ function! PackagerInit() abort
 
   "text objects
   call packager#add('adriaanzon/vim-textobj-matchit',         {'package': 'textobj'})
+  call packager#add('Chun-Yang/vim-textobj-chunk',            {'package': 'textobj'})
   call packager#add('deathlyfrantic/vim-textobj-blanklines',  {'package': 'textobj'})
   call packager#add('fvictorio/vim-textobj-backticks',        {'package': 'textobj'})
   call packager#add('gilligan/textobj-gitgutter',             {'package': 'textobj'})
@@ -154,6 +155,8 @@ function! PackagerInit() abort
   call packager#add('kana/vim-textobj-fold',                  {'package': 'textobj'})
   call packager#add('kana/vim-textobj-function',              {'package': 'textobj'})
   call packager#add('kana/vim-textobj-indent',                {'package': 'textobj'})
+  call packager#add('kana/vim-textobj-lastpat',               {'package': 'textobj'})
+  call packager#add('kana/vim-textobj-line',                  {'package': 'textobj'})
   call packager#add('kana/vim-textobj-user',                  {'package': 'textobj'})
   call packager#add('paulhybryant/vim-textobj-path',          {'package': 'textobj'})
   call packager#add('rhysd/vim-textobj-continuous-line',      {'package': 'textobj'})
