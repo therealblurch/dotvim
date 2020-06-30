@@ -1,3 +1,0 @@
-[submodule "pack/unmanaged/opt/vim-packager"]
-	path = pack/unmanaged/opt/vim-packager
-	url = https://cbtlsl@github.com/cbtlsl/vim-packager
