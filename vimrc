@@ -94,6 +94,7 @@ function! PackagerInit() abort
   call packager#add('haya14busa/is.vim')
   call packager#add('haya14busa/vim-asterisk')
   call packager#add('honza/vim-snippets')
+  call packager#add('junegunn/fzf.vim')
   call packager#add('junegunn/vim-easy-align')
   call packager#add('junegunn/vim-peekaboo')
   call packager#add('kshenoy/vim-signature')
