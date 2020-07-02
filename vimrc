@@ -633,6 +633,9 @@ nmap [y <plug>(YoinkRotateBack)
 nmap ]y <plug>(YoinkRotateForward)
 
 nmap <c-=> <plug>(YoinkPostPasteToggleFormat)
+
+nmap y <plug>(YoinkYankPreserveCursorPosition)
+xmap y <plug>(YoinkYankPreserveCursorPosition)
 " }}}
 
 " subversive {{{
