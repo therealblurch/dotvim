@@ -644,6 +644,10 @@ nmap <leader>s <plug>(SubversiveSubstituteRange)
 xmap <leader>s <plug>(SubversiveSubstituteRange)
 nmap <leader>ss <plug>(SubversiveSubstituteWordRange)
 
+nmap <leader>r <plug>(SubversiveSubstituteRangeNoPrompt)
+xmap <leader>r <plug>(SubversiveSubstituteRangeNoPrompt)
+nmap <leader>rr <plug>(SubversiveSubstituteWordRangeNoPrompt)
+
 nmap <leadeer>cs <plug>(SubversiveSubstituteRangeConfirm)
 xmap <leadeer>cs <plug>(SubversiveSubstituteRangeConfirm)
 nmap <leader>css <plug>(SubversiveSubstituteWordRangeConfirm)
