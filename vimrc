@@ -115,6 +115,7 @@ function! PackagerInit() abort
   call packager#add('scrooloose/nerdtree')
   call packager#add('sjl/gundo.vim')
   call packager#add('svermeulen/vim-cutlass')
+  call packager#add('svermeulen/vim-macrobatics')
   call packager#add('svermeulen/vim-subversive')
   call packager#add('svermeulen/vim-yoink')
   call packager#add('tommcdo/vim-lion')
@@ -663,6 +664,29 @@ nmap <leader><leader>ss <plug>(SubversiveSubvertWordRange)
 xmap s <plug>(SubversiveSubstitute)
 xmap p <plug>(SubversiveSubstitute)
 xmap P <plug>(SubversiveSubstitute)
+" }}}
+
+" macrobatics {{{
+nmap <nowait> q <plug>(Mac_Play)
+nmap <nowait> rq <plug>(Mac_RecordNew)
+
+nmap <leader>mh :DisplayMacroHistory<cr>
+
+nmap [m <plug>(Mac_RotateBack)
+nmap ]m <plug>(Mac_RotateForward)
+
+nmap <leader>ma <plug>(Mac_Append)
+nmap <leader>mp <plug>(Mac_prepend)
+
+nmap <leader>mng <plug>(Mac_NameCurrentMacro)
+nmap <leader>mnf <plug>(Mac_NameCurrentMacroForFileType)
+nmap <leader>mns <plug>(Mac_NameCurrentMacroForCurrentSession)
+
+nmap <leader>mo <plug>(Mac_SearchForNamedMacroAndOverwrite)
+nmap <leader>mr <plug>(Mac_SearchForNamedMacroAndRename)
+nmap <leader>md <plug>(Mac_SearchForNamedMacroAndDelete)
+nmap <leader>me <plug>(Mac_SearchForNamedMacroAndPlay)
+nmap <leader>ms <plug>(Mac_SearchForNamedMacroAndSelect)
 " }}}
 
 call matchadd('ColorColumn', '\%81v', 100)
