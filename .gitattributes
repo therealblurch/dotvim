@@ -1,4 +1,4 @@
-vimrc gitlab-language=VimL
-gvimrc gitlab-language=VimL
-*.vim gitlab-language=VimL
+vimrc gitlab-language='VIM script'
+gvimrc gitlab-language='VIM script'
+*.vim gitlab-language='VIM script'
 
