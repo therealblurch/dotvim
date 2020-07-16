@@ -98,6 +98,7 @@ function! PackagerInit() abort
   call packager#add('junegunn/vim-easy-align')
   call packager#add('junegunn/vim-peekaboo')
   call packager#add('kshenoy/vim-signature')
+  call packager#add('lambdalisue/fern.vim')
   call packager#add('lifepillar/vim-mucomplete')
   call packager#add('liuchengxu/vim-which-key')
   call packager#add('luochen1990/rainbow')
