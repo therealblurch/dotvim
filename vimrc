@@ -36,6 +36,7 @@ set showtabline=2
 set smartcase
 set splitbelow
 set splitright
+set swapsync=""
 set tags=$PROJ_USER/rtl/tags
 if !has('gui_running')
   set termguicolors
