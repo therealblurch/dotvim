@@ -12,7 +12,7 @@ set completeopt+=menuone,noselect
 if has("patch-8.1.0360")
   set diffopt+=internal,algorithm:histogram
 endif
-set directory=~/.vim/cache/swap
+set directory=~/.vim/cache/swap//
 set grepprg=ag\ --nogroup\ --nocolor
 set hidden
 set hlsearch
@@ -45,7 +45,7 @@ if has('persistent_undo')
  set undolevels=1000
  set undoreload=10000
 endif
-set undodir=~/.vim/cache/undo
+set undodir=~/.vim/cache/undo//
 set updatetime=250
 set viewoptions=folds,options,cursor,unix,slash
 set viminfo='100,<50,s10,h,n~/.vim/cache/viminfo
