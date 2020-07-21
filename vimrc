@@ -92,8 +92,6 @@ function! PackagerInit() abort
   call packager#add('easymotion/vim-easymotion')
   call packager#add('nishigori/increment-activator')
   call packager#add('garbas/vim-snipmate')
-  call packager#add('haya14busa/is.vim')
-  call packager#add('haya14busa/vim-asterisk')
   call packager#add('honza/vim-snippets')
   call packager#add('junegunn/fzf.vim')
   call packager#add('junegunn/vim-easy-align')
@@ -110,7 +108,6 @@ function! PackagerInit() abort
   call packager#add('mox-mox/vim-localsearch')
   call packager#add('myusuf3/numbers.vim',                    {'type': 'opt'})
   call packager#add('Olical/vim-enmasse')
-  call packager#add('osyo-manga/vim-anzu')
   call packager#add('pelodelfuego/vim-swoop')
   call packager#add('Raimondi/delimitMate')
   call packager#add('ryanoasis/vim-devicons')
@@ -402,20 +399,6 @@ endif
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 nnoremap <Space>/ :Ag<SPACE>
-" }}}
-
-" incsearch {{{
-
-map n  <Plug>(is-nohl)<Plug>(anzu-n-with-echo)
-map N  <Plug>(is-nohl)<Plug>(anzu-N-with-echo)
-map *  <Plug>(asterisk-z*)<Plug>(is-nohl-1)
-map g* <Plug>(asterisk-gz*)<Plug>(is-nohl-1)
-map #  <Plug>(asterisk-z#)<Plug>(is_nohl-1)
-map g# <Plug>(asterisk-gz#)<Plug>(is_nohl-1)
-" }}}
-
-" anzu {{{
-nmap <Esc><Esc> <Plug>(anzu-clear-search-status)
 " }}}
 
 " Indentline {{{
