@@ -113,10 +113,6 @@ function! PackagerInit() abort
   call packager#add('ryanoasis/vim-devicons')
   call packager#add('scrooloose/nerdtree')
   call packager#add('sjl/gundo.vim')
-  call packager#add('svermeulen/vim-cutlass')
-  call packager#add('svermeulen/vim-macrobatics')
-  call packager#add('svermeulen/vim-subversive')
-  call packager#add('svermeulen/vim-yoink')
   call packager#add('tommcdo/vim-lion')
   call packager#add('tomtom/tcomment_vim')
   call packager#add('tomtom/tinykeymap_vim')
@@ -597,81 +593,6 @@ nnoremap <silent> <leader> :WhichKey '\'<CR>
 
 "localsearch {{{
 nmap <leader>/ <Plug>localsearch_toggle
-" }}}
-
-" cutlass {{{
-nnoremap x d
-xnoremap x d
-
-nnoremap xx dd
-nnoremap X D
-" }}}
-
-" yoink {{{
-let g:yoinkIncludeDeleteOperations = 1
-
-nmap <c-n> <plug>(YoinkjPostPasteSwipeBack)
-nmap <c-p> <plug>(YoinkjPostPasteSwipeForward)
-
-nmap p <plug>(YoinkPaste_p)
-nmap P <plug>(YoinkPaste_P)
-
-nmap [y <plug>(YoinkRotateBack)
-nmap ]y <plug>(YoinkRotateForward)
-
-nmap <c-=> <plug>(YoinkPostPasteToggleFormat)
-
-nmap y <plug>(YoinkYankPreserveCursorPosition)
-xmap y <plug>(YoinkYankPreserveCursorPosition)
-" }}}
-
-" subversive {{{
-nmap s <plug>(SubversiveSubstitute)
-nmap ss <plug>(SubversiveSubstituteLine)
-nmap S <plug>(SubversiveSubstituteToEndOfLine)
-
-nmap <leader>s <plug>(SubversiveSubstituteRange)
-xmap <leader>s <plug>(SubversiveSubstituteRange)
-nmap <leader>ss <plug>(SubversiveSubstituteWordRange)
-
-nmap <leader>r <plug>(SubversiveSubstituteRangeNoPrompt)
-xmap <leader>r <plug>(SubversiveSubstituteRangeNoPrompt)
-nmap <leader>rr <plug>(SubversiveSubstituteWordRangeNoPrompt)
-
-nmap <leadeer>cs <plug>(SubversiveSubstituteRangeConfirm)
-xmap <leadeer>cs <plug>(SubversiveSubstituteRangeConfirm)
-nmap <leader>css <plug>(SubversiveSubstituteWordRangeConfirm)
-
-nmap <leader><leader>s <plug>(SubversiveSubvertRange)
-xmap <leader><leader>s <plug>(SubversiveSubvertRange)
-nmap <leader><leader>ss <plug>(SubversiveSubvertWordRange)
-
-xmap s <plug>(SubversiveSubstitute)
-xmap p <plug>(SubversiveSubstitute)
-xmap P <plug>(SubversiveSubstitute)
-" }}}
-
-" macrobatics {{{
-nmap <nowait> q <plug>(Mac_Play)
-nmap <nowait> rq <plug>(Mac_RecordNew)
-
-nmap <leader>mh :DisplayMacroHistory<cr>
-
-nmap [m <plug>(Mac_RotateBack)
-nmap ]m <plug>(Mac_RotateForward)
-
-nmap <leader>ma <plug>(Mac_Append)
-nmap <leader>mp <plug>(Mac_prepend)
-
-nmap <leader>mng <plug>(Mac_NameCurrentMacro)
-nmap <leader>mnf <plug>(Mac_NameCurrentMacroForFileType)
-nmap <leader>mns <plug>(Mac_NameCurrentMacroForCurrentSession)
-
-nmap <leader>mo <plug>(Mac_SearchForNamedMacroAndOverwrite)
-nmap <leader>mr <plug>(Mac_SearchForNamedMacroAndRename)
-nmap <leader>md <plug>(Mac_SearchForNamedMacroAndDelete)
-nmap <leader>me <plug>(Mac_SearchForNamedMacroAndPlay)
-nmap <leader>ms <plug>(Mac_SearchForNamedMacroAndSelect)
 " }}}
 
 call matchadd('ColorColumn', '\%81v', 100)
