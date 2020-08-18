@@ -547,7 +547,7 @@ let g:mucomplete#chains = {
 " }}}
 
 " nerdtree {{{
-let g:NERDTreeIndicatorMapCustom = {
+let g:NERDTreeGitStatusIndicatorMapCustom = {
                                  \ "Modified"  : "✹",
                                  \ "Staged"    : "✚",
                                  \ "Untracked" : "✭",
