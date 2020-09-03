@@ -132,6 +132,7 @@ function! PackagerInit() abort
   call packager#add('unblevable/quick-scope')
   call packager#add('vhda/verilog_systemverilog.vim')
   call packager#add('vim-scripts/VisIncr')
+  call packager#add('wellle/context.vim')
   call packager#add('wellle/targets.vim')
   call packager#add('wellle/visual-split.vim')
   call packager#add('xolox/vim-misc')
