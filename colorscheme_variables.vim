@@ -215,6 +215,10 @@ let s:petrel_dict.airlinetheme             = 'colorscheme'
 let s:petrel_dict.variant_type             = "colorscheme_group"
 let s:petrel_dict.variants                 = g:seadbird_themes
 
+let s:pop_punk_dict                        = {}
+let s:pop_punk_dict.name                   = 'pop-punk'
+let s:pop_punk_dict.airlinetheme           = 'colorscheme'
+
 let s:seagull_dict                         = {}
 let s:seagull_dict.name                    = 'seagull'
 let s:seagull_dict.airlinetheme            = 'colorscheme'
@@ -301,6 +305,7 @@ let g:colorscheme_map = [
                       \ s:papercolor_dict,
                       \ s:pencil_dict,
                       \ s:petrel_dict,
+                      \ s:pop_punk_dict,
                       \ s:seagull_dict,
                       \ s:snow_dict,
                       \ s:space_vim_theme_dict,
