@@ -230,6 +230,14 @@ let s:seagull_dict.airlinetheme            = 'colorscheme'
 let s:seagull_dict.variant_type            = "colorscheme_group"
 let s:seagull_dict.variants                = g:seadbird_themes
 
+let s:sonokai_dict                         = {}
+let s:sonokai_dict.name                    = 'sonokai'
+let s:sonokai_dict.airlinetheme            = 'colorscheme'
+let s:sonokai_dict.lightlinetheme          = 'colorscheme'
+let s:sonokai_dict.runtime                 = 'true'
+let s:sonokai_dict.variant_type            = 'sonokai_style'
+let s:sonokai_dict.variants                = ['default', 'atlantis', 'andromeda', 'maia']
+
 let s:snow_dict                            = {}
 let s:snow_dict.name                       = 'snow'
 let s:snow_dict.lightlinetheme             = 'colorscheme_bg'
@@ -314,6 +322,7 @@ let g:colorscheme_map = [
                       \ s:pop_punk_dict,
                       \ s:seagull_dict,
                       \ s:snow_dict,
+                      \ s:sonokai_dict,
                       \ s:space_vim_theme_dict,
                       \ s:srcery_dict,
                       \ s:stellarized_dict,

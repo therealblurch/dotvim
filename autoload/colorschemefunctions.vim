@@ -91,6 +91,8 @@ function! colorschemefunctions#CurrentColorscheme()
     let l:color_name = g:colors_name . '/' . g:material_theme_style
   elseif l:variant_type == 'edge_style'
     let l:color_name = g:colors_name . '/' . g:edge_style
+  elseif l:variant_type == 'sonokai_style'
+    let l:color_name = g:colors_name . '/' . g:sonokai_style
   elseif l:variant_type == 'materialbox_contrast'
     if &background == "light"
       let l:color_name = g:colors_name . '/' . g:materialbox_contrast_light
@@ -108,6 +110,8 @@ function! s:GetCurrentColorschemeVariant (colordict)
     let l:variant = g:material_theme_style
   elseif a:colordict.variant_type == 'edge_style'
     let l:variant = g:edge_style
+  elseif a:colordict.variant_type == 'sonokai_style'
+    let l:variant = g:sonokai_style
   elseif a:colordict.variant_type == 'gruvbox_material_background'
     let l:variant = g:gruvbox_material_background
   elseif a:colordict.variant_type == 'materialbox_contrast'
@@ -133,6 +137,9 @@ function s:GetNextColorscheme (colordict, next_scheme)
   elseif a:colordict.variant_type == 'edge_style'
     let g:edge_style = a:next_scheme
     let s:next_colorscheme = 'edge'
+  elseif a:colordict.variant_type == 'sonokai_style'
+    let g:sonokai_style = a:next_scheme
+    let s:next_colorscheme = 'sonokai'
   elseif a:colordict.variant_type == 'gruvbox_material_background'
     let g:gruvbox_material_background = a:next_scheme
     let s:next_colorscheme = 'gruvbox-material'

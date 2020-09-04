@@ -189,6 +189,7 @@ function! PackagerInit() abort
   call packager#add('sainnhe/edge',                           {'package': 'colors'})
   call packager#add('sainnhe/forest-night',                   {'package': 'colors'})
   call packager#add('sainnhe/gruvbox-material',               {'package': 'colors'})
+  call packager#add('sainnhe/sonokai',                        {'package': 'colors'})
   call packager#add('severij/vadelma',                        {'package': 'colors'})
   call packager#add('srcery-colors/srcery-vim',               {'package': 'colors'})
   call packager#add('toupeira/vim-desertink',                 {'package': 'colors'})
@@ -279,11 +280,19 @@ let g:ayucolor = ayucolor
 "material Possible Values: default | palenight | ocean | lighter | darker
 let g:material_theme_style = "palenight"
 
+
+"Initial settings for sonokai
+let g:sonokai_style = 'default'
+let g:sonokai_better_performance = 1
 "edge Possible Values: default | aura | neon
 let g:edge_style = "default"
 
 "Initial setting for g:gruvbox_material_background
 let g:gruvbox_material_background = 'hard'
+
+"Initial settings for sonokai
+let g:sonokai_style = 'default'
+let g:sonokai_better_performance = 1
 
 "Initial setting for materialbox
 let g:materialbox_contrast_dark  = 'hard'
