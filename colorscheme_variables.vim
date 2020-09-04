@@ -152,6 +152,11 @@ let s:flattened_dict.variant_type          = 'colorscheme'
 let s:flattened_dict.variant_base          = 'drop'
 let s:flattened_dict.variants              = ['_light', '_dark']
 
+let s:forest_night_dict                    = {}
+let s:forest_night_dict.name               = 'forest-night'
+let s:forest_night_dict.lightlinetheme     = 'colorscheme'
+let s:forest_night_dict.airlinetheme       = 'colorscheme'
+
 let s:greygull_dict                        = {}
 let s:greygull_dict.name                   = 'greygull'
 let s:greygull_dict.airlinetheme           = 'colorscheme'
@@ -293,6 +298,7 @@ let g:colorscheme_map = [
                       \ s:dracula_dict,
                       \ s:edge_dict,
                       \ s:flattened_dict,
+                      \ s:forest_night_dict,
                       \ s:greygull_dict,
                       \ s:gruvbox_material_dict,
                       \ s:jellybeans_dict,
