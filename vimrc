@@ -279,11 +279,8 @@ let g:ayucolor = ayucolor
 
 "material Possible Values: default | palenight | ocean | lighter | darker
 let g:material_theme_style = "palenight"
+let g:material_terminal_italics = 1
 
-
-"Initial settings for sonokai
-let g:sonokai_style = 'default'
-let g:sonokai_better_performance = 1
 "edge Possible Values: default | aura | neon
 let g:edge_style = "default"
 
