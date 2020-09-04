@@ -284,8 +284,9 @@ let g:material_terminal_italics = 1
 "edge Possible Values: default | aura | neon
 let g:edge_style = "default"
 
-"Initial setting for g:gruvbox_material_background
+"Initial settings for gruvbox
 let g:gruvbox_material_background = 'hard'
+let g:gruvbox_material_better_performance = 1
 
 "Initial settings for sonokai
 let g:sonokai_style = 'default'
