@@ -1,3 +1,66 @@
+function! colorschemefunctions#NextColorschemeVariant(delta) dict
+  let l:current_variant = g:colors_name
+  let l:num_variants = len(self.variants)
+  let l:next_variant = self.variants[((a:delta+index(self.variants, l:current_variant)) % l:num_variants + l:num_variants) % l:num_variants]
+  call xolox#colorscheme_switcher#switch_to(l:next_variant)
+endfunction
+
+function! colorschemefunctions#NextColorschemeVariantMap(delta) dict
+  let l:variant_list = copy(self.variants)
+  call map(l:variant_list, function(self.Map))
+  let l:current_variant = g:colors_name
+  let l:num_variants = len(l:variant_list)
+  let l:next_variant = l:variant_list[((a:delta+index(l:variant_list, l:current_variant)) % l:num_variants + l:num_variants) % l:num_variants]
+  call xolox#colorscheme_switcher#switch_to(l:next_variant)
+endfunction
+
+function! colorschemefunctions#NextStyleVariant(delta) dict
+  let l:num_variants = len(self.variants)
+  exec 'let ' . self.style_variable_name . ' = self.variants[((a:delta+index(self.variants, ' . self.style_variable_name . ')) % l:num_variants + l:num_variants) % l:num_variants]'
+  call xolox#colorscheme_switcher#switch_to(self.name)
+endfunction
+
+function! colorschemefunctions#NextBackgroundVariant(delta) dict
+  let &background = (&background == 'dark') ? 'light' : 'dark'
+endfunction
+
+function! colorschemefunctions#StatusColorscheme() dict
+  return g:colors_name
+endfunction
+
+function! colorschemefunctions#StatusColorschemeStyle() dict
+  exec 'let l:current_style = ' . self.style_variable_name
+  return g:colors_name . '/' . l:current_style
+endfunction
+
+function! colorschemefunctions#StatusColorschemeBackground() dict
+  return g:colors_name . '/' . &background
+endfunction
+
+function! colorschemefunctions#AirlineThemeColorscheme() dict
+  return g:colors_name
+endfunction
+
+function! colorschemefunctions#AirlineThemeColorschemeTR() dict
+  return tr(g:colors_name, '-', '_')
+endfunction
+
+function! colorschemefunctions#AirlineThemeColorschemeBackground() dict
+  return g:colors_name . '_' . &background
+endfunction
+
+function! colorschemefunctions#LightlineThemeColorscheme() dict
+  return g:colors_name
+endfunction
+
+function! colorschemefunctions#LightlineThemeColorschemeTR() dict
+  return tr(g:colors_name, '-', '_')
+endfunction
+
+function! colorschemefunctions#LightlineThemeColorschemeBackground() dict
+  return g:colors_name . '_' . &background
+endfunction
+
 function! colorschemefunctions#GetColorDictionary(color_name)
   let l:color = {}
   for color in g:colorscheme_map
