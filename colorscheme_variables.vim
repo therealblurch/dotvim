@@ -53,10 +53,14 @@ let g:seadbird_themes        = [
 " comparison : If this is set to 'fuzzy' don't require an exact name match
 " variants : a list of possible variants
 
-let s:atelier_dict                         = {}
-let s:atelier_dict.name                    = 'Atelier'
-let s:atelier_dict.comparison              = 'fuzzy'
-let s:atelier_dict.variants                = ['Cave', 'Dune', 'Estuary', 'Forest', 'Heath', 'Lakeside', 'Plateau', 'Savanna', 'Seaside', 'Sulphurpool']
+let s:atelier_dict = {
+                     \ 'name'              : 'Atelier',
+                     \ 'comparison'        : 'fuzzy',
+                     \ 'variants'          : ['Cave', 'Dune', 'Estuary', 'Forest', 'Heath', 'Lakeside', 'Plateau', 'Savanna', 'Seaside', 'Sulphurpool'],
+                     \ 'NextVariant'       : function('colorschemefunctions#NextColorschemeVariantMap'),
+                     \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
+                     \ 'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
+                     \ }
 function! s:atelier_dict.Map (key,val)
   if &background == 'light'
     let l:back = 'Light'
@@ -65,8 +69,6 @@ function! s:atelier_dict.Map (key,val)
   endif
   return self.name . '_' . a:val . l:back
 endfunction
-let s:atelier_dict.NextVariant             = function('colorschemefunctions#NextColorschemeVariantMap')
-let s:atelier_dict.StatusColorscheme       = function('colorschemefunctions#StatusColorscheme')
 function! s:atelier_dict.LightlineTheme()
   if &background == 'Light'
     let l:lightlinetheme = split (g:colors_name, "Light")
@@ -75,245 +77,275 @@ function! s:atelier_dict.LightlineTheme()
   endif
   return l:lightlinetheme
 endfunction
-let s:atelier_dict.AirlineTheme            = function('colorschemefunctions#AirlineThemeColorscheme')
 
-let s:papercolor_dict                      = {}
-let s:papercolor_dict.name                 = 'PaperColor'
-let s:papercolor_dict.NextVariant          = function('colorschemefunctions#NextBackgroundVariant')
-let s:papercolor_dict.StatusColorscheme    = function('colorschemefunctions#StatusColorschemeBackground')
-let s:papercolor_dict.LightlineTheme       = function('colorschemefunctions#LightlineThemeColorscheme')
+let s:papercolor_dict = {
+                        \ 'name'              : 'PaperColor',
+                        \ 'NextVariant'       : function('colorschemefunctions#NextBackgroundVariant'),
+                        \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorschemeBackground'),
+                        \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
+                        \ }
 function! s:papercolor_dict.AirlineTheme()
   return 'papercolor'
 endfunction
 
-let s:apprentice_dict                      = {}
-let s:apprentice_dict.name                 = 'apprentice'
-let s:apprentice_dict.StatusColorscheme    = function('colorschemefunctions#StatusColorscheme')
-let s:apprentice_dict.LightlineTheme       = function('colorschemefunctions#LightlineThemeColorscheme')
-let s:apprentice_dict.AirlineTheme         = function('colorschemefunctions#AirlineThemeColorscheme')
+let s:apprentice_dict = {
+                        \ 'name'              : 'apprentice',
+                        \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
+                        \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
+                        \ 'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
+                        \ }
 
-let s:ayu_dict                             = {}
-let s:ayu_dict.name                        = 'ayu'
-let s:ayu_dict.variants                    = ['light', 'dark', 'mirage']
-let s:ayu_dict.style_variable_name         = 'g:ayucolor'
-let s:ayu_dict.NextVariant                 = function('colorschemefunctions#NextStyleVariant')
-let s:ayu_dict.StatusColorscheme           = function('colorschemefunctions#StatusColorschemeStyle')
-let s:ayu_dict.LightlineTheme              = function('colorschemefunctions#LightlineThemeColorscheme')
-let s:ayu_dict.AirlineTheme                = function('colorschemefunctions#AirlineThemeColorscheme')
+let s:ayu_dict = {
+                 \ 'name'                : 'ayu',
+                 \ 'variants'            : ['light', 'dark', 'mirage'],
+                 \ 'style_variable_name' : 'g:ayucolor',
+                 \ 'NextVariant'         : function('colorschemefunctions#NextStyleVariant'),
+                 \ 'StatusColorscheme'   : function('colorschemefunctions#StatusColorschemeStyle'),
+                 \ 'LightlineTheme'      : function('colorschemefunctions#LightlineThemeColorscheme'),
+                 \ 'AirlineTheme'        : function('colorschemefunctions#AirlineThemeColorscheme'),
+                 \ }
 
-let s:cosmic_latte_dict                    = {}
-let s:cosmic_latte_dict.name               = 'cosmic_latte'
-let s:cosmic_latte_dict.NextVariant        = function('colorschemefunctions#NextBackgroundVariant')
-let s:cosmic_latte_dict.StatusColorscheme  = function('colorschemefunctions#StatusColorschemeBackground')
-let s:cosmic_latte_dict.LightlineTheme     = function('colorschemefunctions#LightlineThemeColorschemeBackground')
-let s:cosmic_latte_dict.AirlineTheme       = function('colorschemefunctions#AirlineThemeColorschemeBackground')
+let s:cosmic_latte_dict = {
+                          \ 'name'              : 'cosmic_latte',
+                          \ 'NextVariant'       : function('colorschemefunctions#NextBackgroundVariant'),
+                          \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorschemeBackground'),
+                          \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorschemeBackground'),
+                          \ 'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorschemeBackground'),
+                          \ }
 
-let s:deep_space_dict                      = {}
-let s:deep_space_dict.name                 = 'deep-space'
-let s:deep_space_dict.StatusColorscheme    = function('colorschemefunctions#StatusColorscheme')
+let s:deep_space_dict = {
+                        \ 'name'              : 'deep-space',
+                        \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
+                        \ 'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorschemeTR'),
+                        \ }
 function! s:deep_space_dict.LightlineTheme()
   return 'deepspace'
 endfunction
-let s:deep_space_dict.AirlineTheme         = function('colorschemefunctions#AirlineThemeColorschemeTR')
 
-let s:desertink_dict                       = {}
-let s:desertink_dict.name                  = 'desertink'
-let s:desertink_dict.StatusColorscheme     = function('colorschemefunctions#StatusColorscheme')
-let s:desertink_dict.AirlineTheme          = function('colorschemefunctions#AirlineThemeColorscheme')
+let s:desertink_dict = {
+                       \ 'name'              : 'desertink',
+                       \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
+                       \ 'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
+                       \ }
 
-let s:dracula_dict                         = {}
-let s:dracula_dict.name                    = 'dracula'
-let s:dracula_dict.StatusColorscheme       = function('colorschemefunctions#StatusColorscheme')
-let s:dracula_dict.LightlineTheme          = function('colorschemefunctions#LightlineThemeColorscheme')
-let s:dracula_dict.AirlineTheme            = function('colorschemefunctions#AirlineThemeColorscheme')
+let s:dracula_dict = {
+                     \ 'name'              : 'dracula',
+                     \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
+                     \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
+                     \ 'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
+                     \ }
 
-let s:edge_dict                            = {}
-let s:edge_dict.name                       = 'edge'
-let s:edge_dict.variants                   = ['default', 'aura', 'neon']
-let s:edge_dict.style_variable_name        = 'g:edge_style'
-let s:edge_dict.NextVariant                = function('colorschemefunctions#NextStyleVariant')
-let s:edge_dict.StatusColorscheme          = function('colorschemefunctions#StatusColorschemeStyle')
-let s:edge_dict.LightlineTheme             = function('colorschemefunctions#LightlineThemeColorscheme')
-let s:edge_dict.AirlineTheme               = function('colorschemefunctions#AirlineThemeColorscheme')
+let s:edge_dict = {
+                  \ 'name'                : 'edge',
+                  \ 'variants'            : ['default', 'aura', 'neon'],
+                  \ 'style_variable_name' : 'g:edge_style',
+                  \ 'NextVariant'         : function('colorschemefunctions#NextStyleVariant'),
+                  \ 'StatusColorscheme'   : function('colorschemefunctions#StatusColorschemeStyle'),
+                  \ 'LightlineTheme'      : function('colorschemefunctions#LightlineThemeColorscheme'),
+                  \ 'AirlineTheme'        : function('colorschemefunctions#AirlineThemeColorscheme'),
+                  \ }
 
-let s:flattened_dict                       = {}
-let s:flattened_dict.name                  = 'flattened'
-let s:flattened_dict.comparison            = 'fuzzy'
-let s:flattened_dict.variants              = ['_light', '_dark']
+let s:flattened_dict = {
+                       \ 'name'                  : 'flattened',
+                       \ 'comparison'        : 'fuzzy',
+                       \ 'variants'          : ['_light', '_dark'],
+                       \ 'NextVariant'       : function('colorschemefunctions#NextColorschemeVariantMap'),
+                       \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
+                       \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
+                       \ }
 function! s:flattened_dict.Map (key,val)
   return self.name . a:val
 endfunction
-let s:flattened_dict.NextVariant           = function('colorschemefunctions#NextColorschemeVariantMap')
-let s:flattened_dict.StatusColorscheme     = function('colorschemefunctions#StatusColorscheme')
-let s:flattened_dict.LightlineTheme        = function('colorschemefunctions#LightlineThemeColorscheme')
 
-let s:forest_night_dict                    = {}
-let s:forest_night_dict.name               = 'forest-night'
-let s:forest_night_dict.StatusColorscheme  = function('colorschemefunctions#StatusColorscheme')
-let s:forest_night_dict.LightlineTheme     = function('colorschemefunctions#LightlineThemeColorscheme')
-let s:forest_night_dict.AirlineTheme       = function('colorschemefunctions#AirlineThemeColorscheme')
+let s:forest_night_dict = {
+                          \ 'name'              : 'forest-night',
+                          \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
+                          \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
+                          \ 'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
+                          \ }
 
-let s:greygull_dict                        = {}
-let s:greygull_dict.name                   = 'greygull'
-let s:greygull_dict.variants               = g:seadbird_themes
-let s:greygull_dict.NextVariant            = function('colorschemefunctions#NextColorschemeVariant')
-let s:greygull_dict.StatusColorscheme      = function('colorschemefunctions#StatusColorscheme')
+let s:greygull_dict = {
+                      \ 'name'              : 'greygull',
+                      \ 'variants'          : g:seadbird_themes,
+                      \ 'NextVariant'       : function('colorschemefunctions#NextColorschemeVariant'),
+                      \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
+                      \ }
 function! s:greygull_dict.AirlineTheme()
   return 'seagull'
 endfunction
 
-let s:gruvbox_material_dict                     = {}
-let s:gruvbox_material_dict.name                = 'gruvbox-material'
-let s:gruvbox_material_dict.variants            = ['soft', 'medium', 'hard']
-let s:gruvbox_material_dict.style_variable_name = 'g:gruvbox_material_background'
-let s:gruvbox_material_dict.NextVariant         = function('colorschemefunctions#NextStyleVariant')
-let s:gruvbox_material_dict.StatusColorscheme   = function('colorschemefunctions#StatusColorschemeStyle')
-let s:gruvbox_material_dict.LightlineTheme      = function('colorschemefunctions#LightlineThemeColorscheme')
-let s:gruvbox_material_dict.AirlineTheme        = function('colorschemefunctions#AirlineThemeColorschemeTR')
+let s:gruvbox_material_dict = {
+                              \ 'name'                : 'gruvbox-material',
+                              \ 'variants'            : ['soft', 'medium', 'hard'],
+                              \ 'style_variable_name' : 'g:gruvbox_material_background',
+                              \ 'NextVariant'         : function('colorschemefunctions#NextStyleVariant'),
+                              \ 'StatusColorscheme'   : function('colorschemefunctions#StatusColorschemeStyle'),
+                              \ 'LightlineTheme'      : function('colorschemefunctions#LightlineThemeColorscheme'),
+                              \ 'AirlineTheme'        : function('colorschemefunctions#AirlineThemeColorschemeTR'),
+                              \ }
 
-let s:iceberg_dict                         = {}
-let s:iceberg_dict.name                    = 'iceberg'
-let s:iceberg_dict.StatusColorscheme       = function('colorschemefunctions#StatusColorscheme')
-let s:iceberg_dict.LightlineTheme          = function('colorschemefunctions#LightlineThemeColorscheme')
-let s:iceberg_dict.AirlineTheme            = function('colorschemefunctions#AirlineThemeColorscheme')
+let s:iceberg_dict = {
+                     \ 'name'              : 'iceberg',
+                     \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
+                     \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
+                     \ 'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
+                     \ }
 
-let s:jellybeans_dict                      = {}
-let s:jellybeans_dict.name                 = 'jellybeans'
-let s:jellybeans_dict.StatusColorscheme    = function('colorschemefunctions#StatusColorscheme')
-let s:jellybeans_dict.AirlineTheme         = function('colorschemefunctions#AirlineThemeColorscheme')
+let s:jellybeans_dict = {
+                        \ 'name'              : 'jellybeans',
+                        \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
+                        \ 'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
+                        \ }
 
-let s:material_dict                        = {}
-let s:material_dict.name                   = 'material'
-let s:material_dict.variants               = ['default', 'palenight', 'ocean', 'lighter', 'darker']
-let s:material_dict.style_variable_name    = 'g:material_theme_style'
-let s:material_dict.NextVariant            = function('colorschemefunctions#NextStyleVariant')
-let s:material_dict.StatusColorscheme      = function('colorschemefunctions#StatusColorschemeStyle')
+let s:material_dict = {
+                      \ 'name'                : 'material',
+                      \ 'variants'            : ['default', 'palenight', 'ocean', 'lighter', 'darker'],
+                      \ 'style_variable_name' : 'g:material_theme_style',
+                      \ 'NextVariant'         : function('colorschemefunctions#NextStyleVariant'),
+                      \ 'StatusColorscheme'   : function('colorschemefunctions#StatusColorschemeStyle'),
+                      \ }
 function! s:material_dict.LightlineTheme()
   return 'material_vim'
 endfunction
 
-let s:materialbox_dict                     = {}
-let s:materialbox_dict.name                = 'materialbox'
-let s:materialbox_dict.variants            = ['soft', 'medium', 'hard']
-let s:materialbox_dict.style_variable_name = (&background == 'dark') ? 'g:materialbox_contrast_dark' : 'g:materialbox_contrast_light'
-let s:materialbox_dict.NextVariant         = function('colorschemefunctions#NextStyleVariant')
-let s:materialbox_dict.StatusColorscheme   = function('colorschemefunctions#StatusColorschemeStyle')
-let s:materialbox_dict.AirlineTheme        = function('colorschemefunctions#AirlineThemeColorscheme')
+let s:materialbox_dict = {
+                         \ 'name'                : 'materialbox',
+                         \ 'variants'            : ['soft', 'medium', 'hard'],
+                         \ 'style_variable_name' : (&background == 'dark') ? 'g:materialbox_contrast_dark' : 'g:materialbox_contrast_light',
+                         \ 'NextVariant'         : function('colorschemefunctions#NextStyleVariant'),
+                         \ 'StatusColorscheme'   : function('colorschemefunctions#StatusColorschemeStyle'),
+                         \ 'AirlineTheme'        : function('colorschemefunctions#AirlineThemeColorscheme'),
+                         \ }
 
-let s:nord_dict                            = {}
-let s:nord_dict.name                       = 'nord'
-let s:nord_dict.StatusColorscheme          = function('colorschemefunctions#StatusColorscheme')
-let s:nord_dict.LightlineTheme             = function('colorschemefunctions#LightlineThemeColorscheme')
-let s:nord_dict.AirlineTheme               = function('colorschemefunctions#AirlineThemeColorscheme')
+let s:nord_dict = {
+                  \ 'name'              : 'nord',
+                  \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
+                  \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
+                  \ 'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
+                  \ }
 
-let s:one_dict                             = {}
-let s:one_dict.name                        = 'one'
-let s:one_dict.NextVariant                 = function('colorschemefunctions#NextBackgroundVariant')
-let s:one_dict.StatusColorscheme           = function('colorschemefunctions#StatusColorschemeBackground')
-let s:one_dict.LightlineTheme              = function('colorschemefunctions#LightlineThemeColorscheme')
-let s:one_dict.AirlineTheme                = function('colorschemefunctions#AirlineThemeColorscheme')
+let s:one_dict = {
+                 \ 'name'              : 'one',
+                 \ 'NextVariant'       : function('colorschemefunctions#NextBackgroundVariant'),
+                 \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorschemeBackground'),
+                 \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
+                 \ 'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
+                 \ }
 
-let s:palenight_dict                       = {}
-let s:palenight_dict.name                  = 'palenight'
-let s:palenight_dict.StatusColorscheme     = function('colorschemefunctions#StatusColorscheme')
-let s:palenight_dict.LightlineTheme        = function('colorschemefunctions#LightlineThemeColorscheme')
-let s:palenight_dict.AirlineTheme          = function('colorschemefunctions#AirlineThemeColorscheme')
+let s:palenight_dict = {
+                       \ 'name'              : 'palenight',
+                       \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
+                       \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
+                       \ 'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
+                       \ }
 
-let s:pencil_dict                          = {}
-let s:pencil_dict.name                     = 'pencil'
-let s:pencil_dict.NextVariant              = function('colorschemefunctions#NextBackgroundVariant')
-let s:pencil_dict.StatusColorscheme        = function('colorschemefunctions#StatusColorschemeBackground')
-let s:pencil_dict.LightlineTheme           = function('colorschemefunctions#LightlineThemeColorscheme')
-let s:pencil_dict.AirlineTheme             = function('colorschemefunctions#AirlineThemeColorscheme')
+let s:pencil_dict = {
+                    \ 'name'              : 'pencil',
+                    \ 'NextVariant'       : function('colorschemefunctions#NextBackgroundVariant'),
+                    \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorschemeBackground'),
+                    \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
+                    \ 'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
+                    \ }
 
-let s:petrel_dict                          = {}
-let s:petrel_dict.name                     = 'petrel'
-let s:petrel_dict.variants                 = g:seadbird_themes
-let s:petrel_dict.NextVariant              = function('colorschemefunctions#NextColorschemeVariant')
-let s:petrel_dict.StatusColorscheme        = function('colorschemefunctions#StatusColorscheme')
+let s:petrel_dict = {
+                    \ 'name'              : 'petrel',
+                    \ 'variants'          : g:seadbird_themes,
+                    \ 'NextVariant'       : function('colorschemefunctions#NextColorschemeVariant'),
+                    \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
+                    \ }
 function! s:petrel_dict.AirlineTheme()
   return 'seagull'
 endfunction
 
-let s:pop_punk_dict                        = {}
-let s:pop_punk_dict.name                   = 'pop-punk'
-let s:pop_punk_dict.StatusColorscheme       = function('colorschemefunctions#StatusColorscheme')
-let s:pop_punk_dict.AirlineTheme            = function('colorschemefunctions#AirlineThemeColorschemeTR')
+let s:pop_punk_dict = {
+                      \ 'name'              : 'pop-punk',
+                      \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
+                      \ 'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorschemeTR'),
+                      \ }
 
-let s:seagull_dict                         = {}
-let s:seagull_dict.name                    = 'seagull'
-let s:seagull_dict.variants                = g:seadbird_themes
-let s:seagull_dict.NextVariant             = function('colorschemefunctions#NextColorschemeVariant')
-let s:seagull_dict.StatusColorscheme       = function('colorschemefunctions#StatusColorscheme')
-let s:seagull_dict.AirlineTheme            = function('colorschemefunctions#AirlineThemeColorscheme')
+let s:seagull_dict = {
+                     \ 'name'              : 'seagull',
+                     \ 'variants'          : g:seadbird_themes,
+                     \ 'NextVariant'       : function('colorschemefunctions#NextColorschemeVariant'),
+                     \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
+                     \ 'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
+                     \ }
 
-let s:sonokai_dict                         = {}
-let s:sonokai_dict.name                    = 'sonokai'
-let s:sonokai_dict.variants                = ['default', 'atlantis', 'andromeda', 'maia']
-let s:sonokai_dict.style_variable_name     = 'g:sonokai_style'
-let s:sonokai_dict.NextVariant             = function('colorschemefunctions#NextStyleVariant')
-let s:sonokai_dict.StatusColorscheme       = function('colorschemefunctions#StatusColorschemeStyle')
-let s:sonokai_dict.LightlineTheme          = function('colorschemefunctions#LightlineThemeColorscheme')
-let s:sonokai_dict.AirlineTheme            = function('colorschemefunctions#AirlineThemeColorscheme')
+let s:sonokai_dict = {
+                     \ 'name'                : 'sonokai',
+                     \ 'variants'            : ['default', 'atlantis', 'andromeda', 'maia'],
+                     \ 'style_variable_name' : 'g:sonokai_style',
+                     \ 'NextVariant'         : function('colorschemefunctions#NextStyleVariant'),
+                     \ 'StatusColorscheme'   : function('colorschemefunctions#StatusColorschemeStyle'),
+                     \ 'LightlineTheme'      : function('colorschemefunctions#LightlineThemeColorscheme'),
+                     \ 'AirlineTheme'        : function('colorschemefunctions#AirlineThemeColorscheme'),
+                     \ }
 
-let s:snow_dict                            = {}
-let s:snow_dict.name                       = 'snow'
-let s:snow_dict.NextVariant                = function('colorschemefunctions#NextBackgroundVariant')
-let s:snow_dict.StatusColorscheme          = function('colorschemefunctions#StatusColorschemeBackground')
-let s:snow_dict.LightlineTheme             = function('colorschemefunctions#LightlineThemeColorschemeBackground')
-let s:snow_dict.AirlineTheme               = function('colorschemefunctions#AirlineThemeColorschemeBackground')
+let s:snow_dict = {
+                  \ 'name'              : 'snow',
+                  \ 'NextVariant'       : function('colorschemefunctions#NextBackgroundVariant'),
+                  \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorschemeBackground'),
+                  \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorschemeBackground'),
+                  \ 'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorschemeBackground'),
+                  \ }
 
-let s:space_vim_theme_dict                   = {}
-let s:space_vim_theme_dict.name              = 'space_vim_theme'
-let s:space_vim_theme_dict.NextVariant       = function('colorschemefunctions#NextBackgroundVariant')
-let s:space_vim_theme_dict.StatusColorscheme = function('colorschemefunctions#StatusColorschemeBackground')
+let s:space_vim_theme_dict = {
+                             \ 'name'              : 'space_vim_theme',
+                             \ 'NextVariant'       : function('colorschemefunctions#NextBackgroundVariant'),
+                             \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorschemeBackground'),
+                             \ }
 function! s:space_vim_theme_dict.LightlineTheme()
   return 'space_vim_' . &background
 endfunction
 
-let s:srcery_dict                          = {}
-let s:srcery_dict.name                     = 'srcery'
-let s:srcery_dict.StatusColorscheme        = function('colorschemefunctions#StatusColorscheme')
-let s:srcery_dict.LightlineTheme           = function('colorschemefunctions#LightlineThemeColorscheme')
-let s:srcery_dict.AirlineTheme             = function('colorschemefunctions#AirlineThemeColorscheme')
+let s:srcery_dict = {
+                    \ 'name'              : 'srcery',
+                    \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
+                    \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
+                    \ 'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
+                    \ }
 
-let s:stellarized_dict                     = {}
-let s:stellarized_dict.name                = 'stellarized'
-let s:stellarized_dict.NextVariant         = function('colorschemefunctions#NextBackgroundVariant')
-let s:stellarized_dict.StatusColorscheme   = function('colorschemefunctions#StatusColorschemeBackground')
-let s:stellarized_dict.LightlineTheme      = function('colorschemefunctions#LightlineThemeColorschemeBackground')
-let s:stellarized_dict.AirlineTheme        = function('colorschemefunctions#AirlineThemeColorschemeBackground')
+let s:stellarized_dict = {
+                         \ 'name'              : 'stellarized',
+                         \ 'NextVariant'       : function('colorschemefunctions#NextBackgroundVariant'),
+                         \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorschemeBackground'),
+                         \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorschemeBackground'),
+                         \ 'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorschemeBackground'),
+                         \ }
 
-let s:stormpetrel_dict                     = {}
-let s:stormpetrel_dict.name                = 'stormpetrel'
-let s:stormpetrel_dict.variants            = g:seadbird_themes
-let s:stormpetrel_dict.NextVariant         = function('colorschemefunctions#NextColorschemeVariant')
-let s:stormpetrel_dict.StatusColorscheme   = function('colorschemefunctions#StatusColorscheme')
+let s:stormpetrel_dict = {
+                         \ 'name'              : 'stormpetrel',
+                         \ 'variants'          : g:seadbird_themes,
+                         \ 'NextVariant'       : function('colorschemefunctions#NextColorschemeVariant'),
+                         \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
+                         \ }
 function! s:stormpetrel_dict.AirlineTheme()
   return 'seagull'
 endfunction
 
-let s:typewriter_dict                      = {}
-let s:typewriter_dict.name                 = 'typewriter'
-let s:typewriter_dict.variants             = ['', '-night']
+let s:typewriter_dict = {
+                        \ 'name'              : 'typewriter',
+                        \ 'variants'          : ['', '-night'],
+                        \ 'NextVariant'       : function('colorschemefunctions#NextColorschemeVariantMap'),
+                        \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
+                        \ 'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
+                        \ }
 function! s:typewriter_dict.Map (key,val)
   return self.name . a:val
 endfunction
-let s:typewriter_dict.NextVariant          = function('colorschemefunctions#NextColorschemeVariantMap')
-let s:typewriter_dict.StatusColorscheme    = function('colorschemefunctions#StatusColorscheme')
 function! s:typewriter_dict.LightlineTheme()
   return 'typewriter_light'
 endfunction
-let s:typewriter_dict.AirlineTheme         = function('colorschemefunctions#AirlineThemeColorscheme')
 
-let s:typewriter_night_dict                = {}
-let s:typewriter_night_dict.name           = 'typewriter-night'
-let s:typewriter_night_dict.variants       = ['', '-night']
+let s:typewriter_night_dict = {
+                              \ 'name'              : 'typewriter-night',
+                              \ 'variants'          : ['', '-night'],
+                              \ 'NextVariant'       : function('colorschemefunctions#NextColorschemeVariantMap'),
+                              \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
+                              \ }
 function! s:typewriter_night_dict.Map (key,val)
   return 'typewriter' . a:val
 endfunction
-let s:typewriter_night_dict.NextVariant    = function('colorschemefunctions#NextColorschemeVariantMap')
-let s:typewriter_night_dict.StatusColorscheme = function('colorschemefunctions#StatusColorscheme')
 function! s:typewriter_night_dict.LightlineTheme()
   return 'typewriter_dark'
 endfunction
@@ -321,23 +353,25 @@ function! s:typewriter_night_dict.AirlineTheme()
   return 'typewritere'
 endfunction
 
-let s:vimspectr_dict                       = {}
-let s:vimspectr_dict.name                  = 'vimspectr'
-let s:vimspectr_dict.comparison            = 'fuzzy'
-let s:vimspectr_dict.variant_type          = 'vimspectr'
-let s:vimspectr_dict.variants              = ['grey', '0', '30', '60', '90', '120', '150', '180', '210', '240', '270', '300', '330']
+let s:vimspectr_dict = {
+                       \ 'name'              : 'vimspectr',
+                       \ 'comparison'        : 'fuzzy',
+                       \ 'variant_type'      : 'vimspectr',
+                       \ 'variants'          : ['grey', '0', '30', '60', '90', '120', '150', '180', '210', '240', '270', '300', '330'],
+                       \ 'NextVariant'       : function('colorschemefunctions#NextColorschemeVariantMap'),
+                       \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
+                       \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorschemeTR'),
+                       \ }
 function! s:vimspectr_dict.Map (key,val)
   return self.name . a:val . '-' . &background
 endfunction
-let s:vimspectr_dict.NextVariant           = function('colorschemefunctions#NextColorschemeVariantMap')
-let s:vimspectr_dict.StatusColorscheme     = function('colorschemefunctions#StatusColorscheme')
-let s:vimspectr_dict.LightlineTheme        = function('colorschemefunctions#LightlineThemeColorschemeTR')
 
-let s:vadelma_dict                         = {}
-let s:vadelma_dict.name                    = 'vadelma'
-let s:vadelma_dict.NextVariant             = function('colorschemefunctions#NextBackgroundVariant')
-let s:vadelma_dict.StatusColorscheme       = function('colorschemefunctions#StatusColorschemeBackground')
-let s:vadelma_dict.LightlineTheme          = function('colorschemefunctions#LightlineThemeColorscheme')
+let s:vadelma_dict = {
+                     \ 'name'              : 'vadelma',
+                     \ 'NextVariant'       : function('colorschemefunctions#NextBackgroundVariant'),
+                     \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorschemeBackground'),
+                     \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
+                     \ }
 
 let g:colorscheme_map = [
                       \ s:apprentice_dict,
