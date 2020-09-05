@@ -52,7 +52,7 @@ function! lightlinefunctions#LightlineFileformat()
 endfunction
 
 function! lightlinefunctions#LightlineColorscheme()
-  let l:color = colorschemefunctions#CurrentColorscheme()
+  let l:color = g:current_color_dictionary.StatusColorscheme()
   return winwidth(0) > 80 ? l:color : ''
 endfunction
 
@@ -93,29 +93,12 @@ function! lightlinefunctions#LightlineUpdate()
     return
   endif
   try
-    let l:new_lightline_colorscheme = 'powerline'
-    let l:lightlinetheme = colorschemefunctions#GetColorAttribute(g:colors_name, 'lightlinetheme')
-    if l:lightlinetheme == 'colorscheme'
-      let l:new_lightline_colorscheme = tr(g:colors_name, '-', '_')
-    elseif l:lightlinetheme == 'colorscheme_bg'
-      let l:new_lightline_colorscheme = join([tr(g:colors_name, '-', '_'), &background], '_')
-    elseif l:lightlinetheme == 'dropbg'
-      if match(g:colors_name, "Dark") != -1
-        let l:lightline_names = split (g:colors_name, "Dark")
-        let l:new_lightline_colorscheme = l:lightline_names[0]
-      elseif match(g:colors_name, "Light") != -1
-        let l:lightline_names = split (g:colors_name, "Light")
-        let l:new_lightline_colorscheme = l:lightline_names[0]
-      endif
-    elseif l:lightlinetheme == 'substitutebg'
-      let s:subpat = colorschemefunctions#GetColorAttribute(g:colors_name, 'subpat')
-      let l:new_lightline_colorscheme = substitute (g:colors_name, s:subpat, &background, "")
+    if has_key(g:current_color_dictionary, 'LightlineTheme')
+      let l:new_lightline_colorscheme = g:current_color_dictionary.LightlineTheme()
     else
-       let l:new_lightline_colorscheme = l:lightlinetheme
+      let l:new_lightline_colorscheme = 'powerline'
     endif
-    if !empty(colorschemefunctions#GetColorAttribute(g:colors_name, 'runtime'))
-      exe 'runtime autoload/lightline/colorscheme/' . l:new_lightline_colorscheme . '.vim'
-    endif
+    exe 'runtime autoload/lightline/colorscheme/' . l:new_lightline_colorscheme . '.vim'
     call lightlinefunctions#SetLightlineColorscheme(l:new_lightline_colorscheme)
   endtry
 endfunction

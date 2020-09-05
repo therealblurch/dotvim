@@ -89,212 +89,541 @@ let g:seadbird_themes        = [
 let s:atelier_dict                         = {}
 let s:atelier_dict.name                    = 'Atelier'
 let s:atelier_dict.comparison              = 'fuzzy'
-let s:atelier_dict.lightlinetheme          = 'dropbg'
-let s:atelier_dict.runtime                 = 'true'
-let s:atelier_dict.airlinetheme            = 'colorscheme'
-let s:atelier_dict.variant_type            = 'Atelier'
 let s:atelier_dict.variants                = ['Cave', 'Dune', 'Estuary', 'Forest', 'Heath', 'Lakeside', 'Plateau', 'Savanna', 'Seaside', 'Sulphurpool']
+function! s:atelier_dict.Map (key,val)
+  if &background == 'light'
+    let l:back = 'Light'
+  else
+    let l:back = 'Dark'
+  endif
+  return self.name . '_' . a:val . l:back
+endfunction
+function! s:atelier_dict.NextVariant(delta)
+  let l:variant_list = copy(self.variants)
+  call map(l:variant_list, function(self.Map))
+  let l:current_variant = g:colors_name
+  let l:num_variants = len(l:variant_list)
+  let l:next_variant = l:variant_list[((a:delta+index(l:variant_list, l:current_variant)) % l:num_variants + l:num_variants) % l:num_variants]
+  call xolox#colorscheme_switcher#switch_to(l:next_variant)
+endfunction
+function! s:atelier_dict.StatusColorscheme()
+  return g:colors_name
+endfunction
+function! s:atelier_dict.LightlineTheme()
+  if &background == 'Light'
+    let l:lightlinetheme = split (g:colors_name, "Light")
+  else
+    let l:lightlinetheme = split (g:colors_name, "Dark")
+  endif
+  return l:lightlinetheme
+endfunction
+function! s:atelier_dict.AirlineTheme()
+  return g:colors_name
+endfunction
 
 let s:papercolor_dict                      = {}
 let s:papercolor_dict.name                 = 'PaperColor'
-let s:papercolor_dict.lightlinetheme       = 'colorscheme'
-let s:papercolor_dict.runtime              = 'true'
-let s:papercolor_dict.airlinetheme         = 'colorscheme'
-let s:papercolor_dict.variant_type         = 'background'
+function! s:papercolor_dict.NextVariant(delta)
+  let &background = (&background == 'dark') ? 'light' : 'dark'
+endfunction
+function! s:papercolor_dict.StatusColorscheme()
+  return g:colors_name . '/' . &background
+endfunction
+function! s:papercolor_dict.LightlineTheme()
+  return self.name
+endfunction
+function! s:papercolor_dict.AirlineTheme()
+  return self.name
+endfunction
 
 let s:apprentice_dict                      = {}
 let s:apprentice_dict.name                 = 'apprentice'
-let s:apprentice_dict.lightlinetheme       = 'colorscheme'
-let s:apprentice_dict.airlinetheme         = 'colorscheme'
+function! s:apprentice_dict.StatusColorscheme()
+  return g:colors_name
+endfunction
+function! s:apprentice_dict.LightlineTheme()
+  return self.name
+endfunction
+function! s:apprentice_dict.AirlineTheme()
+  return self.name
+endfunction
 
 let s:ayu_dict                             = {}
 let s:ayu_dict.name                        = 'ayu'
-let s:ayu_dict.lightlinetheme              = 'colorscheme'
-let s:ayu_dict.runtime                     = 'true'
-let s:ayu_dict.airlinetheme                = 'colorscheme'
-let s:ayu_dict.variant_type                = 'ayu_color'
 let s:ayu_dict.variants                    = ['light', 'dark', 'mirage']
+function! s:ayu_dict.NextVariant(delta)
+  let l:num_variants = len(self.variants)
+  let g:ayucolor = self.variants[((a:delta+index(self.variants, g:ayucolor)) % l:num_variants + l:num_variants) % l:num_variants]
+  call xolox#colorscheme_switcher#switch_to(self.name)
+endfunction
+function! s:ayu_dict.StatusColorscheme()
+  return g:colors_name . '/' . g:ayucolor
+endfunction
+function! s:ayu_dict.LightlineTheme()
+  return self.name
+endfunction
+function! s:ayu_dict.AirlineTheme()
+  return self.name
+endfunction
 
 let s:cosmic_latte_dict                    = {}
 let s:cosmic_latte_dict.name               = 'cosmic_latte'
-let s:cosmic_latte_dict.lightlinetheme     = 'colorscheme_bg'
-let s:cosmic_latte_dict.airlinetheme       = 'colorscheme_bg'
-let s:cosmic_latte_dict.variant_type       = 'background'
+function! s:cosmic_latte_dict.NextVariant(delta)
+  let &background = (&background == 'dark') ? 'light' : 'dark'
+endfunction
+function! s:cosmic_latte_dict.StatusColorscheme()
+  return g:colors_name . '/' . &background
+endfunction
+function! s:cosmic_latte_dict.LightlineTheme()
+  return self.name
+endfunction
+function! s:cosmic_latte_dict.AirlineTheme()
+  return self.name . '_' . &background
+endfunction
 
 let s:deep_space_dict                      = {}
 let s:deep_space_dict.name                 = 'deep-space'
-let s:deep_space_dict.lightlinetheme       = 'deepspace'
-let s:deep_space_dict.airlinetheme         = 'colorscheme'
+function! s:deep_space_dict.StatusColorscheme()
+  return g:colors_name
+endfunction
+function! s:deep_space_dict.LightlineTheme()
+  return 'deepspace'
+endfunction
+function! s:deep_space_dict.AirlineTheme()
+  return self.name
+endfunction
 
 let s:desertink_dict                       = {}
 let s:desertink_dict.name                  = 'desertink'
-let s:desertink_dict.airlinetheme          = 'colorscheme'
+function! s:desertink_dict.StatusColorscheme()
+  return g:colors_name
+endfunction
+function! s:desertink_dict.AirlineTheme()
+  return self.name
+endfunction
 
 let s:dracula_dict                         = {}
 let s:dracula_dict.name                    = 'dracula'
-let s:dracula_dict.lightlinetheme          = 'colorscheme'
-let s:dracula_dict.airlinetheme            = 'colorscheme'
+function! s:dracula_dict.StatusColorscheme()
+  return g:colors_name
+endfunction
+function! s:dracula_dict.LightlineTheme()
+  return self.name
+endfunction
+function! s:dracula_dict.AirlineTheme()
+  return self.name
+endfunction
 
 let s:edge_dict                            = {}
 let s:edge_dict.name                       = 'edge'
-let s:edge_dict.lightlinetheme             = 'colorscheme'
-let s:edge_dict.airlinetheme               = 'colorscheme'
-let s:edge_dict.runtime                    = 'true'
-let s:edge_dict.variant_type               = 'edge_style'
 let s:edge_dict.variants                   = ['default', 'aura', 'neon']
+function! s:edge_dict.NextVariant(delta)
+  let l:num_variants = len(self.variants)
+  let g:edge_style = self.variants[((a:delta+index(self.variants, g:edge_style)) % l:num_variants + l:num_variants) % l:num_variants]
+  call xolox#colorscheme_switcher#switch_to(self.name)
+endfunction
+function! s:edge_dict.StatusColorscheme()
+  return g:colors_name . '/' . g:edge_style
+endfunction
+function! s:edge_dict.LightlineTheme()
+  return self.name
+endfunction
+function! s:edge_dict.AirlineTheme()
+  return self.name
+endfunction
 
 let s:flattened_dict                       = {}
 let s:flattened_dict.name                  = 'flattened'
 let s:flattened_dict.comparison            = 'fuzzy'
-let s:flattened_dict.lightlinetheme        = 'colorscheme'
-let s:flattened_dict.airlinetheme          = 'colorscheme'
-let s:flattened_dict.variant_type          = 'colorscheme'
-let s:flattened_dict.variant_base          = 'drop'
 let s:flattened_dict.variants              = ['_light', '_dark']
+function! s:flattened_dict.Map (key,val)
+  return self.name . a:val
+endfunction
+function! s:flattened_dict.NextVariant(delta)
+  let l:variant_list = copy(self.variants)
+  call map(l:variant_list, function(self.Map))
+  let l:current_variant = g:colors_name
+  let l:num_variants = len(l:variant_list)
+  let l:next_variant = l:variant_list[((a:delta+index(l:variant_list, l:current_variant)) % l:num_variants + l:num_variants) % l:num_variants]
+  call xolox#colorscheme_switcher#switch_to(l:next_variant)
+endfunction
+function! s:flattened_dict.StatusColorscheme()
+  return g:colors_name
+endfunction
+function! s:flattened_dict.LightlineTheme()
+  return g:colors_name
+endfunction
+function! s:flattened_dict.AirlineTheme()
+  return g:colors_name
+endfunction
 
 let s:forest_night_dict                    = {}
 let s:forest_night_dict.name               = 'forest-night'
-let s:forest_night_dict.lightlinetheme     = 'colorscheme'
-let s:forest_night_dict.airlinetheme       = 'colorscheme'
+function! s:forest_night_dict.StatusColorscheme()
+  return g:colors_name
+endfunction
+function! s:forest_night_dict.LightlineTheme()
+  return self.name
+endfunction
+function! s:forest_night_dict.AirlineTheme()
+  return self.name
+endfunction
 
 let s:greygull_dict                        = {}
 let s:greygull_dict.name                   = 'greygull'
-let s:greygull_dict.airlinetheme           = 'colorscheme'
-let s:greygull_dict.variant_type           = "colorscheme_group"
 let s:greygull_dict.variants               = g:seadbird_themes
+function! s:greygull_dict.NextVariant(delta)
+  let l:current_variant = g:colors_name
+  let l:num_variants = len(self.variants)
+  let l:next_variant = self.variants[((a:delta+index(self.variants, l:current_variant)) % l:num_variants + l:num_variants) % l:num_variants]
+  call xolox#colorscheme_switcher#switch_to(l:next_variant)
+endfunction
+function! s:greygull_dict.StatusColorscheme()
+  return g:colors_name
+endfunction
+function! s:greygull_dict.AirlineTheme()
+  return self.name
+endfunction
 
 let s:gruvbox_material_dict                = {}
 let s:gruvbox_material_dict.name           = 'gruvbox-material'
-let s:gruvbox_material_dict.lightlinetheme = 'colorscheme'
-let s:gruvbox_material_dict.runtime        = 'true'
-let s:gruvbox_material_dict.airlinetheme   = 'colorscheme'
-let s:gruvbox_material_dict.variant_type   = 'gruvbox_material_background'
 let s:gruvbox_material_dict.variants       = ['soft', 'medium', 'hard']
+function! s:gruvbox_material_dict.NextVariant(delta)
+  let l:num_variants = len(self.variants)
+  let g:gruvbox_material_background = self.variants[((a:delta+index(self.variants, g:gruvbox_material_background)) % l:num_variants + l:num_variants) % l:num_variants]
+  call xolox#colorscheme_switcher#switch_to(self.name)
+endfunction
+function! s:gruvbox_material_dict.StatusColorscheme()
+  return g:colors_name . '/' . g:gruvbox_material_background
+endfunction
+function! s:gruvbox_material_dict.LightlineTheme()
+  return self.name
+endfunction
+function! s:gruvbox_material_dict.AirlineTheme()
+  return self.name
+endfunction
 
 let s:iceberg_dict                         = {}
 let s:iceberg_dict.name                    = 'iceberg'
-let s:iceberg_dict.lightlietheme           = 'colorscheme'
-let s:iceberg_dict.airlinetheme            = 'colorscheme'
+function! s:iceberg_dict.StatusColorscheme()
+  return g:colors_name
+endfunction
+function! s:iceberg_dict.LightlineTheme()
+  return self.name
+endfunction
+function! s:iceberg_dict.AirlineTheme()
+  return self.name
+endfunction
 
 let s:jellybeans_dict                      = {}
 let s:jellybeans_dict.name                 = 'jellybeans'
-let s:jellybeans_dict.airlinetheme         = 'colorscheme'
+function! s:jellybeans_dict.StatusColorscheme()
+  return g:colors_name
+endfunction
+function! s:jellybeans_dict.AirlineTheme()
+  return self.name
+endfunction
 
 let s:material_dict                        = {}
 let s:material_dict.name                   = 'material'
-let s:material_dict.lightlinetheme         = 'material_vim'
-let s:material_dict.runtime                = 'true'
-let s:material_dict.variant_type           = 'material_theme_style'
 let s:material_dict.variants               = ['default', 'palenight', 'ocean', 'lighter', 'darker']
+function! s:material_dict.NextVariant(delta)
+  let l:num_variants = len(self.variants)
+  let g:material_theme_style = self.variants[((a:delta+index(self.variants, g:material_theme_style)) % l:num_variants + l:num_variants) % l:num_variants]
+  call xolox#colorscheme_switcher#switch_to(self.name)
+endfunction
+function! s:material_dict.StatusColorscheme()
+  return g:colors_name . '/' . g:material_theme_style
+endfunction
+function! s:material_dict.LightlineTheme()
+  return 'material_vim'
+endfunction
 
 let s:materialbox_dict                     = {}
 let s:materialbox_dict.name                = 'materialbox'
-let s:materialbox_dict.airlinetheme        = 'colorscheme'
-let s:materialbox_dict.variant_type        = 'materialbox_contrast'
 let s:materialbox_dict.variants            = ['soft', 'medium', 'hard']
+function! s:materialbox_dict.NextVariant(delta)
+  let l:num_variants = len(self.variants)
+  if &background == 'dark'
+    let g:materialbox_contrast_dark = self.variants[((a:delta+index(self.variants, g:materialbox_contrast_dark)) % l:num_variants + l:num_variants) % l:num_variants]
+  else
+    let g:materialbox_contrast_light = self.variants[((a:delta+index(self.variants, g:materialbox_contrast_light)) % l:num_variants + l:num_variants) % l:num_variants]
+  endif
+  call xolox#colorscheme_switcher#switch_to(self.name)
+endfunction
+function! s:materialbox_dict.StatusColorscheme()
+  if &background == 'dark'
+    return g:colors_name . '/' . g:materialbox_contrast_dark
+  else
+    return g:colors_name . '/' . g:materialbox_contrast_light
+  endif
+endfunction
+function! s:materialbox_dict.AirlineTheme()
+  return self.name
+endfunction
 
 let s:nord_dict                            = {}
 let s:nord_dict.name                       = 'nord'
-let s:nord_dict.lightlinetheme             = 'colorscheme'
-let s:nord_dict.airlinetheme               = 'colorscheme'
+function! s:nord_dict.StatusColorscheme()
+  return g:colors_name
+endfunction
+function! s:nord_dict.LightlineTheme()
+  return self.name
+endfunction
+function! s:nord_dict.AirlineTheme()
+  return self.name
+endfunction
 
 let s:one_dict                             = {}
 let s:one_dict.name                        = 'one'
-let s:one_dict.airlinetheme                = 'colorscheme'
-let s:one_dict.variant_type                = 'background'
+function! s:one_dict.NextVariant(delta)
+  let &background = (&background == 'dark') ? 'light' : 'dark'
+endfunction
+function! s:one_dict.StatusColorscheme()
+  return g:colors_name
+endfunction
+function! s:one_dict.AirlineTheme()
+  return self.name
+endfunction
 
 let s:palenight_dict                       = {}
 let s:palenight_dict.name                  = 'palenight'
-let s:palenight_dict.lightlietheme         = 'colorscheme'
-let s:palenight_dict.airlinetheme          = 'colorscheme'
+function! s:palenight_dict.StatusColorscheme()
+  return g:colors_name
+endfunction
+function! s:palenight_dict.LightlineTheme()
+  return self.name
+endfunction
+function! s:palenight_dict.AirlineTheme()
+  return self.name
+endfunction
 
 let s:pencil_dict                          = {}
 let s:pencil_dict.name                     = 'pencil'
-let s:pencil_dict.lightlinetheme           = 'pencil_alter'
-let s:pencil_dict.airlinetheme             = 'colorscheme'
-let s:pencil_dict.variant_type             = 'background'
+function! s:pencil_dict.NextVariant(delta)
+  let &background = (&background == 'dark') ? 'light' : 'dark'
+endfunction
+function! s:pencil_dict.StatusColorscheme()
+  return g:colors_name . '/' . &background
+endfunction
+function! s:pencil_dict.LightlineTheme()
+  return 'pencil_alter'
+endfunction
+function! s:pencil_dict.AirlineTheme()
+  return self.name
+endfunction
 
 let s:petrel_dict                          = {}
 let s:petrel_dict.name                     = 'petrel'
-let s:petrel_dict.airlinetheme             = 'colorscheme'
-let s:petrel_dict.variant_type             = "colorscheme_group"
 let s:petrel_dict.variants                 = g:seadbird_themes
+function! s:petrel_dict.NextVariant(delta)
+  let l:current_variant = g:colors_name
+  let l:num_variants = len(self.variants)
+  let l:next_variant = self.variants[((a:delta+index(self.variants, l:current_variant)) % l:num_variants + l:num_variants) % l:num_variants]
+  call xolox#colorscheme_switcher#switch_to(l:next_variant)
+endfunction
+function! s:petrel_dict.StatusColorscheme()
+  return g:colors_name
+endfunction
+function! s:petrel_dict.AirlineTheme()
+  return self.name
+endfunction
 
 let s:pop_punk_dict                        = {}
 let s:pop_punk_dict.name                   = 'pop-punk'
-let s:pop_punk_dict.airlinetheme           = 'colorscheme'
+function! s:pop_punk_dict.StatusColorscheme()
+  return g:colors_name
+endfunction
+function! s:pop_punk_dict.AirlineTheme()
+  return self.name
+endfunction
 
 let s:seagull_dict                         = {}
 let s:seagull_dict.name                    = 'seagull'
-let s:seagull_dict.airlinetheme            = 'colorscheme'
-let s:seagull_dict.variant_type            = "colorscheme_group"
 let s:seagull_dict.variants                = g:seadbird_themes
+function! s:seagull_dict.NextVariant(delta)
+  let l:current_variant = g:colors_name
+  let l:num_variants = len(self.variants)
+  let l:next_variant = self.variants[((a:delta+index(self.variants, l:current_variant)) % l:num_variants + l:num_variants) % l:num_variants]
+  call xolox#colorscheme_switcher#switch_to(l:next_variant)
+endfunction
+function! s:seagull_dict.StatusColorscheme()
+  return g:colors_name
+endfunction
+function! s:seagull_dict.AirlineTheme()
+  return self.name
+endfunction
 
 let s:sonokai_dict                         = {}
 let s:sonokai_dict.name                    = 'sonokai'
-let s:sonokai_dict.airlinetheme            = 'colorscheme'
-let s:sonokai_dict.lightlinetheme          = 'colorscheme'
-let s:sonokai_dict.runtime                 = 'true'
-let s:sonokai_dict.variant_type            = 'sonokai_style'
 let s:sonokai_dict.variants                = ['default', 'atlantis', 'andromeda', 'maia']
+function! s:sonokai_dict.NextVariant(delta)
+  let l:num_variants = len(self.variants)
+  let g:sonokai_style = self.variants[((a:delta+index(self.variants, g:sonokai_style)) % l:num_variants + l:num_variants) % l:num_variants]
+  call xolox#colorscheme_switcher#switch_to(self.name)
+endfunction
+function! s:sonokai_dict.StatusColorscheme()
+  return g:colors_name . '/' . g:sonokai_style
+endfunction
+function! s:sonokai_dict.LightlineTheme()
+  return self.name
+endfunction
+function! s:sonokai_dict.AirlineTheme()
+  return self.name
+endfunction
 
 let s:snow_dict                            = {}
 let s:snow_dict.name                       = 'snow'
-let s:snow_dict.lightlinetheme             = 'colorscheme_bg'
-let s:snow_dict.airlinetheme               = 'colorscheme_bg'
-let s:snow_dict.variant_type               = 'background'
+function! s:snow_dict.NextVariant(delta)
+  let &background = (&background == 'dark') ? 'light' : 'dark'
+endfunction
+function! s:snow_dict.StatusColorscheme()
+  return g:colors_name . '/' . &background
+endfunction
+function! s:snow_dict.LightlineTheme()
+  return self.name . '_' . &background
+endfunction
+function! s:snow_dict.AirlineTheme()
+  return self.name . '_' . &background
+endfunction
 
 let s:space_vim_theme_dict                 = {}
 let s:space_vim_theme_dict.name            = 'space_vim_theme'
-let s:space_vim_theme_dict.lightlinetheme  = 'substitutebg'
-let s:space_vim_theme_dict.subpat          = 'theme'
-let s:space_vim_theme_dict.variant_type    = 'background'
+function! s:space_vim_theme_dict.NextVariant(delta)
+  let &background = (&background == 'dark') ? 'light' : 'dark'
+endfunction
+function! s:space_vim_theme_dict.StatusColorscheme()
+  return g:colors_name . '/' . &background
+endfunction
+function! s:space_vim_theme_dict.LightlineTheme()
+  return 'space_vim_' . &background
+endfunction
 
 let s:srcery_dict                          = {}
 let s:srcery_dict.name                     = 'srcery'
-let s:srcery_dict.lightlinetheme           = 'colorscheme'
-let s:srcery_dict.airlinetheme             = 'colorscheme'
+function! s:srcery_dict.StatusColorscheme()
+  return g:colors_name
+endfunction
+function! s:srcery_dict.LightlineTheme()
+  return self.name
+endfunction
+function! s:srcery_dict.AirlineTheme()
+  return self.name
+endfunction
 
 let s:stellarized_dict                     = {}
 let s:stellarized_dict.name                = 'stellarized'
-let s:stellarized_dict.lightlinetheme      = 'colorscheme_bg'
-let s:stellarized_dict.airlinetheme        = 'colorscheme_bg'
-let s:stellarized_dict.variant_type        = 'background'
+function! s:stellarized_dict.NextVariant(delta)
+  let &background = (&background == 'dark') ? 'light' : 'dark'
+endfunction
+function! s:stellarized_dict.StatusColorscheme()
+  return g:colors_name . '/' . &background
+endfunction
+function! s:stellarized_dict.LightlineTheme()
+  return self.name . '_' . &background
+endfunction
+function! s:stellarized_dict.AirlineTheme()
+  return self.name . '_' . &background
+endfunction
 
 let s:stormpetrel_dict                     = {}
 let s:stormpetrel_dict.name                = 'stormpetrel'
-let s:stormpetrel_dict.airlinetheme        = 'colorscheme'
-let s:stormpetrel_dict.variant_type        = "colorscheme_group"
 let s:stormpetrel_dict.variants            = g:seadbird_themes
+function! s:stormpetrel_dict.NextVariant(delta)
+  let l:current_variant = g:colors_name
+  let l:num_variants = len(self.variants)
+  let l:next_variant = self.variants[((a:delta+index(self.variants, l:current_variant)) % l:num_variants + l:num_variants) % l:num_variants]
+  call xolox#colorscheme_switcher#switch_to(l:next_variant)
+endfunction
+function! s:stormpetrel_dict.StatusColorscheme()
+  return g:colors_name
+endfunction
+function! s:stormpetrel_dict.AirlineTheme()
+  return self.name
+endfunction
 
 let s:typewriter_dict                      = {}
 let s:typewriter_dict.name                 = 'typewriter'
-let s:typewriter_dict.lightlinetheme       = 'typewriter_light'
-let s:typewriter_dict.airlinetheme         = 'colorscheme'
-let s:typewriter_dict.variant_type         = 'colorscheme'
-let s:typewriter_dict.variant_base         = 'typewriter'
 let s:typewriter_dict.variants             = ['', '-night']
+function! s:typewriter_dict.Map (key,val)
+  return self.name . a:val
+endfunction
+function! s:typewriter_dict.NextVariant(delta)
+  let l:variant_list = copy(self.variants)
+  call map(l:variant_list, function(self.Map))
+  let l:current_variant = g:colors_name
+  let l:num_variants = len(l:variant_list)
+  let l:next_variant = l:variant_list[((a:delta+index(l:variant_list, l:current_variant)) % l:num_variants + l:num_variants) % l:num_variants]
+  call xolox#colorscheme_switcher#switch_to(l:next_variant)
+endfunction
+function! s:typewriter_dict.StatusColorscheme()
+  return g:colors_name
+endfunction
+function! s:typewriter_dict.LightlineTheme()
+  return 'typewriter_light'
+endfunction
+function! s:typewriter_dict.AirlineTheme()
+  return self.name
+endfunction
 
 let s:typewriter_night_dict                = {}
 let s:typewriter_night_dict.name           = 'typewriter-night'
-let s:typewriter_night_dict.lightlinetheme = 'typewriter_dark'
-let s:typewriter_night_dict.airlinetheme   = 'colorscheme'
-let s:typewriter_night_dict.variant_type   = 'colorscheme'
-let s:typewriter_night_dict.variant_base   = 'typewriter'
 let s:typewriter_night_dict.variants       = ['', '-night']
+function! s:typewriter_night_dict.Map (key,val)
+  return 'typewriter' . a:val
+endfunction
+function! s:typewriter_night_dict.NextVariant(delta)
+  let l:variant_list = copy(self.variants)
+  call map(l:variant_list, function(self.Map))
+  let l:current_variant = g:colors_name
+  let l:num_variants = len(l:variant_list)
+  let l:next_variant = l:variant_list[((a:delta+index(l:variant_list, l:current_variant)) % l:num_variants + l:num_variants) % l:num_variants]
+  call xolox#colorscheme_switcher#switch_to(l:next_variant)
+endfunction
+function! s:typewriter_night_dict.StatusColorscheme()
+  return g:colors_name
+endfunction
+function! s:typewriter_night_dict.LightlineTheme()
+  return 'typewriter_dark'
+endfunction
+function! s:typewriter_night_dict.AirlineTheme()
+  return self.name
+endfunction
 
 let s:vimspectr_dict                       = {}
 let s:vimspectr_dict.name                  = 'vimspectr'
 let s:vimspectr_dict.comparison            = 'fuzzy'
-let s:vimspectr_dict.lightlinetheme        = 'colorscheme'
 let s:vimspectr_dict.variant_type          = 'vimspectr'
 let s:vimspectr_dict.variants              = ['grey', '0', '30', '60', '90', '120', '150', '180', '210', '240', '270', '300', '330']
+function! s:vimspectr_dict.Map (key,val)
+  return self.name . a:val . '-' . &background
+endfunction
+function! s:vimspectr_dict.NextVariant(delta)
+  let l:variant_list = copy(self.variants)
+  call map(l:variant_list, function(self.Map))
+  let l:current_variant = g:colors_name
+  let l:num_variants = len(l:variant_list)
+  let l:next_variant = l:variant_list[((a:delta+index(l:variant_list, l:current_variant)) % l:num_variants + l:num_variants) % l:num_variants]
+  call xolox#colorscheme_switcher#switch_to(l:next_variant)
+endfunction
+function! s:vimspectr_dict.StatusColorscheme()
+  return g:colors_name
+endfunction
+function! s:vimspectr_dict.LightlineTheme()
+  return g:colors_name
+endfunction
 
 let s:vadelma_dict                         = {}
 let s:vadelma_dict.name                    = 'vadelma'
-let s:vadelma_dict.lightlinetheme          = 'colorscheme'
-let s:vadelma_dict.runtime                 = 'true'
-let s:vadelma_dict.variant_type            = 'background'
+function! s:vadelma_dict.NextVariant(delta)
+  let &background = (&background == 'dark') ? 'light' : 'dark'
+endfunction
+function! s:vadelma_dict.StatusColorscheme()
+  return g:colors_name . '/' . &background
+endfunction
+function! s:vadelma_dict.LightlineTheme()
+  return self.name
+endfunction
 
 let g:colorscheme_map = [
                       \ s:apprentice_dict,

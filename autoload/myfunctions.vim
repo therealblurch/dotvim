@@ -7,8 +7,16 @@ function! myfunctions#GitgutterStatus()
 endfunction
 
 function! myfunctions#WhichStatus(colorscheme)
-  let l:airlinetheme = colorschemefunctions#GetColorAttribute(a:colorscheme, 'airlinetheme')
-  let l:lightlinetheme = colorschemefunctions#GetColorAttribute(a:colorscheme, 'lightlinetheme')
+  if has_key(g:current_color_dictionary, 'AirlineTheme')
+    let l:airlinetheme = g:current_color_dictionary.AirlineTheme()
+  else
+    let l:airlinetheme = ''
+  endif
+  if has_key(g:current_color_dictionary, 'LightlineTheme')
+    let l:lightlinetheme = g:current_color_dictionary.LightlineTheme()
+  else
+    let l:lightlinetheme = ''
+  endif
   if (empty(l:airlinetheme) && empty(l:lightlinetheme)) || exists('g:buftabline_show')
     let l:user_status = "none"
   elseif exists('g:loaded_airline')
