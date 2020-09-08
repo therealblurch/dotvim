@@ -268,6 +268,7 @@ let g:colorscheme_map = [
                         \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
                         \ 'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
                         \ },
+                        \ {
                         \ 'name'              : 'PaperColor',
                         \ 'NextVariant'       : function('colorschemefunctions#NextBackgroundVariant'),
                         \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorschemeBackground'),
