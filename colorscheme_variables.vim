@@ -246,7 +246,7 @@ let g:colorscheme_map = [
                         \ 'NextVariant'         : function('colorschemefunctions#NextStyleVariant'),
                         \ 'StatusColorscheme'   : function('colorschemefunctions#StatusColorschemeStyle'),
                         \ 'AirlineTheme'        : function('colorschemefunctions#AirlineThemeColorscheme'),
-                        \ 'ToggleScheme'      : function('colorschemefunctions#ToggleBackground'),
+                        \ 'ToggleScheme'        : function('colorschemefunctions#ToggleBackground'),
                         \ },
                         \ {
                         \ 'name'              : 'nord',
