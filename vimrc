@@ -165,6 +165,7 @@ function! PackagerInit() abort
 
   " colorschemes
   call packager#add('arcticicestudio/nord-vim',               {'package': 'colors', 'branch': 'develop'})
+  call packager#add('arzg/vim-colors-xcode',                  {'package': 'colors'})
   call packager#add('atelierbram/vim-colors_atelier-schemes', {'package': 'colors'})
   call packager#add('ayu-theme/ayu-vim',                      {'package': 'colors'})
   call packager#add('bignimbus/pop-punk.vim',                 {'package': 'colors'})

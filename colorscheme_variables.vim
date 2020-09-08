@@ -357,6 +357,17 @@ let g:colorscheme_map = [
                         \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
                         \ 'ToggleScheme'      : function('colorschemefunctions#ToggleBackground'),
                         \ },
+                        \ {
+                        \ 'name'              : 'xcode',
+                        \ 'comparison'        : 'fuzzy',
+                        \ 'variants'          : ['xcodedark', 'xcodelight', 'xcodewwdc', 'xcodedarkhc', 'xcodelighthc'],
+                        \ 'dark_tag'          : 'dark',
+                        \ 'light_tag'         : 'light',
+                        \ 'NextVariant'       : function('colorschemefunctions#NextColorschemeVariant'),
+                        \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
+                        \ 'ToggleScheme'      : function('colorschemefunctions#ToggleColorscheme'),
+                        \ 'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
+                        \ },
                         \ ]
 
 
