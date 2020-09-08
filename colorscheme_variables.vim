@@ -79,22 +79,6 @@ function! SeagullAirlineTheme() dict
   return 'seagull'
 endfunction
 
-function! TypewriterMap (key,val) dict
-  return 'typewriter' . a:val
-endfunction
-
-function! TypewriterLightlineTheme() dict
-  return 'typewriter_light'
-endfunction
-
-function! TypewriterNightLightlineTheme() dict
-  return 'typewriter_dark'
-endfunction
-
-function! TypewriterNightAirlineTheme() dict
-  return 'typewriter'
-endfunction
-
 function! VimspectrMap (key,val) dict
   return self.name . a:val . '-' . &background
 endfunction
@@ -350,24 +334,6 @@ let g:colorscheme_map = [
                         \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
                         \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorschemeSub'),
                         \ 'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorschemeSub'),
-                        \ },
-                        \ {
-                        \ 'name'              : 'typewriter',
-                        \ 'variants'          : ['', '-night'],
-                        \ 'NextVariant'       : function('colorschemefunctions#NextColorschemeVariantMap'),
-                        \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
-                        \ 'LightlineTheme'    : function('TypewriterLightlineTheme'),
-                        \ 'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
-                        \ 'Map'               : function('TypewriterMap'),
-                        \ },
-                        \ {
-                        \ 'name'              : 'typewriter-night',
-                        \ 'variants'          : ['', '-night'],
-                        \ 'NextVariant'       : function('colorschemefunctions#NextColorschemeVariantMap'),
-                        \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
-                        \ 'LightlineTheme'    : function('TypewriterNightLightlineTheme'),
-                        \ 'AirlineTheme'      : function('TypewriterNightAirlineTheme'),
-                        \ 'Map'               : function('TypewriterMap'),
                         \ },
                         \ {
                         \ 'name'              : 'vimspectr',
