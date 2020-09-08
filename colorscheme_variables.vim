@@ -338,7 +338,6 @@ let g:colorscheme_map = [
                         \ {
                         \ 'name'              : 'vimspectr',
                         \ 'comparison'        : 'fuzzy',
-                        \ 'variant_type'      : 'vimspectr',
                         \ 'variants'          : ['grey', '0', '30', '60', '90', '120', '150', '180', '210', '240', '270', '300', '330'],
                         \ 'dark_tag'          : 'dark',
                         \ 'light_tag'         : 'light',
