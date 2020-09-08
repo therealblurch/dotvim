@@ -71,28 +71,12 @@ function! AtelierLightlineTheme() dict
   return l:lightlinetheme
 endfunction
 
-function! PapercolorAirlineTheme() dict
-  return 'papercolor'
-endfunction
-
-function! DeepSpaceLightlineTheme() dict
-  return 'deepspace'
-endfunction
-
 function! FlattenedMap (key,val) dict
   return self.name . a:val
 endfunction
 
 function! SeagullAirlineTheme() dict
   return 'seagull'
-endfunction
-
-function! MaterialLightlineTheme() dict
-  return 'material_vim'
-endfunction
-
-function! SpaceLightlineTheme() dict
-  return 'space_vim_' . &background
 endfunction
 
 function! TypewriterMap (key,val) dict
@@ -154,8 +138,12 @@ let g:colorscheme_map = [
                         \ },
                         \ {
                         \ 'name'              : 'deep-space',
+                        \ 'tr_from'           : '-',
+                        \ 'tr_to'             : '_',
+                        \ 'pat'               : '-',
+                        \ 'sub'               : '',
                         \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
-                        \ 'LightlineTheme'    : function('DeepSpaceLightlineTheme'),
+                        \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorschemeSub'),
                         \ 'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorschemeTR'),
                         \ },
                         \ {
@@ -214,6 +202,8 @@ let g:colorscheme_map = [
                         \ 'name'                : 'gruvbox-material',
                         \ 'variants'            : ['soft', 'medium', 'hard'],
                         \ 'style_variable_name' : 'g:gruvbox_material_background',
+                        \ 'tr_from'             : '-',
+                        \ 'tr_to'               : '_',
                         \ 'NextVariant'         : function('colorschemefunctions#NextStyleVariant'),
                         \ 'StatusColorscheme'   : function('colorschemefunctions#StatusColorschemeStyle'),
                         \ 'LightlineTheme'      : function('colorschemefunctions#LightlineThemeColorscheme'),
@@ -235,9 +225,11 @@ let g:colorscheme_map = [
                         \ 'name'                : 'material',
                         \ 'variants'            : ['default', 'palenight', 'ocean', 'lighter', 'darker'],
                         \ 'style_variable_name' : 'g:material_theme_style',
+                        \ 'suffix'              : '_vim',
                         \ 'NextVariant'         : function('colorschemefunctions#NextStyleVariant'),
                         \ 'StatusColorscheme'   : function('colorschemefunctions#StatusColorschemeStyle'),
-                        \ 'LightlineTHeme'      : function('MaterialLightlineTheme'),
+                        \ 'LightlineTheme'      : function('colorschemefunctions#LightlineThemeColorschemeSuffix'),
+                        \ 'AirlineTheme'        : function('colorschemefunctions#AirlineThemeColorscheme'),
                         \ },
                         \ {
                         \ 'name'                : 'materialbox',
@@ -273,7 +265,7 @@ let g:colorscheme_map = [
                         \ 'NextVariant'       : function('colorschemefunctions#NextBackgroundVariant'),
                         \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorschemeBackground'),
                         \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
-                        \ 'AirlineTheme'      : function('PapercolorAirlineTheme'),
+                        \ 'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorschemeLower'),
                         \ 'ToggleScheme'      : function('colorschemefunctions#ToggleBackground'),
                         \ },
                         \ {
@@ -293,6 +285,8 @@ let g:colorscheme_map = [
                         \ },
                         \ {
                         \ 'name'              : 'pop-punk',
+                        \ 'tr_from'           : '-',
+                        \ 'tr_to'             : '_',
                         \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
                         \ 'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorschemeTR'),
                         \ },
@@ -322,10 +316,11 @@ let g:colorscheme_map = [
                         \ },
 			\ {
                         \ 'name'              : 'space_vim_theme',
+                        \ 'pat'               : 'theme',
                         \ 'NextVariant'       : function('colorschemefunctions#NextBackgroundVariant'),
                         \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorschemeBackground'),
                         \ 'ToggleScheme'      : function('colorschemefunctions#ToggleBackground'),
-			\ 'LightlineTheme'    : 'SpaceLightlineTheme'
+			\ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorschemeSubBackground')
                         \ },
                         \ {
                         \ 'name'              : 'srcery',
@@ -373,6 +368,8 @@ let g:colorscheme_map = [
                         \ 'variants'          : ['grey', '0', '30', '60', '90', '120', '150', '180', '210', '240', '270', '300', '330'],
                         \ 'dark_tag'          : 'dark',
                         \ 'light_tag'         : 'light',
+                        \ 'tr_from'           : '-',
+                        \ 'tr_to'             : '_',
                         \ 'NextVariant'       : function('colorschemefunctions#NextColorschemeVariantMap'),
                         \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
                         \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorschemeTR'),
