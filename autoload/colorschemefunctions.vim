@@ -24,6 +24,15 @@ function! colorschemefunctions#NextBackgroundVariant(delta) dict
   let &background = (&background == 'dark') ? 'light' : 'dark'
 endfunction
 
+function! colorschemefunctions#ToggleBackground() dict
+  let &background = (&background == 'dark') ? 'light' : 'dark'
+endfunction
+
+function! colorschemefunctions#ToggleColorscheme() dict
+  let l:new_colorscheme = (g:colors_name =~# self.dark_tag) ? substitute(g:colors_name, self.dark_tag, self.light_tag, '') : substitute(g:colors_name, self.light_tag, self.dark_tag, '')
+  call xolox#colorscheme_switcher#switch_to(l:new_colorscheme)
+endfunction
+
 function! colorschemefunctions#StatusColorscheme() dict
   return g:colors_name
 endfunction
@@ -73,8 +82,14 @@ function! colorschemefunctions#GetColorDictionary(color_name)
 endfunction
 
 function! colorschemefunctions#SchemeVariant(delta) abort
-  if (has_key(g:current_color_dictionary, 'NextVariant'))
+  if has_key(g:current_color_dictionary, 'NextVariant')
     call g:current_color_dictionary.NextVariant(a:delta)
+  endif
+endfunction
+
+function! colorschemefunctions#ToggleScheme() abort
+  if has_key(g:current_color_dictionary, 'ToggleScheme')
+    call g:current_color_dictionary.ToggleScheme()
   endif
 endfunction
 

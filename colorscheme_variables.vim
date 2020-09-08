@@ -40,7 +40,7 @@ let g:atelier_dark_themes    = [
                              \ 'Atelier_SulphurpoolDark',
                              \ ]
 
-let g:seadbird_themes        = [
+let g:seabird_themes         = [
                              \ 'greygull',
                              \ 'petrel',
                              \ 'seagull',
@@ -57,9 +57,12 @@ let s:atelier_dict = {
                      \ 'name'              : 'Atelier',
                      \ 'comparison'        : 'fuzzy',
                      \ 'variants'          : ['Cave', 'Dune', 'Estuary', 'Forest', 'Heath', 'Lakeside', 'Plateau', 'Savanna', 'Seaside', 'Sulphurpool'],
+                     \ 'dark_tag'          : 'Dark',
+                     \ 'light_tag'         : 'Light',
                      \ 'NextVariant'       : function('colorschemefunctions#NextColorschemeVariantMap'),
                      \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
                      \ 'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
+                     \ 'ToggleScheme'      : function('colorschemefunctions#ToggleColorscheme'),
                      \ }
 function! s:atelier_dict.Map (key,val)
   if &background == 'light'
@@ -83,6 +86,7 @@ let s:papercolor_dict = {
                         \ 'NextVariant'       : function('colorschemefunctions#NextBackgroundVariant'),
                         \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorschemeBackground'),
                         \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
+                        \ 'ToggleScheme'      : function('colorschemefunctions#ToggleBackground'),
                         \ }
 function! s:papercolor_dict.AirlineTheme()
   return 'papercolor'
@@ -111,6 +115,7 @@ let s:cosmic_latte_dict = {
                           \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorschemeBackground'),
                           \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorschemeBackground'),
                           \ 'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorschemeBackground'),
+                          \ 'ToggleScheme'      : function('colorschemefunctions#ToggleBackground'),
                           \ }
 
 let s:deep_space_dict = {
@@ -143,6 +148,7 @@ let s:edge_dict = {
                   \ 'StatusColorscheme'   : function('colorschemefunctions#StatusColorschemeStyle'),
                   \ 'LightlineTheme'      : function('colorschemefunctions#LightlineThemeColorscheme'),
                   \ 'AirlineTheme'        : function('colorschemefunctions#AirlineThemeColorscheme'),
+                  \ 'ToggleScheme'      : function('colorschemefunctions#ToggleBackground'),
                   \ }
 
 let s:flattened_dict = {
@@ -152,6 +158,7 @@ let s:flattened_dict = {
                        \ 'NextVariant'       : function('colorschemefunctions#NextColorschemeVariantMap'),
                        \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
                        \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
+                       \ 'ToggleScheme'      : function('colorschemefunctions#ToggleColorscheme'),
                        \ }
 function! s:flattened_dict.Map (key,val)
   return self.name . a:val
@@ -159,14 +166,17 @@ endfunction
 
 let s:forest_night_dict = {
                           \ 'name'              : 'forest-night',
+                          \ 'dark_tag'          : 'dark',
+                          \ 'light_tag'         : 'light',
                           \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
                           \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
                           \ 'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
+                          \ 'ToggleScheme'      : function('colorschemefunctions#ToggleColorscheme'),
                           \ }
 
 let s:greygull_dict = {
                       \ 'name'              : 'greygull',
-                      \ 'variants'          : g:seadbird_themes,
+                      \ 'variants'          : g:seabird_themes,
                       \ 'NextVariant'       : function('colorschemefunctions#NextColorschemeVariant'),
                       \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
                       \ }
@@ -182,6 +192,7 @@ let s:gruvbox_material_dict = {
                               \ 'StatusColorscheme'   : function('colorschemefunctions#StatusColorschemeStyle'),
                               \ 'LightlineTheme'      : function('colorschemefunctions#LightlineThemeColorscheme'),
                               \ 'AirlineTheme'        : function('colorschemefunctions#AirlineThemeColorschemeTR'),
+                              \ 'ToggleScheme'      : function('colorschemefunctions#ToggleBackground'),
                               \ }
 
 let s:iceberg_dict = {
@@ -215,6 +226,7 @@ let s:materialbox_dict = {
                          \ 'NextVariant'         : function('colorschemefunctions#NextStyleVariant'),
                          \ 'StatusColorscheme'   : function('colorschemefunctions#StatusColorschemeStyle'),
                          \ 'AirlineTheme'        : function('colorschemefunctions#AirlineThemeColorscheme'),
+                         \ 'ToggleScheme'      : function('colorschemefunctions#ToggleBackground'),
                          \ }
 
 let s:nord_dict = {
@@ -230,6 +242,7 @@ let s:one_dict = {
                  \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorschemeBackground'),
                  \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
                  \ 'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
+                 \ 'ToggleScheme'      : function('colorschemefunctions#ToggleBackground'),
                  \ }
 
 let s:palenight_dict = {
@@ -245,11 +258,12 @@ let s:pencil_dict = {
                     \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorschemeBackground'),
                     \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
                     \ 'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
+                    \ 'ToggleScheme'      : function('colorschemefunctions#ToggleBackground'),
                     \ }
 
 let s:petrel_dict = {
                     \ 'name'              : 'petrel',
-                    \ 'variants'          : g:seadbird_themes,
+                    \ 'variants'          : g:seabird_themes,
                     \ 'NextVariant'       : function('colorschemefunctions#NextColorschemeVariant'),
                     \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
                     \ }
@@ -265,7 +279,7 @@ let s:pop_punk_dict = {
 
 let s:seagull_dict = {
                      \ 'name'              : 'seagull',
-                     \ 'variants'          : g:seadbird_themes,
+                     \ 'variants'          : g:seabird_themes,
                      \ 'NextVariant'       : function('colorschemefunctions#NextColorschemeVariant'),
                      \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
                      \ 'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
@@ -287,12 +301,14 @@ let s:snow_dict = {
                   \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorschemeBackground'),
                   \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorschemeBackground'),
                   \ 'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorschemeBackground'),
+                  \ 'ToggleScheme'      : function('colorschemefunctions#ToggleBackground'),
                   \ }
 
 let s:space_vim_theme_dict = {
                              \ 'name'              : 'space_vim_theme',
                              \ 'NextVariant'       : function('colorschemefunctions#NextBackgroundVariant'),
                              \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorschemeBackground'),
+                             \ 'ToggleScheme'      : function('colorschemefunctions#ToggleBackground'),
                              \ }
 function! s:space_vim_theme_dict.LightlineTheme()
   return 'space_vim_' . &background
@@ -311,11 +327,12 @@ let s:stellarized_dict = {
                          \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorschemeBackground'),
                          \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorschemeBackground'),
                          \ 'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorschemeBackground'),
+                         \ 'ToggleScheme'      : function('colorschemefunctions#ToggleBackground'),
                          \ }
 
 let s:stormpetrel_dict = {
                          \ 'name'              : 'stormpetrel',
-                         \ 'variants'          : g:seadbird_themes,
+                         \ 'variants'          : g:seabird_themes,
                          \ 'NextVariant'       : function('colorschemefunctions#NextColorschemeVariant'),
                          \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
                          \ }
@@ -358,9 +375,12 @@ let s:vimspectr_dict = {
                        \ 'comparison'        : 'fuzzy',
                        \ 'variant_type'      : 'vimspectr',
                        \ 'variants'          : ['grey', '0', '30', '60', '90', '120', '150', '180', '210', '240', '270', '300', '330'],
+                       \ 'dark_tag'          : 'dark',
+                       \ 'light_tag'         : 'light',
                        \ 'NextVariant'       : function('colorschemefunctions#NextColorschemeVariantMap'),
                        \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
                        \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorschemeTR'),
+                       \ 'ToggleScheme'      : function('colorschemefunctions#ToggleColorscheme'),
                        \ }
 function! s:vimspectr_dict.Map (key,val)
   return self.name . a:val . '-' . &background
@@ -371,6 +391,7 @@ let s:vadelma_dict = {
                      \ 'NextVariant'       : function('colorschemefunctions#NextBackgroundVariant'),
                      \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorschemeBackground'),
                      \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
+                     \ 'ToggleScheme'      : function('colorschemefunctions#ToggleBackground'),
                      \ }
 
 let g:colorscheme_map = [
@@ -415,4 +436,4 @@ let g:colorscheme_groups.group1 = g:vimspectr_light_themes
 let g:colorscheme_groups.group2 = g:vimspectr_dark_themes
 let g:colorscheme_groups.group3 = g:atelier_light_themes
 let g:colorscheme_groups.group4 = g:atelier_dark_themes
-let g:colorscheme_groups.group5 = g:seadbird_themes
+let g:colorscheme_groups.group5 = g:seabird_themes

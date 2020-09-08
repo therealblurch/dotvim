@@ -300,6 +300,7 @@ source ~/.vim/colorscheme_variables.vim
 
 nmap <silent> <leader>- :<c-u>call colorschemefunctions#SchemeVariant(-v:count1)<cr>
 nmap <silent> <leader>+ :<c-u>call colorschemefunctions#SchemeVariant(+v:count1)<cr>
+nmap <silent> <leader>b :<c-u>call colorschemefunctions#ToggleScheme()<cr>
 nmap <silent> <leader>A :<c-u>call xolox#colorscheme_switcher#switch_to('Atelier_SeasideLight')<cr>
 " }}}
 
