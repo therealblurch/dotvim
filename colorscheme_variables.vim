@@ -130,14 +130,6 @@ let g:colorscheme_map = [
                         \ 'Map'               : function('AtelierMap'),
                         \ },
                         \ {
-                        \ 'name'              : 'PaperColor',
-                        \ 'NextVariant'       : function('colorschemefunctions#NextBackgroundVariant'),
-                        \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorschemeBackground'),
-                        \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
-                        \ 'AirlineTheme'      : function('PapercolorAirlineTheme'),
-                        \ 'ToggleScheme'      : function('colorschemefunctions#ToggleBackground'),
-                        \ },
-                        \ {
                         \ 'name'              : 'apprentice',
                         \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
                         \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
@@ -275,6 +267,13 @@ let g:colorscheme_map = [
                         \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
                         \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
                         \ 'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
+                        \ },
+                        \ 'name'              : 'PaperColor',
+                        \ 'NextVariant'       : function('colorschemefunctions#NextBackgroundVariant'),
+                        \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorschemeBackground'),
+                        \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
+                        \ 'AirlineTheme'      : function('PapercolorAirlineTheme'),
+                        \ 'ToggleScheme'      : function('colorschemefunctions#ToggleBackground'),
                         \ },
                         \ {
                         \ 'name'              : 'pencil',
