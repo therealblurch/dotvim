@@ -100,7 +100,7 @@ function! VimspectrMap (key,val) dict
 endfunction
 
 let g:colorscheme_map = [
-			\ {
+                        \ {
                         \ 'name'              : 'Atelier',
                         \ 'comparison'        : 'fuzzy',
                         \ 'variants'          : ['Cave', 'Dune', 'Estuary', 'Forest', 'Heath', 'Lakeside', 'Plateau', 'Savanna', 'Seaside', 'Sulphurpool'],
@@ -314,13 +314,13 @@ let g:colorscheme_map = [
                         \ 'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorschemeBackground'),
                         \ 'ToggleScheme'      : function('colorschemefunctions#ToggleBackground'),
                         \ },
-			\ {
+                        \ {
                         \ 'name'              : 'space_vim_theme',
                         \ 'pat'               : 'theme',
                         \ 'NextVariant'       : function('colorschemefunctions#NextBackgroundVariant'),
                         \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorschemeBackground'),
                         \ 'ToggleScheme'      : function('colorschemefunctions#ToggleBackground'),
-			\ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorschemeSubBackground')
+                        \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorschemeSubBackground')
                         \ },
                         \ {
                         \ 'name'              : 'srcery',
@@ -341,7 +341,7 @@ let g:colorscheme_map = [
                         \ 'variants'          : g:seabird_themes,
                         \ 'NextVariant'       : function('colorschemefunctions#NextColorschemeVariant'),
                         \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
-			\ 'AirlineTheme'      : function('SeagullAirlineTheme'),
+                        \ 'AirlineTheme'      : function('SeagullAirlineTheme'),
                         \ },
                         \ {
                         \ 'name'              : 'tokyo-metro',
@@ -350,24 +350,24 @@ let g:colorscheme_map = [
                         \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
                         \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorschemeSub'),
                         \ 'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorschemeSub'),
-	                \ },
+                        \ },
                         \ {
                         \ 'name'              : 'typewriter',
                         \ 'variants'          : ['', '-night'],
                         \ 'NextVariant'       : function('colorschemefunctions#NextColorschemeVariantMap'),
                         \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
-			\ 'LightlineTheme'    : function('TypewriterLightlineTheme'),
+                        \ 'LightlineTheme'    : function('TypewriterLightlineTheme'),
                         \ 'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
-			\ 'Map'               : function('TypewriterMap'),
+                        \ 'Map'               : function('TypewriterMap'),
                         \ },
                         \ {
                         \ 'name'              : 'typewriter-night',
                         \ 'variants'          : ['', '-night'],
                         \ 'NextVariant'       : function('colorschemefunctions#NextColorschemeVariantMap'),
                         \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
-			\ 'LightlineTheme'    : function('TypewriterNightLightlineTheme'),
-			\ 'AirlineTheme'      : function('TypewriterNightAirlineTheme'),
-			\ 'Map'               : function('TypewriterMap'),
+                        \ 'LightlineTheme'    : function('TypewriterNightLightlineTheme'),
+                        \ 'AirlineTheme'      : function('TypewriterNightAirlineTheme'),
+                        \ 'Map'               : function('TypewriterMap'),
                         \ },
                         \ {
                         \ 'name'              : 'vimspectr',
@@ -382,7 +382,7 @@ let g:colorscheme_map = [
                         \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
                         \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorschemeTR'),
                         \ 'ToggleScheme'      : function('colorschemefunctions#ToggleColorscheme'),
-			\ 'Map'               : function('VimspectrMap'),
+                        \ 'Map'               : function('VimspectrMap'),
                         \ },
                         \ {
                         \ 'name'              : 'vadelma',
