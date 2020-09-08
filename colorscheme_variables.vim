@@ -344,6 +344,14 @@ let g:colorscheme_map = [
 			\ 'AirlineTheme'      : function('SeagullAirlineTheme'),
                         \ },
                         \ {
+                        \ 'name'              : 'tokyo-metro',
+                        \ 'pat'               : '-',
+                        \ 'sub'               : '',
+                        \ 'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
+                        \ 'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorschemeSub'),
+                        \ 'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorschemeSub'),
+	                \ },
+                        \ {
                         \ 'name'              : 'typewriter',
                         \ 'variants'          : ['', '-night'],
                         \ 'NextVariant'       : function('colorschemefunctions#NextColorschemeVariantMap'),

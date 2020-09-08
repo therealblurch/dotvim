@@ -172,6 +172,7 @@ function! PackagerInit() abort
   call packager#add('dracula/vim',                            {'package': 'colors', 'name': 'dracula'})
   call packager#add('drewtempelmeyer/palenight.vim',          {'package': 'colors'})
   call packager#add('kaicataldo/material.vim',                {'package': 'colors', 'name': 'material'})
+  call packager#add('koirand/tokyo-metro.vim',                {'package': 'colors'})
   call packager#add('liuchengxu/space-vim-theme',             {'package': 'colors'})
   call packager#add('logico-dev/typewriter',                  {'package': 'colors'})
   call packager#add('mkarmona/materialbox',                   {'package': 'colors'})
