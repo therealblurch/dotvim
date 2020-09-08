@@ -17,8 +17,12 @@ function! myfunctions#WhichStatus(colorscheme)
   else
     let l:lightlinetheme = ''
   endif
-  if (empty(l:airlinetheme) && empty(l:lightlinetheme)) || exists('g:buftabline_show')
-    let l:user_status = "none"
+  if (empty(l:airlinetheme) && empty(l:lightlinetheme))
+    if (g:prefer_airline)
+      let l:user_status = "airline"
+    else
+      let l:user_statue = "lightline"
+    endif
   elseif exists('g:loaded_airline')
     let l:user_status = "airline"
   elseif exists('g:loaded_lightline')
