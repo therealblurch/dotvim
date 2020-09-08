@@ -234,9 +234,9 @@ let g:colorscheme_map = [
                         \ {
                         \ 'name'                : 'materialbox',
                         \ 'variants'            : ['soft', 'medium', 'hard'],
-                        \ 'style_variable_name' : (&background == 'dark') ? 'g:materialbox_contrast_dark' : 'g:materialbox_contrast_light',
-                        \ 'NextVariant'         : function('colorschemefunctions#NextStyleVariant'),
-                        \ 'StatusColorscheme'   : function('colorschemefunctions#StatusColorschemeStyle'),
+                        \ 'style_variable_name' : 'g:materialbox_contrast',
+                        \ 'NextVariant'         : function('colorschemefunctions#NextStyleBackgroundVariant'),
+                        \ 'StatusColorscheme'   : function('colorschemefunctions#StatusColorschemeBackgroundStyle'),
                         \ 'AirlineTheme'        : function('colorschemefunctions#AirlineThemeColorscheme'),
                         \ 'ToggleScheme'        : function('colorschemefunctions#ToggleBackground'),
                         \ },

@@ -20,6 +20,12 @@ function! colorschemefunctions#NextStyleVariant(delta) dict
   call xolox#colorscheme_switcher#switch_to(self.name)
 endfunction
 
+function! colorschemefunctions#NextStyleBackgroundVariant(delta) dict
+  let l:num_variants = len(self.variants)
+  exec 'let ' . self.style_variable_name . '_' . &background . ' = self.variants[((a:delta+index(self.variants, ' . self.style_variable_name . '_' . &background . ')) % l:num_variants + l:num_variants) % l:num_variants]'
+  call xolox#colorscheme_switcher#switch_to(self.name)
+endfunction
+
 function! colorschemefunctions#NextBackgroundVariant(delta) dict
   let &background = (&background == 'dark') ? 'light' : 'dark'
 endfunction
@@ -39,6 +45,11 @@ endfunction
 
 function! colorschemefunctions#StatusColorschemeStyle() dict
   exec 'let l:current_style = ' . self.style_variable_name
+  return g:colors_name . '/' . l:current_style
+endfunction
+
+function! colorschemefunctions#StatusColorschemeBackgroundStyle() dict
+  exec 'let l:current_style = ' . self.style_variable_name . '_' . &background
   return g:colors_name . '/' . l:current_style
 endfunction
 
