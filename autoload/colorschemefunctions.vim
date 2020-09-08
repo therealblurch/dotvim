@@ -51,7 +51,23 @@ function! colorschemefunctions#AirlineThemeColorscheme() dict
 endfunction
 
 function! colorschemefunctions#AirlineThemeColorschemeTR() dict
-  return tr(g:colors_name, '-', '_')
+  return tr(g:colors_name, self.tr_from, self.tr_to)
+endfunction
+
+function! colorschemefunctions#AirlineThemeColorschemeSub() dict
+  return substitute(g:colors_name, self.pat, self.sub, 'g')
+endfunction
+
+function! colorschemefunctions#AirlineThemeColorschemeSubBackground() dict
+  return substitute(g:colors_name, self.pat, &background, 'g')
+endfunction
+
+function! colorschemefunctions#AirlineThemeColorschemeLower() dict
+  return tolower(g:colors_name)
+endfunction
+
+function! colorschemefunctions#AirlineThemeColorschemeSuffix() dict
+  return g:colors_name . self.suffix
 endfunction
 
 function! colorschemefunctions#AirlineThemeColorschemeBackground() dict
@@ -63,7 +79,23 @@ function! colorschemefunctions#LightlineThemeColorscheme() dict
 endfunction
 
 function! colorschemefunctions#LightlineThemeColorschemeTR() dict
-  return tr(g:colors_name, '-', '_')
+  return tr(g:colors_name, self.tr_from, self.tr_to)
+endfunction
+
+function! colorschemefunctions#LightlineThemeColorschemeSub() dict
+  return substitute(g:colors_name, self.pat, self.sub, 'g')
+endfunction
+
+function! colorschemefunctions#LightlineThemeColorschemeSubBackground() dict
+  return substitute(g:colors_name, self.pat, &background, 'g')
+endfunction
+
+function! colorschemefunctions#LightlineThemeColorschemeLower() dict
+  return tolower(g:colors_name)
+endfunction
+
+function! colorschemefunctions#LightlineThemeColorschemeSuffix() dict
+  return g:colors_name . self.suffix
 endfunction
 
 function! colorschemefunctions#LightlineThemeColorschemeBackground() dict
