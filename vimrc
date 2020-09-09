@@ -169,6 +169,7 @@ function! PackagerInit() abort
   call packager#add('atelierbram/vim-colors_atelier-schemes', {'package': 'colors'})
   call packager#add('ayu-theme/ayu-vim',                      {'package': 'colors'})
   call packager#add('bignimbus/pop-punk.vim',                 {'package': 'colors'})
+  call packager#add('chriskempson/base16-vim',                {'package': 'colors'})
   call packager#add('cocopon/iceberg.vim',                    {'package': 'colors'})
   call packager#add('dracula/vim',                            {'package': 'colors', 'name': 'dracula'})
   call packager#add('drewtempelmeyer/palenight.vim',          {'package': 'colors'})

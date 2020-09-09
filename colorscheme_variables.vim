@@ -113,6 +113,11 @@ let g:colorscheme_map = [
                         \   'AirlineTheme'        : function('colorschemefunctions#AirlineThemeColorscheme'),
                         \ },
                         \ {
+                        \   'name'              : 'base16',
+                        \   'comparison'        : 'fuzzy',
+                        \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
+                        \ },
+                        \ {
                         \   'name'              : 'cosmic_latte',
                         \   'NextVariant'       : function('colorschemefunctions#NextBackgroundVariant'),
                         \   'StatusColorscheme' : function('colorschemefunctions#StatusColorschemeBackground'),
