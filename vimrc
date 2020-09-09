@@ -196,6 +196,7 @@ function! PackagerInit() abort
   call packager#add('severij/vadelma',                        {'package': 'colors'})
   call packager#add('srcery-colors/srcery-vim',               {'package': 'colors'})
   call packager#add('toupeira/vim-desertink',                 {'package': 'colors'})
+  call packager#add('tpope/vim-vividchalk',                   {'package': 'colors'})
   call packager#add('tyrannicaltoucan/vim-deep-space',        {'package': 'colors'})
 
   " writing plugins

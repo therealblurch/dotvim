@@ -367,6 +367,10 @@ let g:colorscheme_map = [
                         \   'ToggleScheme'      : function('colorschemefunctions#ToggleBackground'),
                         \ },
                         \ {
+                        \   'name'              : 'vividchalk',
+                        \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
+                        \ },
+                        \ {
                         \   'name'              : 'xcode',
                         \   'comparison'        : 'fuzzy',
                         \   'variants'          : ['xcodedark', 'xcodelight', 'xcodewwdc', 'xcodedarkhc', 'xcodelighthc'],
