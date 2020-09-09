@@ -86,6 +86,7 @@ let g:colorscheme_map = [
                         \   'name'              : 'base16',
                         \   'comparison'        : 'fuzzy',
                         \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
+                        \   'AirlineTheme'      : function('myfunctions#Base16AirlineTheme'),
                         \ },
                         \ {
                         \   'name'              : 'cosmic_latte',
