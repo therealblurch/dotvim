@@ -146,6 +146,11 @@ let g:colorscheme_map = [
                         \   'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
                         \ },
                         \ {
+                        \   'name'              : 'distinguished',
+                        \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
+                        \   'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
+                        \ },
+                        \ {
                         \   'name'              : 'dracula',
                         \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
                         \   'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
