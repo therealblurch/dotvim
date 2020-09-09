@@ -198,6 +198,7 @@ function! PackagerInit() abort
   call packager#add('toupeira/vim-desertink',                 {'package': 'colors'})
   call packager#add('tpope/vim-vividchalk',                   {'package': 'colors'})
   call packager#add('tyrannicaltoucan/vim-deep-space',        {'package': 'colors'})
+  call packager#add('vim-scripts/twilight',                   {'package': 'colors'})
 
   " writing plugins
   call packager#add('dhruvasagar/vim-table-mode',             {'package': 'write'})

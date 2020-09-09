@@ -346,6 +346,10 @@ let g:colorscheme_map = [
                         \   'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorschemeSub'),
                         \ },
                         \ {
+                        \   'name'              : 'twilight',
+                        \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
+                        \ },
+                        \ {
                         \   'name'              : 'vimspectr',
                         \   'comparison'        : 'fuzzy',
                         \   'variants'          : ['grey', '0', '30', '60', '90', '120', '150', '180', '210', '240', '270', '300', '330'],
