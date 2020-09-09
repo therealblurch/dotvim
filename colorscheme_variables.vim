@@ -53,36 +53,6 @@ let g:seabird_themes         = [
 " comparison : If this is set to 'fuzzy' don't require an exact name match
 " variants : a list of possible variants
 
-function! AtelierMap (key,val) dict
-  if &background == 'light'
-    let l:back = 'Light'
-  else
-    let l:back = 'Dark'
-  endif
-  return self.name . '_' . a:val . l:back
-endfunction
-
-function! AtelierLightlineTheme() dict
-  if &background == 'Light'
-    let l:lightlinetheme = split (g:colors_name, "Light")
-  else
-    let l:lightlinetheme = split (g:colors_name, "Dark")
-  endif
-  return l:lightlinetheme
-endfunction
-
-function! FlattenedMap (key,val) dict
-  return self.name . a:val
-endfunction
-
-function! SeagullAirlineTheme() dict
-  return 'seagull'
-endfunction
-
-function! VimspectrMap (key,val) dict
-  return self.name . a:val . '-' . &background
-endfunction
-
 let g:colorscheme_map = [
                         \ {
                         \   'name'              : 'Atelier',
@@ -92,10 +62,10 @@ let g:colorscheme_map = [
                         \   'light_tag'         : 'Light',
                         \   'NextVariant'       : function('colorschemefunctions#NextColorschemeVariantMap'),
                         \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
-                        \   'LightlineTheme'    : function('AtelierLightlineTheme'),
+                        \   'LightlineTheme'    : function('myfunctions#AtelierLightlineTheme'),
                         \   'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
                         \   'ToggleScheme'      : function('colorschemefunctions#ToggleColorscheme'),
-                        \   'Map'               : function('AtelierMap'),
+                        \   'Map'               : function('myfunctions#AtelierMap'),
                         \ },
                         \ {
                         \   'name'              : 'apprentice',
@@ -174,7 +144,7 @@ let g:colorscheme_map = [
                         \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
                         \   'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
                         \   'ToggleScheme'      : function('colorschemefunctions#ToggleColorscheme'),
-                        \   'Map'               : function('FlattenedMap'),
+                        \   'Map'               : function('myfunctions#FlattenedMap'),
                         \ },
                         \ {
                         \   'name'              : 'forest-night',
@@ -190,7 +160,7 @@ let g:colorscheme_map = [
                         \   'variants'          : g:seabird_themes,
                         \   'NextVariant'       : function('colorschemefunctions#NextColorschemeVariant'),
                         \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
-                        \   'AirlineTheme'      : function('SeagullAirlineTheme'),
+                        \   'AirlineTheme'      : function('myfunctions#SeagullAirlineTheme'),
                         \ },
                         \ {
                         \   'name'                : 'gruvbox-material',
@@ -275,7 +245,7 @@ let g:colorscheme_map = [
                         \   'variants'          : g:seabird_themes,
                         \   'NextVariant'       : function('colorschemefunctions#NextColorschemeVariant'),
                         \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
-                        \   'AirlineTheme'      : function('SeagullAirlineTheme'),
+                        \   'AirlineTheme'      : function('myfunctions#SeagullAirlineTheme'),
                         \ },
                         \ {
                         \   'name'              : 'pop-punk',
@@ -335,7 +305,7 @@ let g:colorscheme_map = [
                         \   'variants'          : g:seabird_themes,
                         \   'NextVariant'       : function('colorschemefunctions#NextColorschemeVariant'),
                         \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
-                        \   'AirlineTheme'      : function('SeagullAirlineTheme'),
+                        \   'AirlineTheme'      : function('myfunctions#SeagullAirlineTheme'),
                         \ },
                         \ {
                         \   'name'              : 'tokyo-metro',
@@ -361,7 +331,7 @@ let g:colorscheme_map = [
                         \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
                         \   'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorschemeTR'),
                         \   'ToggleScheme'      : function('colorschemefunctions#ToggleColorscheme'),
-                        \   'Map'               : function('VimspectrMap'),
+                        \   'Map'               : function('myfunctions#VimspectrMap'),
                         \ },
                         \ {
                         \   'name'              : 'vadelma',
