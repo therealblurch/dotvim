@@ -527,7 +527,7 @@ augroup StatusBarTheme
                       \ | packadd vim-airline
                       \ | packadd vim-airline-themes
                       \ | let g:airline_section_x = airline#section#create_right(['%-25{g:current_color_dictionary.StatusColorscheme()}', 'bookmark', 'tagbar', 'vista', 'gutentags', 'grepper', 'filetype'])
-                      \ | call colorschemefunctions#AirlineTheme(g:colors_name)
+                      \ | call colorschemefunctions#AirlineTheme()
                     \ | endif
                     \ | if myfunctions#WhichStatus(g:colors_name) == "lightline"
                       \ | packadd lightline.vim | packadd lightline-buffer
@@ -538,7 +538,7 @@ augroup StatusBarTheme
                       \ | call lightlinefunctions#LightlineUpdate()
                     \ | endif
                     \ | if myfunctions#WhichStatus(g:colors_name) == "none" && exists('g:loaded_airline')
-                      \ | call colorschemefunctions#AirlineTheme(g:colors_name)
+                      \ | call colorschemefunctions#AirlineTheme()
                     \ | endif
                     \ | if myfunctions#WhichStatus(g:colors_name) == "none" && !exists('g:loaded_lightline') && !exists('g:loaded_airline')
                       \ | packadd vim-buftabline

@@ -136,17 +136,11 @@ function! colorschemefunctions#ToggleScheme() abort
   endif
 endfunction
 
-function! colorschemefunctions#AirlineTheme(colorscheme)
+function! colorschemefunctions#AirlineTheme()
   if has_key (g:current_color_dictionary, 'AirlineTheme')
-    let l:airlinetheme = g:current_color_dictionary.AirlineTheme()
-  else
-    let l:airlinetheme = ''
+    let g:airline_theme = g:current_color_dictionary.AirlineTheme()
   endif
-  if empty(l:airlinetheme)
-    exec "AirlineTheme distinguished"
-  else
-    exec "AirlineTheme " . l:airlinetheme
-  endif
+  exec "AirlineTheme " . g:airline_theme
 endfunction
 
 function! s:ChooseNextColorscheme (last_colorscheme)
