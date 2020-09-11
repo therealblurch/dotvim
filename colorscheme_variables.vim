@@ -68,6 +68,11 @@ let g:colorscheme_map = [
                         \   'Map'               : function('myfunctions#AtelierMap'),
                         \ },
                         \ {
+                        \   'name'              : 'atlas',
+                        \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
+                        \   'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
+                        \ },
+                        \ {
                         \   'name'              : 'apprentice',
                         \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
                         \   'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
