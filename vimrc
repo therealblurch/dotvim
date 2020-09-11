@@ -164,6 +164,7 @@ function! PackagerInit() abort
   call packager#add('vimtaku/vim-textobj-keyvalue',           {'package': 'textobj'})
 
   " colorschemes
+  call packager#add('ajmwagar/vim-deus',                      {'package': 'colors'})
   call packager#add('arcticicestudio/nord-vim',               {'package': 'colors', 'branch': 'develop'})
   call packager#add('arzg/vim-colors-xcode',                  {'package': 'colors'})
   call packager#add('atelierbram/vim-colors_atelier-schemes', {'package': 'colors'})

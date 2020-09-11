@@ -112,7 +112,7 @@ let g:colorscheme_map = [
                         \   'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
                         \ },
                         \ {
-                        \   'name'              : 'desertink',
+                        \   'name'              : 'deus',
                         \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
                         \   'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
                         \ },
