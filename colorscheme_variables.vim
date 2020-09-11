@@ -127,6 +127,11 @@ let g:colorscheme_map = [
                         \   'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
                         \ },
                         \ {
+                        \   'name'              : 'dogrun',
+                        \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
+                        \   'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
+                        \ },
+                        \ {
                         \   'name'              : 'dracula',
                         \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
                         \   'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
