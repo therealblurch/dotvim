@@ -206,6 +206,13 @@ let g:colorscheme_map = [
                         \   'ToggleScheme'        : function('colorschemefunctions#ToggleBackground'),
                         \ },
                         \ {
+                        \   'name'                : 'night-owl',
+                        \   'pat'               : '-',
+                        \   'sub'               : '',
+                        \   'StatusColorscheme'   : function('colorschemefunctions#StatusColorscheme'),
+                        \   'LightlineTheme'      : function('colorschemefunctions#LightlineThemeColorschemeSub'),
+                        \ },
+                        \ {
                         \   'name'              : 'nord',
                         \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
                         \   'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
