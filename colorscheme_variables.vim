@@ -192,6 +192,11 @@ let g:colorscheme_map = [
                         \   'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
                         \ },
                         \ {
+                        \   'name'              : 'landscape',
+                        \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
+                        \   'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
+                        \ },
+                        \ {
                         \   'name'                : 'material',
                         \   'variants'            : ['default', 'palenight', 'ocean', 'lighter', 'darker'],
                         \   'style_variable_name' : 'g:material_theme_style',
