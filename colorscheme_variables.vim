@@ -86,6 +86,7 @@ let g:colorscheme_map = [
                         \   'StatusColorscheme'   : function('colorschemefunctions#StatusColorschemeStyle'),
                         \   'LightlineTheme'      : function('colorschemefunctions#LightlineThemeColorscheme'),
                         \   'AirlineTheme'        : function('colorschemefunctions#AirlineThemeColorscheme'),
+                        \   'ToggleScheme'        : function('colorschemefunctions#ToggleColorschemeStyle'),
                         \ },
                         \ {
                         \   'name'              : 'base16',

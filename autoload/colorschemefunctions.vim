@@ -39,6 +39,13 @@ function! colorschemefunctions#ToggleColorscheme() dict
   call xolox#colorscheme_switcher#switch_to(l:new_colorscheme)
 endfunction
 
+function! colorschemefunctions#ToggleColorschemeStyle() dict
+  exec 'let l:current_style = ' . self.style_variable_name
+  let l:current_style = (l:current_style == 'dark') ? 'light' : 'dark'
+  exec 'let ' . self.style_variable_name . " = '" . l:current_style . "'"
+  call xolox#colorscheme_switcher#switch_to(self.name)
+endfunction
+
 function! colorschemefunctions#StatusColorscheme() dict
   return g:colors_name
 endfunction
