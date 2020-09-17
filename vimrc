@@ -563,9 +563,9 @@ imap <expr> <right> mucomplete#extend_fwd("\<right>")
 imap <expr> <left> mucomplete#extend_bwd("\<left>")
 
 let g:mucomplete#chains = {
-                        \ 'default': ['snip', 'path', 'omni', 'keyn', 'dict', 'uspl'],
+                        \ 'default'              : ['snip', 'path', 'omni', 'keyn', 'dict', 'uspl'],
                         \ 'verilog_systemverilog': ['snip', 'tags', 'path', 'omni', 'keyn'],
-                        \ 'vim': ['snip', 'path', 'cmd', 'keyn'],
+                        \ 'vim'                  : ['snip', 'path', 'cmd', 'keyn'],
                         \ }
 " }}}
 
