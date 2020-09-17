@@ -1,51 +1,49 @@
-let g:vimspectr_light_themes = [
-                             \ 'vimspectr0-light'  , 'vimspectr30-light' , 'vimspectr60-light' ,
-                             \ 'vimspectr90-light' , 'vimspectr120-light', 'vimspectr150-light',
-                             \ 'vimspectr180-light', 'vimspectr210-light', 'vimspectr240-light',
-                             \ 'vimspectr270-light', 'vimspectr300-light', 'vimspectr330-light',
-                             \ 'vimspectrgrey-light'
-                             \ ]
-
-let g:atelier_light_themes   = [
-                             \ 'Atelier_CaveLight',
-                             \ 'Atelier_DuneLight',
-                             \ 'Atelier_EstuaryLight',
-                             \ 'Atelier_ForestLight',
-                             \ 'Atelier_HeathLight',
-                             \ 'Atelier_LakesideLight',
-                             \ 'Atelier_PlateauLight',
-                             \ 'Atelier_SavannaLight',
-                             \ 'Atelier_SeasideLight',
-                             \ 'Atelier_SulphurpoolLight',
-                             \ ]
-
-let g:vimspectr_dark_themes  = [
-                             \ 'vimspectr0-dark'  , 'vimspectr30-dark' , 'vimspectr60-dark' ,
-                             \ 'vimspectr90-dark' , 'vimspectr120-dark', 'vimspectr150-dark',
-                             \ 'vimspectr180-dark', 'vimspectr210-dark', 'vimspectr240-dark',
-                             \ 'vimspectr270-dark', 'vimspectr300-dark', 'vimspectr330-dark',
-                             \ 'vimspectrgrey-dark'
-                             \ ]
-
-let g:atelier_dark_themes    = [
-                             \ 'Atelier_CaveDark',
-                             \ 'Atelier_DuneDark',
-                             \ 'Atelier_EstuaryDark',
-                             \ 'Atelier_ForestDark',
-                             \ 'Atelier_HeathDark',
-                             \ 'Atelier_LakesideDark',
-                             \ 'Atelier_PlateauDark',
-                             \ 'Atelier_SavannaDark',
-                             \ 'Atelier_SeasideDark',
-                             \ 'Atelier_SulphurpoolDark',
-                             \ ]
-
-let g:seabird_themes         = [
-                             \ 'greygull',
-                             \ 'petrel',
-                             \ 'seagull',
-                             \ 'stormpetrel'
-                             \ ]
+let g:colorscheme_groups = {
+                           \  'vimspectr_light_themes' : [
+                           \                               'vimspectr0-light'  , 'vimspectr30-light' , 'vimspectr60-light' ,
+                           \                               'vimspectr90-light' , 'vimspectr120-light', 'vimspectr150-light',
+                           \                               'vimspectr180-light', 'vimspectr210-light', 'vimspectr240-light',
+                           \                               'vimspectr270-light', 'vimspectr300-light', 'vimspectr330-light',
+                           \                               'vimspectrgrey-light'
+                           \                              ],
+                           \  'atelier_light_themes'   : [
+                           \                               'atelier_cavelight',
+                           \                               'atelier_dunelight',
+                           \                               'atelier_estuarylight',
+                           \                               'atelier_forestlight',
+                           \                               'atelier_heathlight',
+                           \                               'atelier_lakesidelight',
+                           \                               'atelier_plateaulight',
+                           \                               'atelier_savannalight',
+                           \                               'atelier_seasidelight',
+                           \                               'atelier_sulphurpoollight',
+                           \                             ],
+                           \  'vimspectr_dark_themes'  : [
+                           \                               'vimspectr0-dark'  , 'vimspectr30-dark' , 'vimspectr60-dark' ,
+                           \                               'vimspectr90-dark' , 'vimspectr120-dark', 'vimspectr150-dark',
+                           \                               'vimspectr180-dark', 'vimspectr210-dark', 'vimspectr240-dark',
+                           \                               'vimspectr270-dark', 'vimspectr300-dark', 'vimspectr330-dark',
+                           \                               'vimspectrgrey-dark'
+                           \                             ],
+                           \  'atelier_dark_themes'    : [
+                           \                               'atelier_cavedark',
+                           \                               'atelier_dunedark',
+                           \                               'atelier_estuarydark',
+                           \                               'atelier_forestdark',
+                           \                               'atelier_heathdark',
+                           \                               'atelier_lakesidedark',
+                           \                               'atelier_plateaudark',
+                           \                               'atelier_savannadark',
+                           \                               'atelier_seasidedark',
+                           \                               'atelier_sulphurpooldark',
+                           \                             ],
+                           \  'seabird_themes'         : [
+                           \                               'greygull',
+                           \                               'petrel',
+                           \                               'seagull',
+                           \                               'stormpetrel'
+                           \                             ],
+                           \ }
 
 "g:colorscheme_map is a list of dictionaries that specify options for
 "colorschemes.  The dictionary keys are as follows:
@@ -169,7 +167,7 @@ let g:colorscheme_map = [
                         \ },
                         \ {
                         \   'name'              : 'greygull',
-                        \   'variants'          : g:seabird_themes,
+                        \   'variants'          : g:colorscheme_groups.seabird_themes,
                         \   'NextVariant'       : function('colorschemefunctions#NextColorschemeVariant'),
                         \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
                         \   'AirlineTheme'      : function('myfunctions#SeagullAirlineTheme'),
@@ -266,7 +264,7 @@ let g:colorscheme_map = [
                         \ },
                         \ {
                         \   'name'              : 'petrel',
-                        \   'variants'          : g:seabird_themes,
+                        \   'variants'          : g:colorscheme_groups.seabird_themes,
                         \   'NextVariant'       : function('colorschemefunctions#NextColorschemeVariant'),
                         \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
                         \   'AirlineTheme'      : function('myfunctions#SeagullAirlineTheme'),
@@ -280,7 +278,7 @@ let g:colorscheme_map = [
                         \ },
                         \ {
                         \   'name'              : 'seagull',
-                        \   'variants'          : g:seabird_themes,
+                        \   'variants'          : g:colorscheme_groups.seabird_themes,
                         \   'NextVariant'       : function('colorschemefunctions#NextColorschemeVariant'),
                         \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
                         \   'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
@@ -326,7 +324,7 @@ let g:colorscheme_map = [
                         \ },
                         \ {
                         \   'name'              : 'stormpetrel',
-                        \   'variants'          : g:seabird_themes,
+                        \   'variants'          : g:colorscheme_groups.seabird_themes,
                         \   'NextVariant'       : function('colorschemefunctions#NextColorschemeVariant'),
                         \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
                         \   'AirlineTheme'      : function('myfunctions#SeagullAirlineTheme'),
@@ -380,11 +378,3 @@ let g:colorscheme_map = [
                         \   'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
                         \ },
                         \ ]
-
-
-let g:colorscheme_groups        = {}
-let g:colorscheme_groups.group1 = g:vimspectr_light_themes
-let g:colorscheme_groups.group2 = g:vimspectr_dark_themes
-let g:colorscheme_groups.group3 = g:atelier_light_themes
-let g:colorscheme_groups.group4 = g:atelier_dark_themes
-let g:colorscheme_groups.group5 = g:seabird_themes
