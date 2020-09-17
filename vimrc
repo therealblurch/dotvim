@@ -426,62 +426,63 @@ endif
 " }}}
 
 " Lightline {{{
-let g:lightline                              = {}
-let g:lightline.active                       = {
-                                             \ 'left': [['mode', 'paste'],
-                                             \         ['gitgutter', 'fugitive', 'readonly', 'filename']],
-                                             \ 'right': [['obsession', 'lineinfo'],
-                                             \          ['percent', 'winform', 'pomodoro'],
-                                             \          ['fileformat', 'fileencoding', 'filetype', 'colorscheme']]
-                                             \ }
-let g:lightline.component                    = {
-                                             \ 'charvaluehex': '0x%B',
-                                             \ 'lineinfo': ' %3l[%L]:%-2v',
-                                             \ 'separator': ''
-                                             \ }
-let g:lightline.component_function           = {
-                                             \ 'readonly': 'lightlinefunctions#LightlineReadonly',
-                                             \ 'fugitive': 'lightlinefunctions#LightlineFugitive',
-                                             \ 'gitbranch': 'fugitive#head',
-                                             \ 'modified': 'lightlinefunctions#LightlineModified',
-                                             \ 'filename': 'lightlinefunctions#LightlineFilename',
-                                             \ 'filepath': 'lightlinefunctions#LightlineFilepath',
-                                             \ 'fileformat': 'lightlinefunctions#LightlineFileformat',
-                                             \ 'filetype': 'lightlinefunctions#LightlineFiletype',
-                                             \ 'fileencoding': 'lightlinefunctions#LightlineFileencoding',
-                                             \ 'mode': 'lightlinefunctions#LightlineMode',
-                                             \ 'winform': 'lightlinefunctions#LightlineWinform',
-                                             \ 'colorscheme': 'lightlinefunctions#LightlineColorscheme',
-                                             \ 'bufferinfo': 'lightline#buffer#bufferinfo',
-                                             \ 'gitgutter': 'lightlinefunctions#LightlineGitgutter',
-                                             \ 'pomodoro': 'lightlinefunctions#PomodoroStatus',
-                                             \ 'obsession': 'ObsessionStatus',
-                                             \ 'mucomplete': 'myfunctions#MU'
-                                             \ }
-let g:lightline.tabline                      = {
-                                             \ 'left': [ [ 'bufferinfo' ],
-                                             \           [ 'separator' ],
-                                             \           [ 'bufferbefore', 'buffercurrent', 'bufferafter' ] ],
-                                             \ 'right': [ [ 'close' ] ]
-                                             \ }
-let g:lightline.separator                    = { 'left': '', 'right': '' }
-let g:lightline.subseparator                 = { 'left': '', 'right': '' }
-let g:lightline.tabline_separator            = { 'left': '', 'right': '' }
-let g:lightline.tabline_subseparator         = { 'left': '', 'right': '' }
-let g:lightline.tab                          = {
-                                             \ 'active': [ 'tabnum', 'filename', 'modified' ],
-                                             \ 'inactive': [ 'tabnum', 'filename', 'modified' ]
-                                             \ }
-let g:lightline.component_expand             = {
-                                             \ 'buffercurrent': 'lightline#buffer#buffercurrent',
-                                             \ 'bufferbefore': 'lightline#buffer#bufferbefore',
-                                             \ 'bufferafter': 'lightline#buffer#bufferafter'
-                                             \ }
-let g:lightline.component_type               = {
-                                             \ 'buffercurrent': 'tabsel',
-                                             \ 'bufferbefore': 'raw',
-                                             \ 'bufferafter': 'raw'
-                                             \ }
+let g:lightline = {
+                  \ 'active' :               {
+                  \                            'left': [['mode', 'paste'],
+                  \                                    ['gitgutter', 'fugitive', 'readonly', 'filename']],
+                  \                            'right': [['obsession', 'lineinfo'],
+                  \                                     ['percent', 'winform', 'pomodoro'],
+                  \                                     ['fileformat', 'fileencoding', 'filetype', 'colorscheme']]
+                  \                          },
+                  \ 'component' :            {
+                  \                            'charvaluehex': '0x%B',
+                  \                            'lineinfo': ' %3l[%L]:%-2v',
+                  \                            'separator': ''
+                  \                          },
+                  \ 'component_function' :   {
+                  \                            'readonly': 'lightlinefunctions#LightlineReadonly',
+                  \                            'fugitive': 'lightlinefunctions#LightlineFugitive',
+                  \                            'gitbranch': 'fugitive#head',
+                  \                            'modified': 'lightlinefunctions#LightlineModified',
+                  \                            'filename': 'lightlinefunctions#LightlineFilename',
+                  \                            'filepath': 'lightlinefunctions#LightlineFilepath',
+                  \                            'fileformat': 'lightlinefunctions#LightlineFileformat',
+                  \                            'filetype': 'lightlinefunctions#LightlineFiletype',
+                  \                            'fileencoding': 'lightlinefunctions#LightlineFileencoding',
+                  \                            'mode': 'lightlinefunctions#LightlineMode',
+                  \                            'winform': 'lightlinefunctions#LightlineWinform',
+                  \                            'colorscheme': 'lightlinefunctions#LightlineColorscheme',
+                  \                            'bufferinfo': 'lightline#buffer#bufferinfo',
+                  \                            'gitgutter': 'lightlinefunctions#LightlineGitgutter',
+                  \                            'pomodoro': 'lightlinefunctions#PomodoroStatus',
+                  \                            'obsession': 'ObsessionStatus',
+                  \                            'mucomplete': 'myfunctions#MU'
+                  \                          },
+                  \ 'tabline' :              {
+                  \                            'left': [ [ 'bufferinfo' ],
+                  \                                      [ 'separator' ],
+                  \                                      [ 'bufferbefore', 'buffercurrent', 'bufferafter' ] ],
+                  \                            'right': [ [ 'close' ] ]
+                  \                          },
+                  \ 'separator' :            { 'left': '', 'right': '' },
+                  \ 'subseparator' :         { 'left': '', 'right': '' },
+                  \ 'tabline_separator' :    { 'left': '', 'right': '' },
+                  \ 'tabline_subseparator' : { 'left': '', 'right': '' },
+                  \ 'tab' :                  {
+                  \                            'active': [ 'tabnum', 'filename', 'modified' ],
+                  \                            'inactive': [ 'tabnum', 'filename', 'modified' ]
+                  \                          },
+                  \ 'component_expand' :     {
+                  \                            'buffercurrent': 'lightline#buffer#buffercurrent',
+                  \                            'bufferbefore': 'lightline#buffer#bufferbefore',
+                  \                            'bufferafter': 'lightline#buffer#bufferafter'
+                  \                          },
+                  \ 'component_type' :       {
+                  \                            'buffercurrent': 'tabsel',
+                  \                            'bufferbefore': 'raw',
+                  \                            'bufferafter': 'raw'
+                  \                          },
+                  \ }
 
 let g:lightline#bufferline#min_buffer_count  = 2
 let g:lightline#bufferline#enable_devicons   = 1
