@@ -45,7 +45,7 @@ let g:colorscheme_groups = {
                            \                             ],
                            \ }
 
-"g:colorscheme_map is a list of dictionaries that specify options for colorschemes.  The dictionary keys are as follows:
+"g:colorscheme_map is a list of dictionaries that specify options for colorschemes.  All keys but name and StatusColorscheme are optional.  The dictionary keys are as follows:
 " name                : the name of the colorscheme
 " comparison          : If this is set to 'fuzzy' don't require an exact name match
 " variants            : a list of possible variants
@@ -55,12 +55,13 @@ let g:colorscheme_groups = {
 " pat/sub             : strings to be used in colorschemefunctions#AirlineThemeColorschemeSub and colorschemefunctions#LightlineThemeColorschemeSub
 " suffix              : string to be used in colorschemefunctions#AirlineThemeColorschemeSuffix and colorschemefunctions#LightlineThemeColorschemeSuffix
 " pat                 : string to be used in colorschemefunctions#AirlineThemeColorschemeSubBackground and colorschemefunctions#LightlineThemeColorschemeSubBackground
-" NextVariant         : funcref to choose next variant in colorscheme
+" NextVariant         : funcref to choose next colorscheme variant
 " StatusColorscheme   : funcref to create colorscheme name to be placed in the status bar
 " LightlineTheme      : funcref to choose the lightline colorscheme
 " AirlineTheme        : funcref to choose the airline theme
 " ToggleScheme        : funcref to toggle between light and dark versions of the colorscheme
 " Map                 : funcref for map function to be used in colorschemefunctions#NextColorschemeVariantMap
+" All keys but name and StatusColorscheme are optional.
 
 let g:colorscheme_map = [
                         \ {
