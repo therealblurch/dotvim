@@ -146,6 +146,8 @@ endfunction
 function! colorschemefunctions#AirlineTheme()
   if has_key (g:current_color_dictionary, 'AirlineTheme')
     let g:airline_theme = g:current_color_dictionary.AirlineTheme()
+  else
+    let g:airline_theme = 'distinguished'
   endif
   exec "AirlineTheme " . g:airline_theme
 endfunction
