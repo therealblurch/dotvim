@@ -526,6 +526,16 @@ augroup StatusBarTheme
     autocmd ColorschemePre Atelier*Light set background=light
     autocmd ColorschemePre vimspectr*dark set background=dark
     autocmd ColorschemePre vimspectr*light set background=light
+    autocmd ColorSchemePre * let g:current_color_dictionary = colorschemefunctions#GetColorDictionary(expand('<amatch>'))
+                         \ | if has_key (g:current_color_dictionary, 'default_style')
+                         \ |    if exists('g:colors_name')
+                          \ |      if g:colors_name != expand('<amatch>')
+                         \ |        exec 'let ' . g:current_color_dictionary.style_variable_name . ' = "' . g:current_color_dictionary.default_style . '"'
+                         \ |      endif
+                         \ |    else
+                         \ |      exec 'let ' . g:current_color_dictionary.style_variable_name . ' = "' . g:current_color_dictionary.default_style . '"'
+                         \ |    endif
+                         \ | endif
   endif
   autocmd Colorscheme * call writefile([&background, expand('<amatch>')], expand(g:colorscheme_file))
                     \ | if myfunctions#WhichStatus(expand('<amatch>')) == "airline"
