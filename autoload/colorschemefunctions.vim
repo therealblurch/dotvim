@@ -168,6 +168,10 @@ endfunction
 function! colorschemefunctions#SetLastColorscheme()
   let l:last_colorscheme = readfile(expand(g:colorscheme_file))
   exec 'set background='.l:last_colorscheme[0]
-  let g:current_color_dictionary = colorschemefunctions#GetColorDictionary(l:last_colorscheme[1])
-  call xolox#colorscheme_switcher#switch_to(s:ChooseNextColorscheme(l:last_colorscheme[1]))
+  if has('patch-8.0.1777')
+    silent exec 'doautocmd ColorschemePre ' . l:last_colorscheme[1]
+  endif
+  exec 'colors ' . l:last_colorscheme[1]
+  let g:colors_name = l:last_colorscheme[1]
+  silent exec 'doautocmd Colorscheme ' . l:last_colorscheme[1]
 endfunction
