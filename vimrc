@@ -282,30 +282,6 @@ autocmd FileType gitcommit setlocal spell
 " }}}
 
 "Colorscheme Options {{{
-
-"ayu Possible Values: light | dark | mirage
-let ayucolor   = "light"
-let g:ayucolor = ayucolor
-
-"material Possible Values: default | palenight | ocean | lighter | darker
-let g:material_theme_style = "palenight"
-let g:material_terminal_italics = 1
-
-"edge Possible Values: default | aura | neon
-let g:edge_style = "default"
-
-"Initial settings for gruvbox
-let g:gruvbox_material_background = 'hard'
-let g:gruvbox_material_better_performance = 1
-
-"Initial settings for sonokai
-let g:sonokai_style = 'default'
-let g:sonokai_better_performance = 1
-
-"Initial setting for materialbox
-let g:materialbox_contrast_dark  = 'hard'
-let g:materialbox_contrast_light = 'hard'
-
 source ~/.vim/colorscheme_variables.vim
 
 nmap <silent> <leader>- :<c-u>call colorschemefunctions#SchemeVariant(-v:count1)<cr>
