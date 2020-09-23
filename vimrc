@@ -278,7 +278,7 @@ augroup resCur
   autocmd BufWinEnter * call myfunctions#ResCur()
 augroup END
 
-autocmd FileType gitcommit setlocal spell
+autocmd! FileType gitcommit setlocal spell
 " }}}
 
 "Colorscheme Options {{{
@@ -370,7 +370,7 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 "}}}
 
 " endwise for verilog_systemverilog {{{
-autocmd FileType verilog_systemverilog
+autocmd! FileType verilog_systemverilog
   \ let b:endwise_addition  = '\="end" . submatch(0)' |
   \ let b:endwise_words     = 'begin,module,case,function,primitive,specify,task' |
   \ let b:endwise_pattern   = '\<\%(\zs\zebegin\|module\|case\|function\|primitive\|specify\|task\)\>.*$' |
@@ -541,7 +541,7 @@ augroup StatusBarTheme
                     \ | endif
 augroup END
 
-autocmd VimEnter * call colorschemefunctions#SetLastColorscheme()
+autocmd! VimEnter * call colorschemefunctions#SetLastColorscheme()
 
 command! -nargs=1 -complete=color Colorscheme call xolox#colorscheme_switcher#switch_to(<q-args>)
 " }}}
