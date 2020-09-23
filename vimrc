@@ -536,6 +536,11 @@ augroup StatusBarTheme
                          \ |      exec 'let ' . g:current_color_dictionary.style_variable_name . ' = "' . g:current_color_dictionary.default_style . '"'
                          \ |    endif
                          \ | endif
+                         \ | if has_key (g:current_color_dictionary, 'pre_commands')
+                         \ |   for command in g:current_color_dictionary.pre_commands
+                         \ |     exec command
+                         \ |   endfor
+                         \ | endif
   endif
   autocmd Colorscheme * call writefile([&background, expand('<amatch>')], expand(g:colorscheme_file))
                     \ | if myfunctions#WhichStatus(expand('<amatch>')) == "airline"
