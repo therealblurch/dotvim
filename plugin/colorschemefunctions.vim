@@ -51,6 +51,8 @@ let g:colorscheme_groups = {
 " variants            : a list of possible variants
 " dark_tag/light_tag  : strings to be used in colorschemefunctions#ToggleColorscheme
 " style_variable_name : name of style variable to be used in colorschemefunctions#NextStyleVariant and colorschemefunctions#ToggleColorschemeStyle
+" default_style       : default style variant
+" pre_commands        : list of commands to run before setting the colorscheme, intended to set configuration variables for the scheme.
 " tr_from/tr_to       : strings to be used in colorschemefunctions#AirlineThemeColorschemeTR and colorschemefunctions#LightlineThemeColorschemeTR
 " pat/sub             : strings to be used in colorschemefunctions#AirlineThemeColorschemeSub and colorschemefunctions#LightlineThemeColorschemeSub
 " suffix              : string to be used in colorschemefunctions#AirlineThemeColorschemeSuffix and colorschemefunctions#LightlineThemeColorschemeSuffix
