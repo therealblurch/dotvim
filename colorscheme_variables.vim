@@ -399,3 +399,58 @@ let g:colorscheme_map = [
                         \   'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
                         \ },
                         \ ]
+
+let g:prefer_airline = 1
+let g:colorscheme_file = '~/.vim/.colorscheme'
+
+augroup ColorschemeSetup
+  autocmd!
+  if has('patch-8.0.1777')
+    autocmd ColorschemePre Atelier*Dark set background=dark
+    autocmd ColorschemePre Atelier*Light set background=light
+    autocmd ColorschemePre vimspectr*dark set background=dark
+    autocmd ColorschemePre vimspectr*light set background=light
+    autocmd ColorSchemePre * let g:current_color_dictionary = colorschemefunctions#GetColorDictionary(expand('<amatch>'))
+                         \ | if has_key (g:current_color_dictionary, 'default_style')
+                         \ |   if !exists('g:colors_name') || g:colors_name != expand('<amatch>')
+                         \ |     exec 'let ' . g:current_color_dictionary.style_variable_name . ' = "' . g:current_color_dictionary.default_style . '"'
+                         \ |   endif
+                         \ | endif
+                         \ | if has_key (g:current_color_dictionary, 'pre_commands')
+                         \ |   for command in g:current_color_dictionary.pre_commands
+                         \ |     exec command
+                         \ |   endfor
+                         \ | endif
+  endif
+augroup END
+
+augroup StatusBarTheme
+  autocmd!
+  autocmd Colorscheme * call writefile([&background, expand('<amatch>')], expand(g:colorscheme_file))
+                    \ | if myfunctions#WhichStatus(expand('<amatch>')) == "airline"
+                    \ |   packadd vim-airline
+                    \ |   packadd vim-airline-themes
+                    \ |   let g:airline_section_x = airline#section#create_right(['%-25{g:current_color_dictionary.StatusColorscheme()}', 'bookmark', 'tagbar', 'vista', 'gutentags', 'grepper', 'filetype'])
+                    \ |   call colorschemefunctions#AirlineTheme()
+                    \ | endif
+                    \ | if myfunctions#WhichStatus(expand('<amatch>')) == "lightline"
+                    \ |   packadd lightline.vim | packadd lightline-buffer
+                    \ |   packadd lightline_foobar.vim
+                    \ |   call lightlinefunctions#LightlineUpdate()
+                    \ | endif
+                    \ | if myfunctions#WhichStatus(expand('<amatch>')) == "none" && exists('g:loaded_lightline')
+                    \ |   call lightlinefunctions#LightlineUpdate()
+                    \ | endif
+                    \ | if myfunctions#WhichStatus(expand('<amatch>')) == "none" && exists('g:loaded_airline')
+                    \ |   call colorschemefunctions#AirlineTheme()
+                    \ | endif
+                    \ | if myfunctions#WhichStatus(expand('<amatch>')) == "none" && !exists('g:loaded_lightline') && !exists('g:loaded_airline')
+                    \ |   packadd vim-buftabline
+                    \ | endif
+augroup END
+
+autocmd! VimEnter * call colorschemefunctions#SetLastColorscheme()
+
+nmap <silent> <leader>- :<c-u>call colorschemefunctions#SchemeVariant(-v:count1)<cr>
+nmap <silent> <leader>+ :<c-u>call colorschemefunctions#SchemeVariant(+v:count1)<cr>
+nmap <silent> <leader>b :<c-u>call colorschemefunctions#ToggleScheme()<cr>
