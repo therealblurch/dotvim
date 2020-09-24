@@ -2,7 +2,7 @@ function! colorschemefunctions#NextColorschemeVariant(delta) dict
   let l:current_variant = g:colors_name
   let l:num_variants = len(self.variants)
   let l:next_variant = self.variants[((a:delta+index(self.variants, l:current_variant)) % l:num_variants + l:num_variants) % l:num_variants]
-  call xolox#colorscheme_switcher#switch_to(l:next_variant)
+  exec 'colors ' . l:next_variant
 endfunction
 
 function! colorschemefunctions#NextColorschemeVariantMap(delta) dict
@@ -11,19 +11,19 @@ function! colorschemefunctions#NextColorschemeVariantMap(delta) dict
   let l:current_variant = g:colors_name
   let l:num_variants = len(l:variant_list)
   let l:next_variant = l:variant_list[((a:delta+index(l:variant_list, l:current_variant)) % l:num_variants + l:num_variants) % l:num_variants]
-  call xolox#colorscheme_switcher#switch_to(l:next_variant)
+  exec 'colors ' . l:next_variant
 endfunction
 
 function! colorschemefunctions#NextStyleVariant(delta) dict
   let l:num_variants = len(self.variants)
   exec 'let ' . self.style_variable_name . ' = self.variants[((a:delta+index(self.variants, ' . self.style_variable_name . ')) % l:num_variants + l:num_variants) % l:num_variants]'
-  call xolox#colorscheme_switcher#switch_to(self.name)
+  exec 'colors ' . self.name
 endfunction
 
 function! colorschemefunctions#NextStyleBackgroundVariant(delta) dict
   let l:num_variants = len(self.variants)
   exec 'let ' . self.style_variable_name . '_' . &background . ' = self.variants[((a:delta+index(self.variants, ' . self.style_variable_name . '_' . &background . ')) % l:num_variants + l:num_variants) % l:num_variants]'
-  call xolox#colorscheme_switcher#switch_to(self.name)
+  exec 'colors ' . self.name
 endfunction
 
 function! colorschemefunctions#NextBackgroundVariant(delta) dict
@@ -36,14 +36,14 @@ endfunction
 
 function! colorschemefunctions#ToggleColorscheme() dict
   let l:new_colorscheme = (g:colors_name =~# self.dark_tag) ? substitute(g:colors_name, self.dark_tag, self.light_tag, '') : substitute(g:colors_name, self.light_tag, self.dark_tag, '')
-  call xolox#colorscheme_switcher#switch_to(l:new_colorscheme)
+  exec 'colors ' . l:new_colorscheme
 endfunction
 
 function! colorschemefunctions#ToggleColorschemeStyle() dict
   exec 'let l:current_style = ' . self.style_variable_name
   let l:current_style = (l:current_style == 'dark') ? 'light' : 'dark'
   exec 'let ' . self.style_variable_name . " = '" . l:current_style . "'"
-  call xolox#colorscheme_switcher#switch_to(self.name)
+  exec 'colors ' . self.name
 endfunction
 
 function! colorschemefunctions#StatusColorscheme() dict
