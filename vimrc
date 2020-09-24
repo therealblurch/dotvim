@@ -281,7 +281,7 @@ autocmd! FileType gitcommit setlocal spell
 " }}}
 
 "Colorscheme Options {{{
-source ~/.vim/colorscheme_variables.vim
+source ~/.vim/colorschemefunctions.vim
 " }}}
 
 " Airline {{{
