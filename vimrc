@@ -280,10 +280,6 @@ augroup END
 autocmd! FileType gitcommit setlocal spell
 " }}}
 
-"Colorscheme Options {{{
-source ~/.vim/colorschemefunctions.vim
-" }}}
-
 " Airline {{{
 let g:airline_powerline_fonts                   = 1
 let g:airline#extensions#grepper#enabled        = 1
