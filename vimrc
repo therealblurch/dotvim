@@ -505,7 +505,7 @@ augroup StatusBarTheme
     autocmd ColorSchemePre * let g:current_color_dictionary = colorschemefunctions#GetColorDictionary(expand('<amatch>'))
                          \ | if has_key (g:current_color_dictionary, 'default_style')
                          \ |    if exists('g:colors_name')
-                          \ |      if g:colors_name != expand('<amatch>')
+                         \ |      if g:colors_name != expand('<amatch>')
                          \ |        exec 'let ' . g:current_color_dictionary.style_variable_name . ' = "' . g:current_color_dictionary.default_style . '"'
                          \ |      endif
                          \ |    else
