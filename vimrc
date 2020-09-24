@@ -495,7 +495,7 @@ command! -nargs=1 -complete=custom,lightlinefunctions#LightlineColorschemes Ligh
 let g:prefer_airline = 1
 let g:colorscheme_file = '~/.vim/.colorscheme'
 
-augroup StatusBarTheme
+augroup ColorschemeSetup
   autocmd!
   if has('patch-8.0.1777')
     autocmd ColorschemePre Atelier*Dark set background=dark
@@ -514,6 +514,10 @@ augroup StatusBarTheme
                          \ |   endfor
                          \ | endif
   endif
+augroup END
+
+augroup StatusBarTheme
+  autocmd!
   autocmd Colorscheme * call writefile([&background, expand('<amatch>')], expand(g:colorscheme_file))
                     \ | if myfunctions#WhichStatus(expand('<amatch>')) == "airline"
                     \ |   packadd vim-airline
