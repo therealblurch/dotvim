@@ -420,7 +420,7 @@ augroup ColorschemeSetup
     autocmd ColorschemePre vimspectr*dark set background=dark
     autocmd ColorschemePre vimspectr*light set background=light
     autocmd ColorSchemePre * let g:current_color_dictionary = colorschemefunctions#GetColorDictionary(expand('<amatch>'))
-                         \ | if has_key (g:current_color_dictionary, 'default_style')
+                         \ | if has_key (g:current_color_dictionary, 'DefaultVariant')
                          \ |   if !exists('g:colors_name') || g:colors_name != expand('<amatch>')
                          \ |     call g:current_color_dictionary.DefaultVariant()
                          \ |   endif
