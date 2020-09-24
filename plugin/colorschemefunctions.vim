@@ -96,6 +96,7 @@ let g:colorscheme_map = [
                         \   'style_variable_name' : 'g:ayucolor',
                         \   'default_style'       : 'light',
                         \   'NextVariant'         : function('colorschemefunctions#NextStyleVariant'),
+                        \   'DefaultVariant'      : function('colorschemefunctions#DefaultStyleVariant'),
                         \   'StatusColorscheme'   : function('colorschemefunctions#StatusColorschemeStyle'),
                         \   'LightlineTheme'      : function('colorschemefunctions#LightlineThemeColorscheme'),
                         \   'AirlineTheme'        : function('colorschemefunctions#AirlineThemeColorscheme'),
@@ -157,6 +158,7 @@ let g:colorscheme_map = [
                         \   'style_variable_name' : 'g:edge_style',
                         \   'default_style'       : 'default',
                         \   'NextVariant'         : function('colorschemefunctions#NextStyleVariant'),
+                        \   'DefaultVariant'      : function('colorschemefunctions#DefaultStyleVariant'),
                         \   'StatusColorscheme'   : function('colorschemefunctions#StatusColorschemeStyle'),
                         \   'LightlineTheme'      : function('colorschemefunctions#LightlineThemeColorscheme'),
                         \   'AirlineTheme'        : function('colorschemefunctions#AirlineThemeColorscheme'),
@@ -197,6 +199,7 @@ let g:colorscheme_map = [
                         \   'tr_from'             : '-',
                         \   'tr_to'               : '_',
                         \   'NextVariant'         : function('colorschemefunctions#NextStyleVariant'),
+                        \   'DefaultVariant'      : function('colorschemefunctions#DefaultStyleVariant'),
                         \   'StatusColorscheme'   : function('colorschemefunctions#StatusColorschemeStyle'),
                         \   'LightlineTheme'      : function('colorschemefunctions#LightlineThemeColorscheme'),
                         \   'AirlineTheme'        : function('colorschemefunctions#AirlineThemeColorschemeTR'),
@@ -226,6 +229,7 @@ let g:colorscheme_map = [
                         \   'pre_commands'        : ['let g:material_terminal_italics = 1'],
                         \   'suffix'              : '_vim',
                         \   'NextVariant'         : function('colorschemefunctions#NextStyleVariant'),
+                        \   'DefaultVariant'      : function('colorschemefunctions#DefaultStyleVariant'),
                         \   'StatusColorscheme'   : function('colorschemefunctions#StatusColorschemeStyle'),
                         \   'LightlineTheme'      : function('colorschemefunctions#LightlineThemeColorschemeSuffix'),
                         \   'AirlineTheme'        : function('colorschemefunctions#AirlineThemeColorscheme'),
@@ -236,6 +240,7 @@ let g:colorscheme_map = [
                         \   'style_variable_name' : 'g:materialbox_contrast',
                         \   'default_style'       : 'hard',
                         \   'NextVariant'         : function('colorschemefunctions#NextStyleBackgroundVariant'),
+                        \   'DefaultVariant'      : function('colorschemefunctions#DefaultStyleBackgroundVariant'),
                         \   'StatusColorscheme'   : function('colorschemefunctions#StatusColorschemeBackgroundStyle'),
                         \   'AirlineTheme'        : function('colorschemefunctions#AirlineThemeColorscheme'),
                         \   'ToggleScheme'        : function('colorschemefunctions#ToggleBackground'),
@@ -311,6 +316,7 @@ let g:colorscheme_map = [
                         \   'default_style'       : 'default',
                         \   'pre_commands'        : ['let g:sonokai_better_performance = 1'],
                         \   'NextVariant'         : function('colorschemefunctions#NextStyleVariant'),
+                        \   'DefaultVariant'      : function('colorschemefunctions#DefaultStyleVariant'),
                         \   'StatusColorscheme'   : function('colorschemefunctions#StatusColorschemeStyle'),
                         \   'LightlineTheme'      : function('colorschemefunctions#LightlineThemeColorscheme'),
                         \   'AirlineTheme'        : function('colorschemefunctions#AirlineThemeColorscheme'),
@@ -415,7 +421,7 @@ augroup ColorschemeSetup
     autocmd ColorSchemePre * let g:current_color_dictionary = colorschemefunctions#GetColorDictionary(expand('<amatch>'))
                          \ | if has_key (g:current_color_dictionary, 'default_style')
                          \ |   if !exists('g:colors_name') || g:colors_name != expand('<amatch>')
-                         \ |     exec 'let ' . g:current_color_dictionary.style_variable_name . ' = "' . g:current_color_dictionary.default_style . '"'
+                         \ |     call g:current_color_dictionary.DefaultVariant()
                          \ |   endif
                          \ | endif
                          \ | if has_key (g:current_color_dictionary, 'pre_commands')

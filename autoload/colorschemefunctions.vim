@@ -26,6 +26,16 @@ function! colorschemefunctions#NextStyleBackgroundVariant(delta) dict
   exec 'colors ' . self.name
 endfunction
 
+function! colorschemefunctions#DefaultStyleVariant() dict
+  let l:num_variants = len(self.variants)
+  exec 'let ' . self.style_variable_name . ' = "' . self.default_style . '"'
+endfunction
+
+function! colorschemefunctions#DefaultStyleBackgroundVariant() dict
+  let l:num_variants = len(self.variants)
+  exec 'let ' . self.style_variable_name . '_' . &background . ' = "' . self.default_style . '"'
+endfunction
+
 function! colorschemefunctions#NextBackgroundVariant(delta) dict
   let &background = (&background == 'dark') ? 'light' : 'dark'
 endfunction
