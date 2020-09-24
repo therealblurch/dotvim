@@ -341,11 +341,6 @@ let g:buftabline_indicators = 1
 let g:buftabline_separators = 1
 " }}}
 
-"Color Scheme Switcher {{{
-let g:colorscheme_switcher_exclude_builtins = 1
-" let g:colorscheme_switcher_keep_background = 1
-" }}}
-
 " Easy Align {{{
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
