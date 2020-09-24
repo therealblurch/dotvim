@@ -137,7 +137,6 @@ function! PackagerInit() abort
   call packager#add('wellle/targets.vim')
   call packager#add('wellle/visual-split.vim')
   call packager#add('xolox/vim-misc')
-  call packager#add('xolox/vim-colorscheme-switcher')
   call packager#add('Xuyuanp/nerdtree-git-plugin')
   call packager#add('Yggdroot/indentline')
   call packager#add('zhuzhzh/verilog_emacsauto.vim')
@@ -287,7 +286,6 @@ source ~/.vim/colorscheme_variables.vim
 nmap <silent> <leader>- :<c-u>call colorschemefunctions#SchemeVariant(-v:count1)<cr>
 nmap <silent> <leader>+ :<c-u>call colorschemefunctions#SchemeVariant(+v:count1)<cr>
 nmap <silent> <leader>b :<c-u>call colorschemefunctions#ToggleScheme()<cr>
-nmap <silent> <leader>A :<c-u>call xolox#colorscheme_switcher#switch_to('Atelier_SeasideLight')<cr>
 " }}}
 
 " Airline {{{
@@ -543,7 +541,6 @@ augroup END
 
 autocmd! VimEnter * call colorschemefunctions#SetLastColorscheme()
 
-command! -nargs=1 -complete=color Colorscheme call xolox#colorscheme_switcher#switch_to(<q-args>)
 " }}}
 
 " mucomplete {{{
