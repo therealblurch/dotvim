@@ -58,6 +58,7 @@ let g:colorscheme_groups = {
 " suffix              : string to be used in colorschemefunctions#AirlineThemeColorschemeSuffix and colorschemefunctions#LightlineThemeColorschemeSuffix
 " pat                 : string to be used in colorschemefunctions#AirlineThemeColorschemeSubBackground and colorschemefunctions#LightlineThemeColorschemeSubBackground
 " NextVariant         : funcref to choose next colorscheme variant
+" DefaultVariant      : funcref to generate statement to set default colorscheme style
 " StatusColorscheme   : funcref to create colorscheme name to be placed in the status bar
 " LightlineTheme      : funcref to choose the lightline colorscheme
 " AirlineTheme        : funcref to choose the airline theme
