@@ -520,24 +520,24 @@ augroup StatusBarTheme
   endif
   autocmd Colorscheme * call writefile([&background, expand('<amatch>')], expand(g:colorscheme_file))
                     \ | if myfunctions#WhichStatus(expand('<amatch>')) == "airline"
-                    \   | packadd vim-airline
-                    \   | packadd vim-airline-themes
-                    \   | let g:airline_section_x = airline#section#create_right(['%-25{g:current_color_dictionary.StatusColorscheme()}', 'bookmark', 'tagbar', 'vista', 'gutentags', 'grepper', 'filetype'])
-                    \   | call colorschemefunctions#AirlineTheme()
+                    \ |   packadd vim-airline
+                    \ |   packadd vim-airline-themes
+                    \ |   let g:airline_section_x = airline#section#create_right(['%-25{g:current_color_dictionary.StatusColorscheme()}', 'bookmark', 'tagbar', 'vista', 'gutentags', 'grepper', 'filetype'])
+                    \ |   call colorschemefunctions#AirlineTheme()
                     \ | endif
                     \ | if myfunctions#WhichStatus(expand('<amatch>')) == "lightline"
-                    \   | packadd lightline.vim | packadd lightline-buffer
-                    \   | packadd lightline_foobar.vim
-                    \   | call lightlinefunctions#LightlineUpdate()
+                    \ |   packadd lightline.vim | packadd lightline-buffer
+                    \ |   packadd lightline_foobar.vim
+                    \ |   call lightlinefunctions#LightlineUpdate()
                     \ | endif
                     \ | if myfunctions#WhichStatus(expand('<amatch>')) == "none" && exists('g:loaded_lightline')
-                    \   | call lightlinefunctions#LightlineUpdate()
+                    \ |   call lightlinefunctions#LightlineUpdate()
                     \ | endif
                     \ | if myfunctions#WhichStatus(expand('<amatch>')) == "none" && exists('g:loaded_airline')
-                    \   | call colorschemefunctions#AirlineTheme()
+                    \ |   call colorschemefunctions#AirlineTheme()
                     \ | endif
                     \ | if myfunctions#WhichStatus(expand('<amatch>')) == "none" && !exists('g:loaded_lightline') && !exists('g:loaded_airline')
-                    \   | packadd vim-buftabline
+                    \ |   packadd vim-buftabline
                     \ | endif
 augroup END
 
