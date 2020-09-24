@@ -155,9 +155,31 @@ function! colorschemefunctions#AirlineTheme()
   if has_key (g:current_color_dictionary, 'AirlineTheme')
     let g:airline_theme = g:current_color_dictionary.AirlineTheme()
   else
-    let g:airline_theme = 'distinguished'
+    let g:airline_theme = g:default_airline_theme
   endif
   exec "AirlineTheme " . g:airline_theme
+endfunction
+
+function! colorschemefunctions#LightlineUpdate()
+  if !exists('g:loaded_lightline')
+    return
+  endif
+  try
+    if has_key(g:current_color_dictionary, 'LightlineTheme')
+      let l:new_lightline_colorscheme = g:current_color_dictionary.LightlineTheme()
+    else
+      let l:new_lightline_colorscheme = g:default_lightline_colorscheme
+    endif
+    exe 'runtime autoload/lightline/colorscheme/' . l:new_lightline_colorscheme . '.vim'
+    call colorschemefunctions#SetLightlineColorscheme(l:new_lightline_colorscheme)
+  endtry
+endfunction
+
+function! colorschemefunctions#SetLightlineColorscheme(name) abort
+  let g:lightline.colorscheme = a:name
+  call lightline#init()
+  call lightline#colorscheme()
+  call lightline#update()
 endfunction
 
 function! s:ChooseNextColorscheme (last_colorscheme)

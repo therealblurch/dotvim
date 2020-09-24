@@ -410,6 +410,8 @@ let g:colorscheme_map = [
                         \ ]
 
 let g:prefer_airline = 1
+let g:default_airline_theme = 'distinguished'
+let g:default_lightline_colorscheme = 'powerline'
 let g:colorscheme_file = '~/.vim/.colorscheme'
 
 augroup ColorschemeSetup

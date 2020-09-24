@@ -88,28 +88,6 @@ function! lightlinefunctions#LightlineFilepath()
   return winwidth(0) <= 120 ? expand('%:h') : ''
 endfunction
 
-function! lightlinefunctions#LightlineUpdate()
-  if !exists('g:loaded_lightline')
-    return
-  endif
-  try
-    if has_key(g:current_color_dictionary, 'LightlineTheme')
-      let l:new_lightline_colorscheme = g:current_color_dictionary.LightlineTheme()
-    else
-      let l:new_lightline_colorscheme = 'powerline'
-    endif
-    exe 'runtime autoload/lightline/colorscheme/' . l:new_lightline_colorscheme . '.vim'
-    call lightlinefunctions#SetLightlineColorscheme(l:new_lightline_colorscheme)
-  endtry
-endfunction
-
-function! lightlinefunctions#SetLightlineColorscheme(name) abort
-  let g:lightline.colorscheme = a:name
-  call lightline#init()
-  call lightline#colorscheme()
-  call lightline#update()
-endfunction
-
 function! lightlinefunctions#LightlineColorschemes(...) abort
   return join(map(
     \ globpath(&rtp,"autoload/lightline/colorscheme/*.vim",1,1),
