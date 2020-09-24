@@ -504,13 +504,9 @@ augroup StatusBarTheme
     autocmd ColorschemePre vimspectr*light set background=light
     autocmd ColorSchemePre * let g:current_color_dictionary = colorschemefunctions#GetColorDictionary(expand('<amatch>'))
                          \ | if has_key (g:current_color_dictionary, 'default_style')
-                         \ |    if exists('g:colors_name')
-                         \ |      if g:colors_name != expand('<amatch>')
-                         \ |        exec 'let ' . g:current_color_dictionary.style_variable_name . ' = "' . g:current_color_dictionary.default_style . '"'
-                         \ |      endif
-                         \ |    else
-                         \ |      exec 'let ' . g:current_color_dictionary.style_variable_name . ' = "' . g:current_color_dictionary.default_style . '"'
-                         \ |    endif
+                         \ |   if !exists('g:colors_name') || g:colors_name != expand('<amatch>')
+                         \ |     exec 'let ' . g:current_color_dictionary.style_variable_name . ' = "' . g:current_color_dictionary.default_style . '"'
+                         \ |   endif
                          \ | endif
                          \ | if has_key (g:current_color_dictionary, 'pre_commands')
                          \ |   for command in g:current_color_dictionary.pre_commands
