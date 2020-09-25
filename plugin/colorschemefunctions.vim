@@ -447,10 +447,10 @@ augroup StatusBarTheme
                     \ | if myfunctions#WhichStatus(expand('<amatch>')) == "lightline"
                     \ |   packadd lightline.vim | packadd lightline-buffer
                     \ |   packadd lightline_foobar.vim
-                    \ |   call lightlinefunctions#LightlineUpdate()
+                    \ |   call colorschemefunctions#LightlineUpdate()
                     \ | endif
                     \ | if myfunctions#WhichStatus(expand('<amatch>')) == "none" && exists('g:loaded_lightline')
-                    \ |   call lightlinefunctions#LightlineUpdate()
+                    \ |   call colorschemefunctions#LightlineUpdate()
                     \ | endif
                     \ | if myfunctions#WhichStatus(expand('<amatch>')) == "none" && exists('g:loaded_airline')
                     \ |   call colorschemefunctions#AirlineTheme()
