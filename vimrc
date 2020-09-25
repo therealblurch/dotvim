@@ -173,6 +173,7 @@ function! PackagerInit() abort
   call packager#add('cocopon/iceberg.vim',                    {'package': 'colors'})
   call packager#add('dracula/vim',                            {'package': 'colors', 'name': 'dracula'})
   call packager#add('drewtempelmeyer/palenight.vim',          {'package': 'colors'})
+  call packager#add('embark-theme/vim',                       {'package': 'colors'})
   call packager#add('haishanh/night-owl.vim',                 {'package': 'colors'})
   call packager#add('huyvohcmc/atlas.vim',                    {'package': 'colors'})
   call packager#add('itchyny/landscape.vim',                  {'package': 'colors'})
