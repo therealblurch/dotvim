@@ -65,7 +65,7 @@ function! PackagerInit() abort
   call packager#init({'package': 'general'})
 
   " packager plugin
-  call packager#add('https://cbtlsl@github.com/cbtlsl/vim-packager', {'package': 'packager', 'type': 'opt'})
+  call packager#add('https://bloertsch@github.com/bloertsch/vim-packager', {'package': 'packager', 'type': 'opt'})
 
   " git plugins
   call packager#add('airblade/vim-gitgutter',                 {'package': 'git'})
