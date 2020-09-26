@@ -51,21 +51,21 @@ endif
 " name                : the name of the colorscheme
 " comparison          : If this is set to 'fuzzy' don't require an exact name match
 " variants            : a list of possible variants
-" dark_tag/light_tag  : strings to be used in colorschemefunctions#ToggleColorscheme
-" style_variable_name : name of style variable to be used in colorschemefunctions#NextStyleVariant and colorschemefunctions#ToggleColorschemeStyle
+" dark_tag/light_tag  : strings to be used in theme_manager#ToggleColorscheme
+" style_variable_name : name of style variable to be used in theme_manager#NextStyleVariant and theme_manager#ToggleColorschemeStyle
 " default_style       : default style variant
 " pre_commands        : list of commands to run before setting the colorscheme, intended to set configuration variables for the scheme.
-" tr_from/tr_to       : strings to be used in colorschemefunctions#AirlineThemeColorschemeTR and colorschemefunctions#LightlineThemeColorschemeTR
-" pat/sub             : strings to be used in colorschemefunctions#AirlineThemeColorschemeSub and colorschemefunctions#LightlineThemeColorschemeSub
-" suffix              : string to be used in colorschemefunctions#AirlineThemeColorschemeSuffix and colorschemefunctions#LightlineThemeColorschemeSuffix
-" pat                 : string to be used in colorschemefunctions#AirlineThemeColorschemeSubBackground and colorschemefunctions#LightlineThemeColorschemeSubBackground
+" tr_from/tr_to       : strings to be used in theme_manager#AirlineThemeColorschemeTR and theme_manager#LightlineThemeColorschemeTR
+" pat/sub             : strings to be used in theme_manager#AirlineThemeColorschemeSub and theme_manager#LightlineThemeColorschemeSub
+" suffix              : string to be used in theme_manager#AirlineThemeColorschemeSuffix and theme_manager#LightlineThemeColorschemeSuffix
+" pat                 : string to be used in theme_manager#AirlineThemeColorschemeSubBackground and theme_manager#LightlineThemeColorschemeSubBackground
 " NextVariant         : funcref to choose next colorscheme variant
 " DefaultVariant      : funcref to generate statement to set default colorscheme style
 " StatusColorscheme   : funcref to create colorscheme name to be placed in the status bar
 " LightlineTheme      : funcref to choose the lightline colorscheme
 " AirlineTheme        : funcref to choose the airline theme
 " ToggleScheme        : funcref to toggle between light and dark versions of the colorscheme
-" Map                 : funcref for map function to be used in colorschemefunctions#NextColorschemeVariantMap
+" Map                 : funcref for map function to be used in theme_manager#NextColorschemeVariantMap
 " All keys but name and StatusColorscheme are optional.
 
 if !exists('g:colorscheme_map')
@@ -76,49 +76,49 @@ if !exists('g:colorscheme_map')
                           \   'variants'          : ['Cave', 'Dune', 'Estuary', 'Forest', 'Heath', 'Lakeside', 'Plateau', 'Savanna', 'Seaside', 'Sulphurpool'],
                           \   'dark_tag'          : 'Dark',
                           \   'light_tag'         : 'Light',
-                          \   'NextVariant'       : function('colorschemefunctions#NextColorschemeVariantMap'),
-                          \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
+                          \   'NextVariant'       : function('theme_manager#NextColorschemeVariantMap'),
+                          \   'StatusColorscheme' : function('theme_manager#StatusColorscheme'),
                           \   'LightlineTheme'    : function('myfunctions#AtelierLightlineTheme'),
-                          \   'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
-                          \   'ToggleScheme'      : function('colorschemefunctions#ToggleColorscheme'),
+                          \   'AirlineTheme'      : function('theme_manager#AirlineThemeColorscheme'),
+                          \   'ToggleScheme'      : function('theme_manager#ToggleColorscheme'),
                           \   'Map'               : function('myfunctions#AtelierMap'),
                           \ },
                           \ {
                           \   'name'              : 'atlas',
-                          \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
-                          \   'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
+                          \   'StatusColorscheme' : function('theme_manager#StatusColorscheme'),
+                          \   'LightlineTheme'    : function('theme_manager#LightlineThemeColorscheme'),
                           \ },
                           \ {
                           \   'name'              : 'apprentice',
-                          \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
-                          \   'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
-                          \   'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
+                          \   'StatusColorscheme' : function('theme_manager#StatusColorscheme'),
+                          \   'LightlineTheme'    : function('theme_manager#LightlineThemeColorscheme'),
+                          \   'AirlineTheme'      : function('theme_manager#AirlineThemeColorscheme'),
                           \ },
                           \ {
                           \   'name'                : 'ayu',
                           \   'variants'            : ['light', 'dark', 'mirage'],
                           \   'style_variable_name' : 'g:ayucolor',
                           \   'default_style'       : 'light',
-                          \   'NextVariant'         : function('colorschemefunctions#NextStyleVariant'),
-                          \   'DefaultVariant'      : function('colorschemefunctions#DefaultStyleVariant'),
-                          \   'StatusColorscheme'   : function('colorschemefunctions#StatusColorschemeStyle'),
-                          \   'LightlineTheme'      : function('colorschemefunctions#LightlineThemeColorscheme'),
-                          \   'AirlineTheme'        : function('colorschemefunctions#AirlineThemeColorscheme'),
-                          \   'ToggleScheme'        : function('colorschemefunctions#ToggleColorschemeStyle'),
+                          \   'NextVariant'         : function('theme_manager#NextStyleVariant'),
+                          \   'DefaultVariant'      : function('theme_manager#DefaultStyleVariant'),
+                          \   'StatusColorscheme'   : function('theme_manager#StatusColorschemeStyle'),
+                          \   'LightlineTheme'      : function('theme_manager#LightlineThemeColorscheme'),
+                          \   'AirlineTheme'        : function('theme_manager#AirlineThemeColorscheme'),
+                          \   'ToggleScheme'        : function('theme_manager#ToggleColorschemeStyle'),
                           \ },
                           \ {
                           \   'name'              : 'base16',
                           \   'comparison'        : 'fuzzy',
-                          \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
+                          \   'StatusColorscheme' : function('theme_manager#StatusColorscheme'),
                           \   'AirlineTheme'      : function('myfunctions#Base16AirlineTheme'),
                           \ },
                           \ {
                           \   'name'              : 'cosmic_latte',
-                          \   'NextVariant'       : function('colorschemefunctions#NextBackgroundVariant'),
-                          \   'StatusColorscheme' : function('colorschemefunctions#StatusColorschemeBackground'),
-                          \   'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorschemeBackground'),
-                          \   'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorschemeBackground'),
-                          \   'ToggleScheme'      : function('colorschemefunctions#ToggleBackground'),
+                          \   'NextVariant'       : function('theme_manager#NextBackgroundVariant'),
+                          \   'StatusColorscheme' : function('theme_manager#StatusColorschemeBackground'),
+                          \   'LightlineTheme'    : function('theme_manager#LightlineThemeColorschemeBackground'),
+                          \   'AirlineTheme'      : function('theme_manager#AirlineThemeColorschemeBackground'),
+                          \   'ToggleScheme'      : function('theme_manager#ToggleBackground'),
                           \ },
                           \ {
                           \   'name'              : 'deep-space',
@@ -126,72 +126,72 @@ if !exists('g:colorscheme_map')
                           \   'tr_to'             : '_',
                           \   'pat'               : '-',
                           \   'sub'               : '',
-                          \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
-                          \   'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorschemeSub'),
-                          \   'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorschemeTR'),
+                          \   'StatusColorscheme' : function('theme_manager#StatusColorscheme'),
+                          \   'LightlineTheme'    : function('theme_manager#LightlineThemeColorschemeSub'),
+                          \   'AirlineTheme'      : function('theme_manager#AirlineThemeColorschemeTR'),
                           \ },
                           \ {
                           \   'name'              : 'desertink',
-                          \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
-                          \   'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
+                          \   'StatusColorscheme' : function('theme_manager#StatusColorscheme'),
+                          \   'AirlineTheme'      : function('theme_manager#AirlineThemeColorscheme'),
                           \ },
                           \ {
                           \   'name'              : 'deus',
-                          \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
-                          \   'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
+                          \   'StatusColorscheme' : function('theme_manager#StatusColorscheme'),
+                          \   'AirlineTheme'      : function('theme_manager#AirlineThemeColorscheme'),
                           \ },
                           \ {
                           \   'name'              : 'distinguished',
-                          \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
-                          \   'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
+                          \   'StatusColorscheme' : function('theme_manager#StatusColorscheme'),
+                          \   'AirlineTheme'      : function('theme_manager#AirlineThemeColorscheme'),
                           \ },
                           \ {
                           \   'name'              : 'dogrun',
-                          \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
-                          \   'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
+                          \   'StatusColorscheme' : function('theme_manager#StatusColorscheme'),
+                          \   'LightlineTheme'    : function('theme_manager#LightlineThemeColorscheme'),
                           \ },
                           \ {
                           \   'name'              : 'dracula',
-                          \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
-                          \   'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
-                          \   'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
+                          \   'StatusColorscheme' : function('theme_manager#StatusColorscheme'),
+                          \   'LightlineTheme'    : function('theme_manager#LightlineThemeColorscheme'),
+                          \   'AirlineTheme'      : function('theme_manager#AirlineThemeColorscheme'),
                           \ },
                           \ {
                           \   'name'                : 'edge',
                           \   'variants'            : ['default', 'aura', 'neon'],
                           \   'style_variable_name' : 'g:edge_style',
                           \   'default_style'       : 'default',
-                          \   'NextVariant'         : function('colorschemefunctions#NextStyleVariant'),
-                          \   'DefaultVariant'      : function('colorschemefunctions#DefaultStyleVariant'),
-                          \   'StatusColorscheme'   : function('colorschemefunctions#StatusColorschemeStyle'),
-                          \   'LightlineTheme'      : function('colorschemefunctions#LightlineThemeColorscheme'),
-                          \   'AirlineTheme'        : function('colorschemefunctions#AirlineThemeColorscheme'),
-                          \   'ToggleScheme'        : function('colorschemefunctions#ToggleBackground'),
+                          \   'NextVariant'         : function('theme_manager#NextStyleVariant'),
+                          \   'DefaultVariant'      : function('theme_manager#DefaultStyleVariant'),
+                          \   'StatusColorscheme'   : function('theme_manager#StatusColorschemeStyle'),
+                          \   'LightlineTheme'      : function('theme_manager#LightlineThemeColorscheme'),
+                          \   'AirlineTheme'        : function('theme_manager#AirlineThemeColorscheme'),
+                          \   'ToggleScheme'        : function('theme_manager#ToggleBackground'),
                           \ },
                           \ {
                           \   'name'              : 'flattened',
                           \   'comparison'        : 'fuzzy',
                           \   'variants'          : ['_light', '_dark'],
-                          \   'NextVariant'       : function('colorschemefunctions#NextColorschemeVariantMap'),
-                          \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
-                          \   'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
-                          \   'ToggleScheme'      : function('colorschemefunctions#ToggleColorscheme'),
+                          \   'NextVariant'       : function('theme_manager#NextColorschemeVariantMap'),
+                          \   'StatusColorscheme' : function('theme_manager#StatusColorscheme'),
+                          \   'LightlineTheme'    : function('theme_manager#LightlineThemeColorscheme'),
+                          \   'ToggleScheme'      : function('theme_manager#ToggleColorscheme'),
                           \   'Map'               : function('myfunctions#FlattenedMap'),
                           \ },
                           \ {
                           \   'name'              : 'forest-night',
                           \   'dark_tag'          : 'dark',
                           \   'light_tag'         : 'light',
-                          \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
-                          \   'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
-                          \   'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
-                          \   'ToggleScheme'      : function('colorschemefunctions#ToggleColorscheme'),
+                          \   'StatusColorscheme' : function('theme_manager#StatusColorscheme'),
+                          \   'LightlineTheme'    : function('theme_manager#LightlineThemeColorscheme'),
+                          \   'AirlineTheme'      : function('theme_manager#AirlineThemeColorscheme'),
+                          \   'ToggleScheme'      : function('theme_manager#ToggleColorscheme'),
                           \ },
                           \ {
                           \   'name'              : 'greygull',
                           \   'variants'          : g:colorscheme_groups.seabird_themes,
-                          \   'NextVariant'       : function('colorschemefunctions#NextColorschemeVariant'),
-                          \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
+                          \   'NextVariant'       : function('theme_manager#NextColorschemeVariant'),
+                          \   'StatusColorscheme' : function('theme_manager#StatusColorscheme'),
                           \   'AirlineTheme'      : function('myfunctions#SeagullAirlineTheme'),
                           \ },
                           \ {
@@ -202,28 +202,28 @@ if !exists('g:colorscheme_map')
                           \   'pre_commands'        : ['let g:gruvbox_material_better_performance = 1'],
                           \   'tr_from'             : '-',
                           \   'tr_to'               : '_',
-                          \   'NextVariant'         : function('colorschemefunctions#NextStyleVariant'),
-                          \   'DefaultVariant'      : function('colorschemefunctions#DefaultStyleVariant'),
-                          \   'StatusColorscheme'   : function('colorschemefunctions#StatusColorschemeStyle'),
-                          \   'LightlineTheme'      : function('colorschemefunctions#LightlineThemeColorscheme'),
-                          \   'AirlineTheme'        : function('colorschemefunctions#AirlineThemeColorschemeTR'),
-                          \   'ToggleScheme'        : function('colorschemefunctions#ToggleBackground'),
+                          \   'NextVariant'         : function('theme_manager#NextStyleVariant'),
+                          \   'DefaultVariant'      : function('theme_manager#DefaultStyleVariant'),
+                          \   'StatusColorscheme'   : function('theme_manager#StatusColorschemeStyle'),
+                          \   'LightlineTheme'      : function('theme_manager#LightlineThemeColorscheme'),
+                          \   'AirlineTheme'        : function('theme_manager#AirlineThemeColorschemeTR'),
+                          \   'ToggleScheme'        : function('theme_manager#ToggleBackground'),
                           \ },
                           \ {
                           \   'name'              : 'iceberg',
-                          \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
-                          \   'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
-                          \   'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
+                          \   'StatusColorscheme' : function('theme_manager#StatusColorscheme'),
+                          \   'LightlineTheme'    : function('theme_manager#LightlineThemeColorscheme'),
+                          \   'AirlineTheme'      : function('theme_manager#AirlineThemeColorscheme'),
                           \ },
                           \ {
                           \   'name'              : 'jellybeans',
-                          \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
-                          \   'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
+                          \   'StatusColorscheme' : function('theme_manager#StatusColorscheme'),
+                          \   'AirlineTheme'      : function('theme_manager#AirlineThemeColorscheme'),
                           \ },
                           \ {
                           \   'name'              : 'landscape',
-                          \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
-                          \   'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
+                          \   'StatusColorscheme' : function('theme_manager#StatusColorscheme'),
+                          \   'AirlineTheme'      : function('theme_manager#AirlineThemeColorscheme'),
                           \ },
                           \ {
                           \   'name'                : 'material',
@@ -232,86 +232,86 @@ if !exists('g:colorscheme_map')
                           \   'default_style'       : 'palenight',
                           \   'pre_commands'        : ['let g:material_terminal_italics = 1'],
                           \   'suffix'              : '_vim',
-                          \   'NextVariant'         : function('colorschemefunctions#NextStyleVariant'),
-                          \   'DefaultVariant'      : function('colorschemefunctions#DefaultStyleVariant'),
-                          \   'StatusColorscheme'   : function('colorschemefunctions#StatusColorschemeStyle'),
-                          \   'LightlineTheme'      : function('colorschemefunctions#LightlineThemeColorschemeSuffix'),
-                          \   'AirlineTheme'        : function('colorschemefunctions#AirlineThemeColorscheme'),
+                          \   'NextVariant'         : function('theme_manager#NextStyleVariant'),
+                          \   'DefaultVariant'      : function('theme_manager#DefaultStyleVariant'),
+                          \   'StatusColorscheme'   : function('theme_manager#StatusColorschemeStyle'),
+                          \   'LightlineTheme'      : function('theme_manager#LightlineThemeColorschemeSuffix'),
+                          \   'AirlineTheme'        : function('theme_manager#AirlineThemeColorscheme'),
                           \ },
                           \ {
                           \   'name'                : 'materialbox',
                           \   'variants'            : ['soft', 'medium', 'hard'],
                           \   'style_variable_name' : 'g:materialbox_contrast',
                           \   'default_style'       : 'hard',
-                          \   'NextVariant'         : function('colorschemefunctions#NextStyleBackgroundVariant'),
-                          \   'DefaultVariant'      : function('colorschemefunctions#DefaultStyleBackgroundVariant'),
-                          \   'StatusColorscheme'   : function('colorschemefunctions#StatusColorschemeBackgroundStyle'),
-                          \   'AirlineTheme'        : function('colorschemefunctions#AirlineThemeColorscheme'),
-                          \   'ToggleScheme'        : function('colorschemefunctions#ToggleBackground'),
+                          \   'NextVariant'         : function('theme_manager#NextStyleBackgroundVariant'),
+                          \   'DefaultVariant'      : function('theme_manager#DefaultStyleBackgroundVariant'),
+                          \   'StatusColorscheme'   : function('theme_manager#StatusColorschemeBackgroundStyle'),
+                          \   'AirlineTheme'        : function('theme_manager#AirlineThemeColorscheme'),
+                          \   'ToggleScheme'        : function('theme_manager#ToggleBackground'),
                           \ },
                           \ {
                           \   'name'                : 'night-owl',
                           \   'pat'               : '-',
                           \   'sub'               : '',
-                          \   'StatusColorscheme'   : function('colorschemefunctions#StatusColorscheme'),
-                          \   'LightlineTheme'      : function('colorschemefunctions#LightlineThemeColorschemeSub'),
+                          \   'StatusColorscheme'   : function('theme_manager#StatusColorscheme'),
+                          \   'LightlineTheme'      : function('theme_manager#LightlineThemeColorschemeSub'),
                           \ },
                           \ {
                           \   'name'              : 'nord',
-                          \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
-                          \   'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
-                          \   'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
+                          \   'StatusColorscheme' : function('theme_manager#StatusColorscheme'),
+                          \   'LightlineTheme'    : function('theme_manager#LightlineThemeColorscheme'),
+                          \   'AirlineTheme'      : function('theme_manager#AirlineThemeColorscheme'),
                           \ },
                           \ {
                           \   'name'              : 'one',
-                          \   'NextVariant'       : function('colorschemefunctions#NextBackgroundVariant'),
-                          \   'StatusColorscheme' : function('colorschemefunctions#StatusColorschemeBackground'),
-                          \   'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
-                          \   'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
-                          \   'ToggleScheme'      : function('colorschemefunctions#ToggleBackground'),
+                          \   'NextVariant'       : function('theme_manager#NextBackgroundVariant'),
+                          \   'StatusColorscheme' : function('theme_manager#StatusColorschemeBackground'),
+                          \   'LightlineTheme'    : function('theme_manager#LightlineThemeColorscheme'),
+                          \   'AirlineTheme'      : function('theme_manager#AirlineThemeColorscheme'),
+                          \   'ToggleScheme'      : function('theme_manager#ToggleBackground'),
                           \ },
                           \ {
                           \   'name'              : 'palenight',
-                          \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
-                          \   'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
-                          \   'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
+                          \   'StatusColorscheme' : function('theme_manager#StatusColorscheme'),
+                          \   'LightlineTheme'    : function('theme_manager#LightlineThemeColorscheme'),
+                          \   'AirlineTheme'      : function('theme_manager#AirlineThemeColorscheme'),
                           \ },
                           \ {
                           \   'name'              : 'PaperColor',
-                          \   'NextVariant'       : function('colorschemefunctions#NextBackgroundVariant'),
-                          \   'StatusColorscheme' : function('colorschemefunctions#StatusColorschemeBackground'),
-                          \   'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
-                          \   'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorschemeLower'),
-                          \   'ToggleScheme'      : function('colorschemefunctions#ToggleBackground'),
+                          \   'NextVariant'       : function('theme_manager#NextBackgroundVariant'),
+                          \   'StatusColorscheme' : function('theme_manager#StatusColorschemeBackground'),
+                          \   'LightlineTheme'    : function('theme_manager#LightlineThemeColorscheme'),
+                          \   'AirlineTheme'      : function('theme_manager#AirlineThemeColorschemeLower'),
+                          \   'ToggleScheme'      : function('theme_manager#ToggleBackground'),
                           \ },
                           \ {
                           \   'name'              : 'pencil',
-                          \   'NextVariant'       : function('colorschemefunctions#NextBackgroundVariant'),
-                          \   'StatusColorscheme' : function('colorschemefunctions#StatusColorschemeBackground'),
-                          \   'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
-                          \   'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
-                          \   'ToggleScheme'      : function('colorschemefunctions#ToggleBackground'),
+                          \   'NextVariant'       : function('theme_manager#NextBackgroundVariant'),
+                          \   'StatusColorscheme' : function('theme_manager#StatusColorschemeBackground'),
+                          \   'LightlineTheme'    : function('theme_manager#LightlineThemeColorscheme'),
+                          \   'AirlineTheme'      : function('theme_manager#AirlineThemeColorscheme'),
+                          \   'ToggleScheme'      : function('theme_manager#ToggleBackground'),
                           \ },
                           \ {
                           \   'name'              : 'petrel',
                           \   'variants'          : g:colorscheme_groups.seabird_themes,
-                          \   'NextVariant'       : function('colorschemefunctions#NextColorschemeVariant'),
-                          \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
+                          \   'NextVariant'       : function('theme_manager#NextColorschemeVariant'),
+                          \   'StatusColorscheme' : function('theme_manager#StatusColorscheme'),
                           \   'AirlineTheme'      : function('myfunctions#SeagullAirlineTheme'),
                           \ },
                           \ {
                           \   'name'              : 'pop-punk',
                           \   'tr_from'           : '-',
                           \   'tr_to'             : '_',
-                          \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
-                          \   'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorschemeTR'),
+                          \   'StatusColorscheme' : function('theme_manager#StatusColorscheme'),
+                          \   'AirlineTheme'      : function('theme_manager#AirlineThemeColorschemeTR'),
                           \ },
                           \ {
                           \   'name'              : 'seagull',
                           \   'variants'          : g:colorscheme_groups.seabird_themes,
-                          \   'NextVariant'       : function('colorschemefunctions#NextColorschemeVariant'),
-                          \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
-                          \   'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
+                          \   'NextVariant'       : function('theme_manager#NextColorschemeVariant'),
+                          \   'StatusColorscheme' : function('theme_manager#StatusColorscheme'),
+                          \   'AirlineTheme'      : function('theme_manager#AirlineThemeColorscheme'),
                           \ },
                           \ {
                           \   'name'                : 'sonokai',
@@ -319,60 +319,60 @@ if !exists('g:colorscheme_map')
                           \   'style_variable_name' : 'g:sonokai_style',
                           \   'default_style'       : 'default',
                           \   'pre_commands'        : ['let g:sonokai_better_performance = 1'],
-                          \   'NextVariant'         : function('colorschemefunctions#NextStyleVariant'),
-                          \   'DefaultVariant'      : function('colorschemefunctions#DefaultStyleVariant'),
-                          \   'StatusColorscheme'   : function('colorschemefunctions#StatusColorschemeStyle'),
-                          \   'LightlineTheme'      : function('colorschemefunctions#LightlineThemeColorscheme'),
-                          \   'AirlineTheme'        : function('colorschemefunctions#AirlineThemeColorscheme'),
+                          \   'NextVariant'         : function('theme_manager#NextStyleVariant'),
+                          \   'DefaultVariant'      : function('theme_manager#DefaultStyleVariant'),
+                          \   'StatusColorscheme'   : function('theme_manager#StatusColorschemeStyle'),
+                          \   'LightlineTheme'      : function('theme_manager#LightlineThemeColorscheme'),
+                          \   'AirlineTheme'        : function('theme_manager#AirlineThemeColorscheme'),
                           \ },
                           \ {
                           \   'name'              : 'snow',
-                          \   'NextVariant'       : function('colorschemefunctions#NextBackgroundVariant'),
-                          \   'StatusColorscheme' : function('colorschemefunctions#StatusColorschemeBackground'),
-                          \   'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorschemeBackground'),
-                          \   'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorschemeBackground'),
-                          \   'ToggleScheme'      : function('colorschemefunctions#ToggleBackground'),
+                          \   'NextVariant'       : function('theme_manager#NextBackgroundVariant'),
+                          \   'StatusColorscheme' : function('theme_manager#StatusColorschemeBackground'),
+                          \   'LightlineTheme'    : function('theme_manager#LightlineThemeColorschemeBackground'),
+                          \   'AirlineTheme'      : function('theme_manager#AirlineThemeColorschemeBackground'),
+                          \   'ToggleScheme'      : function('theme_manager#ToggleBackground'),
                           \ },
                           \ {
                           \   'name'              : 'space_vim_theme',
                           \   'pat'               : 'theme',
-                          \   'NextVariant'       : function('colorschemefunctions#NextBackgroundVariant'),
-                          \   'StatusColorscheme' : function('colorschemefunctions#StatusColorschemeBackground'),
-                          \   'ToggleScheme'      : function('colorschemefunctions#ToggleBackground'),
-                          \   'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorschemeSubBackground')
+                          \   'NextVariant'       : function('theme_manager#NextBackgroundVariant'),
+                          \   'StatusColorscheme' : function('theme_manager#StatusColorschemeBackground'),
+                          \   'ToggleScheme'      : function('theme_manager#ToggleBackground'),
+                          \   'LightlineTheme'    : function('theme_manager#LightlineThemeColorschemeSubBackground')
                           \ },
                           \ {
                           \   'name'              : 'srcery',
-                          \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
-                          \   'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
-                          \   'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
+                          \   'StatusColorscheme' : function('theme_manager#StatusColorscheme'),
+                          \   'LightlineTheme'    : function('theme_manager#LightlineThemeColorscheme'),
+                          \   'AirlineTheme'      : function('theme_manager#AirlineThemeColorscheme'),
                           \ },
                           \ {
                           \   'name'              : 'stellarized',
-                          \   'NextVariant'       : function('colorschemefunctions#NextBackgroundVariant'),
-                          \   'StatusColorscheme' : function('colorschemefunctions#StatusColorschemeBackground'),
-                          \   'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorschemeBackground'),
-                          \   'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorschemeBackground'),
-                          \   'ToggleScheme'      : function('colorschemefunctions#ToggleBackground'),
+                          \   'NextVariant'       : function('theme_manager#NextBackgroundVariant'),
+                          \   'StatusColorscheme' : function('theme_manager#StatusColorschemeBackground'),
+                          \   'LightlineTheme'    : function('theme_manager#LightlineThemeColorschemeBackground'),
+                          \   'AirlineTheme'      : function('theme_manager#AirlineThemeColorschemeBackground'),
+                          \   'ToggleScheme'      : function('theme_manager#ToggleBackground'),
                           \ },
                           \ {
                           \   'name'              : 'stormpetrel',
                           \   'variants'          : g:colorscheme_groups.seabird_themes,
-                          \   'NextVariant'       : function('colorschemefunctions#NextColorschemeVariant'),
-                          \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
+                          \   'NextVariant'       : function('theme_manager#NextColorschemeVariant'),
+                          \   'StatusColorscheme' : function('theme_manager#StatusColorscheme'),
                           \   'AirlineTheme'      : function('myfunctions#SeagullAirlineTheme'),
                           \ },
                           \ {
                           \   'name'              : 'tokyo-metro',
                           \   'pat'               : '-',
                           \   'sub'               : '',
-                          \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
-                          \   'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorschemeSub'),
-                          \   'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorschemeSub'),
+                          \   'StatusColorscheme' : function('theme_manager#StatusColorscheme'),
+                          \   'LightlineTheme'    : function('theme_manager#LightlineThemeColorschemeSub'),
+                          \   'AirlineTheme'      : function('theme_manager#AirlineThemeColorschemeSub'),
                           \ },
                           \ {
                           \   'name'              : 'twilight',
-                          \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
+                          \   'StatusColorscheme' : function('theme_manager#StatusColorscheme'),
                           \ },
                           \ {
                           \   'name'              : 'vimspectr',
@@ -382,22 +382,22 @@ if !exists('g:colorscheme_map')
                           \   'light_tag'         : 'light',
                           \   'tr_from'           : '-',
                           \   'tr_to'             : '_',
-                          \   'NextVariant'       : function('colorschemefunctions#NextColorschemeVariantMap'),
-                          \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
-                          \   'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorschemeTR'),
-                          \   'ToggleScheme'      : function('colorschemefunctions#ToggleColorscheme'),
+                          \   'NextVariant'       : function('theme_manager#NextColorschemeVariantMap'),
+                          \   'StatusColorscheme' : function('theme_manager#StatusColorscheme'),
+                          \   'LightlineTheme'    : function('theme_manager#LightlineThemeColorschemeTR'),
+                          \   'ToggleScheme'      : function('theme_manager#ToggleColorscheme'),
                           \   'Map'               : function('myfunctions#VimspectrMap'),
                           \ },
                           \ {
                           \   'name'              : 'vadelma',
-                          \   'NextVariant'       : function('colorschemefunctions#NextBackgroundVariant'),
-                          \   'StatusColorscheme' : function('colorschemefunctions#StatusColorschemeBackground'),
-                          \   'LightlineTheme'    : function('colorschemefunctions#LightlineThemeColorscheme'),
-                          \   'ToggleScheme'      : function('colorschemefunctions#ToggleBackground'),
+                          \   'NextVariant'       : function('theme_manager#NextBackgroundVariant'),
+                          \   'StatusColorscheme' : function('theme_manager#StatusColorschemeBackground'),
+                          \   'LightlineTheme'    : function('theme_manager#LightlineThemeColorscheme'),
+                          \   'ToggleScheme'      : function('theme_manager#ToggleBackground'),
                           \ },
                           \ {
                           \   'name'              : 'vividchalk',
-                          \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
+                          \   'StatusColorscheme' : function('theme_manager#StatusColorscheme'),
                           \ },
                           \ {
                           \   'name'              : 'xcode',
@@ -405,10 +405,10 @@ if !exists('g:colorscheme_map')
                           \   'variants'          : ['xcodedark', 'xcodelight', 'xcodewwdc', 'xcodedarkhc', 'xcodelighthc'],
                           \   'dark_tag'          : 'dark',
                           \   'light_tag'         : 'light',
-                          \   'NextVariant'       : function('colorschemefunctions#NextColorschemeVariant'),
-                          \   'StatusColorscheme' : function('colorschemefunctions#StatusColorscheme'),
-                          \   'ToggleScheme'      : function('colorschemefunctions#ToggleColorscheme'),
-                          \   'AirlineTheme'      : function('colorschemefunctions#AirlineThemeColorscheme'),
+                          \   'NextVariant'       : function('theme_manager#NextColorschemeVariant'),
+                          \   'StatusColorscheme' : function('theme_manager#StatusColorscheme'),
+                          \   'ToggleScheme'      : function('theme_manager#ToggleColorscheme'),
+                          \   'AirlineTheme'      : function('theme_manager#AirlineThemeColorscheme'),
                           \ },
                           \ ]
 endif
@@ -436,7 +436,7 @@ augroup ColorschemeSetup
     autocmd ColorschemePre Atelier*Light set background=light
     autocmd ColorschemePre vimspectr*dark set background=dark
     autocmd ColorschemePre vimspectr*light set background=light
-    autocmd ColorSchemePre * let g:current_color_dictionary = colorschemefunctions#GetColorDictionary(expand('<amatch>'))
+    autocmd ColorSchemePre * let g:current_color_dictionary = theme_manager#GetColorDictionary(expand('<amatch>'))
                          \ | if has_key (g:current_color_dictionary, 'DefaultVariant')
                          \ |   if !exists('g:colors_name') || g:colors_name != expand('<amatch>')
                          \ |     call g:current_color_dictionary.DefaultVariant()
@@ -457,26 +457,26 @@ augroup StatusBarTheme
                     \ |   packadd vim-airline
                     \ |   packadd vim-airline-themes
                     \ |   let g:airline_section_x = airline#section#create_right(['%-25{g:current_color_dictionary.StatusColorscheme()}', 'bookmark', 'tagbar', 'vista', 'gutentags', 'grepper', 'filetype'])
-                    \ |   call colorschemefunctions#AirlineTheme()
+                    \ |   call theme_manager#AirlineTheme()
                     \ | endif
                     \ | if myfunctions#WhichStatus(expand('<amatch>')) == "lightline"
                     \ |   packadd lightline.vim | packadd lightline-buffer
                     \ |   packadd lightline_foobar.vim
-                    \ |   call colorschemefunctions#LightlineUpdate()
+                    \ |   call theme_manager#LightlineUpdate()
                     \ | endif
                     \ | if myfunctions#WhichStatus(expand('<amatch>')) == "none" && exists('g:loaded_lightline')
-                    \ |   call colorschemefunctions#LightlineUpdate()
+                    \ |   call theme_manager#LightlineUpdate()
                     \ | endif
                     \ | if myfunctions#WhichStatus(expand('<amatch>')) == "none" && exists('g:loaded_airline')
-                    \ |   call colorschemefunctions#AirlineTheme()
+                    \ |   call theme_manager#AirlineTheme()
                     \ | endif
                     \ | if myfunctions#WhichStatus(expand('<amatch>')) == "none" && !exists('g:loaded_lightline') && !exists('g:loaded_airline')
                     \ |   packadd vim-buftabline
                     \ | endif
 augroup END
 
-autocmd! VimEnter * call colorschemefunctions#SetLastColorscheme()
+autocmd! VimEnter * call theme_manager#SetLastColorscheme()
 
-nmap <silent> <leader>- :<c-u>call colorschemefunctions#SchemeVariant(-v:count1)<cr>
-nmap <silent> <leader>+ :<c-u>call colorschemefunctions#SchemeVariant(+v:count1)<cr>
-nmap <silent> <leader>b :<c-u>call colorschemefunctions#ToggleScheme()<cr>
+nmap <silent> <leader>- :<c-u>call theme_manager#SchemeVariant(-v:count1)<cr>
+nmap <silent> <leader>+ :<c-u>call theme_manager#SchemeVariant(+v:count1)<cr>
+nmap <silent> <leader>b :<c-u>call theme_manager#ToggleScheme()<cr>
