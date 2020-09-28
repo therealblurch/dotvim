@@ -698,35 +698,6 @@ let g:airline#extensions#tabline#right_sep      = ''
 let g:airline#extensions#tabline#right_alt_sep  = ''
 let g:airline_left_sep                          = ''
 let g:airline_right_sep                         = ''
-let g:airline_theme_map                         = {
-                                                \ 'foo*'                     : 'distinquished',
-                                                \ 'greygull'                 : 'seagull',
-                                                \ 'gruvbox-material'         : 'gruvbox_material',
-                                                \ 'petrel'                   : 'seagull',
-                                                \ 'stormpetrel'              : 'seagull',
-                                                \ 'edge'                     : 'distinguished',
-                                                \ 'Atelier_CaveDark'         : 'Atelier_CaveDark',
-                                                \ 'Atelier_CaveLight'        : 'Atelier_CaveLight',
-                                                \ 'Atelier_DuneDark'         : 'Atelier_DuneDark',
-                                                \ 'Atelier_DuneLight'        : 'Atelier_DuneLight',
-                                                \ 'Atelier_EstuaryDark'      : 'Atelier_EstuaryDark',
-                                                \ 'Atelier_EstuaryLight'     : 'Atelier_EstuaryLight',
-                                                \ 'Atelier_ForestDark'       : 'Atelier_ForestDark',
-                                                \ 'Atelier_ForestLight'      : 'Atelier_ForestLight',
-                                                \ 'Atelier_HeathDark'        : 'Atelier_HeathDark',
-                                                \ 'Atelier_HeathLight'       : 'Atelier_HeathLight',
-                                                \ 'Atelier_LakesideDark'     : 'Atelier_LakesideDark',
-                                                \ 'Atelier_LakesideLight'    : 'Atelier_LakesideLight',
-                                                \ 'Atelier_PlateauDark'      : 'Atelier_PlateauDark',
-                                                \ 'Atelier_PlateauLight'     : 'Atelier_PlateauLight',
-                                                \ 'Atelier_SavannaDark'      : 'Atelier_SavannaDark',
-                                                \ 'Atelier_SavannaLight'     : 'Atelier_SavannaLight',
-                                                \ 'Atelier_SeasideDark'      : 'Atelier_SeasideDark',
-                                                \ 'Atelier_SeasideLight'     : 'Atelier_SeasideLight',
-                                                \ 'Atelier_SulphurpoolDark'  : 'Atelier_SulphurpoolDark',
-                                                \ 'Atelier_SulphurpoolLight' : 'Atelier_SulphurpoolLight',
-                                                \ }
-
 " }}}
 
 " buftabline {{{
