@@ -437,6 +437,7 @@ let g:colorscheme_map = [
                         \   'NextVariant'       : function('theme_manager#NextColorschemeVariantMap'),
                         \   'StatusColorscheme' : function('theme_manager#StatusColorscheme'),
                         \   'LightlineTheme'    : function('theme_manager#Colorscheme'),
+                        \   'AirlineTheme'      : function('myfunctions#FlattenedAirlineTheme'),
                         \   'ToggleScheme'      : function('theme_manager#ToggleColorscheme'),
                         \   'Map'               : function('myfunctions#FlattenedMap'),
                         \ },

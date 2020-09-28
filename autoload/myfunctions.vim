@@ -47,6 +47,10 @@ function! myfunctions#Base16AirlineTheme() dict
   return 'base16'
 endfunction
 
+function! myfunctions#FlattenedAirlineTheme() dict
+  return 'solarized'
+endfunction
+
 function! myfunctions#VimspectrMap (key,val) dict
   return self.name . a:val . '-' . &background
 endfunction
