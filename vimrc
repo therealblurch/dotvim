@@ -434,6 +434,8 @@ let g:colorscheme_map = [
                         \   'name'              : 'flattened',
                         \   'comparison'        : 'fuzzy',
                         \   'variants'          : ['_light', '_dark'],
+                        \   'dark_tag'          : '_dark',
+                        \   'light_tag'         : '_light',
                         \   'NextVariant'       : function('theme_manager#NextColorschemeVariantMap'),
                         \   'StatusColorscheme' : function('theme_manager#StatusColorscheme'),
                         \   'LightlineTheme'    : function('theme_manager#Colorscheme'),
