@@ -283,7 +283,7 @@ autocmd! FileType gitcommit setlocal spell
 " }}}
 
 " theme manager {{{
- 
+
 let g:colorscheme_groups = {
                            \  'vimspectr_light_themes' : [
                            \                               'vimspectr0-light'  , 'vimspectr30-light' , 'vimspectr60-light' ,
@@ -330,7 +330,7 @@ let g:colorscheme_groups = {
                            \                               'stormpetrel'
                            \                             ],
                            \ }
- 
+
 let g:colorscheme_map = [
                         \ {
                         \   'name'              : 'Atelier',
