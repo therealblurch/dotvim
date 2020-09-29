@@ -30,7 +30,7 @@ let g:fontlist=[
   \ 'Source\ Code\ Pro\ iCursive\ S12\ 12',
   \ 'SpaceMono\ Nerd\ Font\ Mono\ 12',
   \ 'TerminessTTF\ Nerd\ Font\ Mono\ Medium\ 12',
-  \ 'UbuntuMono\ Nerd\ Font Mono\ 12',
+  \ 'UbuntuMono\ Nerd\ Font\ Mono\ 12',
   \ 'VictorMono\ Nerd\ Font\ Mono\ 12'
   \]
 
