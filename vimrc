@@ -433,6 +433,12 @@ let g:colorscheme_map = [
                         \   'ToggleScheme'        : function('theme_manager#ToggleBackground'),
                         \ },
                         \ {
+                        \   'name'              : 'embark',
+                        \   'StatusColorscheme' : function('theme_manager#Colorscheme'),
+                        \   'AirlineTheme'      : function('theme_manager#Colorscheme'),
+                        \   'LightlineTheme'    : function('theme_manager#Colorscheme'),
+                        \ },
+                        \ {
                         \   'name'              : 'flattened',
                         \   'comparison'        : 'fuzzy',
                         \   'variants'          : ['_light', '_dark'],
