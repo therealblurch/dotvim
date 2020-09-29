@@ -284,6 +284,8 @@ autocmd! FileType gitcommit setlocal spell
 
 " theme manager {{{
 
+let g:theme_manager_randomize = 1
+
 let g:colorscheme_groups = {
                            \  'vimspectr_light_themes' : [
                            \                               'vimspectr0-light'  , 'vimspectr30-light' , 'vimspectr60-light' ,
