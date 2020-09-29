@@ -170,7 +170,8 @@ function! PackagerInit() abort
   call packager#add('atelierbram/vim-colors_atelier-schemes', {'package': 'colors'})
   call packager#add('ayu-theme/ayu-vim',                      {'package': 'colors'})
   call packager#add('bignimbus/pop-punk.vim',                 {'package': 'colors'})
-  call packager#add('chriskempson/base16-vim',                {'package': 'colors'})
+  call packager#add('bluz71/vim-nightfly-guicolors',          {'package': 'colors'})
+  call packager#add('bluz71/vim-moonfly-colors',              {'package': 'colors'})
   call packager#add('cocopon/iceberg.vim',                    {'package': 'colors'})
   call packager#add('dracula/vim',                            {'package': 'colors', 'name': 'dracula'})
   call packager#add('drewtempelmeyer/palenight.vim',          {'package': 'colors'})
@@ -521,6 +522,18 @@ let g:colorscheme_map = [
                         \   'StatusColorscheme'   : function('theme_manager#ColorschemeBackgroundStyle'),
                         \   'AirlineTheme'        : function('theme_manager#Colorscheme'),
                         \   'ToggleScheme'        : function('theme_manager#ToggleBackground'),
+                        \ },
+                        \ {
+                        \   'name'              : 'moonfly',
+                        \   'StatusColorscheme' : function('theme_manager#Colorscheme'),
+                        \   'AirlineTheme'      : function('theme_manager#Colorscheme'),
+                        \   'LightlineTheme'    : function('theme_manager#Colorscheme'),
+                        \ },
+                        \ {
+                        \   'name'              : 'nightfly',
+                        \   'StatusColorscheme' : function('theme_manager#Colorscheme'),
+                        \   'AirlineTheme'      : function('theme_manager#Colorscheme'),
+                        \   'LightlineTheme'    : function('theme_manager#Colorscheme'),
                         \ },
                         \ {
                         \   'name'                : 'night-owl',
