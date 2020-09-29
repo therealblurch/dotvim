@@ -25,7 +25,7 @@ let g:fontlist=[
   \ 'Monofur\ Nerd\ Font\ Mono\ 12',
   \ 'Monoid\ Nerd\ Font\ Mono\ Light\ Semi-Condensed\ 12',
   \ 'mononoki\ Nerd\ Font\ Mono\ 12',
-  \ 'SauceCodePro\ Nerd\ Fonts\ Mono\ 12',
+  \ 'SauceCodePro\ Nerd\ Font\ Mono\ 12',
   \ 'ShureTechMono\ Nerd\ Font\ Mono\ 12',
   \ 'Source\ Code\ Pro\ iCursive\ S12\ 12',
   \ 'SpaceMono\ Nerd\ Font\ Mono\ 12',
