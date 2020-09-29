@@ -175,6 +175,7 @@ function! PackagerInit() abort
   call packager#add('dracula/vim',                            {'package': 'colors', 'name': 'dracula'})
   call packager#add('drewtempelmeyer/palenight.vim',          {'package': 'colors'})
   call packager#add('embark-theme/vim',                       {'package': 'colors'})
+  call packager#add('ghifarit53/tokyonight-vim',              {'package': 'colors'})
   call packager#add('haishanh/night-owl.vim',                 {'package': 'colors'})
   call packager#add('huyvohcmc/atlas.vim',                    {'package': 'colors'})
   call packager#add('itchyny/landscape.vim',                  {'package': 'colors'})
@@ -646,6 +647,17 @@ let g:colorscheme_map = [
                         \   'NextVariant'       : function('theme_manager#NextColorschemeVariant'),
                         \   'StatusColorscheme' : function('theme_manager#Colorscheme'),
                         \   'AirlineTheme'      : function('myfunctions#SeagullAirlineTheme'),
+                        \ },
+                        \ {
+                        \   'name'                : 'tokyonight',
+                        \   'variants'            : ['night', 'storm'],
+                        \   'style_variable_name' : 'g:tokyonight_style',
+                        \   'default_style'       : 'night',
+                        \   'NextVariant'         : function('theme_manager#NextStyleVariant'),
+                        \   'DefaultVariant'      : function('theme_manager#DefaultStyleVariant'),
+                        \   'StatusColorscheme'   : function('theme_manager#ColorschemeStyle'),
+                        \   'LightlineTheme'      : function('theme_manager#Colorscheme'),
+                        \   'AirlineTheme'        : function('theme_manager#Colorscheme'),
                         \ },
                         \ {
                         \   'name'              : 'tokyo-metro',
