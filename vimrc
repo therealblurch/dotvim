@@ -728,12 +728,12 @@ let g:airline#extensions#tabline#alt_sep        = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#fnamemod       = ':t'
 let g:airline#extensions#tabline#formatter      = 'unique_tail'
-let g:airline#extensions#tabline#left_sep       = ''
-let g:airline#extensions#tabline#left_alt_sep   = ''
-let g:airline#extensions#tabline#right_sep      = ''
-let g:airline#extensions#tabline#right_alt_sep  = ''
-let g:airline_left_sep                          = ''
-let g:airline_right_sep                         = ''
+let g:airline#extensions#tabline#left_sep       = "\ue0bc"
+let g:airline#extensions#tabline#left_alt_sep   = "\ue0bb"
+let g:airline#extensions#tabline#right_sep      = "\ue0ba"
+let g:airline#extensions#tabline#right_alt_sep  = "\ue0bb"
+let g:airline_left_sep                          = "\ue0b8"
+let g:airline_right_sep                         = "\ue0be"
 " }}}
 
 " buftabline {{{
@@ -830,10 +830,10 @@ let g:lightline = {
                   \                                       [ 'bufferbefore', 'buffercurrent', 'bufferafter' ] ],
                   \                            'right': [ [ 'close' ] ]
                   \                          },
-                  \ 'separator' :            { 'left': '', 'right': '' },
-                  \ 'subseparator' :         { 'left': '', 'right': '' },
-                  \ 'tabline_separator' :    { 'left': '', 'right': '' },
-                  \ 'tabline_subseparator' : { 'left': '', 'right': '' },
+                  \ 'separator' :            { 'left': "\ue0b8", 'right': "\ue0be" },
+                  \ 'subseparator' :         { 'left': "\ue0b9", 'right': "\ue0b9" },
+                  \ 'tabline_separator' :    { 'left': "\ue0bc", 'right': "\ue0ba" },
+                  \ 'tabline_subseparator' : { 'left': "\ue0bb", 'right': "\ue0bb" },
                   \ 'tab' :                  {
                   \                            'active'  : [ 'tabnum', 'filename', 'modified' ],
                   \                            'inactive': [ 'tabnum', 'filename', 'modified' ]
