@@ -55,3 +55,18 @@ function! myfunctions#VimspectrMap (key,val) dict
   return self.name . a:val . '-' . &background
 endfunction
 
+function! myfunctions#SeagullToggle() dict
+  if g:colors_name == 'seagull'
+    let l:colorscheme = 'petrel'
+  endif
+  if g:colors_name == 'petrel'
+    let l:colorscheme = 'seagull'
+  endif
+  if g:colors_name == 'greygull'
+    let l:colorscheme = 'stormpetrel'
+  endif
+  if g:colors_name == 'stormpetrel'
+    let l:colorscheme = 'greygull'
+  endif
+  exec 'colors ' . l:colorscheme
+endfunction

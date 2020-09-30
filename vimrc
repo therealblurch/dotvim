@@ -463,10 +463,11 @@ let g:colorscheme_map = [
                         \ },
                         \ {
                         \   'name'              : 'greygull',
-                        \   'variants'          : ['seagull', 'greygull', 'petrel', 'stormpetrel'],
+                        \   'variants'          : g:colorscheme_groups.seabird_themes,
                         \   'NextVariant'       : function('theme_manager#NextColorschemeVariant'),
                         \   'StatusColorscheme' : function('theme_manager#Colorscheme'),
                         \   'AirlineTheme'      : function('myfunctions#SeagullAirlineTheme'),
+                        \   'ToggleScheme'      : function('myfunctions#SeagullToggle'),
                         \ },
                         \ {
                         \   'name'                : 'gruvbox-material',
@@ -580,10 +581,11 @@ let g:colorscheme_map = [
                         \ },
                         \ {
                         \   'name'              : 'petrel',
-                        \   'variants'          : ['seagull', 'greygull', 'petrel', 'stormpetrel'],
+                        \   'variants'          : g:colorscheme_groups.seabird_themes,
                         \   'NextVariant'       : function('theme_manager#NextColorschemeVariant'),
                         \   'StatusColorscheme' : function('theme_manager#Colorscheme'),
                         \   'AirlineTheme'      : function('myfunctions#SeagullAirlineTheme'),
+                        \   'ToggleScheme'      : function('myfunctions#SeagullToggle'),
                         \ },
                         \ {
                         \   'name'              : 'pop-punk',
@@ -594,10 +596,11 @@ let g:colorscheme_map = [
                         \ },
                         \ {
                         \   'name'              : 'seagull',
-                        \   'variants'          : ['seagull', 'greygull', 'petrel', 'stormpetrel'],
+                        \   'variants'          : g:colorscheme_groups.seabird_themes,
                         \   'NextVariant'       : function('theme_manager#NextColorschemeVariant'),
                         \   'StatusColorscheme' : function('theme_manager#Colorscheme'),
                         \   'AirlineTheme'      : function('theme_manager#Colorscheme'),
+                        \   'ToggleScheme'      : function('myfunctions#SeagullToggle'),
                         \ },
                         \ {
                         \   'name'                : 'sonokai',
@@ -643,10 +646,11 @@ let g:colorscheme_map = [
                         \ },
                         \ {
                         \   'name'              : 'stormpetrel',
-                        \   'variants'          : ['seagull', 'greygull', 'petrel', 'stormpetrel'],
+                        \   'variants'          : g:colorscheme_groups.seabird_themes,
                         \   'NextVariant'       : function('theme_manager#NextColorschemeVariant'),
                         \   'StatusColorscheme' : function('theme_manager#Colorscheme'),
                         \   'AirlineTheme'      : function('myfunctions#SeagullAirlineTheme'),
+                        \   'ToggleScheme'      : function('myfunctions#SeagullToggle'),
                         \ },
                         \ {
                         \   'name'                : 'tokyonight',
