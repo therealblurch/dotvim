@@ -369,7 +369,6 @@ let g:colorscheme_map = [
                         \ },
                         \ {
                         \   'name'              : 'base16',
-                        \   'comparison'        : 'fuzzy',
                         \   'StatusColorscheme' : function('theme_manager#Colorscheme'),
                         \   'AirlineTheme'      : function('myfunctions#Base16AirlineTheme'),
                         \ },
@@ -439,7 +438,6 @@ let g:colorscheme_map = [
                         \ },
                         \ {
                         \   'name'              : 'flattened',
-                        \   'comparison'        : 'fuzzy',
                         \   'variants'          : ['_light', '_dark'],
                         \   'NextVariant'       : function('theme_manager#NextColorschemeVariantMap'),
                         \   'StatusColorscheme' : function('theme_manager#Colorscheme'),
@@ -667,7 +665,6 @@ let g:colorscheme_map = [
                         \ },
                         \ {
                         \   'name'              : 'vimspectr',
-                        \   'comparison'        : 'fuzzy',
                         \   'variants'          : ['grey', '0', '30', '60', '90', '120', '150', '180', '210', '240', '270', '300', '330'],
                         \   'NextVariant'       : function('theme_manager#NextColorschemeVariantMap'),
                         \   'StatusColorscheme' : function('theme_manager#Colorscheme'),
@@ -688,7 +685,6 @@ let g:colorscheme_map = [
                         \ },
                         \ {
                         \   'name'              : 'xcode',
-                        \   'comparison'        : 'fuzzy',
                         \   'variants'          : ['xcodedark', 'xcodelight', 'xcodewwdc', 'xcodedarkhc', 'xcodelighthc'],
                         \   'NextVariant'       : function('theme_manager#NextColorschemeVariant'),
                         \   'StatusColorscheme' : function('theme_manager#Colorscheme'),
