@@ -614,7 +614,7 @@ let g:colorscheme_map = [
                         \   'NextVariant'       : function('theme_manager#NextBackgroundVariant'),
                         \   'StatusColorscheme' : function('theme_manager#ColorschemeBackgroundSlash'),
                         \   'ToggleScheme'      : function('theme_manager#ToggleBackground'),
-                        \   'LightlineTheme'    : function('myfunctions#SpaceVimLIghtlineTheme')
+                        \   'LightlineTheme'    : function('myfunctions#SpaceVimLightlineTheme')
                         \ },
                         \ {
                         \   'name'              : 'srcery',

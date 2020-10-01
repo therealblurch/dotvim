@@ -47,7 +47,7 @@ function! myfunctions#VimspectrMap (key,val) dict
 endfunction
 
 function! myfunctions#SpaceVimLightlineTheme() dict
-  return substitute(g:golors_name, 'theme', &background)
+  return substitute(g:colors_name, 'theme', &background, "")
 endfunction
 
 function! myfunctions#ColorschemeAppendVim() dict
