@@ -55,6 +55,14 @@ function! myfunctions#VimspectrMap (key,val) dict
   return self.name . a:val . '-' . &background
 endfunction
 
+function! myfunctions#SpaceVimLightlineTheme() dict
+  return substitute(g:golors_name, 'theme', &background)
+endfunction
+
+function! myfunctions#ColorschemeAppendVim() dict
+  return g:colors_name . '_vim'
+endfunction
+
 function! myfunctions#SeagullToggle() dict
   if g:colors_name == 'seagull'
     let l:colorscheme = 'petrel'

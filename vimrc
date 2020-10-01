@@ -387,13 +387,9 @@ let g:colorscheme_map = [
                         \ },
                         \ {
                         \   'name'              : 'deep-space',
-                        \   'tr_from'           : '-',
-                        \   'tr_to'             : '_',
-                        \   'pat'               : '-',
-                        \   'sub'               : '',
                         \   'StatusColorscheme' : function('theme_manager#Colorscheme'),
-                        \   'LightlineTheme'    : function('theme_manager#ColorschemeSub'),
-                        \   'AirlineTheme'      : function('theme_manager#ColorschemeTR'),
+                        \   'LightlineTheme'    : function('theme_manager#ColorschemeRemoveDash),
+                        \   'AirlineTheme'      : function('theme_manager#ColorschemeDashtoUnderscore'),
                         \ },
                         \ {
                         \   'name'              : 'desertink',
@@ -475,13 +471,11 @@ let g:colorscheme_map = [
                         \   'style_variable_name' : 'g:gruvbox_material_background',
                         \   'default_style'       : 'hard',
                         \   'pre_commands'        : ['let g:gruvbox_material_better_performance = 1'],
-                        \   'tr_from'             : '-',
-                        \   'tr_to'               : '_',
                         \   'NextVariant'         : function('theme_manager#NextStyleVariant'),
                         \   'DefaultVariant'      : function('theme_manager#DefaultStyleVariant'),
                         \   'StatusColorscheme'   : function('theme_manager#ColorschemeStyle'),
                         \   'LightlineTheme'      : function('theme_manager#Colorscheme'),
-                        \   'AirlineTheme'        : function('theme_manager#ColorschemeTR'),
+                        \   'AirlineTheme'        : function('theme_manager#ColorschemeDashtoUnderscore'),
                         \   'ToggleScheme'        : function('theme_manager#ToggleBackground'),
                         \ },
                         \ {
@@ -506,11 +500,10 @@ let g:colorscheme_map = [
                         \   'style_variable_name' : 'g:material_theme_style',
                         \   'default_style'       : 'palenight',
                         \   'pre_commands'        : ['let g:material_terminal_italics = 1'],
-                        \   'suffix'              : '_vim',
                         \   'NextVariant'         : function('theme_manager#NextStyleVariant'),
                         \   'DefaultVariant'      : function('theme_manager#DefaultStyleVariant'),
                         \   'StatusColorscheme'   : function('theme_manager#ColorschemeStyle'),
-                        \   'LightlineTheme'      : function('theme_manager#ColorschemeSuffix'),
+                        \   'LightlineTheme'      : function('myfunctions#ColorschemeAppendVim'),
                         \   'AirlineTheme'        : function('theme_manager#Colorscheme'),
                         \ },
                         \ {
@@ -538,10 +531,8 @@ let g:colorscheme_map = [
                         \ },
                         \ {
                         \   'name'                : 'night-owl',
-                        \   'pat'               : '-',
-                        \   'sub'               : '',
                         \   'StatusColorscheme'   : function('theme_manager#Colorscheme'),
-                        \   'LightlineTheme'      : function('theme_manager#ColorschemeSub'),
+                        \   'LightlineTheme'      : function('theme_manager#ColorschemeRemoveDash),
                         \ },
                         \ {
                         \   'name'              : 'nord',
@@ -589,10 +580,8 @@ let g:colorscheme_map = [
                         \ },
                         \ {
                         \   'name'              : 'pop-punk',
-                        \   'tr_from'           : '-',
-                        \   'tr_to'             : '_',
                         \   'StatusColorscheme' : function('theme_manager#Colorscheme'),
-                        \   'AirlineTheme'      : function('theme_manager#ColorschemeTR'),
+                        \   'AirlineTheme'      : function('theme_manager#ColorschemeDashtoUnderscore'),
                         \ },
                         \ {
                         \   'name'              : 'seagull',
@@ -624,11 +613,10 @@ let g:colorscheme_map = [
                         \ },
                         \ {
                         \   'name'              : 'space_vim_theme',
-                        \   'pat'               : 'theme',
                         \   'NextVariant'       : function('theme_manager#NextBackgroundVariant'),
                         \   'StatusColorscheme' : function('theme_manager#ColorschemeBackgroundSlash'),
                         \   'ToggleScheme'      : function('theme_manager#ToggleBackground'),
-                        \   'LightlineTheme'    : function('theme_manager#ColorschemeSubBackground')
+                        \   'LightlineTheme'    : function('myfunctions#SpaceVimLIghtlineTheme')
                         \ },
                         \ {
                         \   'name'              : 'srcery',
@@ -665,11 +653,9 @@ let g:colorscheme_map = [
                         \ },
                         \ {
                         \   'name'              : 'tokyo-metro',
-                        \   'pat'               : '-',
-                        \   'sub'               : '',
                         \   'StatusColorscheme' : function('theme_manager#Colorscheme'),
-                        \   'LightlineTheme'    : function('theme_manager#ColorschemeSub'),
-                        \   'AirlineTheme'      : function('theme_manager#ColorschemeSub'),
+                        \   'LightlineTheme'    : function('theme_manager#ColorschemeRemoveDash),
+                        \   'AirlineTheme'      : function('theme_manager#ColorschemeRemoveDash),
                         \ },
                         \ {
                         \   'name'              : 'twilight',
@@ -681,11 +667,9 @@ let g:colorscheme_map = [
                         \   'variants'          : ['grey', '0', '30', '60', '90', '120', '150', '180', '210', '240', '270', '300', '330'],
                         \   'dark_tag'          : 'dark',
                         \   'light_tag'         : 'light',
-                        \   'tr_from'           : '-',
-                        \   'tr_to'             : '_',
                         \   'NextVariant'       : function('theme_manager#NextColorschemeVariantMap'),
                         \   'StatusColorscheme' : function('theme_manager#Colorscheme'),
-                        \   'LightlineTheme'    : function('theme_manager#ColorschemeTR'),
+                        \   'LightlineTheme'    : function('theme_manager#ColorschemeDashtoUnderscore'),
                         \   'ToggleScheme'      : function('theme_manager#ToggleColorscheme'),
                         \   'Map'               : function('myfunctions#VimspectrMap'),
                         \ },
