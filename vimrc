@@ -181,6 +181,7 @@ function! PackagerInit() abort
   call packager#add('haishanh/night-owl.vim',                 {'package': 'colors'})
   call packager#add('huyvohcmc/atlas.vim',                    {'package': 'colors'})
   call packager#add('itchyny/landscape.vim',                  {'package': 'colors'})
+  call packager#add('jacoborus/tender.vim',                   {'package': 'colors'})
   call packager#add('kaicataldo/material.vim',                {'package': 'colors', 'name': 'material'})
   call packager#add('koirand/tokyo-metro.vim',                {'package': 'colors'})
   call packager#add('liuchengxu/space-vim-theme',             {'package': 'colors'})
@@ -653,6 +654,12 @@ let g:colorscheme_map = [
                         \   'StatusColorscheme' : function('theme_manager#Colorscheme'),
                         \   'AirlineTheme'      : function('myfunctions#SeagullAirlineTheme'),
                         \   'ToggleScheme'      : function('myfunctions#SeagullToggle'),
+                        \ },
+                        \ {
+                        \   'name'              : 'tender',
+                        \   'StatusColorscheme' : function('theme_manager#Colorscheme'),
+                        \   'AirlineTheme'      : function('theme_manager#Colorscheme'),
+                        \   'LightlineTheme'    : function('theme_manager#Colorscheme'),
                         \ },
                         \ {
                         \   'name'                : 'tokyonight',
