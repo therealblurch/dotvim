@@ -403,7 +403,7 @@ let g:colorscheme_map = [
                         \ {
                         \   'name'              : 'deep-space',
                         \   'StatusColorscheme' : function('theme_manager#Colorscheme'),
-                        \   'LightlineTheme'    : function('theme_manager#ColorschemeRemoveDash),
+                        \   'LightlineTheme'    : function('theme_manager#ColorschemeRemoveDash'),
                         \   'AirlineTheme'      : function('theme_manager#ColorschemeDashtoUnderscore'),
                         \ },
                         \ {
@@ -547,7 +547,7 @@ let g:colorscheme_map = [
                         \ {
                         \   'name'                : 'night-owl',
                         \   'StatusColorscheme'   : function('theme_manager#Colorscheme'),
-                        \   'LightlineTheme'      : function('theme_manager#ColorschemeRemoveDash),
+                        \   'LightlineTheme'      : function('theme_manager#ColorschemeRemoveDash'),
                         \ },
                         \ {
                         \   'name'              : 'nord',
@@ -675,8 +675,8 @@ let g:colorscheme_map = [
                         \ {
                         \   'name'              : 'tokyo-metro',
                         \   'StatusColorscheme' : function('theme_manager#Colorscheme'),
-                        \   'LightlineTheme'    : function('theme_manager#ColorschemeRemoveDash),
-                        \   'AirlineTheme'      : function('theme_manager#ColorschemeRemoveDash),
+                        \   'LightlineTheme'    : function('theme_manager#ColorschemeRemoveDash'),
+                        \   'AirlineTheme'      : function('theme_manager#ColorschemeRemoveDash'),
                         \ },
                         \ {
                         \   'name'              : 'twilight',
