@@ -172,6 +172,7 @@ function! PackagerInit() abort
   call packager#add('bignimbus/pop-punk.vim',                 {'package': 'colors'})
   call packager#add('bluz71/vim-nightfly-guicolors',          {'package': 'colors'})
   call packager#add('bluz71/vim-moonfly-colors',              {'package': 'colors'})
+  call packager#add('challenger-deep-theme/vim',              {'package': 'colors', 'name': 'challenger_deep'})
   call packager#add('cocopon/iceberg.vim',                    {'package': 'colors'})
   call packager#add('dracula/vim',                            {'package': 'colors', 'name': 'dracula'})
   call packager#add('drewtempelmeyer/palenight.vim',          {'package': 'colors'})
@@ -383,6 +384,12 @@ let g:colorscheme_map = [
                         \   'comparison'        : 'fuzzy',
                         \   'StatusColorscheme' : function('theme_manager#Colorscheme'),
                         \   'AirlineTheme'      : function('myfunctions#Base16AirlineTheme'),
+                        \ },
+                        \ {
+                        \   'name'              : 'challenger_deep',
+                        \   'StatusColorscheme' : function('theme_manager#Colorscheme'),
+                        \   'AirlineTheme'      : function('theme_manager#Colorscheme'),
+                        \   'LightlineTheme'    : function('theme_manager#Colorscheme'),
                         \ },
                         \ {
                         \   'name'              : 'cosmic_latte',
