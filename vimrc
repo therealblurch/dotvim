@@ -168,6 +168,7 @@ function! PackagerInit() abort
   call packager#add('arcticicestudio/nord-vim',               {'package': 'colors', 'branch': 'develop'})
   call packager#add('arzg/vim-colors-xcode',                  {'package': 'colors'})
   call packager#add('ayu-theme/ayu-vim',                      {'package': 'colors'})
+  call packager#add('Badacadabra/vim-archery',                {'package': 'colors'})
   call packager#add('bignimbus/pop-punk.vim',                 {'package': 'colors'})
   call packager#add('bluz71/vim-nightfly-guicolors',          {'package': 'colors'})
   call packager#add('bluz71/vim-moonfly-colors',              {'package': 'colors'})
@@ -335,6 +336,12 @@ let g:colorscheme_groups = {
                            \ }
 
 let g:colorscheme_map = [
+                        \ {
+                        \   'name'              : 'archery',
+                        \   'StatusColorscheme' : function('theme_manager#Colorscheme'),
+                        \   'AirlineTheme'      : function('theme_manager#Colorscheme'),
+                        \   'LightlineTheme'    : function('theme_manager#Colorscheme'),
+                        \ },
                         \ {
                         \   'name'              : 'Atelier',
                         \   'comparison'        : 'fuzzy',
