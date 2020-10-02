@@ -52,7 +52,7 @@ function! lightlinefunctions#LightlineFileformat()
 endfunction
 
 function! lightlinefunctions#LightlineColorscheme()
-  let l:color = g:current_color_dictionary.StatusColorscheme()
+  let l:color = g:current_color_dictionary.status()
   return winwidth(0) > 80 ? l:color : ''
 endfunction
 
