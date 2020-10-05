@@ -326,36 +326,12 @@ let g:colorscheme_groups = {
                            \                               'vimspectr270-light', 'vimspectr300-light', 'vimspectr330-light',
                            \                               'vimspectrgrey-light'
                            \                              ],
-                           \  'atelier_light_themes'   : [
-                           \                               'atelier_cavelight',
-                           \                               'atelier_dunelight',
-                           \                               'atelier_estuarylight',
-                           \                               'atelier_forestlight',
-                           \                               'atelier_heathlight',
-                           \                               'atelier_lakesidelight',
-                           \                               'atelier_plateaulight',
-                           \                               'atelier_savannalight',
-                           \                               'atelier_seasidelight',
-                           \                               'atelier_sulphurpoollight',
-                           \                             ],
                            \  'vimspectr_dark_themes'  : [
                            \                               'vimspectr0-dark'  , 'vimspectr30-dark' , 'vimspectr60-dark' ,
                            \                               'vimspectr90-dark' , 'vimspectr120-dark', 'vimspectr150-dark',
                            \                               'vimspectr180-dark', 'vimspectr210-dark', 'vimspectr240-dark',
                            \                               'vimspectr270-dark', 'vimspectr300-dark', 'vimspectr330-dark',
                            \                               'vimspectrgrey-dark'
-                           \                             ],
-                           \  'atelier_dark_themes'    : [
-                           \                               'atelier_cavedark',
-                           \                               'atelier_dunedark',
-                           \                               'atelier_estuarydark',
-                           \                               'atelier_forestdark',
-                           \                               'atelier_heathdark',
-                           \                               'atelier_lakesidedark',
-                           \                               'atelier_plateaudark',
-                           \                               'atelier_savannadark',
-                           \                               'atelier_seasidedark',
-                           \                               'atelier_sulphurpooldark',
                            \                             ],
                            \  'seabird_themes'         : [
                            \                               'greygull',
