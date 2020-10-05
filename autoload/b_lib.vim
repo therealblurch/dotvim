@@ -1,4 +1,4 @@
-function! myfunctions#GitgutterStatus()
+function! b_lib#GitgutterStatus()
   let l:summary = [0, 0, 0]
   if exists('b:gitgutter.summary')
     let l:summary = b:gitgutter.summary
@@ -6,27 +6,18 @@ function! myfunctions#GitgutterStatus()
   return max(l:summary) > 0 ? ' +'.l:summary[0].' ~'.l:summary[1].' -'.l:summary[2].' ' : ''
 endfunction
 
-function! myfunctions#ResCur()
+function! b_lib#ResCur()
   if line("'\"") <= line("$")
     silent! normal! g`"
     return 1
   endif
 endfunction
 
-function! myfunctions#MU()
+function! b_lib#MU()
   return get(g:mucomplete#msg#short_methods, get(g:, 'mucomplete_current_method', ''), '')
 endfunction
 
-function! myfunctions#AtelierMap (key,val) dict
-  if &background == 'light'
-    let l:back = 'Light'
-  else
-    let l:back = 'Dark'
-  endif
-  return self.name . '_' . a:val . l:back
-endfunction
-
-function! myfunctions#AtelierLightlineTheme() dict
+function! b_lib#AtelierLightlineTheme() dict
   if &background == 'Light'
     let l:lightlinetheme = split (g:colors_name, "Light")
   else
@@ -35,27 +26,35 @@ function! myfunctions#AtelierLightlineTheme() dict
   return l:lightlinetheme
 endfunction
 
-function! myfunctions#FlattenedMap (key,val) dict
+function! b_lib#FlattenedMap (key,val) dict
   return self.name . a:val
 endfunction
 
-function! myfunctions#SeagullAirlineTheme() dict
+function! b_lib#SeagullAirlineTheme() dict
   return 'seagull'
 endfunction
 
-function! myfunctions#Base16AirlineTheme() dict
+function! b_lib#Base16AirlineTheme() dict
   return 'base16'
 endfunction
 
-function! myfunctions#FlattenedAirlineTheme() dict
+function! b_lib#FlattenedAirlineTheme() dict
   return 'solarized'
 endfunction
 
-function! myfunctions#VimspectrMap (key,val) dict
+function! b_lib#VimspectrMap (key,val) dict
   return self.name . a:val . '-' . &background
 endfunction
 
-function! myfunctions#SeagullToggle() dict
+function! b_lib#SpaceVimLightlineTheme() dict
+  return substitute(g:colors_name, 'theme', &background, "")
+endfunction
+
+function! b_lib#ColorschemeAppendVim() dict
+  return g:colors_name . '_vim'
+endfunction
+
+function! b_lib#SeagullToggle() dict
   if g:colors_name == 'seagull'
     let l:colorscheme = 'petrel'
   endif
