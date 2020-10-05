@@ -18,8 +18,34 @@ set hidden
 set hlsearch
 set ignorecase
 set list
+
+" show tab and trailing spaces
+" Ctrl+v, u, unicode hex code
+" "
+" " tab chars
+" " 21E2 ⇢
+" " 21E5 ⇥
+" " 21E8 ⇨
+" " 2192 → (rightwards arrow, &rarr;)
+" " 21D2 ⇒ (rightwards double arrow, &rArr;)
+" " 25B8 ▸ (TextMate style)
+" "→ 
+" " trail chars
+" " 25CF ●
+" " 2639 ☹ (frowning face)
+" " 267A ♺ (recycling symbol)
+" " 261F ☟ (hand pointing down)
+" " F8FF  (apple logo)
+" "
+" " eol chars
+" " 21B2 ↲
+" " 21B5 ↵ (carriage return, &crarr;)
+" " 21A9 ↩
+" " 23CE ⏎ (return symbol)
+" " 00AC ¬ (TextMate style)
+
 if !has('win64') && !has('win32')
-  set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
+  set listchars=tab:→\ ,eol:¬,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 endif
 set modeline
 set nojoinspaces
