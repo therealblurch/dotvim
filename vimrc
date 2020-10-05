@@ -411,7 +411,7 @@ call mgr#add('flattened', {
            \ 'variants': ['_light', '_dark'],
            \ 'next_variant': function('mgr#nxt_cscheme_var_mp'),
            \ 'lightline': function('mgr#cscheme'),
-           \ 'airline': function('b_lib#FlattenedAirline'),
+           \ 'airline': function('b_lib#FlattenedAirlineTheme'),
            \ 'toggle': function('mgr#tggl_cscheme'),
            \ 'map': function('b_lib#FlattenedMap')
            \ })
@@ -423,7 +423,7 @@ call mgr#add('forest-night', {
 call mgr#add('greygull', {
            \ 'variants': g:colorscheme_groups.seabird_themes,
            \ 'next_variant': function('mgr#nxt_cscheme_var'),
-           \ 'airline': function('b_lib#SeagullAirline'),
+           \ 'airline': function('b_lib#SeagullAirlineTheme'),
            \ 'toggle': function('b_lib#SeagullToggle')
            \ })
 call mgr#add('gruvbox-material', {
@@ -512,7 +512,7 @@ call mgr#add('pencil', {
 call mgr#add('petrel', {
            \ 'variants': g:colorscheme_groups.seabird_themes,
            \ 'next_variant': function('mgr#nxt_cscheme_var'),
-           \ 'airline': function('b_lib#SeagullAirline'),
+           \ 'airline': function('b_lib#SeagullAirlineTheme'),
            \ 'toggle': function('b_lib#SeagullToggle')
            \ })
 call mgr#add('pop-punk', {
@@ -546,7 +546,7 @@ call mgr#add('space_vim_theme', {
            \ 'next_variant': function('mgr#nxt_bg_var'),
            \ 'status': function('mgr#cscheme_bg_sl'),
            \ 'toggle': function('mgr#tggl_bg'),
-           \ 'lightline': function('b_lib#SpaceVimLightline')
+           \ 'lightline': function('b_lib#SpaceVimLightlineTheme')
            \ })
 call mgr#add('srcery', {
            \ 'lightline': function('mgr#cscheme'),
@@ -562,7 +562,7 @@ call mgr#add('stellarized', {
 call mgr#add('stormpetrel', {
            \ 'variants': g:colorscheme_groups.seabird_themes,
            \ 'next_variant': function('mgr#nxt_cscheme_var'),
-           \ 'airline': function('b_lib#SeagullAirline'),
+           \ 'airline': function('b_lib#SeagullAirlineTheme'),
            \ 'toggle': function('b_lib#SeagullToggle')
            \ })
 call mgr#add('tender', {
