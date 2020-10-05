@@ -208,6 +208,7 @@ function! PackagerInit() abort
   call packager#add('huyvohcmc/atlas.vim',                    {'package': 'colors'})
   call packager#add('itchyny/landscape.vim',                  {'package': 'colors'})
   call packager#add('jacoborus/tender.vim',                   {'package': 'colors'})
+  call packager#add('jnurmine/Zenburn',                       {'package': 'colors'})
   call packager#add('kaicataldo/material.vim',                {'package': 'colors', 'name': 'material'})
   call packager#add('koirand/tokyo-metro.vim',                {'package': 'colors'})
   call packager#add('liuchengxu/space-vim-theme',             {'package': 'colors'})
@@ -632,6 +633,9 @@ call mgr#add('xcode', {
            \ 'airline'     : function('mgr#cscheme')
            \ })
 call mgr#add('vividchalk', {
+           \ })
+call mgr#add('zenburn', {
+           \ 'airline': function('mgr#cscheme')
            \ })
 
 " }}}
