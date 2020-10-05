@@ -92,7 +92,7 @@ function! PackagerInit() abort
 
   " packager plugin
   call packager#add('https://therealblurch@github.com/therealblurch/vim-packager',      {'package': 'packager', 'type': 'opt'})
-  call packager#add('https://therealblurch@github.com/therealblurch/vim_mgr', {'package': 'colors'})
+  call packager#add('https://therealblurch@github.com/therealblurch/vim_theme_manager', {'package': 'colors'})
 
   " git plugins
   call packager#add('airblade/vim-gitgutter',                 {'package': 'git'})
