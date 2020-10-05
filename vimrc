@@ -17,7 +17,7 @@ set grepprg=ag\ --nogroup\ --nocolor
 set hidden
 set hlsearch
 set ignorecase
-set list
+set nolist
 
 " show tab and trailing spaces
 " Ctrl+v, u, unicode hex code
