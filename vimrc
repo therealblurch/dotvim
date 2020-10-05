@@ -29,7 +29,7 @@ set nolist
 " " 2192 → (rightwards arrow, &rarr;)
 " " 21D2 ⇒ (rightwards double arrow, &rArr;)
 " " 25B8 ▸ (TextMate style)
-" "→ 
+" "
 " " trail chars
 " " 25CF ●
 " " 2639 ☹ (frowning face)
