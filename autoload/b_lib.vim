@@ -42,6 +42,10 @@ function! b_lib#FlattenedAirlineTheme() dict
   return 'solarized'
 endfunction
 
+function! b_lib#MonokaiAirlineTheme() dict
+  return 'molokai'
+endfunction
+
 function! b_lib#VimspectrMap (key,val) dict
   return self.name . a:val . '-' . &background
 endfunction

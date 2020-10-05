@@ -203,6 +203,7 @@ function! PackagerInit() abort
   call packager#add('dracula/vim',                            {'package': 'colors', 'name': 'dracula'})
   call packager#add('drewtempelmeyer/palenight.vim',          {'package': 'colors'})
   call packager#add('embark-theme/vim',                       {'package': 'colors'})
+  call packager#add('ErichDonGubler/vim-sublime-monokai',     {'package': 'colors'})
   call packager#add('ghifarit53/tokyonight-vim',              {'package': 'colors'})
   call packager#add('haishanh/night-owl.vim',                 {'package': 'colors'})
   call packager#add('huyvohcmc/atlas.vim',                    {'package': 'colors'})
@@ -495,6 +496,9 @@ call mgr#add('materialbox', {
            \ 'status'         : function('mgr#cscheme_bg_styl'),
            \ 'airline'        : function('mgr#cscheme'),
            \ 'toggle'         : function('mgr#tggl_bg')
+           \ })
+call mgr#add('sublimemonokai', {
+           \ 'airline': function('b_lib#MonokaiAirlineTheme'),
            \ })
 call mgr#add('moonfly', {
            \ 'airline'  : function('mgr#cscheme'),
