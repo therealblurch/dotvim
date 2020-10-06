@@ -17,7 +17,7 @@ set grepprg=ag\ --nogroup\ --nocolor
 set hidden
 set hlsearch
 set ignorecase
-set nolist
+set list
 
 " show tab and trailing spaces
 " Ctrl+v, u, unicode hex code
@@ -45,7 +45,7 @@ set nolist
 " " 00AC ¬ (TextMate style)
 
 if !has('win64') && !has('win32')
-  set listchars=tab:→\ ,eol:¬,nbsp:␣,trail:•,extends:⟩,precedes:⟨
+  set listchars=tab:⇨\ ,eol:⏎,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 endif
 set modeline
 set nojoinspaces
