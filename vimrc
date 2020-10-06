@@ -17,7 +17,7 @@ set grepprg=ag\ --nogroup\ --nocolor
 set hidden
 set hlsearch
 set ignorecase
-set nolist
+set list
 
 " show tab and trailing spaces
 " Ctrl+v, u, unicode hex code
@@ -29,7 +29,7 @@ set nolist
 " " 2192 → (rightwards arrow, &rarr;)
 " " 21D2 ⇒ (rightwards double arrow, &rArr;)
 " " 25B8 ▸ (TextMate style)
-" "→ 
+" "
 " " trail chars
 " " 25CF ●
 " " 2639 ☹ (frowning face)
@@ -45,7 +45,7 @@ set nolist
 " " 00AC ¬ (TextMate style)
 
 if !has('win64') && !has('win32')
-  set listchars=tab:→\ ,eol:¬,nbsp:␣,trail:•,extends:⟩,precedes:⟨
+  set listchars=tab:⇨→\ ,eol:⏎,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 endif
 set modeline
 set nojoinspaces
@@ -92,7 +92,7 @@ function! PackagerInit() abort
 
   " packager plugin
   call packager#add('https://therealblurch@github.com/therealblurch/vim-packager',      {'package': 'packager', 'type': 'opt'})
-  call packager#add('https://therealblurch@github.com/therealblurch/vim_mgr', {'package': 'colors'})
+  call packager#add('https://therealblurch@github.com/therealblurch/vim_theme_manager', {'package': 'colors'})
 
   " git plugins
   call packager#add('airblade/vim-gitgutter',                 {'package': 'git'})
@@ -203,15 +203,18 @@ function! PackagerInit() abort
   call packager#add('dracula/vim',                            {'package': 'colors', 'name': 'dracula'})
   call packager#add('drewtempelmeyer/palenight.vim',          {'package': 'colors'})
   call packager#add('embark-theme/vim',                       {'package': 'colors'})
+  call packager#add('ErichDonGubler/vim-sublime-monokai',     {'package': 'colors'})
   call packager#add('ghifarit53/tokyonight-vim',              {'package': 'colors'})
   call packager#add('haishanh/night-owl.vim',                 {'package': 'colors'})
   call packager#add('huyvohcmc/atlas.vim',                    {'package': 'colors'})
   call packager#add('itchyny/landscape.vim',                  {'package': 'colors'})
   call packager#add('jacoborus/tender.vim',                   {'package': 'colors'})
+  call packager#add('jnurmine/Zenburn',                       {'package': 'colors'})
   call packager#add('kaicataldo/material.vim',                {'package': 'colors', 'name': 'material'})
   call packager#add('koirand/tokyo-metro.vim',                {'package': 'colors'})
   call packager#add('liuchengxu/space-vim-theme',             {'package': 'colors'})
   call packager#add('lokaltog/vim-distinguished',             {'package': 'colors'})
+  call packager#add('mhartington/oceanic-next',               {'package': 'colors'})
   call packager#add('mkarmona/materialbox',                   {'package': 'colors'})
   call packager#add('nanotech/jellybeans.vim',                {'package': 'colors', 'name': 'jellybeans'})
   call packager#add('nightsense/cosmic_latte',                {'package': 'colors'})
@@ -314,56 +317,69 @@ autocmd! FileType gitcommit setlocal spell
 
 " theme manager {{{
 
-let g:theme_manager_randomize = 1
-
-let g:colorscheme_groups = {
-                           \  'vimspectr_light_themes' : [
-                           \                               'vimspectr0-light'  , 'vimspectr30-light' , 'vimspectr60-light' ,
-                           \                               'vimspectr90-light' , 'vimspectr120-light', 'vimspectr150-light',
-                           \                               'vimspectr180-light', 'vimspectr210-light', 'vimspectr240-light',
-                           \                               'vimspectr270-light', 'vimspectr300-light', 'vimspectr330-light',
-                           \                               'vimspectrgrey-light'
-                           \                              ],
-                           \  'atelier_light_themes'   : [
-                           \                               'atelier_cavelight',
-                           \                               'atelier_dunelight',
-                           \                               'atelier_estuarylight',
-                           \                               'atelier_forestlight',
-                           \                               'atelier_heathlight',
-                           \                               'atelier_lakesidelight',
-                           \                               'atelier_plateaulight',
-                           \                               'atelier_savannalight',
-                           \                               'atelier_seasidelight',
-                           \                               'atelier_sulphurpoollight',
-                           \                             ],
-                           \  'vimspectr_dark_themes'  : [
-                           \                               'vimspectr0-dark'  , 'vimspectr30-dark' , 'vimspectr60-dark' ,
-                           \                               'vimspectr90-dark' , 'vimspectr120-dark', 'vimspectr150-dark',
-                           \                               'vimspectr180-dark', 'vimspectr210-dark', 'vimspectr240-dark',
-                           \                               'vimspectr270-dark', 'vimspectr300-dark', 'vimspectr330-dark',
-                           \                               'vimspectrgrey-dark'
-                           \                             ],
-                           \  'atelier_dark_themes'    : [
-                           \                               'atelier_cavedark',
-                           \                               'atelier_dunedark',
-                           \                               'atelier_estuarydark',
-                           \                               'atelier_forestdark',
-                           \                               'atelier_heathdark',
-                           \                               'atelier_lakesidedark',
-                           \                               'atelier_plateaudark',
-                           \                               'atelier_savannadark',
-                           \                               'atelier_seasidedark',
-                           \                               'atelier_sulphurpooldark',
-                           \                             ],
-                           \  'seabird_themes'         : [
-                           \                               'greygull',
-                           \                               'petrel',
-                           \                               'seagull',
-                           \                               'stormpetrel'
-                           \                             ],
-                           \ }
+let g:mgr_randomize_group = 1
 
 packadd vim_theme_manager
+
+call mgr#init_groups()
+
+call mgr#init_group()
+call mgr#add_cscheme('vimspectr0-light')
+call mgr#add_cscheme('vimspectr30-light')
+call mgr#add_cscheme('vimspectr60-light' ,)
+call mgr#add_cscheme('vimspectr90-light')
+call mgr#add_cscheme('vimspectr120-light')
+call mgr#add_cscheme('vimspectr150-light',)
+call mgr#add_cscheme('vimspectr180-light')
+call mgr#add_cscheme('vimspectr210-light')
+call mgr#add_cscheme('vimspectr240-light',)
+call mgr#add_cscheme('vimspectr270-light')
+call mgr#add_cscheme('vimspectr300-light')
+call mgr#add_cscheme('vimspectr330-light',)
+call mgr#add_cscheme('vimspectrgrey-light')
+call mgr#add_group('vimspectr_light_themes')
+
+call mgr#init_group()
+call mgr#add_cscheme('vimspectr0-dark')
+call mgr#add_cscheme('vimspectr30-dark')
+call mgr#add_cscheme('vimspectr60-dark' ,)
+call mgr#add_cscheme('vimspectr90-dark')
+call mgr#add_cscheme('vimspectr120-dark')
+call mgr#add_cscheme('vimspectr150-dark',)
+call mgr#add_cscheme('vimspectr180-dark')
+call mgr#add_cscheme('vimspectr210-dark')
+call mgr#add_cscheme('vimspectr240-dark',)
+call mgr#add_cscheme('vimspectr270-dark')
+call mgr#add_cscheme('vimspectr300-dark')
+call mgr#add_cscheme('vimspectr330-dark',)
+call mgr#add_cscheme('vimspectrgrey-dark')
+call mgr#add_group('vimspectr_dark_themes')
+
+call mgr#init_group()
+call mgr#add_cscheme('greygull')
+call mgr#add_cscheme('petrel')
+call mgr#add_cscheme('seagull')
+call mgr#add_cscheme('stormpetrel')
+call mgr#add_group('seabird_themes')
+
+call mgr#init_group()
+call mgr#add_cscheme('ayu')
+call mgr#add_cscheme('cosmic_latte')
+call mgr#add_cscheme('deep-space')
+call mgr#add_cscheme('dracula')
+call mgr#add_cscheme('edge')
+call mgr#add_cscheme('forest-night')
+call mgr#add_cscheme('gruvbox-material')
+call mgr#add_cscheme('iceberg')
+call mgr#add_cscheme('OceanicNext')
+call mgr#add_cscheme('one')
+call mgr#add_cscheme('nord')
+call mgr#add_cscheme('snow')
+call mgr#add_cscheme('stellarized')
+call mgr#add_cscheme('tokyo-metro')
+call mgr#add_cscheme('vadelma')
+call mgr#add_group('favorites')
+
 call mgr#init()
 call mgr#add('archery', {
            \ 'airline'  : function('mgr#cscheme'),
@@ -454,7 +470,7 @@ call mgr#add('greygull', {
            \ })
 call mgr#add('gruvbox-material', {
            \ 'variants'       : ['soft', 'medium', 'hard'],
-           \ 'style_variable' : 'g     :gruvbox_material_background',
+           \ 'style_variable' : 'g:gruvbox_material_background',
            \ 'default_style'  : 'hard',
            \ 'pre'            : ['let g:gruvbox_material_better_performance = 1'],
            \ 'next_variant'   : function('mgr#nxt_styl_var'),
@@ -465,8 +481,11 @@ call mgr#add('gruvbox-material', {
            \ 'toggle'         : function('mgr#tggl_bg')
            \ })
 call mgr#add('iceberg', {
-           \ 'lightline': function('mgr#cscheme'),
-           \ 'airline'  : function('mgr#cscheme')
+           \ 'next_variant': function('mgr#nxt_bg_var'),
+           \ 'status'      : function('mgr#cscheme_bg_sl'),
+           \ 'lightline'   : function('mgr#cscheme'),
+           \ 'airline'     : function('mgr#cscheme'),
+           \ 'toggle'      : function('mgr#tggl_bg')
            \ })
 call mgr#add('jellybeans', {
            \  'airline': function('mgr#cscheme')
@@ -476,7 +495,7 @@ call mgr#add('landscape', {
            \ })
 call mgr#add('material', {
            \ 'variants'       : ['default', 'palenight', 'ocean', 'lighter', 'darker'],
-           \ 'style_variable' : 'g     :material_theme_style',
+           \ 'style_variable' : 'g:material_theme_style',
            \ 'default_style'  : 'palenight',
            \ 'pre'            : ['let g:material_terminal_italics = 1'],
            \ 'next_variant'   : function('mgr#nxt_styl_var'),
@@ -495,6 +514,9 @@ call mgr#add('materialbox', {
            \ 'airline'        : function('mgr#cscheme'),
            \ 'toggle'         : function('mgr#tggl_bg')
            \ })
+call mgr#add('sublimemonokai', {
+           \ 'airline': function('b_lib#MonokaiAirlineTheme'),
+           \ })
 call mgr#add('moonfly', {
            \ 'airline'  : function('mgr#cscheme'),
            \ 'lightline': function('mgr#cscheme')
@@ -510,12 +532,20 @@ call mgr#add('nord', {
            \ 'lightline': function('mgr#cscheme'),
            \ 'airline'  : function('mgr#cscheme')
            \ })
+call mgr#add('OceanicNext', {
+           \ 'variants'    : ['', 'Light'],
+           \ 'next_variant': function('mgr#nxt_cscheme_var_mp'),
+           \ 'airline'     : function('mgr#cscheme_lwr'),
+           \ 'lightline'   : function('mgr#cscheme_lwr'),
+           \ 'toggle'      : function('b_lib#OceanicNextToggle'),
+           \ 'map'         : function('b_lib#FlattenedMap')
+           \ })
 call mgr#add('one', {
-           \  'next_variant': function('mgr#nxt_bg_var'),
-           \ 'status'       : function('mgr#cscheme_bg_sl'),
-           \ 'lightline'    : function('mgr#cscheme'),
-           \ 'airline'      : function('mgr#cscheme'),
-           \ 'toggle'       : function('mgr#tggl_bg')
+           \ 'next_variant': function('mgr#nxt_bg_var'),
+           \ 'status'      : function('mgr#cscheme_bg_sl'),
+           \ 'lightline'   : function('mgr#cscheme'),
+           \ 'airline'     : function('mgr#cscheme'),
+           \ 'toggle'      : function('mgr#tggl_bg')
            \ })
 call mgr#add('palenight', {
            \ 'lightline': function('mgr#cscheme'),
@@ -525,7 +555,7 @@ call mgr#add('PaperColor', {
            \ 'next_variant': function('mgr#nxt_bg_var'),
            \ 'status'      : function('mgr#cscheme_bg_sl'),
            \ 'lightline'   : function('mgr#cscheme'),
-           \ 'airline'     : function('mgr#cschemeLower'),
+           \ 'airline'     : function('mgr#cscheme_lwr'),
            \ 'toggle'      : function('mgr#tggl_bg')
            \ })
 call mgr#add('pencil', {
@@ -552,7 +582,7 @@ call mgr#add('seagull', {
            \ })
 call mgr#add('sonokai', {
            \ 'variants'       : ['default', 'atlantis', 'andromeda', 'maia'],
-           \ 'style_variable' : 'g     :sonokai_style',
+           \ 'style_variable' : 'g:sonokai_style',
            \ 'default_style'  : 'default',
            \ 'pre'            : ['let g:sonokai_better_performance = 1'],
            \ 'next_variant'   : function('mgr#nxt_styl_var'),
@@ -632,6 +662,9 @@ call mgr#add('xcode', {
            \ 'airline'     : function('mgr#cscheme')
            \ })
 call mgr#add('vividchalk', {
+           \ })
+call mgr#add('zenburn', {
+           \ 'airline': function('mgr#cscheme')
            \ })
 
 " }}}

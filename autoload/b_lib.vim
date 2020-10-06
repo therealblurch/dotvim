@@ -27,7 +27,8 @@ function! b_lib#AtelierLightlineTheme() dict
 endfunction
 
 function! b_lib#FlattenedMap (key,val) dict
-  return self.name . a:val
+  let l:color_name = mgr#get_color_dict_key(g:colors_name)
+  return l:color_name . a:val
 endfunction
 
 function! b_lib#SeagullAirlineTheme() dict
@@ -42,8 +43,18 @@ function! b_lib#FlattenedAirlineTheme() dict
   return 'solarized'
 endfunction
 
+function! b_lib#MonokaiAirlineTheme() dict
+  return 'molokai'
+endfunction
+
+function! b_lib#OceanicNextToggle() dict
+  let l:new_colorscheme = (g:colors_name =~# 'Light') ? substitute(g:colors_name, 'Light', '', '') : g:colors_name . 'Light'
+  exec 'colors ' . l:new_colorscheme
+endfunction
+
 function! b_lib#VimspectrMap (key,val) dict
-  return self.name . a:val . '-' . &background
+  let l:color_name = mgr#get_color_dict_key(g:colors_name)
+  return l:color_name . a:val . '-' . &background
 endfunction
 
 function! b_lib#SpaceVimLightlineTheme() dict
