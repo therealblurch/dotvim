@@ -531,11 +531,11 @@ call mgr#add('nord', {
            \ 'airline'  : function('mgr#cscheme')
            \ })
 call mgr#add('one', {
-           \  'next_variant': function('mgr#nxt_bg_var'),
-           \ 'status'       : function('mgr#cscheme_bg_sl'),
-           \ 'lightline'    : function('mgr#cscheme'),
-           \ 'airline'      : function('mgr#cscheme'),
-           \ 'toggle'       : function('mgr#tggl_bg')
+           \ 'next_variant': function('mgr#nxt_bg_var'),
+           \ 'status'      : function('mgr#cscheme_bg_sl'),
+           \ 'lightline'   : function('mgr#cscheme'),
+           \ 'airline'     : function('mgr#cscheme'),
+           \ 'toggle'      : function('mgr#tggl_bg')
            \ })
 call mgr#add('palenight', {
            \ 'lightline': function('mgr#cscheme'),
