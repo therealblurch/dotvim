@@ -318,47 +318,66 @@ autocmd! FileType gitcommit setlocal spell
 
 let g:mgr_randomize_group = 1
 
-let g:colorscheme_groups = {
-                           \  'vimspectr_light_themes' : [
-                           \                               'vimspectr0-light'  , 'vimspectr30-light' , 'vimspectr60-light' ,
-                           \                               'vimspectr90-light' , 'vimspectr120-light', 'vimspectr150-light',
-                           \                               'vimspectr180-light', 'vimspectr210-light', 'vimspectr240-light',
-                           \                               'vimspectr270-light', 'vimspectr300-light', 'vimspectr330-light',
-                           \                               'vimspectrgrey-light'
-                           \                              ],
-                           \  'vimspectr_dark_themes'  : [
-                           \                               'vimspectr0-dark'  , 'vimspectr30-dark' , 'vimspectr60-dark' ,
-                           \                               'vimspectr90-dark' , 'vimspectr120-dark', 'vimspectr150-dark',
-                           \                               'vimspectr180-dark', 'vimspectr210-dark', 'vimspectr240-dark',
-                           \                               'vimspectr270-dark', 'vimspectr300-dark', 'vimspectr330-dark',
-                           \                               'vimspectrgrey-dark'
-                           \                             ],
-                           \  'seabird_themes'         : [
-                           \                               'greygull',
-                           \                               'petrel',
-                           \                               'seagull',
-                           \                               'stormpetrel'
-                           \                             ],
-                           \  'favorites'               : [
-                           \                                'ayu',
-                           \                                'cosmic_latte',
-                           \                                'deep-space',
-                           \                                'dracula',
-                           \                                'edge',
-                           \                                'forest-night',
-                           \                                'gruvbox-material',
-                           \                                'icebrg',
-                           \                                'one',
-                           \                                'nord',
-                           \                                'snow',
-                           \                                'stellarized',
-                           \                                'tokyo-metro',
-                           \                                'vividchalk',
-                           \                                'vadelma',
-                           \                              ],
-                           \ }
-
 packadd vim_theme_manager
+
+call mgr#init_groups()
+
+call mgr#init_group()
+call mgr#add_cscheme('vimspectr0-light')
+call mgr#add_cscheme('vimspectr30-light')
+call mgr#add_cscheme('vimspectr60-light' ,)
+call mgr#add_cscheme('vimspectr90-light')
+call mgr#add_cscheme('vimspectr120-light')
+call mgr#add_cscheme('vimspectr150-light',)
+call mgr#add_cscheme('vimspectr180-light')
+call mgr#add_cscheme('vimspectr210-light')
+call mgr#add_cscheme('vimspectr240-light',)
+call mgr#add_cscheme('vimspectr270-light')
+call mgr#add_cscheme('vimspectr300-light')
+call mgr#add_cscheme('vimspectr330-light',)
+call mgr#add_cscheme('vimspectrgrey-light')
+call mgr#add_group('vimspectr_light_themes')
+
+call mgr#init_group()
+call mgr#add_cscheme('vimspectr0-dark')
+call mgr#add_cscheme('vimspectr30-dark')
+call mgr#add_cscheme('vimspectr60-dark' ,)
+call mgr#add_cscheme('vimspectr90-dark')
+call mgr#add_cscheme('vimspectr120-dark')
+call mgr#add_cscheme('vimspectr150-dark',)
+call mgr#add_cscheme('vimspectr180-dark')
+call mgr#add_cscheme('vimspectr210-dark')
+call mgr#add_cscheme('vimspectr240-dark',)
+call mgr#add_cscheme('vimspectr270-dark')
+call mgr#add_cscheme('vimspectr300-dark')
+call mgr#add_cscheme('vimspectr330-dark',)
+call mgr#add_cscheme('vimspectrgrey-dark')
+call mgr#add_group('vimspectr_dark_themes')
+
+call mgr#init_group()
+call mgr#add_cscheme('greygull')
+call mgr#add_cscheme('petrel')
+call mgr#add_cscheme('seagull')
+call mgr#add_cscheme('stormpetrel')
+call mgr#add_group('seabird_themes')
+
+call mgr#init_group()
+call mgr#add_cscheme('ayu')
+call mgr#add_cscheme('cosmic_latte')
+call mgr#add_cscheme('deep-space')
+call mgr#add_cscheme('dracula')
+call mgr#add_cscheme('edge')
+call mgr#add_cscheme('forest-night')
+call mgr#add_cscheme('gruvbox-material')
+call mgr#add_cscheme('iceberg')
+call mgr#add_cscheme('one')
+call mgr#add_cscheme('nord')
+call mgr#add_cscheme('snow')
+call mgr#add_cscheme('stellarized')
+call mgr#add_cscheme('tokyo-metro')
+call mgr#add_cscheme('vadelma')
+call mgr#add_group('favorites')
+
 call mgr#init()
 call mgr#add('archery', {
            \ 'airline'  : function('mgr#cscheme'),
