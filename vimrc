@@ -339,6 +339,23 @@ let g:colorscheme_groups = {
                            \                               'seagull',
                            \                               'stormpetrel'
                            \                             ],
+                           \  'favorites'               : [
+                           \                                'ayu',
+                           \                                'cosmic_latte',
+                           \                                'deep-space',
+                           \                                'dracula',
+                           \                                'edge',
+                           \                                'forest-night',
+                           \                                'gruvbox-material',
+                           \                                'icebrg',
+                           \                                'one',
+                           \                                'nord',
+                           \                                'snow',
+                           \                                'stellarized',
+                           \                                'tokyo-metro',
+                           \                                'vividchalk',
+                           \                                'vadelma',
+                           \                              ],
                            \ }
 
 packadd vim_theme_manager
