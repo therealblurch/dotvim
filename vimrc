@@ -479,8 +479,11 @@ call mgr#add('gruvbox-material', {
            \ 'toggle'         : function('mgr#tggl_bg')
            \ })
 call mgr#add('iceberg', {
-           \ 'lightline': function('mgr#cscheme'),
-           \ 'airline'  : function('mgr#cscheme')
+           \ 'next_variant': function('mgr#nxt_bg_var'),
+           \ 'status'      : function('mgr#cscheme_bg_sl'),
+           \ 'lightline'   : function('mgr#cscheme'),
+           \ 'airline'     : function('mgr#cscheme'),
+           \ 'toggle'      : function('mgr#tggl_bg')
            \ })
 call mgr#add('jellybeans', {
            \  'airline': function('mgr#cscheme')
