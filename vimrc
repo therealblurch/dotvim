@@ -45,7 +45,7 @@ set list
 " " 00AC ¬ (TextMate style)
 
 if !has('win64') && !has('win32')
-  set listchars=tab:⇨\ ,eol:⏎,nbsp:␣,trail:•,extends:⟩,precedes:⟨
+  set listchars=tab:⇨→\ ,eol:⏎,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 endif
 set modeline
 set nojoinspaces
@@ -432,7 +432,7 @@ call mgr#add('greygull', {
            \ })
 call mgr#add('gruvbox-material', {
            \ 'variants'       : ['soft', 'medium', 'hard'],
-           \ 'style_variable' : 'g     :gruvbox_material_background',
+           \ 'style_variable' : 'g:gruvbox_material_background',
            \ 'default_style'  : 'hard',
            \ 'pre'            : ['let g:gruvbox_material_better_performance = 1'],
            \ 'next_variant'   : function('mgr#nxt_styl_var'),
@@ -454,7 +454,7 @@ call mgr#add('landscape', {
            \ })
 call mgr#add('material', {
            \ 'variants'       : ['default', 'palenight', 'ocean', 'lighter', 'darker'],
-           \ 'style_variable' : 'g     :material_theme_style',
+           \ 'style_variable' : 'g:material_theme_style',
            \ 'default_style'  : 'palenight',
            \ 'pre'            : ['let g:material_terminal_italics = 1'],
            \ 'next_variant'   : function('mgr#nxt_styl_var'),
@@ -533,7 +533,7 @@ call mgr#add('seagull', {
            \ })
 call mgr#add('sonokai', {
            \ 'variants'       : ['default', 'atlantis', 'andromeda', 'maia'],
-           \ 'style_variable' : 'g     :sonokai_style',
+           \ 'style_variable' : 'g:sonokai_style',
            \ 'default_style'  : 'default',
            \ 'pre'            : ['let g:sonokai_better_performance = 1'],
            \ 'next_variant'   : function('mgr#nxt_styl_var'),
