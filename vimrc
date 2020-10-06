@@ -214,6 +214,7 @@ function! PackagerInit() abort
   call packager#add('koirand/tokyo-metro.vim',                {'package': 'colors'})
   call packager#add('liuchengxu/space-vim-theme',             {'package': 'colors'})
   call packager#add('lokaltog/vim-distinguished',             {'package': 'colors'})
+  call packager#add('mhartington/oceanic-next',               {'package': 'colors'})
   call packager#add('mkarmona/materialbox',                   {'package': 'colors'})
   call packager#add('nanotech/jellybeans.vim',                {'package': 'colors', 'name': 'jellybeans'})
   call packager#add('nightsense/cosmic_latte',                {'package': 'colors'})
@@ -529,6 +530,14 @@ call mgr#add('night-owl', {
 call mgr#add('nord', {
            \ 'lightline': function('mgr#cscheme'),
            \ 'airline'  : function('mgr#cscheme')
+           \ })
+call mgr#add('OceanicNext', {
+           \ 'variants'    : ['', 'Light'],
+           \ 'next_variant': function('mgr#nxt_cscheme_var_mp'),
+           \ 'airline'     : function('mgr#cscheme_lwr'),
+           \ 'lightline'   : function('mgr#cscheme_lwr'),
+           \ 'toggle'      : function('b_lib#OceanicNextToggle'),
+           \ 'map'         : function('b_lib#FlattenedMap')
            \ })
 call mgr#add('one', {
            \ 'next_variant': function('mgr#nxt_bg_var'),
