@@ -53,7 +53,8 @@ function! b_lib#OceanicNextToggle() dict
 endfunction
 
 function! b_lib#VimspectrMap (key,val) dict
-  return self.name . a:val . '-' . &background
+  let l:color_name = mgr#get_color_dict_key(g:colors_name)
+  return l:color_name . a:val . '-' . &background
 endfunction
 
 function! b_lib#SpaceVimLightlineTheme() dict
