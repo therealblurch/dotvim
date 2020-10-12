@@ -193,6 +193,7 @@ function! PackagerInit() abort
   call packager#add('ajmwagar/vim-deus',                      {'package': 'colors'})
   call packager#add('arcticicestudio/nord-vim',               {'package': 'colors', 'branch': 'develop'})
   call packager#add('arzg/vim-colors-xcode',                  {'package': 'colors'})
+  call packager#add('ashfinal/vim-colors-paper',              {'package': 'colors'})
   call packager#add('ayu-theme/ayu-vim',                      {'package': 'colors'})
   call packager#add('Badacadabra/vim-archery',                {'package': 'colors'})
   call packager#add('bignimbus/pop-punk.vim',                 {'package': 'colors'})
@@ -373,6 +374,7 @@ call mgr#add_cscheme('gruvbox-material')
 call mgr#add_cscheme('iceberg')
 call mgr#add_cscheme('OceanicNext')
 call mgr#add_cscheme('one')
+call mgr#add_cscheme('paper')
 call mgr#add_cscheme('nord')
 call mgr#add_cscheme('snow')
 call mgr#add_cscheme('stellarized')
@@ -551,6 +553,12 @@ call mgr#add('one', {
 call mgr#add('palenight', {
            \ 'lightline': function('mgr#cscheme'),
            \ 'airline'  : function('mgr#cscheme')
+           \ })
+call mgr#add('paper', {
+           \ 'next_variant': function('mgr#nxt_bg_var'),
+           \ 'status'      : function('mgr#cscheme_bg_sl'),
+           \ 'airline'     : function('mgr#cscheme'),
+           \ 'toggle'      : function('mgr#tggl_bg')
            \ })
 call mgr#add('PaperColor', {
            \ 'next_variant': function('mgr#nxt_bg_var'),
