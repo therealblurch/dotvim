@@ -228,6 +228,7 @@ function! PackagerInit() abort
   call packager#add('NLKNguyen/papercolor-theme',             {'package': 'colors'})
   call packager#add('rakr/vim-one',                           {'package': 'colors'})
   call packager#add('reedes/vim-colors-pencil',               {'package': 'colors'})
+  call packager#add('RohanPoojary/pleasant.vim',              {'package': 'colors'})
   call packager#add('romainl/Apprentice',                     {'package': 'colors'})
   call packager#add('romainl/flattened',                      {'package': 'colors'})
   call packager#add('sainnhe/edge',                           {'package': 'colors'})
@@ -379,6 +380,7 @@ call mgr#add_cscheme('iceberg')
 call mgr#add_cscheme('OceanicNext')
 call mgr#add_cscheme('one')
 call mgr#add_cscheme('paper')
+call mgr#add_cscheme('pleasant')
 call mgr#add_cscheme('nord')
 call mgr#add_cscheme('snow')
 call mgr#add_cscheme('stellarized')
@@ -594,6 +596,10 @@ call mgr#add('petrel', {
            \ 'next_variant': function('mgr#nxt_cscheme_var'),
            \ 'airline'     : function('b_lib#SeagullAirlineTheme'),
            \ 'toggle'      : function('b_lib#SeagullToggle')
+           \ })
+call mgr#add('pleasant', {
+           \ 'lightline': function('mgr#cscheme'),
+           \ 'airline'  : function('mgr#cscheme')
            \ })
 call mgr#add('pop-punk', {
            \  'airline': function('mgr#cscheme_dsh_to_uscr')
