@@ -201,6 +201,7 @@ function! PackagerInit() abort
   call packager#add('bluz71/vim-moonfly-colors',              {'package': 'colors'})
   call packager#add('challenger-deep-theme/vim',              {'package': 'colors', 'name': 'challenger_deep'})
   call packager#add('cocopon/iceberg.vim',                    {'package': 'colors'})
+  call packager#add('dfxyz/CandyPaper.vim',                   {'package': 'colors'})
   call packager#add('dracula/vim',                            {'package': 'colors', 'name': 'dracula'})
   call packager#add('drewtempelmeyer/palenight.vim',          {'package': 'colors'})
   call packager#add('embark-theme/vim',                       {'package': 'colors'})
@@ -365,6 +366,7 @@ call mgr#add_group('seabird_themes')
 
 call mgr#init_group()
 call mgr#add_cscheme('ayu')
+call mgr#add_cscheme('CandyPaper')
 call mgr#add_cscheme('cosmic_latte')
 call mgr#add_cscheme('deep-space')
 call mgr#add_cscheme('dracula')
@@ -405,6 +407,11 @@ call mgr#add('ayu', {
            \ 'lightline'      : function('mgr#cscheme'),
            \ 'airline'        : function('mgr#cscheme'),
            \ 'toggle'         : function('mgr#tggl_cscheme_styl')
+           \ })
+call mgr#add('CandyPaper', {
+           \ 'next_variant': function('mgr#nxt_bg_var'),
+           \ 'status'      : function('mgr#cscheme_bg_sl'),
+           \ 'toggle'      : function('mgr#tggl_bg')
            \ })
 call mgr#add('challenger_deep', {
            \ 'airline'  : function('mgr#cscheme'),
