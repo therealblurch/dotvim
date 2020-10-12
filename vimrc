@@ -216,6 +216,7 @@ function! PackagerInit() abort
   call packager#add('koirand/tokyo-metro.vim',                {'package': 'colors'})
   call packager#add('liuchengxu/space-vim-theme',             {'package': 'colors'})
   call packager#add('lokaltog/vim-distinguished',             {'package': 'colors'})
+  call packager#add('michaelmalick/vim-colors-bluedrake',     {'package': 'colors'})
   call packager#add('mhartington/oceanic-next',               {'package': 'colors'})
   call packager#add('mkarmona/materialbox',                   {'package': 'colors'})
   call packager#add('nanotech/jellybeans.vim',                {'package': 'colors', 'name': 'jellybeans'})
@@ -366,6 +367,7 @@ call mgr#add_group('seabird_themes')
 
 call mgr#init_group()
 call mgr#add_cscheme('ayu')
+call mgr#add_cscheme('bluedrake')
 call mgr#add_cscheme('CandyPaper')
 call mgr#add_cscheme('cosmic_latte')
 call mgr#add_cscheme('deep-space')
@@ -407,6 +409,12 @@ call mgr#add('ayu', {
            \ 'lightline'      : function('mgr#cscheme'),
            \ 'airline'        : function('mgr#cscheme'),
            \ 'toggle'         : function('mgr#tggl_cscheme_styl')
+           \ })
+call mgr#add('bluedrake', {
+           \ 'next_variant': function('mgr#nxt_bg_var'),
+           \ 'status'      : function('mgr#cscheme_bg_sl'),
+           \ 'airline'     : function('mgr#cscheme'),
+           \ 'toggle'      : function('mgr#tggl_bg')
            \ })
 call mgr#add('CandyPaper', {
            \ 'next_variant': function('mgr#nxt_bg_var'),
