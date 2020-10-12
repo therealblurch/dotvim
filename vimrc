@@ -242,6 +242,7 @@ function! PackagerInit() abort
   call packager#add('tpope/vim-vividchalk',                   {'package': 'colors'})
   call packager#add('tyrannicaltoucan/vim-deep-space',        {'package': 'colors'})
   call packager#add('vim-scripts/twilight',                   {'package': 'colors'})
+  call packager#add('vivkin/flatland.vim',                    {'package': 'colors'})
   call packager#add('wadackel/vim-dogrun',                    {'package': 'colors'})
 
   " writing plugins
@@ -473,6 +474,9 @@ call mgr#add('edge', {
 call mgr#add('embark', {
            \ 'airline'  : function('mgr#cscheme'),
            \ 'lightline': function('mgr#cscheme')
+           \ })
+call mgr#add('flatland', {
+           \ 'airline'  : function('mgr#cscheme'),
            \ })
 call mgr#add('flattened', {
            \ 'variants'    : ['_light', '_dark'],
