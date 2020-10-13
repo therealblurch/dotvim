@@ -198,6 +198,7 @@ function! PackagerInit() abort
   call packager#add('ayu-theme/ayu-vim',                      {'package': 'colors'})
   call packager#add('Badacadabra/vim-archery',                {'package': 'colors'})
   call packager#add('bignimbus/pop-punk.vim',                 {'package': 'colors'})
+  call packager#add('blueshirts/darcula',                     {'package': 'colors'})
   call packager#add('bluz71/vim-nightfly-guicolors',          {'package': 'colors'})
   call packager#add('bluz71/vim-moonfly-colors',              {'package': 'colors'})
   call packager#add('challenger-deep-theme/vim',              {'package': 'colors', 'name': 'challenger_deep'})
@@ -375,6 +376,7 @@ call mgr#add_cscheme('bluedrake')
 call mgr#add_cscheme('CandyPaper')
 call mgr#add_cscheme('codedark')
 call mgr#add_cscheme('cosmic_latte')
+call mgr#add_cscheme('darcula')
 call mgr#add_cscheme('deep-space')
 call mgr#add_cscheme('dracula')
 call mgr#add_cscheme('edge')
@@ -441,6 +443,8 @@ call mgr#add('cosmic_latte', {
            \ 'lightline'   : function('mgr#cscheme_bg_uscr'),
            \ 'airline'     : function('mgr#cscheme_bg_uscr'),
            \ 'toggle'      : function('mgr#tggl_bg')
+           \ })
+call mgr#add('darcula', {
            \ })
 call mgr#add('deep-space', {
            \ 'lightline': function('mgr#csheme_rm_dsh'),
