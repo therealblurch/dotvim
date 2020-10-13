@@ -190,6 +190,7 @@ function! PackagerInit() abort
   call packager#add('vimtaku/vim-textobj-keyvalue',           {'package': 'textobj'})
 
   " colorschemes
+  call packager#add('ajh17/Spacegray.vim',                    {'package': 'colors'})
   call packager#add('ajmwagar/vim-deus',                      {'package': 'colors'})
   call packager#add('arcticicestudio/nord-vim',               {'package': 'colors', 'branch': 'develop'})
   call packager#add('arzg/vim-colors-xcode',                  {'package': 'colors'})
@@ -386,6 +387,7 @@ call mgr#add_cscheme('paper')
 call mgr#add_cscheme('pleasant')
 call mgr#add_cscheme('nord')
 call mgr#add_cscheme('snow')
+call mgr#add_cscheme('spacegray'
 call mgr#add_cscheme('stellarized')
 call mgr#add_cscheme('tokyonight')
 call mgr#add_cscheme('tokyo-metro')
@@ -636,6 +638,8 @@ call mgr#add('snow', {
            \ 'lightline'   : function('mgr#cscheme_bg_uscr'),
            \ 'airline'     : function('mgr#cscheme_bg_uscr'),
            \ 'toggle'      : function('mgr#tggl_bg')
+           \ })
+call mgr#add('spacegray', {
            \ })
 call mgr#add('space_vim_theme', {
            \ 'next_variant': function('mgr#nxt_bg_var'),
