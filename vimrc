@@ -387,7 +387,7 @@ call mgr#add_cscheme('paper')
 call mgr#add_cscheme('pleasant')
 call mgr#add_cscheme('nord')
 call mgr#add_cscheme('snow')
-call mgr#add_cscheme('spacegray'
+call mgr#add_cscheme('spacegray')
 call mgr#add_cscheme('stellarized')
 call mgr#add_cscheme('tokyonight')
 call mgr#add_cscheme('tokyo-metro')
