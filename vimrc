@@ -199,6 +199,7 @@ function! PackagerInit() abort
   call packager#add('bluz71/vim-nightfly-guicolors',          {'package': 'colors'})
   call packager#add('challenger-deep-theme/vim',              {'package': 'colors', 'name': 'challenger_deep'})
   call packager#add('cocopon/iceberg.vim',                    {'package': 'colors'})
+  call packager#add('cormacrelf/vim-colors-github',           {'package': 'colors'})
   call packager#add('dfxyz/CandyPaper.vim',                   {'package': 'colors'})
   call packager#add('dracula/vim',                            {'package': 'colors', 'name': 'dracula'})
   call packager#add('embark-theme/vim',                       {'package': 'colors'})
@@ -373,6 +374,7 @@ call mgr#add_cscheme('deep-space')
 call mgr#add_cscheme('dracula')
 call mgr#add_cscheme('edge')
 call mgr#add_cscheme('forest-night')
+call mgr#add_cscheme('github')
 call mgr#add_cscheme('gruvbox-material')
 call mgr#add_cscheme('iceberg')
 call mgr#add_cscheme('OceanicNext')
@@ -483,6 +485,13 @@ call mgr#add('forest-night', {
            \ 'lightline': function('mgr#cscheme'),
            \ 'airline'  : function('mgr#cscheme'),
            \ 'toggle'   : function('mgr#tggl_cscheme')
+           \ })
+call mgr#add('github', {
+           \ 'next_variant': function('mgr#nxt_bg_var'),
+           \ 'status'      : function('mgr#cscheme_bg_sl'),
+           \ 'lightline'   : function('mgr#cscheme'),
+           \ 'airline'     : function('mgr#cscheme'),
+           \ 'toggle'      : function('mgr#tggl_bg')
            \ })
 call mgr#add('greygull', {
            \ 'variants'    : g:colorscheme_groups.seabird_themes,
