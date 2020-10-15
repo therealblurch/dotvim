@@ -191,32 +191,23 @@ function! PackagerInit() abort
 
   " colorschemes
   call packager#add('ajh17/Spacegray.vim',                    {'package': 'colors'})
-  call packager#add('ajmwagar/vim-deus',                      {'package': 'colors'})
   call packager#add('arcticicestudio/nord-vim',               {'package': 'colors', 'branch': 'develop'})
-  call packager#add('arzg/vim-colors-xcode',                  {'package': 'colors'})
   call packager#add('ashfinal/vim-colors-paper',              {'package': 'colors'})
   call packager#add('ayu-theme/ayu-vim',                      {'package': 'colors'})
   call packager#add('Badacadabra/vim-archery',                {'package': 'colors'})
-  call packager#add('bignimbus/pop-punk.vim',                 {'package': 'colors'})
   call packager#add('blueshirts/darcula',                     {'package': 'colors'})
   call packager#add('bluz71/vim-nightfly-guicolors',          {'package': 'colors'})
-  call packager#add('bluz71/vim-moonfly-colors',              {'package': 'colors'})
   call packager#add('challenger-deep-theme/vim',              {'package': 'colors', 'name': 'challenger_deep'})
   call packager#add('cocopon/iceberg.vim',                    {'package': 'colors'})
   call packager#add('dfxyz/CandyPaper.vim',                   {'package': 'colors'})
   call packager#add('dracula/vim',                            {'package': 'colors', 'name': 'dracula'})
-  call packager#add('drewtempelmeyer/palenight.vim',          {'package': 'colors'})
   call packager#add('embark-theme/vim',                       {'package': 'colors'})
-  call packager#add('ErichDonGubler/vim-sublime-monokai',     {'package': 'colors'})
   call packager#add('ghifarit53/tokyonight-vim',              {'package': 'colors'})
   call packager#add('haishanh/night-owl.vim',                 {'package': 'colors'})
-  call packager#add('huyvohcmc/atlas.vim',                    {'package': 'colors'})
-  call packager#add('itchyny/landscape.vim',                  {'package': 'colors'})
   call packager#add('jacoborus/tender.vim',                   {'package': 'colors'})
   call packager#add('jnurmine/Zenburn',                       {'package': 'colors'})
   call packager#add('kaicataldo/material.vim',                {'package': 'colors', 'name': 'material'})
   call packager#add('koirand/tokyo-metro.vim',                {'package': 'colors'})
-  call packager#add('liuchengxu/space-vim-theme',             {'package': 'colors'})
   call packager#add('lokaltog/vim-distinguished',             {'package': 'colors'})
   call packager#add('michaelmalick/vim-colors-bluedrake',     {'package': 'colors'})
   call packager#add('mhartington/oceanic-next',               {'package': 'colors'})
@@ -227,7 +218,6 @@ function! PackagerInit() abort
   call packager#add('nightsense/snow',                        {'package': 'colors'})
   call packager#add('nightsense/stellarized',                 {'package': 'colors'})
   call packager#add('nightsense/vimspectr',                   {'package': 'colors'})
-  call packager#add('NLKNguyen/papercolor-theme',             {'package': 'colors'})
   call packager#add('rakr/vim-one',                           {'package': 'colors'})
   call packager#add('reedes/vim-colors-pencil',               {'package': 'colors'})
   call packager#add('RohanPoojary/pleasant.vim',              {'package': 'colors'})
@@ -371,9 +361,11 @@ call mgr#add_cscheme('stormpetrel')
 call mgr#add_group('seabird_themes')
 
 call mgr#init_group()
+call mgr#add_cscheme('archery')
 call mgr#add_cscheme('ayu')
 call mgr#add_cscheme('bluedrake')
 call mgr#add_cscheme('CandyPaper')
+call mgr#add_cscheme('challenger_deep')
 call mgr#add_cscheme('codedark')
 call mgr#add_cscheme('cosmic_latte')
 call mgr#add_cscheme('darcula')
@@ -386,6 +378,7 @@ call mgr#add_cscheme('iceberg')
 call mgr#add_cscheme('OceanicNext')
 call mgr#add_cscheme('one')
 call mgr#add_cscheme('paper')
+call mgr#add_cscheme('pencil')
 call mgr#add_cscheme('pleasant')
 call mgr#add_cscheme('nord')
 call mgr#add_cscheme('snow')
@@ -399,9 +392,6 @@ call mgr#add_group('favorites')
 call mgr#init()
 call mgr#add('archery', {
            \ 'airline'  : function('mgr#cscheme'),
-           \ 'lightline': function('mgr#cscheme')
-           \ })
-call mgr#add('atlas', {
            \ 'lightline': function('mgr#cscheme')
            \ })
 call mgr#add('apprentice', {
@@ -451,9 +441,6 @@ call mgr#add('deep-space', {
            \ 'airline'  : function('mgr#cscheme_dsh_to_uscr')
            \ })
 call mgr#add('desertink', {
-           \ 'airline': function('mgr#cscheme')
-           \ })
-call mgr#add('deus', {
            \ 'airline': function('mgr#cscheme')
            \ })
 call mgr#add('distinguished', {
@@ -525,9 +512,6 @@ call mgr#add('iceberg', {
 call mgr#add('jellybeans', {
            \  'airline': function('mgr#cscheme')
            \ })
-call mgr#add('landscape', {
-           \ 'airline': function('mgr#cscheme')
-           \ })
 call mgr#add('material', {
            \ 'variants'       : ['default', 'palenight', 'ocean', 'lighter', 'darker'],
            \ 'style_variable' : 'g:material_theme_style',
@@ -548,13 +532,6 @@ call mgr#add('materialbox', {
            \ 'status'         : function('mgr#cscheme_bg_styl'),
            \ 'airline'        : function('mgr#cscheme'),
            \ 'toggle'         : function('mgr#tggl_bg')
-           \ })
-call mgr#add('sublimemonokai', {
-           \ 'airline': function('b_lib#MonokaiAirlineTheme'),
-           \ })
-call mgr#add('moonfly', {
-           \ 'airline'  : function('mgr#cscheme'),
-           \ 'lightline': function('mgr#cscheme')
            \ })
 call mgr#add('nightfly', {
            \ 'airline'  : function('mgr#cscheme'),
@@ -582,21 +559,10 @@ call mgr#add('one', {
            \ 'airline'     : function('mgr#cscheme'),
            \ 'toggle'      : function('mgr#tggl_bg')
            \ })
-call mgr#add('palenight', {
-           \ 'lightline': function('mgr#cscheme'),
-           \ 'airline'  : function('mgr#cscheme')
-           \ })
 call mgr#add('paper', {
            \ 'next_variant': function('mgr#nxt_bg_var'),
            \ 'status'      : function('mgr#cscheme_bg_sl'),
            \ 'airline'     : function('mgr#cscheme'),
-           \ 'toggle'      : function('mgr#tggl_bg')
-           \ })
-call mgr#add('PaperColor', {
-           \ 'next_variant': function('mgr#nxt_bg_var'),
-           \ 'status'      : function('mgr#cscheme_bg_sl'),
-           \ 'lightline'   : function('mgr#cscheme'),
-           \ 'airline'     : function('mgr#cscheme_lwr'),
            \ 'toggle'      : function('mgr#tggl_bg')
            \ })
 call mgr#add('pencil', {
@@ -615,9 +581,6 @@ call mgr#add('petrel', {
 call mgr#add('pleasant', {
            \ 'lightline': function('mgr#cscheme'),
            \ 'airline'  : function('mgr#cscheme')
-           \ })
-call mgr#add('pop-punk', {
-           \  'airline': function('mgr#cscheme_dsh_to_uscr')
            \ })
 call mgr#add('seagull', {
            \ 'variants'    : g:colorscheme_groups.seabird_themes,
@@ -644,12 +607,6 @@ call mgr#add('snow', {
            \ 'toggle'      : function('mgr#tggl_bg')
            \ })
 call mgr#add('spacegray', {
-           \ })
-call mgr#add('space_vim_theme', {
-           \ 'next_variant': function('mgr#nxt_bg_var'),
-           \ 'status'      : function('mgr#cscheme_bg_sl'),
-           \ 'toggle'      : function('mgr#tggl_bg'),
-           \ 'lightline'   : function('b_lib#SpaceVimLightlineTheme')
            \ })
 call mgr#add('srcery', {
            \ 'lightline': function('mgr#cscheme'),
@@ -701,12 +658,6 @@ call mgr#add('vadelma', {
            \ 'status'      : function('mgr#cscheme_bg_sl'),
            \ 'lightline'   : function('mgr#cscheme'),
            \ 'toggle'      : function('mgr#tggl_bg')
-           \ })
-call mgr#add('xcode', {
-           \ 'variants'    : ['xcodedark', 'xcodelight', 'xcodewwdc', 'xcodedarkhc', 'xcodelighthc'],
-           \ 'next_variant': function('mgr#nxt_cscheme_var'),
-           \ 'toggle'      : function('mgr#tggl_cscheme'),
-           \ 'airline'     : function('mgr#cscheme')
            \ })
 call mgr#add('vividchalk', {
            \ })
