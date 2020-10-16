@@ -418,7 +418,7 @@ call mgr#add('challenger_deep', {
            \ 'lightline': function('mgr#cscheme')
            \ })
 call mgr#add('codedark', {
-           \ 'airline'  : function('mgr#cscheme'),
+           \ 'airline': function('mgr#cscheme'),
            \ })
 call mgr#add('cosmic_latte', {
            \ 'next_variant': function('mgr#nxt_bg_var'),
@@ -462,7 +462,7 @@ call mgr#add('embark', {
            \ 'lightline': function('mgr#cscheme')
            \ })
 call mgr#add('flatland', {
-           \ 'airline'  : function('mgr#cscheme'),
+           \ 'airline': function('mgr#cscheme'),
            \ })
 call mgr#add('flattened', {
            \ 'variants'    : ['_light', '_dark'],
