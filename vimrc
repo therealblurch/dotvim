@@ -241,15 +241,6 @@ function! PackagerInit() abort
   " writing plugins
   call packager#add('dhruvasagar/vim-table-mode',             {'package': 'write'})
   call packager#add('godlygeek/tabular',                      {'package': 'write'})
-  call packager#add('hsitz/VimOrganizer',                     {'package': 'write'})
-  call packager#add('jceb/vim-orgmode',                       {'package': 'write'})
-  call packager#add('junegunn/vim-journal',                   {'package': 'write'})
-  call packager#add('mattn/calendar-vim',                     {'package': 'write'})
-  call packager#add('vimoutliner/vimoutliner',                {'package': 'write'})
-  call packager#add('vim-voom/VOoM',                          {'package': 'write'})
-  call packager#add('vimwiki/vimwiki',                        {'package': 'write'})
-  call packager#add('xolox/vim-notes',                        {'package': 'write'})
-  call packager#add('dhruvasagar/vim-dotoo',                  {'package': 'write'})
 endfunction
 
 command! PackagerInstall call PackagerInit() | call packager#install()
