@@ -221,6 +221,7 @@ function! PackagerInit() abort
   call packager#add('nightsense/vimspectr',                   {'package': 'colors'})
   call packager#add('rakr/vim-one',                           {'package': 'colors'})
   call packager#add('reedes/vim-colors-pencil',               {'package': 'colors'})
+  call packager#add('Rigellute/shades-of-purple.vim',         {'package': 'colors'})
   call packager#add('RohanPoojary/pleasant.vim',              {'package': 'colors'})
   call packager#add('romainl/Apprentice',                     {'package': 'colors'})
   call packager#add('romainl/flattened',                      {'package': 'colors'})
@@ -374,6 +375,7 @@ call mgr#add_cscheme('paper')
 call mgr#add_cscheme('pencil')
 call mgr#add_cscheme('pleasant')
 call mgr#add_cscheme('nord')
+call mgr#add_cscheme('shades_of_purple')
 call mgr#add_cscheme('snow')
 call mgr#add_cscheme('spacegray')
 call mgr#add_cscheme('stellarized')
@@ -587,6 +589,10 @@ call mgr#add('seagull', {
            \ 'next_variant': function('mgr#nxt_cscheme_var'),
            \ 'airline'     : function('mgr#cscheme'),
            \ 'toggle'      : function('b_lib#SeagullToggle')
+           \ })
+call mgr#add('shades_of_purple', {
+           \ 'airline'  : function('mgr#cscheme'),
+           \ 'lightline': function('mgr#cscheme')
            \ })
 call mgr#add('sonokai', {
            \ 'variants'       : ['default', 'atlantis', 'andromeda', 'maia'],
