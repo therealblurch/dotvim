@@ -231,7 +231,6 @@ function! PackagerInit() abort
   call packager#add('sainnhe/sonokai',                        {'package': 'colors'})
   call packager#add('severij/vadelma',                        {'package': 'colors'})
   call packager#add('srcery-colors/srcery-vim',               {'package': 'colors'})
-  call packager#add('tomasiser/vim-code-dark',                {'package': 'colors'})
   call packager#add('toupeira/vim-desertink',                 {'package': 'colors'})
   call packager#add('tpope/vim-vividchalk',                   {'package': 'colors'})
   call packager#add('tyrannicaltoucan/vim-deep-space',        {'package': 'colors'})
@@ -359,7 +358,6 @@ call mgr#add_cscheme('ayu')
 call mgr#add_cscheme('bluedrake')
 call mgr#add_cscheme('CandyPaper')
 call mgr#add_cscheme('challenger_deep')
-call mgr#add_cscheme('codedark')
 call mgr#add_cscheme('cosmic_latte')
 call mgr#add_cscheme('darcula')
 call mgr#add_cscheme('deep-space')
@@ -418,9 +416,6 @@ call mgr#add('CandyPaper', {
 call mgr#add('challenger_deep', {
            \ 'airline'  : function('mgr#cscheme'),
            \ 'lightline': function('mgr#cscheme')
-           \ })
-call mgr#add('codedark', {
-           \ 'airline': function('mgr#cscheme'),
            \ })
 call mgr#add('cosmic_latte', {
            \ 'next_variant': function('mgr#nxt_bg_var'),
