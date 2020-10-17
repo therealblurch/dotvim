@@ -18,6 +18,7 @@ let g:fontlist=[
   \ 'Hack\ iCursive\ S12\ 12',
   \ 'Hack\ Nerd\ Font\ Mono\ 12',
   \ 'Hasklug\ Nerd\ Font\ Mono\ Medium\ 12',
+  \ 'Hurmit\ Nerd\ Font\ Mono\ Medium\ 12',
   \ 'Inconsolata\ Nerd\ Font\ Mono\ 12',
   \ 'InconsolataLGC\ iCursive\ S12\ Medium\ 12',
   \ 'Meslo\ iCursive\ S12\ 12',
