@@ -148,6 +148,7 @@ function! packager_init#PackagerInit() abort
   call packager#add('tyrannicaltoucan/vim-deep-space',        {'package': 'colors'})
   call packager#add('vim-scripts/twilight',                   {'package': 'colors'})
   call packager#add('vivkin/flatland.vim',                    {'package': 'colors'})
+  call packager#add('yuttie/hydrangea-vim',                   {'package': 'colors'})
   call packager#add('wadackel/vim-dogrun',                    {'package': 'colors'})
 
   " writing plugins

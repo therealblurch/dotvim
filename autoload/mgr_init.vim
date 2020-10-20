@@ -54,6 +54,7 @@ function mgr_init#InitializeMgrGroups()
   call mgr#add_cscheme('forest-night')
   call mgr#add_cscheme('github')
   call mgr#add_cscheme('gruvbox-material')
+  call mgr#add_cscheme('hydrangea')
   call mgr#add_cscheme('iceberg')
   call mgr#add_cscheme('OceanicNext')
   call mgr#add_cscheme('one')
@@ -188,6 +189,9 @@ function mgr_init#InitializeMgr()
              \ 'lightline'      : function('mgr#cscheme'),
              \ 'airline'        : function('mgr#cscheme_dsh_to_uscr'),
              \ 'toggle'         : function('mgr#tggl_bg')
+             \ })
+  call mgr#add('hydrangea', {
+             \  'lightline': function('mgr#cscheme')
              \ })
   call mgr#add('iceberg', {
              \ 'next_variant': function('mgr#nxt_bg_var'),
