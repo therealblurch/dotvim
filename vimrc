@@ -156,6 +156,12 @@ autocmd! User InitializeMgr call mgr_init#InitializeMgrGroups()
                         \ | call mgr_init#InitializeMgr()
                         \ | doautocmd User MgrInitialized
 
+if has('patch-8.0.1777')
+  autocmd ColorschemePre Atelier*Dark set background=dark
+  autocmd ColorschemePre Atelier*Light set background=light
+  autocmd ColorschemePre vimspectr*dark set background=dark
+  autocmd ColorschemePre vimspectr*light set background=light
+endif
 " }}}
 
 " Airline {{{
