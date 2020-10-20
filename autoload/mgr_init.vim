@@ -53,6 +53,7 @@ function mgr_init#InitializeMgrGroups()
   call mgr#add_cscheme('edge')
   call mgr#add_cscheme('forest-night')
   call mgr#add_cscheme('github')
+  call mgr#add_cscheme('gotham')
   call mgr#add_cscheme('gruvbox-material')
   call mgr#add_cscheme('hydrangea')
   call mgr#add_cscheme('iceberg')
@@ -171,6 +172,10 @@ function mgr_init#InitializeMgr()
              \ 'lightline'   : function('mgr#cscheme'),
              \ 'airline'     : function('mgr#cscheme'),
              \ 'toggle'      : function('mgr#tggl_bg')
+             \ })
+  call mgr#add('gotham', {
+             \ 'lightline': function('mgr#cscheme'),
+             \ 'airline'  : function('mgr#cscheme')
              \ })
   call mgr#add('greygull', {
              \ 'variants'    : g:colorscheme_groups.seabird_themes,
