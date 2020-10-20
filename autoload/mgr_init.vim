@@ -116,8 +116,7 @@ function mgr_init#InitializeMgr()
              \ 'airline'     : function('mgr#cscheme_bg_uscr'),
              \ 'toggle'      : function('mgr#tggl_bg')
              \ })
-  call mgr#add('darcula', {
-             \ })
+  call mgr#add('darcula')
   call mgr#add('deep-space', {
              \ 'lightline': function('mgr#csheme_rm_dsh'),
              \ 'airline'  : function('mgr#cscheme_dsh_to_uscr')
@@ -306,8 +305,7 @@ function mgr_init#InitializeMgr()
              \ 'airline'     : function('mgr#cscheme_bg_uscr'),
              \ 'toggle'      : function('mgr#tggl_bg')
              \ })
-  call mgr#add('spacegray', {
-             \ })
+  call mgr#add('spacegray')
   call mgr#add('srcery', {
              \ 'lightline': function('mgr#cscheme'),
              \ 'airline'  : function('mgr#cscheme')
@@ -359,8 +357,7 @@ function mgr_init#InitializeMgr()
              \ 'lightline'   : function('mgr#cscheme'),
              \ 'toggle'      : function('mgr#tggl_bg')
              \ })
-  call mgr#add('vividchalk', {
-             \ })
+  call mgr#add('vividchalk')
   call mgr#add('zenburn', {
              \ 'airline': function('mgr#cscheme')
              \ })
