@@ -45,7 +45,7 @@ set list
 " " 00AC ¬ (TextMate style)
 
 if !has('win64') && !has('win32')
-  set listchars=tab:⇨\ ,eol:⏎,nbsp:␣,trail:•,extends:⟩,precedes:⟨
+  set listchars=tab:▸\ ,eol:¬,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 endif
 set modeline
 set nojoinspaces
