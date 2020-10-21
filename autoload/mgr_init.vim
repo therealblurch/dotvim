@@ -95,13 +95,13 @@ function mgr_init#InitializeMgr()
              \ 'toggle'         : function('mgr#tggl_cscheme_styl')
              \ })
   call mgr#add('bluedrake', {
-             \ 'next_variant': function('mgr#nxt_bg_var'),
+             \ 'next_variant': function('mgr#tggl_bg'),
              \ 'status'      : function('mgr#cscheme_bg_sl'),
              \ 'airline'     : function('mgr#cscheme'),
              \ 'toggle'      : function('mgr#tggl_bg')
              \ })
   call mgr#add('CandyPaper', {
-             \ 'next_variant': function('mgr#nxt_bg_var'),
+             \ 'next_variant': function('mgr#tggl_bg'),
              \ 'status'      : function('mgr#cscheme_bg_sl'),
              \ 'toggle'      : function('mgr#tggl_bg')
              \ })
@@ -110,7 +110,7 @@ function mgr_init#InitializeMgr()
              \ 'lightline': function('mgr#cscheme')
              \ })
   call mgr#add('cosmic_latte', {
-             \ 'next_variant': function('mgr#nxt_bg_var'),
+             \ 'next_variant': function('mgr#tggl_bg'),
              \ 'status'      : function('mgr#cscheme_bg_sl'),
              \ 'lightline'   : function('mgr#cscheme_bg_uscr'),
              \ 'airline'     : function('mgr#cscheme_bg_uscr'),
@@ -166,7 +166,7 @@ function mgr_init#InitializeMgr()
              \ 'toggle'   : function('mgr#tggl_cscheme')
              \ })
   call mgr#add('github', {
-             \ 'next_variant': function('mgr#nxt_bg_var'),
+             \ 'next_variant': function('mgr#tggl_bg'),
              \ 'status'      : function('mgr#cscheme_bg_sl'),
              \ 'lightline'   : function('mgr#cscheme'),
              \ 'airline'     : function('mgr#cscheme'),
@@ -198,7 +198,7 @@ function mgr_init#InitializeMgr()
              \  'lightline': function('mgr#cscheme')
              \ })
   call mgr#add('iceberg', {
-             \ 'next_variant': function('mgr#nxt_bg_var'),
+             \ 'next_variant': function('mgr#tggl_bg'),
              \ 'status'      : function('mgr#cscheme_bg_sl'),
              \ 'lightline'   : function('mgr#cscheme'),
              \ 'airline'     : function('mgr#cscheme'),
@@ -248,20 +248,20 @@ function mgr_init#InitializeMgr()
              \ 'map'         : function('b_lib#FlattenedMap')
              \ })
   call mgr#add('one', {
-             \ 'next_variant': function('mgr#nxt_bg_var'),
+             \ 'next_variant': function('mgr#tggl_bg'),
              \ 'status'      : function('mgr#cscheme_bg_sl'),
              \ 'lightline'   : function('mgr#cscheme'),
              \ 'airline'     : function('mgr#cscheme'),
              \ 'toggle'      : function('mgr#tggl_bg')
              \ })
   call mgr#add('paper', {
-             \ 'next_variant': function('mgr#nxt_bg_var'),
+             \ 'next_variant': function('mgr#tggl_bg'),
              \ 'status'      : function('mgr#cscheme_bg_sl'),
              \ 'airline'     : function('mgr#cscheme'),
              \ 'toggle'      : function('mgr#tggl_bg')
              \ })
   call mgr#add('pencil', {
-             \ 'next_variant': function('mgr#nxt_bg_var'),
+             \ 'next_variant': function('mgr#tggl_bg'),
              \ 'status'      : function('mgr#cscheme_bg_sl'),
              \ 'lightline'   : function('mgr#cscheme'),
              \ 'airline'     : function('mgr#cscheme'),
@@ -299,7 +299,7 @@ function mgr_init#InitializeMgr()
              \ 'airline'        : function('mgr#cscheme')
              \ })
   call mgr#add('snow', {
-             \ 'next_variant': function('mgr#nxt_bg_var'),
+             \ 'next_variant': function('mgr#tggl_bg'),
              \ 'status'      : function('mgr#cscheme_bg_sl'),
              \ 'lightline'   : function('mgr#cscheme_bg_uscr'),
              \ 'airline'     : function('mgr#cscheme_bg_uscr'),
@@ -311,7 +311,7 @@ function mgr_init#InitializeMgr()
              \ 'airline'  : function('mgr#cscheme')
              \ })
   call mgr#add('stellarized', {
-             \ 'next_variant': function('mgr#nxt_bg_var'),
+             \ 'next_variant': function('mgr#tggl_bg'),
              \ 'status'      : function('mgr#cscheme_bg_sl'),
              \ 'lightline'   : function('mgr#cscheme_bg_uscr'),
              \ 'airline'     : function('mgr#cscheme_bg_uscr'),
@@ -352,7 +352,7 @@ function mgr_init#InitializeMgr()
              \ 'map'         : function('b_lib#VimspectrMap')
              \ })
   call mgr#add('vadelma', {
-             \ 'next_variant': function('mgr#nxt_bg_var'),
+             \ 'next_variant': function('mgr#tggl_bg'),
              \ 'status'      : function('mgr#cscheme_bg_sl'),
              \ 'lightline'   : function('mgr#cscheme'),
              \ 'toggle'      : function('mgr#tggl_bg')
