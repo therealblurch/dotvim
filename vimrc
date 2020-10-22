@@ -1,5 +1,8 @@
  " vim: set sw=2 ts=2 sts=2 et tw=78 foldmarker={{{,}}} foldlevel=0 foldmethod=marker:
 
+ let s:is_win = has('win32') || has('win64')
+ let $v = $HOME.(s:is_win ? '\vimfiles' : '/.vim')
+
 scriptencoding utf-8
 
 set backupskip+=*_layout*.v
@@ -10,7 +13,7 @@ set completeopt+=menuone,noselect
 if has("patch-8.1.0360")
   set diffopt+=internal,algorithm:histogram
 endif
-set directory=~/.vim/cache/swap//
+set directory=$v/cache/swap//
 set grepprg=ag\ --nogroup\ --nocolor
 set hidden
 set hlsearch
@@ -42,7 +45,7 @@ set list
 " " 23CE ⏎ (return symbol)
 " " 00AC ¬ (TextMate style)
 
-if !has('win64') && !has('win32')
+if !s:is_win
   set listchars=tab:▸\ ,eol:¬,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 endif
 set modeline
@@ -70,10 +73,10 @@ if has('persistent_undo')
  set undolevels=1000
  set undoreload=10000
 endif
-set undodir=~/.vim/cache/undo//
+set undodir=$v/cache/undo//
 set updatetime=250
 set viewoptions=folds,options,cursor,unix,slash
-set viminfo='100,<50,s10,h,n~/.vim/cache/viminfo
+set viminfo='100,<50,s10,h,n$v/cache/viminfo
 set virtualedit=onemore
 set wildignore=*.swp,*.bak
 set wildignore+=*/.git/**
@@ -129,8 +132,8 @@ nnoremap cr :execute 'cd ' . rootdir<bar>pwd<cr> " Go to directory vim was opene
 nnoremap cp :pwd<cr> " Print current working directory
 
 " Edit/source .vimrc
-noremap <leader>evi :tabedit ~/.vim/vimrc<CR>
-noremap <leader>sv  :source ~/.vim/vimrc<CR>
+noremap <leader>evi :tabedit $v/vimrc<CR>
+noremap <leader>sv  :source $v/vimrc<CR>
 
 " Timestamps
 nnoremap <F6> "=strftime("%c")
