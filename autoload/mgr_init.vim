@@ -63,6 +63,7 @@ function mgr_init#InitializeMgrGroups()
   call mgr#add_cscheme('pencil')
   call mgr#add_cscheme('pleasant')
   call mgr#add_cscheme('nord')
+  call mgr#add_cscheme('rigel')
   call mgr#add_cscheme('shades_of_purple')
   call mgr#add_cscheme('snow')
   call mgr#add_cscheme('spacegray')
@@ -276,6 +277,10 @@ function mgr_init#InitializeMgr()
   call mgr#add('pleasant', {
              \ 'lightline': function('mgr#cscheme'),
              \ 'airline'  : function('mgr#cscheme')
+             \ })
+  call mgr#add('rigel', {
+             \ 'airline'  : function('mgr#cscheme'),
+             \ 'lightline': function('mgr#cscheme')
              \ })
   call mgr#add('seagull', {
              \ 'variants'    : g:colorscheme_groups.seabird_themes,

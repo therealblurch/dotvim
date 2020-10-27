@@ -133,6 +133,7 @@ function! packager_init#PackagerInit() abort
   call packager#add('nightsense/vimspectr',                   {'package': 'colors'})
   call packager#add('rakr/vim-one',                           {'package': 'colors'})
   call packager#add('reedes/vim-colors-pencil',               {'package': 'colors'})
+  call packager#add('Rigellute/rigel',                        {'package': 'colors'})
   call packager#add('Rigellute/shades-of-purple.vim',         {'package': 'colors'})
   call packager#add('RohanPoojary/pleasant.vim',              {'package': 'colors'})
   call packager#add('romainl/Apprentice',                     {'package': 'colors'})
