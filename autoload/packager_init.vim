@@ -115,6 +115,7 @@ function! packager_init#PackagerInit() abort
   call packager#add('dfxyz/CandyPaper.vim',                   {'package': 'colors'})
   call packager#add('dracula/vim',                            {'package': 'colors', 'name': 'dracula'})
   call packager#add('embark-theme/vim',                       {'package': 'colors'})
+  call packager#add('flrnd/candid.vim',                       {'package': 'colors'})
   call packager#add('ghifarit53/tokyonight-vim',              {'package': 'colors'})
   call packager#add('haishanh/night-owl.vim',                 {'package': 'colors'})
   call packager#add('jacoborus/tender.vim',                   {'package': 'colors'})

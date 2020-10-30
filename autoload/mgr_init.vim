@@ -44,6 +44,7 @@ function mgr_init#InitializeMgrGroups()
   call mgr#add_cscheme('archery')
   call mgr#add_cscheme('ayu')
   call mgr#add_cscheme('bluedrake')
+  call mgr#add_cscheme('candid')
   call mgr#add_cscheme('CandyPaper')
   call mgr#add_cscheme('challenger_deep')
   call mgr#add_cscheme('cosmic_latte')
@@ -100,6 +101,9 @@ function mgr_init#InitializeMgr()
              \ 'status'      : function('mgr#cscheme_bg_sl'),
              \ 'airline'     : function('mgr#cscheme'),
              \ 'toggle'      : function('mgr#tggl_bg')
+             \ })
+  call mgr#add('candid', {
+             \ 'lightline': function('mgr#cscheme'),
              \ })
   call mgr#add('CandyPaper', {
              \ 'next_variant': function('mgr#tggl_bg'),
