@@ -175,7 +175,8 @@ function mgr_init#InitializeMgr()
              \ 'status'      : function('mgr#cscheme_bg_sl'),
              \ 'lightline'   : function('mgr#cscheme'),
              \ 'airline'     : function('mgr#cscheme'),
-             \ 'toggle'      : function('mgr#tggl_bg')
+             \ 'toggle'      : function('mgr#tggl_bg'),
+             \ 'default_bg'  : 'light'
              \ })
   call mgr#add('gotham', {
              \ 'lightline': function('mgr#cscheme'),
@@ -263,14 +264,16 @@ function mgr_init#InitializeMgr()
              \ 'next_variant': function('mgr#tggl_bg'),
              \ 'status'      : function('mgr#cscheme_bg_sl'),
              \ 'airline'     : function('mgr#cscheme'),
-             \ 'toggle'      : function('mgr#tggl_bg')
+             \ 'toggle'      : function('mgr#tggl_bg'),
+             \ 'default_bg'  : 'light'
              \ })
   call mgr#add('pencil', {
              \ 'next_variant': function('mgr#tggl_bg'),
              \ 'status'      : function('mgr#cscheme_bg_sl'),
              \ 'lightline'   : function('mgr#cscheme'),
              \ 'airline'     : function('mgr#cscheme'),
-             \ 'toggle'      : function('mgr#tggl_bg')
+             \ 'toggle'      : function('mgr#tggl_bg'),
+             \ 'default_bg'  : 'light'
              \ })
   call mgr#add('petrel', {
              \ 'variants'    : g:colorscheme_groups.seabird_themes,
