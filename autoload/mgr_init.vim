@@ -100,7 +100,8 @@ function mgr_init#InitializeMgr()
              \ 'next_variant': function('mgr#tggl_bg'),
              \ 'status'      : function('mgr#cscheme_bg_sl'),
              \ 'airline'     : function('mgr#cscheme'),
-             \ 'toggle'      : function('mgr#tggl_bg')
+             \ 'toggle'      : function('mgr#tggl_bg'),
+             \ 'default_bg'  : 'dark'
              \ })
   call mgr#add('candid', {
              \ 'lightline': function('mgr#cscheme'),
@@ -108,7 +109,8 @@ function mgr_init#InitializeMgr()
   call mgr#add('CandyPaper', {
              \ 'next_variant': function('mgr#tggl_bg'),
              \ 'status'      : function('mgr#cscheme_bg_sl'),
-             \ 'toggle'      : function('mgr#tggl_bg')
+             \ 'toggle'      : function('mgr#tggl_bg'),
+             \ 'default_bg'  : 'dark'
              \ })
   call mgr#add('challenger_deep', {
              \ 'airline'  : function('mgr#cscheme'),
@@ -119,7 +121,8 @@ function mgr_init#InitializeMgr()
              \ 'status'      : function('mgr#cscheme_bg_sl'),
              \ 'lightline'   : function('mgr#cscheme_bg_uscr'),
              \ 'airline'     : function('mgr#cscheme_bg_uscr'),
-             \ 'toggle'      : function('mgr#tggl_bg')
+             \ 'toggle'      : function('mgr#tggl_bg'),
+             \ 'default_bg'  : 'dark'
              \ })
   call mgr#add('darcula')
   call mgr#add('deep-space', {
@@ -148,7 +151,8 @@ function mgr_init#InitializeMgr()
              \ 'status'         : function('mgr#cscheme_styl'),
              \ 'lightline'      : function('mgr#cscheme'),
              \ 'airline'        : function('mgr#cscheme'),
-             \ 'toggle'         : function('mgr#tggl_bg')
+             \ 'toggle'         : function('mgr#tggl_bg'),
+             \ 'default_bg'     : 'dark'
              \ })
   call mgr#add('embark', {
              \ 'airline'  : function('mgr#cscheme'),
@@ -198,7 +202,8 @@ function mgr_init#InitializeMgr()
              \ 'status'         : function('mgr#cscheme_styl'),
              \ 'lightline'      : function('mgr#cscheme'),
              \ 'airline'        : function('mgr#cscheme_dsh_to_uscr'),
-             \ 'toggle'         : function('mgr#tggl_bg')
+             \ 'toggle'         : function('mgr#tggl_bg'),
+             \ 'default_bg'     : 'dark'
              \ })
   call mgr#add('hydrangea', {
              \  'lightline': function('mgr#cscheme')
@@ -208,7 +213,8 @@ function mgr_init#InitializeMgr()
              \ 'status'      : function('mgr#cscheme_bg_sl'),
              \ 'lightline'   : function('mgr#cscheme'),
              \ 'airline'     : function('mgr#cscheme'),
-             \ 'toggle'      : function('mgr#tggl_bg')
+             \ 'toggle'      : function('mgr#tggl_bg'),
+             \ 'default_bg'  : 'light'
              \ })
   call mgr#add('jellybeans', {
              \  'airline': function('mgr#cscheme')
@@ -232,7 +238,8 @@ function mgr_init#InitializeMgr()
              \ 'default_variant': function('mgr#def_styl_bg_var'),
              \ 'status'         : function('mgr#cscheme_bg_styl'),
              \ 'airline'        : function('mgr#cscheme'),
-             \ 'toggle'         : function('mgr#tggl_bg')
+             \ 'toggle'         : function('mgr#tggl_bg'),
+             \ 'default_bg'     : 'dark'
              \ })
   call mgr#add('nightfly', {
              \ 'airline'  : function('mgr#cscheme'),
@@ -258,7 +265,8 @@ function mgr_init#InitializeMgr()
              \ 'status'      : function('mgr#cscheme_bg_sl'),
              \ 'lightline'   : function('mgr#cscheme'),
              \ 'airline'     : function('mgr#cscheme'),
-             \ 'toggle'      : function('mgr#tggl_bg')
+             \ 'toggle'      : function('mgr#tggl_bg'),
+             \ 'default_bg'  : 'dark'
              \ })
   call mgr#add('paper', {
              \ 'next_variant': function('mgr#tggl_bg'),
@@ -315,7 +323,8 @@ function mgr_init#InitializeMgr()
              \ 'status'      : function('mgr#cscheme_bg_sl'),
              \ 'lightline'   : function('mgr#cscheme_bg_uscr'),
              \ 'airline'     : function('mgr#cscheme_bg_uscr'),
-             \ 'toggle'      : function('mgr#tggl_bg')
+             \ 'toggle'      : function('mgr#tggl_bg'),
+             \ 'default_bg'  : 'light'
              \ })
   call mgr#add('spacegray')
   call mgr#add('srcery', {
@@ -327,7 +336,8 @@ function mgr_init#InitializeMgr()
              \ 'status'      : function('mgr#cscheme_bg_sl'),
              \ 'lightline'   : function('mgr#cscheme_bg_uscr'),
              \ 'airline'     : function('mgr#cscheme_bg_uscr'),
-             \ 'toggle'      : function('mgr#tggl_bg')
+             \ 'toggle'      : function('mgr#tggl_bg'),
+             \ 'default_bg'  : 'dark'
              \ })
   call mgr#add('stormpetrel', {
              \ 'variants'    : g:colorscheme_groups.seabird_themes,
@@ -367,7 +377,8 @@ function mgr_init#InitializeMgr()
              \ 'next_variant': function('mgr#tggl_bg'),
              \ 'status'      : function('mgr#cscheme_bg_sl'),
              \ 'lightline'   : function('mgr#cscheme'),
-             \ 'toggle'      : function('mgr#tggl_bg')
+             \ 'toggle'      : function('mgr#tggl_bg'),
+             \ 'default_bg'  : 'light'
              \ })
   call mgr#add('vividchalk')
   call mgr#add('zenburn', {
