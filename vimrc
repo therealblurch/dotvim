@@ -162,6 +162,11 @@ if has('patch-8.0.1777')
   autocmd ColorschemePre Atelier*Light set background=light
   autocmd ColorschemePre vimspectr*dark set background=dark
   autocmd ColorschemePre vimspectr*light set background=light
+else
+  autocmd User ColorschemePre Atelier*Dark set background=dark
+  autocmd User ColorschemePre Atelier*Light set background=light
+  autocmd User ColorschemePre vimspectr*dark set background=dark
+  autocmd User ColorschemePre vimspectr*light set background=light
 endif
 " }}}
 
