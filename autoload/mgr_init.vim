@@ -101,7 +101,7 @@ function mgr_init#InitializeMgr()
              \ 'status'      : function('mgr#cscheme_bg_sl'),
              \ 'airline'     : function('mgr#cscheme'),
              \ 'toggle'      : function('mgr#tggl_bg'),
-             \ 'default_bg'  : 'dark'
+             \ 'default_bg'  : 'light'
              \ })
   call mgr#add('candid', {
              \ 'lightline': function('mgr#cscheme'),
