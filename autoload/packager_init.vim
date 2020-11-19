@@ -45,7 +45,7 @@ function! packager_init#PackagerInit() abort
   call packager#add('markonm/traces.vim')
   call packager#add('mhinz/vim-grepper')
   call packager#add('mox-mox/vim-localsearch')
-  call packager#add('myusuf3/numbers.vim',                    {'type': 'opt'})
+  call packager#add('myusuf3/numbers.vim')
   call packager#add('Olical/vim-enmasse')
   call packager#add('pelodelfuego/vim-swoop')
   call packager#add('Raimondi/delimitMate')
