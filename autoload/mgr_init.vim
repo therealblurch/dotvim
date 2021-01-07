@@ -67,6 +67,7 @@ function mgr_init#InitializeMgrGroups()
   call mgr#add_cscheme('rigel')
   call mgr#add_cscheme('shades_of_purple')
   call mgr#add_cscheme('snow')
+  call mgr#add_cscheme('spaceduck')
   call mgr#add_cscheme('spacegray')
   call mgr#add_cscheme('stellarized')
   call mgr#add_cscheme('tokyonight')
@@ -326,6 +327,10 @@ function mgr_init#InitializeMgr()
              \ 'toggle'      : function('mgr#tggl_bg'),
              \ 'default_bg'  : 'light'
              \ })
+  call mgr#add('spaceduck', {
+             \ 'lightline'      : function('mgr#cscheme'),
+             \ 'airline'        : function('mgr#cscheme')
+             \})
   call mgr#add('spacegray')
   call mgr#add('srcery', {
              \ 'lightline': function('mgr#cscheme'),

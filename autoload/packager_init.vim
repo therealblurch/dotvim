@@ -132,6 +132,7 @@ function! packager_init#PackagerInit() abort
   call packager#add('nightsense/snow',                        {'package': 'colors'})
   call packager#add('nightsense/stellarized',                 {'package': 'colors'})
   call packager#add('nightsense/vimspectr',                   {'package': 'colors'})
+  call packager#add('pineapplegiant/spaceduck',               {'package': 'colors'})
   call packager#add('rakr/vim-one',                           {'package': 'colors'})
   call packager#add('reedes/vim-colors-pencil',               {'package': 'colors'})
   call packager#add('Rigellute/rigel',                        {'package': 'colors'})
