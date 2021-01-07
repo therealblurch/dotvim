@@ -72,6 +72,7 @@ function mgr_init#InitializeMgrGroups()
   call mgr#add_cscheme('stellarized')
   call mgr#add_cscheme('tokyonight')
   call mgr#add_cscheme('tokyo-metro')
+  call mgr#add_cscheme('turtles')
   call mgr#add_cscheme('vadelma')
   call mgr#add_group('favorites')
 endfunction
@@ -368,6 +369,9 @@ function mgr_init#InitializeMgr()
              \ 'lightline': function('mgr#csheme_rm_dsh'),
              \ 'airline'  : function('mgr#csheme_rm_dsh')
              \ })
+  call mgr#add('turtles', {
+             \ 'airline'        : function('mgr#cscheme')
+             \})
   call mgr#add('twilight', {
              \ 'status': function('mgr#cscheme')
              \ })

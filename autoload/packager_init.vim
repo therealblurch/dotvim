@@ -120,6 +120,7 @@ function! packager_init#PackagerInit() abort
   call packager#add('haishanh/night-owl.vim',                 {'package': 'colors'})
   call packager#add('jacoborus/tender.vim',                   {'package': 'colors'})
   call packager#add('jnurmine/Zenburn',                       {'package': 'colors'})
+  call packager#add('kadekillary/Turtles',                    {'package': 'colors'})
   call packager#add('kaicataldo/material.vim',                {'package': 'colors', 'name': 'material'})
   call packager#add('koirand/tokyo-metro.vim',                {'package': 'colors'})
   call packager#add('lokaltog/vim-distinguished',             {'package': 'colors'})
