@@ -151,6 +151,7 @@ autocmd! FileType gitcommit setlocal spell
 
 " theme manager {{{
 
+let g:colorscheme_file = $v . '/colorscheme'
 let g:mgr_randomize_group = 1
 
 autocmd! User InitializeMgr call mgr_init#InitializeMgrGroups()
@@ -171,25 +172,27 @@ endif
 " }}}
 
 " Airline {{{
-let g:airline_powerline_fonts                   = 1
-let g:airline#extensions#grepper#enabled        = 1
-let g:airline#extensions#tabline#enabled        = 1
-let g:airline#extensions#tabline#show_buffers   = 1
-let g:airline#extensions#tabline#show_tabs      = 1
-let g:airline#extensions#tabline#show_tab_nr    = 1
-let g:airline#extensions#tabline#tab_nr_type    = 2
-let g:airline#extensions#tabline#show_tab_count = 1
-let g:airline#extensions#tabline#show_tab_type  = 1
-let g:airline#extensions#tabline#alt_sep        = 1
-let g:airline#extensions#tabline#buffer_nr_show = 1
-let g:airline#extensions#tabline#fnamemod       = ':t'
-let g:airline#extensions#tabline#formatter      = 'unique_tail'
-let g:airline#extensions#tabline#left_sep       = ''
-let g:airline#extensions#tabline#left_alt_sep   = ''
-let g:airline#extensions#tabline#right_sep      = ''
-let g:airline#extensions#tabline#right_alt_sep  = ''
-let g:airline_left_sep                          = ''
-let g:airline_right_sep                         = ''
+if !s:is_win
+  let g:airline_powerline_fonts                   = 1
+  let g:airline#extensions#grepper#enabled        = 1
+  let g:airline#extensions#tabline#enabled        = 1
+  let g:airline#extensions#tabline#show_buffers   = 1
+  let g:airline#extensions#tabline#show_tabs      = 1
+  let g:airline#extensions#tabline#show_tab_nr    = 1
+  let g:airline#extensions#tabline#tab_nr_type    = 2
+  let g:airline#extensions#tabline#show_tab_count = 1
+  let g:airline#extensions#tabline#show_tab_type  = 1
+  let g:airline#extensions#tabline#alt_sep        = 1
+  let g:airline#extensions#tabline#buffer_nr_show = 1
+  let g:airline#extensions#tabline#fnamemod       = ':t'
+  let g:airline#extensions#tabline#formatter      = 'unique_tail'
+  let g:airline#extensions#tabline#left_sep       = ''
+  let g:airline#extensions#tabline#left_alt_sep   = ''
+  let g:airline#extensions#tabline#right_sep      = ''
+  let g:airline#extensions#tabline#right_alt_sep  = ''
+  let g:airline_left_sep                          = ''
+  let g:airline_right_sep                         = ''
+endif
 " }}}
 
 " buftabline {{{
@@ -286,10 +289,6 @@ let g:lightline = {
                   \                                       [ 'bufferbefore', 'buffercurrent', 'bufferafter' ] ],
                   \                            'right': [ [ 'close' ] ]
                   \                          },
-                  \ 'separator' :            { 'left': '', 'right': '' },
-                  \ 'subseparator' :         { 'left': '', 'right': '' },
-                  \ 'tabline_separator' :    { 'left': '', 'right': '' },
-                  \ 'tabline_subseparator' : { 'left': '', 'right': '' },
                   \ 'tab' :                  {
                   \                            'active'  : [ 'tabnum', 'filename', 'modified' ],
                   \                            'inactive': [ 'tabnum', 'filename', 'modified' ]
@@ -305,6 +304,18 @@ let g:lightline = {
                   \                            'bufferafter'  : 'raw'
                   \                          },
                   \ }
+
+if s:is_win
+  let g:lightline['separator']            = { 'left': '>', 'right': '<' }
+  let g:lightline['subseparator']         = { 'left': '>', 'right': '<' }
+  let g:lightline['tabline_separator']    = { 'left': '>', 'right': '<' }
+  let g:lightline['tabline_subseparator'] = { 'left': '>', 'right': '<' }
+else
+  let g:lightline['separator']            = { 'left': '', 'right': '' }
+  let g:lightline['subseparator']         = { 'left': '', 'right': '' }
+  let g:lightline['tabline_separator']    = { 'left': '', 'right': '' }
+  let g:lightline['tabline_subseparator'] = { 'left': '', 'right': '' }
+endif
 
 let g:lightline#bufferline#min_buffer_count  = 2
 let g:lightline#bufferline#enable_devicons   = 1
@@ -379,6 +390,7 @@ smap <leader>s <Plug>snipMateNextOrTrigger
 
 let g:snipMate = {}
 let g:snipMate['no_match_completion_feedkeys_chars'] = ''
+let g:snipMate['snippet_version'] = 1
 " }}}
 
 " System Verilog {{{
