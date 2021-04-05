@@ -411,4 +411,12 @@ nnoremap <silent> <leader> :WhichKey '\'<CR>
 nmap <leader>/ <Plug>localsearch_toggle
 " }}}
 
+"vimwiki {{{
+  let g:vimwiki_list = [{'path': '~/OneDrive/Documents/zettelkasten', 'ext':'.md', 'syntax':'markdown'}]
+" }}}
+
+" vim-zettel {{{
+  let g:zettel_format = "%y%m%d-%H%M-%title"
+" }}}
+
 call matchadd('ColorColumn', '\%81v', 100)
