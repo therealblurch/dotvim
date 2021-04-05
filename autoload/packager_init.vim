@@ -32,6 +32,7 @@ function! packager_init#PackagerInit() abort
   call packager#add('nishigori/increment-activator')
   call packager#add('garbas/vim-snipmate')
   call packager#add('honza/vim-snippets')
+  call packager#add('junegunn/fzf')
   call packager#add('junegunn/fzf.vim')
   call packager#add('junegunn/vim-easy-align')
   call packager#add('junegunn/vim-peekaboo')
@@ -149,5 +150,7 @@ function! packager_init#PackagerInit() abort
   " writing plugins
   call packager#add('dhruvasagar/vim-table-mode',             {'package': 'write'})
   call packager#add('godlygeek/tabular',                      {'package': 'write'})
+  call packager#add('vimwiki/vimwiki',                        {'package': 'write'})
+  call packager#add('michal-h21/vim-zettel',                  {'package': 'write'})
 endfunction
 
