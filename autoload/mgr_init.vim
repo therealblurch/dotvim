@@ -41,48 +41,36 @@ function mgr_init#InitializeMgrGroups()
   call mgr#add_group('seabird_themes')
 
   call mgr#init_group()
-  call mgr#add_cscheme('archery')
   call mgr#add_cscheme('ayu')
   call mgr#add_cscheme('bluedrake')
   call mgr#add_cscheme('candid')
   call mgr#add_cscheme('CandyPaper')
-  call mgr#add_cscheme('challenger_deep')
   call mgr#add_cscheme('cosmic_latte')
   call mgr#add_cscheme('darcula')
   call mgr#add_cscheme('deep-space')
   call mgr#add_cscheme('dracula')
-  call mgr#add_cscheme('edge')
   call mgr#add_cscheme('forest-night')
   call mgr#add_cscheme('github')
   call mgr#add_cscheme('gotham')
   call mgr#add_cscheme('gruvbox-material')
-  call mgr#add_cscheme('hydrangea')
   call mgr#add_cscheme('iceberg')
   call mgr#add_cscheme('OceanicNext')
   call mgr#add_cscheme('one')
   call mgr#add_cscheme('paper')
   call mgr#add_cscheme('pencil')
-  call mgr#add_cscheme('pleasant')
   call mgr#add_cscheme('nord')
-  call mgr#add_cscheme('rigel')
   call mgr#add_cscheme('shades_of_purple')
   call mgr#add_cscheme('snow')
-  call mgr#add_cscheme('spaceduck')
   call mgr#add_cscheme('spacegray')
   call mgr#add_cscheme('stellarized')
   call mgr#add_cscheme('tokyonight')
   call mgr#add_cscheme('tokyo-metro')
-  call mgr#add_cscheme('turtles')
   call mgr#add_cscheme('vadelma')
   call mgr#add_group('favorites')
 endfunction
 
 function mgr_init#InitializeMgr()
   call mgr#init()
-  call mgr#add('archery', {
-             \ 'airline'  : function('mgr#cscheme'),
-             \ 'lightline': function('mgr#cscheme')
-             \ })
   call mgr#add('apprentice', {
              \ 'lightline': function('mgr#cscheme'),
              \ 'airline'  : function('mgr#cscheme')
@@ -114,10 +102,6 @@ function mgr_init#InitializeMgr()
              \ 'toggle'      : function('mgr#tggl_bg'),
              \ 'default_bg'  : 'dark'
              \ })
-  call mgr#add('challenger_deep', {
-             \ 'airline'  : function('mgr#cscheme'),
-             \ 'lightline': function('mgr#cscheme')
-             \ })
   call mgr#add('cosmic_latte', {
              \ 'next_variant': function('mgr#tggl_bg'),
              \ 'status'      : function('mgr#cscheme_bg_sl'),
@@ -143,25 +127,6 @@ function mgr_init#InitializeMgr()
   call mgr#add('dracula', {
              \ 'lightline': function('mgr#cscheme'),
              \ 'airline'  : function('mgr#cscheme')
-             \ })
-  call mgr#add('edge', {
-             \ 'variants'       : ['default', 'aura', 'neon'],
-             \ 'style_variable' : 'g:edge_style',
-             \ 'default_style'  : 'default',
-             \ 'next_variant'   : function('mgr#nxt_styl_var'),
-             \ 'default_variant': function('mgr#def_styl_var'),
-             \ 'status'         : function('mgr#cscheme_styl'),
-             \ 'lightline'      : function('mgr#cscheme'),
-             \ 'airline'        : function('mgr#cscheme'),
-             \ 'toggle'         : function('mgr#tggl_bg'),
-             \ 'default_bg'     : 'dark'
-             \ })
-  call mgr#add('embark', {
-             \ 'airline'  : function('mgr#cscheme'),
-             \ 'lightline': function('mgr#cscheme')
-             \ })
-  call mgr#add('flatland', {
-             \ 'airline': function('mgr#cscheme'),
              \ })
   call mgr#add('flattened', {
              \ 'variants'    : ['_light', '_dark'],
@@ -206,9 +171,6 @@ function mgr_init#InitializeMgr()
              \ 'airline'        : function('mgr#cscheme_dsh_to_uscr'),
              \ 'toggle'         : function('mgr#tggl_bg'),
              \ 'default_bg'     : 'dark'
-             \ })
-  call mgr#add('hydrangea', {
-             \  'lightline': function('mgr#cscheme')
              \ })
   call mgr#add('iceberg', {
              \ 'next_variant': function('mgr#tggl_bg'),
@@ -291,14 +253,6 @@ function mgr_init#InitializeMgr()
              \ 'airline'     : function('b_lib#SeagullAirlineTheme'),
              \ 'toggle'      : function('b_lib#SeagullToggle')
              \ })
-  call mgr#add('pleasant', {
-             \ 'lightline': function('mgr#cscheme'),
-             \ 'airline'  : function('mgr#cscheme')
-             \ })
-  call mgr#add('rigel', {
-             \ 'airline'  : function('mgr#cscheme'),
-             \ 'lightline': function('mgr#cscheme')
-             \ })
   call mgr#add('seagull', {
              \ 'variants'    : g:colorscheme_groups.seabird_themes,
              \ 'next_variant': function('mgr#nxt_cscheme_var'),
@@ -328,10 +282,6 @@ function mgr_init#InitializeMgr()
              \ 'toggle'      : function('mgr#tggl_bg'),
              \ 'default_bg'  : 'light'
              \ })
-  call mgr#add('spaceduck', {
-             \ 'lightline'      : function('mgr#cscheme'),
-             \ 'airline'        : function('mgr#cscheme')
-             \})
   call mgr#add('spacegray')
   call mgr#add('srcery', {
              \ 'lightline': function('mgr#cscheme'),
@@ -351,10 +301,6 @@ function mgr_init#InitializeMgr()
              \ 'airline'     : function('b_lib#SeagullAirlineTheme'),
              \ 'toggle'      : function('b_lib#SeagullToggle')
              \ })
-  call mgr#add('tender', {
-             \ 'airline'  : function('mgr#cscheme'),
-             \ 'lightline': function('mgr#cscheme')
-             \ })
   call mgr#add('tokyonight', {
              \ 'variants'       : ['night', 'storm'],
              \ 'style_variable' : 'g:tokyonight_style',
@@ -369,9 +315,6 @@ function mgr_init#InitializeMgr()
              \ 'lightline': function('mgr#csheme_rm_dsh'),
              \ 'airline'  : function('mgr#csheme_rm_dsh')
              \ })
-  call mgr#add('turtles', {
-             \ 'airline'        : function('mgr#cscheme')
-             \})
   call mgr#add('twilight', {
              \ 'status': function('mgr#cscheme')
              \ })
