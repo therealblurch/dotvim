@@ -49,7 +49,7 @@ function mgr_init#InitializeMgrGroups()
   call mgr#add_cscheme('darcula')
   call mgr#add_cscheme('deep-space')
   call mgr#add_cscheme('dracula')
-  call mgr#add_cscheme('forest-night')
+  call mgr#add_cscheme('everforest')
   call mgr#add_cscheme('github')
   call mgr#add_cscheme('gotham')
   call mgr#add_cscheme('gruvbox-material')
@@ -136,7 +136,7 @@ function mgr_init#InitializeMgr()
              \ 'toggle'      : function('mgr#tggl_cscheme'),
              \ 'map'         : function('b_lib#FlattenedMap')
              \ })
-  call mgr#add('forest-night', {
+  call mgr#add('everforest', {
              \ 'lightline': function('mgr#cscheme'),
              \ 'airline'  : function('mgr#cscheme'),
              \ 'toggle'   : function('mgr#tggl_cscheme')
