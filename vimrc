@@ -12,7 +12,7 @@ set belloff+=ctrlg
 set clipboard=unnamedplus
 set completeopt+=menuone,noselect
 if has("patch-8.1.0360")
-  set diffopt+=internal,algorithm:histogram
+  set diffopt+=internal,algorithm:histogram,iwhiteall
 endif
 set directory=$v/cache/swap//
 set grepprg=ag\ --nogroup\ --nocolor
