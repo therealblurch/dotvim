@@ -25,6 +25,7 @@ function! packager_init#PackagerInit() abort
   call packager#add('vim-airline/vim-airline-themes',         {'package': 'status', 'type': 'opt'})
 
   " general plugins
+  call packager#add('AndrewRadev/switch.vim')
   call packager#add('brooth/far.vim')
   call packager#add('chrisbra/NrrwRgn')
   call packager#add('drmikehenry/vim-fontsize')
@@ -78,6 +79,7 @@ function! packager_init#PackagerInit() abort
   call packager#add('xolox/vim-misc')
   call packager#add('Xuyuanp/nerdtree-git-plugin')
   call packager#add('Yggdroot/indentline')
+  call packager#add('zef/vim-cycle')
   call packager#add('zhuzhzh/verilog_emacsauto.vim')
 
   "text objects
