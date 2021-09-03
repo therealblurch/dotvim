@@ -20,6 +20,7 @@ set hidden
 set hlsearch
 set ignorecase
 set list
+set noeb vb t_vb=
 
 " show tab and trailing spaces
 " Ctrl+v, u, unicode hex code
