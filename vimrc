@@ -7,6 +7,7 @@ scriptencoding utf-8
 
 set backupskip+=*_layout*.v
 set backupskip+=*_gates.v
+set backupskip+=*.stil
 set belloff+=ctrlg
 set clipboard=unnamedplus
 set completeopt+=menuone,noselect
@@ -148,6 +149,8 @@ augroup END
 
 autocmd! FileType gitcommit setlocal spell
 " }}}
+
+autocmd! BufWinEnter *.stil set noundofile
 
 " theme manager {{{
 
