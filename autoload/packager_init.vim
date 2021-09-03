@@ -52,7 +52,6 @@ function! packager_init#PackagerInit() abort
   call packager#add('Raimondi/delimitMate')
   call packager#add('ryanoasis/vim-devicons')
   call packager#add('scrooloose/nerdtree')
-  call packager#add('sheerun/vim-polyglot')
   call packager#add('sjl/gundo.vim')
   call packager#add('tommcdo/vim-lion')
   call packager#add('tomtom/tcomment_vim')
