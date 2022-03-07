@@ -112,7 +112,6 @@ function! packager_init#PackagerInit() abort
   call packager#add('reedes/vim-colors-pencil',               {'package': 'colors'})
   call packager#add('Rigellute/shades-of-purple.vim',         {'package': 'colors'})
   call packager#add('romainl/Apprentice',                     {'package': 'colors'})
-  call packager#add('romainl/flattened',                      {'package': 'colors'})
   call packager#add('sainnhe/everforest',                     {'package': 'colors'})
   call packager#add('sainnhe/gruvbox-material',               {'package': 'colors'})
   call packager#add('sainnhe/sonokai',                        {'package': 'colors'})
