@@ -422,4 +422,10 @@ nmap <leader>/ <Plug>localsearch_toggle
   let g:zettel_format = "%y%m%d-%H%M-%title"
 " }}}
 
-call matchadd('ColorColumn', '\%81v', 100)
+" auto-pairs {{{
+
+au FileType verilog_systemverilog let b:AutoPairs = {'(':')', '[':']', '{':'}',"'":"'",'"':'"'}
+
+" }}}
+
+" call matchadd('ColorColumn', '\%81v', 100)
