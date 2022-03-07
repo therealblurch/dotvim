@@ -54,8 +54,6 @@ function mgr_init#InitializeMgrGroups()
   call mgr#add_cscheme('dracula')
   call mgr#add_cscheme('everforest')
   call mgr#add_cscheme('felipec')
-  call mgr#add_cscheme('flattened_dark')
-  call mgr#add_cscheme('flattened_light')
   call mgr#add_cscheme('github')
   call mgr#add_cscheme('gruvbox-material')
   call mgr#add_cscheme('iceberg')
@@ -144,14 +142,6 @@ function mgr_init#InitializeMgr()
              \ })
   call mgr#add('felipec', {
              \ 'lightline': function('mgr#cscheme'),
-             \ })
-  call mgr#add('flattened', {
-             \ 'variants'    : ['_light', '_dark'],
-             \ 'next_variant': function('mgr#nxt_cscheme_var_mp'),
-             \ 'lightline'   : function('mgr#cscheme'),
-             \ 'airline'     : function('b_lib#FlattenedAirlineTheme'),
-             \ 'toggle'      : function('mgr#tggl_cscheme'),
-             \ 'map'         : function('b_lib#Suffix')
              \ })
   call mgr#add('everforest', {
              \ 'lightline': function('mgr#cscheme'),
