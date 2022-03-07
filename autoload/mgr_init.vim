@@ -41,31 +41,46 @@ function mgr_init#InitializeMgrGroups()
   call mgr#add_group('seabird_themes')
 
   call mgr#init_group()
+  call mgr#add_cscheme('apprentice')
   call mgr#add_cscheme('ayu')
   call mgr#add_cscheme('bluedrake')
   call mgr#add_cscheme('candid')
   call mgr#add_cscheme('CandyPaper')
   call mgr#add_cscheme('cosmic_latte')
-  call mgr#add_cscheme('darcula')
   call mgr#add_cscheme('deep-space')
+  call mgr#add_cscheme('desertink')
+  call mgr#add_cscheme('distinguished')
+  call mgr#add_cscheme('dogrun')
   call mgr#add_cscheme('dracula')
   call mgr#add_cscheme('everforest')
+  call mgr#add_cscheme('felipec')
+  call mgr#add_cscheme('flattened_dark')
+  call mgr#add_cscheme('flattened_light')
   call mgr#add_cscheme('github')
-  call mgr#add_cscheme('gotham')
   call mgr#add_cscheme('gruvbox-material')
   call mgr#add_cscheme('iceberg')
+  call mgr#add_cscheme('jellybeans')
+  call mgr#add_cscheme('material')
+  call mgr#add_cscheme('materialbox')
+  call mgr#add_cscheme('nightfly')
+  call mgr#add_cscheme('night-owl')
+  call mgr#add_cscheme('nord')
   call mgr#add_cscheme('OceanicNext')
   call mgr#add_cscheme('one')
   call mgr#add_cscheme('paper')
   call mgr#add_cscheme('pencil')
-  call mgr#add_cscheme('nord')
   call mgr#add_cscheme('shades_of_purple')
   call mgr#add_cscheme('snow')
+  call mgr#add_cscheme('sonokai')
   call mgr#add_cscheme('spacegray')
+  call mgr#add_cscheme('srcery')
   call mgr#add_cscheme('stellarized')
   call mgr#add_cscheme('tokyonight')
   call mgr#add_cscheme('tokyo-metro')
+  call mgr#add_cscheme('twilight')
   call mgr#add_cscheme('vadelma')
+  call mgr#add_cscheme('vividchalk')
+  call mgr#add_cscheme('zenburn')
   call mgr#add_group('favorites')
 endfunction
 
@@ -110,7 +125,6 @@ function mgr_init#InitializeMgr()
              \ 'toggle'      : function('mgr#tggl_bg'),
              \ 'default_bg'  : 'dark'
              \ })
-  call mgr#add('darcula')
   call mgr#add('deep-space', {
              \ 'lightline': function('mgr#csheme_rm_dsh'),
              \ 'airline'  : function('mgr#cscheme_dsh_to_uscr')
@@ -128,13 +142,16 @@ function mgr_init#InitializeMgr()
              \ 'lightline': function('mgr#cscheme'),
              \ 'airline'  : function('mgr#cscheme')
              \ })
+  call mgr#add('felipec', {
+             \ 'lightline': function('mgr#cscheme'),
+             \ })
   call mgr#add('flattened', {
              \ 'variants'    : ['_light', '_dark'],
              \ 'next_variant': function('mgr#nxt_cscheme_var_mp'),
              \ 'lightline'   : function('mgr#cscheme'),
              \ 'airline'     : function('b_lib#FlattenedAirlineTheme'),
              \ 'toggle'      : function('mgr#tggl_cscheme'),
-             \ 'map'         : function('b_lib#FlattenedMap')
+             \ 'map'         : function('b_lib#Suffix')
              \ })
   call mgr#add('everforest', {
              \ 'lightline': function('mgr#cscheme'),
@@ -148,10 +165,6 @@ function mgr_init#InitializeMgr()
              \ 'airline'     : function('mgr#cscheme'),
              \ 'toggle'      : function('mgr#tggl_bg'),
              \ 'default_bg'  : 'light'
-             \ })
-  call mgr#add('gotham', {
-             \ 'lightline': function('mgr#cscheme'),
-             \ 'airline'  : function('mgr#cscheme')
              \ })
   call mgr#add('greygull', {
              \ 'variants'    : g:colorscheme_groups.seabird_themes,
@@ -222,7 +235,7 @@ function mgr_init#InitializeMgr()
              \ 'airline'     : function('mgr#cscheme_lwr'),
              \ 'lightline'   : function('mgr#cscheme_lwr'),
              \ 'toggle'      : function('b_lib#OceanicNextToggle'),
-             \ 'map'         : function('b_lib#FlattenedMap')
+             \ 'map'         : function('b_lib#Suffix')
              \ })
   call mgr#add('one', {
              \ 'next_variant': function('mgr#tggl_bg'),
@@ -323,7 +336,7 @@ function mgr_init#InitializeMgr()
              \ 'next_variant': function('mgr#nxt_cscheme_var_mp'),
              \ 'lightline'   : function('mgr#cscheme_dsh_to_uscr'),
              \ 'toggle'      : function('mgr#tggl_cscheme'),
-             \ 'map'         : function('b_lib#VimspectrMap')
+             \ 'map'         : function('b_lib#SuffixBackground')
              \ })
   call mgr#add('vadelma', {
              \ 'next_variant': function('mgr#tggl_bg'),
