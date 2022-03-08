@@ -26,7 +26,7 @@ function! b_lib#AtelierLightlineTheme() dict
   return l:lightlinetheme
 endfunction
 
-function! b_lib#FlattenedMap (key,val) dict
+function! b_lib#Suffix (key,val) dict
   let l:color_name = mgr#get_color_dict_key(g:colors_name)
   return l:color_name . a:val
 endfunction
@@ -52,7 +52,7 @@ function! b_lib#OceanicNextToggle() dict
   exec 'colors ' . l:new_colorscheme
 endfunction
 
-function! b_lib#VimspectrMap (key,val) dict
+function! b_lib#SuffixBackground (key,val) dict
   let l:color_name = mgr#get_color_dict_key(g:colors_name)
   return l:color_name . a:val . '-' . &background
 endfunction
