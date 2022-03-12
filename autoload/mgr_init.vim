@@ -144,9 +144,16 @@ function mgr_init#InitializeMgr()
              \ 'lightline': function('mgr#cscheme'),
              \ })
   call mgr#add('everforest', {
-             \ 'lightline': function('mgr#cscheme'),
-             \ 'airline'  : function('mgr#cscheme'),
-             \ 'toggle'   : function('mgr#tggl_cscheme')
+             \ 'variants'       : ['soft', 'medium', 'hard'],
+             \ 'style_variable' : 'g:everforest_background',
+             \ 'default_style'  : 'hard',
+             \ 'next_variant'   : function('mgr#nxt_styl_var'),
+             \ 'default_variant': function('mgr#def_styl_var'),
+             \ 'status'         : function('mgr#cscheme_styl'),
+             \ 'lightline'      : function('mgr#cscheme'),
+             \ 'airline'        : function('mgr#cscheme'),
+             \ 'toggle'         : function('mgr#tggl_bg'),
+             \ 'default_bg'     : 'dark'
              \ })
   call mgr#add('github', {
              \ 'next_variant': function('mgr#tggl_bg'),
