@@ -163,7 +163,7 @@ function mgr_init#InitializeMgr()
              \ 'default_bg'  : 'light'
              \ })
   call mgr#add('greygull', {
-             \ 'variants'    : g:colorscheme_groups.seabird_themes,
+             \ 'variants'    : keys(g:colorscheme_groups.seabird_themes),
              \ 'next_variant': function('mgr#nxt_cscheme_var'),
              \ 'airline'     : function('b_lib#SeagullAirlineTheme'),
              \ 'toggle'      : function('b_lib#SeagullToggle')
@@ -249,13 +249,13 @@ function mgr_init#InitializeMgr()
              \ 'default_bg'  : 'light'
              \ })
   call mgr#add('petrel', {
-             \ 'variants'    : g:colorscheme_groups.seabird_themes,
+             \ 'variants'    : keys(g:colorscheme_groups.seabird_themes),
              \ 'next_variant': function('mgr#nxt_cscheme_var'),
              \ 'airline'     : function('b_lib#SeagullAirlineTheme'),
              \ 'toggle'      : function('b_lib#SeagullToggle')
              \ })
   call mgr#add('seagull', {
-             \ 'variants'    : g:colorscheme_groups.seabird_themes,
+             \ 'variants'    : keys(g:colorscheme_groups.seabird_themes),
              \ 'next_variant': function('mgr#nxt_cscheme_var'),
              \ 'airline'     : function('mgr#cscheme'),
              \ 'toggle'      : function('b_lib#SeagullToggle')
@@ -297,7 +297,7 @@ function mgr_init#InitializeMgr()
              \ 'default_bg'  : 'dark'
              \ })
   call mgr#add('stormpetrel', {
-             \ 'variants'    : g:colorscheme_groups.seabird_themes,
+             \ 'variants'    : keys(g:colorscheme_groups.seabird_themes),
              \ 'next_variant': function('mgr#nxt_cscheme_var'),
              \ 'airline'     : function('b_lib#SeagullAirlineTheme'),
              \ 'toggle'      : function('b_lib#SeagullToggle')
