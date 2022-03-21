@@ -126,5 +126,6 @@ function! packager_init#PackagerInit() abort
   call packager#add('junegunn/fzf.vim',                       {'package': 'write'})
   call packager#add('alok/notational-fzf-vim',                {'package': 'write'})
   call packager#add('michal-h21/vim-zettel',                  {'package': 'write'})
+
 endfunction
 

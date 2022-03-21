@@ -3,6 +3,8 @@
  let s:is_win = has('win32') || has('win64')
  let $v = $HOME.(s:is_win ? '\vimfiles' : '/.vim')
 
+ let macvim_skip_colorscheme=1
+
 scriptencoding utf-8
 
 set backupskip+=*_layout*.v
