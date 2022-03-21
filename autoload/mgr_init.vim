@@ -63,7 +63,6 @@ function mgr_init#InitializeMgrGroups()
   call mgr#add_cscheme('nightfly')
   call mgr#add_cscheme('night-owl')
   call mgr#add_cscheme('nord')
-  call mgr#add_cscheme('OceanicNext')
   call mgr#add_cscheme('one')
   call mgr#add_cscheme('paper')
   call mgr#add_cscheme('pencil')
@@ -225,14 +224,6 @@ function mgr_init#InitializeMgr()
   call mgr#add('nord', {
              \ 'lightline': function('mgr#cscheme'),
              \ 'airline'  : function('mgr#cscheme')
-             \ })
-  call mgr#add('OceanicNext', {
-             \ 'variants'    : ['', 'Light'],
-             \ 'next_variant': function('mgr#nxt_cscheme_var_mp'),
-             \ 'airline'     : function('mgr#cscheme_lwr'),
-             \ 'lightline'   : function('mgr#cscheme_lwr'),
-             \ 'toggle'      : function('b_lib#OceanicNextToggle'),
-             \ 'map'         : function('b_lib#Suffix')
              \ })
   call mgr#add('one', {
              \ 'next_variant': function('mgr#tggl_bg'),

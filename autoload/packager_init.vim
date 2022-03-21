@@ -100,7 +100,6 @@ function! packager_init#PackagerInit() abort
   call packager#add('koirand/tokyo-metro.vim',                {'package': 'colors'})
   call packager#add('lokaltog/vim-distinguished',             {'package': 'colors'})
   call packager#add('michaelmalick/vim-colors-bluedrake',     {'package': 'colors'})
-  call packager#add('mhartington/oceanic-next',               {'package': 'colors'})
   call packager#add('mkarmona/materialbox',                   {'package': 'colors'})
   call packager#add('nanotech/jellybeans.vim',                {'package': 'colors', 'name': 'jellybeans'})
   call packager#add('rakr/vim-one',                           {'package': 'colors'})
