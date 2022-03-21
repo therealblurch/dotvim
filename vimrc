@@ -433,4 +433,8 @@ au FileType verilog_systemverilog let b:AutoPairs = {'(':')', '[':']', '{':'}',"
   let g:nv_default_extension = '.md'
 " }}}
 
+" context {{{
+  let g:context_enabled = 0
+" }}}
+
 " call matchadd('ColorColumn', '\%81v', 100)
