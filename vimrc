@@ -428,4 +428,9 @@ au FileType verilog_systemverilog let b:AutoPairs = {'(':')', '[':']', '{':'}',"
 
 " }}}
 
+" notational fzf {{{
+  let g:nv_search_paths = ['~/notes']
+  let g:nv_default_extension = '.md'
+" }}}
+
 " call matchadd('ColorColumn', '\%81v', 100)
