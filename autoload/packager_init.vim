@@ -36,8 +36,7 @@ function! packager_init#PackagerInit() abort
   call packager#add('myusuf3/numbers.vim')
   call packager#add('ryanoasis/vim-devicons')
   call packager#add('tommcdo/vim-lion')
-  call packager#add('tomtom/tcomment_vim')
-  call packager#add('tomtom/tlib_vim')                                                                          "Dependancy for snipmate, tcomment, and tinykeymap
+  call packager#add('tomtom/tcomment_vim',                  {'requires': 'tomtom/tlib_vim'})
   call packager#add('tpope/vim-dispatch')
   call packager#add('tpope/vim-endwise')
   call packager#add('tpope/vim-repeat')
