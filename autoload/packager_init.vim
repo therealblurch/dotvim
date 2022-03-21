@@ -41,11 +41,13 @@ function! packager_init#PackagerInit() abort
   call packager#add('tpope/vim-dispatch')
   call packager#add('tpope/vim-endwise')
   call packager#add('tpope/vim-repeat')
+  call packager#add('tpope/vim-rhubarb')
   call packager#add('tpope/vim-sensible')
   call packager#add('tpope/vim-sleuth')
   call packager#add('tpope/vim-speeddating')
   call packager#add('tpope/vim-surround')
   call packager#add('tpope/vim-unimpaired')
+  call packager#add('tpope/vim-vinegar')
   call packager#add('vhda/verilog_systemverilog.vim')
   call packager#add('vim-scripts/VisIncr')
   call packager#add('wellle/context.vim')
@@ -120,6 +122,9 @@ function! packager_init#PackagerInit() abort
   call packager#add('dhruvasagar/vim-table-mode',             {'package': 'write'})
   call packager#add('godlygeek/tabular',                      {'package': 'write'})
   call packager#add('vimwiki/vimwiki',                        {'package': 'write'})
+  call packager#add('junegunn/fzf',                           {'package': 'write'})
+  call packager#add('junegunn/fzf.vim',                       {'package': 'write'})
+  call packager#add('alok/notational-fzf-vim',                {'package': 'write'})
   call packager#add('michal-h21/vim-zettel',                  {'package': 'write'})
 endfunction
 
