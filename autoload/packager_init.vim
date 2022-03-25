@@ -23,6 +23,7 @@ function! packager_init#PackagerInit() abort
 
   " general plugins
   call packager#add('b4winckler/vim-angry')
+  call packager#add('bkad/CamelCaseMotion')
   call packager#add('chrisbra/NrrwRgn')
   call packager#add('drmikehenry/vim-fontsize')
   call packager#add('nishigori/increment-activator')

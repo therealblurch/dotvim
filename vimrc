@@ -439,4 +439,7 @@ au FileType verilog_systemverilog let b:AutoPairs = {'(':')', '[':']', '{':'}',"
   let g:context_enabled = 0
 " }}}
 
-" call matchadd('ColorColumn', '\%81v', 100)
+" CamelCase Motion {{{
+  let g:camelcasemotion_key = '<leader>'
+" }}}
+
