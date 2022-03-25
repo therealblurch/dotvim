@@ -4,3 +4,5 @@ cache
 .colorscheme
 viminfo
 Session.vim
+colorscheme
+.DS_Store
