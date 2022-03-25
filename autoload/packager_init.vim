@@ -38,6 +38,7 @@ function! packager_init#PackagerInit() abort
   call packager#add('mg979/vim-visual-multi')
   call packager#add('myusuf3/numbers.vim')
   call packager#add('nishigori/increment-activator')
+  call packager#add('rhysd/clever-f.vim')
   call packager#add('ryanoasis/vim-devicons')
   call packager#add('tommcdo/vim-lion')
   call packager#add('tomtom/tcomment_vim',                  {'requires': 'tomtom/tlib_vim'})
