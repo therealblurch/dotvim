@@ -53,7 +53,6 @@ function mgr_init#InitializeMgrGroups()
   call mgr#add_cscheme('dogrun')
   call mgr#add_cscheme('dracula')
   call mgr#add_cscheme('everforest')
-  call mgr#add_cscheme('felipec')
   call mgr#add_cscheme('github')
   call mgr#add_cscheme('gruvbox-material')
   call mgr#add_cscheme('iceberg')
@@ -138,9 +137,6 @@ function mgr_init#InitializeMgr()
   call mgr#add('dracula', {
              \ 'lightline': function('mgr#cscheme'),
              \ 'airline'  : function('mgr#cscheme')
-             \ })
-  call mgr#add('felipec', {
-             \ 'lightline': function('mgr#cscheme'),
              \ })
   call mgr#add('everforest', {
              \ 'variants'       : ['soft', 'medium', 'hard'],
