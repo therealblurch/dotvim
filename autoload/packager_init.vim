@@ -54,6 +54,7 @@ function! packager_init#PackagerInit() abort
   call packager#add('tpope/vim-unimpaired')
   call packager#add('tpope/vim-vinegar')
   call packager#add('vhda/verilog_systemverilog.vim')
+  call packager#add('vim-scripts/ConflictMotions',         {'requires': 'vim-scripts/CountJump'})
   call packager#add('vim-scripts/VisIncr')
   call packager#add('wellle/context.vim')
   call packager#add('wellle/targets.vim')
