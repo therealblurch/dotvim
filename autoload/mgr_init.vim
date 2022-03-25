@@ -49,7 +49,6 @@ function mgr_init#InitializeMgrGroups()
   call mgr#add_cscheme('cosmic_latte')
   call mgr#add_cscheme('deep-space')
   call mgr#add_cscheme('desertink')
-  call mgr#add_cscheme('distinguished')
   call mgr#add_cscheme('dogrun')
   call mgr#add_cscheme('dracula')
   call mgr#add_cscheme('everforest')
@@ -125,9 +124,6 @@ function mgr_init#InitializeMgr()
              \ 'airline'  : function('mgr#cscheme_dsh_to_uscr')
              \ })
   call mgr#add('desertink', {
-             \ 'airline': function('mgr#cscheme')
-             \ })
-  call mgr#add('distinguished', {
              \ 'airline': function('mgr#cscheme')
              \ })
   call mgr#add('dogrun', {
