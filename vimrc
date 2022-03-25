@@ -443,3 +443,6 @@ au FileType verilog_systemverilog let b:AutoPairs = {'(':')', '[':']', '{':'}',"
   let g:camelcasemotion_key = '<leader>'
 " }}}
 
+" Poppy {{{
+  au! cursormoved * call PoppyInit()
+" }}}

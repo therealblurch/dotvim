@@ -24,6 +24,7 @@ function! packager_init#PackagerInit() abort
   " general plugins
   call packager#add('b4winckler/vim-angry')
   call packager#add('bkad/CamelCaseMotion')
+  call packager#add('bounceme/poppy.vim')
   call packager#add('chrisbra/NrrwRgn')
   call packager#add('drmikehenry/vim-fontsize')
   call packager#add('nishigori/increment-activator')
@@ -32,7 +33,6 @@ function! packager_init#PackagerInit() abort
   call packager#add('kshenoy/vim-signature')
   call packager#add('lifepillar/vim-mucomplete')
   call packager#add('liuchengxu/vim-which-key')
-  call packager#add('luochen1990/rainbow')
   call packager#add('machakann/vim-highlightedyank')
   call packager#add('markonm/traces.vim')
   call packager#add('myusuf3/numbers.vim')
