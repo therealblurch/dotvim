@@ -86,7 +86,6 @@ function! packager_init#PackagerInit() abort
   call packager#add('dfxyz/CandyPaper.vim',                   {'package': 'colors'})
   call packager#add('dracula/vim',                            {'package': 'colors', 'name': 'dracula'})
   call packager#add('flrnd/candid.vim',                       {'package': 'colors'})
-  call packager#add('ghifarit53/tokyonight-vim',              {'package': 'colors'})
   call packager#add('haishanh/night-owl.vim',                 {'package': 'colors'})
   call packager#add('haystackandroid/cosmic_latte',           {'package': 'colors'})
   call packager#add('haystackandroid/seabird',                {'package': 'colors'})

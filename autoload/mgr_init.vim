@@ -71,7 +71,6 @@ function mgr_init#InitializeMgrGroups()
   call mgr#add_cscheme('spacegray')
   call mgr#add_cscheme('srcery')
   call mgr#add_cscheme('stellarized')
-  call mgr#add_cscheme('tokyonight')
   call mgr#add_cscheme('tokyo-metro')
   call mgr#add_cscheme('twilight')
   call mgr#add_cscheme('vadelma')
@@ -297,16 +296,6 @@ function mgr_init#InitializeMgr()
              \ 'next_variant': function('mgr#nxt_cscheme_var'),
              \ 'airline'     : function('b_lib#SeagullAirlineTheme'),
              \ 'toggle'      : function('b_lib#SeagullToggle')
-             \ })
-  call mgr#add('tokyonight', {
-             \ 'variants'       : ['night', 'storm'],
-             \ 'style_variable' : 'g:tokyonight_style',
-             \ 'default_style'  : 'night',
-             \ 'next_variant'   : function('mgr#nxt_styl_var'),
-             \ 'default_variant': function('mgr#def_styl_var'),
-             \ 'status'         : function('mgr#cscheme_styl'),
-             \ 'lightline'      : function('mgr#cscheme'),
-             \ 'airline'        : function('mgr#cscheme')
              \ })
   call mgr#add('tokyo-metro', {
              \ 'lightline': function('mgr#csheme_rm_dsh'),
