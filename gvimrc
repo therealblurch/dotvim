@@ -6,7 +6,6 @@ set vb t_vb=
 let g:fontlist=[
   \ 'agave\ Nerd\ Font\ Mono\ 14',
   \ 'Anonymice\ Nerd\ Font\ Mono\ 12',
-  \ 'AurulentSansMono\ Nerd\ Font\ Mono\ 12',
   \ 'CaskaydiaCove\ Nerd\ Font\ Mono\ 12',
   \ 'Cousine\ Nerd\ Font\ Mono\ 12',
   \ 'DaddyTimeMono\ Nerd\ Font\ Mono\ 12',
