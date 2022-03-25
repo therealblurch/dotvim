@@ -35,6 +35,7 @@ function! packager_init#PackagerInit() abort
   call packager#add('liuchengxu/vim-which-key')
   call packager#add('machakann/vim-highlightedyank')
   call packager#add('markonm/traces.vim')
+  call packager#add('mg979/vim-visual-multi')
   call packager#add('myusuf3/numbers.vim')
   call packager#add('nishigori/increment-activator')
   call packager#add('ryanoasis/vim-devicons')
