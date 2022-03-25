@@ -40,6 +40,7 @@ function! packager_init#PackagerInit() abort
   call packager#add('nishigori/increment-activator')
   call packager#add('rhysd/clever-f.vim')
   call packager#add('ryanoasis/vim-devicons')
+  call packager#add('tommcdo/vim-exchange')
   call packager#add('tommcdo/vim-lion')
   call packager#add('tomtom/tcomment_vim',                  {'requires': 'tomtom/tlib_vim'})
   call packager#add('tpope/vim-dispatch')
