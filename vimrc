@@ -425,9 +425,7 @@ nmap <leader>/ <Plug>localsearch_toggle
 " }}}
 
 " auto-pairs {{{
-
 au FileType verilog_systemverilog let b:AutoPairs = {'(':')', '[':']', '{':'}',"'":"'",'"':'"'}
-
 " }}}
 
 " notational fzf {{{
