@@ -22,6 +22,7 @@ function! packager_init#PackagerInit() abort
   call packager#add('vim-airline/vim-airline-themes',         {'package': 'status', 'type': 'opt'})
 
   " general plugins
+  call packager#add('b4winckler/vim-angry')
   call packager#add('chrisbra/NrrwRgn')
   call packager#add('drmikehenry/vim-fontsize')
   call packager#add('nishigori/increment-activator')
