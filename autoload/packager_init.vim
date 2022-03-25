@@ -28,6 +28,7 @@ function! packager_init#PackagerInit() abort
   call packager#add('chrisbra/NrrwRgn')
   call packager#add('drmikehenry/vim-fontsize')
   call packager#add('nishigori/increment-activator')
+  call packager#add('itchyny/vim-cursorword')
   call packager#add('jiangmiao/auto-pairs')
   call packager#add('junegunn/vim-peekaboo')
   call packager#add('kshenoy/vim-signature')
