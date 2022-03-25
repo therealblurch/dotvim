@@ -71,7 +71,6 @@ function mgr_init#InitializeMgrGroups()
   call mgr#add_cscheme('srcery')
   call mgr#add_cscheme('stellarized')
   call mgr#add_cscheme('tokyo-metro')
-  call mgr#add_cscheme('twilight')
   call mgr#add_cscheme('vadelma')
   call mgr#add_cscheme('vividchalk')
   call mgr#add_cscheme('zenburn')
@@ -296,9 +295,6 @@ function mgr_init#InitializeMgr()
   call mgr#add('tokyo-metro', {
              \ 'lightline': function('mgr#csheme_rm_dsh'),
              \ 'airline'  : function('mgr#csheme_rm_dsh')
-             \ })
-  call mgr#add('twilight', {
-             \ 'status': function('mgr#cscheme')
              \ })
   call mgr#add('vimspectr', {
              \ 'variants'    : ['grey', '0', '30', '60', '90', '120', '150', '180', '210', '240', '270', '300', '330'],
