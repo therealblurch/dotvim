@@ -4,36 +4,35 @@ set guioptions=aAci
 set vb t_vb=
 
 let g:fontlist=[
-  \ 'agave\ Nerd\ Font\ Mono\ 14',
-  \ 'Anonymice\ Nerd\ Font\ Mono\ 12',
-  \ 'CaskaydiaCove\ Nerd\ Font\ Mono\ 12',
-  \ 'Cousine\ Nerd\ Font\ Mono\ 12',
-  \ 'DaddyTimeMono\ Nerd\ Font\ Mono\ 12',
-  \ 'DejaVuSansMono\ Nerd\ Font\ Mono\ 12',
-  \ 'DroidSansMono\ Nerd\ Font\ Mono\ 12',
-  \ 'FantasqueSansMono\ Nerd\ Font\ Mono\ 12',
-  \ 'FuraMono\ Nerd\ Font\ Mono\ 12',
-  \ 'FuraCode\ Nerd\ Font\ Mono\ Medium\ 12',
-  \ 'Hack\ Nerd\ Font\ Mono\ 12',
-  \ 'Hasklug\ Nerd\ Font\ Mono\ Medium\ 12',
-  \ 'Hurmit\ Nerd\ Font\ Mono\ Medium\ 12',
-  \ 'MesloLGL\ Nerd\ Font\ Mono\ 12',
-  \ 'Monofur\ Nerd\ Font\ Mono\ 12',
-  \ 'Monoid\ Nerd\ Font\ Mono\ Light\ Semi-Condensed\ 12',
-  \ 'mononoki\ Nerd\ Font\ Mono\ 12',
-  \ 'SauceCodePro\ Nerd\ Font\ Mono\ 12',
-  \ 'ShureTechMono\ Nerd\ Font\ Mono\ 12',
-  \ 'SpaceMono\ Nerd\ Font\ Mono\ 12',
-  \ 'TerminessTTF\ Nerd\ Font\ Mono\ Medium\ 12',
-  \ 'UbuntuMono\ Nerd\ Font\ Mono\ 12',
-  \ 'VictorMono\ Nerd\ Font\ Mono\ 12'
+  \ 'agave\ Nerd\ Font\ Mono\ 10',
+  \ 'Anonymice\ Nerd\ Font\ Mono\ 11',
+  \ 'Cousine\ Nerd\ Font\ Mono\ 11',
+  \ 'DaddyTimeMono\ Nerd\ Font\ Mono\ 11',
+  \ 'DejaVuSansMono\ Nerd\ Font\ Mono\ 11',
+  \ 'DroidSansMono\ Nerd\ Font\ Mono\ 11',
+  \ 'FantasqueSansMono\ Nerd\ Font\ Mono\ 11',
+  \ 'FuraMono\ Nerd\ Font\ Mono\ 11',
+  \ 'FuraCode\ Nerd\ Font\ Mono\ Medium\ 11',
+  \ 'Hack\ Nerd\ Font\ Mono\ 11',
+  \ 'Hasklug\ Nerd\ Font\ Mono\ Medium\ 11',
+  \ 'Hurmit\ Nerd\ Font\ Mono\ Medium\ 11',
+  \ 'MesloLGL\ Nerd\ Font\ Mono\ 11',
+  \ 'Monofur\ Nerd\ Font\ Mono\ 11',
+  \ 'Monoid\ Nerd\ Font\ Mono\ Light\ Semi-Condensed\ 11',
+  \ 'mononoki\ Nerd\ Font\ Mono\ 11',
+  \ 'SauceCodePro\ Nerd\ Font\ Mono\ 11',
+  \ 'ShureTechMono\ Nerd\ Font\ Mono\ 11',
+  \ 'SpaceMono\ Nerd\ Font\ Mono\ 11',
+  \ 'TerminessTTF\ Nerd\ Font\ Mono\ Medium\ 11',
+  \ 'UbuntuMono\ Nerd\ Font\ Mono\ 11',
+  \ 'VictorMono\ Nerd\ Font\ Mono\ 11'
   \]
 
 let s:new_font = g:fontlist[localtime() % len(g:fontlist)]
 exec 'set guifont=' . s:new_font
 
 " if has('win32') || has('win64')
-"   set guifont=InconsolataForPowerline_NF:h12:cANSI:qDRAFT
+"   set guifont=InconsolataForPowerline_NF:h11:cANSI:qDRAFT
 " else
-"   set guifont=Hack\ Nerd\ Font\ Mono\ 12
+"   set guifont=Hack\ Nerd\ Font\ Mono\ 11
 " endif
