@@ -56,8 +56,6 @@ function mgr_init#InitializeMgrGroups()
   call mgr#add_cscheme('gruvbox-material')
   call mgr#add_cscheme('iceberg')
   call mgr#add_cscheme('jellybeans')
-  call mgr#add_cscheme('material')
-  call mgr#add_cscheme('materialbox')
   call mgr#add_cscheme('nightfly')
   call mgr#add_cscheme('night-owl')
   call mgr#add_cscheme('nord')
@@ -181,28 +179,6 @@ function mgr_init#InitializeMgr()
              \ })
   call mgr#add('jellybeans', {
              \  'airline': function('mgr#cscheme')
-             \ })
-  call mgr#add('material', {
-             \ 'variants'       : ['default', 'palenight', 'ocean', 'lighter', 'darker'],
-             \ 'style_variable' : 'g:material_theme_style',
-             \ 'default_style'  : 'palenight',
-             \ 'pre'            : ['let g:material_terminal_italics = 1'],
-             \ 'next_variant'   : function('mgr#nxt_styl_var'),
-             \ 'default_variant': function('mgr#def_styl_var'),
-             \ 'status'         : function('mgr#cscheme_styl'),
-             \ 'lightline'      : function('b_lib#ColorschemeAppendVim'),
-             \ 'airline'        : function('mgr#cscheme')
-             \ })
-  call mgr#add('materialbox', {
-             \ 'variants'       : ['soft', 'medium', 'hard'],
-             \ 'style_variable' : 'g:materialbox_contrast',
-             \ 'default_style'  : 'hard',
-             \ 'next_variant'   : function('mgr#nxt_styl_bg_var'),
-             \ 'default_variant': function('mgr#def_styl_bg_var'),
-             \ 'status'         : function('mgr#cscheme_bg_styl'),
-             \ 'airline'        : function('mgr#cscheme'),
-             \ 'toggle'         : function('mgr#tggl_bg'),
-             \ 'default_bg'     : 'dark'
              \ })
   call mgr#add('nightfly', {
              \ 'airline'  : function('mgr#cscheme'),
